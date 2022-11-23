@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,12 +80,14 @@ namespace ex_program_eva
 
         //Desarrolla una función que devuelva el resultado de una ecuación de primer grado.
 
-        public static int EcuationSolution(int x)
-      
+        public static double EcuationSolution(double a, double b)
         {
-
+            //ax + b = 0
+            //ax = 0 - b
+            //x = -b/a
+            double x = (-b / a);
+                return x;
         }
-
 
 
         //(obligatorio) Desarrolla una función que devuelva el resultado de una ecuación de segundo grado.

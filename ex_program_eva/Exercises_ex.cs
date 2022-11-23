@@ -79,7 +79,11 @@ namespace ex_program_eva
 
         //Desarrolla una función que devuelva el resultado de una ecuación de primer grado.
 
+        public static int EcuationSolution(int x)
+      
+        {
 
+        }
 
 
 

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\ex_program_eva\\ex_program_eva\\ex_program_eva.csproj",
+      "projectUniqueName": "C:\\Users\\alumno\\Documents\\GitHub\\Programming_new\\ex_program_eva\\ex_program_eva.csproj",
       "projectName": "ex_program_eva",
-      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\ex_program_eva\\ex_program_eva\\ex_program_eva.csproj",
+      "projectPath": "C:\\Users\\alumno\\Documents\\GitHub\\Programming_new\\ex_program_eva\\ex_program_eva.csproj",
       "packagesPath": "C:\\Users\\alumno\\.nuget\\packages\\",
-      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\ex_program_eva\\ex_program_eva\\obj\\",
+      "outputPath": "C:\\Users\\alumno\\Documents\\GitHub\\Programming_new\\ex_program_eva\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

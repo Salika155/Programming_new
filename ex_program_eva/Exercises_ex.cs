@@ -97,17 +97,7 @@ namespace ex_program_eva
 
         //Escribir una función que calcule el máximo común divisor de dos números.
 
-        public static int GetMCD(int a, int b)
-        {
-             int n = 0;
-            
-            for(int i = 1; i <= a; i++)
-            {
-                if ((a % i == 0) && (b % i == 0))
-                n = i;
-            }
-            return n;
-        }
+      
 
 
 

@@ -13,8 +13,10 @@ namespace ex_program_eva
             Console.WriteLine(Exercises_ex.GetAreaCirc(1));
             Console.WriteLine("El volumen del cilindro es = ");
             Console.WriteLine(Exercises_ex.GetCylindreVolume(2, 4));
+
+
             
-            //Console.WriteLine(Exercises_ex.GetResultGame();
+            Exercises_ex.GetResultGame playType play1, playType play2();
             
 
         }

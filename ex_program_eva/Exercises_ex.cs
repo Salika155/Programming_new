@@ -98,7 +98,11 @@ namespace ex_program_eva
 
         //Los tres lados a, b y c de un triángulo deben satisfacer la desigualdad triangular: cada uno de los lados no puede ser más largo que la suma de los otros dos.Escribe un programa que reciba como entrada los tres lados de un triángulo(son reales), e indique: si acaso el triángulo es inválido; y si no lo es, qué tipo de triángulo es(un enum).
 
+       /* public static double TriangleSides(double a, double b, double c)
+        {
 
+        }
+       */
 
 
 

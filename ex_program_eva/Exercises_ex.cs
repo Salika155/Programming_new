@@ -36,28 +36,25 @@ namespace ex_program_eva
 
         public static int GetResultGame(playType play1, playType play2)
         {
-            if (play1 == play2)
-                return 0;
-
             if (play1 == playType.PAPER)
             {
                 if (play2 == playType.ROCK || play2 == playType.SPOCK)
                     return 1;
-                else if (play1 == playType.SCISSORS || play2 == playType.LIZARD)
+                else if (play2 == playType.SCISSORS || play2 == playType.LIZARD)
                     return -1;
             }
             if (play1 == playType.ROCK)
             {
                 if (play2 == playType.LIZARD || play2 == playType.SCISSORS)
                     return 1;
-                else if (play1 == playType.SPOCK || play2 == playType.PAPER)
+                else if (play2 == playType.SPOCK || play2 == playType.PAPER)
                     return -1;
             }
             if (play1 == playType.LIZARD)
             {
                 if (play2 == playType.ROCK || play2 == playType.SCISSORS)
                     return -1;
-                else if (play1 == playType.SPOCK || play2 == playType.PAPER)
+                else if (play2 == playType.SPOCK || play2 == playType.PAPER)
                     return 1;
             }
             if (play1 == playType.SPOCK)
@@ -74,6 +71,7 @@ namespace ex_program_eva
                 else if (play2 == playType.LIZARD || play2 == playType.PAPER)
                     return 1;
             }
+            return 0;
         }
 
 
@@ -92,10 +90,10 @@ namespace ex_program_eva
 
         //(obligatorio) Desarrolla una función que devuelva el resultado de una ecuación de segundo grado.
 
-        public static double EcuationSolution2(double a, double b, double c)
+        /*public static double EcuationSolution2(double a, double b, double c)
         {
-            /*(-b +- (Square (b * b) - 4(a * c))/(2 * a))*/
-        }
+            /*(-b +- (Square (b * b) - 4(a * c))/(2 * a))
+        }*/
 
 
 

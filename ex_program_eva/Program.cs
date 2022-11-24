@@ -15,8 +15,8 @@ namespace ex_program_eva
             Console.WriteLine(Exercises_ex.GetCylindreVolume(2, 4));
 
 
-            
-            Exercises_ex.GetResultGame playType play1, playType play2();
+            Exercises_ex.GetResultGame(playType.SCISSORS, playType.LIZARD);
+            Console.WriteLine GetResultGame(playType play1, playType play2);
             
 
         }

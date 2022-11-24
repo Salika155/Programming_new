@@ -92,7 +92,10 @@ namespace ex_program_eva
 
         //(obligatorio) Desarrolla una función que devuelva el resultado de una ecuación de segundo grado.
 
-
+        public static double EcuationSolution2(double a, double b, double c)
+        {
+            /*(-b +- (Square (b * b) - 4(a * c))/(2 * a))*/
+        }
 
 
 
@@ -100,7 +103,7 @@ namespace ex_program_eva
 
        /* public static double TriangleType(double a, double b, double c)
         {
-       ((a * a) = (b * b) + (c * c))
+       ((a * a) = (b * b) + (c * c)) equilatero = (a = b = c), isosceles = (a = b) || (a = c) || (b = c), escaleno = ( a != b) || (b != c) || (a != c)
 
         }
        */

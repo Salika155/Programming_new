@@ -28,3 +28,18 @@ C:\Users\alumno\Documents\GitHub\Programming_new\ex_program_eva\obj\Debug\net6.0
 C:\Users\alumno\Documents\GitHub\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.pdb
 C:\Users\alumno\Documents\GitHub\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.genruntimeconfig.cache
 C:\Users\alumno\Documents\GitHub\Programming_new\ex_program_eva\obj\Debug\net6.0\ref\ex_program_eva.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.csproj.AssemblyReference.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.AssemblyInfoInputs.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.AssemblyInfo.cs
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.csproj.CoreCompileInputs.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\refint\ex_program_eva.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.pdb
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\bin\Debug\net6.0\ex_program_eva.exe
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\bin\Debug\net6.0\ex_program_eva.deps.json
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\bin\Debug\net6.0\ex_program_eva.runtimeconfig.json
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\bin\Debug\net6.0\ex_program_eva.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\bin\Debug\net6.0\ex_program_eva.pdb
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ex_program_eva.genruntimeconfig.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\ex_program_eva\obj\Debug\net6.0\ref\ex_program_eva.dll

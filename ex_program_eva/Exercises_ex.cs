@@ -26,7 +26,7 @@ namespace ex_program_eva
             return Math.PI * (radius * radius);
         }
 
-        public static  double GetCylindreVolume(double radius, double height)
+        public static double GetCylindreVolume(double radius, double height)
         {
             return GetAreaCirc(radius) * height;
         }
@@ -84,18 +84,29 @@ namespace ex_program_eva
             //ax = 0 - b
             //x = - b / a
             double x = (-b / a);
-                return x;
+            return x;
         }
 
 
         //(obligatorio) Desarrolla una función que devuelva el resultado de una ecuación de segundo grado.
 
-        /*public static double EcuationSolution2(double a, double b, double c)
+            /*(-b +- (Square (b * b) - 4(a * c)/(2 * a)
+             */
+        
+        public static (double, double) EcuationSolution2Grade(double a, double b, double c)
         {
-            /*(-b +- (Square (b * b) - 4(a * c))/(2 * a))
-        }*/
-         public static double EcuationSolution2Grade(double a, double b, double c)
+            double ecuation = (b * b) - (4 * (a * c) / (2 * a));
+            if (ecuation == 0)
+                return (double.NaN, double.NaN);
 
+            double square = Math.Sqrt(ecuation);
+
+            double positivEcuation = -b + (ecuation);
+
+            double negativEcuation = -b - (ecuation);
+
+            return (positivEcuation, negativEcuation);
+        }
 
 
         //Los tres lados a, b y c de un triángulo deben satisfacer la desigualdad triangular: cada uno de los lados no puede ser más largo que la suma de los otros dos.Escribe un programa que reciba como entrada los tres lados de un triángulo(son reales), e indique: si acaso el triángulo es inválido; y si no lo es, qué tipo de triángulo es(un enum).
@@ -189,4 +200,4 @@ namespace ex_program_eva
 
 
     }
-
+}

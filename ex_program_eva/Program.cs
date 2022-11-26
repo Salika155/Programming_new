@@ -16,7 +16,13 @@ namespace ex_program_eva
 
 
             Exercises_ex.GetResultGame(playType.SCISSORS, playType.LIZARD);
-            Console.WriteLine GetResultGame(playType play1, playType play2);
+            // Console.WriteLine GetResultGame(playType play1, playType play2);
+
+            Console.WriteLine("X vale = ");
+            Console.WriteLine(Exercises_ex.EcuationSolution(1, 2));
+
+            Console.WriteLine("Los resultados de la ecuación de 2º grado son = ");
+            Console.WriteLine(Exercises_ex.EcuationSolution2Grade(1, 2, 3));
             
 
         }

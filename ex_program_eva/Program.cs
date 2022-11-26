@@ -19,10 +19,10 @@ namespace ex_program_eva
             // Console.WriteLine GetResultGame(playType play1, playType play2);
 
             Console.WriteLine("X vale = ");
-            Console.WriteLine(Exercises_ex.EcuationSolution(1, 2));
+            Console.WriteLine(Exercises_ex.EcuationSolution(20, -5));
 
             Console.WriteLine("Los resultados de la ecuación de 2º grado son = ");
-            Console.WriteLine(Exercises_ex.EcuationSolution2Grade(1, 2, 3));
+            Console.WriteLine(Exercises_ex.EcuationSolution2Grade(2, 2, 4));
             
 
         }

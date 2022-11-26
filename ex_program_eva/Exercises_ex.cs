@@ -17,6 +17,13 @@ namespace ex_program_eva
         SPOCK,
     }
 
+    public enum triangleSydes
+    {
+        EQUILATERAL,
+        ISOSCELES,
+        SCALENE,
+    }
+
     public class Exercises_ex
     {
         //Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un cilindro usando la primera función.
@@ -74,8 +81,6 @@ namespace ex_program_eva
             return 1;
         }
 
-
-
         //Desarrolla una función que devuelva el resultado de una ecuación de primer grado.
 
         public static double EcuationSolution(double a, double b)
@@ -83,8 +88,10 @@ namespace ex_program_eva
             //ax + b = 0
             //ax = 0 - b
             //x = - b / a
-            double x = (-b / a);
-            return x;
+             
+            double ecuation1 = (-1*b / a);
+            return ecuation1;
+
         }
 
 
@@ -95,29 +102,30 @@ namespace ex_program_eva
         
         public static (double, double) EcuationSolution2Grade(double a, double b, double c)
         {
-            double ecuation = (b * b) - (4 * (a * c) / (2 * a));
-            if (ecuation == 0)
+            double ecuation2 = (b * b) - (4 * (a * c) / (2 * a));
+            if (ecuation2 == 0)
                 return (double.NaN, double.NaN);
 
-            double square = Math.Sqrt(ecuation);
+            double square = Math.Sqrt(ecuation2);
 
-            double positivEcuation = -b + (ecuation);
+            double positivEcuation = -b + (ecuation2);
 
-            double negativEcuation = -b - (ecuation);
+            double negativEcuation = -b - (ecuation2);
 
             return (positivEcuation, negativEcuation);
         }
-
 
         //Los tres lados a, b y c de un triángulo deben satisfacer la desigualdad triangular: cada uno de los lados no puede ser más largo que la suma de los otros dos.Escribe un programa que reciba como entrada los tres lados de un triángulo(son reales), e indique: si acaso el triángulo es inválido; y si no lo es, qué tipo de triángulo es(un enum).
 
         /* public static double TriangleType(double a, double b, double c)
          {
         ((a * a) = (b * b) + (c * c)) equilatero = (a = b = c), isosceles = (a = b) || (a = c) || (b = c), escaleno = ( a != b) || (b != c) || (a != c)
-
          }
         */
+        public static double TriangleType(double a, double b, double c)
+        {
 
+        }
 
 
         //Escribir una función que calcule el máximo común divisor de dos números.
@@ -132,9 +140,6 @@ namespace ex_program_eva
                     n = i;
             }
             return n;
-
-
-
 
             //Escribir una función que calcule el mínimo común múltiplo de dos números.
 

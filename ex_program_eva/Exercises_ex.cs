@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ex_program_eva
 {
-    public enum playType
+    public enum PlayType
     {
         ROCK,
         PAPER,
@@ -17,7 +17,7 @@ namespace ex_program_eva
         SPOCK,
     }
 
-    public enum triangleSIdes
+    public enum TriangleSIdes
     {
         EQUILATERAL,
         ISOSCELES,
@@ -45,52 +45,52 @@ namespace ex_program_eva
         //un -1, si gana el segundo devuelve un 1, si quedan empates, un 0. Se tiene que usar un enum.
 
 
-        public static int GetResultGame(playType play1, playType play2)
+        public static int GetResultGame(PlayType play1, PlayType play2)
         {
             
-            if (play1 == playType.PAPER)
+            if (play1 == PlayType.PAPER)
             {
-                if (play2 == playType.ROCK || play2 == playType.SPOCK)
+                if (play2 == PlayType.ROCK || play2 == PlayType.SPOCK)
                     return 1;
-                if (play2 == playType.SCISSORS || play2 == playType.LIZARD)
+                if (play2 == PlayType.SCISSORS || play2 == PlayType.LIZARD)
                     return -1;
-                else if (play2 == playType.PAPER)
+                else if (play2 == PlayType.PAPER)
                     return 0;
             }
-            if (play1 == playType.ROCK)
+            if (play1 == PlayType.ROCK)
             {
-                if (play2 == playType.LIZARD || play2 == playType.SCISSORS)
+                if (play2 == PlayType.LIZARD || play2 == PlayType.SCISSORS)
                     return 1;
-                if (play2 == playType.SPOCK || play2 == playType.PAPER)
+                if (play2 == PlayType.SPOCK || play2 == PlayType.PAPER)
                     return -1;
-                else if (play2 == playType.ROCK)
+                else if (play2 == PlayType.ROCK)
                     return 0;
             }
-            if (play1 == playType.LIZARD)
+            if (play1 == PlayType.LIZARD)
             {
-                if (play2 == playType.ROCK || play2 == playType.SCISSORS)
+                if (play2 == PlayType.ROCK || play2 == PlayType.SCISSORS)
                     return -1;
-                if (play2 == playType.SPOCK || play2 == playType.PAPER)
+                if (play2 == PlayType.SPOCK || play2 == PlayType.PAPER)
                     return 1;
-                else if (play2 == playType.LIZARD)
+                else if (play2 == PlayType.LIZARD)
                     return 0;
             }
-            if (play1 == playType.SPOCK)
+            if (play1 == PlayType.SPOCK)
             {
-                if (play2 == playType.LIZARD || play2 == playType.PAPER)
+                if (play2 == PlayType.LIZARD || play2 == PlayType.PAPER)
                     return -1;
-                if (play2 == playType.ROCK || play2 == playType.SCISSORS)
+                if (play2 == PlayType.ROCK || play2 == PlayType.SCISSORS)
                     return 1;
-                else if (play2 == playType.SPOCK)
+                else if (play2 == PlayType.SPOCK)
                     return 0;
             }
-            if (play1 == playType.SCISSORS)
+            if (play1 == PlayType.SCISSORS)
             {
-                if (play2 == playType.SPOCK || play2 == playType.ROCK)
+                if (play2 == PlayType.SPOCK || play2 == PlayType.ROCK)
                     return -1;
-                if (play2 == playType.LIZARD || play2 == playType.PAPER)
+                if (play2 == PlayType.LIZARD || play2 == PlayType.PAPER)
                     return 1;
-                else if (play2 == playType.SCISSORS)
+                else if (play2 == PlayType.SCISSORS)
                     return 0;
             }
             return 1;
@@ -141,21 +141,21 @@ namespace ex_program_eva
         */
 
 
-        public static triangleSIdes TriangleType(double a, double b, double c)
+        public static TriangleSIdes TriangleType(double a, double b, double c)
         {
             while (a + b > c && b + c > a && c + a > b)
             {  
              if ((a == b) && (c == a))
-                 return triangleSIdes.EQUILATERAL;
+                 return TriangleSIdes.EQUILATERAL;
 
              else if ((a != b) && (b != c) && (c != a))
-                 return triangleSIdes.SCALENE;
+                 return TriangleSIdes.SCALENE;
                 
                 else 
-                    return triangleSIdes.ISOSCELES;
+                    return TriangleSIdes.ISOSCELES;
             }
                
-            return triangleSIdes.INVALID;
+            return TriangleSIdes.INVALID;
         }
 
         //Escribir una función que calcule el máximo común divisor de dos números.
@@ -177,8 +177,7 @@ namespace ex_program_eva
             public static int GetMCM(int a, int b)
             {
                 int max;
-                int result;
-
+                
                 if (a > b)
                 {
                     max = a;
@@ -201,19 +200,27 @@ namespace ex_program_eva
                 //Escriba un programa que devuelva un string con los números naturales menores o
                 //iguales que un número n determinado y que no sean múltiplos ni de 3 ni de 7.
 
-       /* public static int GetString( int a, int b)
-        {
+       public static string GetNatNum(int num)
+            //resultado del string para un for
+            //luego si el resto de la division entre 3 y 7 del num es diferente de 0 devuelve string + num
+       {
+            string result = "";
 
-        }*/
-
-
-
+            for (int i = 1; i <= num; i++)
+            {
+                if ((i % 3 != 0) && (i % 7 != 0))
+                    result += i + ",";
+                continue;
+            }
+            return result;
+       }
 
                 //(obligatorio) Escriba un programa que devuelva un string con todas las combinaciones
                 //posibles al momento de lanzar tres dados de 6 caras. (1, 1, 1) (1, 1, 2)
                 //(1, 1, 3), …
 
-        //for for for
+        //for para un dado con sus + caras, luego dentro de otro for con lo mismo y otro for para lo mismo
+        //al final el result es la suma de todos esas posibilidades dentro del string resurlt "("posibilidades sumadas")"
 
         public static string SixFacesDice(int a, int b, int c)
         {
@@ -234,6 +241,8 @@ namespace ex_program_eva
 
                 //Escribe una función que se le pase un número y devuelve un string con ese mismo
                 //número separado por guiones.Por ejemplo 234 → “2-3-4”
+
+        //convertir numero a string separado por guiones
 
 
 

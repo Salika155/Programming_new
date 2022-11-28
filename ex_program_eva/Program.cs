@@ -14,9 +14,9 @@ namespace ex_program_eva
             Console.WriteLine("El volumen del cilindro es = ");
             Console.WriteLine(Exercises_ex.GetCylindreVolume(2, 4));
 
+
             Console.WriteLine("El resultado de la jugada es ");
-            Console.WriteLine(Exercises_ex.GetResultGame(playType.PAPER, playType.PAPER));
-            //me falla el pptls
+            Console.WriteLine(Exercises_ex.GetResultGame(PlayType.PAPER, PlayType.PAPER));
 
             Console.WriteLine("X vale = ");
             Console.WriteLine(Exercises_ex.EcuationSolution(20, 5));
@@ -32,12 +32,15 @@ namespace ex_program_eva
 
 
             Console.WriteLine("El mínimo común multiplo de los dos números es ");
-            Console.WriteLine(Exercises_ex.GetMCM(16356, 2142));
+            Console.WriteLine(Exercises_ex.GetMCM(20, 15));
 
             string result3dices = Exercises_ex.SixFacesDice(1, 1, 1);
-            Console.WriteLine("Dados de seis caras:");
+            Console.WriteLine("Todas la combinaciones de tiradas de dados:");
             Console.WriteLine(result3dices);
 
+            string resultnatnum = Exercises_ex.GetNatNum(15);
+            Console.WriteLine("Numeros naturales menores o iguales que n que no sean multiplos de 3 y 7:");
+            Console.WriteLine(resultnatnum);
 
         }
 

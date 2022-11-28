@@ -242,6 +242,8 @@ namespace ex_program_eva
                 //Escribe una función que se le pase un número y devuelve un string con ese mismo
                 //número separado por guiones.Por ejemplo 234 → “2-3-4”
 
+                //variable de string = "" + variable;
+
         //convertir numero a string separado por guiones
 
 

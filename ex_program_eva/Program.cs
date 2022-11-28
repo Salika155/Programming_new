@@ -33,6 +33,12 @@ namespace ex_program_eva
 
             Console.WriteLine("El mínimo común multiplo de los dos números es ");
             Console.WriteLine(Exercises_ex.GetMCM(16356, 2142));
+
+            string result3dices = Exercises_ex.SixFacesDice(1, 1, 1);
+            Console.WriteLine("Dados de seis caras:");
+            Console.WriteLine(result3dices);
+
+
         }
 
     }

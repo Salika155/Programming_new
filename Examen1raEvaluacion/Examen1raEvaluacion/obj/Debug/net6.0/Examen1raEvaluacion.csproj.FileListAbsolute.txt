@@ -1,0 +1,15 @@
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\bin\Debug\net6.0\Examen1raEvaluacion.exe
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\bin\Debug\net6.0\Examen1raEvaluacion.deps.json
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\bin\Debug\net6.0\Examen1raEvaluacion.runtimeconfig.json
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\bin\Debug\net6.0\Examen1raEvaluacion.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\bin\Debug\net6.0\Examen1raEvaluacion.pdb
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.csproj.AssemblyReference.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.AssemblyInfoInputs.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.AssemblyInfo.cs
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.csproj.CoreCompileInputs.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\refint\Examen1raEvaluacion.dll
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.pdb
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\Examen1raEvaluacion.genruntimeconfig.cache
+C:\Users\carre\OneDrive\Escritorio\GitHub DAM\Programming_new\Examen1raEvaluacion\Examen1raEvaluacion\obj\Debug\net6.0\ref\Examen1raEvaluacion.dll

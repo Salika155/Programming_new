@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
       "projectName": "Examen1raEvaluacion",
-      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
+      "projectPath": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Examen1raEvaluacion\\Examen1raEvaluacion\\obj\\",
+      "outputPath": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

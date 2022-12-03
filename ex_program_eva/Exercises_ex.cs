@@ -239,22 +239,40 @@ namespace ex_program_eva
         }
 
 
-                //Escribe una función que se le pase un número y devuelve un string con ese mismo
-                //número separado por guiones.Por ejemplo 234 → “2-3-4”
+        //Escribe una función que se le pase un número y devuelve un string con ese mismo
+        //número separado por guiones.Por ejemplo 234 → “2-3-4”
 
-                //variable de string = "" + variable;
+        //variable de string = "" + variable;
 
         //convertir numero a string separado por guiones
 
 
 
 
-                //(obligatorio) Es posible expresar 100 como la suma de tres cubos, cada uno de
-                //los cuales puede ser negativo o positivo.Sólo se conocen tres maneras de hacerlo.
-                //Una de ellas es la siguiente: . Desarrolla un programa que busque las 1870 otras
-                //combinaciones 3 − 1797 3 − 903 3 = 100 para llegar al 100.
+        //(obligatorio) Es posible expresar 100 como la suma de tres cubos, cada uno de
+        //los cuales puede ser negativo o positivo.Sólo se conocen tres maneras de hacerlo.
+        //Una de ellas es la siguiente: . Desarrolla un programa que busque las 1870 otras
+        //combinaciones 3 − 1797 3 − 903 3 = 100 para llegar al 100.
 
+        public static string GetCubeCombination()
+        {
+            string result = "";
 
+            for (double n = -10000; n <= 10000; n++)
+            {
+                for (double o = -10000; o <= 10000; o++)
+                {
+                    for (double p = -10000; p <= 10000; p++)
+                    {
+                        if ((n * n * n) + (o * o * o) + (p * p * p) == 100)
+                        {
+                            result = "(" + n + "," + o + "," + p + ")";
+                        }
+                    }
+                }
+            }
+            return result;
+        }
 
 
                 //(obligatorio) Multiplicación rusa. El método de multiplicación rusa consiste en

@@ -46,12 +46,7 @@ namespace ex_program_eva
             Console.WriteLine("Las combinaciones del cubo para llegar al 100:");
             Console.WriteLine(resultcubecombination);
 
-            Console.WriteLine("El mínimo común multiplo de los dos números es ");
-            Console.WriteLine(Exercises_ex.GetCubeCombination());
 
-            string stringcuberesult = Exercises_ex.GetCubeCombination();
-            Console.WriteLine("Resultado del cubo:");
-            Console.WriteLine(stringcuberesult);
 
         }
 

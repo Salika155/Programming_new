@@ -282,6 +282,11 @@ namespace ex_program_eva
                 //Dicha suma es el producto de los dos números.La siguiente tabla muestra el cálculo
                 //realizado para multiplicar 37 por 12, cuyo resultado final es 12 + 48 + 384 = 444.
 
+        public static int RussMultiply(int a, int b)
+
+            //multiplicador
+            //multiplica
+
 
 
 

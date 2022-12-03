@@ -10,6 +10,7 @@ namespace Examen1raEvaluacion
     // {
 
     //     //Ejercicio 1
+            // Nota: 0
     //     public static int GetReal(int x, int y)
     //     {
     //         //(x+1/y)
@@ -20,7 +21,7 @@ namespace Examen1raEvaluacion
 
 
     //     //Ejercicio 2
-
+            // Nota: 0
     //     public static double GetReals(double a, double b, double c, double d, double e, double x)
     //     {
     //         double incognita = (x * x) + (x * x) + (x * x) + (x * x);
@@ -36,7 +37,7 @@ namespace Examen1raEvaluacion
     //         Ejecutando,
     //         Terminando,
     //     }
-
+           // Nota: 0
     //     public static bool StateMachine(n)
     //     {
     //         while (EstadoTipo.Preparada)

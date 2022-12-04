@@ -42,10 +42,14 @@ namespace ex_program_eva
             Console.WriteLine("Numeros naturales menores o iguales que n que no sean multiplos de 3 y 7:");
             Console.WriteLine(resultnatnum);
 
-            string resultcubecombination = Exercises_ex.GetCubeCombination();
-            Console.WriteLine("Las combinaciones del cubo para llegar al 100:");
-            Console.WriteLine(resultcubecombination);
+            Console.WriteLine("Multiplicación rusa:");
+            Console.WriteLine(Exercises_ex.RussMultiply(51, 15));
 
+            Console.WriteLine("Las combinaciones del cubo para llegar al 100:");
+            Console.WriteLine(Exercises_ex.GetCubeCombination());
+
+           
+          
 
 
         }

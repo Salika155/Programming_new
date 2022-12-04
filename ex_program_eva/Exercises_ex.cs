@@ -282,7 +282,7 @@ namespace ex_program_eva
         //Dicha suma es el producto de los dos números.La siguiente tabla muestra el cálculo
         //realizado para multiplicar 37 por 12, cuyo resultado final es 12 + 48 + 384 = 444.
 
-        public static int RussMultiply(int a, int b)
+        public static string RussMultiply(int a, int b)
 
         //multiplicador = a
         //multiplicando = b
@@ -292,14 +292,14 @@ namespace ex_program_eva
 
             while (b >= 1)
             {
-                if (calculate != "" && b % 2 != 0)
-                {
-                    calculate += " + " + a;
-                    result += a;
-                }
-                else if (calculate == "")
+                if (calculate == "")
                 {
                     calculate += a;
+                    result += a;
+                }
+                else if (calculate != "" && b % 2 != 0)
+                {
+                    calculate += " + " + a;
                     result += a;
                 }
                     
@@ -311,49 +311,69 @@ namespace ex_program_eva
         }
 
 
-                //Crea una función, que reciba como parámetro un texto y lo escriba centrado en pantalla
-                //(suponiendo una anchura de 80 columnas; pista: deberás escribir 40 - longitud/2 espacios
-                //antes del texto). Además subraya el mensaje utilizando el carácter =.
+        //Crea una función, que reciba como parámetro un texto y lo escriba centrado en pantalla
+        //(suponiendo una anchura de 80 columnas; pista: deberás escribir 40 - longitud/2 espacios
+        //antes del texto). Además subraya el mensaje utilizando el carácter =.
 
 
 
-                //(obligatorio) Crea una función que quite los espacios por delante y por detrás de un string.
-                //Se considera un espacio: un espacio, un tabulador, un salto de línea y retorno de carro.
-                //La función recibe un string y dos booleanos.
+        //(obligatorio) Crea una función que quite los espacios por delante y por detrás de un string.
+        //Se considera un espacio: un espacio, un tabulador, un salto de línea y retorno de carro.
+        //La función recibe un string y dos booleanos.
 
 
 
-                //(obligatorio) Crea un programa que calcula una aproximación de PI mediante
-                //la expresión: pi/4 = 1/1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 (...)
-                //A esta función se le pasará un entero con el número de iteraciones a realizar.
-                //Por ejemplo, si se le pasa un 4, el programa calculará: p = 4 * (1/1 - 1/3 + 1/5 - 1/7)
+        //(obligatorio) Crea un programa que calcula una aproximación de PI mediante
+        //la expresión: pi/4 = 1/1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + 1/13 (...)
+        //A esta función se le pasará un entero con el número de iteraciones a realizar.
+        //Por ejemplo, si se le pasa un 4, el programa calculará: p = 4 * (1/1 - 1/3 + 1/5 - 1/7)
 
 
 
-                //Escribir una función que reciba un número entero positivo y devuelva su factorial.
-                //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
-
-
-
-
-                //Escribir una función que reciba un número entero positivo y devuelva su sumatorio.
-                //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
+        //Escribir una función que reciba un número entero positivo y devuelva su factorial.
+        //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
 
 
 
 
-                /*(obligatorio) Según Sheldon, el mejor número es el 73.
-                73 es el 21er número primo.Su espejo, 37, es el 12mo número primo. 21 es el producto de 
-                multiplicar 7 por 3. En binario, 73 es un palíndromo: 1001001.
-                Escriba programas que le permitan responder las siguientes preguntas:
-                ¿Existen otros valores p que sean el n-ésimo primo, tales que espejo(p) es el espejo(n)-ésimo 
-                primo?
-                ¿Existen otros valores p que sean el n-ésimo primo, tales que n es el producto de los dígitos 
-                de p?
-                ¿Cuáles son los primeros diez números primos cuya representación binaria es un palíndromo?*/
-        
+        //Escribir una función que reciba un número entero positivo y devuelva su sumatorio.
+        //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
 
 
-        
+        public static int GetSum(int n)
+        {
+            int number = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                number += i;
+            }
+            return number;
+        }
+
+        public static int GetSumatoryRec(int n)
+        {
+            if (n == 0)
+                return 0;
+            if (n == 1)
+                return 1;
+            return n + GetSum(n - 1);
+
+        }
+
+
+
+        /*(obligatorio) Según Sheldon, el mejor número es el 73.
+        73 es el 21er número primo.Su espejo, 37, es el 12mo número primo. 21 es el producto de 
+        multiplicar 7 por 3. En binario, 73 es un palíndromo: 1001001.
+        Escriba programas que le permitan responder las siguientes preguntas:
+        ¿Existen otros valores p que sean el n-ésimo primo, tales que espejo(p) es el espejo(n)-ésimo 
+        primo?
+        ¿Existen otros valores p que sean el n-ésimo primo, tales que n es el producto de los dígitos 
+        de p?
+        ¿Cuáles son los primeros diez números primos cuya representación binaria es un palíndromo?*/
+
+
+
+
     }
 }

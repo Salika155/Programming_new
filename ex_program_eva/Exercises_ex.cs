@@ -215,9 +215,9 @@ namespace ex_program_eva
             return result;
        }
 
-                //(obligatorio) Escriba un programa que devuelva un string con todas las combinaciones
-                //posibles al momento de lanzar tres dados de 6 caras. (1, 1, 1) (1, 1, 2)
-                //(1, 1, 3), …
+        //(obligatorio) Escriba un programa que devuelva un string con todas las combinaciones
+        //posibles al momento de lanzar tres dados de 6 caras. (1, 1, 1) (1, 1, 2)
+        //(1, 1, 3), …
 
         //for para un dado con sus + caras, luego dentro de otro for con lo mismo y otro for para lo mismo
         //al final el result es la suma de todos esas posibilidades dentro del string resurlt "("posibilidades sumadas")"
@@ -257,7 +257,6 @@ namespace ex_program_eva
         public static string GetCubeCombination()
         {
             string result = "";
-
             for (double n = -10000; n <= 10000; n++)
             {
                 for (double o = -10000; o <= 10000; o++)
@@ -266,7 +265,7 @@ namespace ex_program_eva
                     {
                         if ((n * n * n) + (o * o * o) + (p * p * p) == 100)
                         {
-                            result = "(" + n + "," + o + "," + p + ")";
+                            result += "(" + n + "," + o + "," + p + ") = 100";
                         }
                     }
                 }
@@ -321,6 +320,14 @@ namespace ex_program_eva
         //Se considera un espacio: un espacio, un tabulador, un salto de línea y retorno de carro.
         //La función recibe un string y dos booleanos.
 
+        public static bool charsToTrim(char specialspace)
+        {
+            return specialspace == ' ' || specialspace== '\r' || specialspace == '\n' || specialspace == ' ';
+        }
+
+        
+        
+        
 
 
         //(obligatorio) Crea un programa que calcula una aproximación de PI mediante
@@ -333,7 +340,24 @@ namespace ex_program_eva
         //Escribir una función que reciba un número entero positivo y devuelva su factorial.
         //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
 
+         public static int GetFactorial(int n)
+        {
+            int result = 1;
 
+            for (int i = n; i >= 1; i--)
+            {
+                result *= i;
+            }
+            return result;
+        }
+
+        public static int GetFactorialRecursive(int n)
+        {
+            if (n == 1)
+                return 1;
+            else
+                return n * GetFactorialRecursive( n - 1 );
+        }
 
 
         //Escribir una función que reciba un número entero positivo y devuelva su sumatorio.

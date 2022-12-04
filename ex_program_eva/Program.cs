@@ -45,11 +45,29 @@ namespace ex_program_eva
             Console.WriteLine("Multiplicación rusa:");
             Console.WriteLine(Exercises_ex.RussMultiply(51, 15));
 
+            Console.WriteLine("El factorial del numero pasado es ");
+            Console.WriteLine(Exercises_ex.GetFactorial(5));
+
+            Console.WriteLine("El factorial en recursiva del numero pasado es ");
+            Console.WriteLine(Exercises_ex.GetFactorialRecursive(5));
+
+            Console.WriteLine("El sumatorio del numero pasado es ");
+            Console.WriteLine(Exercises_ex.GetSum(5));
+
+            Console.WriteLine("El sumatorio en recursiva del numero pasado es ");
+            Console.WriteLine(Exercises_ex.GetSumatoryRec(5));
+
+            //Console.WriteLine("Hola me llamo Carlos");
+            //Console.WriteLine(Exercises_ex.QuitSpaces(char));
+
             Console.WriteLine("Las combinaciones del cubo para llegar al 100:");
             Console.WriteLine(Exercises_ex.GetCubeCombination());
 
-           
-          
+            Console.WriteLine("El factorial del numero es ");
+            Console.WriteLine(Exercises_ex.GetFactorial(5));
+
+            
+
 
 
         }

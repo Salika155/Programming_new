@@ -381,7 +381,6 @@ namespace ex_program_eva
             if (n == 1)
                 return 1;
             return n + GetSum(n - 1);
-
         }
 
 

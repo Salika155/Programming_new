@@ -275,19 +275,40 @@ namespace ex_program_eva
         }
 
 
-                //(obligatorio) Multiplicación rusa. El método de multiplicación rusa consiste en
-                //multiplicar sucesivamente por 2 el multiplicando y dividir por 2 el multiplicador
-                //hasta que el multiplicador tome el valor 1. Luego, se suman todos los multiplicandos
-                //correspondientes a los multiplicadores impares.
-                //Dicha suma es el producto de los dos números.La siguiente tabla muestra el cálculo
-                //realizado para multiplicar 37 por 12, cuyo resultado final es 12 + 48 + 384 = 444.
+        //(obligatorio) Multiplicación rusa. El método de multiplicación rusa consiste en
+        //multiplicar sucesivamente por 2 el multiplicando y dividir por 2 el multiplicador
+        //hasta que el multiplicador tome el valor 1. Luego, se suman todos los multiplicandos
+        //correspondientes a los multiplicadores impares.
+        //Dicha suma es el producto de los dos números.La siguiente tabla muestra el cálculo
+        //realizado para multiplicar 37 por 12, cuyo resultado final es 12 + 48 + 384 = 444.
 
         public static int RussMultiply(int a, int b)
 
-            //multiplicador
-            //multiplica
+        //multiplicador = a
+        //multiplicando = b
+        {
+            int result = 0;
+            string calculate = "";
 
+            while (b >= 1)
+            {
+                if (calculate != "" && b % 2 != 0)
+                {
+                    calculate += " + " + a;
+                    result += a;
+                }
+                else if (calculate == "")
+                {
+                    calculate += a;
+                    result += a;
+                }
+                    
+                a *= 2;
+                b /= 2;
+            }
+            return calculate + " = " + result;
 
+        }
 
 
                 //Crea una función, que reciba como parámetro un texto y lo escriba centrado en pantalla

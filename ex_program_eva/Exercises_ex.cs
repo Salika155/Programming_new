@@ -29,7 +29,7 @@ namespace ex_program_eva
     {
         //Escribir una función que calcule el área de un círculo y otra que calcule el volumen de un
         //cilindro usando la primera función.
-
+        // Nota: 4
         public static double GetAreaCirc(double radius)
         {
             return Math.PI * (radius * radius);
@@ -43,7 +43,7 @@ namespace ex_program_eva
         //(obligatorio) Realiza una función que se le pase dos jugadas de “Piedra, papel, tijera,
         //lagarto o Spock” y devuelva quién gana de los dos.Si gana el primer jugador, devuelve
         //un -1, si gana el segundo devuelve un 1, si quedan empates, un 0. Se tiene que usar un enum.
-
+        // Nota: 4
 
         public static int GetResultGame(PlayType play1, PlayType play2)
         {
@@ -97,7 +97,7 @@ namespace ex_program_eva
         }
 
         //Desarrolla una función que devuelva el resultado de una ecuación de primer grado.
-
+        // Nota: 2, hay que comprobar que la a no sea cero
         public static double EcuationSolution(double a, double b)
         //ax + b = 0
         //ax = 0 - b
@@ -113,11 +113,11 @@ namespace ex_program_eva
 
         /*(-b +- (Square (b * b) - 4(a * c)/(2 * a)
          */
-
+        // Nota: 0, está mal, tanto a nivel de comprobar posibles problemas como la resolución
         public static (double, double) EcuationSolution2Grade(double a, double b, double c)
         {
             double ecuation2 = (b * b) - (4 * (a * c) / (2 * a));
-            if (ecuation2 == 0)
+            if (ecuation2 == 0) 
                 return (double.NaN, double.NaN);
 
             double square = Math.Sqrt(ecuation2);
@@ -140,7 +140,7 @@ namespace ex_program_eva
          }
         */
 
-
+        // Nota: 1, no se hace con un while
         public static TriangleSIdes TriangleType(double a, double b, double c)
         {
             while (a + b > c && b + c > a && c + a > b)
@@ -159,7 +159,7 @@ namespace ex_program_eva
         }
 
         //Escribir una función que calcule el máximo común divisor de dos números.
-
+        // Nota: 4
         public static int GetMCD(int a, int b)
         {
             int n = 0;
@@ -173,7 +173,7 @@ namespace ex_program_eva
         }
 
         //Escribir una función que calcule el mínimo común múltiplo de dos números.
-        
+        // Nota: 2, no hace lo que debe, no creo que la hayas probado
             public static int GetMCM(int a, int b)
             {
                 int max;
@@ -199,7 +199,7 @@ namespace ex_program_eva
 
                 //Escriba un programa que devuelva un string con los números naturales menores o
                 //iguales que un número n determinado y que no sean múltiplos ni de 3 ni de 7.
-
+        // Nota: 4
        public static string GetNatNum(int num)
             //resultado del string para un for
             //luego si el resto de la division entre 3 y 7 del num es diferente de 0 devuelve string + num
@@ -221,7 +221,7 @@ namespace ex_program_eva
 
         //for para un dado con sus + caras, luego dentro de otro for con lo mismo y otro for para lo mismo
         //al final el result es la suma de todos esas posibilidades dentro del string resurlt "("posibilidades sumadas")"
-
+        // Nota: 4
         public static string SixFacesDice(int a, int b, int c)
         {
             string result = "";
@@ -253,7 +253,7 @@ namespace ex_program_eva
         //los cuales puede ser negativo o positivo.Sólo se conocen tres maneras de hacerlo.
         //Una de ellas es la siguiente: . Desarrolla un programa que busque las 1870 otras
         //combinaciones 3 − 1797 3 − 903 3 = 100 para llegar al 100.
-
+        // Nota: 4
         public static string GetCubeCombination()
         {
             string result = "";
@@ -280,7 +280,7 @@ namespace ex_program_eva
         //correspondientes a los multiplicadores impares.
         //Dicha suma es el producto de los dos números.La siguiente tabla muestra el cálculo
         //realizado para multiplicar 37 por 12, cuyo resultado final es 12 + 48 + 384 = 444.
-
+        // Nota: 2, esta función no debe devolver un string
         public static string RussMultiply(int a, int b)
 
         //multiplicador = a
@@ -339,7 +339,7 @@ namespace ex_program_eva
 
         //Escribir una función que reciba un número entero positivo y devuelva su factorial.
         //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
-
+        // Nota: 4
          public static int GetFactorial(int n)
         {
             int result = 1;
@@ -363,7 +363,7 @@ namespace ex_program_eva
         //Escribir una función que reciba un número entero positivo y devuelva su sumatorio.
         //Hay que hacer esta función de 2 formas, una iterativa y otra recursiva.
 
-
+        // Nota: 4
         public static int GetSum(int n)
         {
             int number = 0;
@@ -378,7 +378,7 @@ namespace ex_program_eva
         {
             if (n == 0)
                 return 0;
-            if (n == 1)
+            if (n == 1) // No hace falta
                 return 1;
             return n + GetSum(n - 1);
         }

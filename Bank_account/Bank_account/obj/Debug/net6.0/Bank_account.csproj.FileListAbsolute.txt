@@ -1,0 +1,15 @@
+C:\Users\carre\source\repos\Bank_account\Bank_account\bin\Debug\net6.0\Bank_account.exe
+C:\Users\carre\source\repos\Bank_account\Bank_account\bin\Debug\net6.0\Bank_account.deps.json
+C:\Users\carre\source\repos\Bank_account\Bank_account\bin\Debug\net6.0\Bank_account.runtimeconfig.json
+C:\Users\carre\source\repos\Bank_account\Bank_account\bin\Debug\net6.0\Bank_account.dll
+C:\Users\carre\source\repos\Bank_account\Bank_account\bin\Debug\net6.0\Bank_account.pdb
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.csproj.AssemblyReference.cache
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.AssemblyInfoInputs.cache
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.AssemblyInfo.cs
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.csproj.CoreCompileInputs.cache
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.dll
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\refint\Bank_account.dll
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.pdb
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\Bank_account.genruntimeconfig.cache
+C:\Users\carre\source\repos\Bank_account\Bank_account\obj\Debug\net6.0\ref\Bank_account.dll

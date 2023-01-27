@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\source\\repos\\Bank_account\\Bank_account\\Bank_account.csproj": {}
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\Bank_account\\Bank_account\\Bank_account.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\source\\repos\\Bank_account\\Bank_account\\Bank_account.csproj": {
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\Bank_account\\Bank_account\\Bank_account.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\source\\repos\\Bank_account\\Bank_account\\Bank_account.csproj",
+        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\Bank_account\\Bank_account\\Bank_account.csproj",
         "projectName": "Bank_account",
-        "projectPath": "C:\\Users\\carre\\source\\repos\\Bank_account\\Bank_account\\Bank_account.csproj",
+        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Bank_account\\Bank_account\\Bank_account.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\source\\repos\\Bank_account\\Bank_account\\obj\\",
+        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Bank_account\\Bank_account\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

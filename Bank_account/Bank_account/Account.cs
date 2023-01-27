@@ -22,7 +22,7 @@ namespace Bank_account
         //constructor con parámetros
         public Account(string accountCod, string accountHolder, double accountquantity)
         {
-            _accountCod = accountCod;
+            _accountCod = accountCod; //this._code = code; normalmete aparece con this
             _accountHolder = accountHolder;
             _accountQuantity = accountquantity;
 
@@ -35,13 +35,17 @@ namespace Bank_account
         }
 
         //Funcion setname
-        public void SetName(string accountHolder)
+        public void SetName(string accountHolder) //set utilizan boid porque no devuelven nada
         {
-            Name = accountHolder;
+            Name = accountHolder; //tambien se puede utilizar el this aqui
         }
 
+        //Account a = new Account();
+        //a.SetName("Juan");
+        //a.Name = "Juan"; orientado a java
+
         //Propiertie publica name
-        public string Name { get { return _accountHolder; } set { _accountHolder = value; } }
+        public string Name { get { return _accountHolder; } set { _accountHolder = value; } } // get => return _username
 
         //Funcion getquantity
         public double GetQuantity()
@@ -56,27 +60,35 @@ namespace Bank_account
         public string AccountCode { get { return _accountCod; } }
 
         //Funcion ingressquantity
-        public double IngressQuantity(double Quantity)
+        public double IngressQuantity(double Quantity)//metodos de objeto porque van destinados a cada cuenta, y que no tenga static
         {
-            if (Quantity > 0)
+            if (Quantity > 0.0)
                 _accountQuantity += Quantity;
-            return _accountQuantity;
+            return _accountQuantity;//esto no estaba escrito, y seria void si esto se quita
         }
 
         //Funcion removequantity
-        public double RemoveQuantity(double Quantity)
+        public double RemoveQuantity(double Quantity)//double q
         {
             _accountQuantity -= Quantity;
 
-            if (_accountQuantity < 0)
-                _accountQuantity = 0;
+            if (_accountQuantity < 0.0)
+                _accountQuantity = 0.0;
             return _accountQuantity;
         }
+
+        //double result= _quantity _q;
+        //if  (_quantity < 0)
+        //double aux=-quantity
+        //
+        //if (q < 0.0)
+        // return 0.0;
 
         //metodo tostring
         public override string ToString()
         {
             return string.Format("IdAccount: {0}, User: {1}, Quantity: {2}", AccountCode, Name, AccountQuantity);
+            //return json.serialize(this);
         }
 
     }

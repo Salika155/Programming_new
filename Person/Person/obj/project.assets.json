@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\source\\repos\\Person\\Person\\Person.csproj",
+      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\Person\\Person\\Person.csproj",
       "projectName": "Person",
-      "projectPath": "C:\\Users\\carre\\source\\repos\\Person\\Person\\Person.csproj",
+      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Person\\Person\\Person.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\source\\repos\\Person\\Person\\obj\\",
+      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Person\\Person\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6,11 +6,11 @@ namespace Person
     {
         static void Main(string[] args)
         {
-            Persona Persona1 = new Persona("John Doe", 21, PersonaSex.MALE, 68, 1.68);
+            Persona Persona1 = new Persona("John Doe", 21, PersonaGender.MALE, 68, 1.68);
             Console.WriteLine("Nombre: {0}, Edad: {1}, Sexo: {2}, Peso {3}, Altura: {4}",
                 Persona1.Name, Persona1.Age, Persona1.Gender, Persona1.Weight, Persona1.Height, Persona1.Nif);
 
-            Persona Persona2 = new Persona("Janine Doe", 19, PersonaSex.FEMALE, 53, 1.63);
+            Persona Persona2 = new Persona("Janine Doe", 19, PersonaGender.FEMALE, 53, 1.63);
             Console.WriteLine("Nombre: {0}, Edad: {1}, Sexo: {2}, Peso {3}, Altura: {4}",
                 Persona2.Name, Persona2.Age, Persona2.Gender, Persona2.Weight, Persona2.Height, Persona2.Nif);
 

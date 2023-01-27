@@ -11,17 +11,18 @@ using System.Threading.Tasks;
 namespace Person
 {
 
-    public enum PersonaSex
+    public enum PersonaGender
     {
         MALE,
         FEMALE,
+        //others
     }
     public class Persona
     {
         private string _name;
         private int _age;
         private string _nif;
-        private PersonaSex _gender;
+        private PersonaGender _gender;
         private double _weight;
         private double _height;
 
@@ -30,19 +31,19 @@ namespace Person
             
         }
 
-        public Persona(PersonaSex gender)
+        public Persona(PersonaGender gender)
         {
             _gender = gender;
         }
 
-        public Persona(string name, int age, PersonaSex gender)
+        public Persona(string name, int age, PersonaGender gender)
         {
             _name = name;
             _age = age;
             _gender = gender;
         }
 
-        public Persona(string name, int age, PersonaSex gender, double weight, double height)
+        public Persona(string name, int age, PersonaGender gender, double weight, double height)
         {
             _gender = gender;
             _weight = weight;
@@ -60,7 +61,7 @@ namespace Person
 
         public string Nif { get { return _nif; } }
 
-        public PersonaSex Gender { get { return _gender; } set { _gender = value;} }
+        public PersonaGender Gender { get { return _gender; } set { _gender = value;} }
 
         public double Weight { get { return _weight; } set {_weight = value;} }
 
@@ -72,11 +73,11 @@ namespace Person
         {
             return String.Format("Name: {0}, Age {1}, nif {2}, gender {3}, weight {4}, height {5}", _name, _age, _nif, _gender, _weight, _height);
         }
-        //weight /  (height * height)
+       
         public double CalcularIMC()
         {
             double imc = Weight / (Height * Height);
-
+            //weight /  (height * height)
             return imc;
         }
 
@@ -86,10 +87,10 @@ namespace Person
                 return false;
             else
                 return true;
-
+            //rerturn _age >=18;
         }
 
-        public bool ConfirmaSexo(PersonaSex sex)
+        public bool ConfirmaSexo(PersonaGender sex)
         {
             if (Gender == sex)
             return true;

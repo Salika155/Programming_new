@@ -1,0 +1,15 @@
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\bin\Debug\net6.0\Baraja.exe
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\bin\Debug\net6.0\Baraja.deps.json
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\bin\Debug\net6.0\Baraja.runtimeconfig.json
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\bin\Debug\net6.0\Baraja.dll
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\bin\Debug\net6.0\Baraja.pdb
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.csproj.AssemblyReference.cache
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.GeneratedMSBuildEditorConfig.editorconfig
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.AssemblyInfoInputs.cache
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.AssemblyInfo.cs
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.csproj.CoreCompileInputs.cache
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.dll
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\refint\Baraja.dll
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.pdb
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\Baraja.genruntimeconfig.cache
+E:\DAM\asignaturas\PROGRAMACION\Baraja\Baraja\obj\Debug\net6.0\ref\Baraja.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\source\\repos\\chess\\ChessTest\\ChessTest.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\chess\\ChessTest\\ChessTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\source\\repos\\chess\\ChessTest\\ChessTest.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\chess\\ChessTest\\ChessTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\source\\repos\\chess\\ChessTest\\ChessTest.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\chess\\ChessTest\\ChessTest.csproj",
         "projectName": "ChessTest",
-        "projectPath": "C:\\Users\\carre\\source\\repos\\chess\\ChessTest\\ChessTest.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\chess\\ChessTest\\ChessTest.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\source\\repos\\chess\\ChessTest\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\chess\\ChessTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

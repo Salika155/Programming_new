@@ -1,0 +1,5 @@
+E:\DAM\asignaturas\PROGRAMACION\TorneoDragonBall\TorneoDragonBall\obj\Debug\net6.0\TorneoDragonBall.csproj.AssemblyReference.cache
+E:\DAM\asignaturas\PROGRAMACION\TorneoDragonBall\TorneoDragonBall\obj\Debug\net6.0\TorneoDragonBall.GeneratedMSBuildEditorConfig.editorconfig
+E:\DAM\asignaturas\PROGRAMACION\TorneoDragonBall\TorneoDragonBall\obj\Debug\net6.0\TorneoDragonBall.AssemblyInfoInputs.cache
+E:\DAM\asignaturas\PROGRAMACION\TorneoDragonBall\TorneoDragonBall\obj\Debug\net6.0\TorneoDragonBall.AssemblyInfo.cs
+E:\DAM\asignaturas\PROGRAMACION\TorneoDragonBall\TorneoDragonBall\obj\Debug\net6.0\TorneoDragonBall.csproj.CoreCompileInputs.cache

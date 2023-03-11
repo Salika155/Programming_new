@@ -1,0 +1,47 @@
+﻿<Window x:Class="AplicacionGrafica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionGrafica"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10,10,10,10">
+        <Grid x:Name="buttonmas">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="50*" />
+                <RowDefinition Height="53*"/>
+                <RowDefinition Height="110*"/>
+                <RowDefinition Height="56*"/>
+                <RowDefinition Height="145*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*" />
+                <ColumnDefinition Width="103*"/>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="196*" />
+                <ColumnDefinition Width="194*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="labelname" Content="Nombre:" Margin="29,10,0,7" Grid.RowSpan="2"/>
+            <TextBox x:Name="textboxname" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" Width="157" Height="18" TextChanged="TextBox_TextChanged" Background="#FFD7E6F9" Grid.ColumnSpan="2"/>
+            <Label x:Name="labelage" Content="Edad:" HorizontalAlignment="Left" Margin="40,11,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="40"/>
+            <TextBox x:Name="textboxage" Grid.Column="1" HorizontalAlignment="Left" Margin="10,16,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="157" Height="18" TextChanged="TextBox_TextChanged" Background="#FFD7E6F9" Grid.ColumnSpan="2"/>
+            <Label x:Name="labeldescript" Content="Descripcion:" HorizontalAlignment="Center" Margin="0,7,0,0" Grid.Row="3" VerticalAlignment="Top" Height="26" Width="76"/>
+            <TextBox x:Name="textboxdescript" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="&#xD;&#xA;" Margin="29,37,26,4" Grid.Row="3" TextChanged="TextBox_TextChanged_1" Background="#FFD7E6F9"/>
+            <Button x:Name="buttonmenos" Content="-" Margin="10,9,0,0" Grid.Row="4" VerticalAlignment="Top" RenderTransformOrigin="0.155,-0.776" Height="27" Grid.Column="2" Click="Button_Click" HorizontalAlignment="Left" Width="53"/>
+            <Button Content="+" Margin="29,9,0,0" Grid.Row="4" Click="Button_Click_2" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="51"/>
+            <Button Content="LOAD" Margin="40,95,64,20" Grid.Row="5" Grid.Column="5" Click="Button_Click_1"/>
+            <Button Content="SAVE" Margin="62,95,40,20" Grid.Row="5" Grid.Column="6"/>
+            <Button x:Name="buttonmostrar" Content="MOSTRAR" Margin="13,15,10,100" Grid.Row="5" Click="Button_Click_1" RenderTransformOrigin="0.041,0.432"/>
+            <TextBox x:Name="mostrarnum" Grid.Column="2" HorizontalAlignment="Center" Margin="0,15,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" Height="64" TextChanged="TextBox_TextChanged_2" Background="#FFD7E6F9"/>
+            <TextBox x:Name="texboxbody" Grid.Column="5" Margin="27,16,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="332" Grid.RowSpan="5" Background="#FFD7E6F9" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="336"/>
+
+        </Grid>
+    </Grid>
+</Window>

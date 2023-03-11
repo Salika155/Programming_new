@@ -1,0 +1,15 @@
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\bin\Debug\net6.0\Date.exe
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\bin\Debug\net6.0\Date.deps.json
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\bin\Debug\net6.0\Date.runtimeconfig.json
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\bin\Debug\net6.0\Date.dll
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\bin\Debug\net6.0\Date.pdb
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.csproj.AssemblyReference.cache
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.GeneratedMSBuildEditorConfig.editorconfig
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.AssemblyInfoInputs.cache
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.AssemblyInfo.cs
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.csproj.CoreCompileInputs.cache
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.dll
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\refint\Date.dll
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.pdb
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\Date.genruntimeconfig.cache
+E:\DAM\asignaturas\PROGRAMACION\Date\Date\obj\Debug\net6.0\ref\Date.dll

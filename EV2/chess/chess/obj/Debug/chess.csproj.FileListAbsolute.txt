@@ -1,0 +1,3 @@
+C:\Users\carre\source\repos\chess\chess\obj\Debug\chess.csproj.AssemblyReference.cache
+C:\Users\carre\source\repos\chess\chess\obj\Debug\chess.csproj.SuggestedBindingRedirects.cache
+C:\Users\carre\source\repos\chess\chess\obj\Debug\chess.csproj.CoreCompileInputs.cache

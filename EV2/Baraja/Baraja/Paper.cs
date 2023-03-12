@@ -31,7 +31,7 @@ namespace Baraja
         //Constructores
         public Carta(CardType type)
         {
-            
+            // Javi: Esta linea no tiene sentido
             CardType carta = CardType.Oros;
         }
 

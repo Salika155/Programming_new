@@ -89,6 +89,7 @@ namespace Date
             Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo, Desconocido,
         }
 
+        // Javi: Desde luego, no entiendo esta función
         public DiaSemana diaSemana()
         {
             DateTime fechaActual = new DateTime(year, month, day);

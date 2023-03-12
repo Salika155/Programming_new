@@ -14,6 +14,7 @@ namespace Arrays
         {
             if (comparison == null)
             {
+                // Javi: Hombre, ..., esto era para que lo hicieras tu, no lo pongo como entregada
                 comparison = Comparer<T>.Default.Compare;
             }
             Array.Sort(array, comparison);
@@ -23,6 +24,7 @@ namespace Arrays
         //funcion indexof
         public static int IndexOf<T>(T[] array, T value)
         {
+            // Javi: Lo mismo que arriba
             return Array.IndexOf(array, value);
         }
 
@@ -34,6 +36,7 @@ namespace Arrays
             {
                 comparer = Comparer<T>.Default;
             }
+            // Javi: No me vale
             return Array.BinarySearch(array, value, comparer);
         }
 
@@ -74,6 +77,7 @@ namespace Arrays
                 return new T[] { value };
             }
             T[] newArray = new T[array.Length + 1];
+            // Javi: Lo mismo
             Array.Copy(array, newArray, array.Length);
             newArray[newArray.Length - 1] = value;
             return newArray;
@@ -92,6 +96,7 @@ namespace Arrays
             {
                 return array;
             }
+            // Javi: Este si que lo acepto, y está muy bien
             T[] newArray = new T[array.Length - 1];
             Array.Copy(array, 0, newArray, 0, index);
             Array.Copy(array, index + 1, newArray, index, array.Length - index - 1);

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    /// <summary>
+    /// Clase para definir las banderas en el tablero
+    /// </summary>
     public class Flags
     {
         public Position  position;

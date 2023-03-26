@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    /// <summary>
+    /// Clase auxiliar para generar randoms cuando haga falta un valor aleatorio. 
+    /// Para este caso con valores INT
+    /// </summary>
     public class Utils
     {
         private static Random Random = new Random();

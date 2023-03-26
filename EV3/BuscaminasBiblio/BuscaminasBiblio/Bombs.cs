@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    /// <summary>
+    /// Clase para definir las bombas que tendra el tablero en el juego.
+    /// </summary>
     public class Bombs
     {
         public Position position;

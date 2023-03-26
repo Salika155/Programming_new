@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
       "projectName": "BuscaminasTest",
-      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
-              "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
+            "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
+              "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
             }
           }
         }

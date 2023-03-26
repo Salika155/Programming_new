@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    /// <summary>
+    /// Clase para poder situar elementos en el tablero pasandole la position a cada uno.
+    /// </summary>
     public class Position
     {
         public int x; 

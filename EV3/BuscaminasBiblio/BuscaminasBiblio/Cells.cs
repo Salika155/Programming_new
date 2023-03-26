@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    /// <summary>
+    /// Clase para generar celdas, las cuales forman parte del tablero y tienen una posicion en este
+    /// ademas de dos estados: abierto/cerrado
+    /// </summary>
     public class Cells
     {
         

@@ -53,6 +53,7 @@ namespace Comunidad
             Vivienda viviendaABorrar = null;
             foreach (Vivienda vivienda in _viviendas)
             {
+                // Javi: Mal
                 //if (vivienda._Piso == piso && vivienda.Letra == letra)
                 {
                     viviendaABorrar = vivienda;
@@ -103,6 +104,7 @@ namespace Comunidad
 
         public bool TieneViviendaVacias()
         {
+            // Javi: Esta funcion debería llamar a la otra
             foreach (Vivienda vivienda in _viviendas)
             {
                 //if (vivienda.Personas.Count == 0)
@@ -116,6 +118,7 @@ namespace Comunidad
             List<Vivienda> viviendasVacias = new List<Vivienda>();
             foreach (Vivienda vivienda in _viviendas)
             {
+                // Javi: Este if es necesario
                 //if (vivienda.Personas.Count == 0)
                     viviendasVacias.Add(vivienda);
             }

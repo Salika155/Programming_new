@@ -56,6 +56,7 @@ namespace Baraja
             return -1;
         }
 
+        // Javi: Una ñ!??!??!?!?!?!?!??!
         public void AñadirCarta(int numero, CardType type)
         {
             Carta carta = new Carta(numero, type);
@@ -83,6 +84,7 @@ namespace Baraja
         {
             for (int i = 1; i <= 12; i++)
             {
+                // Javi: No es correcto
                 if (carta.Numero == i)
                 _list.Add(carta);
             }
@@ -113,6 +115,7 @@ namespace Baraja
             {
                 if (i < _list.Count)
                 {
+                    // Javi: Casi!!!! es _list[0]
                     primerasCartas.Add(_list[i]);
                     _list.RemoveAt(i);
                 }

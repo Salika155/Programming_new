@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj": {}
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj": {
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj",
+        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj",
         "projectName": "BuscaminasApp",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj",
+        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\BuscaminasApp.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\obj\\",
+        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,9 @@
-﻿namespace BuscaminasTest
+﻿using BuscaminasBiblio;
+namespace BuscaminasTest
 {
-    internal class Program
+    public class Program 
     {
-        static void Main(string[] args)
+        static void Test1(IBoard board)
         {
             Console.WriteLine("Hello, World!");
         }

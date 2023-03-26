@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "BuscaminasBiblio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BuscaminasBiblio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BuscaminasBiblio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BuscaminasBiblio/1.0.0": {
+      "type": "project",
+      "path": "../BuscaminasBiblio/BuscaminasBiblio.csproj",
+      "msbuildProject": "../BuscaminasBiblio/BuscaminasBiblio.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "BuscaminasBiblio >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\carre\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
       "projectName": "BuscaminasTest",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
+      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
+              "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

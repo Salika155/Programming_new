@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj": {}
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj": {
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
-        "projectName": "BuscaminasTest",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
+        "projectName": "BuscaminasBiblio",
+        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
+        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,6 +28,65 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+        "projectName": "BuscaminasTest",
+        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
+                "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

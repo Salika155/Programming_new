@@ -1,35 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
-    internal interface IBoard
-    {
-       private int GetWidth();
+     public interface IBoard
+     {
+        //Anotaciones para mi: al ser una interfaz que implementa los metodos en otra clase, se cierran sin cuerpo ya que estas se implementaran en otro lugar.
+        int GetWidth();
 
-        private int GetHeight();
+        int GetHeight();
 
-        private void CreateBoard(double width, double height);
+        void CreateBoard(int width, int height);
 
-       private void Init(int x, int y, int bombCount);
+        void Init(int x, int y, int bombCount);
 
-        private bool IsBombAt(int x, int y);
+        bool IsBombAt(int x, int y);
 
-        private int GetBombProximity(int x, int y);
-
-        bool IsFlagAt(int x, int y);
+        int GetBombProximity(int x, int y);
 
         void PutFlagAt(int x, int y);
 
-        void DeleteFlagAt(int x, int y);
+        bool IsFlagAt(int x, int y);
 
-        bool HasWin(int x, int y);
+        void DeleteFlagAt(int x, int y);
 
         bool IsOpen(int x, int y);
 
         bool OpenCell(int x, int y);
-    }
+
+        bool HasWin(int x, int y);
+
+        
+     }
 }

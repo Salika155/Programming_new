@@ -12,6 +12,7 @@ namespace BuscaminasBiblio
     public class Flags
     {
         public Position  position;
+        // Javi: No veo sentido para estos atributos
         public bool PutFlag;
         public bool QuitFlag;
         private int x;

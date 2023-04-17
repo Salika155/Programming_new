@@ -9,6 +9,7 @@ namespace BuscaminasBiblio
     /// <summary>
     /// Clase para definir las bombas que tendra el tablero en el juego.
     /// </summary>
+    // Javi: Mal nombre de la clase: Las clases, salvo algunas excepciones, se hacen siempre en singular
     public class Bombs
     {
         public Position position;

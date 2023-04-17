@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
+    // Javi: Clase sin hacer
     public class Board2 : IBoard
     {
         void IBoard.CreateBoard(int width, int height)

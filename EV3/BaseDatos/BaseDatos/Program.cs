@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 namespace BaseDatos
 {
     public static class DataAcess
-    {
+     {
         private static SqlConnection SqlConnection;
         private static SqlCommand sqlCommand;
         private static SqlDataReader sqlDataReader;
@@ -14,27 +14,33 @@ namespace BaseDatos
         {
             try
             {
-                string connectionString = "Data Source=DESKTOP-8BKVIRT\\SQLEXPRESS;Initial Catalog=PROGRAMACION;User Id=;Password=;";
-                SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                string query = "SELECT * FROM USUARIO";
-                SqlCommand command = new SqlCommand(query, connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                using SqlConnection connection = new SqlConnection("Data Source=192.168.56.101,1433;Initial Catalog=PROGRAMACION;User Id=sa;Password=SqlServer123;Connection Timeout=30;");
                 {
-                    Console.WriteLine(reader["ID, NAME_USER, SURNAME, AGE"]);
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT NAME_USER, SURNAME1 FROM USUARIO WHERE NAME_USER LIKE @filter", connection))
+                    {
+                        command.Parameters.AddWithValue("@filter", "%na%");
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string NAME_USER = reader.GetFieldValue<string>(0);
+                                string SURNAME1 = reader.GetFieldValue<string>(1);
+                                int AGE = reader.GetFieldValue<int>(2);
+                                Console.WriteLine(reader["NAME_USER, SURNAME1, AGE"]);
+                                reader.Close();
+                                connection.Close();
+                            }
+                        }
+                    }
                 }
-                reader.Close();
-                connection.Close();
             }
-            catch 
-                (SqlException e)
-                when (e.InnerException == null)
+            catch
+                (SqlException exception)
+                when (exception.InnerException == null)
             {
-                Console.WriteLine("fallo de acceso en " + e);
-                Console.WriteLine(e.ToString());
-                Console.WriteLine("Done. Press enter.");
-                Console.ReadLine();
+                Console.WriteLine("fallo de acceso en " + exception);
+                Console.WriteLine(exception.ToString());
             }
         }
     }

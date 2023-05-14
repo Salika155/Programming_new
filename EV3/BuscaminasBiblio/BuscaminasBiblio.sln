@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaminasBiblio", "BuscaminasBiblio\BuscaminasBiblio.csproj", "{0E2FCA3E-78C1-47F9-94CA-91E981A99638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuscaminasBiblio", "BuscaminasBiblio\BuscaminasBiblio.csproj", "{0E2FCA3E-78C1-47F9-94CA-91E981A99638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaminasApp", "BuscaminasApp\BuscaminasApp.csproj", "{AA88DE31-3039-4E77-8203-BCC9921D6691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Buscaminas", "BuscaminasApp\Buscaminas.csproj", "{AA88DE31-3039-4E77-8203-BCC9921D6691}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0E2FCA3E-78C1-47F9-94CA-91E981A99638} = {0E2FCA3E-78C1-47F9-94CA-91E981A99638}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaminasTest", "BuscaminasTest\BuscaminasTest.csproj", "{8070671A-F442-4D02-B586-6870BC2FED0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuscaminasTest", "BuscaminasTest\BuscaminasTest.csproj", "{8070671A-F442-4D02-B586-6870BC2FED0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuscaminasAplic", "BuscaminasAplic\BuscaminasAplic.csproj", "{87D26970-9A44-4AF1-86C5-283C4D1A2ECE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +32,10 @@ Global
 		{8070671A-F442-4D02-B586-6870BC2FED0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8070671A-F442-4D02-B586-6870BC2FED0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8070671A-F442-4D02-B586-6870BC2FED0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D26970-9A44-4AF1-86C5-283C4D1A2ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D26970-9A44-4AF1-86C5-283C4D1A2ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D26970-9A44-4AF1-86C5-283C4D1A2ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D26970-9A44-4AF1-86C5-283C4D1A2ECE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

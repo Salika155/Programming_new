@@ -1,10 +1,13 @@
-﻿namespace BuscaminasApp
+﻿using Buscaminas;
+using UDK_Test_Release;
+
+namespace BuscaminasApp
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            UDK.Game.Launch(new MineSweeper());
         }
     }
 }

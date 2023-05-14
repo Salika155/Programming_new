@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj": {}
+    "F:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj": {}
   },
   "projects": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj": {
+    "F:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj",
+        "projectUniqueName": "F:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj",
         "projectName": "BaseDatos",
-        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\obj\\",
+        "projectPath": "F:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\BaseDatos.csproj",
+        "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
+        "outputPath": "F:\\DAM\\asignaturas\\PROGRAMACION\\BaseDatos\\BaseDatos\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "F:\\DAM\\asignaturas\\PROGRAMACION\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

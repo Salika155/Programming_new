@@ -7,37 +7,41 @@ namespace BuscaminasBiblio
     public class Board1 : IBoard
     {
         List<Position> bombs = new List<Position>();
-        List<Flags> flags = new List<Flags>();
+        List<Flag> flags = new List<Flag>();
 
         private int _width;
         private int _height;
 
         // Javi: De estas dos listas, una no hace falta. Es decir, si una
         // celda no está abierta, es que está cerrada.
+
         List<Position> openCells = new List<Position>();
-        List<Position> closeCells = new List<Position>();
-
-
+       
         public void PutFlagAt(int x, int y)
         {
             // Javi: Este algoritmo está mal, lo único que hay que hacer es: si no hay una bandera, ponerla
-            for (int i = 0; i < flags.Count; i++)
-                if (flags[i].position.x != x && flags[i].position.y != y)
-                    flags.Add(new Flags(x, y));
+            Flag flag = new Flag(x, y);
+            flags.Add(flag);
         }
 
         public void DeleteFlagAt(int x, int y)
         {
             for (int i = 0; i < flags.Count; i++)
+            {
                 if (flags[i].position.x == x && flags[i].position.y == y)
+                {
                     flags.RemoveAt(i);
-                    // Javi: Para ahorrar un poco de cómputo puedes hacer un break
+                    break;
+                }
+            }
+            // Javi: Para ahorrar un poco de cómputo puedes hacer un break
         }
 
         public bool OpenCell(int x, int y)
         {
             // Javi: Esta función no hace lo que debería, es decir, no abre una celda
             //abre una celda, puede ser un numero o una bomba
+            
             if (IsFlagAt(x, y) == false)
                 return true;
             return false;
@@ -57,8 +61,7 @@ namespace BuscaminasBiblio
         {
             _width = width;
             _height = height;
-            // Javi: Esto sobra
-            throw new Exception("No puedes crear un tablero de ese tamaño");
+            
         }
 
         public void Init(int x, int y, int bombCount)
@@ -72,11 +75,9 @@ namespace BuscaminasBiblio
             {
                 for (int j = 0; j < _height; j++)
                 {
-                    closeCells.Add(new Position(i, j));
+                    openCells.Add(new Position(i, j));
                 }
             }
-            // Javi: Esto era una prueba???
-            closeCells.Remove(new Position(x, y));
         }
 
         // Javi: Perfecto!!!
@@ -127,15 +128,20 @@ namespace BuscaminasBiblio
 
         public bool HasWin(int x, int y)
         {
-            // Javi: Este algoritmo se tiene que hacer en la interfaz, y está incorrecto por ahora
-            //si todas las celdas de numero estan abiertas, y no se ha explotado ninguna bomba
-            for (int i = 0; i <= bombs.Count; i++)
-            {
-                if (openCells[i] == bombs[i])
-                    return false;
-            }
-            return true;
+            throw new NotImplementedException();
         }
+
+        //public bool HasWin(int x, int y)
+        //{
+        //    // Javi: Este algoritmo se tiene que hacer en la interfaz, y está incorrecto por ahora
+        //    //si todas las celdas de numero estan abiertas, y no se ha explotado ninguna bomba
+        //    for (int i = 0; i <= bombs.Count; i++)
+        //    {
+        //        if (openCells[i] == bombs[i])
+        //            return false;
+        //    }
+        //    return true;
+        //}
 
     }
 }

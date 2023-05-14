@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BuscaminasBiblio
 {
     // Javi: Clase sin hacer
-     public class Board2 : IBoard
+    public class Board2 : IBoard
     {
-        Bombs[] bombs = new Bombs[10];
-        Cells[] cells = new Cells[100];
-        Flags[] flags = new Flags[100];
+        Bomb[] bombs = new Bomb[10];
+        Cell[] cells = new Cell[100];
+        Flag[] flags = new Flag[100];
 
         private int _width;
         private int _height;
@@ -25,29 +26,31 @@ namespace BuscaminasBiblio
         {
             _width = width;
             _height = height;
-            throw new Exception("No puedes crear un tablero de ese tamaño");
+           
         }
 
         public void DeleteFlagAt(int x, int y)
         {
-            for (int i = 0; i < flags.Length; i++)
-                if (flags[i].position.x == x && flags[i].position.y == y);
-                    
+            throw new NotImplementedException();
+            //for (int i = 0; i < flags.Length; i++)
+            //    if (flags[i].position.x == x && flags[i].position.y == y);
+
         }
 
         public int GetBombProximity(int x, int y)
         {
-            int count = 0;
-            //mirar las  casillas a +1 y -1 de la casilla indicada para comprobar si hay bomba o no
-            for (int i = x - 1; i <= x + 1; i++)
-            {
-                for (int j = y - 1; j <= y + 1; j++)
-                {
-                    if (IsBomb(IsOpen))
-                        count++;
-                }
-            }
-            return count;
+            throw new NotImplementedException();
+            //int count = 0;
+
+            //for (int i = x - 1; i <= x + 1; i++)
+            //{
+            //    for (int j = y - 1; j <= y + 1; j++)
+            //    {
+            //        if (IsBomb(IsOpen))
+            //            count++;
+            //    }
+            //}
+            //return count;
         }
 
         public bool IsBomb(Func<int, int, bool> isOpen)
@@ -79,7 +82,6 @@ namespace BuscaminasBiblio
                     
                 }
             }
-            
         }
 
         public bool IsBombAt(int x, int y)

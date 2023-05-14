@@ -4,14 +4,15 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace BuscaminasBiblio
 {
      public interface IBoard
      {
-          // Javi: Te falta por documentar lo que retorna cada función así como lo parámetros de entrada de las funciones
+        // Javi: Te falta por documentar lo que retorna cada función así como lo parámetros de entrada de las funciones
         //Anotaciones para mi: al ser una interfaz que implementa los metodos en otra clase, se cierran sin cuerpo ya que estas se implementaran en otro lugar.
-        
+
         /// <summary>
         /// Obtiene el with del tablero
         /// </summary>
@@ -95,13 +96,16 @@ namespace BuscaminasBiblio
         bool OpenCell(int x, int y);
 
         /// <summary>
-        /// Funcion por la que si ninguna celda con bomba ha sido abierta, pero el resto si, ganas el juego
+        /// 
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>
         /// <returns></returns>
-        bool HasWin(int x, int y);
+        /// <exception cref="NotImplementedException"></exception>
+        bool HasWin(int x, int y)
+        {
+            throw new NotImplementedException();
+        }
 
         
-     }
 }

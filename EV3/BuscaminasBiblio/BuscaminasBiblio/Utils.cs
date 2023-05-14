@@ -26,6 +26,5 @@ namespace BuscaminasBiblio
             }
             return Random.Next(min, max);
         }
-        
     }
 }

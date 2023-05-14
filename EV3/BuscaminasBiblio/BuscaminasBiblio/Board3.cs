@@ -1,17 +1,72 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OpenTK.Graphics.OpenGL;
 
 namespace BuscaminasBiblio
 {
     // Javi: Clase sin hacer
     public class Board3 : IBoard
     {
+        private Cell [,] _cells;
+        private int _width;
+        private int _height;
+        private Flag [,] _flags;
+        private Bomb[,] _bombs;
+
+        public Board3(Cell[,] cells, Bomb[,] bombs, int with, int height, Flag[,] flags)
+        {
+            _width = with;
+            _height = height;
+            _cells = new Cell[_width, _height];
+            _bombs = new Bomb[_width, _height];
+            _flags= new Flag[_width, _height];
+
+            for (int i = 0; i < _width; i++)
+            {
+                for (int j = 0; j < _height; j++)
+                {
+                    _cells[i, j] = new Cell();
+                }
+            }
+
+            for (int i = 0; i < _width; i++)
+            {
+                for (int j = 0; j < _height; j++)
+                {
+                    _bombs[i, j] = new Bomb();
+                }
+            }
+
+            for (int i = 0; i < _width; i++)
+            {
+                for (int j = 0; j < _height; j++)
+                {
+                    _flags[i, j] = new Flag();
+                }
+            }
+
+        }
+
         void IBoard.CreateBoard(int width, int height)
         {
-            throw new NotImplementedException();
+            _width = width;
+            _height = height;
+
+            _cells = new Cell[_width, _height];
+            _flags = new Flag[_width, _height];
+            _bombs = new Bomb[_width, _height];
+
+            for (int i = 0; i < _width; i++)
+            {
+                for (int j = 0; j < _height; j++)
+                {
+                    _cells[i, j] = new Cell();
+                }
+            }
         }
 
         void IBoard.DeleteFlagAt(int x, int y)
@@ -61,12 +116,23 @@ namespace BuscaminasBiblio
 
         bool IBoard.OpenCell(int x, int y)
         {
+            Cell cell = _cells[x, y];
             throw new NotImplementedException();
         }
 
         void IBoard.PutFlagAt(int x, int y)
         {
-            throw new NotImplementedException();
+            _flags[x, y] = new Flag();
         }
+
     }
+
+    //int[,] bidimensional = new int[ , ];
+    //for (int i = 0; i<bidimensional.GetLength(0); i++)
+    //{
+    //for (int j = 0; j<bidimensional.GetLength(1); i++)
+    //{
+    //foreach (int i, j in bidimensional)
+    //}
+    //}
 }

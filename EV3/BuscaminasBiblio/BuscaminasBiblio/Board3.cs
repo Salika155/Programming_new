@@ -126,13 +126,4 @@ namespace BuscaminasBiblio
         }
 
     }
-
-    //int[,] bidimensional = new int[ , ];
-    //for (int i = 0; i<bidimensional.GetLength(0); i++)
-    //{
-    //for (int j = 0; j<bidimensional.GetLength(1); i++)
-    //{
-    //foreach (int i, j in bidimensional)
-    //}
-    //}
 }

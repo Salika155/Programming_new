@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BuscaminasApp")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Buscaminas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("BuscaminasApp")]
-[assembly: System.Reflection.AssemblyTitleAttribute("BuscaminasApp")]
+[assembly: System.Reflection.AssemblyProductAttribute("Buscaminas")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Buscaminas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

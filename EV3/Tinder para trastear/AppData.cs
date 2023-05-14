@@ -9,7 +9,7 @@ namespace Tinder_para_trastear
 {
     class AppData
     {
-        Model m = new Moel m
+        Model m = new Model m
         //aqui va el singleton
 
 

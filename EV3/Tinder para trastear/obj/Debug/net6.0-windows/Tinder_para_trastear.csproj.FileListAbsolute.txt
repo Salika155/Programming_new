@@ -1,0 +1,12 @@
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear.csproj.AssemblyReference.cache
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Cell.g.cs
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\MainWindow.g.cs
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\App.g.cs
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear_MarkupCompile.cache
+E:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear_MarkupCompile.lref
+F:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear.csproj.AssemblyReference.cache
+F:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Cell.g.cs
+F:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\App.g.cs
+F:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear_MarkupCompile.cache
+F:\DAM\asignaturas\PROGRAMACION\Tinder para trastear\obj\Debug\net6.0-windows\Tinder_para_trastear_MarkupCompile.lref

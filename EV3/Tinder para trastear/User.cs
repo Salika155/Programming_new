@@ -11,13 +11,13 @@ namespace Tinder
     public class User
     {
         
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Photo { get; set; }
-        public string Description { get; set; }
-        public string Gender { get; set; }
-        public int Rating { get; set; }
+        private int _id 
+        private string _name 
+        private int _age 
+        private string _photo 
+        private string _description 
+        private string _gender 
+        private int _rating 
 
 
         public User()
@@ -36,7 +36,13 @@ namespace Tinder
             Rating = rating;
         }
 
-        
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Photo { get; set; }
+        public string Description { get; set; }
+        public string Gender { get; set; }
+        public int Rating { get; set; }
 
         private bool UserFilter(User user)
         {

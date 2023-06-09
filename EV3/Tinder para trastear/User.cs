@@ -35,13 +35,13 @@ namespace Tinder
             Rating = rating;
         }
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Photo { get; set; }
-        public string Description { get; set; }
-        public string Gender { get; set; }
-        public int Rating { get; set; }
+        public int Id { get => _id; set => _id = value; }
+        public string Name { get => _name; set => _name = value; }
+        public int Age { get => _age; set => _age = value; }
+        public string Photo { get => _photo; set => _photo = value; }
+        public string Description { get => _description; set => _description = value; }
+        public string Gender { get => _gender; set => _gender = value; }
+        public int Rating { get => _rating; set => _rating = value; }
 
         private bool UserFilter(User user)
         {

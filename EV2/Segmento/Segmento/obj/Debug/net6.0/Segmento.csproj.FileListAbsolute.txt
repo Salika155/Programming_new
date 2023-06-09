@@ -1,5 +1,0 @@
-E:\DAM\asignaturas\PROGRAMACION\Segmento\Segmento\obj\Debug\net6.0\Segmento.csproj.AssemblyReference.cache
-E:\DAM\asignaturas\PROGRAMACION\Segmento\Segmento\obj\Debug\net6.0\Segmento.GeneratedMSBuildEditorConfig.editorconfig
-E:\DAM\asignaturas\PROGRAMACION\Segmento\Segmento\obj\Debug\net6.0\Segmento.AssemblyInfoInputs.cache
-E:\DAM\asignaturas\PROGRAMACION\Segmento\Segmento\obj\Debug\net6.0\Segmento.AssemblyInfo.cs
-E:\DAM\asignaturas\PROGRAMACION\Segmento\Segmento\obj\Debug\net6.0\Segmento.csproj.CoreCompileInputs.cache

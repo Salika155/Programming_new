@@ -11,14 +11,13 @@ namespace Tinder
     public class User
     {
         
-        private int _id 
-        private string _name 
-        private int _age 
-        private string _photo 
-        private string _description 
-        private string _gender 
-        private int _rating 
-
+        private int _id;
+        private string _name;
+        private int _age;
+        private string _photo;
+        private string _description;
+        private string _gender;
+        private int _rating;
 
         public User()
         {

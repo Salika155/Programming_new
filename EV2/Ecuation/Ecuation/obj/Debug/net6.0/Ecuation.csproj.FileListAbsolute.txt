@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\bin\Debug\net6.0\Ecuation.exe
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\bin\Debug\net6.0\Ecuation.deps.json
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\bin\Debug\net6.0\Ecuation.runtimeconfig.json
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\bin\Debug\net6.0\Ecuation.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\bin\Debug\net6.0\Ecuation.pdb
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.AssemblyInfo.cs
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\refint\Ecuation.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.pdb
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\Ecuation.genruntimeconfig.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\Ecuation\Ecuation\obj\Debug\net6.0\ref\Ecuation.dll

@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\bin\Debug\net6.0\Segment2D.exe
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\bin\Debug\net6.0\Segment2D.deps.json
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\bin\Debug\net6.0\Segment2D.runtimeconfig.json
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\bin\Debug\net6.0\Segment2D.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\bin\Debug\net6.0\Segment2D.pdb
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.AssemblyInfo.cs
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\refint\Segment2D.dll
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.pdb
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\Segment2D.genruntimeconfig.cache
+C:\Users\carre\Desktop\programacion 2da\practicas\2DSegment\2DSegment\obj\Debug\net6.0\ref\Segment2D.dll

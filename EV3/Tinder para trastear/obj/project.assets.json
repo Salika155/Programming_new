@@ -470,19 +470,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carre\\.nuget\\packages\\": {}
+    "C:\\Users\\carcarcor\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\Tinder_para_trastear.csproj",
+      "projectUniqueName": "F:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\Tinder_para_trastear.csproj",
       "projectName": "Tinder_para_trastear",
-      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\Tinder_para_trastear.csproj",
-      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\obj\\",
+      "projectPath": "F:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\Tinder_para_trastear.csproj",
+      "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
+      "outputPath": "F:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -490,7 +495,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "F:\\DAM\\asignaturas\\PROGRAMACION\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -533,7 +539,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

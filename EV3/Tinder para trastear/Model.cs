@@ -7,11 +7,11 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Printing;
 using System.Text.Json;
-
+using Tinder_para_trastear;
 
 namespace Tinder
 {
-    public class Model
+    public class Model : IModel
     {
         public static void AddUser(User user)
         {

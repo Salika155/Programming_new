@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Tinder
 {
    
@@ -22,22 +23,46 @@ namespace Tinder
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static
-        List<User> users = new List<User>();
+
+        List<User> u;
+        ObservableCollection<User> user = new ObservableCollection<User>();
         
 
         public MainWindow()
         {
-            
-            { 
+            InitializeComponent();
 
+            for (int i = 0; i < 10; i++)
+            {
+                user.Add(new User()
+                {
+                    Id = i,
+                    Name = "",
+                    Description = "",
+                    Age = 22,
+                    Gender = "",
+                    Photo = "",
+                    Rating = 0
+
+                }) ;
             }
-            
-            
-            
+            ListViewUsers.ItemsSource = user;
+
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = (Button)sender;
+            User p = (User)b.DataContext;
+            //MessageBox.Show(p.Description);
+            user.Add(new User()
+            {
+                Name = "Gian",
+                Description = "Franco"
+            });
+        }
+
+
 
         //Grid myGrid = new Grid();
 

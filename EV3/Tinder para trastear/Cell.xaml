@@ -6,20 +6,20 @@
              xmlns:local="clr-namespace:Tinder_para_trastear"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border Margin="240,180,240,159" Width="320" OpacityMask="Black" BorderThickness="2,2,2,2" BorderBrush="Red">
-        <StackPanel Orientation="Horizontal">
-            <Image x:Name="Foto1" Grid.Column="0" Height="70" Width="70" HorizontalAlignment="Left" Margin="10,0,0,0" Source="{Binding photo}"></Image>
-            <StackPanel x:Name="StackPanel2" Orientation="Vertical" Height="96" Width="229" Margin="5">
-                
-                <TextBlock Margin="5 0" Text="{Binding Name}" FontSize="12"/>
-                <TextBlock Margin="5" Text="{Binding Description}" FontSize="11" FontFamily="Franklin Gothic Medium"/>
-                <TextBlock Margin="5" Text="{Binding Age}" FontSize="11" FontFamily="Franklin Gothic Medium"/>
-                <Image Source="{Binding Photo}" Height="15" Width="100" HorizontalAlignment="Left" />
-                <Button Content="Detalles" Click="Button_Click" Height="19" Width="80" HorizontalAlignment="Right"/>
-                
+    <Grid>
+        <Border Margin="240,180,240,159" Width="320" OpacityMask="Black" BorderThickness="2,2,2,2" BorderBrush="Red">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name="Foto1" Grid.Column="0" Height="70" Width="70" HorizontalAlignment="Left" Margin="10,0,0,0" Source="{Binding photo}"></Image>
+                <StackPanel x:Name="StackPanel2" Orientation="Vertical" Height="96" Width="229" Margin="5">
+
+                    <TextBlock Margin="5 0" Text="{Binding Name}" FontSize="12"/>
+                    <TextBlock Margin="5" Text="{Binding Description}" FontSize="11" FontFamily="Franklin Gothic Medium"/>
+                    <TextBlock Margin="5" Text="{Binding Age}" FontSize="11" FontFamily="Franklin Gothic Medium"/>
+                    <Image Source="{Binding Photo}" Height="15" Width="100" HorizontalAlignment="Left" />
+                    <Button Content="Detalles" Click="Button_Click" Height="19" Width="80" HorizontalAlignment="Right"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
-    </Border>
+        </Border>
+
+    </Grid>
 </UserControl>
-
-

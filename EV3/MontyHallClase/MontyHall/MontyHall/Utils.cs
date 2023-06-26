@@ -12,7 +12,13 @@ namespace MontyHall
         
         public static int GetRandomNumber(int min, int max)
         {
-            return _random.Next(min, max);
+            if (min > max)
+            {
+                int dif = min;
+                min = max;
+                max = dif;
+            }
+            return _random.Next(min, max + 1);
         }
     }
 }

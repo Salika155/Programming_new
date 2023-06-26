@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
+      "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
       "projectName": "MontyHall",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
+      "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\obj\\",
+      "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

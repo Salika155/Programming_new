@@ -13,16 +13,16 @@ namespace MontyHall
         public DoorType Type { get; set; }
         public bool IsSelected { get; set; }
         public int DoorNumber { get; set; }
-        public bool HasPrize { get; internal set; }
+        //public bool HasPrize { get; set; }
         public bool IsOpen { get; set; }
 
-        public Door(int DoorNumber)
+        public Door(int doorNumber)
         {
-            this.DoorNumber = DoorNumber;
-            this.IsSelected = false;
-            Type = DoorType.GOAT;
-            this.HasPrize = true;
-            this.IsOpen = true;
+            DoorNumber = doorNumber;
+            IsSelected = false;
+            IsOpen = true;
+            SetPrize();
+            
         }
 
         public Door() 
@@ -35,7 +35,16 @@ namespace MontyHall
         /// </summary>
         public void SetPrize()
         {
-            Type = DoorType.CAR;
+            int randomNumber = Contest.random.Next(0, 2);
+            if (randomNumber == 0) 
+            {
+                Type = DoorType.CAR;
+                
+            }
+            else 
+            {
+                Type = DoorType.GOAT;
+            }
         }
     }
 }

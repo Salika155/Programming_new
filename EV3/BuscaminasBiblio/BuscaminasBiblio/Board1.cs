@@ -6,8 +6,8 @@ namespace BuscaminasBiblio
 {
     public class Board1 : IBoard
     {
-        List<Position> bombs = new List<Position>();
-        List<Flag> flags = new List<Flag>();
+        List<Position> _bombs = new List<Position>();
+        List<Flag> _flags = new List<Flag>();
 
         private int _width;
         private int _height;
@@ -15,22 +15,33 @@ namespace BuscaminasBiblio
         // Javi: De estas dos listas, una no hace falta. Es decir, si una
         // celda no está abierta, es que está cerrada.
 
-        List<Position> openCells = new List<Position>();
+        List<Position> _openCells = new List<Position>();
        
         public void PutFlagAt(int x, int y)
         {
             // Javi: Este algoritmo está mal, lo único que hay que hacer es: si no hay una bandera, ponerla
             Flag flag = new Flag(x, y);
-            flags.Add(flag);
+            bool flagExist = false;
+
+            for (int i = 0; i < _flags.Count; i++)
+            {
+                if (_flags[i].position.x == x && _flags[i].position.y == y)
+                {
+                    flagExist = true;
+                    break;
+                }
+            }
+            if (!flagExist)
+                _flags.Add(flag);
         }
 
         public void DeleteFlagAt(int x, int y)
         {
-            for (int i = 0; i < flags.Count; i++)
+            for (int i = 0; i < _flags.Count; i++)
             {
-                if (flags[i].position.x == x && flags[i].position.y == y)
+                if (_flags[i].position.x == x && _flags[i].position.y == y)
                 {
-                    flags.RemoveAt(i);
+                    _flags.RemoveAt(i);
                     break;
                 }
             }
@@ -41,11 +52,28 @@ namespace BuscaminasBiblio
         {
             // Javi: Esta función no hace lo que debería, es decir, no abre una celda
             //abre una celda, puede ser un numero o una bomba
-            
-            if (IsFlagAt(x, y) == false)
-                return true;
-            return false;
+            bool canOpenCells = true;
+
+            if (IsFlagAt(x, y))
+            {
+                canOpenCells = false;
+            }
+            else if (IsOpen(x, y))
+            {
+                canOpenCells = false;
+            }
+            else if (IsBombAt(x, y))
+            {
+                canOpenCells = false;
+            }
+            else
+            {
+                Position cellPosition = new Position(x, y);
+                _openCells.Add(cellPosition);
+            }
+            return canOpenCells;
         }
+    
 
         public int GetWidth()
         {
@@ -66,26 +94,37 @@ namespace BuscaminasBiblio
 
         public void Init(int x, int y, int bombCount)
         {
+            _openCells.Clear();
+            _flags.Clear();
+            _bombs.Clear();
             //empieza la partida
             //x e y corresponden a la casilla donde el jugador empieza el juego
             //no puede haber bomba en la casilla de inicio
+            
+            Utils.GetRandom(x, y);
 
-            // Javi: Yo creo que sería mejor opción llevar sólo la gestión de las celdas abiertas, no las cerradas
-            for (int i = 0; i < _width; i++)
+            while (_bombs.Count < bombCount)
             {
-                for (int j = 0; j < _height; j++)
+                int bombX = Utils.GetRandom(0, _width);
+                int bombY = Utils.GetRandom(0, _height);
+
+                if (bombX != x || bombY != y)
                 {
-                    openCells.Add(new Position(i, j));
+                    Position bombPosition = new Position(bombX, bombY);
+                    _bombs.Add(bombPosition);
                 }
             }
+
+            // Javi: Yo creo que sería mejor opción llevar sólo la gestión de las celdas abiertas, no las cerradas
+
         }
 
         // Javi: Perfecto!!!
         public bool IsBombAt(int x, int y)
         {
-            for (int i = 0; i <= bombs.Count; i++)
+            for (int i = 0; i < _bombs.Count; i++)
             {
-                if (bombs[i].x == x && bombs[i].y == y)
+                if (_bombs[i].x == x && _bombs[i].y == y)
                     return true;
             }
             return false;
@@ -93,9 +132,9 @@ namespace BuscaminasBiblio
 
         public bool IsFlagAt(int x, int y)
         {
-            for (int i = 0; i <= flags.Count; i++)
+            for (int i = 0; i < _flags.Count; i++)
             {
-                if (flags[i].position.x == x && flags[i].position.y == y)
+                if (_flags[i].position.x == x && _flags[i].position.y == y)
                     return true;
             }
             return false;
@@ -103,9 +142,9 @@ namespace BuscaminasBiblio
 
         public bool IsOpen(int x, int y)
         {
-            for (int i = 0; i <= openCells.Count; i++)
+            for (int i = 0; i < _openCells.Count; i++)
             {
-                if (openCells[i].x == x && openCells[i].y == y)
+                if (_openCells[i].x == x && _openCells[i].y == y)
                     return true;
             }
             return false;
@@ -128,16 +167,38 @@ namespace BuscaminasBiblio
 
         public bool HasWin(int x, int y)
         {
-            throw new NotImplementedException();
+            
+
+            bool isWinner = true;
+
+            if (IsFlagAt(x, y))
+            {
+                isWinner = false;
+            }
+            else if (IsOpen(x, y))
+            {
+                isWinner = false;
+            }
+            else if (IsBombAt(x, y))
+            {
+                isWinner = false;
+            }
+            else
+            {
+                Position cellPosition = new Position(x, y);
+                _openCells.Add(cellPosition);
+            }
+            return isWinner;
         }
+    
 
         //public bool HasWin(int x, int y)
         //{
         //    // Javi: Este algoritmo se tiene que hacer en la interfaz, y está incorrecto por ahora
         //    //si todas las celdas de numero estan abiertas, y no se ha explotado ninguna bomba
-        //    for (int i = 0; i <= bombs.Count; i++)
+        //    for (int i = 0; i <= _bombs.Count; i++)
         //    {
-        //        if (openCells[i] == bombs[i])
+        //        if (_openCells[i] == _bombs[i])
         //            return false;
         //    }
         //    return true;

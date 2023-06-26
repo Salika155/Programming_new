@@ -24,7 +24,7 @@ namespace BuscaminasBiblio
 
         }
 
-        public Position Position { get; }
+        public Position Position { get => position; }
         
     }
 }

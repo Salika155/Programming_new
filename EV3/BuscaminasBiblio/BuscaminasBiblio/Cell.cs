@@ -20,9 +20,9 @@ namespace BuscaminasBiblio
         public bool Isflag { get; set; }
         public int NeightborBombs { get; set; }
 
-        public Cell(bool Open, int x, int y)
+        public Cell(bool Open, Position position)
         {
-            Position = new Position(x, y);
+            this.position = position;
             Isopen = Open;  
         }
 

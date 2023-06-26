@@ -8,8 +8,8 @@ using static System.Reflection.Metadata.BlobBuilder;
 
 namespace BuscaminasBiblio
 {
-     public interface IBoard
-     {
+    public interface IBoard
+    {
         // Javi: Te falta por documentar lo que retorna cada función así como lo parámetros de entrada de las funciones
         //Anotaciones para mi: al ser una interfaz que implementa los metodos en otra clase, se cierran sin cuerpo ya que estas se implementaran en otro lugar.
 
@@ -106,5 +106,6 @@ namespace BuscaminasBiblio
         {
             throw new NotImplementedException();
         }
-      }   
+    }
+        
 }

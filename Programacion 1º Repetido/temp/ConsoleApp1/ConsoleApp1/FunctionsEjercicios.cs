@@ -10,7 +10,6 @@ namespace ConsoleApp1
     internal class FunctionsEjercicios
     {
         //menor de 2 numeros
-
         public static int MenorQue(int n1, int n2)
         {
             if (n1 <= n2)
@@ -19,7 +18,6 @@ namespace ConsoleApp1
         }
 
         //numero es par
-        
         public static bool EsPar(int p)
         {
             if (p % 2 == 0)
@@ -40,12 +38,11 @@ namespace ConsoleApp1
 
         public static int MenorQueTres2(int m1, int m2, int m3)
         {
-            //    //llamada a otra funcion
             return MenorQue(m3, MenorQue(m1, m2));
         }
 
-        //serie 0, -2, 4, -6, 8 imprimen
 
+        //serie 0, -2, 4, -6, 8 imprimen
         public static void Serie1(int s)
         {
             int valor = 1;
@@ -60,7 +57,6 @@ namespace ConsoleApp1
         }
 
         // Primo
-
         public static bool EsPrimo(int n)
         {
             for (int i = 2; i < n; i++)
@@ -89,6 +85,7 @@ namespace ConsoleApp1
             }
         }
 
+        //Sumatorio
         public static int GetSumatorio(int n)
         {
             int result = 0;
@@ -97,11 +94,9 @@ namespace ConsoleApp1
                 result += i;
             return result;
         }
-        //Sumatorio 
-        //bucle
+         
 
         //Productorio
-
         public static int GetProductorio(int n)
         {
             int result = 1;

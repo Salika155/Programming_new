@@ -45,14 +45,20 @@ namespace ConsoleApp1
         //serie 0, -2, 4, -6, 8 imprimen
         public static void Serie1(int s)
         {
-            int valor = 1;
+            int valor = 0;
             //bucle
             for (int i = 0; i < s; i += 2)
             {
                 if (valor == 1)
+                {
+                    valor = 0;
+                    Console.WriteLine(-i);
+                }
+                else
+                {
                     Console.WriteLine(i);
-                else if (valor != 1)
-                    Console.WriteLine(i);
+                    valor = 1;
+                }
             }
         }
 
@@ -105,8 +111,6 @@ namespace ConsoleApp1
                 result *= i;
             return result;
         }
-
-
 
     }
 }

@@ -43,3 +43,18 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\te
 C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
 C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
 C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\ConsoleApp1.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\ConsoleApp1.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\Programacion 1º Repetido\temp\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\ConsoleApp1.dll

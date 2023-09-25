@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
         "projectName": "Examen1raEvaluacion",
-        "projectPath": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Examen1raEvaluacion\\Examen1raEvaluacion\\Examen1raEvaluacion.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\OneDrive\\Escritorio\\GitHub DAM\\Programming_new\\Examen1raEvaluacion\\Examen1raEvaluacion\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Examen1raEvaluacion\\Examen1raEvaluacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

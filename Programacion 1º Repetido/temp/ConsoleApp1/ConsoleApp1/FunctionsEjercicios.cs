@@ -50,25 +50,66 @@ namespace ConsoleApp1
         {
             int valor = 1;
             //bucle
-            for (int i = 0; i < s; i+=2)
+            for (int i = 0; i < s; i += 2)
             {
-                //if ()
+                if (valor == 1)
+                    Console.WriteLine(i);
+                else if (valor != 1)
+                    Console.WriteLine(i);
             }
-
-
-
         }
 
         // Primo
-        //%
+
+        public static bool EsPrimo(int n)
+        {
+            for (int i = 2; i < n; i++)
+            {
+                if (n % i == 0)
+                    return false;
+            }
+            return true;
+        }
 
         //Serie 0, 5, 3, 8, 6, 11 imprimen
-        //bucle
+        public static void Serie2(int num)
+        {
+            int n = 0;
+            int a = 1;
 
+            Console.WriteLine(n);
+            while (n <= num)
+            {
+                if (a >= 0)
+                    n += 5;
+                else
+                    n -= 2;
+                Console.WriteLine(n);
+                a *= -1;
+            }
+        }
+
+        public static int GetSumatorio(int n)
+        {
+            int result = 0;
+
+            for (int i = 0; i < n; i++)
+                result += i;
+            return result;
+        }
         //Sumatorio 
         //bucle
 
         //Productorio
+
+        public static int GetProductorio(int n)
+        {
+            int result = 1;
+
+            for (int i = 1; i <= n; i++)
+                result *= i;
+            return result;
+        }
 
 
 

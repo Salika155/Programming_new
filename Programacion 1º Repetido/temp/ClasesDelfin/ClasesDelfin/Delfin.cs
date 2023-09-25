@@ -19,5 +19,17 @@ namespace ClasesDelfin
         public double life;
         public string name;
         public ColorType color;
+
+        //funcion de objeto
+        public double GetLifePercent()
+        {
+            return life / 10.0;
+
+        }
+
+        public bool IsAlive()
+        {
+            return life > 0.0;
+        }
     }
 }

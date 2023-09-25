@@ -23,6 +23,16 @@
             d3 = d1;
             d3.life = 50.0;
             //crear proyecto nuevo y empezamos a hacer esto
+
+            //preguntar porcentaje vida delfin
+            double l;
+            l = d1.GetLifePercent();
+            double l2;
+            l2 = d2.GetLifePercent();
+
+            //preguntar si delfin esta vivo
+            bool b1;
+            b1 = d1.IsAlive();
         }
     }
 }

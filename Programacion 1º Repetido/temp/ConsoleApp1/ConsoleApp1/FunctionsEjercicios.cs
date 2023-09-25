@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class FunctionsEjercicios
+    public class FunctionsEjercicios
     {
         //menor de 2 numeros
         public static int MenorQue(int n1, int n2)

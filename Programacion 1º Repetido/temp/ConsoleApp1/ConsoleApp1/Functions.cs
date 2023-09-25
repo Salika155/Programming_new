@@ -11,21 +11,21 @@ namespace ConsoleApp1
     internal class Functions
     {
 
-        ////Hacer una función que se le pasen dos números y devuelva el resultado de la suma de esos dos números.
+        //Hacer una función que se le pasen dos números y devuelva el resultado de la suma de esos dos números.
 
-        //public static int SumarNumeros(int n1, int n2)
-        //{
-        //    return n1 + n2;
-        //}
+        public static int SumarNumeros(int n1, int n2)
+        {
+            return n1 + n2;
+        }
 
 
-        ////Funcion que devuelve el valor mayor de dos que se le pasan
-        //public static int ObtenerMayor(int value1, int value2)
-        //{
-        //    if (value1 >= value2)
-        //        return value1;
-        //    return value2;
-        //}
+        //Funcion que devuelve el valor mayor de dos que se le pasan
+        public static int ObtenerMayor(int value1, int value2)
+        {
+            if (value1 >= value2)
+                return value1;
+            return value2;
+        }
 
 
         //Funcion que sirve para decir si un entero es par o no
@@ -44,41 +44,41 @@ namespace ConsoleApp1
             return false;
         }
 
-        ////Funcion que te devuelva el mayor de 3 numeros
+        //Funcion que te devuelva el mayor de 3 numeros
 
-        //public static int IsHigher(int a, int b, int c)
-        //{
-        //    if ((a > b) || (a > c))
-        //        return a;
-        //    else if ((b > c) || (b > a))
-        //        return b;
-        //    return c;
-        //}
+        public static int IsHigher(int a, int b, int c)
+        {
+            if ((a > b) || (a > c))
+                return a;
+            else if ((b > c) || (b > a))
+                return b;
+            return c;
+        }
 
 
 
-        ////Funcion para hallar el sumatorio de un numero mediante un bucle while
-        //public static int GetSummation(int number)
-        //{
-        //    int result = 0;
-        //    int i = 1;
-        //    while (i <= number)
-        //    {
-        //        result = result + i;
-        //        i++;
-        //    }
-        //    return result;
-        //}
+        //Funcion para hallar el sumatorio de un numero mediante un bucle while
+        public static int GetSummation(int number)
+        {
+            int result = 0;
+            int i = 1;
+            while (i <= number)
+            {
+                result = result + i;
+                i++;
+            }
+            return result;
+        }
 
-        ////Funcion para hallar el sumatorio de un numero mediante un bucle for
-        //public static int GetSummation2(int number)
-        //{
-        //    int result = 0;
+        //Funcion para hallar el sumatorio de un numero mediante un bucle for
+        public static int GetSummation2(int number)
+        {
+            int result = 0;
 
-        //    for (int i = 0; i <= number; i++)
-        //        result += i;
-        //    return result;
-        //}
+            for (int i = 0; i < number; i++)
+                result += i;
+            return result;
+        }
 
 
         //Rehacerla
@@ -149,19 +149,17 @@ namespace ConsoleApp1
         //bucle que esta sometido a return y no tiene salida (return de fuera tiene que estar fuera de llaves)
 
 
-
-
-        //public static void PrintEx1(int n)
-        //{
-        //    for (int i = 0; i < n / 2; i++)
-        //    {
-        //        if (IsOdd(i))
-        //            Console.WriteLine(-i * 2);
-        //        else
-        //            Console.WriteLine(i * 2);
-        //    }
-        //    //if (i % 2 == 1)
-        //}
+        public static void PrintEx1(int n)
+        {
+            for (int i = 0; i < n / 2; i++)
+            {
+                if (IsOdd(i))
+                    Console.WriteLine(-i * 2);
+                else
+                    Console.WriteLine(i * 2);
+            }
+            //if (i % 2 == 1)
+        }
 
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace ClasesDelfin
+﻿using System.Runtime.CompilerServices;
+
+namespace ClasesDelfin
 {
     public class Program
     {
@@ -8,15 +10,16 @@
             Delfin d2;
 
             d1 = new Delfin();
-            d1.size = 100.0;
+            d1.size = 140.0;
             d1.life = 100.0;
             d1.name = "Eustaquio";
             d1.color = ColorType.BLACK;
 
+
             d2 = new Delfin();
-            d2.size = 20.0;
-            d2.life = 30.0;
-            d2.name = "Paco";
+            d2.size = 60.0;
+            d2.life = 60.0;
+            d2.name = "Parkour";
             d2.color = ColorType.WHITE;
 
             Delfin d3;
@@ -25,6 +28,7 @@
             //crear proyecto nuevo y empezamos a hacer esto
 
             //preguntar porcentaje vida delfin
+            //crear variable para almacenar vida y preguntarle a la funcion para obtener esa vida.
             double l;
             l = d1.GetLifePercent();
             double l2;
@@ -33,6 +37,11 @@
             //preguntar si delfin esta vivo
             bool b1;
             b1 = d1.IsAlive();
+
+            d1.life = 100.0;
+            d1.SetLife(2);
+            
+            
         }
     }
 }

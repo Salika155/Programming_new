@@ -59,6 +59,7 @@ namespace ClasesDelfin
             //if (0.0 <= life && life <= lifecapacity)
             //this.life = life;
 
+            //implementar las tres funciones setlife1, 2 y 3 y probarlas
         }
     }
 }

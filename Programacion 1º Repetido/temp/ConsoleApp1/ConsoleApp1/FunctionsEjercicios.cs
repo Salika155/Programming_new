@@ -142,6 +142,5 @@ namespace ConsoleApp1
             }
             return res;
         }
-
     }
 }

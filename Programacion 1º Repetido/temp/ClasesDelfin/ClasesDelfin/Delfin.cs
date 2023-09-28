@@ -43,7 +43,7 @@ namespace ClasesDelfin
 
         public Delfin()
         {
-
+            
         }
 
         public double GetLife(double lifecapacity) 

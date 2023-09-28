@@ -29,37 +29,40 @@
             //bool resultprimo = Functions.EsPrime(47);
             //Console.WriteLine(resultprimo);
 
-            Console.WriteLine("Menor que:");
-            int menor = FunctionsEjercicios.MenorQue(5, 75);
-            Console.WriteLine(menor);
+            //Console.WriteLine("Menor que:");
+            //int menor = FunctionsEjercicios.MenorQue(5, 75);
+            //Console.WriteLine(menor);
 
-            Console.WriteLine("Es par:");
-            bool espar = FunctionsEjercicios.EsPar(87);
-            Console.WriteLine(espar);
+            //Console.WriteLine("Es par:");
+            //bool espar = FunctionsEjercicios.EsPar(87);
+            //Console.WriteLine(espar);
 
-            Console.WriteLine("El menor de los tres numeros:");
-            int menorde3 = FunctionsEjercicios.MenorQueTres(5, 67, 7);
-            Console.WriteLine(menorde3);
+            //Console.WriteLine("El menor de los tres numeros:");
+            //int menorde3 = FunctionsEjercicios.MenorQueTres(5, 67, 7);
+            //Console.WriteLine(menorde3);
 
-            Console.WriteLine("El menor de los tres numeros segunda forma es:");
-            int menorde3dos = FunctionsEjercicios.MenorQueTres2(1, 5, 4);
-            Console.WriteLine(menorde3dos);
+            //Console.WriteLine("El menor de los tres numeros segunda forma es:");
+            //int menorde3dos = FunctionsEjercicios.MenorQueTres2(1, 5, 4);
+            //Console.WriteLine(menorde3dos);
 
-            Console.WriteLine("La serie es:");
-            FunctionsEjercicios.Serie1(15);
-            Console.WriteLine();
+            //Console.WriteLine("La serie es:");
+            //FunctionsEjercicios.Serie1(15);
+            //Console.WriteLine();
 
-            Console.WriteLine("La serie es:");
-            FunctionsEjercicios.Serie2(58);
-            Console.WriteLine();
+            //Console.WriteLine("La serie es:");
+            //FunctionsEjercicios.Serie2(58);
+            //Console.WriteLine();
 
-            Console.WriteLine("El sumatorio del numero es:");
-            int sumatorio = FunctionsEjercicios.GetSumatorio(21);
-            Console.WriteLine(sumatorio);
+            //Console.WriteLine("El sumatorio del numero es:");
+            //int sumatorio = FunctionsEjercicios.GetSumatorio(21);
+            //Console.WriteLine(sumatorio);
 
-            Console.WriteLine("El productorio del numero es:");
-            int productorio = FunctionsEjercicios.GetProductorio(5);
-            Console.WriteLine(productorio);
+            //Console.WriteLine("El productorio del numero es:");
+            //int productorio = FunctionsEjercicios.GetProductorio(5);
+            //Console.WriteLine(productorio);
+
+            string resultado = FunctionsEjercicios.StringSerie2(7);
+            Console.WriteLine(resultado);
 
         }
     }

@@ -24,7 +24,7 @@ namespace ClasesDelfin
         //funcion de objeto
         public double GetLifePercent()
         {
-            return life/10.0;
+            return life / 10.0;
 
         }
 
@@ -39,14 +39,11 @@ namespace ClasesDelfin
             return (life / lifeCapacity);
         }
 
-        
 
-        public Delfin()
-        {
-            
-        }
 
-        public double GetLife(double lifecapacity) 
+
+
+        public double GetLife()
         {
             return life;
         }
@@ -72,7 +69,7 @@ namespace ClasesDelfin
             this.life = life;
         }
 
-        public void SetLife3(double life) 
+        public void SetLife3(double life)
         {
             //que no haga nada
             if (0.0 <= life && life <= lifeCapacity)

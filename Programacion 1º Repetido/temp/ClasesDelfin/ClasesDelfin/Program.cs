@@ -29,7 +29,7 @@ namespace ClasesDelfin
 
             //preguntar porcentaje vida delfin
             //crear variable para almacenar vida y preguntarle a la funcion para obtener esa vida.
-            
+
             double l;
             l = d1.GetLifePercent();
             double l2;
@@ -42,12 +42,15 @@ namespace ClasesDelfin
             //d1.life = 100.0;
 
             d1.SetLife1(30.0);
+            Console.WriteLine(d1.GetLife());
 
             d2.SetLife2(50.0);
 
             d3.SetLife3(80.0);
-            
-            
+
+
+
+
         }
     }
 }

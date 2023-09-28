@@ -17,7 +17,7 @@ namespace ClasesDelfin
     {
         public double size;
         private double life;
-        public double lifecapacity;
+        private double lifeCapacity;
         public string name;
         public ColorType color;
 
@@ -36,30 +36,48 @@ namespace ClasesDelfin
         public double GetLifePercentCapacity()
         {
             //return (life / lifecapacity) * 100;
-            return (life / lifecapacity);
+            return (life / lifeCapacity);
         }
 
-        public void SetLife(double life)
+        
+
+        public Delfin()
+        {
+
+        }
+
+        public double GetLife(double lifecapacity) 
+        {
+            return life;
+        }
+
+        //implementar las tres funciones setlife1, 2 y 3 y probarlas
+        public void SetLife1(double life)
         {
             //cada vez que ejecuta el this vale el valor del objeto, si el primero vale 100 la primera vez valdra 100 y la segunda si el segundo objeto vale 200 valdra ese valor.
             //this.life = life;
             if (life < 0.0)
                 this.life = 0.0;
-            else if (life > lifecapacity)
-                this.life = lifecapacity;
+            else if (life > lifeCapacity)
+                this.life = lifeCapacity;
             else
                 this.life = life;
-
-            //que reviente el programa
-            //if (life < 0.0 || life > lifecapacity)
-            //throw new exception("Maaaaal")
-            //this.life = life;
-
-            //que no haga nada
-            //if (0.0 <= life && life <= lifecapacity)
-            //this.life = life;
-
-            //implementar las tres funciones setlife1, 2 y 3 y probarlas
         }
+
+        public void SetLife2(double life)
+        {
+            //que reviente el programa
+            if (life < 0.0 || life > lifeCapacity)
+                throw new Exception("No funciona bro, lo petaste");
+            this.life = life;
+        }
+
+        public void SetLife3(double life) 
+        {
+            //que no haga nada
+            if (0.0 <= life && life <= lifeCapacity)
+                this.life = life;
+        }
+
     }
 }

@@ -76,5 +76,13 @@ namespace ClasesDelfin
                 this.life = life;
         }
 
+        //funcion constructor 
+        public Delfin(double currentLife, double maxLifeCapacity)
+        {
+            this.life = currentLife;
+            this.lifeCapacity = maxLifeCapacity;
+
+        }
+
     }
 }

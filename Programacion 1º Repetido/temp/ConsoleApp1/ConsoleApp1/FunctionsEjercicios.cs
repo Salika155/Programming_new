@@ -141,8 +141,62 @@ namespace ConsoleApp1
                 res += aux + ", ";
                 aux *= 2;
             }
-            res += aux;
-            return res;
+            return res + aux;
         }
+
+        //PIBLIC STATIC STRING stringserie3(int n)
+        //{
+        //  string sec = "1";
+        //int aux = 1;
+        //for (int i = 1; i < n - 1; i++;
+
+        //esto son ejemplos
+        //public static string StringSerie3(int n)
+        //{
+        //    int aux = 1;
+        //    string res = "";
+        //    for (int i = 0; i < n - 1; aux *= 2, i++)
+        //    {
+        //        res += aux + ", ";
+        //    
+        //    }
+        //    return res + aux;
+        //}
+
+        //serie de fibonacci 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+        //public static string SerieFibonacci(int n)
+        //{
+        //    string serie = "";
+        //    int aux = 0;
+        //    int auxb = 1;
+        //    int auxc = 1;
+             
+        //    while (n < 21)
+        //    {
+        //        if ()
+                   
+        //        else
+                    
+        //    }
+        //    return ;
+        //}
+
+        public static string SerieFibonacci1(int n)
+        {
+            string result = "";
+            int n1 = 0;
+            int n2 = 1;
+            int sig = n1 + n2;
+
+            while (sig <= n)
+            {
+                sig = n1 + n2;
+                n1 = n2;
+                n2 = sig;
+            }
+            return result;
+        }
+
     }
 }

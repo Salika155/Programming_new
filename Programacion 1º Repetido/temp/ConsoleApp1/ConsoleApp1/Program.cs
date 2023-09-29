@@ -68,6 +68,9 @@
             string resultado1 = FunctionsEjercicios.StringSerie2(7);
             Console.WriteLine(resultado1);
 
+            string resultado2 = FunctionsEjercicios.SerieFibonacci(21);
+            Console.WriteLine(resultado2);
+
         }
     }
 }

@@ -9,14 +9,14 @@ namespace ClasesDelfin
             Delfin d1;
             Delfin d2;
 
-            d1 = new Delfin();
+            d1 = new Delfin(1000, 8000);
             d1.size = 140.0;
             //d1.life = 30.0
             d1.name = "Eustaquio";
             d1.color = ColorType.BLACK;
 
 
-            d2 = new Delfin();
+            d2 = new Delfin(1000, 8000);
             d2.size = 60.0;
             //d2.life = 50.0
             d2.name = "Parkour";

@@ -1,0 +1,15 @@
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\bin\Debug\net6.0\ClasesDelfin.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\bin\Debug\net6.0\ClasesDelfin.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\bin\Debug\net6.0\ClasesDelfin.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\bin\Debug\net6.0\ClasesDelfin.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\bin\Debug\net6.0\ClasesDelfin.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\refint\ClasesDelfin.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ClasesDelfin.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\Programacion 1º Repetido\temp\ClasesDelfin\ClasesDelfin\obj\Debug\net6.0\ref\ClasesDelfin.dll

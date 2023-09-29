@@ -61,8 +61,12 @@
             //int productorio = FunctionsEjercicios.GetProductorio(5);
             //Console.WriteLine(productorio);
 
-            string resultado = FunctionsEjercicios.StringSerie2(7);
+
+            string resultado = FunctionsEjercicios.StringSerie1(7);
             Console.WriteLine(resultado);
+
+            string resultado1 = FunctionsEjercicios.StringSerie2(7);
+            Console.WriteLine(resultado1);
 
         }
     }

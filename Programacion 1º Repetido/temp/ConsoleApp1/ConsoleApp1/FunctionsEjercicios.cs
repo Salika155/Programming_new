@@ -125,11 +125,8 @@ namespace ConsoleApp1
             string res = "";
             for (int i = 0; i <= n; i++)
             {
-                if (i != 0)
-                {
-                    res += ", ";
-                }
-                res = res + i;
+                //if
+                res += i + ", ";
             }
             return res;
         }

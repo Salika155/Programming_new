@@ -62,14 +62,18 @@
             //Console.WriteLine(productorio);
 
 
-            string resultado = FunctionsEjercicios.StringSerie1(7);
-            Console.WriteLine(resultado);
+            //string resultado = FunctionsEjercicios.StringSerie1(7);
+            //Console.WriteLine(resultado);
 
-            string resultado1 = FunctionsEjercicios.StringSerie2(7);
-            Console.WriteLine(resultado1);
+            //string resultado1 = FunctionsEjercicios.StringSerie2(7);
+            //Console.WriteLine(resultado1);
 
-            string resultado2 = FunctionsEjercicios.SerieFibonacci(21);
-            Console.WriteLine(resultado2);
+            string resultado3 = FunctionsEjercicios.SerieFibonacci(21);
+            Console.WriteLine(resultado3);
+
+            //string resultado2 = FunctionsEjercicios.SerieFibonacci1(21);
+            //Console.WriteLine(resultado2);
+
 
         }
     }

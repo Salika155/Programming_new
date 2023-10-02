@@ -165,22 +165,31 @@ namespace ConsoleApp1
 
         //serie de fibonacci 0, 1, 1, 2, 3, 5, 8, 13, 21
 
-        //public static string SerieFibonacci(int n)
-        //{
-        //    string serie = "";
-        //    int aux = 0;
-        //    int auxb = 1;
-        //    int auxc = 1;
-             
-        //    while (n < 21)
-        //    {
-        //        if ()
-                   
-        //        else
-                    
-        //    }
-        //    return ;
-        //}
+        public static string SerieFibonacci(int n)
+        {
+            string serie = "";
+            int aux = 0;
+            int auxb = 1;
+            int auxc = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                serie += " " + aux  + ", ";
+                auxc = aux + auxb;
+                aux = auxb;
+                auxb = auxc;
+
+                if (auxc <= n)
+                    auxc = auxc - 1;
+
+            }
+            //if ()
+            //{
+
+            //}
+            return serie;
+        }
+
 
         public static string SerieFibonacci1(int n)
         {

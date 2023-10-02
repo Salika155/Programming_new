@@ -1,28 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "CrO3LwABsTC1yX7HiqRLeLclgnZs4q6PxfqNsvjn9D12IrmXYdm1WPNgT68qTSjrThpwAp2vLuPlgL4I6f0o1Q==",
-  "success": true,
-  "projectFilePath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\carre\\.nuget\\packages\\nvorbis\\0.10.5\\nvorbis.0.10.5.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk\\4.7.7\\opentk.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.compute\\4.7.7\\opentk.compute.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.core\\4.7.7\\opentk.core.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.graphics\\4.7.7\\opentk.graphics.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.input\\4.7.7\\opentk.input.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.mathematics\\4.7.7\\opentk.mathematics.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.openal\\4.7.7\\opentk.openal.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.redist.glfw\\3.3.8.30\\opentk.redist.glfw.3.3.8.30.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.windowing.common\\4.7.7\\opentk.windowing.common.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.windowing.desktop\\4.7.7\\opentk.windowing.desktop.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\opentk.windowing.graphicslibraryframework\\4.7.7\\opentk.windowing.graphicslibraryframework.4.7.7.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\stbimagesharp\\2.27.13\\stbimagesharp.2.27.13.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\stbrectpacksharp\\1.0.4\\stbrectpacksharp.1.0.4.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\stbsharp\\0.7.2.38\\stbsharp.0.7.2.38.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\udk\\1.0.0\\udk.1.0.0.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "4uwVgwP1UdmPgZIVl4ST4aGX902RtFVGsgK85N1KBRtTHx/Hy/6iJNUScVLRlfOIS6U+q7f4fKgCt8NK72oqcQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasTest\\BuscaminasTest.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "No se encuentra el paquete UDK. No existe ningún paquete con este id. en los orígenes: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "UDK",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

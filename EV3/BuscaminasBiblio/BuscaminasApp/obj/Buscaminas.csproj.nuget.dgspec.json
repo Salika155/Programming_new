@@ -1,36 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj": {}
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj": {}
   },
   "projects": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj",
         "projectName": "Buscaminas",
-        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasApp\\obj\\",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\Buscaminas.csproj",
+        "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
-                "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
+              "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
+                "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj"
               }
             }
           }
@@ -70,29 +76,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
         "projectName": "BuscaminasBiblio",
-        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\BuscaminasBiblio\\BuscaminasBiblio\\obj\\",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\BuscaminasBiblio.csproj",
+        "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\BuscaminasBiblio\\BuscaminasBiblio\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

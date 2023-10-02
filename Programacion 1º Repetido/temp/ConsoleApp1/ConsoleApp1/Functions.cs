@@ -161,5 +161,48 @@ namespace ConsoleApp1
             //if (i % 2 == 1)
         }
 
+
+        //List<int> l;
+        //l = new List<int>();
+        //l.Add(40);
+        //l.Add(-10);
+        //l.Remove(2); //borra el primer 2 que haya en la lista
+        //l.RemoveAt(2); //borra lo que haya en la posicion 2
+        //l[0] = 60; //[60,10] //cambia elemento 0 por 60
+        //l[i + 0] = 3; //[60, 3] sustituye elemento en posic 2 por 3
+        //int n = l.Count; 2 //elementos que hay en la lista
+        //l.Insert(1, -20); -> [60, -20, 3]
+        //l.Clear(); -> limpia la lista
+        //l[1]=l[2] -> [60, -20, 3] -> [60, 3, 3]
+
+        //int[] a;
+        //a = new int[4]; //-> crear array de 4 elementos [0, 0, 0, 0] ->para array tienes que indicar numero de elementos, en lista no
+        //a[3] = -10;     // -> [0, 0, 0, -10]
+        //a[0] = a[3];    //[-10, 0, 0, -10]
+        //int n = a.Length; //4 elementos, te dice cuantos hay
+        //int[] b = a; //b apunta a array a
+
+        //FUNCION que le paso lista de strings y devuelve el numero de elementos que hay en la lista
+        //
+
+        public static int FuncLista1(List<string> list)
+        {
+            return list.Count;
+        }
+
+        //funcion me pasan una lista de dobles, quiero que me devuelva el numero de elementos que hay por encima de 0
+
+        public static int GetGreaterThanZeroCount(List<double> list)
+        {
+            int result = 0;
+             for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] > 0.0)
+                    result++;
+            }
+            return result;
+        }
+
+        
     }
 }

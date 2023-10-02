@@ -178,10 +178,6 @@ namespace ConsoleApp1
                 auxc = aux + auxb;
                 aux = auxb;
                 auxb = auxc;
-
-                if (auxc <= n)
-                    auxc = auxc - 1;
-
             }
             //if ()
             //{
@@ -206,6 +202,11 @@ namespace ConsoleApp1
             }
             return result;
         }
+
+        //FUNCION que le paso lista de strings y devuelve el numero de elementos que hay en la lista
+
+
+        //funcion me pasan una lista de dobles, quiero que me devuelva el numero de elementos que hay por encima de 0
 
     }
 }

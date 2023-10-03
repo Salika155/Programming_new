@@ -72,6 +72,24 @@
             
             Console.WriteLine(FuncionesArrayList.ContainsInList(listaenteros, 5));
 
+            List<int> listamayor = new List<int>();
+            listamayor.Add(1);
+            listamayor.Add(2);
+            listamayor.Add(3);
+            listamayor.Add(4);
+            listamayor.Add(5);
+           
+            Console.WriteLine(FuncionesArrayList.EsElMayorNumero(listamayor));
+
+            List<int> listapos = new List<int>();
+            listapos.Add(1);
+            listapos.Add(574);
+            listapos.Add(-6);
+            listapos.Add(8);
+
+            Console.WriteLine(FuncionesArrayList.GetPosicionLista(listapos, 2));
+
+
 
 
 

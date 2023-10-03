@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ArrayList
 {
@@ -31,20 +32,20 @@ namespace ArrayList
         //    throw new NotImplementedException();
         //}
 
-        public static int FuncArray1(Array[] arrays) 
+        public static int FuncArray1(Array[] arrays)
         {
             return arrays.Length;
         }
 
-        public static int GreatherThanZero(Array[] arrays) 
+        public static int GreatherThanZero(Array[] arrays)
         {
             int result = 0;
-                for (int i = 0; i < arrays.Length; i++) 
+            for (int i = 0; i < arrays.Length; i++)
             {
                 if (arrays[i].Length > 0.0)
                     result++;
             }
-                return result;
+            return result;
         }
 
         //quiero una funcion que le paso una lista de enteros y un numero, y me tiene que decir si ese numero esta en la lista o no
@@ -52,14 +53,79 @@ namespace ArrayList
 
         public static bool ContainsInList(List<double> listaenteros, int n)
         {
-            
+            if (listaenteros == null)
+                return false;
+
             for (int i = 0; i < listaenteros.Count; i++)
             {
                 if (listaenteros[i] == n)
                     return true;
             }
             return false;
-
         }
+
+        //public static bool ContainsInList(List<double> listaenteros, int n)
+        //{
+        //    if (listaenteros != null)
+        //    {
+        //    for (int i = 0; i < listaenteros.Count; i++)
+        //    {
+        //        if (listaenteros[i] == n)
+        //            return true;
+        //    }
+        //}
+        //return false;
+        //}
+
+        // #Region comprobacion de parametros -> titulo dado a una seccion desplegable para comprimir codigo.
+        //#endregion
+
+        //Me pasan una lista de enteros y me dice el numero mayor que hay en esa lista de enteros
+
+
+        /// <summary>
+        /// Funcion que devuelve el valor mayor de una lista de enteros
+        /// </summary>
+        /// <param name="listamayor">lista de enteros</param>
+        /// <returns>numero mas alto, si n es null devuelve int.MinValue</returns>
+        public static int EsElMayorNumero(List<int> listamayor)
+        {
+            if (listamayor == null || listamayor.Count == 0)
+                return int.MinValue;
+
+            int max = listamayor[0];
+
+            for (int i = 1; i < listamayor.Count ;i++)
+            {
+                if (listamayor[i] > max)
+                    max = listamayor[i];
+            }
+            return max;
+        }
+
+        //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
+
+        public static int GetPosicionLista(List<int> listapos, int position)
+        {
+            if (listapos == null || listapos.Count == 0)
+                return -1;
+
+            int max = listapos[0];
+            int index = 0;
+
+            for (int i = 0; i < listapos.Count; i++)
+            {
+                if (listapos[i] > max)
+                {
+                    max = listapos[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
+
+        //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
+        
+
     }
 }

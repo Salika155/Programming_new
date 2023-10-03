@@ -89,6 +89,21 @@
 
             Console.WriteLine(FuncionesArrayList.GetPosicionLista(listapos, 2));
 
+            List<int> listaordenada = new List<int>();
+            listaordenada.Add(-1);
+            listaordenada.Add(2);
+            listaordenada.Add(43);
+            listaordenada.Add(5);
+
+            Console.WriteLine(FuncionesArrayList.IsOrderedAsc(listaordenada));
+
+            List<int> listaordenada1 = new List<int>();
+            listaordenada1.Add(-1);
+            listaordenada1.Add(2);
+            listaordenada1.Add(43);
+            listaordenada1.Add(5);
+
+            Console.WriteLine(FuncionesArrayList.IsOrderedAsc(listaordenada1));
 
 
 

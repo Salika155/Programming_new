@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Reflection.Metadata.Ecma335;
+using System.Reflection;
 
 namespace ArrayList
 {
@@ -126,6 +127,43 @@ namespace ArrayList
 
         //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
         
+        public static bool IsOrderedAsc(List<int> listaordenada)
+        {
+            if (listaordenada == null || listaordenada.Count <= 1)
+                return true;
+
+            //int v1 = listaordenada[0];
+            //int v2 = listaordenada[1];
+            //int index = 0;
+
+            for (int i = 1; i < listaordenada.Count; i++)
+            {
+                if (listaordenada[i] < listaordenada[i-1])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool IsOrderedAsc1(List<int> listaordenada)
+        {
+            if (listaordenada == null || listaordenada.Count <= 1)
+                return true; 
+
+            int prevValue = listaordenada[0];
+
+            for (int i = 1; i < listaordenada.Count; i++)
+            {
+                int currentValue = listaordenada[i];
+
+                if (currentValue < prevValue)
+                    return false;
+
+                prevValue = currentValue;
+            }
+            return true;
+        }
 
     }
 }

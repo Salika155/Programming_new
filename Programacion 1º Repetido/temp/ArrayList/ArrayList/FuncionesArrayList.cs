@@ -46,5 +46,20 @@ namespace ArrayList
             }
                 return result;
         }
+
+        //quiero una funcion que le paso una lista de enteros y un numero, y me tiene que decir si ese numero esta en la lista o no
+
+
+        public static bool ContainsInList(List<double> listaenteros, int n)
+        {
+            
+            for (int i = 0; i < listaenteros.Count; i++)
+            {
+                if (listaenteros[i] == n)
+                    return true;
+            }
+            return false;
+
+        }
     }
 }

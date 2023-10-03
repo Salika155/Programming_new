@@ -31,6 +31,7 @@
 
             //-------------------------------------------------------------------------------------------------
 
+
             //int[] a;
             //a = new int[4]; //-> crear array de 4 elementos [0, 0, 0, 0] ->para array tienes que indicar numero de elementos, en lista no
             //a[3] = -10;     // -> [0, 0, 0, -10]
@@ -56,7 +57,23 @@
 
             int n5 = a2.Length;
             Console.WriteLine(n5);
+
+            //--------------------------------------------------------------------
+
+            List<double> listaenteros = new List<double>();
+
+            listaenteros.Add(12);
+            listaenteros.Add(4);
+            listaenteros.Add(-6);
+            listaenteros.Add(54);
+            listaenteros.Add(4);
+            listaenteros.Add(46);
+
             
+            Console.WriteLine(FuncionesArrayList.ContainsInList(listaenteros, 5));
+
+
+
 
 
 

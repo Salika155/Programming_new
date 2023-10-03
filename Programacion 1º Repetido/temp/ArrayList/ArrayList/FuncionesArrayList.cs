@@ -26,9 +26,25 @@ namespace ArrayList
             return list.Count;
         }
 
-        internal static int GreatLesserThanZero(List<string> l2)
+        //internal static int GreatLesserThanZero(List<string> l2)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public static int FuncArray1(Array[] arrays) 
         {
-            throw new NotImplementedException();
+            return arrays.Length;
+        }
+
+        public static int GreatherThanZero(Array[] arrays) 
+        {
+            int result = 0;
+                for (int i = 0; i < arrays.Length; i++) 
+            {
+                if (arrays[i].Length > 0.0)
+                    result++;
+            }
+                return result;
         }
     }
 }

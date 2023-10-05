@@ -165,5 +165,41 @@ namespace ArrayList
             return true;
         }
 
+        //
+        public static bool Contains(int[] array, int value)
+        {
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value)
+                    return true;
+            }
+            return false;
+        }
+
+        //punto medio, comparo y muevo valores
+
+        public static bool BinarySearch(int[] array1, int value)
+        {
+            if (array1 == null || array1.Length == 0)
+                return false;
+            
+            int min = 0;
+            int max = array1.Length -1;
+           
+            while (min <= max)
+            {
+                int med = ((min + max) / 2);
+
+                if (array1[med] == value)
+                    return true;
+                else if (array1[med] < value)
+                    min = med + 1;
+                else if (array1[med] > value)
+                    max = med - 1;
+            }
+            return false;
+
+        }
+        
     }
 }

@@ -105,6 +105,26 @@
 
             Console.WriteLine(FuncionesArrayList.IsOrderedAsc1(listaordenada1));
 
+            int[] values = new int[14];
+
+            values[0] = 7;
+            values[1] = 10;
+            values[2] = 15;
+            values[3] = 20;
+            values[4] = 27;
+            values[5] = 27;
+            values[6] = 27;
+            values[7] = 85;
+            values[8] = 100;
+            values[9] = 101;
+            values[10] = 120;
+            values[11] = 130;
+            values[12] = 145;
+            values[13] = 150;
+
+            Console.WriteLine(FuncionesArrayList.BinarySearch(values, 00000101));
+
+
 
 
 

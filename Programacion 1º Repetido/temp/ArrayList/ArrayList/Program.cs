@@ -99,11 +99,11 @@
 
             List<int> listaordenada1 = new List<int>();
             listaordenada1.Add(-1);
-            listaordenada1.Add(2);
+            listaordenada1.Add(7);
             listaordenada1.Add(43);
-            listaordenada1.Add(5);
+            listaordenada1.Add(54);
 
-            Console.WriteLine(FuncionesArrayList.IsOrderedAsc(listaordenada1));
+            Console.WriteLine(FuncionesArrayList.IsOrderedAsc1(listaordenada1));
 
 
 

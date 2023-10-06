@@ -14,15 +14,15 @@ namespace TorneoDragonBall
         private double _capacidadParar;
         private double _energia;
 
-        public GuerreroEspacio(string nombre, Raza superSaijayin) : base(nombre, Raza.GuerreroEspacio, 
-            Utils.GetRandom(1000, 2000), Utils.GetRandom(0.1, 0.9))
+        //public GuerreroEspacio(string nombre, Raza superSaijayin) : base(nombre, Raza.GuerreroEspacio, 
+        //    Utils.GetRandom(1000, 2000), Utils.GetRandom(0.1, 0.9))
 
-        {
-            _ataqueRayo = Utils.GetRandom(0.3, 0.6);
-            _ataqueGolpes = Utils.GetRandom(0.1, 0.8);
-            _capacidadEsquivar = Utils.GetRandom(0.2, 0.4);
-            _capacidadParar = Utils.GetRandom(0.4, 0.9);        
-        }
+        //{
+        //    _ataqueRayo = Utils.GetRandom(0.3, 0.6);
+        //    _ataqueGolpes = Utils.GetRandom(0.1, 0.8);
+        //    _capacidadEsquivar = Utils.GetRandom(0.2, 0.4);
+        //    _capacidadParar = Utils.GetRandom(0.4, 0.9);        
+        //}
 
         protected GuerreroEspacio(string nombre, Raza raza) : base(nombre, raza)
         {

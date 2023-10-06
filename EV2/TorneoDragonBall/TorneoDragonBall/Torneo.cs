@@ -41,10 +41,20 @@ namespace TorneoDragonBall
 
             while (participantes.Count > 1)
             {
-                List<>
+                List<string> result;
             }
         }
 
         public delegate void TorneoDelegado(Persona persona );
+    }
+
+    internal class Namekiano : Persona
+    {
+        private string v;
+
+        public Namekiano(string v)
+        {
+            this.v = v;
+        }
     }
 }

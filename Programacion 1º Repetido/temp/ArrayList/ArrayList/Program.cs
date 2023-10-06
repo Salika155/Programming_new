@@ -124,6 +124,26 @@
 
             Console.WriteLine(FuncionesArrayList.BinarySearch(values, 00000101));
 
+            double[] arraydouble = new double[14];
+
+            values[0] = 5;
+            values[1] = 56;
+            values[2] = 7;
+            values[3] = 21;
+            values[4] = 23;
+            values[5] = 6;
+
+            Console.WriteLine(FuncionesArrayList.GetAvg(values));
+
+            List<int> listasinordenar = new List<int>();
+            listasinordenar.Add(5);
+            listasinordenar.Add(74);
+            listasinordenar.Add(43);
+            listasinordenar.Add(9);
+            listasinordenar.Add(36);
+
+
+
 
 
 

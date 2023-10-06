@@ -13,3 +13,18 @@ C:\Users\carre\Desktop\programacion 2da\practicas\Person\Person\obj\Debug\net6.0
 C:\Users\carre\Desktop\programacion 2da\practicas\Person\Person\obj\Debug\net6.0\Person.pdb
 C:\Users\carre\Desktop\programacion 2da\practicas\Person\Person\obj\Debug\net6.0\Person.genruntimeconfig.cache
 C:\Users\carre\Desktop\programacion 2da\practicas\Person\Person\obj\Debug\net6.0\ref\Person.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\bin\Debug\net6.0\Person.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\bin\Debug\net6.0\Person.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\bin\Debug\net6.0\Person.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\bin\Debug\net6.0\Person.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\bin\Debug\net6.0\Person.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\refint\Person.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\Person.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV2\Person\Person\obj\Debug\net6.0\ref\Person.dll

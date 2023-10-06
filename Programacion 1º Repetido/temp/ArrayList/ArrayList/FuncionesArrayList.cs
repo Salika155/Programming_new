@@ -201,5 +201,97 @@ namespace ArrayList
 
         }
         
+        //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi
+
+        public static double GetAvg(int[] array2)
+        {
+            if (array2 == null)
+            {
+                return double.NaN;
+            }
+            double aux = 0.0;
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                aux += array2[i];
+            }
+            return aux / array2.Length;
+        }
+
+        //Funcion que le pasas un array y un umbral y tiene que devolver la media de todos estos valores pero solamente de aquellos que superen este numero
+
+        public static double GetThreshold(int []array2, double threshold)
+        {
+            if (array2 == null)
+                return double.NaN;
+
+            double avg = 0.0;
+            int count = 0;
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                
+                if (array2[i] >= threshold)
+                {
+                    avg += array2[i];
+                    count++;
+                }
+                if (count == 0)
+                    return double.NaN;
+            }
+            return avg / count;
+               
+        }
+
+        // Funcion que le paso una lista de enteros y me devuelve un entero. Devuelve numero de veces que se repite el numero mas alto
+
+        public static int GetNumberMayorRepeated(List<int> listasinordenar)
+        {
+            if (listasinordenar == null || listasinordenar.Count < 1)
+                return -1;
+
+            int countrepet = 1;
+            int max = listasinordenar[0];
+            
+
+            for (int i = 1; i < listasinordenar.Count; i++)
+            {
+                //rehacer
+                if (listasinordenar[i] == GetNumberMayorRepeated(listasinordenar))
+                    countrepet++;
+            }
+            return countrepet;
+                    
+        }
+
+        // Funcion que necesita como parametro una lista de enteros, y me tiene que devolver una lista de enteros pero al reves de la lista que le he metido
+        // [0, 7, -1, 8] -> [8, -1, 7, 0]
+
+        public static List<int> SwapValores(List<int> listasinordenar)
+        {
+            List<int> list = new List<int>();
+
+            if (listasinordenar == null || listasinordenar.Count ==0)
+                return new List<int>(); 
+
+            for (int i = list.Count - 1; i >= 0; i--)
+            {
+                list.Add(list[i]);
+            }
+            return list;
+        }
+
+        //Funcion que le paso una lista de enteros y los imprime por pantalla
+
+        public static List<int> WriteForScreen(List<int> listasinordenar)
+        {
+            List<int> list1 = new List<int>();
+        }
+
+
+        //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al reves del array que le he metido
+
+
+        //Funcion que le paso un array de enteros, y un entero, y quiero que esa funcion añada el entero que se le pasa al array
     }
 }

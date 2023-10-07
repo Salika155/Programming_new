@@ -135,12 +135,13 @@
 
             Console.WriteLine(FuncionesArrayList.GetAvg(values));
 
-            List<int> listasinordenar = new List<int>();
-            listasinordenar.Add(5);
-            listasinordenar.Add(74);
-            listasinordenar.Add(43);
-            listasinordenar.Add(9);
-            listasinordenar.Add(36);
+            List<int> nuevalista = new List<int>();
+            for (int i = 0; i <= 50; i++)
+                nuevalista.Add(5);
+            nuevalista.Add(74);
+            nuevalista.Add(43);
+            nuevalista.Add(9);
+            nuevalista.Add(36);
 
 
 

@@ -283,9 +283,10 @@ namespace ArrayList
 
         //Funcion que le paso una lista de enteros y los imprime por pantalla
 
-        public static List<int> WriteForScreen(List<int> listasinordenar)
+        public static void WriteForScreen(List<int> nuevalista)
         {
-            List<int> list1 = new List<int>();
+            for (int i = 0; i < nuevalista.Count; i++)
+                Console.WriteLine(nuevalista[i]);
         }
 
 

@@ -96,7 +96,7 @@ namespace ArrayList
 
             int max = listamayor[0];
 
-            for (int i = 1; i < listamayor.Count ;i++)
+            for (int i = 1; i < listamayor.Count; i++)
             {
                 if (listamayor[i] > max)
                     max = listamayor[i];
@@ -126,7 +126,7 @@ namespace ArrayList
         }
 
         //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
-        
+
         public static bool IsOrderedAsc(List<int> listaordenada)
         {
             if (listaordenada == null || listaordenada.Count <= 1)
@@ -138,7 +138,7 @@ namespace ArrayList
 
             for (int i = 1; i < listaordenada.Count; i++)
             {
-                if (listaordenada[i] < listaordenada[i-1])
+                if (listaordenada[i] < listaordenada[i - 1])
                 {
                     return false;
                 }
@@ -149,7 +149,7 @@ namespace ArrayList
         public static bool IsOrderedAsc1(List<int> listaordenada)
         {
             if (listaordenada == null || listaordenada.Count <= 1)
-                return true; 
+                return true;
 
             int prevValue = listaordenada[0];
 
@@ -168,7 +168,7 @@ namespace ArrayList
         //
         public static bool Contains(int[] array, int value)
         {
-            for(int i = 0; i < array.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] == value)
                     return true;
@@ -182,10 +182,10 @@ namespace ArrayList
         {
             if (array1 == null || array1.Length == 0)
                 return false;
-            
+
             int min = 0;
-            int max = array1.Length -1;
-           
+            int max = array1.Length - 1;
+
             while (min <= max)
             {
                 int med = ((min + max) / 2);
@@ -200,7 +200,7 @@ namespace ArrayList
             return false;
 
         }
-        
+
         //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi
 
         public static double GetAvg(int[] array2)
@@ -220,7 +220,7 @@ namespace ArrayList
 
         //Funcion que le pasas un array y un umbral y tiene que devolver la media de todos estos valores pero solamente de aquellos que superen este numero
 
-        public static double GetThreshold(int []array2, double threshold)
+        public static double GetThreshold(int[] array2, double threshold)
         {
             if (array2 == null)
                 return double.NaN;
@@ -230,7 +230,7 @@ namespace ArrayList
 
             for (int i = 0; i < array2.Length; i++)
             {
-                
+
                 if (array2[i] >= threshold)
                 {
                     avg += array2[i];
@@ -240,7 +240,7 @@ namespace ArrayList
                     return double.NaN;
             }
             return avg / count;
-               
+
         }
 
         // Funcion que le paso una lista de enteros y me devuelve un entero. Devuelve numero de veces que se repite el numero mas alto
@@ -252,16 +252,16 @@ namespace ArrayList
 
             int countrepet = 1;
             int max = listasinordenar[0];
-            
 
-            for (int i = 1; i < listasinordenar.Count; i++)
-            {
-                //rehacer
-                if (listasinordenar[i] == GetNumberMayorRepeated(listasinordenar))
-                    countrepet++;
-            }
+
+            //for (int i = 1; i < listasinordenar.Count; i++)
+            //{
+            //    //rehacer
+            //    if (listasinordenar[i] == GetNumberMayorRepeated(listasinordenar))
+            //        countrepet++;
+            //}
             return countrepet;
-                    
+
         }
 
         // Funcion que necesita como parametro una lista de enteros, y me tiene que devolver una lista de enteros pero al reves de la lista que le he metido
@@ -271,8 +271,8 @@ namespace ArrayList
         {
             List<int> list = new List<int>();
 
-            if (listasinordenar == null || listasinordenar.Count ==0)
-                return new List<int>(); 
+            if (listasinordenar == null || listasinordenar.Count == 0)
+                return new List<int>();
 
             for (int i = list.Count - 1; i >= 0; i--)
             {
@@ -285,14 +285,45 @@ namespace ArrayList
 
         public static void WriteForScreen(List<int> nuevalista)
         {
+            nuevalista.Add(5);
+            nuevalista.Add(74);
+            nuevalista.Add(43);
+            nuevalista.Add(9);
+            nuevalista.Add(36);
+
             for (int i = 0; i < nuevalista.Count; i++)
+            {
                 Console.WriteLine(nuevalista[i]);
+            }
         }
 
 
         //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al reves del array que le he metido
 
+        public static int[] ArrayOrderedDesc(int[] arrayenteros)
+        {
+            int[] arraydesordenado = new int[arrayenteros.Length];
+
+            for (int i = 0; i < arrayenteros.Length; i++)
+            {
+                arraydesordenado[i] = arrayenteros[arrayenteros.Length - 1 - i];
+            }
+            return arraydesordenado;
+        }
 
         //Funcion que le paso un array de enteros, y un entero, y quiero que esa funcion añada el entero que se le pasa al array
+
+        public static int[] AddToArray(int[] arrayenteros, int n)
+        {
+            int[] arraynuevo = new int[arrayenteros.Length + 1];
+            
+
+            for (int i = 0; i < arrayenteros.Length; i++)
+            {
+                arraynuevo[i] = arrayenteros[i];
+            }
+            arraynuevo[arraynuevo.Length] = n;
+            return arraynuevo;
+        }
     }
 }

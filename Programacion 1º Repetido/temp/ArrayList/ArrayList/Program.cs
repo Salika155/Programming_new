@@ -1,11 +1,13 @@
-﻿namespace ArrayList
+﻿using static ArrayList.FuncionesArrayList;
+
+namespace ArrayList
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             List<double> l = new List<double>();
-            for (int i = -50; i <=50 ; i++)
+            for (int i = -50; i <= 50; i++)
                 l.Add(i);
             l.Add(42.2);
             l.Add(-1.0);
@@ -69,7 +71,7 @@
             listaenteros.Add(4);
             listaenteros.Add(46);
 
-            
+
             Console.WriteLine(FuncionesArrayList.ContainsInList(listaenteros, 5));
 
             List<int> listamayor = new List<int>();
@@ -78,7 +80,7 @@
             listamayor.Add(3);
             listamayor.Add(4);
             listamayor.Add(5);
-           
+
             Console.WriteLine(FuncionesArrayList.EsElMayorNumero(listamayor));
 
             List<int> listapos = new List<int>();
@@ -124,6 +126,7 @@
 
             Console.WriteLine(FuncionesArrayList.BinarySearch(values, 00000101));
 
+            //avg
             double[] arraydouble = new double[14];
 
             values[0] = 5;
@@ -135,21 +138,35 @@
 
             Console.WriteLine(FuncionesArrayList.GetAvg(values));
 
-            List<int> nuevalista = new List<int>();
-            for (int i = 0; i <= 50; i++)
-                nuevalista.Add(5);
-            nuevalista.Add(74);
-            nuevalista.Add(43);
-            nuevalista.Add(9);
-            nuevalista.Add(36);
+            //GetThreshold
+            //double threshold;
+            //Console.WriteLine(FuncionesArrayList.GetThreshold(threshold));
 
+            //getnumbermayorepeat
 
+            Console.WriteLine(GetNumberMayorRepeated(listapos));
+            //swapvalores
 
+            Console.WriteLine(SwapValores(listapos));
 
+            //writeforscreen
+            List<int> nuevaLista = new List<int>();
 
+            WriteForScreen(nuevaLista);
 
+            //ArrayOrderedDesc
 
+            int[] arrayenteros = { 1, 2, 3, 4, 5 };
+            int[] arraydesordenado = FuncionesArrayList.ArrayOrderedDesc(arrayenteros);
 
+            foreach (int num1 in arraydesordenado)
+            {
+                Console.Write(num1 + " ");
+            }
+
+            //AddToArray
+
+            Console.WriteLine();
 
 
 

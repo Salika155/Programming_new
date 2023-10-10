@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Reflection.Metadata.Ecma335;
 using System.Reflection;
+using System.Runtime.Intrinsics.X86;
 
 namespace ArrayList
 {
@@ -285,6 +286,8 @@ namespace ArrayList
 
         public static void WriteForScreen(List<int> nuevalista)
         {
+            if (nuevalista == null)
+                return;
             nuevalista.Add(5);
             nuevalista.Add(74);
             nuevalista.Add(43);
@@ -293,7 +296,8 @@ namespace ArrayList
 
             for (int i = 0; i < nuevalista.Count; i++)
             {
-                Console.WriteLine(nuevalista[i]);
+                Console.Write(nuevalista[i] + ",");
+                //
             }
         }
 
@@ -302,6 +306,9 @@ namespace ArrayList
 
         public static int[] ArrayOrderedDesc(int[] arrayenteros)
         {
+            if (arrayenteros == null) //siempre es esto, excepto si antes de la condicion necesitas acceder a un array[0]
+                return null;
+
             int[] arraydesordenado = new int[arrayenteros.Length];
 
             for (int i = 0; i < arrayenteros.Length; i++)
@@ -315,15 +322,76 @@ namespace ArrayList
 
         public static int[] AddToArray(int[] arrayenteros, int n)
         {
-            int[] arraynuevo = new int[arrayenteros.Length + 1];
-            
+            //rehacer
+            if (arrayenteros == null)
+            {
+                //int[] arraynuevo = new int[1];
+                //arrayenteros[0] = new n;
+                //return arraynuevo;
+            }
+            int[] result2 = new int[arrayenteros.Length + 1];
 
             for (int i = 0; i < arrayenteros.Length; i++)
+                result2[i] = arrayenteros[i];
+            //result2[arrayenteros.Length];
+            //result [arraynuevo.lenght - 1]
+            return arrayenteros;
+            
+        }
+
+        //algoritmo de la burbuja
+
+        //l, i, j
+        
+        //swap
+        //int aux;
+        //aux = l[i];
+        //l[i[ = l[j];
+        //l[j] == aux;
+
+        //sort
+
+        //public static void Sort(int[] arraysort)
+        //{
+        //    if (arraysort == null)
+                
+
+        //    for (int i = 0; i < arraysort.Length; i++)
+        //    {
+        //        for (int j = i + 1; i < arraysort.Length; j++)
+        //            {
+                       
+
+        //                    int aux;
+        //            int comparator;
+
+        //            aux = arraysort[i];
+        //            arraysort[i] = arraysort[j];
+        //            arraysort[j] = aux;                                  
+        //        }
+        //    }
+        //}
+
+        public static List<int> SortLista(List<int> listashort)
+        {
+            //int n = listashort.Count; -> caso especial
+            //int n2 = n1 - 1;
+            //for (int i = 0; i < n; i++)
+            for (int i = 0; i < listashort.Count - 1; i++)
             {
-                arraynuevo[i] = arrayenteros[i];
+                //for(<n2;)
+                for (int j = i + 1; j < listashort.Count; j++)
+                {
+                    if (listashort[i] > listashort[j])
+                    {
+                        int aux;
+                        aux = listashort[i];
+                        listashort[i] = listashort[j];
+                        listashort[j] = aux;
+                    }
+                }
             }
-            arraynuevo[arraynuevo.Length] = n;
-            return arraynuevo;
+            return listashort;
         }
     }
 }

@@ -156,6 +156,8 @@ namespace ArrayList
 
             //ArrayOrderedDesc
 
+
+
             int[] arrayenteros = { 1, 2, 3, 4, 5 };
             int[] arraydesordenado = FuncionesArrayList.ArrayOrderedDesc(arrayenteros);
 
@@ -166,7 +168,10 @@ namespace ArrayList
 
             //AddToArray
 
-            Console.WriteLine();
+            
+            //SortLista
+
+            List<int> listasort = new List<int>();
 
 
 

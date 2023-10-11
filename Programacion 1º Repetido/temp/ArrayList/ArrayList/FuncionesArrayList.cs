@@ -325,24 +325,27 @@ namespace ArrayList
             //rehacer
             if (arrayenteros == null)
             {
-                //int[] arraynuevo = new int[1];
-                //arrayenteros[0] = new n;
-                //return arraynuevo;
+                int[] arraynuevo = new int[1];
+                arraynuevo[0] = n;
+                return arraynuevo;
             }
+
             int[] result2 = new int[arrayenteros.Length + 1];
 
             for (int i = 0; i < arrayenteros.Length; i++)
+            {
                 result2[i] = arrayenteros[i];
+            }
+            result2[arrayenteros.Length] = n;
             //result2[arrayenteros.Length];
             //result [arraynuevo.lenght - 1]
-            return arrayenteros;
-            
+            return result2;
         }
 
         //algoritmo de la burbuja
 
         //l, i, j
-        
+
         //swap
         //int aux;
         //aux = l[i];
@@ -351,29 +354,31 @@ namespace ArrayList
 
         //sort
 
-        //public static void Sort(int[] arraysort)
-        //{
-        //    if (arraysort == null)
-                
+        public static Array SortArray(int[] arraysort)
+        {
+            if (arraysort == null)
+            {
+                return null;
+            }
 
-        //    for (int i = 0; i < arraysort.Length; i++)
-        //    {
-        //        for (int j = i + 1; i < arraysort.Length; j++)
-        //            {
-                       
-
-        //                    int aux;
-        //            int comparator;
-
-        //            aux = arraysort[i];
-        //            arraysort[i] = arraysort[j];
-        //            arraysort[j] = aux;                                  
-        //        }
-        //    }
-        //}
+                for (int i = 0; i < arraysort.Length - 1; i++)
+                {
+                    for (int j = i + 1; i < arraysort.Length; j++)
+                    {
+                        if (arraysort[i] > arraysort[j])
+                        {
+                            int aux = arraysort[i];
+                            arraysort[i] = arraysort[j];
+                            arraysort[j] = aux;
+                        }
+                    }
+                }
+            return arraysort;
+        }
 
         public static List<int> SortLista(List<int> listashort)
         {
+
             //int n = listashort.Count; -> caso especial
             //int n2 = n1 - 1;
             //for (int i = 0; i < n; i++)

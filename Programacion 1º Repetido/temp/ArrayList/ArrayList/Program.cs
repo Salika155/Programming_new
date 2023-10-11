@@ -14,6 +14,7 @@ namespace ArrayList
             l.Add(0.0);
             l.Add(145.64);
 
+            Console.WriteLine("Is Greathe Than Zero");
             int n = FuncionesArrayList.GreaterThanZeroCount(l);
             Console.WriteLine(n);
 
@@ -22,6 +23,7 @@ namespace ArrayList
             l2.Add("adios");
             l2.Add("Hasta luego");
 
+            Console.WriteLine("Lista 2");
             int n2 = FuncionesArrayList.FuncLista1(l2);
             Console.WriteLine(n2);
 
@@ -71,7 +73,7 @@ namespace ArrayList
             listaenteros.Add(4);
             listaenteros.Add(46);
 
-
+            Console.WriteLine("Elementos esta o no en la lista");
             Console.WriteLine(FuncionesArrayList.ContainsInList(listaenteros, 5));
 
             List<int> listamayor = new List<int>();
@@ -81,6 +83,7 @@ namespace ArrayList
             listamayor.Add(4);
             listamayor.Add(5);
 
+            Console.WriteLine("El numero mayor de la lista");
             Console.WriteLine(FuncionesArrayList.EsElMayorNumero(listamayor));
 
             List<int> listapos = new List<int>();
@@ -89,6 +92,7 @@ namespace ArrayList
             listapos.Add(-6);
             listapos.Add(8);
 
+            Console.WriteLine("La posicion en la lista");
             Console.WriteLine(FuncionesArrayList.GetPosicionLista(listapos, 2));
 
             List<int> listaordenada = new List<int>();
@@ -97,6 +101,7 @@ namespace ArrayList
             listaordenada.Add(43);
             listaordenada.Add(5);
 
+            Console.WriteLine("Esta la lista Ordenada en ascendente");
             Console.WriteLine(FuncionesArrayList.IsOrderedAsc(listaordenada));
 
             List<int> listaordenada1 = new List<int>();
@@ -105,6 +110,7 @@ namespace ArrayList
             listaordenada1.Add(43);
             listaordenada1.Add(54);
 
+            Console.WriteLine("Esta la lista Ordenada en ascendente de otra manera");
             Console.WriteLine(FuncionesArrayList.IsOrderedAsc1(listaordenada1));
 
             int[] values = new int[14];
@@ -124,6 +130,7 @@ namespace ArrayList
             values[12] = 145;
             values[13] = 150;
 
+            Console.WriteLine("Busqueda Binaria en array");
             Console.WriteLine(FuncionesArrayList.BinarySearch(values, 00000101));
 
             //avg
@@ -136,11 +143,15 @@ namespace ArrayList
             values[4] = 23;
             values[5] = 6;
 
+            Console.WriteLine("Hallar media de los valores de la lista");
             Console.WriteLine(FuncionesArrayList.GetAvg(values));
 
             //GetThreshold
             //double threshold;
             //Console.WriteLine(FuncionesArrayList.GetThreshold(threshold));
+            int[] threshold = { 1, 2, 3, 4, 5 };
+            double mid = FuncionesArrayList.GetAvg(threshold);
+            Console.WriteLine(mid);
 
             //getnumbermayorepeat
 

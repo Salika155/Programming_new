@@ -182,7 +182,7 @@ namespace ArrayList
             
             //SortLista
 
-            List<int> listasort = new List<int>();
+           
 
 
 

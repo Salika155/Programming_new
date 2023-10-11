@@ -398,5 +398,64 @@ namespace ArrayList
             }
             return listashort;
         }
+
+        //collatz serie 3n + 1
+        //Funcion que le paso un numero y me devuelva la serie de collatz de ese numero
+
+        //public static List<int> SerieCollatz(int n)
+        //{
+        //    if (n == null || n == 0)
+        //        return null;
+
+        //    int result;
+        //    List<int> l = new List<int>();
+
+            //while (n > 1)
+            //{
+            //    result.Add(n);
+            //    if (n % 2 == 0)//espar
+            //        n = n / 2;
+            //    else 
+            //        n = n * 3 + 1;
+            //}
+            //result.Add(n);
+            
+        //}
+
+        // Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores
+
+        //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
+
+        //public static List<int> GetElementosParesLista(List<int> l)
+        //{
+        //    if (l == null)
+        //        return null;
+
+        //    List<int> result = new List<int>();
+
+        //    for (int i = 0; i < l.Count; i++)
+        //        int element = l[i];
+        //        if (element % 2 == 0);
+        //        result.Add(element);
+        //}
+
+        public static int[] GetPairsArray(List<int> l)
+        {
+            if (l == null)
+                return null;
+            int n = ContarPares(l);
+            int[] result = new int[n];
+            int j = 0;
+
+            for (int i = 0; i < l.Count; i++) 
+            {
+                if (l[i] % 2 == 0) //espar
+                {
+                    result[j] = l[i];
+                    j++;
+                }
+            }
+            return result;
+        }
     }
 }

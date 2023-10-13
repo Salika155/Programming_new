@@ -7,6 +7,7 @@ using System.Collections;
 using System.Reflection.Metadata.Ecma335;
 using System.Reflection;
 using System.Runtime.Intrinsics.X86;
+using System.Globalization;
 
 namespace ArrayList
 {
@@ -459,7 +460,7 @@ namespace ArrayList
             int[] result = new int[n];
             int j = 0;
 
-            for (int i = 0; i < l.Count; i++) 
+            for (int i = 0; i < l.Count; i++)
             {
                 if (l[i] % 2 == 0) //espar
                 {
@@ -469,5 +470,108 @@ namespace ArrayList
             }
             return result;
         }
+
+        // Funcion que le paso una lista de enteros y le paso una posicion. Lo que tiene que hacer esta funcion es borrar el elemento de esa posicion en la lista
+
+        public static void RemovePositionInList(List<int> list, int index)
+        {
+            if (list == null)
+                return;
+            list.RemoveAt(index); 
+        }
+
+        //[0, 7, 1, 8, 4]
+        // Funcion paso una lista y un valor. Tiene que borrar de la lista el numero 8 sin usar el Remove.
+
+        public static void RemovePositionList(List<int> list1, int value)
+        {
+            if (list1 == null)
+                return;
+
+            value = 8;
+            for (int i = 0; i < list1.Count; i++)
+            {
+                if (list1[i] == value)
+                {
+                    //return; -> para borrar solo el primero que cumpla
+                    //break; -> se sale del buble inmediatamente saliendo del for
+                    //si break o return es la ultima instruccion de un bucle es suspenso inmediato.
+                    list1.RemoveAt(i--);
+                    //list1.RemoveAt(i--);
+                    //el resultado es el que se busca eliminar, queda eliminado y desplaza todas la i un valor hacia abajo
+                    i--;
+                }
+                
+            }
+        }
+
+        //Funcion igual con array
+        
+        public static int[]? RemovePositionArray(int[] arrayremove, int value1)
+        {
+            if (arrayremove == null)
+                return null;
+
+            int count = countElements(arrayremove, value1);
+
+            int[] result = new int[arrayremove.Length - count];
+
+            int j = 0;
+
+            for (int i = 0; i < arrayremove.Length; i++)
+            {
+                count = count + arrayremove[i];
+
+                if (arrayremove[i] != value1)
+                {
+                    result[j++] = arrayremove[i];
+                }
+            }
+
+            return result;
+        }
+
+        //crear funcion countelements para que funcione
+
+        //todo lo que potencialmente pueda valer null, se le puede poner la interrogacion ? al final del elemento int[]?
+
+        //RemoveValues que estan en una lista 
+        public static void RemoveValues(List<int> l1, List<int> values)
+        {
+            if (l1 == null || values == null)
+                return;
+
+            
+            for (int i = 0; i < l1.Count; i++)
+            {
+                for (int j = 0; j < values.Count; j++)
+                {
+                    if (l1[i] == values[j])
+                    {
+                        l1.RemoveAt(i--);
+                        break;
+                    }
+                }
+                
+            }
+        }
+
+        public static void RemoveValues1(List<int> l1, List<int> values1)
+        {
+            if (l1 == null || values1 == null)
+                return;
+
+            for (int i = 0; i < l1.Count; i++)
+            {
+               if (Contains(values1, l1[i]))
+                    //if (values.Contains(l[i]))
+               {
+                    l1.RemoveAt(i--);
+               }        
+                  
+            }
+
+        }
+
     }
 }

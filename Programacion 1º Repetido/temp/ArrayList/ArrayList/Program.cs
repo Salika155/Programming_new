@@ -182,7 +182,16 @@ namespace ArrayList
             
             //SortLista
 
-           
+           List<int> list1 = new List<int>();
+
+            list1.Add(0);
+            list1.Add(7);
+            list1.Add(8);
+            list1.Add(8);
+            list1.Add(4);
+            list1.Add(8);
+
+            Console.WriteLine(list1);
 
 
 

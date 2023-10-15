@@ -11,8 +11,11 @@ using System.Globalization;
 
 namespace ArrayList
 {
+
+    
     internal class FuncionesArrayList
     {
+        //Funcion numero de valores mayor que cero lista
         public static int GreaterThanZeroCount(List<double> list)
         {
             int result = 0;
@@ -25,6 +28,7 @@ namespace ArrayList
             return result;
         }
 
+        //Cuantos elementos tiene la lista
         public static int FuncLista1(List<string> list)
         {
             return list.Count;
@@ -35,6 +39,7 @@ namespace ArrayList
         //    throw new NotImplementedException();
         //}
 
+        //Cuantos elementos tiene el array
         public static int FuncArray1(Array[] arrays)
         {
             return arrays.Length;
@@ -148,6 +153,7 @@ namespace ArrayList
             return true;
         }
 
+        //lista ordenada de otra manera
         public static bool IsOrderedAsc1(List<int> listaordenada)
         {
             if (listaordenada == null || listaordenada.Count <= 1)
@@ -167,7 +173,7 @@ namespace ArrayList
             return true;
         }
 
-        //
+        //Contiene elemento dentro del array
         public static bool Contains(int[] array, int value)
         {
             for (int i = 0; i < array.Length; i++)
@@ -353,7 +359,7 @@ namespace ArrayList
         //l[i[ = l[j];
         //l[j] == aux;
 
-        //sort
+        //sort array
 
         public static Array SortArray(int[] arraysort)
         {
@@ -376,6 +382,8 @@ namespace ArrayList
                 }
             return arraysort;
         }
+
+        //sortlista
 
         public static List<int> SortLista(List<int> listashort)
         {
@@ -450,13 +458,15 @@ namespace ArrayList
             return result;
         }
 
+        //hallar los numeros pares de un array
         public static int[] GetPairsArray(List<int> l)
         {
             if (l == null)
                 return null;
 
 
-            int n = GetElementosParesLista(l);
+            List<int> pares = GetElementosParesLista(l);
+            int n = pares.Count;
             int[] result = new int[n];
             int j = 0;
 
@@ -470,6 +480,8 @@ namespace ArrayList
             }
             return result;
         }
+
+        
 
         // Funcion que le paso una lista de enteros y le paso una posicion. Lo que tiene que hacer esta funcion es borrar el elemento de esa posicion en la lista
 
@@ -512,15 +524,14 @@ namespace ArrayList
             if (arrayremove == null)
                 return null;
 
-            int count = countElements(arrayremove, value1);
-
+            int count = CountElements(arrayremove, value1);
             int[] result = new int[arrayremove.Length - count];
 
             int j = 0;
 
             for (int i = 0; i < arrayremove.Length; i++)
             {
-                count = count + arrayremove[i];
+                //count = count + arrayremove[i];
 
                 if (arrayremove[i] != value1)
                 {
@@ -532,6 +543,22 @@ namespace ArrayList
         }
 
         //crear funcion countelements para que funcione
+
+        public static int CountElements(int[] array, int value)
+        {
+            int count = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
 
         //todo lo que potencialmente pueda valer null, se le puede poner la interrogacion ? al final del elemento int[]?
 
@@ -556,6 +583,8 @@ namespace ArrayList
             }
         }
 
+        //removevalues para array
+
         public static void RemoveValues1(List<int> l1, List<int> values1)
         {
             if (l1 == null || values1 == null)
@@ -563,8 +592,8 @@ namespace ArrayList
 
             for (int i = 0; i < l1.Count; i++)
             {
-               if (Contains(values1, l1[i]))
-                    //if (values.Contains(l[i]))
+               //if (Contains(values1, l1[i]))
+               if (values1.Contains(l1[i]))
                {
                     l1.RemoveAt(i--);
                }        

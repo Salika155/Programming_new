@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\bin\Debug\net6.0\FuncionesListasArrayPruebas.exe
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\bin\Debug\net6.0\FuncionesListasArrayPruebas.deps.json
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\bin\Debug\net6.0\FuncionesListasArrayPruebas.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\bin\Debug\net6.0\FuncionesListasArrayPruebas.dll
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\bin\Debug\net6.0\FuncionesListasArrayPruebas.pdb
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.dll
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\refint\FuncionesListasArrayPruebas.dll
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.pdb
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\FuncionesListasArrayPruebas.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\FuncionesListasArrayPruebas\FuncionesListasArrayPruebas\obj\Debug\net6.0\ref\FuncionesListasArrayPruebas.dll

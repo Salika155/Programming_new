@@ -6,9 +6,10 @@ namespace ArrayList
     {
         static void Main(string[] args)
         {
+            //Funcion numero de valores mayor que cero lista
             List<double> l = new List<double>();
-            for (int i = -50; i <= 50; i++)
-                l.Add(i);
+            //for (int i = -50; i <= 50; i++)
+            l.Add(5.0);
             l.Add(42.2);
             l.Add(-1.0);
             l.Add(0.0);
@@ -28,7 +29,7 @@ namespace ArrayList
             Console.WriteLine(n2);
 
 
-            //int n3 = FuncionesArrayList.GreatLesserThanZero(l2);
+            //int n3 = FuncionesArrayList.GreatherThanZero(l2);
 
             Person s = new Person();
             s.name = "Huan";
@@ -155,9 +156,10 @@ namespace ArrayList
 
             //getnumbermayorepeat
 
+            Console.WriteLine("El numero mayor repetido");
             Console.WriteLine(GetNumberMayorRepeated(listapos));
+            
             //swapvalores
-
             Console.WriteLine(SwapValores(listapos));
 
             //writeforscreen

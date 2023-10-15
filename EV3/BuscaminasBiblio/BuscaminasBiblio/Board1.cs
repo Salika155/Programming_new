@@ -64,6 +64,7 @@ namespace BuscaminasBiblio
             }
             else if (IsBombAt(x, y))
             {
+                //PierdesJuego();
                 canOpenCells = false;
             }
             else
@@ -71,7 +72,7 @@ namespace BuscaminasBiblio
                 Position cellPosition = new Position(x, y);
                 _openCells.Add(cellPosition);
             }
-            return canOpenCells;
+            return true;
         }
     
 

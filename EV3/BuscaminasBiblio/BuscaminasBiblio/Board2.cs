@@ -29,13 +29,27 @@ namespace BuscaminasBiblio
            
         }
 
-        public void DeleteFlagAt(int x, int y)
-        {
-            throw new NotImplementedException();
-            //for (int i = 0; i < _flags.Length; i++)
-            //    if (_flags[i].position.x == x && _flags[i].position.y == y);
+        //public void DeleteFlagAt(int x, int y, Flag[] flags)
+        //{
+        //    for (int i = 0; i < flags.Length; i++)
+        //    {
+        //        if (flags[i].position.x == x && flags[i].position.y == y)
+        //        {
+        //            Flag[] newFlags = new Flag[flags.Length - 1];
+        //            for (int j  = 0, k = 0; j < flags.Length; j++)
+        //            {
+        //                if (j != 1)
+        //                {
+        //                    newFlags[k] = flags[j];
+        //                    k++;
+        //                }
+        //            }
+        //            flags = newFlags;
+        //            break;
+        //        }
+        //    }
+        //}
 
-        }
 
         public int GetBombProximity(int x, int y)
         {
@@ -129,6 +143,11 @@ namespace BuscaminasBiblio
                 {
                     cells[i].SetFlag();
                 }
+        }
+
+        void IBoard.DeleteFlagAt(int x, int y)
+        {
+            throw new NotImplementedException();
         }
     }
 }

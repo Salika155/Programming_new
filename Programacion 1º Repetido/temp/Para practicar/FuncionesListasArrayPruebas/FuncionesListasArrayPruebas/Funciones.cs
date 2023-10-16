@@ -118,8 +118,27 @@ namespace FuncionesListasArrayPruebas
 
         //Contiene elemento dentro del array
 
+        public static bool EstaEnElArray(int[] arrays, int n) 
+        {
+            if (arrays == null)
+                return false;
+
+            for (int i = 0; i < arrays.Length; i++)
+            {
+                if (arrays[i] == n)
+                    return true;
+            }
+            return false;
+        } 
+
         //Le paso un numero y compruebo dentro de la lista si esta mediante el binarysearch
         //punto medio, comparo y muevo valores binarysearch
+
+        public static bool BinarySearch(List<int> l6, int n)
+        {
+            int min = 0;
+            int max = l6.Count;
+        }
 
         //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi
 

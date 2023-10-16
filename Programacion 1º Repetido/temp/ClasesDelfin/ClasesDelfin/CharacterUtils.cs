@@ -25,7 +25,8 @@ namespace ClasesDelfin
 
         }
 
-        //funcion que le paso una lista y un nombre, quiero que me devuelva el primer objeto con ese nombre que este en la lista
+        //funcion que le paso una lista y un nombre, quiero que me devuelva el primer objeto con ese nombre que este
+        //en la lista
 
         public Character? ContainsObject(List<Character> characters, string name)
         { 

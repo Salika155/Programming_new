@@ -82,14 +82,14 @@ namespace ClasesDelfin
             List<Character> list = new List<Character>();
             list.Add(c1);
 
-            //c1 = null;
-            //c2 = null;
+            c1 = null;
+            c2 = null;
             //no desapareceria porque ahora el objeto apunta a la lista
-            //c1 sigue siendo un numero, y cuando creas la lista haces que esta apunte al numero para añadirlo-> apunta a un objeto que 
-            //list.Add (new Character());
-            //list[1].name = "Ana";
-            //list[0].name = list[1].name;
-            //list.Add(list[0]);
+            //c1 sigue siendo un numero, y cuando creas la lista haces que esta apunte al numero para añadirlo->apunta a un objeto que
+            list.Add(new Character());
+            list[1].name = "Ana";
+            list[0].name = list[1].name;
+            list.Add(list[0]);
 
 
 

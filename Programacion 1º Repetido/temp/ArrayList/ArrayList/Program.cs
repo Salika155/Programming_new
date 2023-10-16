@@ -19,6 +19,8 @@ namespace ArrayList
             int n = FuncionesArrayList.GreaterThanZeroCount(l);
             Console.WriteLine(n);
 
+
+            //Cuantos elementos tiene la lista
             List<string> l2 = new List<string>();
             l2.Add("hola");
             l2.Add("adios");
@@ -44,6 +46,7 @@ namespace ArrayList
             //int n = a.Length; //4 elementos, te dice cuantos hay
             //int[] b = a; //b apunta a array a
 
+            //Cuantos elementos tiene el array
             double[] a1 = new double[4] { 0, 0, 0, 0 };
             a1[0] = 5.4;
             a1[1] = 45.97;
@@ -53,6 +56,7 @@ namespace ArrayList
             int n4 = a1.Length;
             Console.WriteLine(n4);
 
+            //Funcion valores mayor que cero array
             string[] a2 = new string[5] { "H", "O", "L", "A", "." };
             a2[0] = "A";
             a2[1] = "D";
@@ -64,7 +68,7 @@ namespace ArrayList
             Console.WriteLine(n5);
 
             //--------------------------------------------------------------------
-
+            //quiero una funcion que le paso una lista de enteros y un numero, y me tiene que decir si ese numero esta en la lista o no
             List<double> listaenteros = new List<double>();
 
             listaenteros.Add(12);
@@ -77,6 +81,7 @@ namespace ArrayList
             Console.WriteLine("Elementos esta o no en la lista");
             Console.WriteLine(FuncionesArrayList.ContainsInList(listaenteros, 5));
 
+            //Me pasan una lista de enteros y me dice el numero mayor que hay en esa lista de enteros
             List<int> listamayor = new List<int>();
             listamayor.Add(1);
             listamayor.Add(2);
@@ -87,6 +92,7 @@ namespace ArrayList
             Console.WriteLine("El numero mayor de la lista");
             Console.WriteLine(FuncionesArrayList.EsElMayorNumero(listamayor));
 
+            //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
             List<int> listapos = new List<int>();
             listapos.Add(1);
             listapos.Add(574);
@@ -94,7 +100,9 @@ namespace ArrayList
             listapos.Add(8);
 
             Console.WriteLine("La posicion en la lista");
-            Console.WriteLine(FuncionesArrayList.GetPosicionLista(listapos, 2));
+            Console.WriteLine(FuncionesArrayList.GetPosicionLista(listapos));
+
+            //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
 
             List<int> listaordenada = new List<int>();
             listaordenada.Add(-1);

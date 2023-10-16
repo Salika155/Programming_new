@@ -85,7 +85,36 @@ namespace FuncionesListasArrayPruebas
 
         //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
 
+        public static int GetPosicionEnLista(List<int> l4)
+        {
+            if (l4 == null || l4.Count == 0)
+                return -1;
+
+            int max = l4[0];
+            int index = 0;
+
+            for (int i = 0; i < l4.Count; i++) 
+            {
+                if (l4[i] > max)
+                {
+                    max = l4[i];
+                    index = i;
+                }    
+            }
+            return index;
+        }
+
         //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
+
+        public static bool ListaEnterosOrdenadaAsc(List<int> l5)
+        {
+            for (int i = 1; i > l5.Count; i++) 
+            {
+                if (l5[i] < l5[i - 1])
+                    return false;
+            }
+            return true;
+        }
 
         //Contiene elemento dentro del array
 

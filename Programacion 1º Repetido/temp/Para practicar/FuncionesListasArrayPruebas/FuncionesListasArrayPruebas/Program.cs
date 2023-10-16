@@ -82,8 +82,24 @@ namespace FuncionesListasArrayPruebas
 
             Console.Write("El numero mayor de la lista es: ");
             Console.WriteLine(Funciones.NumeroMayorLista(listamayor));
+
+            //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
+            List<int> l4 = new List<int>();
+
+            l4.Add(12);
+            l4.Add(4);
+            l4.Add(-6);
+            l4.Add(54);
+            l4.Add(4);
+            l4.Add(46);
+
+            Console.Write("El elemento mas alto de la lista se encuentra en la posicion: ");
+            Console.WriteLine(Funciones.GetPosicionEnLista(l4));
+
+            //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
+
         }
 
-       
+
     }
 }

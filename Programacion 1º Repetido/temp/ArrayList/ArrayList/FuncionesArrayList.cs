@@ -113,7 +113,7 @@ namespace ArrayList
 
         //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
 
-        public static int GetPosicionLista(List<int> listapos, int position)
+        public static int GetPosicionLista(List<int> listapos)
         {
             if (listapos == null || listapos.Count == 0)
                 return -1;
@@ -127,6 +127,7 @@ namespace ArrayList
                 {
                     max = listapos[i];
                     index = i;
+
                 }
             }
             return index;

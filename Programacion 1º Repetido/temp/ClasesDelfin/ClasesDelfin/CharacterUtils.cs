@@ -42,9 +42,12 @@ namespace ClasesDelfin
 
         public bool ContainDuplicate(List<Character> characters)
         {
+            if (characters == null)
+                return false;
+
             for(int i = 0; i < characters.Count; i++)
             {
-                for (int j = 0; i < characters.Count; j++)
+                for (int j = i +1; j < characters.Count; j++)
                 {
                     if (characters[i].name == characters[j].name)
                         return true;

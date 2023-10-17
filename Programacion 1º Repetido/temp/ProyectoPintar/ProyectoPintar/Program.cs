@@ -15,9 +15,7 @@ namespace ProyectoPintar
         public class MiJuego : UDK.IGameDelegate
 
         {
-            
             List<Character> character = new List<Character>();
-
 
             public void OnAnimate(GameDelegateEvent gameEvent)
             {
@@ -38,12 +36,10 @@ namespace ProyectoPintar
                 for (int i = 0; i < character.Count; i++)
                 {
                     Character c = character[i];
-                    
                     canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
                     canvas.DrawRectangle(c.x, c.y, 2.0, 2.0);
                     
                 }
-
             }
 
             public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
@@ -64,42 +60,42 @@ namespace ProyectoPintar
                 {
                     character[0].y -= 0.0007;
                 }
-                
-                
             }
 
             public void OnLoad(GameDelegateEvent gameEvent)
             {
 
                 Character pj1 = new Character();
-                pj1.blue = 0.0;
+                
                 pj1.red = 1.0;
                 pj1.green = 0.0;
-                pj1.alpha = 0.0;
+                pj1.blue = 0.0;
+                pj1.alpha = 1.0;
                 character.Add(pj1);
 
                 Character pj2 = new Character();
-                pj2.blue = 0.0;
-                pj2.red = 1.0;
+                
+                pj2.red = 0.0;
                 pj2.green = 0.0;
-                pj2.alpha = 0.0;
+                pj2.blue = 1.0;
+                pj2.alpha = 1.0;
                 character.Add(pj2);
 
                 Character pj3 = new Character();
+               
+                pj3.red = 0.0;
+                pj3.green = 1.0;
                 pj3.blue = 0.0;
-                pj3.red = 1.0;
-                pj3.green = 0.0;
-                pj3.alpha = 0.0;
+                pj3.alpha = 1.0;
                 character.Add(pj3);
 
                 Character pj4 = new Character();
-                pj4.blue = 0.0;
+                
                 pj4.red = 1.0;
                 pj4.green = 0.0;
-                pj4.alpha = 0.0;
+                pj4.blue = 0.0;
+                pj4.alpha = 1.0;
                 character.Add(pj4);
-
-                
 
             }
 

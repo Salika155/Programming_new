@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "i3dwiB/5fobsnx0wnIQtut4VZP6lPlriFvIB22Tm9ODmXUXMO9XCnBJQkrh+sZzI4zwEqP9wgaA/sY9lL5XaqQ==",
-  "success": false,
+  "dgSpecHash": "MMfoh0Nam4n6OfeO5bWg5oRK1Q6ZtOvLnaXHO7s5VkceAtr4pGxSNlgGmwlA7OicdfnAR4WtlscLx6H4agOCSQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\Programacion 1º Repetido\\temp\\ProyectoPintar\\ProyectoPintar\\ProyectoPintar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carcarcor\\.nuget\\packages\\freetypesharp\\1.1.3\\freetypesharp.1.1.3.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\nvorbis\\0.10.5\\nvorbis.0.10.5.nupkg.sha512",
+    "C:\\Users\\carcarcor\\.nuget\\packages\\openal.soft\\1.19.1\\openal.soft.1.19.1.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\opentk\\4.8.1\\opentk.4.8.1.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\opentk.audio.openal\\4.8.1\\opentk.audio.openal.4.8.1.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\opentk.compute\\4.8.1\\opentk.compute.4.8.1.nupkg.sha512",
@@ -23,26 +24,9 @@
     "C:\\Users\\carcarcor\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\carcarcor\\.nuget\\packages\\udk\\1.0.0\\udk.1.0.0.nupkg.sha512"
+    "C:\\Users\\carcarcor\\.nuget\\packages\\udk\\1.0.0\\udk.1.0.0.nupkg.sha512",
+    "C:\\Users\\carcarcor\\.nuget\\packages\\udk-sgen\\1.0.0\\udk-sgen.1.0.0.nupkg.sha512",
+    "C:\\Users\\carcarcor\\.nuget\\packages\\udk-shapes\\1.0.0\\udk-shapes.1.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "No se encuentra el paquete UDK-sgen. No existe ningún paquete con este id. en los orígenes: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org, NuggetsLocales",
-      "libraryId": "UDK-sgen",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "No se encuentra el paquete UDK-shapes. No existe ningún paquete con este id. en los orígenes: C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org, NuggetsLocales",
-      "libraryId": "UDK-shapes",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

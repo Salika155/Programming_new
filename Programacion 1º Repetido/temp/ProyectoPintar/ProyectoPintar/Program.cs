@@ -29,7 +29,7 @@ namespace ProyectoPintar
 
             public void OnDraw(GameDelegateEvent gameEvent, ICanvas canvas)
             {
-                canvas.Clear(0.0, 0.0, 0.0, 1.0);
+                canvas.Clear(1.0, 1.0, 1.0, 1.0);
                 canvas.Camera.SetRectangle(0.0, 0.0, 10.0, 10.0);
 
 

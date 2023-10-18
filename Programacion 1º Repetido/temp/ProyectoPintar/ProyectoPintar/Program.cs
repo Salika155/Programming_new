@@ -9,11 +9,9 @@ namespace ProyectoPintar
             public double x;
             public double y;
             public double red, green, blue, alpha;
-
         }
 
         public class MiJuego : UDK.IGameDelegate
-
         {
             List<Character> character = new List<Character>();
 
@@ -22,23 +20,21 @@ namespace ProyectoPintar
                 for (int i = 0; i < character.Count; i++)
                 {
                     Character c = character[i];
-                    c.x = c.x + Utils.GetRandom(-0.01, 0.01);
-                    c.y = c.y + Utils.GetRandom(-0.01, 0.01);
+                    c.x = c.x + Utils.GetRandom(-0.005, 0.005);
+                    c.y = c.y + Utils.GetRandom(-0.005, 0.005);
                 }
             }
 
             public void OnDraw(GameDelegateEvent gameEvent, ICanvas canvas)
             {
                 canvas.Clear(1.0, 1.0, 1.0, 1.0);
-                canvas.Camera.SetRectangle(0.0, 0.0, 10.0, 10.0);
-
+                canvas.Camera.SetRectangle(2.0, 0.0, 20.0, 20.0);
 
                 for (int i = 0; i < character.Count; i++)
                 {
                     Character c = character[i];
                     canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
-                    canvas.DrawRectangle(c.x, c.y, 2.0, 2.0);
-                    
+                    canvas.DrawRectangle(c.x, c.y, 1.5, 1.5);
                 }
             }
 

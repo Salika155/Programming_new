@@ -110,7 +110,7 @@ namespace ArrayList
             listaordenada.Add(43);
             listaordenada.Add(5);
 
-            Console.WriteLine("Esta la lista Ordenada en ascendente");
+            Console.Write("Esta la lista Ordenada en ascendente");
             Console.WriteLine(FuncionesArrayList.IsOrderedAsc(listaordenada));
 
             List<int> listaordenada1 = new List<int>();

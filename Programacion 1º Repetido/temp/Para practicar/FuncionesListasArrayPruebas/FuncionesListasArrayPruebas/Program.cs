@@ -98,6 +98,14 @@ namespace FuncionesListasArrayPruebas
 
             //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
 
+            List<int> listaordenada = new List<int>();
+            listaordenada.Add(-1);
+            listaordenada.Add(2);
+            listaordenada.Add(43);
+            listaordenada.Add(5);
+
+            Console.Write("Esta la lista Ordenada en ascendente?: ");
+            Console.WriteLine(Funciones.ListaEnterosOrdenadaAsc(listaordenada));
         }
 
 

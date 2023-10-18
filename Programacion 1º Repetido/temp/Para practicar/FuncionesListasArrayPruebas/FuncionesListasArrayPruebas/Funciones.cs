@@ -138,6 +138,7 @@ namespace FuncionesListasArrayPruebas
         {
             int min = 0;
             int max = l6.Count;
+            return true;
         }
 
         //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi

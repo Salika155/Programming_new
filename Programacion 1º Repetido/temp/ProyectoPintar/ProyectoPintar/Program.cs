@@ -1,7 +1,9 @@
-﻿using UDK;
+﻿using System.Security.Cryptography.X509Certificates;
+using UDK;
 
 namespace ProyectoPintar
 {
+    //si es metodo de juego existen this dentro, en este caso de mijuego
     internal class Program
     {
         public class Character
@@ -9,11 +11,30 @@ namespace ProyectoPintar
             public double x;
             public double y;
             public double red, green, blue, alpha;
+
+            
+
+            public void Draw(ICanvas canvas)
+            {
+                canvas.FillShader.SetColor(red, green, blue, alpha);
+                canvas.DrawRectangle(x, y, 1.5, 1.5);
+            }
         }
 
         public class MiJuego : UDK.IGameDelegate
         {
             List<Character> character = new List<Character>();
+
+            public void CreateCharacters(int characterCount)
+            {
+                Character pj = new Character();
+                character.Add(pj);
+                pj.red = 1.0;
+                pj.green = 1.0;
+                pj.blue = 1.0;
+                pj.alpha = 1.0;
+                
+            }
 
             public void OnAnimate(GameDelegateEvent gameEvent)
             {
@@ -32,9 +53,8 @@ namespace ProyectoPintar
 
                 for (int i = 0; i < character.Count; i++)
                 {
-                    Character c = character[i];
-                    canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
-                    canvas.DrawRectangle(c.x, c.y, 1.5, 1.5);
+                    Character ch = character[i];
+                    ch.Draw(canvas);
                 }
             }
 
@@ -60,39 +80,44 @@ namespace ProyectoPintar
 
             public void OnLoad(GameDelegateEvent gameEvent)
             {
+                character = new List<Character>();
+                CreateCharacters(10);
+                //character.Add();
 
-                Character pj1 = new Character();
                 
-                pj1.red = 1.0;
-                pj1.green = 0.0;
-                pj1.blue = 0.0;
-                pj1.alpha = 1.0;
-                character.Add(pj1);
-
-                Character pj2 = new Character();
+                for (int i = 0; i < 10; i++)
+                {
+                    Character pj = new Character();
+                    pj.red = 1.0;
+                    pj.green = 0.0;
+                    pj.blue = 0.0;
+                    pj.alpha = 1.0;
+                    character.Add(pj);
+                }
                 
-                pj2.red = 0.0;
-                pj2.green = 0.0;
-                pj2.blue = 1.0;
-                pj2.alpha = 1.0;
-                character.Add(pj2);
+                //Character pj2 = new Character();
+                
+                //pj2.red = 0.0;
+                //pj2.green = 0.0;
+                //pj2.blue = 1.0;
+                //pj2.alpha = 1.0;
+                //character.Add(pj2);
 
-                Character pj3 = new Character();
+                //Character pj3 = new Character();
                
-                pj3.red = 0.0;
-                pj3.green = 1.0;
-                pj3.blue = 0.0;
-                pj3.alpha = 1.0;
-                character.Add(pj3);
+                //pj3.red = 0.0;
+                //pj3.green = 1.0;
+                //pj3.blue = 0.0;
+                //pj3.alpha = 1.0;
+                //character.Add(pj3);
 
-                Character pj4 = new Character();
+                //Character pj4 = new Character();
                 
-                pj4.red = 1.0;
-                pj4.green = 0.0;
-                pj4.blue = 0.0;
-                pj4.alpha = 1.0;
-                character.Add(pj4);
-
+                //pj4.red = 1.0;
+                //pj4.green = 0.0;
+                //pj4.blue = 0.0;
+                //pj4.alpha = 1.0;
+                //character.Add(pj4);
             }
 
             public void OnUnload(GameDelegateEvent gameEvent)
@@ -105,6 +130,9 @@ namespace ProyectoPintar
         {
             MiJuego juego = new MiJuego();
             UDK.Game.Launch(juego);
+            //creo una clase llamada mundo para meter a los personajes
+            //mundo va a tener una lista de objetos -> tendra funcion crearpersonajes y draw personajes
+            //crear clases fuera clase character, world, y mijuego
            
         }
     }

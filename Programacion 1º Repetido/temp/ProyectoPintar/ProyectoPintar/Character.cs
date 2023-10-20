@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,17 @@ namespace ProyectoPintar
         public double x;
         public double y;
         public double red, green, blue, alpha;
+        public Rectangle? rectangle;
         //public CharacterType type;
+
+        public class Rectangle
+        {
+            public double x;
+            public double y;
+            public double width;
+            public double height;
+
+        }
 
         
     }

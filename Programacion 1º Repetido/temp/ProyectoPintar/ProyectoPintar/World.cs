@@ -9,6 +9,9 @@ namespace ProyectoPintar
 {
     public class World
     {
+        double width;
+        double height;
+
         private List<Character> character = new List<Character>();
         Random random= new Random();
 
@@ -25,7 +28,6 @@ namespace ProyectoPintar
                     pj.blue = 0.0;
                     pj.green = 0.0;
                 }
-                   
                 else if (randomValue <= 0.6)
                 {
                     pj.blue = 1.0;
@@ -45,26 +47,37 @@ namespace ProyectoPintar
             
         }
 
-       
-        public void DrawCharacters(ICanvas canvas, List<Character> character)
+        public int GetCharacterCount()
+        {
+            return character.Count;
+        }
+
+        public Character? GetCharacterAt(int index)
+        {
+            if (index < 0 || index >= character.Count)
+                return null;
+
+            return character[index];
+        }
+
+
+        public void DrawCharacters(ICanvas canvas)
         {
             //mejor un for
-            foreach(Character c in character) 
+            for (int i = 0; i < character.Count; i++)
             {
+                Character c = character[i];
                 canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
                 canvas.DrawRectangle(c.x, c.y, 1.5, 1.5);
+   
             }
-            
         }
 
-        public List<Character> GetCharacters()
+       public void DrawWorld(ICanvas canvas, World world)
         {
-            return character;
+
         }
 
-        //internal void DrawCharacters()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        
     }
 }

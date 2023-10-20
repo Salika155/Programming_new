@@ -10,16 +10,15 @@ namespace ProyectoPintar
 {
     internal class MyGame : UDK.IGameDelegate
     {
+        World world;
         List<Character> characters = new List<Character>();
-        World world = new World();
 
         public void OnAnimate(GameDelegateEvent gameEvent)
         {
-            List<Character> characters = world.GetCharacters();
 
             for (int i = 0; i < characters.Count; i++) 
             {
-                Character c = world.GetCharacters()[i];
+                Character c = world.GetCharacterAt(i);
 
                 c.x = c.x + Utils.GetRandom(-0.005, 0.005);
                 c.y = c.y + Utils.GetRandom(-0.005, 0.005);
@@ -31,13 +30,14 @@ namespace ProyectoPintar
         {
             canvas.Clear(1.0, 1.0, 1.0, 1.0);
             canvas.Camera.SetRectangle(2.0, 0.0, 20.0, 20.0);
-            world.DrawCharacters(canvas, world.GetCharacters());
+            world.DrawCharacters(canvas);
 
         }
 
         public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
         {
-            List<Character> characters = world.GetCharacters();
+
+            //if (character != null)
 
             if (characters.Count > 0)
             {
@@ -63,9 +63,11 @@ namespace ProyectoPintar
 
         public void OnLoad(GameDelegateEvent gameEvent)
         {
-            
+            world = new World();
             world.CreateCharacters(10);
             
+
+
             //Character pj2 = new Character();
 
             //pj2.red = 0.0;

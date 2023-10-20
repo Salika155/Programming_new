@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
         "projectName": "Tom_Jerry",
-        "projectPath": "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

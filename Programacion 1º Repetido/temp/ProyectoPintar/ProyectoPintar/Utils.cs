@@ -17,10 +17,10 @@ namespace ProyectoPintar
 
         public static double GetRandom(double min, double max)
         {
-            //return (r.NextDouble() * (max - min) + min);
-            double r = GetRandom();
-            double v = r * (max - min);
-            return v + min;
+            return (r.NextDouble() * (max - min) + min);
+            //double r = GetRandom();
+            //double v = r * (max - min);
+            //return v + min;
         }
     }
 }

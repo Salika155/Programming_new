@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "34cTbvFLclImV0JX54NSd8L4EfvsWPO9IDl51XS8kugXhOagoufoZUBoh2WCXoGsQJHKCNZmf3bFkNuKp5ePzg==",
+  "dgSpecHash": "mvNQah9MJWh/PdSPSyjjT2dcwkyjkOj8Z5zOozxD1r9NNtzwTniLAD85be91THZvMMxdIDiiIewACWoy/w6rpg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carre\\Desktop\\DAM\\asignaturas\\PROGRAMACION\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV1\\Tom_Jerry\\Tom_Jerry\\Tom_Jerry.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carre\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0-rc.2.22472.3\\microsoft.win32.systemevents.7.0.0-rc.2.22472.3.nupkg.sha512",
     "C:\\Users\\carre\\.nuget\\packages\\opentk\\4.7.5\\opentk.4.7.5.nupkg.sha512",

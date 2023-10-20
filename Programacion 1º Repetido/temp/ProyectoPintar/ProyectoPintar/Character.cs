@@ -7,18 +7,21 @@ using UDK;
 
 namespace ProyectoPintar
 {
-    public class Character : World
+
+    //public enum CharacterType
+    //{
+    //    POLI,
+    //    CACO
+    //}
+
+    public class Character
     {
         public double x;
         public double y;
         public double red, green, blue, alpha;
+        //public CharacterType type;
 
-       
-        public void Draw(ICanvas canvas)
-        {
-            canvas.FillShader.SetColor(red, green, blue, alpha);
-            canvas.DrawRectangle(x, y, 1.5, 1.5);
-        }
-
+        
     }
+
 }

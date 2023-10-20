@@ -21,11 +21,9 @@ namespace ProyectoPintar
             {
                 Character c = world.GetCharacters()[i];
 
-                if (c.x > 0.0 && c.x < 9.0 && c.y > 0.0 && c.y < 9.9)
-                {
-                    c.x = c.x + Utils.GetRandom(-0.01, 0.01);
-                    c.y = c.y + Utils.GetRandom(-0.01, 0.01);
-                }
+                c.x = c.x + Utils.GetRandom(-0.005, 0.005);
+                c.y = c.y + Utils.GetRandom(-0.005, 0.005);
+               
             }
         }
 
@@ -66,7 +64,7 @@ namespace ProyectoPintar
         public void OnLoad(GameDelegateEvent gameEvent)
         {
             
-            world.CreateCharacters(10);
+            world.CreateCharacters(20);
             
             //Character pj2 = new Character();
 

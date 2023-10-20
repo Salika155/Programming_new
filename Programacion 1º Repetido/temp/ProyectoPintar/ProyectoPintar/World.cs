@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,11 @@ namespace ProyectoPintar
 {
     public class World
     {
-        double width;
-        double height;
+        private double width;
+        private double height;
 
         private List<Character> character = new List<Character>();
+        private Rectangle worldBorders;
         Random random= new Random();
 
         public void CreateCharacters(int characterCount)
@@ -78,6 +80,10 @@ namespace ProyectoPintar
 
         }
 
-        
+        public void SetWorldBounds(double x, double y, double width, double height)
+        {
+            worldBorders = new Rectangle(x, y, width, height);
+        }
+
     }
 }

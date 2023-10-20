@@ -64,7 +64,7 @@ namespace ProyectoPintar
         public void OnLoad(GameDelegateEvent gameEvent)
         {
             
-            world.CreateCharacters(20);
+            world.CreateCharacters(10);
             
             //Character pj2 = new Character();
 

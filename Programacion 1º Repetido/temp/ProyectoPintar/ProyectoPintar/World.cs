@@ -48,6 +48,7 @@ namespace ProyectoPintar
        
         public void DrawCharacters(ICanvas canvas, List<Character> character)
         {
+            //mejor un for
             foreach(Character c in character) 
             {
                 canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);

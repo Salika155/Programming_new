@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoPintar
 {
-    public class World : MyGame
+    public class World
     {
 
     }

@@ -13,17 +13,7 @@ namespace ProyectoPintar
         public double y;
         public double red, green, blue, alpha;
 
-        public Character(double x, double y, double red, double green, double blue, double alpha)
-        {
-            this.x = x;
-            this.y = y;
-            this.red = red;
-            this.green = green;
-            this.blue = blue;
-            this.alpha = alpha;
-
-        }
-
+       
         public void Draw(ICanvas canvas)
         {
             canvas.FillShader.SetColor(red, green, blue, alpha);

@@ -12,7 +12,7 @@ namespace ProyectoPintar
     public class World
     {
         private double width = 30.0;
-        private double height = 10.0;
+        private double eight = 10.0;
 
         private List<Character> character = new List<Character>();
         private Rectangle worldBorders;
@@ -52,6 +52,11 @@ namespace ProyectoPintar
             
         }
 
+        public void CreateWorld(double width, double height)
+        {
+            return width; 
+        }
+
         public int GetCharacterCount()
         {
             return character.Count;
@@ -88,6 +93,44 @@ namespace ProyectoPintar
         //    worldBorders = new Rectangle();
         //}
 
+        public double GetWorldSizeX(double WorldSizeX)
+        {
+            return WorldSizeX;
+        }
 
+        public double GetWorldSizeY(double WorldSizeY) 
+        {
+            return WorldSizeY;
+        }
+
+        public double GetCharacterPosX(double CharacterPosX)
+        {
+            return CharacterPosX;
+        }
+
+        public double GetCharacterPosY(double CharacterPosY)
+        {
+            return CharacterPosY;
+        }
+
+        public double GetCharacterWidth(double CharacterWidth)
+        { 
+            return CharacterWidth; 
+        }
+
+        public double GetCharacterHeight(double CharacterHeight)
+        {
+            return CharacterHeight;
+        }
+
+        public void SetCharacterColor(double r, double g, double b, double a) 
+        { 
+
+        }
+
+        public bool CheckCollision(double W1, double W2, double H1, double H2)
+        {
+            return false;
+        }
     }
 }

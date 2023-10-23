@@ -28,19 +28,19 @@ namespace ProyectoPintar
                 {
                     if (keyboard.IsKeyDown(Keys.Right))
                     {
-                        characters[0].x += 0.0007;
+                        characters[0].rectangulo.x += 0.0007;
                     }
                     if (keyboard.IsKeyDown(Keys.Left))
                     {
-                        characters[0].x -= 0.0007;
+                        characters[0].rectangulo.x -= 0.0007;
                     }
                     if (keyboard.IsKeyDown(Keys.Up))
                     {
-                        characters[0].y += 0.0007;
+                        characters[0].rectangulo.y += 0.0007;
                     }
                     if (keyboard.IsKeyDown(Keys.Down))
                     {
-                        characters[0].y -= 0.0007;
+                        characters[0].rectangulo.y -= 0.0007;
                     }
                 }
         }
@@ -69,17 +69,17 @@ namespace ProyectoPintar
          
             for (int i = 0; i < characters.Count; i++) 
             {
-                Character c = characters[i];
+                Rectangulo r = characters[i].rectangulo;
 
-                if (c.rectangle!= null) 
+                if (r != null) 
                 {
                     //if (c.x < 0.0) c.x = 0.0;
                     //if (c.x > world.Width) c.x = world.Width;
                     //if (c.y < 0.0) c.y = 0.0;
                     //if (c.y > world.Height) c.y = world.Height;
                 }
-                c.x = c.x + Utils.GetRandom(-0.005, 0.005);
-                c.y = c.y + Utils.GetRandom(-0.005, 0.005);
+                r.x = r.x + Utils.GetRandom(-0.005, 0.005);
+                r.y = r.y + Utils.GetRandom(-0.005, 0.005);
             }
         }
     }

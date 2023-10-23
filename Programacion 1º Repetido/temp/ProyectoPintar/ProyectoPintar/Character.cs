@@ -17,10 +17,10 @@ namespace ProyectoPintar
 
     public class Character
     {
-        public Rectangle rectangle;
+        public Rectangulo rectangulo = new Rectangulo();
+
         public double red, green, blue, alpha;
-        internal double x;
-        internal double y;
+        
 
         //public CharacterType type;
 
@@ -38,27 +38,7 @@ namespace ProyectoPintar
         {
 
         }
-
-        public void SetCharacterPos(double x, double y)
-        {
-
-        }
-
-        public void SetCharacterPosX(double x)
-        {
-
-        }
-
-        public void SetCharacterPosY(double y)
-        {
-
-        }
-
-        public void SetCharacterSize(double x, double y)
-        {
-
-        }
-
+       
         public void SetCharacterColor(double b, double g, double r, double a)
         {
 
@@ -69,24 +49,68 @@ namespace ProyectoPintar
 
         }
 
-        public double GetRectanglePositionX(double positionX)
-        {
-            return positionX;
-        }
-
-        public double GetRectanglePositionY(double positionY)
-        {
-            return positionY;
-        }
-
+        
         public double GetRectangleWidth(double width)
         {
-            return width;
+            return rectangulo.width;
         }
         public double GetRectangleHeight(double height)
         {
-            return height;
+            return rectangulo.height;
         }
+
+    }
+    public class Rectangulo
+    {
+        public double x;
+        public double y;
+        public double width;
+        public double height;
+
+        //public void Draw(ICanvas canvas)
+        //{
+
+        //}
+
+        //public void SetPositionX(double positionX)
+        //{
+
+        //}
+
+        //public void SetPositionY(double positionY)
+        //{
+
+        //}
+
+        //public void SetWidth(double width)
+        //{
+
+        //}
+
+        //public void SetHeight(double height)
+        //{
+
+        //}
+
+        //public double GetPositionX(double positionX)
+        //{
+        //    return positionX;
+        //}
+
+        //public double GetPositionY(double positionY)
+        //{
+        //    return positionY;
+        //}
+
+        //public double GetWidth(double widtth)
+        //{
+        //    return widtth;
+        //}
+
+        //public double GetHeight(double height)
+        //{
+        //    return height;
+        //}
 
     }
 }

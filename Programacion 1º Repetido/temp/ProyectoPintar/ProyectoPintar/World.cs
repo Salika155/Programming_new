@@ -76,14 +76,15 @@ namespace ProyectoPintar
         {
             for (int i = 0; i < character.Count; i++)
             {
-                Rectangulo r = character[i].rectangulo;
-                canvas.FillShader.SetColor(r.red, r.green, r.blue, r.alpha);
-                canvas.DrawRectangle(r.x, r.y, 1.5, 1.5);
+                Character c = character[i];
+                canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
+                canvas.DrawRectangle(c.rectangulo.x, c.rectangulo.y, 1.5, 1.5);
             }
         }
 
        public void DrawWorld(ICanvas canvas)
         {
+            
             canvas.Clear(1.0, 1.0, 1.0, 1.0);
             canvas.Camera.SetRectangle(0.0, 0.0, width, height);
             canvas.FillShader.SetColor(0.5, 0.5, 1.0, 1.0);

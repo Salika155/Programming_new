@@ -17,10 +17,12 @@ namespace ProyectoPintar
         {
             world.DrawWorld(canvas);
             world.DrawCharacters(canvas);
+
         }
 
         public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
         {
+
             if (characters == null)
                 return;
 
@@ -80,7 +82,10 @@ namespace ProyectoPintar
                 }
                 r.x = r.x + Utils.GetRandom(-0.005, 0.005);
                 r.y = r.y + Utils.GetRandom(-0.005, 0.005);
+
+                
             }
+
         }
     }
 }

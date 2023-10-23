@@ -77,11 +77,8 @@ namespace ProyectoPintar
             {
                 Rectangulo r = characters[i].rectangulo;
 
-<<<<<<< Updated upstream
+
                 if (r != null) 
-=======
-                if (c.rectangle!= null)
->>>>>>> Stashed changes
                 {
                     //    if (c.x < 0.0) c.x = 0.0;
                     //    if (c.x > world.width) c.x = world.width;

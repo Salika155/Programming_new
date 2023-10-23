@@ -12,13 +12,8 @@ namespace ProyectoPintar
     public class World
     {
         private double width = 30.0;
-<<<<<<< Updated upstream
         private double height = 20.0;
         private Rectangulo worldBorders;
-       
-=======
-        private double height = 10.0;
->>>>>>> Stashed changes
 
         private List<Character> character = new List<Character>();
         
@@ -63,12 +58,10 @@ namespace ProyectoPintar
 
         public void CreateWorld(double width, double height)
         {
-<<<<<<< Updated upstream
+
             this.width = width;  
             this.height = height;
-=======
-            return; 
->>>>>>> Stashed changes
+            
         }
 
         public int GetCharacterCount()

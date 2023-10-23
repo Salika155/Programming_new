@@ -23,14 +23,15 @@ namespace ProyectoPintar
         public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
         {
 
-            if (characters == null)
+            if (characters.Count == null)
                 return;
+
 
                 if (characters.Count > 0)
                 {
                     if (keyboard.IsKeyDown(Keys.Right))
                     {
-                        characters[0].rectangulo.x += 0.0007;
+                    characters[0].rectangulo.x += 0.0007;
                     }
                     if (keyboard.IsKeyDown(Keys.Left))
                     {
@@ -44,6 +45,7 @@ namespace ProyectoPintar
                     {
                         characters[0].rectangulo.y -= 0.0007;
                     }
+                    
                 }
         }
 

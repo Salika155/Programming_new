@@ -8,7 +8,6 @@ using UDK;
 
 namespace ProyectoPintar
 {
-
     //public enum CharacterType
     //{
     //    POLI,
@@ -20,19 +19,7 @@ namespace ProyectoPintar
         public double x;
         public double y;
         public double red, green, blue, alpha;
-        public Rectangle? rectangle;
+        public Rectangle rectangle;
         //public CharacterType type;
-
-        public class Rectangle
-        {
-            public double x;
-            public double y;
-            public double width;
-            public double height;
-
-        }
-
-        
     }
-
 }

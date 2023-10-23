@@ -15,7 +15,6 @@ namespace ProyectoPintar
             //creo una clase llamada mundo para meter a los personajes
             //mundo va a tener una lista de objetos -> tendra funcion crearpersonajes y draw personajes
             //crear clases fuera clase character, world, y mijuego
-           
         }
     }
 }

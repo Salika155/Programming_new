@@ -82,25 +82,23 @@ namespace Tom_Jerry
         }
 
         public void OnLoad(IAssetManager manager, IWindow iwindow)
-
-
-            
+    
     //cargar imagen
-    {
-            //Window.ToggleFullScreen();
-            cat = new Character();
-            {
-                this.cat.image = manager.LoadImage("resources/catt.png");
-                cat.x = 0.0f;
-                cat.y = 0.0f;
-                cat.width = 0.3f;
-                cat.height = 0.3f;
-                cat.r = 0.3f;
-                cat.g = 0.3f;
-                cat.b = 0.3f;
-                cat.a = 1.0f;
+        {
+                //Window.ToggleFullScreen();
+                cat = new Character();
+                {
+                    this.cat.image = manager.LoadImage("resources/catt.png");
+                    cat.x = 0.0f;
+                    cat.y = 0.0f;
+                    cat.width = 0.3f;
+                    cat.height = 0.3f;
+                    cat.r = 0.3f;
+                    cat.g = 0.3f;
+                    cat.b = 0.3f;
+                    cat.a = 1.0f;
                 
-            }    
+                }    
 
             
             mouse = new Character();

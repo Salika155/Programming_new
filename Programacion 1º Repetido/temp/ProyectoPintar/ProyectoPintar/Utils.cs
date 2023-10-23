@@ -22,5 +22,7 @@ namespace ProyectoPintar
             //double v = r * (max - min);
             //return v + min;
         }
+
+        
     }
 }

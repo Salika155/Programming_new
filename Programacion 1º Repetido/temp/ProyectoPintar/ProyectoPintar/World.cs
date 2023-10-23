@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using UDK;
@@ -10,8 +11,8 @@ namespace ProyectoPintar
 {
     public class World
     {
-        private double width;
-        private double height;
+        private double width = 30.0;
+        private double height = 10.0;
 
         private List<Character> character = new List<Character>();
         private Rectangle worldBorders;
@@ -44,6 +45,8 @@ namespace ProyectoPintar
                 }
 
                 pj.alpha = 1.0;
+                pj.x = Utils.GetRandom(0, width);  
+                pj.y = Utils.GetRandom(0, height);
                 character.Add(pj);
             }
             
@@ -62,28 +65,29 @@ namespace ProyectoPintar
             return character[index];
         }
 
-
         public void DrawCharacters(ICanvas canvas)
         {
-            //mejor un for
             for (int i = 0; i < character.Count; i++)
             {
                 Character c = character[i];
                 canvas.FillShader.SetColor(c.red, c.green, c.blue, c.alpha);
                 canvas.DrawRectangle(c.x, c.y, 1.5, 1.5);
-   
             }
         }
 
-       public void DrawWorld(ICanvas canvas, World world)
+       public void DrawWorld(ICanvas canvas)
         {
+            canvas.Clear(1.0, 1.0, 1.0, 1.0);
+            canvas.Camera.SetRectangle(0.0, 0.0, width, height);
+            DrawCharacters(canvas);
 
         }
 
-        public void SetWorldBounds(double x, double y, double width, double height)
-        {
-            worldBorders = new Rectangle(x, y, width, height);
-        }
+        //public void SetWorldBounds(double x, double y, double width, double height)
+        //{
+        //    worldBorders = new Rectangle();
+        //}
+
 
     }
 }

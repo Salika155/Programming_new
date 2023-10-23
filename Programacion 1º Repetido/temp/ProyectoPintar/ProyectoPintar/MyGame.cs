@@ -77,12 +77,16 @@ namespace ProyectoPintar
             {
                 Rectangulo r = characters[i].rectangulo;
 
+<<<<<<< Updated upstream
                 if (r != null) 
+=======
+                if (c.rectangle!= null)
+>>>>>>> Stashed changes
                 {
-                    //if (c.x < 0.0) c.x = 0.0;
-                    //if (c.x > world.Width) c.x = world.Width;
-                    //if (c.y < 0.0) c.y = 0.0;
-                    //if (c.y > world.Height) c.y = world.Height;
+                    //    if (c.x < 0.0) c.x = 0.0;
+                    //    if (c.x > world.width) c.x = world.width;
+                    //    if (c.y < 0.0) c.y = 0.0;
+                    //    if (c.y > world.height) c.y = world.height;
                 }
                 r.x = r.x + Utils.GetRandom(-0.005, 0.005);
                 r.y = r.y + Utils.GetRandom(-0.005, 0.005);

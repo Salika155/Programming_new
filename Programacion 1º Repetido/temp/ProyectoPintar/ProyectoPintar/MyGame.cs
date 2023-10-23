@@ -16,6 +16,10 @@ namespace ProyectoPintar
         public void OnDraw(GameDelegateEvent gameEvent, ICanvas canvas)
         {
             world.DrawWorld(canvas);
+            for (int i = 0; i < characters.Count; i++) 
+            {
+                characters[i].Draw(canvas);
+            }
             world.DrawCharacters(canvas);
 
         }
@@ -23,37 +27,35 @@ namespace ProyectoPintar
         public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
         {
 
-            if (characters.Count == null)
+            if (characters == null)
                 return;
 
-
-                if (characters.Count > 0)
-                {
+            for (int i = 0; i < characters.Count; i++)
+            {
                     if (keyboard.IsKeyDown(Keys.Right))
                     {
-                    characters[0].rectangulo.x += 0.0007;
+                        characters[0].MoveCharacterX(0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Left))
                     {
-                        characters[0].rectangulo.x -= 0.0007;
+                        characters[0].MoveCharacterX(-0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Up))
                     {
-                        characters[0].rectangulo.y += 0.0007;
+                        characters[0].MoveCharacterY(0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Down))
                     {
-                        characters[0].rectangulo.y -= 0.0007;
+                        characters[0].MoveCharacterY(-0.0007);
                     }
-                    
-                }
+            }
         }
 
         public void OnLoad(GameDelegateEvent gameEvent)
         {
             world = new World();
             
-            world.CreateCharacters(2);
+            world.CreateCharacters(6);
 
             //Character pj2 = new Character();
             //pj2.red = 0.0;

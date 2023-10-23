@@ -12,11 +12,12 @@ namespace ProyectoPintar
     public class World
     {
         private double width = 30.0;
-        private double height = 10.0;
-        
+        private double height = 20.0;
+        private Rectangulo worldBorders;
+       
 
         private List<Character> character = new List<Character>();
-        private Rectangle worldBorders;
+        
         Random random= new Random();
 
         public void CreateCharacters(int characterCount)
@@ -32,13 +33,13 @@ namespace ProyectoPintar
                     pj.blue = 0.0;
                     pj.green = 0.0;
                 }
-                else if (randomValue <= 0.6)
+                else if (randomValue <= 0.6 && randomValue > 0.3)
                 {
                     pj.blue = 1.0;
                     pj.green = 0.0;
                     pj.red = 0.0;
                 }
-                else 
+                else if (randomValue <= 1 && randomValue > 0.6)
                 {
                     pj.green= 1.0;
                     pj.red = 0.0;
@@ -46,9 +47,10 @@ namespace ProyectoPintar
                 }
 
                 pj.alpha = 1.0;
-                Rectangulo rectangle = new Rectangulo();
-                rectangle.x = Utils.GetRandom(0, width);  
-                rectangle.y = Utils.GetRandom(0, height);
+                Rectangulo rectangulo = new Rectangulo();
+                rectangulo.x = Utils.GetRandom(0, width);  
+                rectangulo.y = Utils.GetRandom(0, height);
+                pj.rectangulo= rectangulo;
                 character.Add(pj);
             }
             
@@ -56,7 +58,8 @@ namespace ProyectoPintar
 
         public void CreateWorld(double width, double height)
         {
-            //return width; 
+            this.width = width;  
+            this.height = height;
         }
 
         public int GetCharacterCount()
@@ -84,7 +87,6 @@ namespace ProyectoPintar
 
        public void DrawWorld(ICanvas canvas)
         {
-            
             canvas.Clear(1.0, 1.0, 1.0, 1.0);
             canvas.Camera.SetRectangle(0.0, 0.0, width, height);
             canvas.FillShader.SetColor(0.5, 0.5, 1.0, 1.0);
@@ -92,19 +94,24 @@ namespace ProyectoPintar
 
         }
 
-        //public void SetWorldBounds(double x, double y, double width, double height)
-        //{
-        //    worldBorders = new Rectangle();
-        //}
-
-        public double GetWorldSizeX(double WorldSizeX)
+        public void SetWorldBounds(double x, double y, double width, double height)
         {
-            return WorldSizeX;
+            worldBorders = new Rectangulo();
+            worldBorders.x = x;
+            worldBorders.y = y;
+            worldBorders.width = width;
+            worldBorders.height = height;
         }
 
-        public double GetWorldSizeY(double WorldSizeY) 
+
+        public double GetWorldSizeX()
         {
-            return WorldSizeY;
+            return width;
+        }
+
+        public double GetWorldSizeY() 
+        {
+            return height;
         }
 
         public double GetCharacterPosX(double CharacterPosX)

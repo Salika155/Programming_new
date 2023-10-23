@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R5Ma0o23+BSLFRmsw2/+LI++F9tf5n/LfHES1ng2iGbeNQAHRGzWi6UO6Vb7ddU8N2Aaj0eS0959PK7JMjKMwg==",
+  "dgSpecHash": "6vYr2hfLymBkj+3OKG/7+DqX544Wt7w8uY9R8hvxuqqSiLXz1ebpvHYWq1oXAc/vptabbex1BZCH+N1j41WwzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\temp\\ProyectoPintar\\ProyectoPintar\\ProyectoPintar.csproj",
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\temp\\ProyectoPintarPrevio\\ProyectoPintar\\ProyectoPintar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carre\\.nuget\\packages\\freetypesharp\\1.1.3\\freetypesharp.1.1.3.nupkg.sha512",
     "C:\\Users\\carre\\.nuget\\packages\\nvorbis\\0.10.5\\nvorbis.0.10.5.nupkg.sha512",

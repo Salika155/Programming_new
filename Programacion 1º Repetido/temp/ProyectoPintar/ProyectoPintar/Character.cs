@@ -18,38 +18,44 @@ namespace ProyectoPintar
     public class Character
     {
         public Rectangulo rectangulo = new Rectangulo();
-
         public double red, green, blue, alpha;
+
         
 
         //public CharacterType type;
 
         public void Draw(ICanvas canvas)
         {
-
+            canvas.FillShader.SetColor(red, green, blue, alpha);
+            canvas.DrawRectangle(rectangulo.x, rectangulo.y, rectangulo.width, rectangulo.height);
         }
 
-        public void MoveCharacterX(double x1, double x2)
+        public void MoveCharacterX(double x)
         {
-
+            this.rectangulo.x += x;
         }
 
-        public void MoveCharacterY(double y1, double y2)
+        public void MoveCharacterY(double y)
         {
-
+            rectangulo.y += y;
         }
-       
-        public void SetCharacterColor(double b, double g, double r, double a)
+
+        public void SetCharacterPosition(double x, double y)
         {
-
+            rectangulo.x += x;
+            rectangulo.y += y;
         }
 
-        public void SetCharacter(double x, double y, double b, double g, double r, double a)
+        public void SetCharacterPositionX(double x)
         {
-
+            rectangulo.x += x;
         }
 
-        
+        public void SetCharacterPositionY(double y) 
+        {
+            rectangulo.y += y;
+        }
+
         public double GetRectangleWidth(double width)
         {
             return rectangulo.width;
@@ -60,57 +66,5 @@ namespace ProyectoPintar
         }
 
     }
-    public class Rectangulo
-    {
-        public double x;
-        public double y;
-        public double width;
-        public double height;
-
-        //public void Draw(ICanvas canvas)
-        //{
-
-        //}
-
-        //public void SetPositionX(double positionX)
-        //{
-
-        //}
-
-        //public void SetPositionY(double positionY)
-        //{
-
-        //}
-
-        //public void SetWidth(double width)
-        //{
-
-        //}
-
-        //public void SetHeight(double height)
-        //{
-
-        //}
-
-        //public double GetPositionX(double positionX)
-        //{
-        //    return positionX;
-        //}
-
-        //public double GetPositionY(double positionY)
-        //{
-        //    return positionY;
-        //}
-
-        //public double GetWidth(double widtth)
-        //{
-        //    return widtth;
-        //}
-
-        //public double GetHeight(double height)
-        //{
-        //    return height;
-        //}
-
-    }
+   
 }

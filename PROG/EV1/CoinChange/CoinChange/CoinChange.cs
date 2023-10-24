@@ -74,13 +74,18 @@ namespace CoinChange
         }
 
         //+ToMoneda(centims:int):Moneda
-        public static int ToMoneda()
+        public static int ToMoneda(int centimos)
         {
+            if (centimos == 50000)
+                return CoinValor.C500;
+            else if 
+
 
         }
 
         //+GetCoins(centims:int):List<Moneda>
-        public CoinValor GetCoin()
+        public List<CoinValor> GetCoin()
+            //hacer la lista para ir añadiendo conforme divides el numero por los billetes o monedas que necesites, e ir añadiendolos a la lista
 
 
     }

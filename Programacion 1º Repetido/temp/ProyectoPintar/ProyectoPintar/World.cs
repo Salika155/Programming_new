@@ -11,8 +11,8 @@ namespace ProyectoPintar
 {
     public class World
     {
-        private double width = 30.0;
-        private double height = 20.0;
+        private double width = 40.0;
+        private double height = 25.0;
         private Rectangulo worldBorders;
 
         private List<Character> character = new List<Character>();
@@ -48,6 +48,7 @@ namespace ProyectoPintar
 
                 pj.alpha = 1.0;
                 Rectangulo rectangulo = new Rectangulo();
+                
                 rectangulo.x = Utils.GetRandom(0, width);  
                 rectangulo.y = Utils.GetRandom(0, height);
                 pj.rectangulo= rectangulo;
@@ -58,10 +59,8 @@ namespace ProyectoPintar
 
         public void CreateWorld(double width, double height)
         {
-
             this.width = width;  
             this.height = height;
-            
         }
 
         public int GetCharacterCount()
@@ -93,7 +92,6 @@ namespace ProyectoPintar
             canvas.Camera.SetRectangle(0.0, 0.0, width, height);
             canvas.FillShader.SetColor(0.5, 0.5, 1.0, 1.0);
             canvas.DrawRectangle(0.0, 0.0, width, height);
-
         }
 
         public void SetWorldBounds(double x, double y, double width, double height)
@@ -116,34 +114,6 @@ namespace ProyectoPintar
             return height;
         }
 
-        public double GetCharacterPosX(double CharacterPosX)
-        {
-            return CharacterPosX;
-        }
-
-        public double GetCharacterPosY(double CharacterPosY)
-        {
-            return CharacterPosY;
-        }
-
-        public double GetCharacterWidth(double CharacterWidth)
-        { 
-            return CharacterWidth; 
-        }
-
-        public double GetCharacterHeight(double CharacterHeight)
-        {
-            return CharacterHeight;
-        }
-
-        public void SetCharacterColor(double r, double g, double b, double a) 
-        { 
-
-        }
-
-        public bool CheckCollision(double W1, double W2, double H1, double H2)
-        {
-            return false;
-        }
+       
     }
 }

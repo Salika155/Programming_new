@@ -32,7 +32,7 @@ namespace ProyectoPintar
 
         public void MoveCharacterX(double x)
         {
-            this.rectangulo.x += x;
+            rectangulo.x += x;
         }
 
         public void MoveCharacterY(double y)
@@ -42,29 +42,40 @@ namespace ProyectoPintar
 
         public void SetCharacterPosition(double x, double y)
         {
-            rectangulo.x += x;
-            rectangulo.y += y;
+            rectangulo.x = x;
+            rectangulo.y = y;
         }
 
-        public void SetCharacterPositionX(double x)
-        {
-            rectangulo.x += x;
-        }
+        
 
-        public void SetCharacterPositionY(double y) 
-        {
-            rectangulo.y += y;
-        }
+        //public double GetRectangleWidth(double width)
+        //{
+        //    return rectangulo.width;
+        //}
+        //public double GetRectangleHeight(double height)
+        //{
+        //    return rectangulo.height;
+        //}
 
-        public double GetRectangleWidth(double width)
+        public double GetCharacterWidth()
         {
             return rectangulo.width;
         }
-        public double GetRectangleHeight(double height)
+
+        public double GetCharacterHeight()
         {
             return rectangulo.height;
         }
 
+        public double GetCharacterPositionX()
+        {
+            return rectangulo.x;
+        }
+
+        public double GetCharacterPositionY()
+        {
+            return rectangulo.y;
+        }
     }
    
 }

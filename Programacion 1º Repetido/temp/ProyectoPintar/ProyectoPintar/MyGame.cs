@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static UDK.IFont;
 
 
 namespace ProyectoPintar
@@ -77,7 +78,6 @@ namespace ProyectoPintar
             {
                 Rectangulo r = characters[i].rectangulo;
 
-
                 if (r != null) 
                 {
                     //    if (c.x < 0.0) c.x = 0.0;
@@ -87,10 +87,46 @@ namespace ProyectoPintar
                 }
                 r.x = r.x + Utils.GetRandom(-0.005, 0.005);
                 r.y = r.y + Utils.GetRandom(-0.005, 0.005);
-
                 
+
+            }
+
+            //experimento
+            for (int i = 0; i < characters.Count; i++)
+            {
+                Character character = characters[i];
+                // Actualizar la posición de los personajes aquí
+                double deltaX = Utils.GetRandom(-0.005, 0.005);
+                double deltaY = Utils.GetRandom(-0.005, 0.005);
+                character.MoveCharacterX(deltaX);
+                character.MoveCharacterY(deltaY);
             }
 
         }
+
+        //para experimentar
+        //public void OnAnimate(GameDelegateEvent gameEvent)
+        //{
+        //    for (int i = 0; i < characters.Count; i++)
+        //    {
+        //        Character character = characters[i];
+        //        // Actualiza la posición del personaje
+        //        double deltaX = Utils.GetRandom(-0.005, 0.005);
+        //        double deltaY = Utils.GetRandom(-0.005, 0.005);
+
+        //        // Verifica si la nueva posición estaría fuera de los límites del mundo
+        //        double newX = character.rectangulo.x + deltaX;
+        //        double newY = character.rectangulo.y + deltaY;
+
+        //        // Asegúrate de que el personaje no salga de los límites del mundo
+        //        newX = Math.Max(0.0, Math.Min(world.width, newX));
+        //        newY = Math.Max(0.0, Math.Min(world.height, newY));
+
+        //        // Establece la nueva posición del personaje
+        //        character.SetCharacterPosition(newX, newY);
+        //    }
+        //}
+
+
     }
 }

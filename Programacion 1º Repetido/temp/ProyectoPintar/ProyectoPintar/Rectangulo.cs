@@ -36,19 +36,24 @@ namespace ProyectoPintar
             return y + height;
         }
 
-        public bool IsIntersecting(Rectangulo other)
+        public bool IsCollision(Rectangulo other)
         {
             if (other == null)
                 return false;
-            if (x < other.x)
-                return false;
-            if (y < other.y)
-                return false;
-            if (width < other.width)
-                return false;
-            if (height < other.height)
-                return false;
-            return true;
+
+            double left1 = x;
+            double right1 = x + width;
+            double top1 = y;
+            double bottom1 = y + height;
+
+            double left2 = other.x;
+            double right2 = other.x + other.width;
+            double top2 = other.y;
+            double bottom2 = other.y + other.height;
+
+            return left1 < right2 && right1 > left2 && top1 < bottom2 && bottom1 > top2;
+
+            
         }
 
         

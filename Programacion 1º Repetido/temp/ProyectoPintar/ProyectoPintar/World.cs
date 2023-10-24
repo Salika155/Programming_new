@@ -13,33 +13,43 @@ namespace ProyectoPintar
     {
         private double width = 40.0;
         private double height = 25.0;
-        private Rectangulo worldBorders;
+        private Rectangulo? worldMap;
+        
 
         private List<Character> character = new List<Character>();
         
         Random random= new Random();
-        
+
+        public void CreateWorld(double width, double height)
+        {
+            worldMap = new Rectangulo();
+            worldMap.SetPositionX(0);
+            worldMap.SetPositionY(0);
+            worldMap.SetWorldWidth(width);
+            worldMap.SetWorldHeight(height);
+        }
+
 
         public void CreateCharacters(int characterCount)
         {
             for (int i = 0; i < characterCount; i++)
             {
-                Character pj = new Character();
+                Character pj = new  Character();
                 double randomValue = Utils.GetRandom();
 
-                if (randomValue <= 0.3)
+                if (randomValue <= 0.33)
                 {
                     pj.red= 1.0;
                     pj.blue = 0.0;
                     pj.green = 0.0;
                 }
-                else if (randomValue <= 0.6 && randomValue > 0.3)
+                else if (randomValue <= 0.66 && randomValue > 0.33)
                 {
                     pj.blue = 1.0;
                     pj.green = 0.0;
                     pj.red = 0.0;
                 }
-                else if (randomValue <= 1 && randomValue > 0.6)
+                else if (randomValue <= 1 && randomValue > 0.66)
                 {
                     pj.green= 1.0;
                     pj.red = 0.0;
@@ -55,12 +65,6 @@ namespace ProyectoPintar
                 character.Add(pj);
             }
             
-        }
-
-        public void CreateWorld(double width, double height)
-        {
-            this.width = width;  
-            this.height = height;
         }
 
         public int GetCharacterCount()
@@ -96,11 +100,11 @@ namespace ProyectoPintar
 
         public void SetWorldBounds(double x, double y, double width, double height)
         {
-            worldBorders = new Rectangulo();
-            worldBorders.x = x;
-            worldBorders.y = y;
-            worldBorders.width = width;
-            worldBorders.height = height;
+            worldMap = new Rectangulo();
+            worldMap.x = x;
+            worldMap.y = y;
+            worldMap.width = width;
+            worldMap.height = height;
         }
 
 
@@ -112,6 +116,16 @@ namespace ProyectoPintar
         public double GetWorldSizeY() 
         {
             return height;
+        }
+
+        public void SetWorldWidth(double width)
+        {
+            this.width = width;
+        }
+
+        public void SetWorldHeight(double height)
+        {
+            this.height = height;
         }
 
        

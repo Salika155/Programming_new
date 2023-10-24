@@ -36,6 +36,19 @@ namespace ProyectoPintar
             return y + height;
         }
 
+        public void SetPositionX(double x)
+        {
+            this.x = x;
+        }
+
+        public void SetPositionY(double y)
+        {
+            this.y = y;
+        }
+
+
+        
+
         public bool IsCollision(Rectangulo other)
         {
             if (other == null)
@@ -56,7 +69,15 @@ namespace ProyectoPintar
             
         }
 
-        
+        internal void SetWorldWidth(double width)
+        {
+            this.width = width;
+        }
+
+        internal void SetWorldHeight(double height)
+        {
+            this.height = height;
+        }
     }
     
         //examen lunes funciones, listas, array, objetos

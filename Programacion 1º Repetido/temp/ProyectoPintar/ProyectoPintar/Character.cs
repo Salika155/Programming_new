@@ -19,10 +19,12 @@ namespace ProyectoPintar
     {
         public Rectangulo rectangulo = new Rectangulo();
         public double red, green, blue, alpha;
-
         
-
         //public CharacterType type;
+
+        public Character()
+        {
+        }
 
         public void Draw(ICanvas canvas)
         {
@@ -32,12 +34,20 @@ namespace ProyectoPintar
 
         public void MoveCharacterX(double x)
         {
-            rectangulo.x += x;
+            double nwBorderX = rectangulo.x + x;
+            if (IsInsideWorldBorder(nwBorderX, rectangulo.y)) 
+            {
+                rectangulo.x = nwBorderX;
+            }
         }
 
         public void MoveCharacterY(double y)
         {
-            rectangulo.y += y;
+           double nwBorderY = rectangulo.y + y;
+            if(IsInsideWorldBorder(nwBorderY, rectangulo.x))
+            {
+                rectangulo.y = nwBorderY;
+            }
         }
 
         public void SetCharacterPosition(double x, double y)
@@ -45,17 +55,6 @@ namespace ProyectoPintar
             rectangulo.x = x;
             rectangulo.y = y;
         }
-
-        
-
-        //public double GetRectangleWidth(double width)
-        //{
-        //    return rectangulo.width;
-        //}
-        //public double GetRectangleHeight(double height)
-        //{
-        //    return rectangulo.height;
-        //}
 
         public double GetCharacterWidth()
         {
@@ -75,6 +74,21 @@ namespace ProyectoPintar
         public double GetCharacterPositionY()
         {
             return rectangulo.y;
+        }
+
+        public void SetCharacterWidth(double width)
+        {
+            rectangulo.width = width;
+        }
+
+        public void SetCharacterHeight(double height)
+        {
+            rectangulo.height = height;
+        }
+
+        private bool IsInsideWorldBorder(double x, double y)
+        {
+            return true;
         }
     }
    

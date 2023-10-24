@@ -27,27 +27,28 @@ namespace ProyectoPintar
 
         public void OnKeyboard(GameDelegateEvent gameEvent, IKeyboard keyboard, IMouse mouse)
         {
-
-            if (characters == null)
+            if (characters == null || characters.Count == 0)
                 return;
+
+            Character c = characters[0];
 
             for (int i = 0; i < characters.Count; i++)
             {
                     if (keyboard.IsKeyDown(Keys.Right))
                     {
-                        characters[0].MoveCharacterX(0.0007);
+                        c.MoveCharacterX(0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Left))
                     {
-                        characters[0].MoveCharacterX(-0.0007);
+                        c.MoveCharacterX(-0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Up))
                     {
-                        characters[0].MoveCharacterY(0.0007);
+                        c.MoveCharacterY(0.0007);
                     }
                     if (keyboard.IsKeyDown(Keys.Down))
                     {
-                        characters[0].MoveCharacterY(-0.0007);
+                        c.MoveCharacterY(-0.0007);
                     }
             }
         }
@@ -56,7 +57,7 @@ namespace ProyectoPintar
         {
             world = new World();
             
-            world.CreateCharacters(6);
+            world.CreateCharacters(10);
 
             //Character pj2 = new Character();
             //pj2.red = 0.0;
@@ -73,60 +74,20 @@ namespace ProyectoPintar
 
         public void OnAnimate(GameDelegateEvent gameEvent)
         {
-         
             for (int i = 0; i < characters.Count; i++) 
             {
                 Rectangulo r = characters[i].rectangulo;
 
                 if (r != null) 
                 {
-                    //    if (c.x < 0.0) c.x = 0.0;
-                    //    if (c.x > world.width) c.x = world.width;
-                    //    if (c.y < 0.0) c.y = 0.0;
-                    //    if (c.y > world.height) c.y = world.height;
+                    if (r.x < 0.0) r.x = 0.0;
+                    if (r.x > world.GetWorldSizeX()) r.x = world.GetWorldSizeX();
+                    if (r.y < 0.0) r.y = 0.0;
+                    if (r.y > world.GetWorldSizeY()) r.y = world.GetWorldSizeY();
                 }
-                r.x = r.x + Utils.GetRandom(-0.005, 0.005);
-                r.y = r.y + Utils.GetRandom(-0.005, 0.005);
-                
-
+                characters[i].MoveCharacterX(Utils.GetRandom(-0.005, 0.005));
+                characters[i].MoveCharacterY(Utils.GetRandom(-0.005, 0.005));
             }
-
-            //experimento
-            for (int i = 0; i < characters.Count; i++)
-            {
-                Character character = characters[i];
-                // Actualizar la posición de los personajes aquí
-                double deltaX = Utils.GetRandom(-0.005, 0.005);
-                double deltaY = Utils.GetRandom(-0.005, 0.005);
-                character.MoveCharacterX(deltaX);
-                character.MoveCharacterY(deltaY);
-            }
-
         }
-
-        //para experimentar
-        //public void OnAnimate(GameDelegateEvent gameEvent)
-        //{
-        //    for (int i = 0; i < characters.Count; i++)
-        //    {
-        //        Character character = characters[i];
-        //        // Actualiza la posición del personaje
-        //        double deltaX = Utils.GetRandom(-0.005, 0.005);
-        //        double deltaY = Utils.GetRandom(-0.005, 0.005);
-
-        //        // Verifica si la nueva posición estaría fuera de los límites del mundo
-        //        double newX = character.rectangulo.x + deltaX;
-        //        double newY = character.rectangulo.y + deltaY;
-
-        //        // Asegúrate de que el personaje no salga de los límites del mundo
-        //        newX = Math.Max(0.0, Math.Min(world.width, newX));
-        //        newY = Math.Max(0.0, Math.Min(world.height, newY));
-
-        //        // Establece la nueva posición del personaje
-        //        character.SetCharacterPosition(newX, newY);
-        //    }
-        //}
-
-
     }
 }

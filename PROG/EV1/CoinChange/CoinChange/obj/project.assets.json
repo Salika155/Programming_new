@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV2\\CoffeeMaker\\CoffeeMaker\\CoffeeMaker.csproj",
-      "projectName": "CoffeeMaker",
-      "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV2\\CoffeeMaker\\CoffeeMaker\\CoffeeMaker.csproj",
+      "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\CoinChange\\CoinChange\\CoinChange.csproj",
+      "projectName": "CoinChange",
+      "projectPath": "C:\\Users\\carcarcor\\source\\repos\\CoinChange\\CoinChange\\CoinChange.csproj",
       "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV2\\CoffeeMaker\\CoffeeMaker\\obj\\",
+      "outputPath": "C:\\Users\\carcarcor\\source\\repos\\CoinChange\\CoinChange\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

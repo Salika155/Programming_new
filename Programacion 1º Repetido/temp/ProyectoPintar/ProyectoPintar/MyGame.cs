@@ -89,5 +89,7 @@ namespace ProyectoPintar
                 characters[i].MoveCharacterY(Utils.GetRandom(-0.005, 0.005));
             }
         }
+
+ 
     }
 }

@@ -78,7 +78,9 @@ namespace CoinChange
         {
             if (centimos == 50000)
                 return CoinValor.C500;
-            else if 
+            else if (centimos == 20000)
+                return CoinValor.C200;
+
 
 
         }

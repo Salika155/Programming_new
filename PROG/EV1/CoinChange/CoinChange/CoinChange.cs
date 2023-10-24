@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -69,25 +70,70 @@ namespace CoinChange
                 return 1;
             return 0;
 
-
-
         }
 
         //+ToMoneda(centims:int):Moneda
-        public static int ToMoneda(int centimos)
+        //+ToMoneda(centims: int): CoinValor
+        public static CoinValor ToMoneda(int centimos)
         {
             if (centimos == 50000)
                 return CoinValor.C500;
             else if (centimos == 20000)
                 return CoinValor.C200;
-
-
-
+            else if (centimos == 10000)
+                return CoinValor.C100;
+            else if (centimos == 5000)
+                return CoinValor.C50;
+            else if (centimos == 2000)
+                return CoinValor.C20;
+            else if (centimos == 1000)
+                return CoinValor.C10;
+            else if (centimos == 500)
+                return CoinValor.C5;
+            else if (centimos == 200)
+                return CoinValor.C2;
+            else if (centimos == 100)
+                return CoinValor.C1;
+            else if (centimos == 50)
+                return CoinValor.C05;
+            else if (centimos == 20)
+                return CoinValor.C02;
+            else if (centimos == 10)
+                return CoinValor.C01;
+            else if (centimos == 5)
+                return CoinValor.C005;
+            else if (centimos == 2)
+                return CoinValor.C002;
+            else if (centimos == 1)
+                return CoinValor.C001;
+            else
+                return 0; // Retorna la denominación más pequeña por defecto si no hay coincidencia.
         }
 
+
         //+GetCoins(centims:int):List<Moneda>
-        public List<CoinValor> GetCoin()
-            //hacer la lista para ir añadiendo conforme divides el numero por los billetes o monedas que necesites, e ir añadiendolos a la lista
+        //hacer la lista para ir añadiendo conforme divides el numero por los billetes o monedas que necesites, e ir añadiendolos a la lista
+
+        public List<CoinValor> GetCoin(int centims)
+        {
+            List<CoinValor> coins = new List<CoinValor>();
+
+            while (centims > 0)
+            {
+                CoinValor coin = ToMoneda(centims);
+                int coinValue = ToNumber(coin);
+
+                if (coinValue == 0)
+                {
+                    break;
+                }
+
+                coins.Add(coin);
+                centims -= coinValue;
+            }
+
+            return coins;
+        }
 
 
     }

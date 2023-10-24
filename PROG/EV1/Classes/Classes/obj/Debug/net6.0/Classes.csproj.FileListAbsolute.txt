@@ -1,0 +1,14 @@
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.exe
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.deps.json
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.runtimeconfig.json
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.dll
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.pdb
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfoInputs.cache
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfo.cs
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.csproj.CoreCompileInputs.cache
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.dll
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\refint\Classes.dll
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.pdb
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.genruntimeconfig.cache
+D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\ref\Classes.dll

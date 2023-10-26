@@ -12,3 +12,18 @@ D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0
 D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.pdb
 D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.genruntimeconfig.cache
 D:\repositorios\entornos-de-desarrollo\PROG\EV1\Classes\Classes\obj\Debug\net6.0\ref\Classes.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\refint\Classes.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\ref\Classes.dll

@@ -1,31 +1,37 @@
 ﻿namespace Classes
 {
-    public enum State
+    public enum CoffeeMachineState
     {
-        esperando,
-        procesando_moneda,
-        retirando_producto,
-        devolviendo_cambio
+        Esperando,
+        Procesando_Moneda,
+        Retirando_Producto,
+        Devolviendo_Cambio,
     }
 
-    public class CoffeeMachine
+    class CoffeeMachine
     {
+        private CoffeeMachineState _state;
 
-        private State _state = State.esperando;
+        public CoffeeMachine()
+        {
+            _state = CoffeeMachineState.Esperando;
+        }
 
-        public State GetState()
+        public CoffeeMachineState GetState()
         {
             return _state;
         }
+
         public void ChangeToNextState()
         {
-            if (_state < State.devolviendo_cambio) {
-                _state++;
-            } else if (_state == State.devolviendo_cambio)
-            {
-                _state = State.esperando;
-            }
-            
+            if (_state == CoffeeMachineState.Esperando)
+                _state = CoffeeMachineState.Procesando_Moneda;
+            else if (_state == CoffeeMachineState.Procesando_Moneda)
+                _state = CoffeeMachineState.Retirando_Producto;
+            else if (_state == CoffeeMachineState.Retirando_Producto)
+                _state = CoffeeMachineState.Devolviendo_Cambio;
+            else
+                _state = CoffeeMachineState.Esperando;
         }
     }
 }

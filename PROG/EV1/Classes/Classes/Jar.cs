@@ -8,88 +8,83 @@ namespace Classes
 {
     public class Jar
     {
-        private double capacity;
-        private double quantity;
+        private double _capacity;
+        private double _quantity;
 
-        /// <summary>
-        /// This class function set the quantity of the Jar. NOT ACCETP NEGATIVE NUMBERS
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns>Return the restant quantity over the capacity number</returns>
+        public Jar() 
+        {
+            _capacity = 1000;
+            _quantity = 0;
+
+        }
         public double SetQuantity(double value)
         {
             if (value < 0)
             {
                 return 0;
             }
-            if (value > capacity)
+            if (value > _capacity)
             {
-                quantity = capacity;
-                return value - capacity;
+                _quantity = _capacity;
+                return value - _capacity;
             }
             else
             {
-                quantity = value;
+                _quantity = value;
                 return 0;
             }
         }
         public double GetQuantity()
         {
-            return quantity;
+            return _quantity;
         }
-        /// <summary>
-        /// This class function set max capacity of the Jar. NOT ACCEPT NEGATIVE NUMBERS. In case the quanitity over the capacity set with this function is exced, the quantity pass to be the max capacity.
-        /// </summary>
-        /// <param name="value"></param>
+        
         public void SetCapacity(double value)
         {
             if ( value < 0) 
             {
                 return;
             }
-            if (value > quantity)
+            if (value > _quantity)
             {
-                quantity = value;
-                capacity = value;
-            } else
+                _quantity = value;
+                _capacity = value;
+            } 
+            else
             {
-                capacity = value;
+                _capacity = value;
             }
         }
+
         public double GetCapacity()
         {
-            return capacity;
+            return _capacity;
         }
-        /// <summary>
-        /// This function return the Percentage of capacity in the Jar. If any value is in cero return 0.
-        /// </summary>
-        /// <returns></returns>
+        
         public double GetPercent()
         {
-            if (capacity == 0 || quantity == 0)
+            if (_capacity == 0 || _quantity == 0)
                 return 0;
-            return quantity / capacity;
+            return _quantity / _capacity;
         }
+
         public double GetRemain()
         {
-            return capacity - quantity;
+            return _capacity - _quantity;
         }
-        /// <summary>
-        /// This function add quantity maintaning the quanitity of before. NOT ACCEPT NEGATIVE NUMBER. In case this Quantity the is over the capacity, the quantity pass to be the max capacity.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
+        
         public double AddQuantity(double value)
         {
             if (value < 0)
                 return 0;
-            if ( ( value + quantity ) > capacity)
+            if ( ( value + _quantity ) > _capacity)
             {
-                quantity = capacity;
-                return value - capacity;
-            } else
+                _quantity = _capacity;
+                return value - _capacity;
+            } 
+            else
             {
-                quantity += value;
+                _quantity += value;
                 return 0;
             }
         }

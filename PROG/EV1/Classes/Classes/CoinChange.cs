@@ -94,7 +94,7 @@ namespace Classes
         //+ToMoneda(centims: int): CoinValor
         public static CoinValor ToMoneda(int centimos)
         {
-        //return (CoinValor)centimos; -> solucion basica
+            //return (CoinValor)centimos; -> solucion basica
             if (centimos == 50000)
                 return CoinValor.C500;
             else if (centimos == 20000)
@@ -130,7 +130,7 @@ namespace Classes
 
             //CoinValor result;
             //if (_diccionario.TryGetValue(centims, out result) == false -> PARAMETROS DE SALIDA 
-                //return CoinValor.UNKNOWN;
+            //return CoinValor.UNKNOWN;
             //return result;
         }
 
@@ -149,6 +149,7 @@ namespace Classes
                     moneda = CoinValor.C500;
                 else if (centims >= ToNumber(CoinValor.C50))
                     moneda = CoinValor.C50;
+                //resto de numeros
 
                 result.Add(moneda);
                 centims -= ToNumber(moneda);
@@ -156,6 +157,8 @@ namespace Classes
 
             return result;
         }
+
+        
 
     }
 }

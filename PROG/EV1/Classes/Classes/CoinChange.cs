@@ -118,11 +118,11 @@ namespace Classes
 
                 if (coinValue == 0)
                 {
-                    break;
+                    return null;
                 }
 
                 coins.Add(coin);
-                centims -= coinValue;
+                
             }
 
             return coins;

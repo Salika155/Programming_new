@@ -1,4 +1,6 @@
-﻿namespace Classes
+﻿using System.Runtime.InteropServices;
+
+namespace Classes
 {
     internal class Program
     {
@@ -35,6 +37,17 @@
 
             CoinChange coinChange = new CoinChange();
 
+            CoinValor coin = CoinValor.C100;
+            int centims = CoinChange.ToNumber(coin);
+            Console.WriteLine(centims / 100 + " Euros");
+
+            int centimss = 200; 
+            CoinValor moneda = CoinChange.ToMoneda(centimss);
+            Console.WriteLine(moneda);
+
+            double cantidad = 134.45; 
+            List<CoinValor> monedas = CoinChange.GetCoin(cantidad);
+            Console.WriteLine(monedas);
 
 
 

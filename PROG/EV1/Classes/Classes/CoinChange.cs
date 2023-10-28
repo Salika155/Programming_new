@@ -4,6 +4,8 @@ namespace Classes
 {
     public enum CoinValor
     {
+        //C500 = 50000
+        UNKNOWN
         C500,
         C200,
         C100,
@@ -25,13 +27,33 @@ namespace Classes
     //[20, 10, 2, 2, 0.1, 0.5]
     public class CoinChange
     {
-
+        //private static int[] __monedaValue = { 10000, 10000, 1000 };
         private CoinValor coinValor;
 
+        //constructor estatico para acceder a la clase static de characterclass -> que esta predefinida en el programa, y no en la clase creada
+        //existen elementos dentro del objeto que estan dentro de este, y otros que no pertenecen a este sino a la clase $CharacterClass = new -> que esta predefinida.
+        //static CoinChange()
+        //{
+        //    _monedaValue = new int[] { 10000, 1000, 100 };
+        //}
+
+        //posibilidad de hacer estas dos funciones con diccionario
+        public static Dictionary<int, CoinValor> _diccionario = new Dictionary<int, CoinValor>();
+
+
+        //static CoinChange()
+        //{
+        //    _diccionario.Add(10000, Moneda.C100);
+        //    _diccionario.Add(1000, Moneda.C10);
+        //}
 
         //+ToNumber(coin:moneda):int
+
         public static int ToNumber(CoinValor coinValor) //son en centimos
         {
+            //return _monedaValue[(int)moneda];
+
+            //return(int)moneda; -> solucion 1
             if (coinValor == CoinValor.C500)
                 return 50000;
             if (coinValor == CoinValor.C200)
@@ -64,12 +86,15 @@ namespace Classes
                 return 1;
             return 0;
 
+
+
         }
 
         //+ToMoneda(centims:int):Moneda
         //+ToMoneda(centims: int): CoinValor
         public static CoinValor ToMoneda(int centimos)
         {
+            //return (CoinValor)centimos; -> solucion basica
             if (centimos == 50000)
                 return CoinValor.C500;
             else if (centimos == 20000)
@@ -102,31 +127,38 @@ namespace Classes
                 return CoinValor.C001;
             else
                 return 0; // Retorna la denominación más pequeña por defecto si no hay coincidencia.
+
+            //CoinValor result;
+            //if (_diccionario.TryGetValue(centims, out result) == false -> PARAMETROS DE SALIDA 
+            //return CoinValor.UNKNOWN;
+            //return result;
         }
 
         //+GetCoins(centims:int):List<Moneda>
         //hacer la lista para ir añadiendo conforme divides el numero por los billetes o monedas que necesites, e ir añadiendolos a la lista
 
-        public List<CoinValor> GetCoin(int centims)
+        public static List<CoinValor> GetCoin(int centims)
         {
-            List<CoinValor> coins = new List<CoinValor>();
+            List<CoinValor> result = new List<CoinValor>();
 
             while (centims > 0)
             {
-                CoinValor coin = ToMoneda(centims);
-                int coinValue = ToNumber(coin);
+                CoinValor moneda = CoinValor.UNKNOWN;
 
-                if (coinValue == 0)
-                {
-                    return null;
-                }
+                if (centims >= ToNumber(CoinValor.C500))
+                    moneda = CoinValor.C500;
+                else if (centims >= ToNumber(CoinValor.C50))
+                    moneda = CoinValor.C50;
+                //resto de numeros
 
-                coins.Add(coin);
-                
+                result.Add(moneda);
+                centims -= ToNumber(moneda);
             }
 
-            return coins;
+            return result;
         }
+
+        
 
     }
 }

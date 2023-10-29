@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\DominoPieces\\DominoPieces\\DominoPieces.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\DominoPieces\\DominoPieces\\DominoPieces.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\DominoPieces\\DominoPieces\\DominoPieces.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\DominoPieces\\DominoPieces\\DominoPieces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DominoPieces\\DominoPieces\\DominoPieces.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\DominoPieces\\DominoPieces\\DominoPieces.csproj",
         "projectName": "DominoPieces",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DominoPieces\\DominoPieces\\DominoPieces.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\DominoPieces\\DominoPieces\\DominoPieces.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DominoPieces\\DominoPieces\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\DominoPieces\\DominoPieces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

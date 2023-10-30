@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DominoPieces
 {
-    internal class DominoPiece
+    public class DominoPiece
     {
-        DominoPiece d = new DominoPiece();
+        
 
         private int _value1;
         private int _value2;
@@ -17,9 +17,16 @@ namespace DominoPieces
 
         static DominoPiece()
         {
-            _value1 = 0;
-            _value2 = 0;
+            _value1 = 1;
+            _value2 = 2;
         }
+
+        public DominoPiece(int v1, int v2)
+        {
+            _value1 = v1;
+            _value2 = v2;
+        }
+
 
         public int GetValue1()
         {
@@ -43,5 +50,14 @@ namespace DominoPieces
             return false;
         }
 
+        public void SetValue1(int v1)
+        {
+            _value1 = v1;
+        }
+
+        public void SetValue2(int v2)
+        {
+            _value2 = v2;
+        }
     }
 }

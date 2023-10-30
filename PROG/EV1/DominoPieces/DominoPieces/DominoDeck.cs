@@ -20,7 +20,7 @@ namespace DominoPieces
 
         //+ExtractPiece():DominoPiece
 
-        public DominoPiece ExtractPiece(int index)
+        public DominoPiece? ExtractPiece(int index)
         {
             if (index < 0 || index >= GetPieceCount())
                 return null;
@@ -98,6 +98,7 @@ namespace DominoPieces
         {
             return -1;
         }
+
 
 
 

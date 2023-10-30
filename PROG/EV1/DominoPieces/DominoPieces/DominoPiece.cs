@@ -21,11 +21,6 @@ namespace DominoPieces
             _value2 = 2;
         }
 
-        //private DominoPiece(int v1, int v2)
-        //{
-        //    _value1 = v1;
-        //    _value2 = v2;
-        //}
 
         private DominoPiece(int v1, int v2)
         {
@@ -77,6 +72,8 @@ namespace DominoPieces
 
             return new DominoPiece(v1, v2);
         }
+
+        
 
     }
 }

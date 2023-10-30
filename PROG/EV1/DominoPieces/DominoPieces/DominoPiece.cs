@@ -9,23 +9,31 @@ namespace DominoPieces
 {
     public class DominoPiece
     {
-        
+        DominoPiece f = new DominoPiece();
 
         private int _value1;
         private int _value2;
 
 
-        static DominoPiece()
+        public DominoPiece()
         {
             _value1 = 1;
             _value2 = 2;
         }
 
-        public DominoPiece(int v1, int v2)
+        //private DominoPiece(int v1, int v2)
+        //{
+        //    _value1 = v1;
+        //    _value2 = v2;
+        //}
+
+        private DominoPiece(int v1, int v2)
         {
             _value1 = v1;
             _value2 = v2;
         }
+
+        //si existe constructor privado, necesario un metodo public static createalgo
 
 
         public int GetValue1()
@@ -50,14 +58,13 @@ namespace DominoPieces
             return false;
         }
 
-        public void SetValue1(int v1)
+        public bool IsEqual(DominoPiece other)
         {
-            _value1 = v1;
+            return (_value1 == other._value1 && _value2 == other._value2) ||
+                ;
         }
 
-        public void SetValue2(int v2)
-        {
-            _value2 = v2;
-        }
+        //static DominoPiece? create piece
+
     }
 }

@@ -53,18 +53,30 @@ namespace DominoPieces
 
         public bool IsDouble()
         {
-            if (_value1 == _value2)
-                return true;
-            return false;
+            return _value1 == _value2;
         }
 
         public bool IsEqual(DominoPiece other)
         {
             return (_value1 == other._value1 && _value2 == other._value2) ||
-                ;
+                (_value2 == other._value2 && _value1 == other._value1);
         }
 
         //static DominoPiece? create piece
+        //public static DominoPiece CreatePiece()
+        //{
+        //    return new DominoPiece();
+        //}
+
+        public static DominoPiece? CreatePiece(int v1, int v2)
+        {
+            if (v1 < 0 || v1 > 6)
+                return null;
+            if (v2 < 0 || v2 > 6)
+                return null;
+
+            return new DominoPiece(v1, v2);
+        }
 
     }
 }

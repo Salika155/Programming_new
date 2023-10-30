@@ -17,8 +17,7 @@ namespace DominoPieces
 
         public static int GetRandom(int min, int max)
         {
-            int dif = min - max;
-            return min + (r% * dif);
+            return r.Next(min, max + 1);
         }
     }
 }

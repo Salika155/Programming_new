@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DominoPieces
 {
@@ -77,13 +73,15 @@ namespace DominoPieces
                         return true;
             }   
             return false;
+            //return indexof(piece) >= 0;
         }
 
-        public void Shuffle(List<DominoPiece> pieces)
+        public void Shuffle()//int shuffle para ver cuantas veces barajo
         {
             DominoDeck deck = new DominoDeck();
             Random random = new Random();
             int n = _piece.Count;
+            while (n < 10000)
 
             for (int i = n - 1; i > 0; i--)
             {
@@ -94,10 +92,13 @@ namespace DominoPieces
             }
         }
 
-        public int GetPieceIndex(DominoPiece piece)
-        {
-            return -1;
-        }
+        //public int GetPieceIndex(DominoPiece piece)
+        //{
+        //   for (int i = 0; i < GetPieceCount(); i++)
+
+        //}
+
+        
 
 
 

@@ -46,8 +46,14 @@ namespace Classes
             Console.WriteLine(moneda);
 
             double cantidad = 134.45; 
-            List<CoinValor> monedas = CoinChange.GetCoin(cantidad);
+            List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
             Console.WriteLine(monedas);
+            Console.WriteLine("---------------------------------------------------------");
+
+            Card card = new(54, Palo.TREBOLES);
+            Console.WriteLine(card.GetFigureType());
+            Console.WriteLine(card.IsFigure() + " " + card.IsValid());
+            Console.WriteLine("---------------------------------------------------------");
 
 
 

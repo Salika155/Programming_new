@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokerCards
+namespace Classes
 {
     public enum Palo
     {
         UNKNOWN,
         DIAMANTES,
         TREBOLES,
-        CORAZONES, 
+        CORAZONES,
         PICAS
     }
 
@@ -32,14 +32,14 @@ namespace PokerCards
         JOCKER,
         NONE
     }
-        
+
     public class Card
     {
         private int _number;
-        private Palo _palo ;
+        private Palo _palo;
         //private Color _color;
 
-       
+
         public Card(int number, Palo palo)
         {
             _number = number;
@@ -121,3 +121,4 @@ namespace PokerCards
         }
     }
 }
+

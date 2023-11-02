@@ -5,7 +5,7 @@ namespace Classes
     public enum CoinValor
     {
         //C500 = 50000
-        UNKNOWN
+        UNKNOWN,
         C500,
         C200,
         C100,

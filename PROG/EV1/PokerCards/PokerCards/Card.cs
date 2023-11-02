@@ -48,6 +48,7 @@ namespace PokerCards
 
         public int GetNumber()
         {
+            //return IsValid() ? _number : -1;
             return _number;
         }
 
@@ -70,6 +71,8 @@ namespace PokerCards
 
         public bool IsValid()
         {
+            //booleanos se pueden hacer return directamente en una linea
+            //return 0 <= _number && _number <= 13;
             if (_number >= 0 && _number < 14)
                 return true;
             if (_palo == Palo.UNKNOWN && _number == 0)
@@ -84,13 +87,13 @@ namespace PokerCards
             {
                 if (_number == 0)
                     return true;
-                else if (_number == 1)
+                if (_number == 1)
                     return true;
-                else if (_number == 11)
+                if (_number == 11)
                     return true;
-                else if (_number == 12)
+                if (_number == 12)
                     return true;
-                else if (_number == 13)
+                if (_number == 13)
                     return true;
             }
             return false;
@@ -102,17 +105,17 @@ namespace PokerCards
             {
                 if (_number == 0)
                     return Figuras.JOCKER;
-                else if (_number == 1)
+                if (_number == 1)
                     return Figuras.AS;
-                else if (_number > 2 && _number <= 10)
+                if (_number > 2 && _number <= 10)
                     return Figuras.NONE;
-                else if (_number == 11)
+                if (_number == 11)
                     return Figuras.JACK;
-                else if (_number == 12)
+                if (_number == 12)
                     return Figuras.QUEEN;
-                else if (_number == 13)
+                if (_number == 13)
                     return Figuras.KING;
-                else return Figuras.UNKNOWN;
+                return Figuras.UNKNOWN;
             }
             else return Figuras.UNKNOWN;
         }

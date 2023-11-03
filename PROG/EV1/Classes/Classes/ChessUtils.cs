@@ -15,6 +15,7 @@ namespace Classes
 
         public static bool CanKnightMoveTo(ChessFigure figure, int targetX, int targetY)
         {
+
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
 

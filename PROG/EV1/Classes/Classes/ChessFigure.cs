@@ -39,16 +39,17 @@ namespace Classes
             _movementCount = 0;
         }
 
-        //public bool IsValid()
-        //{
-        //    if (_FigureType == ChessFigureType.KING || _FigureType == ChessFigureType.QUEEN || 
-        //        _FigureType == ChessFigureType.KNIGHT || _FigureType == ChessFigureType.PAWN || 
-        //        _FigureType == ChessFigureType.TOWER || _FigureType == ChessFigureType.BISHOP) 
-        //    {
-        //        return true;
-        //    }
-        //    return false;
-        //}
+        public bool IsValid()
+        {
+            return ((_x >= 0 && _x <= 7) && (_y >= 0 && _y <= 7));
+            //if (_FigureType == ChessFigureType.KING || _FigureType == ChessFigureType.QUEEN ||
+            //    _FigureType == ChessFigureType.KNIGHT || _FigureType == ChessFigureType.PAWN ||
+            //    _FigureType == ChessFigureType.TOWER || _FigureType == ChessFigureType.BISHOP)
+            //{
+            //    return true;
+            //}
+            //return false;
+        }
 
         public int GetX()
         { 
@@ -93,10 +94,10 @@ namespace Classes
 
         //}
 
-        //public void GetRectangle()
-        //{
-            
-        //}
+        public void GetRectangle()
+        {
+
+        }
 
     }
 }

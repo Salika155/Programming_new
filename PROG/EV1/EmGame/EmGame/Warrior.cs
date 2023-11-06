@@ -23,6 +23,5 @@ namespace EmGame
         private double _lucky;
         private TeamType _type;
 
-
     }
 }

@@ -8,8 +8,24 @@ namespace EmGame
 {
     internal class EmGame
     {
-        //+start(int, int, int, int)
-        //+GetWinner();TeamType
+        public void Start(int a, int b, int c, int d)
+        {
+          
+
+        }
+
+        public Warrior GetWinner()
+        {
+            return new Warrior();
+        }
+
         //como decir a los guerreros te toca el turno de jugar
+
+        public void PlayTurn(WarZone warZone, TeamType teams)
+        {
+
+        }
+        
+       
     }
 }

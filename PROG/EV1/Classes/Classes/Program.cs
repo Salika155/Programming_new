@@ -51,10 +51,15 @@ namespace Classes
             Console.WriteLine("---------------------------------------------------------");
 
             Card card = new(54, Palo.TREBOLES);
+            Console.WriteLine(card);
             Console.WriteLine(card.GetFigureType());
             Console.WriteLine(card.IsFigure() + " " + card.IsValid());
             Console.WriteLine("---------------------------------------------------------");
 
+            ChessFigure figure = new(2, 5, ChessFigureColor.WHITE, ChessFigureType.BISHOP);
+            Console.WriteLine(figure.GetFigureType());
+            Console.WriteLine(figure.GetFigureType() + " " + figure.IsValid());
+            Console.WriteLine("---------------------------------------------------------");
 
 
 

@@ -77,7 +77,6 @@ namespace Classes
                 return true;
             if (_palo == Palo.UNKNOWN && _number == 0)
                 return true;
-
             return false;
         }
 

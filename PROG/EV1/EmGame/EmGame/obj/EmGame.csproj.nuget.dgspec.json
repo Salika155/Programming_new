@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carcarcor\\source\\repos\\EmGame\\EmGame\\EmGame.csproj": {}
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV1\\EmGame\\EmGame\\EmGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carcarcor\\source\\repos\\EmGame\\EmGame\\EmGame.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV1\\EmGame\\EmGame\\EmGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\EmGame\\EmGame\\EmGame.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV1\\EmGame\\EmGame\\EmGame.csproj",
         "projectName": "EmGame",
-        "projectPath": "C:\\Users\\carcarcor\\source\\repos\\EmGame\\EmGame\\EmGame.csproj",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV1\\EmGame\\EmGame\\EmGame.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carcarcor\\source\\repos\\EmGame\\EmGame\\obj\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV1\\EmGame\\EmGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

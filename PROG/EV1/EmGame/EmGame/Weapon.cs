@@ -18,6 +18,7 @@ namespace EmGame
     {
         private WeaponType _weaponType;
         private int _reloadTime;
+        private double _distance;
 
         public WeaponType GetWeaponType()
         {
@@ -41,6 +42,12 @@ namespace EmGame
         public int GetReloadTime()
         {
             return _reloadTime;
+        }
+
+        public double GetDistance(int x, int y, int x2, int y2)
+        {
+
+            Math.Sqrt()
         }
     }
 }

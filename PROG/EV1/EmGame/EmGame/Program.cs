@@ -5,14 +5,14 @@
         static void Main(string[] args)
         {
             EmGame gm = new EmGame();
-            WarZone warZone = new WarZone(100, 100);
+            WarZone warZone = new WarZone(10, 10);
 
-            warZone.CreateWarriors(4, TeamType.DWARF);
-            warZone.CreateWarriors(4, TeamType.HUMAN);
-            warZone.CreateWarriors(4, TeamType.ORC);
-            warZone.CreateWarriors(4, TeamType.ELF);
+            //warZone.CreateWarriors(1, TeamType.DWARF);
+            //warZone.CreateWarriors(1, TeamType.HUMAN);
+            //warZone.CreateWarriors(1, TeamType.ORC);
+            //warZone.CreateWarriors(1, TeamType.ELF);
 
-            gm.Start(4, 4, 4, 4);
+            gm.Start(1, 1, 1, 1);
 
             bool gameRunning = true;
             List<TeamType> teams = new List<TeamType> { TeamType.HUMAN, TeamType.ELF, TeamType.DWARF, TeamType.ORC };

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmGame
 {
-    internal class WarZone
+    public class WarZone
     {
         List<Warrior> warriors;
         private int _width;
@@ -59,6 +59,50 @@ namespace EmGame
         {
             return _height;
         }
-        
+
+        public void ExecuteRound()
+        {
+
+        }
+
+        public Warrior? GetWarriorAt(int x, int y)
+        {
+
+        }
+
+        public int GetWarriorCount()
+        {
+            return 0;
+        }
+
+        public Warrior? GetWarriorAt(int index)
+        {
+
+        }
+
+        public int GetEnemiesArroundCount(int x, int y, TeamType team)
+        {
+            return 0;
+        }
+
+        public bool IsBattleFinished()
+        {
+            return true;
+        }
+
+        public double GetDistance(Warrior w1, Warrior w2)
+        {
+            return GetDistance(w1.GetX(), w1.GetY(), w2.GetX(), w2.GetY());
+        }
+
+        public static double GetDistance(int x1, int y1, int x2, int y2)
+        {
+            int dx = x2 - x1;
+            int dy = y2 - y1;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        //getwarriorcount y getwarriorat acceder a elementos de lista si no nos dejan, salen examen
+
     }
 }

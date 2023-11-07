@@ -16,7 +16,7 @@ namespace EmGame
 
         public Warrior GetWinner()
         {
-            return new Warrior();
+            
         }
 
         //como decir a los guerreros te toca el turno de jugar

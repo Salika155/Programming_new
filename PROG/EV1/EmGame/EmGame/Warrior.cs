@@ -23,5 +23,78 @@ namespace EmGame
         private double _lucky;
         private TeamType _type;
 
+        public Warrior()
+        {
+
+        }
+
+        public Warrior(int x, int y, int life, double accuracity, int armor, double lucky, TeamType type)
+        {
+            _x = x;
+            _y = y;
+            _life = life;
+            _accuracity = accuracity;
+            _armor = armor;
+            _lucky = lucky;
+            _type = type;
+        }
+
+        public int GetX()
+        {
+            return _x;
+        }
+
+        public int GetY() 
+        {
+            return _y;
+        }
+
+        public int GetLife() 
+        {
+            return _life;
+        }
+
+        public int GetArmor() 
+        {
+            return _armor;
+        }
+
+        public double GetAccuracity()
+        {
+            return _accuracity;
+        }
+
+        public double GetLucky()
+        {
+            return _lucky;
+        }
+
+        public TeamType GetTeamType()
+        {
+            if (_type == TeamType.HUMAN)
+                return TeamType.HUMAN;
+            if (_type == TeamType.DWARF)
+                return TeamType.DWARF;
+            if (_type == TeamType.ELF)
+                return TeamType.ELF;
+            if (_type == TeamType.ORC)
+                return TeamType.ORC;
+            return 0;
+        }
+
+        public void SetX(int x)
+        {
+            _x = x;
+        }
+
+        public void SetY(int y)
+        {
+            _y = y;
+        }
+
+        public void SetTeamType(TeamType type)
+        {
+            _type = type;
+        }
     }
 }

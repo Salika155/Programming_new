@@ -17,7 +17,7 @@
             bool gameRunning = true;
             List<TeamType> teams = new List<TeamType> { TeamType.HUMAN, TeamType.ELF, TeamType.DWARF, TeamType.ORC };
             while (gameRunning == true)
-                gm.PlayTurn(warZone, TeamType teams);
+                gm.PlayTurn(warZone, TeamType.DWARF);
 
 
 

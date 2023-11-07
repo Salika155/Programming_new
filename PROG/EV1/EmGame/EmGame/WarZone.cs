@@ -95,7 +95,7 @@ namespace EmGame
             //    return warriors[index];
             //}
             //return null;
-            return (index >= 0 || index < warriors.Count) ? warriors[index] : null;
+            return (index >= 0 && index < warriors.Count) ? warriors[index] : null;
         }
 
         public int GetEnemiesAroundCount(int x, int y, TeamType team)

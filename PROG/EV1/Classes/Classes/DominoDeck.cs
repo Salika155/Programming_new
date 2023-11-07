@@ -47,7 +47,7 @@ namespace Classes
         }
 
         //+AddPiece(piece.DominoPiece)
-        public void AddPìece(DominoPiece piece)
+        public void AddPiece(DominoPiece piece)
         {
             if (ContainsPiece(piece) == false)
                 _piece.Add(piece);

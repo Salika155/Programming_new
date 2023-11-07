@@ -60,6 +60,12 @@ namespace EmGame
 
         public void ExecuteRound()
         {
+            for (int i = 0; i < warriors.Count; i++)
+            {
+                Warrior warrior = warriors[i];
+                warrior.ExecuteTurn();
+            }
+
 
         }
 
@@ -84,14 +90,15 @@ namespace EmGame
 
         public Warrior? GetWarriorAt(int index)
         {
-            if (index >= 0 || index < warriors.Count)
-            {
-                return warriors[index];
-            }
-            return null;
+            //if (index >= 0 || index < warriors.Count)
+            //{
+            //    return warriors[index];
+            //}
+            //return null;
+            return (index >= 0 || index < warriors.Count) ? warriors[index] : null;
         }
 
-        public int GetEnemiesArroundCount(int x, int y, TeamType team)
+        public int GetEnemiesAroundCount(int x, int y, TeamType team)
         {
             return 0;
         }
@@ -121,14 +128,36 @@ namespace EmGame
 
         public int GetPlayersArroundCount(int x, int y)
         {
-            int PlayersArround = 0;
+            List<Warrior> warriorsAround = new List<Warrior>();
+
+            if (warriorsAround != 0)
+
+
+            
+            
+
             return PlayersArround;
         }
 
         public List<Warrior> GetWarriorsInside(int x, int y, int width, int height)
         {
-            List<Warrior> Warriors = new List<Warrior> ();
-            return warriors;
+            int i = x;
+            int j = y;
+
+            List<Warrior> warriorsAt = new List<Warrior>();
+
+            while (i <= _width && j <= _height)
+            {
+                i++;
+                j++;
+                if (j == height)
+                    j = y;
+
+                if (GetWarriorAt(i, j) == null)
+                    continue;
+                warriorsAt.Add(GetWarriorAt(i, j));
+            }
+            return warriorsAt;
         }
 
         public List<Warrior> GetWarriorsSortedByDistance(int x, int y)

@@ -22,13 +22,14 @@ namespace EmGame
         private int _armor;
         private double _lucky;
         private TeamType _type;
+        private Weapon _weapon;
 
         public Warrior()
         {
 
         }
 
-        public Warrior(int x, int y, int life, double accuracity, int armor, double lucky, TeamType type)
+        public Warrior(int x, int y, int life, double accuracity, int armor, double lucky, TeamType type, Weapon weapon)
         {
             _x = x;
             _y = y;
@@ -37,6 +38,7 @@ namespace EmGame
             _armor = armor;
             _lucky = lucky;
             _type = type;
+            _weapon = weapon;
         }
 
         public int GetX()
@@ -99,7 +101,7 @@ namespace EmGame
 
         public void ExecuteTurn(WarZone warZone)
         {
-
+            
         }
     }
 }

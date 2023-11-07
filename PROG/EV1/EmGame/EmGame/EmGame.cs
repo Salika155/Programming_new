@@ -16,12 +16,12 @@ namespace EmGame
 
         public Warrior GetWinner()
         {
-            
+            return null;
         }
 
         //como decir a los guerreros te toca el turno de jugar
 
-        public void PlayTurn(WarZone warZone, TeamType teams)
+        public void PlayTurn(WarZone warZone)
         {
 
         }

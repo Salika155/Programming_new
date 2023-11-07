@@ -96,5 +96,10 @@ namespace EmGame
         {
             _type = type;
         }
+
+        public void ExecuteTurn(WarZone warZone)
+        {
+
+        }
     }
 }

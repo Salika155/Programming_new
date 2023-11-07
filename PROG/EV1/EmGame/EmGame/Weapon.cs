@@ -46,7 +46,6 @@ namespace EmGame
 
         public double GetDistance(int x, int y, int x2, int y2)
         {
-
             Math.Sqrt()
         }
     }

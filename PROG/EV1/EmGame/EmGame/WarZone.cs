@@ -26,8 +26,6 @@ namespace EmGame
                 warrior.SetTeamType(type);
                 warriors.Add(warrior);
             }
-            
-
         }
         public Warrior? RemoveWarriorAt(int index)
         {
@@ -67,17 +65,30 @@ namespace EmGame
 
         public Warrior? GetWarriorAt(int x, int y)
         {
-
+            if (IsWarPosValid(x, y))
+                for (int i = 0; i < warriors.Count; i++)
+                {
+                        Warrior warrior = warriors[i];
+                        if (warrior.GetX() == x && warrior.GetY() == y)
+                        return warrior;
+                }
+            return null;
         }
 
         public int GetWarriorCount()
         {
-            return 0;
+            if (warriors != null)
+                return warriors.Count;
+            return -1;
         }
 
         public Warrior? GetWarriorAt(int index)
         {
-
+            if (index >= 0 || index < warriors.Count)
+            {
+                return warriors[index];
+            }
+            return null;
         }
 
         public int GetEnemiesArroundCount(int x, int y, TeamType team)
@@ -87,6 +98,7 @@ namespace EmGame
 
         public bool IsBattleFinished()
         {
+            //si el warrior ha atacado, o gastado la accion, la batalla finaliza
             return true;
         }
 
@@ -101,6 +113,30 @@ namespace EmGame
             int dy = y2 - y1;
             return Math.Sqrt(dx * dx + dy * dy);
         }
+
+        public bool IsWarPosValid(int x, int y)
+        {
+            return ((x > 0 && x <= _width)&&(y > 0 && y <= _height));
+        }
+
+        public int GetPlayersArroundCount(int x, int y)
+        {
+            int PlayersArround = 0;
+            return PlayersArround;
+        }
+
+        public List<Warrior> GetWarriorsInside(int x, int y, int width, int height)
+        {
+            List<Warrior> Warriors = new List<Warrior> ();
+            return warriors;
+        }
+
+        public List<Warrior> GetWarriorsSortedByDistance(int x, int y)
+        {
+            return warriors;
+
+        }
+
 
         //getwarriorcount y getwarriorat acceder a elementos de lista si no nos dejan, salen examen
 

@@ -29,7 +29,17 @@ namespace EmGame
 
         public WeaponType GetWeaponType()
         {
-            return _weaponType;
+            if (_weaponType == WeaponType.PUNCH)
+                return WeaponType.PUNCH;
+            if (_weaponType == WeaponType.ARROW)
+                return WeaponType.ARROW;
+            if (_weaponType == WeaponType.MAZE)
+                return WeaponType.MAZE;
+            if (_weaponType == WeaponType.BOW)
+                return WeaponType.BOW;
+            if (_weaponType == WeaponType.SWORD)
+                return WeaponType.SWORD;
+            return 0;
         }
 
         public int GetDamage()
@@ -37,11 +47,11 @@ namespace EmGame
             if (_weaponType == WeaponType.PUNCH)
                 return 5;
             if (_weaponType == WeaponType.ARROW)
-                return 10;
+                return 20;
             if (_weaponType == WeaponType.MAZE)
                 return 15;
             if (_weaponType == WeaponType.BOW)
-                return 20;
+                return 10;
             if (_weaponType == WeaponType.SWORD)
                 return 30;
             return 0;
@@ -49,13 +59,47 @@ namespace EmGame
         public int GetReloadTime()
         {
             return _reloadTime;
+
         }
 
         public double GetWeaponDistance()
         {
-            //puño 1.5
-
-            
+            return _distance;
         }
+
+        public void SetWeapon()
+        {
+            if (_weaponType == WeaponType.PUNCH)
+            {
+                _reloadTime = 1;
+                _distance = 1.5;
+            }
+                
+            if (_weaponType == WeaponType.ARROW)
+            {
+                _reloadTime = 4;
+                _distance = 8.5;
+            }
+                
+            if (_weaponType == WeaponType.MAZE)
+            {
+                _reloadTime = 2;
+                _distance = 2.9;
+            }
+                
+            if (_weaponType == WeaponType.BOW)
+            {
+                _reloadTime = 3;
+                _distance = 1.5;
+            }
+                
+            if (_weaponType == WeaponType.SWORD)
+            {
+                _reloadTime = 5;
+                _distance = 4.3;
+            }
+        }
+
+        
     }
 }

@@ -39,9 +39,9 @@ namespace EmGame
                 return null;
         }
 
-        public void MoveWarrior(Warrior warrior, int x, int y)
+        public void MoveWarrior(Warrior warrior, int x, int y)//se supone warrior no hay que pasarselo
         {
-            if ((x > 0 && x > _width) && (y > 0 && y < _height))
+            if (x > 0 && x > _width && y > 0 && y < _height)
             {
                 warrior.SetX(x);
                 warrior.SetY(y);
@@ -58,14 +58,13 @@ namespace EmGame
             return _height;
         }
 
-        public void ExecuteRound()
+        public void ExecuteRound(WarZone warZone)
         {
             for (int i = 0; i < warriors.Count; i++)
             {
                 Warrior warrior = warriors[i];
-                warrior.ExecuteTurn();
+                warrior.ExecuteTurn(warZone);
             }
-
 
         }
 
@@ -100,7 +99,16 @@ namespace EmGame
 
         public int GetEnemiesAroundCount(int x, int y, TeamType team)
         {
-            return 0;
+            int x0 = x - 1; int y0 = y - 1; int x1 = x + 1; int y1 = y + 1;
+            //si el tipo es diferente al del equipo del warrior, es un enemigo
+            List<Warrior> warriorsenemies = GetWarriorsInside(x0, y0, x1, y1);
+
+            for (int i = 0; i < warriors?.Count; i++)
+            {
+                if (warriorsenemies[i].GetTeamType != warriors[i].GetTeamType)
+                    return warriors.Count;
+            }
+            return -1;
         }
 
         public bool IsBattleFinished()
@@ -130,13 +138,12 @@ namespace EmGame
         {
             List<Warrior> warriorsAround = new List<Warrior>();
 
-            if (warriorsAround != 0)
-
-
-            
-            
-
-            return PlayersArround;
+            if (IsWarPosValid(x, y))
+            {
+                int x0 = x - 1; int y0 = y - 1; int x1 = x + 1; int y1 = y + 1;
+                return GetWarriorsInside(x0, y0, x1, y1).Count();
+            }
+            return 0;
         }
 
         public List<Warrior> GetWarriorsInside(int x, int y, int width, int height)

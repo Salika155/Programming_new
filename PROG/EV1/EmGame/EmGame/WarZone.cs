@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EmGame
 {
@@ -27,6 +24,15 @@ namespace EmGame
                 warriors.Add(warrior);
             }
         }
+
+        public void CreateWarriors(int humans, int orcs, int dwarfs, int elves)
+        {
+            CreateWarriors(humans, TeamType.HUMAN);
+            CreateWarriors(orcs, TeamType.ORC);
+            CreateWarriors(dwarfs, TeamType.DWARF);
+            CreateWarriors(elves, TeamType.ELF);
+        }
+
         public Warrior? RemoveWarriorAt(int index)
         {
             if (index >= 0 && index < warriors.Count)
@@ -103,12 +109,17 @@ namespace EmGame
             //si el tipo es diferente al del equipo del warrior, es un enemigo
             List<Warrior> warriorsenemies = GetWarriorsInside(x0, y0, x1, y1);
 
-            for (int i = 0; i < warriors?.Count; i++)
+            int enemyCount = 0;
+
+            for (int i = 0; i < warriorsenemies.Count; i++)
             {
-                if (warriorsenemies[i].GetTeamType != warriors[i].GetTeamType)
-                    return warriors.Count;
+                var warrior = warriorsenemies[i];
+                if (warrior.GetTeamType() != team)
+                {
+                    enemyCount++;
+                }  
             }
-            return -1;
+            return enemyCount;
         }
 
         public bool IsBattleFinished()
@@ -117,9 +128,15 @@ namespace EmGame
             return true;
         }
 
-        public double GetDistance(Warrior w1, Warrior w2)
+        public static double GetDistance(Warrior w1, Warrior w2)
         {
             return GetDistance(w1.GetX(), w1.GetY(), w2.GetX(), w2.GetY());
+        }
+
+        public static double GetDistance(int x, int y, Warrior warrior)
+        {
+            return GetDistance(x, y, warrior.GetX(), warrior.GetY());
+
         }
 
         public static double GetDistance(int x1, int y1, int x2, int y2)
@@ -173,6 +190,59 @@ namespace EmGame
 
         }
 
+        public List<Warrior> GetWarriorsSortedByDistance(List<Warrior> warriors,int x, int y)
+        {
+            return warriors;
+
+        }
+
+        public List<Warrior> DuplicateWarriors()
+        {
+            List<Warrior> duplicatedWarriors = new List<Warrior>();
+
+            for (int i = 0; i < warriors.Count; i++)
+            {
+                Warrior originalWarrior = warriors[i];
+
+                // Crea un nuevo guerrero y asigna sus propiedades con los valores del guerrero original
+                Warrior duplicatedWarrior = new Warrior();
+                originalWarrior.GetX();
+                originalWarrior.GetY();
+                originalWarrior.GetLife();
+                originalWarrior.GetAccuracity();
+                originalWarrior.GetArmor();
+                originalWarrior.GetTeamType();
+
+                duplicatedWarriors.Add(duplicatedWarrior);
+            }
+            
+            return duplicatedWarriors;
+        }
+
+       
+
+        public static void SwapWarriors(List<Warrior> warriors, int w1, int w2)
+        {
+            for (int i = 0; i < warriors.Count; i++)
+                if () ;
+
+        }
+
+
+        public List<Warrior> GetWarriorsAround(int x, int y)
+        {
+            return warriors;
+        }
+
+        public List<Warrior> GetEnemiesInRange(Warrior warrior)
+        {
+            return warrior;
+        }
+
+        public bool IsGameFinished(WarZone warZone)
+        {
+            return true;
+        }
 
         //getwarriorcount y getwarriorat acceder a elementos de lista si no nos dejan, salen examen
 

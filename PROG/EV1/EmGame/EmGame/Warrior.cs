@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace EmGame
 {
@@ -21,8 +17,9 @@ namespace EmGame
         private int _life;
         private double _accuracity;
         private int _armor;
-        private double _lucky;
-        private TeamType _type;
+        //private double _lucky;
+        private TeamType _team;
+        private int _cooldown;
         private Weapon _weapon;
 
         public Warrior()
@@ -30,15 +27,15 @@ namespace EmGame
 
         }
 
-        public Warrior(int x, int y, int life, double accuracity, int armor, double lucky, TeamType type, Weapon weapon)
+        public Warrior(int x, int y, int life, double accuracity, int armor, /*double lucky,*/ TeamType type, Weapon weapon)
         {
             _x = x;
             _y = y;
             _life = life;
             _accuracity = accuracity;
             _armor = armor;
-            _lucky = lucky;
-            _type = type;
+            //_lucky = lucky;
+            _team = type;
             _weapon = weapon;
         }
 
@@ -67,20 +64,30 @@ namespace EmGame
             return _accuracity;
         }
 
-        public double GetLucky()
+        //public double GetLucky()
+        //{
+        //    return _lucky;
+        //}
+
+        public int GetCoolDown()
         {
-            return _lucky;
+            return _cooldown;
+        }
+
+        public Weapon GetWeapon()
+        {
+            return _weapon;
         }
 
         public TeamType GetTeamType()
         {
-            if (_type == TeamType.HUMAN)
+            if (_team == TeamType.HUMAN)
                 return TeamType.HUMAN;
-            if (_type == TeamType.DWARF)
+            if (_team == TeamType.DWARF)
                 return TeamType.DWARF;
-            if (_type == TeamType.ELF)
+            if (_team == TeamType.ELF)
                 return TeamType.ELF;
-            if (_type == TeamType.ORC)
+            if (_team == TeamType.ORC)
                 return TeamType.ORC;
             return 0;
         }
@@ -97,12 +104,24 @@ namespace EmGame
 
         public void SetTeamType(TeamType type)
         {
-            _type = type;
+            _team = type;
+        }
+
+        public void SetCoolDown(int cooldown)
+        {
+            _cooldown = cooldown;
         }
 
         public void ExecuteTurn(WarZone warZone)
         {
+
             
+        }
+
+        public void Move(int x, int y)
+        {
+            _x = x;
+            _y = y;
         }
 
         

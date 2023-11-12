@@ -1,6 +1,6 @@
 ﻿namespace EmGame
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,10 +18,6 @@
             List<TeamType> teams = new List<TeamType> { TeamType.HUMAN, TeamType.ELF, TeamType.DWARF, TeamType.ORC };
             while (gameRunning == true)
                 gm.PlayTurn(warZone);
-
-
-
-
         }
     }
 }

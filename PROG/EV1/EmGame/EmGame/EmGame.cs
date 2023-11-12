@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmGame
 {
-    internal class EmGame
+    public class EmGame
     {
         public void Start(int a, int b, int c, int d)
         {
@@ -14,9 +14,9 @@ namespace EmGame
 
         }
 
-        public Warrior GetWinner()
+        public TeamType GetWinner()
         {
-            return null;
+            return 0;
         }
 
         //como decir a los guerreros te toca el turno de jugar

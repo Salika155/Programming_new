@@ -183,7 +183,7 @@ namespace ArrayList
                     return true;
             }
             return false;
-        }
+        } 
 
         //punto medio, comparo y muevo valores
 
@@ -561,7 +561,7 @@ namespace ArrayList
         }
 
 
-        //todo lo que potencialmente pueda valer null, se le puede poner la interrogacion ? al final del elemento int[]?
+        //todolo que potencialmente pueda valer null, se le puede poner la interrogacion ? al final del elemento int[]?
 
         //RemoveValues que estan en una lista 
         public static void RemoveValues(List<int> l1, List<int> values)

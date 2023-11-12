@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmGame
 {
@@ -16,6 +12,12 @@ namespace EmGame
 
         public TeamType GetWinner()
         {
+            //List<TeamType> remainTeam = new List<TeamType>();
+
+            //if (remainTeam.Count == 1) 
+            //{
+            //    remainTeam.Add(new TeamType());
+            //}
             return 0;
         }
 
@@ -25,7 +27,5 @@ namespace EmGame
         {
 
         }
-        
-       
     }
 }

@@ -15,13 +15,47 @@ namespace EmGame
             this._height = height;
             warriors= new List<Warrior>();
         }
+
+        public void PaintWarZone()
+        {
+            for (int y = 0; y <= _height - 1; y++)
+            {
+                for (int x = 0; x <= _width - 1; x++)
+                {
+                    Warrior? warrior = GetWarriorAt(x, y);
+
+                    if (warrior != null)
+                    {
+                        Console.Write("W ");
+                    }
+                    else
+                    {
+                        Console.Write("I ");
+                    }
+                }
+                Console.WriteLine(); 
+            }
+        }
+
+        private bool IsOccupied(int x, int y)
+        {
+            return warriors.Any(w => w.GetX() == x && w.GetY() == y);
+        }
+
+
         public void CreateWarriors(int count, TeamType type)
         {
             for(int i = 0; i < count; i++)
             {
-                Warrior warrior = new Warrior();
-                warrior.SetTeamType(type);
-                warriors.Add(warrior);
+                    int x = UtilsEmGame.GetRandom(1, _width + 1);
+                    int y = UtilsEmGame.GetRandom(1, _height + 1);
+
+                if (!IsOccupied(x, y))
+                {
+                    Warrior warrior = new Warrior(x, y, 10, 6.0, 6, type);
+                    warriors.Add(warrior);
+                    i++;
+                }
             }
         }
 
@@ -45,12 +79,18 @@ namespace EmGame
                 return null;
         }
 
-        public void MoveWarrior(Warrior warrior, int x, int y)//se supone warrior no hay que pasarselo
+        public void MoveWarrior(int x, int y)//se supone warrior no hay que pasarselo
         {
-            if (x > 0 && x > _width && y > 0 && y < _height)
+            if (x > 0 && x <= _width && y > 0 && y >= _height)
             {
-                warrior.SetX(x);
-                warrior.SetY(y);
+                for (int i = 0; i < warriors.Count; i++)
+                {
+                    Warrior warrior = warriors[i];
+
+                    warrior.SetX(x);
+                    warrior.SetY(y);
+                    
+                }
             }
         }
         
@@ -186,14 +226,48 @@ namespace EmGame
 
         public List<Warrior> GetWarriorsSortedByDistance(int x, int y)
         {
-            return warriors;
+            List<Warrior> warSortbyDist = new List<Warrior>();
 
+            for (int i = 0; i < warriors.Count - 1; i++)
+            {
+                for (int j = i + 1; j < warriors.Count - i - 1; j++)
+                {
+                    double d1 = GetDistance(warSortbyDist[i].GetX(), warSortbyDist[i].GetY(), x, y);
+                    double d2 = GetDistance(warSortbyDist[j].GetX(), warSortbyDist[j].GetY(), x, y);
+
+                    if (d1 < d2)
+                    {
+                        Warrior aux;
+                        aux = warSortbyDist[i];
+                        warSortbyDist[i] = warSortbyDist[j];
+                        warSortbyDist[j] = aux;
+                    }
+                }
+            }
+            return warSortbyDist;
         }
 
         public List<Warrior> GetWarriorsSortedByDistance(List<Warrior> warriors,int x, int y)
         {
-            return warriors;
+            List<Warrior> warSortbyDist = new List<Warrior>();
 
+            for (int i = 0; i < warriors.Count - 1; i++)
+            {
+                for (int j = i + 1; j < warriors.Count; j++)
+                {
+                    double d1 = GetDistance(warSortbyDist[i].GetX(), warSortbyDist[i].GetY(), x, y);
+                    double d2 = GetDistance(warSortbyDist[j].GetX(), warSortbyDist[j].GetY(), x, y);
+
+                    if (d1 > d2)
+                    {
+                        Warrior aux;
+                        aux = warSortbyDist[i];
+                        warSortbyDist[i] = warSortbyDist[j];
+                        warSortbyDist[j] = aux;
+                    }
+                }
+            }
+            return warSortbyDist;
         }
 
         public List<Warrior> DuplicateWarriors()
@@ -219,15 +293,19 @@ namespace EmGame
             return duplicatedWarriors;
         }
 
-       
-
         public static void SwapWarriors(List<Warrior> warriors, int w1, int w2)
         {
-            for (int i = 0; i < warriors.Count; i++)
-                if () ;
+            if (warriors == null || warriors.Count == 0)
+                return;
 
+            if (w1 < 0 || w1 >= warriors.Count || w2 < 0 || w2 >= warriors.Count)
+                return;
+
+            // Intercambiar guerreros en las posiciones w1 y w2
+            Warrior temp = warriors[w1];
+            warriors[w1] = warriors[w2];
+            warriors[w2] = temp;
         }
-
 
         public List<Warrior> GetWarriorsAround(int x, int y)
         {
@@ -236,15 +314,16 @@ namespace EmGame
 
         public List<Warrior> GetEnemiesInRange(Warrior warrior)
         {
-            return warrior;
+            return warriors;
         }
 
         public bool IsGameFinished(WarZone warZone)
         {
-            return true;
+            return false;
         }
 
         //getwarriorcount y getwarriorat acceder a elementos de lista si no nos dejan, salen examen
 
+        
     }
 }

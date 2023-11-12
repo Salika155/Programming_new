@@ -27,16 +27,19 @@ namespace EmGame
 
         }
 
-        public Warrior(int x, int y, int life, double accuracity, int armor, /*double lucky,*/ TeamType type, Weapon weapon)
+        public Warrior(int x, int y, int life, double accuracity, int armor, /*double lucky,*/ TeamType team)
         {
-            _x = x;
-            _y = y;
-            _life = life;
-            _accuracity = accuracity;
-            _armor = armor;
-            //_lucky = lucky;
-            _team = type;
-            _weapon = weapon;
+            if (x <= 0 && y <= 0) 
+            {
+                _x = x;
+                _y = y;
+                _life = life;
+                _accuracity = accuracity;
+                _armor = armor;
+                //_lucky = lucky;
+                _team = team;
+                
+            }
         }
 
         public int GetX()
@@ -71,6 +74,7 @@ namespace EmGame
 
         public int GetCoolDown()
         {
+
             return _cooldown;
         }
 
@@ -94,12 +98,14 @@ namespace EmGame
 
         public void SetX(int x)
         {
+            if (x <= 0)
             _x = x;
         }
 
         public void SetY(int y)
         {
-            _y = y;
+            if (y <= 0)
+                _y = y;
         }
 
         public void SetTeamType(TeamType type)
@@ -114,16 +120,18 @@ namespace EmGame
 
         public void ExecuteTurn(WarZone warZone)
         {
+            int x = UtilsEmGame.GetRandom(1, warZone.GetWith() + 1);
+            int y = UtilsEmGame.GetRandom(1, warZone.GetHeight() + 1);
 
-            
+            warZone.MoveWarrior(x, y);
+
         }
 
         public void Move(int x, int y)
         {
+            if (x <= 0 && y <= 0)
             _x = x;
             _y = y;
         }
-
-        
     }
 }

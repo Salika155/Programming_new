@@ -47,8 +47,8 @@ namespace EmGame
         {
             for(int i = 0; i < count; i++)
             {
-                    int x = UtilsEmGame.GetRandom(1, _width + 1);
-                    int y = UtilsEmGame.GetRandom(1, _height + 1);
+                    int x = UtilsEmGame.GetRandom(i, _width);
+                    int y = UtilsEmGame.GetRandom(i, _height);
 
                 if (!IsOccupied(x, y))
                 {
@@ -108,8 +108,7 @@ namespace EmGame
         {
             for (int i = 0; i < warriors.Count; i++)
             {
-                Warrior warrior = warriors[i];
-                warrior.ExecuteTurn(warZone);
+                warriors[i].ExecuteTurn(warZone);
             }
 
         }
@@ -154,9 +153,9 @@ namespace EmGame
             for (int i = 0; i < warriorsenemies.Count; i++)
             {
                 var warrior = warriorsenemies[i];
-                if (warrior.GetTeamType() != team)
+                if (warrior.GetTeamType() != team && warrior != null)
                 {
-                    enemyCount++;
+                    enemyCount++; 
                 }  
             }
             return enemyCount;

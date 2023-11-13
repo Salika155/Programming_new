@@ -13,3 +13,18 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\EmGame\E
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\ref\EmGame.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\bin\Debug\net6.0\EmGame.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\bin\Debug\net6.0\EmGame.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\bin\Debug\net6.0\EmGame.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\bin\Debug\net6.0\EmGame.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\bin\Debug\net6.0\EmGame.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\refint\EmGame.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\EmGame.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\EmGame\EmGame\obj\Debug\net6.0\ref\EmGame.dll

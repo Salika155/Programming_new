@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Date\\Date\\Date.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Date\\Date\\Date.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Date\\Date\\Date.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Date\\Date\\Date.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Date\\Date\\Date.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Date\\Date\\Date.csproj",
         "projectName": "Date",
-        "projectPath": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Date\\Date\\Date.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Date\\Date\\Date.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Date\\Date\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Date\\Date\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

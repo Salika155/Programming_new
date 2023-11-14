@@ -41,13 +41,13 @@ namespace Classes
             int centims = CoinChange.ToNumber(coin);
             Console.WriteLine(centims / 100 + " Euros");
 
-            int centimss = 200; 
+            int centimss = 200;
             CoinValor moneda = CoinChange.ToMoneda(centimss);
             Console.WriteLine(moneda);
 
-            double cantidad = 134.45; 
-            List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
-            Console.WriteLine(monedas);
+            //double cantidad = 134.45;
+            //List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
+            //Console.WriteLine(monedas);
             Console.WriteLine("---------------------------------------------------------");
 
             Card card = new(54, Palo.TREBOLES);
@@ -61,7 +61,19 @@ namespace Classes
             Console.WriteLine(figure.GetFigureType() + " " + figure.IsValid());
             Console.WriteLine("---------------------------------------------------------");
 
+            Datetime datetime= new Datetime();
+            Console.WriteLine("La fecha de hoy es: " + datetime);
 
+            datetime.SetYear(1993);
+            datetime.SetMonth(12);
+            datetime.SetDay(31);
+            Console.WriteLine("La fecha de hoy es: " + datetime);
+            datetime.IncrementDays();
+            Console.WriteLine("El año es valido: "+ datetime.IsValid());
+
+            Console.WriteLine("La fecha de hoy es: " + datetime);
+            datetime.IncrementSeconds();
+            Console.WriteLine("El año es bisieto: " + datetime.IsLeap());
 
         }
     }

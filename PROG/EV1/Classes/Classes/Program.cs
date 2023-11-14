@@ -63,6 +63,7 @@ namespace Classes
 
             Datetime datetime= new Datetime();
             Console.WriteLine("La fecha de hoy es: " + datetime);
+            
 
             datetime.SetYear(1993);
             datetime.SetMonth(12);
@@ -74,6 +75,11 @@ namespace Classes
             Console.WriteLine("La fecha de hoy es: " + datetime);
             datetime.IncrementSeconds();
             Console.WriteLine("El año es bisieto: " + datetime.IsLeap());
+            Console.WriteLine(datetime.GetDayOfWeek());
+            Console.WriteLine(datetime.ToString());
+            Console.WriteLine(datetime.Equals(datetime));
+
+            
 
         }
     }

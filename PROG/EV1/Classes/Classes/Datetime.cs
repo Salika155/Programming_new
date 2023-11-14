@@ -6,6 +6,17 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
+
+    public enum DaysOfWeek
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday,
+    }
     public class Datetime
     {
         private int _day;
@@ -41,9 +52,7 @@ namespace Classes
 
         public Datetime Clone()
         {
-           Datetime dt = new Datetime(_day, _month, _year, _hour, _minute, _second);
-           return dt;
-           
+           return new Datetime(_day, _month, _year, _hour, _minute, _second);
         }
 
         public bool Equals(Datetime datetime)
@@ -77,13 +86,12 @@ namespace Classes
 
         public bool IsLeap()
         {
-            return (_year % 4 == 0 && _year % 100 != 0);
-                
+            return IsLeap(_year);
         }
 
         public static bool IsLeap(int year)
         {
-            return (year % 4 == 0 && year% 100 != 0);
+            return (year % 4 == 0 && year % 100 != 0);
         }
         
         //public int Get
@@ -129,7 +137,7 @@ namespace Classes
 
         public DayOfWeek GetDayOfWeek()
         {
-            DateTime dateTime= new DateTime(_year, _month, _day);
+            DateTime dateTime = new DateTime(_year, _month, _day);
             switch (dateTime.DayOfWeek)
             {
                 case DayOfWeek.Monday:
@@ -163,14 +171,17 @@ namespace Classes
             }
         }
 
-        public override string ToString()
+        public string ToString()
         {
+            //si es valida return elementos + signo
             return _year.ToString() + "-" + _month.ToString() + "-" + _day.ToString() + " | " 
-                + _hour.ToString() + "/" + _minute.ToString() + "/" + _second.ToString();
+                + _hour.ToString() + ":" + _minute.ToString() + ":" + _second.ToString();
         }
 
         public int GetDaysCount(int year, int month)
         {
+            //if mes 1, 3 y tal devuelve 31,
+            //return IsLeap(year) ? 29 : 28
             if (_day > 0 && _month >= 1 && _month <= 12)
             {
                 return DateTime.DaysInMonth(year, month);

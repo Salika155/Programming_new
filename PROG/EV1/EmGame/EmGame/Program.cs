@@ -23,9 +23,9 @@
 
 
                 warZone.CreateWarriors(1, TeamType.HUMAN);
-                warZone.CreateWarriors(1, TeamType.DWARF);
+                warZone.CreateWarriors(0, TeamType.DWARF);
                 warZone.CreateWarriors(1, TeamType.ORC);
-                warZone.CreateWarriors(1, TeamType.ELF);
+                warZone.CreateWarriors(0, TeamType.ELF);
             }
             warZone.PaintWarZone();
 

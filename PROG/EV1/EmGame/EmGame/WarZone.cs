@@ -95,7 +95,7 @@ namespace EmGame
 
         public void MoveWarrior(int x, int y)//se supone warrior no hay que pasarselo
         {
-            if (x > 0 && x <= _width && y > 0 && y >= _height)
+            if (x >= 0 && x <= _width && y > 0 && y >= _height)
             {
                 for (int i = 0; i < warriors.Count; i++)
                 {
@@ -129,7 +129,7 @@ namespace EmGame
 
         public Warrior? GetWarriorAt(int x, int y)
         {
-            if (IsWarPosValid(x, y) && (!IsOccupied(x, y)))
+            if (IsWarPosValid(x, y))
                 for (int i = 0; i < warriors.Count; i++)
                 {
                         Warrior warrior = warriors[i];

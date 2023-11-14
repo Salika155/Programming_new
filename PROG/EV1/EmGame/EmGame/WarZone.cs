@@ -26,11 +26,16 @@ namespace EmGame
 
                     if (warrior != null)
                     {
+                        Console.BackgroundColor = ConsoleColor.Green;
                         Console.Write(" W ");
+                        Console.ResetColor();
                     }
-                    else
+                 
+                    else 
                     {
+                        Console.BackgroundColor = ConsoleColor.Red;
                         Console.Write(" I ");
+                        Console.ResetColor();
                     }
                 }
                 Console.WriteLine(); 
@@ -39,7 +44,15 @@ namespace EmGame
 
         private bool IsOccupied(int x, int y)
         {
-            return warriors.Any(w => w.GetX() == x && w.GetY() == y);
+           for (int i = 0; i < warriors.Count; i++)
+           {
+                var warrior = warriors[i];
+                if (warrior.GetX() == x && warrior.GetY() == y)
+                {
+                    return true;
+                } 
+           }
+            return false;
         }
 
 
@@ -47,12 +60,18 @@ namespace EmGame
         {
             for(int i = 0; i < count; i++)
             {
-                    int x = UtilsEmGame.GetRandom(i, _width);
-                    int y = UtilsEmGame.GetRandom(i, _height);
+                    int x = UtilsEmGame.GetRandom(1, _width);
+                    int y = UtilsEmGame.GetRandom(1, _height);
 
                 if (!IsOccupied(x, y))
                 {
                     Warrior warrior = new Warrior(x, y, 10, 6.0, 6, type);
+                    warriors.Add(warrior);
+                    i++;
+                }
+                else
+                {
+                    Warrior warrior = new Warrior(x + 1, y + 1, 10, 6.0, 6, type);
                     warriors.Add(warrior);
                     i++;
                 }
@@ -115,7 +134,7 @@ namespace EmGame
 
         public Warrior? GetWarriorAt(int x, int y)
         {
-            if (IsWarPosValid(x, y))
+            if (IsWarPosValid(x, y) && (!IsOccupied(x, y)))
                 for (int i = 0; i < warriors.Count; i++)
                 {
                         Warrior warrior = warriors[i];
@@ -125,17 +144,28 @@ namespace EmGame
             return null;
         }
 
-        public int GetWarriorCount()
+        public int GetWarriorCount(TeamType team)
         {
             int count = 0;
-            for (int i = 0; i <= warriors.Count; i++)
-            {
 
+            for (int i = 0; i < warriors.Count; i++)
+            {
+                Warrior warrior = warriors[i];
+                if (warrior.GetTeamType() == team)
+                {
+                    count++;
+                }
             }
-            if (warriors != null)
-                return warriors.Count;
-            return -1;
+            return count;
+        
+
+         //if (warriors != null)
+         //    return warriors.Count;
+         //return 0;
         }
+            
+
+        
 
         public Warrior? GetWarriorAt(int index)
         {
@@ -199,7 +229,7 @@ namespace EmGame
         {
             List<Warrior> warriorsAround = new List<Warrior>();
 
-            if (IsWarPosValid(x, y))
+            if (IsWarPosValid(x, y) && (!IsOccupied(x, y)))
             {
                 int x0 = x - 1; int y0 = y - 1; int x1 = x + 1; int y1 = y + 1;
                 return GetWarriorsInside(x0, y0, x1, y1).Count();
@@ -251,10 +281,8 @@ namespace EmGame
             return warSortbyDist;
         }
 
-        public List<Warrior> GetWarriorsSortedByDistance(List<Warrior> warriors,int x, int y)
+        public List<Warrior> GetWarriorsSortedByDistance(List<Warrior> warSortbyDist, int x, int y)
         {
-            List<Warrior> warSortbyDist = new List<Warrior>();
-
             for (int i = 0; i < warriors.Count - 1; i++)
             {
                 for (int j = i + 1; j < warriors.Count; j++)

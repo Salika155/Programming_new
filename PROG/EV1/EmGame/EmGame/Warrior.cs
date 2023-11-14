@@ -29,7 +29,7 @@ namespace EmGame
 
         public Warrior(int x, int y, int life, double accuracity, int armor, /*double lucky,*/ TeamType team)
         {
-            if (x <= 0 && y <= 0) 
+            if (x >= 0 && y >= 0) 
             {
                 _x = x;
                 _y = y;
@@ -98,13 +98,13 @@ namespace EmGame
 
         public void SetX(int x)
         {
-            if (x <= 0)
+            if (x >= 0)
             _x = x;
         }
 
         public void SetY(int y)
         {
-            if (y <= 0)
+            if (y >= 0)
                 _y = y;
         }
 
@@ -129,7 +129,7 @@ namespace EmGame
 
         public void Move(int x, int y)
         {
-            if (x <= 0 && y <= 0)
+            if (x >= 0 && y >= 0)
             _x = x;
             _y = y;
         }

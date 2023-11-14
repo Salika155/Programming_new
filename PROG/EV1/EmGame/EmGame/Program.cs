@@ -13,23 +13,26 @@
             //warZone.CreateWarriors(1, TeamType.ORC);
             //warZone.CreateWarriors(1, TeamType.ELF);
 
-            gm.Start(4, 1, 1, 1);
+            
  
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
-
+                gm.Start(0, 0, 0, 0);
                 //int x = UtilsEmGame.GetRandom(1, warZone.GetWith() + 1);
                 //int y = UtilsEmGame.GetRandom(1, warZone.GetHeight() + 1);
-                new Warrior(12, 5, 5, 5.0, 5, TeamType.HUMAN);
-                warZone.CreateWarriors(5, TeamType.HUMAN);
 
+
+                warZone.CreateWarriors(1, TeamType.HUMAN);
+                warZone.CreateWarriors(1, TeamType.DWARF);
+                warZone.CreateWarriors(1, TeamType.ORC);
+                warZone.CreateWarriors(1, TeamType.ELF);
             }
             warZone.PaintWarZone();
 
-            bool gameRunning = true;
-            List<TeamType> teams = new List<TeamType> { TeamType.HUMAN, TeamType.ELF, TeamType.DWARF, TeamType.ORC };
-            while (gameRunning == true)
-                gm.PlayTurn(warZone);
+            //bool gameRunning = true;
+            //List<TeamType> teams = new List<TeamType> { TeamType.HUMAN, TeamType.ELF, TeamType.DWARF, TeamType.ORC };
+            //while (gameRunning == true)
+            //    gm.PlayTurn(warZone);
         }
     }
 }

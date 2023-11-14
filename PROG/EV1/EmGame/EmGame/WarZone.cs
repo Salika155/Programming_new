@@ -26,11 +26,11 @@ namespace EmGame
 
                     if (warrior != null)
                     {
-                        Console.Write("W ");
+                        Console.Write(" W ");
                     }
                     else
                     {
-                        Console.Write("I ");
+                        Console.Write(" I ");
                     }
                 }
                 Console.WriteLine(); 
@@ -127,6 +127,11 @@ namespace EmGame
 
         public int GetWarriorCount()
         {
+            int count = 0;
+            for (int i = 0; i <= warriors.Count; i++)
+            {
+
+            }
             if (warriors != null)
                 return warriors.Count;
             return -1;

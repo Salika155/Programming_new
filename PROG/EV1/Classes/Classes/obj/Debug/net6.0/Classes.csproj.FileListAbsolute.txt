@@ -27,3 +27,18 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\ref\Classes.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\bin\Debug\net6.0\Classes.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\refint\Classes.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\Classes.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV1\Classes\Classes\obj\Debug\net6.0\ref\Classes.dll

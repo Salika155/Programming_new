@@ -125,7 +125,6 @@ namespace Classes
                     }
                 }
             }
-
         }
 
         public DayOfWeek GetDayOfWeek()

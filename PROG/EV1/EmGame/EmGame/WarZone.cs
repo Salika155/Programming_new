@@ -69,12 +69,7 @@ namespace EmGame
                     warriors.Add(warrior);
                     i++;
                 }
-                else
-                {
-                    Warrior warrior = new Warrior(x + 1, y + 1, 10, 6.0, 6, type);
-                    warriors.Add(warrior);
-                    i++;
-                }
+                
             }
         }
 
@@ -222,7 +217,7 @@ namespace EmGame
 
         public bool IsWarPosValid(int x, int y)
         {
-            return ((x > 0 && x <= _width)&&(y > 0 && y <= _height));
+            return ((x > 0 && x <= _width) && (y > 0 && y <= _height));
         }
 
         public int GetPlayersArroundCount(int x, int y)

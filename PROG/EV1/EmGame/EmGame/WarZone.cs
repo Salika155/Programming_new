@@ -352,5 +352,7 @@ namespace EmGame
         //getwarriorcount y getwarriorat acceder a elementos de lista si no nos dejan, salen examen
 
         
+        //crear funcion start y hacer el createwarriors con el numero de guerreros por raza que quiera crear 
+
     }
 }

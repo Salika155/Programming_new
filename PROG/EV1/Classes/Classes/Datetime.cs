@@ -99,7 +99,7 @@ namespace Classes
         {
             _day++;
 
-            if (_day > GetDaysOfMonth(_year, _month))
+            if (_day > GetDaysCount(_year, _month))
             {
                 _day = 1;
                 _month++;
@@ -137,59 +137,63 @@ namespace Classes
 
         public DayOfWeek GetDayOfWeek()
         {
-            DateTime dateTime = new DateTime(_year, _month, _day);
-            switch (dateTime.DayOfWeek)
+            Datetime dateTime = new Datetime(_year, _month, _day);
+            
+
+            
+        }
+
+        public int weekCode()
+        {
+            int code = (GetDay() % 7) + monthCode() + yearCode();
+            if (IsLeap() && GetMonth() == 1 || GetMonth() == 2)
+                return code--;
+            return code;
+
+        }
+
+        public int monthCode()
+        {
+            switch(GetMonth())
             {
-                case DayOfWeek.Monday:
-                    return DayOfWeek.Monday;
-                case DayOfWeek.Tuesday:
-                    return DayOfWeek.Tuesday;
-                case DayOfWeek.Wednesday:
-                    return DayOfWeek.Wednesday;
-                case DayOfWeek.Thursday:
-                    return DayOfWeek.Thursday;
-                case DayOfWeek.Friday:
-                    return DayOfWeek.Friday;
-                case DayOfWeek.Saturday:
-                    return DayOfWeek.Saturday;
-                case DayOfWeek.Sunday:
-                    return DayOfWeek.Sunday;
-                default:
-                    return 0;
+
             }
         }
 
-        public int GetDaysOfMonth(int _year, int _month)
+        public int yearCode()
         {
-            if (_month >= 1 && _month <= 12)
-            {
-                return DateTime.DaysInMonth(_year, _month);
-            }
-            else
-            {
-                return -1;
-            }
+
+        }
+
+        public int GetLeapCountBetween(int val1, int val2)
+        {
+            //for primero variable para adquirir el count, pasandole isleap (i) y aumentando el contador en el numero de bisiestos
+            //en el for tener en cuenta las dos variables que le paso
+
+        }
+
+        public int GetDayOfMonth(int _year, int _month)
+        {
+            return GetDaysCount(GetYear(), GetMonth());
         }
 
         public string ToString()
         {
             //si es valida return elementos + signo
-            return _year.ToString() + "-" + _month.ToString() + "-" + _day.ToString() + " | " 
-                + _hour.ToString() + ":" + _minute.ToString() + ":" + _second.ToString();
+            return _year + "-" + _month + "-" + _day + " | " 
+                + _hour + ":" + _minute + ":" + _second;
         }
 
-        public int GetDaysCount(int year, int month)
+        public static int GetDaysCount(int year, int month)
         {
-            //if mes 1, 3 y tal devuelve 31,
-            //return IsLeap(year) ? 29 : 28
-            if (_day > 0 && _month >= 1 && _month <= 12)
-            {
-                return DateTime.DaysInMonth(year, month);
-            }
-            else
-            {
-                return -1;
-            }
+                if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+                    return 31;
+                {
+                    return (month == 2 && IsLeap(year)) ? 29 : 28;
+                }
+                return 30;
+
+            
         }
 
         public int GetYear()

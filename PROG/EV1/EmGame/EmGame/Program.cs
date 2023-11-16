@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-            EmGame gm = new EmGame();
             WarZone warZone = new WarZone(16, 16);
            
 
@@ -17,7 +16,6 @@
  
             for (int i = 0; i < 4; i++)
             {
-                gm.Start(0, 0, 0, 0);
                 //int x = UtilsEmGame.GetRandom(1, warZone.GetWith() + 1);
                 //int y = UtilsEmGame.GetRandom(1, warZone.GetHeight() + 1);
 

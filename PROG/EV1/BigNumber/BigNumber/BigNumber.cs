@@ -8,7 +8,7 @@ namespace BigNumber
 {
     public class BigNumber
     {
-        private List <BigNumber> _list = new List <BigNumber> ();
+        private List <BigNumber> _list = new List <BigNumber>();
 
 
 

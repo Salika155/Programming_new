@@ -8,23 +8,22 @@ namespace BigNumber
 {
     public class BigNumber
     {
-        private List <BigNumber> _list = new List <BigNumber>();
-
+        private List<int> _numbers = new List<int>();
 
 
         public BigNumber(long bignumber)
         {
-
+            long number = bignumber;
         }
 
         public BigNumber(string bignumber)
         {
-
+            string number = bignumber;
         }
 
         public void Set(long bignumber)
         {
-
+            
         }
 
         public void Set(string bignumber)
@@ -42,13 +41,16 @@ namespace BigNumber
 
         }
 
-        public void GetDigitAt(List<BigNumber> index)
+        public void GetDigitAt(long index)
         {
+            return (index >= 0 && index < _numbers.Count) ? _numbers[index] : null;
+               
 
-        }
+            }
 
         public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
         {
+
             return Add(bigNumber1, bigNumber2);
         }
 
@@ -73,9 +75,9 @@ namespace BigNumber
             return Add(bigNumber1, bigNumber2);
         }
 
-        public void CloneBigNumber()
+        public BigNumber CloneBigNumber()
         {
-
+            return new BigNumber(_numbers.ToString());
         }
              
         

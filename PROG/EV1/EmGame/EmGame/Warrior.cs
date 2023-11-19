@@ -8,7 +8,8 @@ namespace EmGame
         HUMAN,
         DWARF,
         ORC,
-        ELF
+        ELF,
+        WINNER
     }
     public class Warrior
     {

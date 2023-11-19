@@ -61,16 +61,15 @@ namespace Classes
             Console.WriteLine(figure.GetFigureType() + " " + figure.IsValid());
             Console.WriteLine("---------------------------------------------------------");
 
-            Datetime datetime= new Datetime();
+            Datetime datetime = new Datetime();
             Console.WriteLine("La fecha de hoy es: " + datetime);
-            
 
             datetime.SetYear(1993);
             datetime.SetMonth(12);
             datetime.SetDay(31);
-            Console.WriteLine("La fecha de hoy es: " + datetime);
+            Console.WriteLine("La fecha actualizada es: " + datetime);
             datetime.IncrementDays();
-            Console.WriteLine("El año es valido: "+ datetime.IsValid());
+            Console.WriteLine("El año es válido: " + datetime.IsValid());
 
             Console.WriteLine("La fecha de hoy es: " + datetime);
             datetime.IncrementSeconds();

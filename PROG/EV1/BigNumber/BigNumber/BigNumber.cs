@@ -23,7 +23,11 @@ namespace BigNumber
 
         public void Set(long bignumber)
         {
-            
+            while (bignumber > 0) 
+            {
+                _numbers.Add(int)(bignumber % 10));
+                bignumber /= 10 ;
+            }
         }
 
         public void Set(string bignumber)
@@ -43,7 +47,7 @@ namespace BigNumber
 
         public void GetDigitAt(long index)
         {
-            return (index >= 0 && index < _numbers.Count) ? _numbers[index] : null;
+            //return (index >= 0 && index < _numbers.Count) ? _numbers : null;
                
 
             }

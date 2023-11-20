@@ -69,14 +69,14 @@ namespace BigNumber
 
         public string ConvertToString()
         {
-           // string res = "";
+            string res = "";
 
-           //for (int i = GetDigitCount() - 1; i > 0; i--)
-           // {
-           //     res = res + GetDigitAt(i).ToString();
-           // }
-           //return res;
-           
+            for (int i = GetDigitCount() - 1; i >= 0; i--)
+            {
+                res = res + GetDigitAt(i).ToString();
+            }
+            return res;
+
         }
 
         public int GetDigitCount()
@@ -86,9 +86,11 @@ namespace BigNumber
 
         public int GetDigitAt(int index)
         {
-            //return (index >= 0 && index < _numbers.Count) ? _numbers : null;
-            return _numbers[index];
-
+            if (index >= 0 && index < _numbers.Count)
+            {
+                return _numbers[index];
+            }
+            return -1;
         }
 
         public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
@@ -120,7 +122,7 @@ namespace BigNumber
 
         public BigNumber CloneBigNumber()
         {
-            //return CloneBigNumber(this);
+            return CloneBigNumber(this);
         }
 
         public static BigNumber CloneBigNumber()

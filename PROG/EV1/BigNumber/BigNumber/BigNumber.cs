@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,47 +11,85 @@ namespace BigNumber
     {
         private List<int> _numbers = new List<int>();
 
+        public BigNumber()
+        {
 
+        }
         public BigNumber(long bignumber)
         {
-            long number = bignumber;
+            Set(bignumber);
         }
 
         public BigNumber(string bignumber)
         {
-            string number = bignumber;
+            Set(bignumber);
         }
 
         public void Set(long bignumber)
         {
-            while (bignumber > 0) 
+            while (bignumber != 0)
             {
-                _numbers.Add(int)(bignumber % 10));
-                bignumber /= 10 ;
+                if (bignumber > 0)
+                {
+                    _numbers.Add((int)(bignumber % 10));
+                    {
+                        bignumber /= 10;
+                    }
+                }
+                else if (bignumber < 0)
+                {
+                    _numbers.Add((int)(-bignumber % 10));
+                    {
+                        bignumber /= 10;
+                    }
+                }
             }
         }
 
         public void Set(string bignumber)
         {
-
+            for (int i = bignumber.Length - 1; i >= 0; i--)
+            {
+                char c = bignumber[i];
+                if (c == '_' && c == 0)
+                {
+                    _numbers[_numbers.Count - 1] *= -1;
+                }
+                else
+                {
+                    if (c != '-')
+                    {
+                        int n = c - '0';
+                        _numbers.Add(n);
+                    }
+                    
+                }
+            }
         }
 
-        public string ToString()
+        public string ConvertToString()
         {
-            return string.Empty;
+           // string res = "";
+
+           //for (int i = GetDigitCount() - 1; i > 0; i--)
+           // {
+           //     res = res + GetDigitAt(i).ToString();
+           // }
+           //return res;
+           
         }
 
-        public void GetDigitCount()
+        public int GetDigitCount()
         {
-
+                return _numbers.Count;
         }
 
-        public void GetDigitAt(long index)
+        public int GetDigitAt(int index)
         {
             //return (index >= 0 && index < _numbers.Count) ? _numbers : null;
-               
+            return _numbers[index];
 
-            }
+        }
 
         public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
         {
@@ -81,9 +120,15 @@ namespace BigNumber
 
         public BigNumber CloneBigNumber()
         {
-            return new BigNumber(_numbers.ToString());
+            //return CloneBigNumber(this);
         }
-             
+
+        public static BigNumber CloneBigNumber()
+        {
+            
+            
+        }
+        
         
     }
 

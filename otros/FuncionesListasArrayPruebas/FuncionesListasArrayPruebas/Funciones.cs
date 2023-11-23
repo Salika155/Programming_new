@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -85,12 +86,82 @@ namespace FuncionesListasArrayPruebas
 
         //Pasar una lista de enteros, quiero devolver la posicion donde se encuentra el valor mas alto de la lista.
 
+        public static int ValorMasAlto(List<int> l4)
+        {
+           if (l4 == null || l4.Count == 0)
+                return -1;
+
+            int max = l4[0]; //defines un max = 0 para compararlo con el valor, si el numero[i] es mayor, le da el valor
+            //a ese max y lo iguala a el numero, index se convierte en ese numero.
+            int index = 0;
+
+            for (int i = 0; i < l4.Count; i++)
+            {
+                if (l4[i] > max)
+                {
+                    max = l4[i];
+                    index = i;
+                }
+            }
+            return index;
+        }
+
         //Funcion que le paso una lista de enteros y me dice si esta ordenada o no de manera ascendente
+
+        public static bool ListaEnterosOrdenadaAsc(List<int> l5)
+        {
+            if (l5 == null || l5.Count <= 1)
+                return true;
+
+            for (int i = 1; i < l5.Count; i++)
+            {
+                //el -1 hace referencia a comprobar la posicion anterior
+                if (l5[i] < l5[i - 1])
+                    return false;
+            }
+            return true;
+        }
 
         //Contiene elemento dentro del array
 
+        public static bool IsInArray(int[] array, int n)
+        {
+            if (array == null)
+                return false;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == n)
+                    return true;
+            }
+            return false;
+        }
+
         //Le paso un numero y compruebo dentro de la lista si esta mediante el binarysearch
         //punto medio, comparo y muevo valores binarysearch
+
+        public static bool SearchByBinary(List<int> l6, int n)
+        {
+            if (l6 == null || l6.Count == 0)
+                return false;
+
+            int min = 0;
+            int max = l6.Count - 1;
+
+            while (min <= max)
+            {
+                int med = (min + max) / 2;
+
+                if (l6[med] == n)
+                    return true;
+                else if (l6[med] < n)
+                    min = med + 1;
+                else if (l6[med] > n)
+                    max = med - 1;
+            }
+            return false;
+
+        }
 
         //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi
 

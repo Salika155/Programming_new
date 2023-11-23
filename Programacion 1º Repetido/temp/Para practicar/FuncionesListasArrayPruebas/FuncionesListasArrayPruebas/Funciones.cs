@@ -90,7 +90,7 @@ namespace FuncionesListasArrayPruebas
             if (l4 == null || l4.Count == 0)
                 return -1;
 
-            int max = l4[0];
+            int max = l4[0]; 
             int index = 0;
 
             for (int i = 0; i < l4.Count; i++) 

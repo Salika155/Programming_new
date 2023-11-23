@@ -197,7 +197,7 @@ namespace ArrayList
 
             while (min <= max)
             {
-                int med = ((min + max) / 2);
+                int med = ((min + max) / 2); 
 
                 if (array1[med] == value)
                     return true;

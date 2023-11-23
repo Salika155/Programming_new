@@ -122,7 +122,8 @@ namespace BigNumber
 
         public BigNumber CloneBigNumber()
         {
-            return CloneBigNumber(this);
+            //return CloneBigNumber(this);
+            
         }
 
         public static BigNumber CloneBigNumber()

@@ -312,7 +312,7 @@ namespace ArrayList
 
         //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al reves del array que le he metido
 
-        public static int[] ArrayOrderedDesc(int[] arrayenteros)
+        public static int[]? ArrayOrderedDesc(int[] arrayenteros)
         {
             if (arrayenteros == null) //siempre es esto, excepto si antes de la condicion necesitas acceder a un array[0]
                 return null;
@@ -362,7 +362,7 @@ namespace ArrayList
 
         //sort array
 
-        public static Array SortArray(int[] arraysort)
+        public static Array? SortArray(int[] arraysort)
         {
             if (arraysort == null)
             {
@@ -414,7 +414,7 @@ namespace ArrayList
         //si es par divida entre 2
         //si es impar multiplique por 3 y le sume 1
 
-        public static List<int> SerieCollatz(int n)
+        public static List<int>? SerieCollatz(int n)
         {
             if (n == null || n <= 0)
                 return null;
@@ -440,7 +440,7 @@ namespace ArrayList
 
         //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
 
-        public static List<int> GetElementosParesLista(List<int> l)
+        public static List<int>? GetElementosParesLista(List<int> l)
         {
             if (l == null)
                 return null;
@@ -460,13 +460,13 @@ namespace ArrayList
         }
 
         //hallar los numeros pares de un array
-        public static int[] GetPairsArray(List<int> l)
+        public static int[]? GetPairsArray(List<int> l)
         {
             if (l == null)
                 return null;
 
 
-            List<int> pares = GetElementosParesLista(l);
+            List<int>? pares = GetElementosParesLista(l);
             int n = pares.Count;
             int[] result = new int[n];
             int j = 0;

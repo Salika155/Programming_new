@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -140,7 +141,7 @@ namespace FuncionesListasArrayPruebas
         //Le paso un numero y compruebo dentro de la lista si esta mediante el binarysearch
         //punto medio, comparo y muevo valores binarysearch
 
-        public static bool SearchByBinary(List<int> l6, int n)
+        public static bool SearchByBinaryLista(List<int> l6, int n)
         {
             if (l6 == null || l6.Count == 0)
                 return false;
@@ -163,16 +164,94 @@ namespace FuncionesListasArrayPruebas
 
         }
 
+        
+
         //funcion que se le pasa un array de dobles y devuelve la media de todos los valores que hay ahi
+
+        public static double GetArrayMedia(int[] array)
+        {
+            if (array == null)
+                return double.NaN;
+
+            double aux = 0.0;
+            for (int i = 0; i < array.Length; i++)
+                aux+= array[i];
+            return aux / array.Length;
+        }
+
 
         //Funcion que le pasas un array y un umbral y tiene que devolver la media de todos estos valores pero solamente de aquellos que superen este numero
 
+        public static double GetUmbral(int[] array, double umbral)
+        {
+            if (array == null)
+                return double.NaN;
+
+            double avg = 0.0;
+            int count = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] >= umbral)
+                {
+                    avg = array[i];
+                    count++;
+                }
+                if (count == 0)
+                    return double.NaN;
+            }
+            return avg / count;
+        }
         // Funcion que le paso una lista de enteros y me devuelve un entero. Devuelve numero de veces que se repite el numero mas alto
 
+        public static int GetNumberMayorRepetido(List<int> list)
+        {
+            if (list == null || list.Count < 1)
+                return -1;
+
+            int count = 1;
+            int max = list[0];
+
+            return count;
+
+        }
         // Funcion que necesita como parametro una lista de enteros, y me tiene que devolver una lista de enteros pero al reves de la lista que le he metido
         // [0, 7, -1, 8] -> [8, -1, 7, 0]
 
+        public static List<int> SwapValores(List <int> listavalor)
+        {
+            List<int> list = new List<int>();
+
+            if (listavalor == null || listavalor.Count == 0)
+                return new List<int>();
+
+            for (int i = 0; i < listavalor.Count; i++) 
+            {
+                list.Add(listavalor[i]);
+            }
+            return list;
+
+        }
+
         //Funcion que le paso una lista de enteros y los imprime por pantalla
+
+        public static void WriteForScreen(List<int> listaenteros)
+        {
+            if (listaenteros == null)
+                return;
+
+            listaenteros.Add(5);
+            listaenteros.Add(74);
+            listaenteros.Add(43);
+            listaenteros.Add(9);
+            listaenteros.Add(36);
+
+            for (int i = 0; i < listaenteros.Count; i++)
+            {
+                Console.WriteLine(listaenteros[i] + ", ");
+            }
+
+        }
 
         //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al reves del array que le he metido
 

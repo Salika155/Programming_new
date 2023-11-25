@@ -51,7 +51,7 @@ namespace BigNumber
             for (int i = bignumber.Length - 1; i >= 0; i--)
             {
                 char c = bignumber[i];
-                if (c == '_' && c == 0)
+                if (c == '_' || c == 0)
                 {
                     _numbers[_numbers.Count - 1] *= -1;
                 }
@@ -95,12 +95,34 @@ namespace BigNumber
 
         public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
         {
+            if (bigNumber1 == null || bigNumber2 == null)
+                return null;
+
+            int carry = 0;
+
+            //List<int> result = new List<int>();
+
+            //for (int i = bigNumber1._numbers.Count - 1; i >= 0; i--)
+            //{
+            //    int sum = bigNumber1._numbers[i] + bigNumber2._numbers[i] + carry;
+            //    result.Insert(0, sum % 10);
+            //    carry = sum / 10;
+            //}
+
+            //// Si hay un acarreo final, agregarlo al resultado
+            //if (carry > 0)
+            //{
+            //    result.Insert(0, carry);
+            //}
+
+            //return new BigNumber { _numbers = result };
 
             return Add(bigNumber1, bigNumber2);
         }
 
         public static BigNumber Substract(BigNumber bigNumber1, BigNumber bigNumber2)
         {
+           
             return Add(bigNumber1, bigNumber2);
 
         }
@@ -122,14 +144,20 @@ namespace BigNumber
 
         public BigNumber CloneBigNumber()
         {
-            //return CloneBigNumber(this);
-            
+            BigNumber clone = new BigNumber();
+
+            for (int i = 0; i < _numbers.Count; i++)
+            {
+                clone._numbers.Add(_numbers[i]);
+            }
+
+            return clone;
         }
 
-        public static BigNumber CloneBigNumber()
+        public static BigNumber CloneBigNumber(BigNumber original)
         {
-            
-            
+            return original.CloneBigNumber();
+
         }
         
         

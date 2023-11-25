@@ -181,16 +181,46 @@ namespace Classes
             if (xx == targetX && yy == targetY)
                 return true;
 
+            xx = x + 1;
+            yy = y + 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
 
+            xx = x + 0;
+            yy = y + 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
 
+            xx = x - 1;
+            yy = y + 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
+
+            xx = x - 1;
+            yy = y - 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
+
+            xx = x + 0;
+            yy = y - 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
+
+            xx = x + 1;
+            yy = y - 1;
+            f = GetFigureAt(figures, xx, yy);
+            if (xx == targetX && yy == targetY)
+                return true;
 
             return false;
         }
         
-
-
-
-            public static ChessFigure? GetFigureAt(List<ChessFigure> figures, int x, int y)
+        public static ChessFigure? GetFigureAt(List<ChessFigure> figures, int x, int y)
         {
             for (int i = 0; i < figures.Count; i++)
             {

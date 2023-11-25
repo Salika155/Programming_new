@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\bin\Debug\net6.0\BigNumber.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\bin\Debug\net6.0\BigNumber.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\bin\Debug\net6.0\BigNumber.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\bin\Debug\net6.0\BigNumber.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\bin\Debug\net6.0\BigNumber.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\refint\BigNumber.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\BigNumber.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV1\BigNumber\BigNumber\obj\Debug\net6.0\ref\BigNumber.dll

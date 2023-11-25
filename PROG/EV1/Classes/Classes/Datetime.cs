@@ -218,7 +218,6 @@ namespace Classes
             Datetime datetime = new Datetime();
 
            
-            
                 if (val1 > val2)
                 {
                     int temp = val1;

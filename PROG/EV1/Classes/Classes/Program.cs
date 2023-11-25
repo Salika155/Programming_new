@@ -41,6 +41,7 @@ namespace Classes
             int centims = CoinChange.ToNumber(coin);
             Console.WriteLine(centims / 100 + " Euros");
 
+            //aqui tengo que hacer cosas
             int centimss = 200;
             CoinValor moneda = CoinChange.ToMoneda(centimss);
             Console.WriteLine(moneda);
@@ -50,10 +51,22 @@ namespace Classes
             //Console.WriteLine(monedas);
             Console.WriteLine("---------------------------------------------------------");
 
-            Card card = new(54, Palo.TREBOLES);
-            Console.WriteLine(card);
+            Card card = new(5, Palo.TREBOLES);
+            Console.WriteLine(card.GetPalo());
+            Console.WriteLine(card.GetNumber());
             Console.WriteLine(card.GetFigureType());
             Console.WriteLine(card.IsFigure() + " " + card.IsValid());
+            Card card2 = new(39, Palo.TREBOLES);
+            Console.WriteLine(card2.GetPalo());
+            Console.WriteLine(card2.GetNumber());
+            Console.WriteLine(card2.GetFigureType());
+            Console.WriteLine(card2.IsFigure() + " " + card2.IsValid());
+            Card card3 = new(-9, Palo.UNKNOWN);
+            Console.WriteLine(card3.GetPalo());
+            Console.WriteLine(card3.GetNumber());
+            Console.WriteLine(card3.GetFigureType());
+            Console.WriteLine(card3.IsFigure() + " " + card3.IsValid());
+
             Console.WriteLine("---------------------------------------------------------");
 
             ChessFigure figure = new(2, 5, ChessFigureColor.WHITE, ChessFigureType.BISHOP);
@@ -63,11 +76,14 @@ namespace Classes
 
             Datetime datetime = new Datetime();
             Console.WriteLine("La fecha de hoy es: " + datetime);
-
+            
             datetime.SetYear(1993);
             datetime.SetMonth(12);
             datetime.SetDay(31);
             Console.WriteLine("La fecha actualizada es: " + datetime);
+            Console.WriteLine(datetime.GetDay());
+            Console.WriteLine(datetime.GetMonth());
+            Console.WriteLine(datetime.GetYear());
             datetime.IncrementDays();
             Console.WriteLine("El año es válido: " + datetime.IsValid());
 

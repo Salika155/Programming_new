@@ -96,7 +96,10 @@ namespace Classes
 
         //public int GetPieceIndex(DominoPiece piece)
         //{
-        //   for (int i = 0; i < GetPieceCount(); i++)
+        //    for (int i = 0; i < GetPieceCount(); i++)
+        //    {
+
+        //    }
 
         //}
     }

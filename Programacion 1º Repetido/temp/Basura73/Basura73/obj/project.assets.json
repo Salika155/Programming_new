@@ -320,7 +320,6 @@
           "StbImageSharp": "2.27.13",
           "StbRectPackSharp": "1.0.4",
           "StbSharp": "0.7.2.38",
-          "UDK-native": "1.0.0",
           "UDK-sgen": "1.0.0",
           "UDK-shapes": "1.0.0"
         },
@@ -329,15 +328,6 @@
         },
         "runtime": {
           "lib/net6.0/UDK.dll": {}
-        }
-      },
-      "UDK-native/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/UDK-native.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/UDK-native.dll": {}
         }
       },
       "UDK-sgen/1.0.0": {
@@ -707,7 +697,7 @@
       ]
     },
     "UDK/1.0.0": {
-      "sha512": "ghV4Z05Bb7qSBFMeszQALcaOCgdiDV9sV0Cyda7waeEinqpnc1khbEjE211cuivZ2R2WK7B5lofDxdVp2uT0qA==",
+      "sha512": "N2lqorSchq7Zp3bZQzqXQl9tOjQPyVl9v34erwo8m0vEwERhCPo/gOgl29BRzL555HWjlLnEIOxq+FmjWa0tdA==",
       "type": "package",
       "path": "udk/1.0.0",
       "files": [
@@ -717,19 +707,8 @@
         "udk.nuspec"
       ]
     },
-    "UDK-native/1.0.0": {
-      "sha512": "o49ws8mpN/xX8tcgpJTGYuRLCYxd42GhOEES+tggJ5y6z/kEuyLQiy5bEaWIzRpXTiEE4FfFIXYYR16tgAHsLA==",
-      "type": "package",
-      "path": "udk-native/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net6.0/UDK-native.dll",
-        "udk-native.1.0.0.nupkg.sha512",
-        "udk-native.nuspec"
-      ]
-    },
     "UDK-sgen/1.0.0": {
-      "sha512": "/dgrT5ddOMLVgdiii2iAOOIiLv5hFnD3HRXCcXEpN9TEP9moBpYnXfToLHGqhO86BB6k32AmEF0nd1JX0K+FDA==",
+      "sha512": "H3IiGMtVQVwn1b+/LT1+cj8UPLFIAHDDoS+FNUnXRLbFuRrg1L1JyOMZIbHEhTwJnmFQT/egqe3yQBcrRAx/oA==",
       "type": "package",
       "path": "udk-sgen/1.0.0",
       "files": [
@@ -740,7 +719,7 @@
       ]
     },
     "UDK-shapes/1.0.0": {
-      "sha512": "PJAc6QE4698pkbOk2GpPh5YcUVwmyKC7cjCufEc+37ZNKkrmIRBVUKAM1Pa1bzT5BUXkj146QITDcsdPvJNPpw==",
+      "sha512": "Hbd2oK0tjk2mvudR2BTgsTOfq/uLK1EoBGBn6rxfAkim2FqJ1KJlwCon+HuaAvu5sVEFj8zwwyfBPsenZ8CweQ==",
       "type": "package",
       "path": "udk-shapes/1.0.0",
       "files": [
@@ -757,35 +736,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carcarcor\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\carre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\Basura73\\Basura73\\Basura73.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\temp\\Basura73\\Basura73\\Basura73.csproj",
       "projectName": "Basura73",
-      "projectPath": "C:\\Users\\carcarcor\\source\\repos\\Basura73\\Basura73\\Basura73.csproj",
-      "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carcarcor\\source\\repos\\Basura73\\Basura73\\obj\\",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\temp\\Basura73\\Basura73\\Basura73.csproj",
+      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\temp\\Basura73\\Basura73\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\Programacion 1º Repetido\\nugget": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -825,7 +796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

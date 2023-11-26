@@ -72,18 +72,18 @@ namespace ArrayList
             return false;
         }
 
-        //public static bool ContainsInList(List<double> listaenteros, int n)
-        //{
-        //    if (listaenteros != null)
-        //    {
-        //    for (int i = 0; i < listaenteros.Count; i++)
-        //    {
-        //        if (listaenteros[i] == n)
-        //            return true;
-        //    }
-        //}
-        //return false;
-        //}
+        public static bool ContainsInList1(List<double> listaenteros, int n)
+        {
+            if (listaenteros != null)
+            {
+                for (int i = 0; i < listaenteros.Count; i++)
+                {
+                    if (listaenteros[i] == n)
+                        return true;
+                }
+            }
+            return false;
+        }
 
         // #Region comprobacion de parametros -> titulo dado a una seccion desplegable para comprimir codigo.
         //#endregion
@@ -326,6 +326,23 @@ namespace ArrayList
             return arraydesordenado;
         }
 
+
+        // Lo mismo pero para listas
+
+        public static List<int> InvertList(List<int> list)
+        {
+            if (list == null)
+                return null;
+
+            List<int> listSinInvertir = new List<int>(list.Count);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                listSinInvertir.Add(list[list.Count - 1 - i]);
+            }
+            return listSinInvertir;
+        }
+
         //Funcion que le paso un array de enteros, y un entero, y quiero que esa funcion añada el entero que se le pasa al array
 
         public static int[] AddToArray(int[] arrayenteros, int n)
@@ -436,6 +453,32 @@ namespace ArrayList
 
         // Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores
 
+        public static List<int> GetElementosMayoresLista(List<int> listamayores)
+        {
+            if (listamayores == null || listamayores.Count < 2)
+                return null;
+
+            List<int> result = new List<int>();
+
+            int max1 = int.MinValue;
+            int max2 = int.MinValue;
+
+
+            for (int i = 0; i < listamayores.Count; i++)
+            {
+                int element = listamayores[i];
+                if (element > max1)
+                {
+                    max2 = max1;
+                    max1 = element;
+                }
+                else if (element > max2)
+                {
+                    max2 = element;
+                }    
+            }
+            return result;  
+        }
 
 
         //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
@@ -454,7 +497,6 @@ namespace ArrayList
                 {
                     result.Add(element);
                 }
-                
             }
             return result;
         }

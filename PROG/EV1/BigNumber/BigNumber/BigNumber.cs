@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,11 +28,17 @@ namespace BigNumber
 
         public void Set(long bignumber)
         {
+            // Asegurarse de que el número sea no negativo
+            bignumber = GetAbsoluteValue(bignumber);
+
+            // Determinar el signo original
+            int sign = (bignumber == 0) ? 0 : 1;
+
             while (bignumber != 0)
             {
                 if (bignumber > 0)
                 {
-                    _numbers.Add((int)(bignumber % 10));
+                    _numbers.Add((int)(bignumber % 10 * sign));
                     {
                         bignumber /= 10;
                     }
@@ -46,8 +53,21 @@ namespace BigNumber
             }
         }
 
+        
         public void Set(string bignumber)
         {
+            bool isNegative = false;
+
+            // Asegurarse de que el número sea no negativo
+            int startIndex = 0;
+
+            if (bignumber[0] == '-')
+            {
+                isNegative = true;
+                startIndex = 1;
+            }
+
+
             for (int i = bignumber.Length - 1; i >= 0; i--)
             {
                 char c = bignumber[i];
@@ -62,10 +82,15 @@ namespace BigNumber
                         int n = c - '0';
                         _numbers.Add(n);
                     }
-                    
                 }
             }
         }
+
+        private long GetAbsoluteValue(long number)
+        {
+            return number < 0 ? -number : number;
+        }
+
 
         public string ConvertToString()
         {
@@ -92,33 +117,60 @@ namespace BigNumber
             }
             return -1;
         }
-
+        #region Funcion Add
         public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
         {
             if (bigNumber1 == null || bigNumber2 == null)
                 return null;
 
-            int carry = 0;
+            BigNumber result = bigNumber1.CloneBigNumber();
+            BigNumber operad2 = bigNumber2.CloneBigNumber();
 
-            //List<int> result = new List<int>();
 
-            //for (int i = bigNumber1._numbers.Count - 1; i >= 0; i--)
-            //{
-            //    int sum = bigNumber1._numbers[i] + bigNumber2._numbers[i] + carry;
-            //    result.Insert(0, sum % 10);
-            //    carry = sum / 10;
-            //}
+            //creo una copia del bn1 como resultado, para asi no modificar el bn1 con las
+            //operaciones de carry;
 
-            //// Si hay un acarreo final, agregarlo al resultado
-            //if (carry > 0)
-            //{
-            //    result.Insert(0, carry);
-            //}
+            long length1 = result.GetDigitCount();
+            long length2 = bigNumber2.GetDigitCount();
 
-            //return new BigNumber { _numbers = result };
+            //bucle for para asegurarme que los dos numeros tendran el missmi numero de unidades
+            //si uno es menor que el otro, le añadira 0 a esos valores.
 
-            return Add(bigNumber1, bigNumber2);
+            //si fuese necesario ajustar el tamaño del bn2, haciendo lo misom
+
+            while (bigNumber2.GetDigitCount() < length1)
+            {
+                bigNumber2._numbers.Add(0);
+            }
+
+            while (result.GetDigitCount() < length2)
+            {
+                result._numbers.Add(0);
+            }
+
+            long carry = 0;
+
+            for (int i = 0; i < result.GetDigitCount(); i++)
+            {
+                long digit1 = result.GetDigitAt(i);
+                long digit2 = operad2.GetDigitAt(i);
+
+                long sum = digit1 + digit2 + carry;
+
+                carry = sum / 10;
+
+                result._numbers[i] = (int)(sum % 10);
+            }
+
+           if (carry > 0)
+            {
+                result._numbers.Add((int)carry);
+            }
+            return result;
+
         }
+
+        #endregion
 
         public static BigNumber Substract(BigNumber bigNumber1, BigNumber bigNumber2)
         {

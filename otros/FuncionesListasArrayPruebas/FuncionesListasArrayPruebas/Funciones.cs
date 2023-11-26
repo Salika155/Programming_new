@@ -11,7 +11,7 @@ namespace FuncionesListasArrayPruebas
     internal class Funciones
     {
 
-        //Funcion numero de valores mayor que cero lista
+        //Funcion que devuelve numero de valores mayor que cero lista
 
         public static int GetValorMayorCeroL(List<double> l)
         {
@@ -253,9 +253,61 @@ namespace FuncionesListasArrayPruebas
 
         }
 
-        //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al reves del array que le he metido
+        //Funcion que necesita como parametro un array de enteros, y me tiene que devolver un array de enteros pero al
+        //reves del array que le he metido
+
+        public static int[] InvertArray(int[] array)
+        {
+            if (array == null)
+                return null;
+
+            int [] arraysininvertir = new int[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                arraysininvertir[i] = array[array.Length] - 1 -i; 
+            }
+            return arraysininvertir;
+        }
+
+        // Lo mismo pero para listas
+
+        public static List<int> InvertList(List<int> list)
+        {
+            if (list == null)
+                return null;
+
+            List<int> listSinInvertir = new List<int>(list.Count);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                listSinInvertir.Add(list[list.Count - 1 - i]);
+            }
+
+            return listSinInvertir;
+        }
 
         //Funcion que le paso un array de enteros, y un entero, y quiero que esa funcion añada el entero que se le pasa al array
+
+        public static int[] AddToArray(int[] array, int n) 
+        {
+            //if (array == null)
+            //    return null; -> es lo mismo que lo de abajo
+
+            int[] newArray = array ?? new int[0];
+
+            int[] result = new int[newArray.Length + 1];
+
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                result[i] = newArray[i];
+            }
+
+            result[newArray.Length] = n;
+
+            return result;
+        }
+
 
         //algoritmo de la burbuja
 
@@ -269,27 +321,88 @@ namespace FuncionesListasArrayPruebas
 
         //sort array
 
+        public static Array SortArray(int[] array)
+        {
+            if (array == null)
+                return null;
+
+            for (int i = 0; i < array.Length - 1; i++) 
+            {
+                for (int j = 0; j < array.Length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        int aux = array[i];
+                        array[i] = array[j];
+                        array[j] = aux;
+                    }
+                }
+            }
+            return array;
+        }
+
         //sort lista
+
+        public static List<int> SortLista(List<int> list)
+        {
+            if (list == null)
+                return null;
+
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                for (int j = 0; j < list.Count; j++)
+                {
+                    if (list[i] > list[j])
+                    {
+                        int aux = list[i];
+                        list[i] = list[j];
+                        list[j] = aux;
+                    }
+                }
+            }
+            return list;
+        }
 
         //collatz serie 3n + 1
         //Funcion que le paso un numero y me devuelva la serie de collatz de ese numero
+
+
         //si es par divida entre 2
+
+
+
         //si es impar multiplique por 3 y le sume 1
+
+
+
 
         //Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores
 
-        //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
 
+
+
+        //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
         //hallar los numeros pares de un array
 
+
+
+
         // Funcion que le paso una lista de enteros y le paso una posicion. Lo que tiene que hacer esta funcion es borrar el elemento de esa posicion en la lista
+
+
 
         //[0, 7, 1, 8, 4]
         // Funcion paso una lista y un valor. Tiene que borrar de la lista el numero 8 sin usar el Remove.
 
         //Funcion igual con array
 
+
+
+
         //RemoveValues que estan en una lista 
+
+
+
 
         //removevalues para array
 

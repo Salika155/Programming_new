@@ -125,8 +125,9 @@ namespace FuncionesListasArrayPruebas
             int fibonacci = 12;
             Console.WriteLine(Fibonacci(fibonacci));
 
+            Console.WriteLine("----------------------------------------------------------------");
 
-            
+
 
 
 

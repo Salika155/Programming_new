@@ -39,10 +39,6 @@ namespace ClasesDelfin
             return (life / lifeCapacity);
         }
 
-
-
-
-
         public double GetLife()
         {
             return life;

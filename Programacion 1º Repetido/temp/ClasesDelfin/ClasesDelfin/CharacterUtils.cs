@@ -9,7 +9,8 @@ namespace ClasesDelfin
 {
     internal class CharacterUtils
     {
-        //funcion que yo le paso una lista de personajes y un string, que es un nombre Ana, quiero que me diga si hay algun personajes que se llame Ana en la lista
+        //funcion que yo le paso una lista de personajes y un string, que es un nombre Ana,
+        //quiero que me diga si hay algun personajes que se llame Ana en la lista
 
         public static bool ContainsName(List<Character> characters, string name)
         {
@@ -25,7 +26,8 @@ namespace ClasesDelfin
 
         }
 
-        //funcion que le paso una lista y un nombre, quiero que me devuelva el primer objeto con ese nombre que este
+        //funcion que le paso una lista y un nombre, quiero que me devuelva el primer objeto con ese
+        //nombre que este
         //en la lista
 
         public Character? ContainsObject(List<Character> characters, string name)

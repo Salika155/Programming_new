@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace FuncionesListasArrayPruebas
 {
-    internal class Funciones
+    public class Funciones
     {
-
+        #region funciones importantes 1
+        //IMPORTANTE
         //menor de 2 numeros
         public static int MenorQue(int a, int b)
         {
@@ -113,6 +114,7 @@ namespace FuncionesListasArrayPruebas
                 result *= i;
             return result;
         }
+#endregion
 
         //funcion que concatene dos strings
 

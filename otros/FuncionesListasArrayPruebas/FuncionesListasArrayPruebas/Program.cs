@@ -82,6 +82,55 @@ namespace FuncionesListasArrayPruebas
 
             Console.Write("El numero mayor de la lista es: ");
             Console.WriteLine(Funciones.NumeroMayorLista(listamayor));
+
+            Console.WriteLine("----------------------------------------------------------------");
+
+
+            int resultado = Funciones.MenorQue(5, 9);
+            Console.WriteLine("EL NUMERO MENOR ES: " + resultado);
+
+            int numpar = -24;
+            bool espar = Funciones.EsPar(numpar);
+            Console.WriteLine(espar);
+
+            int resultado2 = Funciones.MenorQueTres(5, 9, 4);
+            Console.WriteLine("EL NUMERO MENOR ES: " + resultado2);
+
+            Serie1(17);
+
+            int num = 11;
+            bool esprimo = Funciones.EsPrimo(num);
+            Console.WriteLine(esprimo);
+
+            Serie2(16);
+            Console.WriteLine("__________________________");
+
+            int number = Sumatorio(3);
+            Console.WriteLine(number);
+
+            int numberp = Productorio(8);
+            Console.WriteLine(numberp);
+
+            string a1 = "a";
+            string b2 = "b";
+            string result = ConcatenacionStrings(a1, b2);
+            Console.WriteLine(result);
+
+            int numberse = 65;
+            Console.WriteLine(Serie3(numberse));
+
+            int numbersew = 21;
+            Console.WriteLine(Serie4(numbersew));
+
+            int fibonacci = 12;
+            Console.WriteLine(Fibonacci(fibonacci));
+
+
+            
+
+
+
+
         }
 
        

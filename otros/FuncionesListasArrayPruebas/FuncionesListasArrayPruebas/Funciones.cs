@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32.SafeHandles;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -10,6 +11,171 @@ namespace FuncionesListasArrayPruebas
 {
     internal class Funciones
     {
+
+        //menor de 2 numeros
+        public static int MenorQue(int a, int b)
+        {
+            return (a <= b) ? a : b;
+        }
+
+        //numero es par
+        public static bool EsPar(int a)
+        {
+            return (a % 2 == 0);
+        }
+
+
+        //menor de 3 numeros(2 versiones)
+        public static int MenorQueTres(int a, int b, int c)
+        {
+            if (a <= b && a <= c)
+                return a;
+            else if (b <= a && b <= c)
+                return b;
+            return c;
+        }
+
+        public static int MenorQueTres2(int a, int b, int c)
+        {
+            return MenorQue(a, MenorQue(b, c));
+        }
+
+
+        //serie 0, -2, 4, -6, 8 imprimen
+
+        public static void Serie1(int s)
+        {
+            int valor = 0;
+
+            for (int i = 0; i <= s; i++)
+            {
+                if (valor == 1)
+                {
+                    valor = 0;
+                    Console.WriteLine(-i);
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
+        // Primo
+
+        public static bool EsPrimo(int n)
+        {
+            for (int i = 2; i < n; i++)
+            {
+                if (n % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
+
+        //Serie 0, 5, 3, 8, 6, 11 
+
+        public static void Serie2(int num)
+        {
+            int n = 0;
+            int a = 1;
+
+            Console.WriteLine(n);
+            for (int i = 0; i < num; i++)
+            {
+                if (a >= 0)
+                    n += 5;
+                else
+                    n -= 2;
+
+                Console.WriteLine(n);
+                a *= -1;
+            }
+        }
+
+        //Sumatorio
+
+        public static int Sumatorio(int n)
+        {
+            int result = 0;
+            for (int i = 1; i <= n; i++)
+                result += i;
+            return result;
+        }
+
+        //Productorio
+
+        public static int Productorio(int n)
+        {
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+                result *= i;
+            return result;
+        }
+
+        //funcion que concatene dos strings
+
+        public static string ConcatenacionStrings(string a, string b)
+        {
+            return a + b;
+        }
+
+
+        //0, 1, 2, 3, 4, 5, 6, 7
+
+        public static string Serie3(int n)
+        {
+            string res = "";
+
+            for (int i = 0; i <= n; i++)
+            {
+                res += i + ", ";
+            }
+            return res;
+        }
+
+
+        //1, 2, 4, 8, 16, 32, 64
+
+        public static string Serie4(int n)
+        {
+            string res = "";
+            int valor = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (i < n - 1)
+                    res += valor + ", ";
+                else
+                    res += valor;
+
+                valor *= 2;
+            }
+            return res;
+        }
+
+
+        //serie de fibonacci 0, 1, 1, 2, 3, 5, 8, 13, 21
+
+        public static string Fibonacci(int n)
+        {
+            string serie = "";
+            int aux = 0;
+            int auxb = 1;
+            int auxc = 0;
+
+
+            for (int i = 0; i < n; i++)
+            {
+                serie += " " + aux + ", ";
+                auxc = aux + auxb;
+                aux = auxb;
+                auxb = auxc;
+            }
+            return serie;
+        }
+
 
         //Funcion que devuelve numero de valores mayor que cero lista
 
@@ -365,48 +531,206 @@ namespace FuncionesListasArrayPruebas
 
         //collatz serie 3n + 1
         //Funcion que le paso un numero y me devuelva la serie de collatz de ese numero
+            //si es par divida entre 2
+            //si es impar multiplique por 3 y le sume 1
+        public static List<int> GetSerieCollaz(int n)
+        {
+            if (n == null || n <= 0)
+                return null;
 
+            List <int> list = new List<int>();
 
-        //si es par divida entre 2
-
-
-
-        //si es impar multiplique por 3 y le sume 1
-
-
-
+            while (n > 0)
+                if (n % 2 == 0)
+                    n = n / 2;
+                else if (n % 2 != 0)
+                    n = n + 3 + 1;
+            list.Add(n);
+            return list;
+        }
 
         //Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores
 
+        public static List<int>? ElementosMayores(List<int> list)
+        {
+            if (list == null) 
+                return null;
+
+            List<int> max = new List<int>();
+
+            int max1 = int.MinValue;
+            int max2 = int.MaxValue;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                int aux = list[i];
+                if (aux > max1)
+                {
+                    max2 = max1; 
+                    max1 = aux;
+                }
+                else if (aux > max2)
+                {
+                    max2 = aux;
+                }
+            }
+            return max;
+        }
 
 
-
-        //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros pares que haya en esa lista
+        //Funcion que le pasas una lista de enteros y quiero que me devuelvas otra lista pero solo con los numeros
+        //pares que haya en esa lista
         //hallar los numeros pares de un array
 
+        public static List<int> GetNumParesInList(List<int> list)
+        {
+            if (list == null) return null;
+
+            List <int> result = new List<int>();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                int aux = list[i];
+                if (aux % 2 == 0)
+                {
+                    result.Add(list[i]);
+                }
+            }
+            return result;
+        }
+
+        public static int[] GetNumParesInArray(List<int> l)
+        {
+            if (l == null)
+                return null;
+
+            List <int> list = GetNumParesInList(l);
+            int n = l.Count;
+            int[] res = new int[n];
+            int j = 0;
+
+            for(int i = 0; i < l.Count; i++) 
+            {
+                if (l[i] % 2 == 0)
+                {
+                    res[j++] = l[i];
+                    j++;
+                }
+            }
+            return res;
+        }
 
 
+        // Funcion que le paso una lista de enteros y le paso una posicion. Lo que tiene que hacer esta
+        // funcion es borrar el elemento de esa posicion en la lista
 
-        // Funcion que le paso una lista de enteros y le paso una posicion. Lo que tiene que hacer esta funcion es borrar el elemento de esa posicion en la lista
+        public static void DeleteFromPositionInList(List<int> list, int index)
+        {
+            if (list == null)
+                return;
 
-
+            list.RemoveAt(index);
+        }
 
         //[0, 7, 1, 8, 4]
         // Funcion paso una lista y un valor. Tiene que borrar de la lista el numero 8 sin usar el Remove.
+
+
+        public static void DeletPositionFromList(List<int> list, int value)
+        {
+            if (list == null)
+                return;
+
+            value = 5;
+            for(int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == value)
+                    list.RemoveAt(i--);
+                i--;
+            }
+        }
 
         //Funcion igual con array
 
 
 
+        //crear funcion countelements para listas
+
+        public static int CountElements(List<int> list, int value)
+        {
+            int count = 0;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == value)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
 
         //RemoveValues que estan en una lista 
 
+        public static void RemoveValues(List<int> list, List<int> values)
+        {
+            if (list == null || values == null) return;
 
-
+            for (int i = 0; i < list.Count;i++) 
+            {
+                for ( int j = 0; j < values.Count; j++)
+                {
+                    list[i] = values[j];
+                    {
+                        list.RemoveAt(i--);
+                        break;
+                    }
+                }
+            }
+        }
 
         //removevalues para array
 
+        //public static int[]? RemovePositionArray(int[] arrayremove, int value1)
+        //{
+        //    if (arrayremove == null)
+        //        return null;
 
+        //    int count = CountElements(arrayremove, value1);
+        //    int[] result = new int[arrayremove.Length - count];
+
+        //    int j = 0;
+
+        //    for (int i = 0; i < arrayremove.Length; i++)
+        //    {
+        //        //count = count + arrayremove[i];
+
+        //        if (arrayremove[i] != value1)
+        //        {
+        //            result[j++] = arrayremove[i];
+        //        }
+        //    }
+
+        //    return result;
+        //}
+
+        public static void RemoveValues1(List<int> l1, List<int> values1)
+        {
+            if (l1 == null || values1 == null)
+                return;
+
+            for (int i = 0; i < l1.Count; i++)
+            {
+                //if (Contains(values1, l1[i]))
+                if (values1.Contains(l1[i]))
+                {
+                    l1.RemoveAt(i--);
+                }
+
+            }
+
+        }
 
 
     }

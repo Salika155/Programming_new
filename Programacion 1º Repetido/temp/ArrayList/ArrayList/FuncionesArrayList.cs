@@ -448,7 +448,6 @@ namespace ArrayList
             }
             result.Add(n);
             return result;
-
         }
 
         // Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores

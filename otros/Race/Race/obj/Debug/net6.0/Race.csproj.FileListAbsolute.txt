@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\bin\Debug\net6.0\Race.exe
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\bin\Debug\net6.0\Race.deps.json
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\bin\Debug\net6.0\Race.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\bin\Debug\net6.0\Race.dll
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\bin\Debug\net6.0\Race.pdb
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.dll
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\refint\Race.dll
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.pdb
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\Race.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\Race\Race\obj\Debug\net6.0\ref\Race.dll

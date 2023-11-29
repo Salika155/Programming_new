@@ -30,8 +30,10 @@ namespace Classes
         //private static int[] __monedaValue = { 10000, 10000, 1000 };
         private CoinValor coinValor;
 
-        //constructor estatico para acceder a la clase static de characterclass -> que esta predefinida en el programa, y no en la clase creada
-        //existen elementos dentro del objeto que estan dentro de este, y otros que no pertenecen a este sino a la clase $CharacterClass = new -> que esta predefinida.
+        //constructor estatico para acceder a la clase static de characterclass -> que esta predefinida
+        //en el programa, y no en la clase creada
+        //existen elementos dentro del objeto que estan dentro de este, y otros que no pertenecen a
+        //este sino a la clase $CharacterClass = new -> que esta predefinida.
         //static CoinChange()
         //{
         //    _monedaValue = new int[] { 10000, 1000, 100 };
@@ -85,9 +87,6 @@ namespace Classes
             if (coinValor == CoinValor.C001)
                 return 1;
             return 0;
-
-
-
         }
 
         //+ToMoneda(centims:int):Moneda
@@ -129,13 +128,14 @@ namespace Classes
                 return 0; // Retorna la denominación más pequeña por defecto si no hay coincidencia.
 
             //CoinValor result;
-            //if (_diccionario.TryGetValue(centims, out result) == false -> PARAMETROS DE SALIDA 
+            //if (_diccionario.TryGetValue(centims, out result) == false->PARAMETROS DE SALIDA
             //return CoinValor.UNKNOWN;
             //return result;
         }
 
         //+GetCoins(centims:int):List<Moneda>
-        //hacer la lista para ir añadiendo conforme divides el numero por los billetes o monedas que necesites, e ir añadiendolos a la lista
+        //hacer la lista para ir añadiendo conforme divides el numero por los billetes
+        //o monedas que necesites, e ir añadiendolos a la lista
 
         public static List<CoinValor> GetCoin(int centims)
         {
@@ -147,8 +147,35 @@ namespace Classes
 
                 if (centims >= ToNumber(CoinValor.C500))
                     moneda = CoinValor.C500;
+                else if (centims >= ToNumber(CoinValor.C200))
+                    moneda = CoinValor.C200;
+                else if (centims >= ToNumber(CoinValor.C100))
+                    moneda = CoinValor.C100;
                 else if (centims >= ToNumber(CoinValor.C50))
                     moneda = CoinValor.C50;
+                else if (centims >= ToNumber(CoinValor.C20))
+                    moneda = CoinValor.C20;
+                else if (centims >= ToNumber(CoinValor.C10))
+                    moneda = CoinValor.C10;
+                else if (centims >= ToNumber(CoinValor.C5))
+                    moneda = CoinValor.C5;
+                else if (centims >= ToNumber(CoinValor.C2))
+                    moneda = CoinValor.C2;
+                else if (centims >= ToNumber(CoinValor.C1))
+                    moneda = CoinValor.C1;
+                else if (centims >= ToNumber(CoinValor.C05))
+                    moneda = CoinValor.C05;
+                else if (centims >= ToNumber(CoinValor.C02))
+                    moneda = CoinValor.C02;
+                else if (centims >= ToNumber(CoinValor.C01))
+                    moneda = CoinValor.C01;
+                else if (centims >= ToNumber(CoinValor.C005))
+                    moneda = CoinValor.C005;
+                else if (centims >= ToNumber(CoinValor.C002))
+                    moneda = CoinValor.C002;
+                else if (centims >= ToNumber(CoinValor.C001))
+                    moneda = CoinValor.C001;
+
                 //resto de numeros
 
                 result.Add(moneda);
@@ -157,8 +184,5 @@ namespace Classes
 
             return result;
         }
-
-        
-
     }
 }

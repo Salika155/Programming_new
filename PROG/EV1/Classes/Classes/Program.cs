@@ -46,10 +46,10 @@ namespace Classes
             CoinValor moneda = CoinChange.ToMoneda(centimss);
             Console.WriteLine(moneda);
 
-            //double cantidad = 134.45;
+            //double cantidad = 1340045;
             //List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
             //Console.WriteLine(monedas);
-            Console.WriteLine("---------------------------------------------------------");
+            //Console.WriteLine("---------------------------------------------------------");
 
             Card card = new(5, Palo.TREBOLES);
             Console.WriteLine(card.GetPalo());

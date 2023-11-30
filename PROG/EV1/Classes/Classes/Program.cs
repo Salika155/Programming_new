@@ -35,22 +35,35 @@ namespace Classes
             Console.WriteLine("El estado de la cafetera es: " + coffeeMachine.GetState());
             Console.WriteLine("---------------------------------------------------------");
 
-            CoinChange coinChange = new CoinChange();
+
+            
 
             CoinValor coin = CoinValor.C100;
             int centims = CoinChange.ToNumber(coin);
             Console.WriteLine(centims / 100 + " Euros");
 
             //aqui tengo que hacer cosas
-            int centimss = 200;
-            CoinValor moneda = CoinChange.ToMoneda(centimss);
+            int centimos = 200;
+            CoinValor moneda = CoinChange.ToMoneda(centimos);
             Console.WriteLine(moneda);
 
-            //double cantidad = 1340045;
-            //List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
-            //Console.WriteLine(monedas);
-            //Console.WriteLine("---------------------------------------------------------");
+           //creo la variable con el valor, utilizao el objeto coinchange con el getcoin para obtener el valor de
+           //las monedas de la lista, para sacar el de las que le estoy pasando.
+           //creo un nuevo "objeto" instancia coinchange y le doy un nombre.
+           //utilizo este ultimo creado, para imprimir las monedas.
+            double cantidad = 13.40;
+            List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
+            CoinChange coinChange0 = new CoinChange();
+            coinChange0.PrintMonedas(monedas);
+            Console.WriteLine("---------------------------------------------------------");
 
+            double cantidad1 = 134021;
+            List<CoinValor> monedas1 = CoinChange.GetCoin((int)cantidad1);
+            CoinChange coinChange1 = new CoinChange();
+            coinChange1.PrintMonedas(monedas1);
+            Console.WriteLine("---------------------------------------------------------");
+
+            //poker
             Card card = new(5, Palo.TREBOLES);
             Console.WriteLine(card.GetPalo());
             Console.WriteLine(card.GetNumber());

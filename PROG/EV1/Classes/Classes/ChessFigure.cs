@@ -69,7 +69,7 @@ namespace Classes
             return _FigureType;
         }
 
-        internal void MoveTo(int x, int y)
+        public void MoveTo(int x, int y)
         {
             if ((x >= 0 && x <= 7) && (y >= 0 && y <= 7))
             {

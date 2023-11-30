@@ -141,48 +141,68 @@ namespace Classes
         {
             List<CoinValor> result = new List<CoinValor>();
 
-            while (centims > 0)
-            {
-                CoinValor moneda = CoinValor.UNKNOWN;
+           
+                while (centims > 0)
+                {
+                    CoinValor moneda = CoinValor.UNKNOWN;
 
-                if (centims >= ToNumber(CoinValor.C500))
-                    moneda = CoinValor.C500;
-                else if (centims >= ToNumber(CoinValor.C200))
-                    moneda = CoinValor.C200;
-                else if (centims >= ToNumber(CoinValor.C100))
-                    moneda = CoinValor.C100;
-                else if (centims >= ToNumber(CoinValor.C50))
-                    moneda = CoinValor.C50;
-                else if (centims >= ToNumber(CoinValor.C20))
-                    moneda = CoinValor.C20;
-                else if (centims >= ToNumber(CoinValor.C10))
-                    moneda = CoinValor.C10;
-                else if (centims >= ToNumber(CoinValor.C5))
-                    moneda = CoinValor.C5;
-                else if (centims >= ToNumber(CoinValor.C2))
-                    moneda = CoinValor.C2;
-                else if (centims >= ToNumber(CoinValor.C1))
-                    moneda = CoinValor.C1;
-                else if (centims >= ToNumber(CoinValor.C05))
-                    moneda = CoinValor.C05;
-                else if (centims >= ToNumber(CoinValor.C02))
-                    moneda = CoinValor.C02;
-                else if (centims >= ToNumber(CoinValor.C01))
-                    moneda = CoinValor.C01;
-                else if (centims >= ToNumber(CoinValor.C005))
-                    moneda = CoinValor.C005;
-                else if (centims >= ToNumber(CoinValor.C002))
-                    moneda = CoinValor.C002;
-                else if (centims >= ToNumber(CoinValor.C001))
-                    moneda = CoinValor.C001;
+                    if (centims >= ToNumber(CoinValor.C500))
+                        moneda = CoinValor.C500;
+                    else if (centims >= ToNumber(CoinValor.C200))
+                        moneda = CoinValor.C200;
+                    else if (centims >= ToNumber(CoinValor.C100))
+                        moneda = CoinValor.C100;
+                    else if (centims >= ToNumber(CoinValor.C50))
+                        moneda = CoinValor.C50;
+                    else if (centims >= ToNumber(CoinValor.C20))
+                        moneda = CoinValor.C20;
+                    else if (centims >= ToNumber(CoinValor.C10))
+                        moneda = CoinValor.C10;
+                    else if (centims >= ToNumber(CoinValor.C5))
+                        moneda = CoinValor.C5;
+                    else if (centims >= ToNumber(CoinValor.C2))
+                        moneda = CoinValor.C2;
+                    else if (centims >= ToNumber(CoinValor.C1))
+                        moneda = CoinValor.C1;
+                    else if (centims >= ToNumber(CoinValor.C05))
+                        moneda = CoinValor.C05;
+                    else if (centims >= ToNumber(CoinValor.C02))
+                        moneda = CoinValor.C02;
+                    else if (centims >= ToNumber(CoinValor.C01))
+                        moneda = CoinValor.C01;
+                    else if (centims >= ToNumber(CoinValor.C005))
+                        moneda = CoinValor.C005;
+                    else if (centims >= ToNumber(CoinValor.C002))
+                        moneda = CoinValor.C002;
+                    else if (centims >= ToNumber(CoinValor.C001))
+                        moneda = CoinValor.C001;
 
-                //resto de numeros
+                    //resto de numeros
+                    result.Add(moneda);
+                    centims -= ToNumber(moneda);
 
-                result.Add(moneda);
-                centims -= ToNumber(moneda);
-            }
-
+                }
             return result;
+        }
+
+        //public void PrintMonedas(List<CoinChange> monedas)
+        //{
+
+        //    for (int i = 0; i < monedas.Count; i++)
+        //    {
+        //        Console.WriteLine(monedas[i]);
+        //    }
+        //}
+
+        //al hacer el print es mas accesible a la hora de imprimir los valores.
+        //imprimo los valores de la lista, no la lista como tal.
+        public void PrintMonedas(List<CoinValor> monedas1)
+        {
+
+            for (int i = 0; i < monedas1.Count; i++)
+            {
+                Console.WriteLine(monedas1[i]);
+            }
         }
     }
 }

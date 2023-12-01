@@ -6,6 +6,7 @@ namespace Classes
     {
         static void Main(string[] args)
         {
+            //cafetera jarra
             Jar jar = new Jar();
 
             Console.WriteLine("La capacidad actual de la jarra es de: " + jar.GetCapacity());
@@ -27,6 +28,7 @@ namespace Classes
             Console.WriteLine("La cantidad tras añadir es de: " + jar.GetQuantity());
             Console.WriteLine("---------------------------------------------------------");
 
+            //maquina estados
             CoffeeMachine coffeeMachine = new CoffeeMachine();
 
             Console.WriteLine("El estado de la cafetera es: "+ coffeeMachine.GetState());
@@ -35,8 +37,8 @@ namespace Classes
             Console.WriteLine("El estado de la cafetera es: " + coffeeMachine.GetState());
             Console.WriteLine("---------------------------------------------------------");
 
-
-            
+            //monedas
+            CoinChange coinChange = new CoinChange();
 
             CoinValor coin = CoinValor.C100;
             int centims = CoinChange.ToNumber(coin);
@@ -82,11 +84,13 @@ namespace Classes
 
             Console.WriteLine("---------------------------------------------------------");
 
+            //ajedrez
             ChessFigure figure = new(2, 5, ChessFigureColor.WHITE, ChessFigureType.BISHOP);
             Console.WriteLine(figure.GetFigureType());
             Console.WriteLine(figure.GetFigureType() + " " + figure.IsValid());
             Console.WriteLine("---------------------------------------------------------");
 
+            //datetime
             Datetime datetime = new Datetime();
             Console.WriteLine("La fecha de hoy es: " + datetime);
             

@@ -30,7 +30,7 @@ namespace Examen1raEv2023_24
             
         }
 
-        public Student? GetSortedStudentForSignature(Classroom classroom, Asignaturas asignaturas)
+        public Student? GetSortedStudentForSignature(Classroom classroom, Signatures asignaturas)
         {
             if (classroom == null || students == null)
                 return null;

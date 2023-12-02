@@ -8,19 +8,22 @@ using System.Xml.Linq;
 namespace Examen1raEv2023_24
 {
 
-    public enum Asignaturas
+    public enum Signatures
     {
         MATEMATICAS,
         LENGUAJE,
         HISTORIA,
         CIENCIA
     }
-    
+
     public class Notes
     {
         List<Student> students = new List<Student>();
 
-        private Asignaturas _asignaturas;
+        private double _maths;
+        private double _language;
+        private double _history;
+        private double _science;
         private double _nota;
         
 
@@ -29,135 +32,184 @@ namespace Examen1raEv2023_24
 
         }
 
-        public Asignaturas GetAsignaturas()
-        {
-            if (_asignaturas == Asignaturas.MATEMATICAS)
-                return Asignaturas.MATEMATICAS;
-            if (_asignaturas == Asignaturas.LENGUAJE)
-                return Asignaturas.LENGUAJE;
-            if (_asignaturas == Asignaturas.CIENCIA)
-                return Asignaturas.CIENCIA;
-            else return Asignaturas.HISTORIA;
-        }
-
+        
         public double GetNota()
         {
             return _nota;
         }
 
         //no la completo
-        public int GetNotaWithName(string name, double? nota)
-        {
-            if (name == null || nota == null)
-                return -1;
+        //public int GetNotaWithName(string name, double? nota)
+        //{
+        //    if (name == null || nota == null)
+        //        return -1;
 
-            for (int i = 0; i < students.Count; i++)
-            {
-                if (students[i].GetName() == name && students[i].GetNota() == nota)
-                {
-                    List<Student> studentswithnota = new List<Student>();
-                    studentswithnota.Add(students[i]);
-                }
-                return i;
-            }
-            return 0;
+        //    for (int i = 0; i < students.Count; i++)
+        //    {
+        //        if (students[i].GetName() == name && students[i].GetNota() == nota)
+        //        {
+        //            List<Student> studentswithnota = new List<Student>();
+        //            studentswithnota.Add(students[i]);
+        //        }
+        //        return i;
+        //    }
+        //    return 0;
             
-        }
+        //}
 
-        public void SetAsignatura(Asignaturas asignatura)
+       
+        public double GetQualificationForSignature(Signatures signatures)
         {
-            _asignaturas = asignatura;
-        }
-
-        public int GetQualificationForSignature(List<Student> student, Asignaturas asignaturas)
-        {
-            //for (int i = 0; i < students.Count; i++)
-            //{
-            //    for (int j = 0; j < _asignaturas.Count; j++)
-            //    {
-            //        if (student[i].GetNota() == _asignaturas[j].GetAsignature()
-            //    }
-
-            //}
-            return 0;
+            if (signatures == Signatures.MATEMATICAS)
+                return GetMath();
+            if (signatures == Signatures.CIENCIA)
+                return GetScience();
+            if (signatures == Signatures.LENGUAJE)
+                return GetLanguage();
+            if (signatures == Signatures.HISTORIA)
+                return GetHistory();
+            return 0.0;
+            //se puede hacer retornando el valor _maths por ejemplo, o el getmath directamente
         }
 
 
-        public void SetQualificationForSignature(Asignaturas asignaturas)
+        public void SetQualificationForSignature(Signatures signature, double value)
         {
-
-
+            if (signature == Signatures.MATEMATICAS)
+                _maths = value;
+            if (signature == Signatures.CIENCIA)
+                _science = value;
+            if (signature == Signatures.LENGUAJE)
+                _language = value;
+            if (signature == Signatures.HISTORIA)
+                _history = value;
         }
 
-        public double GetMediaAllAsignatures(Asignaturas asignaturas)
-        {
-            double media = 0;
-            for (int i = 0; i < students.Count; i++)
-            {
+        //public double GetMediaAllAsignatures(Signatures asignaturas)
+        //{
+        //    double media = 0;
+        //    for (int i = 0; i < students.Count; i++)
+        //    {
 
 
-            }
-            return media;
-        }
+        //    }
+        //    return media;
+        //}
 
-        public Student? GetHigherAssignatureNote(Asignaturas asignaturas, Notes notas)
-        {
-            if (notas == null || students == null)
-                return null;
+        //public Student? GetHigherAssignatureNote(Signatures asignaturas, Notes notas)
+        //{
+        //    if (notas == null || students == null)
+        //        return null;
 
-            double max = double.MinValue;
-            for (int i = 0; i < students.Count; i++)
-            {
-                if (students[i].GetNota() <= max && (asignaturas == Asignaturas.MATEMATICAS ||
-                    asignaturas == Asignaturas.CIENCIA || asignaturas == Asignaturas.LENGUAJE ||
-                    asignaturas == Asignaturas.HISTORIA))
-                {
-                    for(int j = 0; j < students.Count; j++)
-                    {
-                        if (max <= students[i].GetNota())
-                        {
-                            students[i].SetNota(max);
-                            i++;
+        //    double max = double.MinValue;
+        //    for (int i = 0; i < students.Count; i++)
+        //    {
+        //        if (students[i].GetNota() <= max && (asignaturas == Signatures.MATEMATICAS ||
+        //            asignaturas == Signatures.CIENCIA || asignaturas == Signatures.LENGUAJE ||
+        //            asignaturas == Signatures.HISTORIA))
+        //        {
+        //            for(int j = 0; j < students.Count; j++)
+        //            {
+        //                if (max <= students[i].GetNota())
+        //                {
+        //                    students[i].SetNota(max);
+        //                    i++;
 
 
                             
-                        }
-                    }
-                    return students[i];
+        //                }
+        //            }
+        //            return students[i];
 
-                }
-            }
-            return null;
-        }
+        //        }
+        //    }
+        //    return null;
+        //}
 
-        public Asignaturas GetLowerAssignatureNote()
+        //public Signatures GetLowerAssignatureNote()
+        //{
+        //    return Signatures.MATEMATICAS;
+        //}
+
+        //public Signatures GetLowerCalification()
+        //{
+        //    return Signatures.MATEMATICAS;
+        //}
+
+        //public List<Student>? GetHigherCalification()
+        //{
+        //    if (students == null)
+        //        return null;
+
+        //    for (int i = 0; i < students.Count; i++)
+        //    {
+        //        double max = double.MinValue;
+        //        if (students[i].GetNota() >= max)
+        //        {
+        //            max = students[i].GetNota();
+        //            i++;
+        //        }
+        //    }
+        //    return students;
+        //}
+
+        public double GetAverage()
         {
-            return Asignaturas.MATEMATICAS;
+            return 0.0;
         }
 
-        public Asignaturas GetLowerCalification()
+       
+
+        public Notes Clone()
         {
-            return Asignaturas.MATEMATICAS;
+            Notes result = new Notes();
+
+            result._maths = _maths;
+            result._history = _history;
+            result._language = _language;
+            result._science = _science;
+
+            return result;
         }
 
-        public List<Student>? GetHigherCalification()
+        public double GetMath()
         {
-            if (students == null)
-                return null;
-
-            for (int i = 0; i < students.Count; i++)
-            {
-                double max = double.MinValue;
-                if (students[i].GetNota() >= max)
-                {
-                    max = students[i].GetNota();
-                    i++;
-                }
-            }
-            return students;
+            return _maths;
         }
 
+        public void SetMath(double value)
+        {
+            _maths = value;
+        }
 
+        public double GetHistory()
+        {
+            return _history;
+        }
 
+        public void SetHistory(double value)
+        {
+            _history = value;
+        }
+
+        public double GetLanguage() 
+        {
+            return _language;
+        }
+
+        public void SetLanguage(double value)
+        {
+            _language = value;
+        }
+
+        public double GetScience()
+        {
+            return _science;
+        }
+
+        public void SetScience(double value)
+        {
+            _science = value;
+        }
     }
 }

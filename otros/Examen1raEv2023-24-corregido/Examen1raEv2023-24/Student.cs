@@ -14,12 +14,14 @@ namespace Examen1raEv2023_24
     }
     public class Student
     {
-        private string _name;
+        private string _name = ""; //si no quiero que aparezca el warning verde, poner string vacio o ? en string
+        //para aceptar valores nulos
         private int _age;
-        private GenderType _gender;
+        private GenderType _gender = GenderType.DESC; //mejor dejarlo definido
         private double _altura;
         private double _peso;
-        private double _nota;
+        //esto seria la instancia, cuando ponga eso es utilizar la clase.
+        private Notes _notes = new Notes(); //se puede dejar libre y despues colocarlo con un SetNotes
 
         public Student()
         {
@@ -32,18 +34,56 @@ namespace Examen1raEv2023_24
             _age = age;
         }
 
-        public Student(string name, int age, GenderType gender, double altura, double peso, double nota) : this(name, age)
-        {
-            _gender = gender;
-            _altura = altura;
-            _peso = peso;
-            _nota = nota;
-        }
-
         public string GetName()
         {
             return _name;
         }
+
+        //este no lo hice yo, por la instancia es posible que haga falta
+        //si no es asi tendria que hacer una funcion para cada valor para acceder a ello
+        //de esta manera desde notes podemos acceder a todo
+        public Notes GetNotes()
+        {
+            return _notes;
+        }
+
+        //mejor checkear que altura o peso no sean menores a ese posible valor absoluto
+        public double GetIMC()
+        {
+            if (Math.Abs(_altura) < 0.000001)
+                return double.NaN;
+            if (Math.Abs(_peso) < 0.000001)
+                return double.NaN;
+
+            return _peso / (_altura + _altura);
+        }
+
+        public double GetNoteAverage()
+        {
+            return _notes.GetAverage();
+        }
+
+        public bool IsElder()
+        {
+            return _age >= 18;
+        }
+
+        public Student Clone()
+        {
+            Student s = new Student();
+
+            s._name = _name; 
+            s._age = _age;
+            s._gender = _gender; 
+            s._altura = _altura;
+            s._peso = _peso;
+            s._notes = _notes.Clone();
+
+            return s;
+        }
+
+       
+        
 
         public int GetAge()
         {
@@ -67,15 +107,9 @@ namespace Examen1raEv2023_24
             return _peso;
         }
 
-        public double GetNota()
-        {
-            return _nota;
-        }
+       
 
-        public void SetNota(double note)
-        {
-            _nota = note;
-        }
+        
 
         public void SetName(string name)
         {
@@ -102,27 +136,15 @@ namespace Examen1raEv2023_24
             _peso = peso;
         }
 
-        public double GetIMC(double peso, double altura)
-        {
-            double IMC = peso / (altura * altura);
-            return IMC;
-        }
+       
 
-        public bool IsElder()
-        {
-            if (_age < 18) return false; return true;
-        }
+        
 
         //public Student GetAverage(double nota)
         //{
 
         //}
 
-        public Student CloneStudent()
-        {
-            return new Student(_name, _age, _gender, _altura, _peso, _nota);
-            //nota no debe de cambiar si cambio la nota de un estudiante clonado, osea
-            //del que procede
-        }
+        
     }
 }

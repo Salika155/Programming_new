@@ -1,0 +1,5 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\otros\Examen1raEv2023-24-corregido\Examen1raEv2023-24\obj\Debug\net6.0\Examen1raEv2023-24.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\otros\Examen1raEv2023-24-corregido\Examen1raEv2023-24\obj\Debug\net6.0\Examen1raEv2023-24.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\otros\Examen1raEv2023-24-corregido\Examen1raEv2023-24\obj\Debug\net6.0\Examen1raEv2023-24.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\otros\Examen1raEv2023-24-corregido\Examen1raEv2023-24\obj\Debug\net6.0\Examen1raEv2023-24.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\otros\Examen1raEv2023-24-corregido\Examen1raEv2023-24\obj\Debug\net6.0\Examen1raEv2023-24.csproj.CoreCompileInputs.cache

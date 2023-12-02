@@ -32,144 +32,9 @@ namespace Examen1raEv2023_24
 
         }
 
-        
         public double GetNota()
         {
             return _nota;
-        }
-
-        //no la completo
-        //public int GetNotaWithName(string name, double? nota)
-        //{
-        //    if (name == null || nota == null)
-        //        return -1;
-
-        //    for (int i = 0; i < students.Count; i++)
-        //    {
-        //        if (students[i].GetName() == name && students[i].GetNota() == nota)
-        //        {
-        //            List<Student> studentswithnota = new List<Student>();
-        //            studentswithnota.Add(students[i]);
-        //        }
-        //        return i;
-        //    }
-        //    return 0;
-            
-        //}
-
-       
-        public double GetQualificationForSignature(Signatures signatures)
-        {
-            if (signatures == Signatures.MATEMATICAS)
-                return GetMath();
-            if (signatures == Signatures.CIENCIA)
-                return GetScience();
-            if (signatures == Signatures.LENGUAJE)
-                return GetLanguage();
-            if (signatures == Signatures.HISTORIA)
-                return GetHistory();
-            return 0.0;
-            //se puede hacer retornando el valor _maths por ejemplo, o el getmath directamente
-        }
-
-
-        public void SetQualificationForSignature(Signatures signature, double value)
-        {
-            if (signature == Signatures.MATEMATICAS)
-                _maths = value;
-            if (signature == Signatures.CIENCIA)
-                _science = value;
-            if (signature == Signatures.LENGUAJE)
-                _language = value;
-            if (signature == Signatures.HISTORIA)
-                _history = value;
-        }
-
-        //public double GetMediaAllAsignatures(Signatures asignaturas)
-        //{
-        //    double media = 0;
-        //    for (int i = 0; i < students.Count; i++)
-        //    {
-
-
-        //    }
-        //    return media;
-        //}
-
-        //public Student? GetHigherAssignatureNote(Signatures asignaturas, Notes notas)
-        //{
-        //    if (notas == null || students == null)
-        //        return null;
-
-        //    double max = double.MinValue;
-        //    for (int i = 0; i < students.Count; i++)
-        //    {
-        //        if (students[i].GetNota() <= max && (asignaturas == Signatures.MATEMATICAS ||
-        //            asignaturas == Signatures.CIENCIA || asignaturas == Signatures.LENGUAJE ||
-        //            asignaturas == Signatures.HISTORIA))
-        //        {
-        //            for(int j = 0; j < students.Count; j++)
-        //            {
-        //                if (max <= students[i].GetNota())
-        //                {
-        //                    students[i].SetNota(max);
-        //                    i++;
-
-
-                            
-        //                }
-        //            }
-        //            return students[i];
-
-        //        }
-        //    }
-        //    return null;
-        //}
-
-        //public Signatures GetLowerAssignatureNote()
-        //{
-        //    return Signatures.MATEMATICAS;
-        //}
-
-        //public Signatures GetLowerCalification()
-        //{
-        //    return Signatures.MATEMATICAS;
-        //}
-
-        //public List<Student>? GetHigherCalification()
-        //{
-        //    if (students == null)
-        //        return null;
-
-        //    for (int i = 0; i < students.Count; i++)
-        //    {
-        //        double max = double.MinValue;
-        //        if (students[i].GetNota() >= max)
-        //        {
-        //            max = students[i].GetNota();
-        //            i++;
-        //        }
-        //    }
-        //    return students;
-        //}
-
-        public double GetAverage()
-        {
-            return 0.0;
-        }
-
-       
-
-        public Notes Clone()
-        {
-            Notes result = new Notes();
-
-            result._maths = _maths;
-            result._history = _history;
-            result._language = _language;
-            result._science = _science;
-
-            return result;
         }
 
         public double GetMath()
@@ -210,6 +75,114 @@ namespace Examen1raEv2023_24
         public void SetScience(double value)
         {
             _science = value;
+        }
+
+        public double GetQualificationForSignature(Signatures signatures)
+        {
+            if (signatures == Signatures.MATEMATICAS)
+                return GetMath();
+            if (signatures == Signatures.CIENCIA)
+                return GetScience();
+            if (signatures == Signatures.LENGUAJE)
+                return GetLanguage();
+            if (signatures == Signatures.HISTORIA)
+                return GetHistory();
+            return 0.0;
+            //se puede hacer retornando el valor _maths por ejemplo, o el getmath directamente
+        }
+
+
+        public void SetQualificationForSignature(Signatures signature, double value)
+        {
+            if (signature == Signatures.MATEMATICAS)
+                _maths = value;
+            if (signature == Signatures.CIENCIA)
+                _science = value;
+            if (signature == Signatures.LENGUAJE)
+                _language = value;
+            if (signature == Signatures.HISTORIA)
+                _history = value;
+
+        }
+
+        public double GetMajorQualification()
+        {
+            double result = _maths;
+
+            if (_language >= result) 
+                result = _language;
+            if (_science >= result)
+                result = _science;
+            if (_history >= result)
+                result = _history;
+            if (_maths >= result)
+                result = _maths;
+            return result;
+        }
+
+        public Signatures GetMajorQualificationSignature()
+        {
+            double major = GetMajorQualification();
+
+            if (_maths == major)
+                return Signatures.MATEMATICAS;
+            if (_science == major)
+                return Signatures.CIENCIA;
+            if (_language == major)
+                return Signatures.LENGUAJE;
+            if (_history == major)
+                return Signatures.HISTORIA;
+        }
+
+        public double GetMinorQualification()
+        {
+            double result = _maths;
+
+            if (_language <= result)
+                result = _language;
+            if (_science <= result)
+                result = _science;
+            if (_history <= result)
+                result = _history;
+            if (_maths <= result)
+                result = _maths;
+            return result;
+        }
+
+        public Signatures GetMinorQualificationSignature()
+        {
+            double minor = GetMinorQualification();
+
+            if (_maths == minor)
+                return Signatures.MATEMATICAS;
+            if (_science == minor)
+                return Signatures.CIENCIA;
+            if (_language == minor)
+                return Signatures.LENGUAJE;
+            if (_history == minor)
+                return Signatures.HISTORIA;
+        }
+
+        public double GetAverage()
+        {
+            return (_maths + _science + _language + _history) / GetSignatureCount();
+        }
+
+        public int GetSignatureCount()
+        {
+            return 4;
+        }
+
+        public Notes Clone()
+        {
+            Notes result = new Notes();
+
+            result._maths = _maths;
+            result._history = _history;
+            result._language = _language;
+            result._science = _science;
+
+            return result;
         }
     }
 }

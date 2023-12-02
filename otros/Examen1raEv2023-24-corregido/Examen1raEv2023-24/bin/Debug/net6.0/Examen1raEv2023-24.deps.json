@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Examen1raEv2023-24/1.0.0": {
+        "runtime": {
+          "Examen1raEv2023-24.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Examen1raEv2023-24/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

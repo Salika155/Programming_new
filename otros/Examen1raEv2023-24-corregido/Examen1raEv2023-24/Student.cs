@@ -83,8 +83,6 @@ namespace Examen1raEv2023_24
         }
 
        
-        
-
         public int GetAge()
         {
             return _age;
@@ -92,9 +90,7 @@ namespace Examen1raEv2023_24
 
         public GenderType GetGenderType()
         {
-            if (_gender == GenderType.M)
-                return GenderType.M;
-            else return GenderType.F;
+            return _gender;
         }
 
         public double GetAltura()
@@ -106,10 +102,6 @@ namespace Examen1raEv2023_24
         {
             return _peso;
         }
-
-       
-
-        
 
         public void SetName(string name)
         {
@@ -136,15 +128,9 @@ namespace Examen1raEv2023_24
             _peso = peso;
         }
 
-       
-
-        
-
-        //public Student GetAverage(double nota)
-        //{
-
-        //}
-
-        
+        public double GetBestQualification()
+        {
+            return _notes.GetMajorQualification();
+        }
     }
 }

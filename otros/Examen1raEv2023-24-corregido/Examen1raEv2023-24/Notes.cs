@@ -24,7 +24,7 @@ namespace Examen1raEv2023_24
         private double _language;
         private double _history;
         private double _science;
-        private double _nota;
+        
         
 
         public Notes()
@@ -32,10 +32,7 @@ namespace Examen1raEv2023_24
 
         }
 
-        public double GetNota()
-        {
-            return _nota;
-        }
+        
 
         public double GetMath()
         {
@@ -130,8 +127,8 @@ namespace Examen1raEv2023_24
                 return Signatures.CIENCIA;
             if (_language == major)
                 return Signatures.LENGUAJE;
-            if (_history == major)
-                return Signatures.HISTORIA;
+            return Signatures.HISTORIA;
+
         }
 
         public double GetMinorQualification()
@@ -159,8 +156,7 @@ namespace Examen1raEv2023_24
                 return Signatures.CIENCIA;
             if (_language == minor)
                 return Signatures.LENGUAJE;
-            if (_history == minor)
-                return Signatures.HISTORIA;
+            return Signatures.HISTORIA;
         }
 
         public double GetAverage()

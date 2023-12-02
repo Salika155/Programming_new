@@ -41,8 +41,8 @@ namespace Examen1raEv2023_24
             }
         }
 
-        //para que classroom sea un wrapped de la lista students, hay que acceder y recorrerla
-        public Student GetStudentAt(int index)
+        //para que classroom sea un wrapped de la lista classroom, hay que acceder y recorrerla
+        public Student? GetStudentAt(int index)
         {
             if (index < 0 || index >= _students.Count)
                 return null;
@@ -116,7 +116,7 @@ namespace Examen1raEv2023_24
             }
         }
 
-        public string GetNameClassroom()
+        public string? GetNameClassroom()
         {
             return _nameClassroom;
         }
@@ -126,28 +126,5 @@ namespace Examen1raEv2023_24
             _nameClassroom = name;
         }
 
-        
-
-        
-
-        
-
-       
-
-        public Student? CreateStudent()
-        {
-            if (_students == null)
-                return null;
-
-            int count = _students.Count;
-            for (int i = 0; i < _students.Count; i++)
-            {
-                Student student = new Student();
-                _students.Add(student);
-
-            }
-            return _students[count];
-            
-        }
     }
 }

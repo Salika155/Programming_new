@@ -216,7 +216,6 @@ namespace Classes
             int leapCount = 0;
             Datetime datetime = new Datetime();
 
-           
                 if (val1 > val2)
                 {
                     int temp = val1;
@@ -231,8 +230,6 @@ namespace Classes
                         leapCount++;
                     }
                 }
-            
-
             return leapCount;
         }
 

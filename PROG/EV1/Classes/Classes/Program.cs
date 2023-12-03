@@ -55,14 +55,14 @@ namespace Classes
            //utilizo este ultimo creado, para imprimir las monedas.
             double cantidad = 13.40;
             List<CoinValor> monedas = CoinChange.GetCoin((int)cantidad);
-            CoinChange coinChange0 = new CoinChange();
-            coinChange0.PrintMonedas(monedas);
-            Console.WriteLine("---------------------------------------------------------");
+            //al pasarla a static printmonedas, necesito pasarle la clase para corregirlo
+            CoinChange.PrintMonedas(monedas);
+            Console.WriteLine("");
 
             double cantidad1 = 134021;
             List<CoinValor> monedas1 = CoinChange.GetCoin((int)cantidad1);
-            CoinChange coinChange1 = new CoinChange();
-            coinChange1.PrintMonedas(monedas1);
+            //al pasarla a static printmonedas, necesito pasarle la clase para corregirlo
+            CoinChange.PrintMonedas(monedas1);
             Console.WriteLine("---------------------------------------------------------");
 
             //poker

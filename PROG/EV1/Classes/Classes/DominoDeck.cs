@@ -96,7 +96,7 @@ namespace Classes
         {
             for (int i = 0; i < GetPieceCount(); i++)
             {
-                DominoPiece dominoPiece = GetPieceAt(i);
+                DominoPiece? dominoPiece = GetPieceAt(i);
 
                 bool piecevalor1 = (dominoPiece.GetValue1() == piece.GetValue1());
                 bool piecevalor2 = (dominoPiece.GetValue2() == piece.GetValue2());

@@ -58,7 +58,7 @@ namespace Classes
                 return true;
             return false;
         }
-        public static bool CanKingMove(ChessFigure figure, int targetX, int targetY)
+        public static bool CanKingMoveTo(ChessFigure figure, int targetX, int targetY)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
@@ -115,7 +115,7 @@ namespace Classes
 
             if ((CanBishopMoveTo(figure, targetX, targetY) == true) ||
             (CanTowerMoveTo(figure, targetX, targetY) == true) || 
-            (CanKnightMoveTo(figure,targetX, targetY) == true))
+            (CanKingMoveTo(figure,targetX, targetY) == true))
                 return true;
             return false;
 
@@ -335,6 +335,11 @@ namespace Classes
         public static bool CanFiguresMoveLikePawnTo(int targetX, int targetY, int xx, int yy)
         {
             return false;
+        }
+
+        public static bool HasTargetFigureTheSameColor(int targetX, int targetY, int xx, int yy)
+        {
+
         }
     }
 }

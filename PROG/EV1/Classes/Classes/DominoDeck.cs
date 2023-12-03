@@ -16,8 +16,7 @@ namespace Classes
 
         }
 
-        //+ExtractPiece():DominoPiece
-
+        //+ExtractPiece(index:int):DominoPiece
         public DominoPiece? ExtractPiece(int index)
         {
             if (index < 0 || index >= GetPieceCount())
@@ -28,7 +27,7 @@ namespace Classes
             return p;
         }
 
-        //+ExtractPiece(index:int):DominoPiece
+        //+ExtractPiece():DominoPiece
         public DominoPiece? ExtractPiece()
         {
             if (_piece.Count == 0)
@@ -61,7 +60,6 @@ namespace Classes
             }
             else
                 return null;
-
         }
 
         public bool ContainsPiece(DominoPiece piece)

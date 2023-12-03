@@ -84,6 +84,11 @@ namespace Classes
 
             Console.WriteLine("---------------------------------------------------------");
 
+            //tengo que probar domino
+
+
+
+
             //ajedrez
             ChessFigure figure = new(2, 5, ChessFigureColor.WHITE, ChessFigureType.BISHOP);
             Console.WriteLine(figure.GetFigureType());
@@ -92,25 +97,32 @@ namespace Classes
 
             //datetime
             Datetime datetime = new Datetime();
-            Console.WriteLine("La fecha de hoy es: " + datetime);
-            
+            //fallaba -> ya no, me faltaba añadir tostring al datetime
+            Console.WriteLine("La fecha de hoy es: " + datetime.ToString());
+
             datetime.SetYear(1993);
             datetime.SetMonth(12);
             datetime.SetDay(31);
-            Console.WriteLine("La fecha actualizada es: " + datetime);
-            Console.WriteLine(datetime.GetDay());
-            Console.WriteLine(datetime.GetMonth());
-            Console.WriteLine(datetime.GetYear());
+            //fallaba -> ya no, me faltaba añadir tostring al datetime
+            Console.WriteLine("La fecha actualizada es: " + datetime.ToString());
+            Console.WriteLine("El numero de dia de hoy es: " + datetime.GetDay());
+            Console.WriteLine("El mes en el que estamos es: " + datetime.GetMonth());
+            Console.WriteLine("El año en el que estamos es: "+ datetime.GetYear());
+            Console.WriteLine("El dia de la semana que estamos es: " + datetime.GetDayOfWeek());
             datetime.IncrementDays();
             Console.WriteLine("El año es válido: " + datetime.IsValid());
-
-            Console.WriteLine("La fecha de hoy es: " + datetime);
+            //fallaba -> ya no, me faltaba añadir tostring al datetime
+            Console.WriteLine("La fecha de hoy es: " + datetime.ToString());
             datetime.IncrementSeconds();
             Console.WriteLine("El año es bisieto: " + datetime.IsLeap());
             Console.WriteLine(datetime.GetDayOfWeek());
-            Console.WriteLine(datetime.ToString());
-            Console.WriteLine(datetime.Equals(datetime));
+            Console.WriteLine("La fecha de hoy es: " + datetime.ToString());
+            Console.WriteLine(datetime.Equals(datetime.ToString()));
 
+            int year1 = 1993;
+            int year2 = 2023;
+            int leapCount = Datetime.GetLeapCountBetween(year1, year2);
+            Console.WriteLine(leapCount);
             
 
         }

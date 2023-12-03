@@ -263,6 +263,10 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
+            if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 1) == true)
+                return true;
+            if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 2) == true)
+                return true;
             return true;
         }
 
@@ -296,7 +300,7 @@ namespace Classes
         {
             if (targetX > xx && targetY > yy)
             {
-                while (xx != targetX && yy != targetY)
+                while (xx != targetX || yy != targetY)
                 {
                     ChessFigure? f = GetFigureAt(figures, xx, yy);
                     if (f != null)
@@ -334,12 +338,38 @@ namespace Classes
 
         public static bool CanFiguresMoveLikePawnTo(int targetX, int targetY, int xx, int yy)
         {
+            int deltaX = targetX - xx;
+            int deltaY = targetY - yy;
+
+            if (deltaY <= 0 && deltaX != 0 && deltaY != 1)
+            {
+                return false;
+            }
+            return true;
+    
+        }
+
+        public static bool HasTargetFigureTheSameColor(int targetX, int targetY, int xx, int yy, ChessFigureColor color)
+        {
+            if (!IsOnTheTable(figures, targetX, targetY))
+                return false;
+
+            if (targetX > xx && targetY > yy)
+            {
+                while (xx != targetX || yy != targetY)
+                {
+                    ChessFigure? f = GetFigureAt(figures, xx, yy);
+                    if (f != null && f.GetColorType() == color)
+                    {
+                        return true;
+                    }
+                    xx++;
+                    yy++;
+                }
+                return false;
+            }
             return false;
         }
 
-        public static bool HasTargetFigureTheSameColor(int targetX, int targetY, int xx, int yy)
-        {
-
-        }
     }
 }

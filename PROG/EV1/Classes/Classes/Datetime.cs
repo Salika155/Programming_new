@@ -53,6 +53,7 @@ namespace Classes
            return new Datetime(_day, _month, _year, _hour, _minute, _second);
         }
 
+        //que hacia equals
         public bool Equals(Datetime datetime)
         {
             return (_day == datetime._day && _month == datetime._month && _year == datetime._year 
@@ -135,21 +136,21 @@ namespace Classes
 
         public DaysOfWeek GetDayOfWeek()
         {
-            int totalDays = (_day + monthCode() + yearCode()) % 7;
+            int totalDays = (_day + MonthCode() + YearCode()) % 7;
             return (DaysOfWeek)totalDays;
 
         }
 
-        public int weekCode()
+        public int WeekCode()
         {
-            int code = (GetDay() % 7) + monthCode() + yearCode();
+            int code = (GetDay() % 7) + MonthCode() + YearCode();
             if (IsLeap() && GetMonth() == 1 || GetMonth() == 2)
                 return code--;
             return code;
 
         }
 
-        public int monthCode()
+        public int MonthCode()
         {
             switch(GetMonth())
             {
@@ -182,7 +183,7 @@ namespace Classes
             }
         }
 
-        public int yearCode()
+        public int YearCode()
         {
             int centuryDigits = _year / 100; //para obtener los digitos del siglo
             int last2yeardigits = _year % 100; // los 2 ultimos digitos del año
@@ -208,7 +209,7 @@ namespace Classes
             return (centuryCode + last2yeardigits + (last2yeardigits / 4)) % 7;
         }
 
-        public int GetLeapCountBetween(int val1, int val2)
+        public static int GetLeapCountBetween(int val1, int val2)
         {
             //for primero variable para adquirir el count, pasandole isleap (i) y aumentando el contador en el numero de bisiestos
             //en el for tener en cuenta las dos variables que le paso
@@ -242,9 +243,11 @@ namespace Classes
 
         public string ToString()
         {
-            //si es valida return elementos + signo
-            return _year + "-" + _month + "-" + _day + " | " 
+          
+            string data = _year + "-" + _month + "-" + _day + " | "
                 + _hour + ":" + _minute + ":" + _second;
+            //si es valida return elementos + signo
+            return data;
         }
 
         public static int GetDaysCount(int year, int month)

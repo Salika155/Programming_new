@@ -94,14 +94,22 @@ namespace Classes
                 }
         }
 
-        //public int GetPieceIndex(DominoPiece piece)
-        //{
-        //    for (int i = 0; i < GetPieceCount(); i++)
-        //    {
+        public int GetPieceIndex(DominoPiece piece)
+        {
+            for (int i = 0; i < GetPieceCount(); i++)
+            {
+                DominoPiece dominoPiece = GetPieceAt(i);
 
-        //    }
+                bool piecevalor1 = (dominoPiece.GetValue1() == piece.GetValue1());
+                bool piecevalor2 = (dominoPiece.GetValue2() == piece.GetValue2());
+                if  (piecevalor1 && piecevalor2)
+                {
+                    return i;
+                }
+            }
+            return -1;
 
-        //}
+        }
     }
 }
 

@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\carcarcor\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\carre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\Examen1raEv2023-24\\Examen1raEv2023-24\\Examen1raEv2023-24.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\otros\\Examen1raEv2023-24\\Examen1raEv2023-24\\Examen1raEv2023-24.csproj",
       "projectName": "Examen1raEv2023-24",
-      "projectPath": "C:\\Users\\carcarcor\\source\\repos\\Examen1raEv2023-24\\Examen1raEv2023-24\\Examen1raEv2023-24.csproj",
-      "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carcarcor\\source\\repos\\Examen1raEv2023-24\\Examen1raEv2023-24\\obj\\",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\otros\\Examen1raEv2023-24\\Examen1raEv2023-24\\Examen1raEv2023-24.csproj",
+      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\otros\\Examen1raEv2023-24\\Examen1raEv2023-24\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

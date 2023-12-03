@@ -22,59 +22,23 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            ChessFigure? f;
-            int xx;
-            int yy;
-
-            xx = x + 1;
-            yy = y - 2;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y - 2) == true)
                 return true;
-
-            xx = x - 1;
-            yy = y - 2;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y - 2) == true)
                 return true;
-
-            xx = x + 1;
-            yy = y + 2;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y + 2) == true)
                 return true;
-
-            xx = x - 1;
-            yy = y + 2;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y + 2) == true)
                 return true;
-
-            xx = x - 2;
-            yy = y + 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y + 1) == true)
                 return true;
-
-            xx = x - 2;
-            yy = y - 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y - 1) == true)
                 return true;
-
-            xx = x + 2;
-            yy = y + 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y + 1) == true)
                 return true;
-
-            xx = x + 2;
-            yy = y - 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y - 1) == true)
                 return true;
             return false;
-
         }
 
         public static bool CanBishopMoveTo(ChessFigure figure, int targetX, int targetY)
@@ -86,76 +50,17 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            ChessFigure? f;
-            int xx;
-            int yy;
-
-            xx = x + 1;
-            yy = y + 1;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
+            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)
                 return true;
-            }
-
-            xx = x - 1;
-            yy = y - 1;
-
-            if (targetX < x && targetY < y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx--;
-                    yy--;
-                }
+            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y - 1) == true)
                 return true;
-            }
-
-            xx = x + 1;
-            yy = y - 1;
-
-            if (targetX > x && targetY < y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy--;
-                }
+            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y - 1) == true)
                 return true;
-            }
-
-            xx = x - 1;
-            yy = y + 1;
-
-            if (targetX < x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx--;
-                    yy++;
-                }
+            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y + 1) == true)
                 return true;
-            }
-
             return false;
         }
+
 
         public static bool CanKingMove(ChessFigure figure, int targetX, int targetY)
         {
@@ -164,62 +69,46 @@ namespace Classes
 
             int x = figure.GetX();
             int y = figure.GetY();
-            
-            ChessFigure? f;
-            int xx;
-            int yy;
 
-            xx = x + 1;
-            yy = y + 0;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+
+            if (CanFigureMoveAround(targetX, targetY, x + 1, y + 0) == true)
                 return true;
-
-            xx = x - 1;
-            yy = y + 0;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x - 1, y + 0) == true)
                 return true;
-
-            xx = x + 1;
-            yy = y + 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x + 1, y + 1) == true)
                 return true;
-
-            xx = x + 0;
-            yy = y + 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x + 0, y + 1) == true)
                 return true;
-
-            xx = x - 1;
-            yy = y + 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x - 1, y + 1) == true)
                 return true;
-
-            xx = x - 1;
-            yy = y - 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x - 1, y - 1) == true)
                 return true;
-
-            xx = x + 0;
-            yy = y - 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x + 0, y - 1) == true)
                 return true;
-
-            xx = x + 1;
-            yy = y - 1;
-            f = GetFigureAt(figures, xx, yy);
-            if (xx == targetX && yy == targetY)
+            if (CanFigureMoveAround(targetX, targetY, x + 1, y - 1) == true)
                 return true;
-
             return false;
         }
+        public static bool CanTowerMoveTo(ChessFigure figure, int targetX, int targetY)
+        {
+            if (!IsOnTheTable(figures, targetX, targetY))
+                return false;
 
+            int x = figure.GetX();
+            int y = figure.GetY();
+
+
+            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 1, y + 0) == true)
+                return true;
+            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x - 1, y - 0) == true)
+                return true;
+            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y - 1) == true)
+                return true;
+            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y + 1) == true)
+                return true;
+            return false;
+
+        }
         public static bool CanQueenMoveTo(ChessFigure figure, int targetX, int targetY)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
@@ -359,7 +248,6 @@ namespace Classes
                 }
                 return true;
             }
-
             return false;
         }
 
@@ -382,7 +270,52 @@ namespace Classes
 
             ChessFigure? figure = GetFigureAt(figures, x, y);
             return figure != null;
+        }
 
+        public static bool CanFiguresMoveLikeKnightTo(int targetX, int targetY, int xx, int yy)
+        {
+            ChessFigure? f = GetFigureAt(figures, xx, yy);
+            return xx == targetX && yy == targetY && f == null;
+        }
+
+        public static bool CanFiguresMoveLikeBishopTo(int targetX, int targetY, int xx, int yy)
+        {
+            if (targetX > xx && targetY > yy)
+            {
+                while (xx != targetX && yy != targetY)
+                {
+                    ChessFigure? f = GetFigureAt(figures, xx, yy);
+                    if (f != null)
+                        return false;
+                    xx++;
+                    yy++;
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public static bool CanFigureMoveAround(int targetX, int targetY, int xx, int yy)
+        {
+            ChessFigure? f = GetFigureAt(figures, xx, yy);
+            return xx == targetX && yy == targetY && f == null;
+        }
+
+        public static bool CanFiguresMoveLikeTowerTo(int targetX, int targetY, int xx, int yy)
+        {
+            if (targetX > xx && targetY > yy)
+            {
+                while (xx != targetX && yy != targetY)
+                {
+                    ChessFigure? f = GetFigureAt(figures, xx, yy);
+                    if (f != null)
+                        return false;
+                    xx++;
+                    yy++;
+                }
+                return true;
+            }
+            return false;
         }
     }
 }

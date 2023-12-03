@@ -26,8 +26,6 @@ namespace Classes
         private int _minute;
         private int _second;
 
-        
-
         public Datetime()
         {
 

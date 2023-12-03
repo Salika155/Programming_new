@@ -58,9 +58,6 @@ namespace Classes
 
         //static DominoPiece? create piece
         //public static DominoPiece CreatePiece()
-        //{
-        //    return new DominoPiece();
-        //}
 
         public static DominoPiece? CreatePiece(int v1, int v2)
         {
@@ -71,9 +68,6 @@ namespace Classes
 
             return new DominoPiece(v1, v2);
         }
-
-
-
     }
 }
 

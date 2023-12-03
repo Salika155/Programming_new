@@ -120,7 +120,7 @@ namespace Examen1raEv2023_24
 
             for (int i = 1; i < classroom.GetStudentCount(); i++)
             {
-                Student student = classroom.GetStudentAt(i);
+                Student? student = classroom.GetStudentAt(i);
                 if (student.GetGenderType() == gender)
                     students.Add(classroom.GetStudentAt(i));
             }
@@ -165,7 +165,7 @@ namespace Examen1raEv2023_24
 
             for(int i = 0; i < classroom.GetStudentCount(); i++)
             {
-                Student student = classroom.GetStudentAt(i);
+                Student? student = classroom.GetStudentAt(i);
                 double qualification = student.GetNotes().GetAverage();
                 if (qualification >= 9)
                     result.MajorThan9++;

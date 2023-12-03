@@ -196,6 +196,7 @@ namespace Classes
 
         //al hacer el print es mas accesible a la hora de imprimir los valores.
         //imprimo los valores de la lista, no la lista como tal.
+
         public void PrintMonedas(List<CoinValor> monedas1)
         {
 

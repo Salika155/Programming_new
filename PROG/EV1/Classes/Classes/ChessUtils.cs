@@ -12,7 +12,6 @@ namespace Classes
     {
         private static List<ChessFigure> figures = new List<ChessFigure>();
 
-
         public static bool CanKnightMoveTo(ChessFigure figure, int targetX, int targetY)
         {
 
@@ -40,7 +39,6 @@ namespace Classes
                 return true;
             return false;
         }
-
         public static bool CanBishopMoveTo(ChessFigure figure, int targetX, int targetY)
         {
 
@@ -60,8 +58,6 @@ namespace Classes
                 return true;
             return false;
         }
-
-
         public static bool CanKingMove(ChessFigure figure, int targetX, int targetY)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
@@ -117,140 +113,158 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            ChessFigure? f;
-            int xx;
-            int yy;
-
-            xx = x + 1;
-            yy = y + 1;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
+            if ((CanBishopMoveTo(figure, targetX, targetY) == true) ||
+            (CanTowerMoveTo(figure, targetX, targetY) == true) || 
+            (CanKnightMoveTo(figure,targetX, targetY) == true))
                 return true;
-            }
-
-            xx = x + 1;
-            yy = y + 0;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
-                return true;
-            }
-
-            xx = x - 1;
-            yy = y + 0;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
-                return true;
-            }
-
-            xx = x + 0;
-            yy = y + 1;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
-                return true;
-            }
-
-            xx = x + 0;
-            yy = y - 1;
-
-            if (targetX > x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy++;
-                }
-                return true;
-            }
-
-            xx = x - 1;
-            yy = y - 1;
-
-            if (targetX < x && targetY < y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx--;
-                    yy--;
-                }
-                return true;
-            }
-
-            xx = x + 1;
-            yy = y - 1;
-
-            if (targetX > x && targetY < y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx++;
-                    yy--;
-                }
-                return true;
-            }
-
-            xx = x - 1;
-            yy = y + 1;
-
-            if (targetX < x && targetY > y)
-            {
-                while (xx != targetX && yy != targetY)
-                {
-                    f = GetFigureAt(figures, xx, yy);
-                    if (f != null)
-                        return false;
-                    xx--;
-                    yy++;
-                }
-                return true;
-            }
             return false;
+
+            #region anteriorcodigo
+            //ChessFigure? f;
+            //int xx;
+            //int yy;
+
+            //xx = x + 1;
+            //yy = y + 1;
+
+            //if (targetX > x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x + 1;
+            //yy = y + 0;
+
+            //if (targetX > x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x - 1;
+            //yy = y + 0;
+
+            //if (targetX > x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x + 0;
+            //yy = y + 1;
+
+            //if (targetX > x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x + 0;
+            //yy = y - 1;
+
+            //if (targetX > x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x - 1;
+            //yy = y - 1;
+
+            //if (targetX < x && targetY < y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx--;
+            //        yy--;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x + 1;
+            //yy = y - 1;
+
+            //if (targetX > x && targetY < y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx++;
+            //        yy--;
+            //    }
+            //    return true;
+            //}
+
+            //xx = x - 1;
+            //yy = y + 1;
+
+            //if (targetX < x && targetY > y)
+            //{
+            //    while (xx != targetX && yy != targetY)
+            //    {
+            //        f = GetFigureAt(figures, xx, yy);
+            //        if (f != null)
+            //            return false;
+            //        xx--;
+            //        yy++;
+            //    }
+            //    return true;
+            //}
+            //return false;
+            #endregion
         }
 
+        public static bool CanPawnMoveTo(ChessFigure figure, int targetX, int targetY)
+        {
+            if (!IsOnTheTable(figures, targetX, targetY))
+                return false;
+
+            int x = figure.GetX();
+            int y = figure.GetY();
+
+            return true;
+        }
 
         public static ChessFigure? GetFigureAt(List<ChessFigure> figures, int x, int y)
         {
@@ -315,6 +329,11 @@ namespace Classes
                 }
                 return true;
             }
+            return false;
+        }
+
+        public static bool CanFiguresMoveLikePawnTo(int targetX, int targetY, int xx, int yy)
+        {
             return false;
         }
     }

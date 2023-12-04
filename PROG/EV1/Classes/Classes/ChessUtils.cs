@@ -85,6 +85,7 @@ namespace Classes
                 return true;
             return false;
         }
+
         public static bool CanTowerMoveTo(ChessFigure figure, int targetX, int targetY)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
@@ -114,8 +115,7 @@ namespace Classes
             int y = figure.GetY();
 
             if ((CanBishopMoveTo(figure, targetX, targetY) == true) ||
-            (CanTowerMoveTo(figure, targetX, targetY) == true) || 
-            (CanKingMoveTo(figure,targetX, targetY) == true))
+            (CanTowerMoveTo(figure, targetX, targetY) == true))
                 return true;
             return false;
 

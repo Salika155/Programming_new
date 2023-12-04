@@ -9,6 +9,7 @@ namespace Examen1raEv2023_24
 {
 
     public enum Signatures
+
     {
         MATEMATICAS,
         LENGUAJE,

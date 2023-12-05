@@ -84,6 +84,7 @@ namespace BigNumber
                     }
                 }
             }
+            
         }
 
         private long GetAbsoluteValue(long number)
@@ -92,7 +93,7 @@ namespace BigNumber
         }
 
 
-        public string ConvertToString()
+        public string? ConvertToString()
         {
             string res = "";
 
@@ -118,7 +119,7 @@ namespace BigNumber
             return -1;
         }
         #region Funcion Add
-        public static BigNumber Add(BigNumber bigNumber1, BigNumber bigNumber2)
+        public static BigNumber? Add(BigNumber bigNumber1, BigNumber bigNumber2)
         {
             if (bigNumber1 == null || bigNumber2 == null)
                 return null;
@@ -172,24 +173,24 @@ namespace BigNumber
 
         #endregion
 
-        public static BigNumber Substract(BigNumber bigNumber1, BigNumber bigNumber2)
+        public static BigNumber? Substract(BigNumber bigNumber1, BigNumber bigNumber2)
         {
            
             return Add(bigNumber1, bigNumber2);
 
         }
         
-        public static BigNumber Multiply(BigNumber bigNumber1, BigNumber bigNumber2)
+        public static BigNumber? Multiply(BigNumber bigNumber1, BigNumber bigNumber2)
         {
             return Add(bigNumber1, bigNumber2);
         }
 
-        public static BigNumber Division(BigNumber bigNumber1, BigNumber bigNumber2)
+        public static BigNumber? Division(BigNumber bigNumber1, BigNumber bigNumber2)
         { 
             return Add(bigNumber1, bigNumber2);
         }
 
-        public static BigNumber Module(BigNumber bigNumber1, BigNumber bigNumber2)
+        public static BigNumber? Module(BigNumber bigNumber1, BigNumber bigNumber2)
         {
             return Add(bigNumber1, bigNumber2);
         }

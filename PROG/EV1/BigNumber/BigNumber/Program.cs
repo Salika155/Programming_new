@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             // Crear dos BigNumber
-            BigNumber bigNumber1 = new BigNumber("5567114130584655668");
-            BigNumber bigNumber2 = new BigNumber("-65432109876543210");
+            BigNumber bigNumber1 = new BigNumber("55");
+            BigNumber bigNumber2 = new BigNumber("6");
 
             // Sumar los dos números
             BigNumber result = BigNumber.Add(bigNumber1, bigNumber2);

@@ -22,7 +22,7 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y - 2) == true)
                     return true;
@@ -53,7 +53,7 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)
                     return true;
@@ -76,7 +76,7 @@ namespace Classes
             int y = figure.GetY();
 
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFigureMoveAround(targetX, targetY, x + 1, y + 0) == true)
                     return true;
@@ -107,7 +107,7 @@ namespace Classes
             int y = figure.GetY();
 
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 1, y + 0) == true)
                     return true;
@@ -130,7 +130,7 @@ namespace Classes
             int y = figure.GetY();
 
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if ((CanBishopMoveTo(figure, targetX, targetY, color) == true) ||
                 (CanTowerMoveTo(figure, targetX, targetY, color) == true))
@@ -281,7 +281,7 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 1) == true)
                     return true;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Classes
     {
         private static List<ChessFigure> figures = new List<ChessFigure>();
 
-        public static bool CanKnightMoveTo(ChessFigure figure, int targetX, int targetY)
+        public static bool CanKnightMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
         {
 
             if (!IsOnTheTable(figures, targetX, targetY))
@@ -21,92 +22,52 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y - 2) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y - 2) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y + 2) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y + 2) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y + 1) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y - 1) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y + 1) == true)
-                return true;
-            if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y - 1) == true)
-                return true;
-            return false;
-        }
-        public static bool CanBishopMoveTo(ChessFigure figure, int targetX, int targetY)
-        {
-
-            if (!IsOnTheTable(figures, targetX, targetY))
-                return false;
-
-            int x = figure.GetX();
-            int y = figure.GetY();
-
-            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)
-                return true;
-            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y - 1) == true)
-                return true;
-            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y - 1) == true)
-                return true;
-            if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y + 1) == true)
-                return true;
-            return false;
-        }
-        public static bool CanKingMoveTo(ChessFigure figure, int targetX, int targetY)
-        {
-            if (!IsOnTheTable(figures, targetX, targetY))
-                return false;
-
-            int x = figure.GetX();
-            int y = figure.GetY();
-
-
-            if (CanFigureMoveAround(targetX, targetY, x + 1, y + 0) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x - 1, y + 0) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x + 1, y + 1) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x + 0, y + 1) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x - 1, y + 1) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x - 1, y - 1) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x + 0, y - 1) == true)
-                return true;
-            if (CanFigureMoveAround(targetX, targetY, x + 1, y - 1) == true)
-                return true;
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y - 2) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y - 2) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y + 2) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 1, y + 2) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y + 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x - 2, y - 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y + 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 2, y - 1) == true)
+                    return true;
+            }
             return false;
         }
 
-        public static bool CanTowerMoveTo(ChessFigure figure, int targetX, int targetY)
+        public static bool CanBishopMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
         {
+
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
 
             int x = figure.GetX();
             int y = figure.GetY();
 
-
-            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 1, y + 0) == true)
-                return true;
-            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x - 1, y - 0) == true)
-                return true;
-            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y - 1) == true)
-                return true;
-            if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y + 1) == true)
-                return true;
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y - 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y - 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y + 1) == true)
+                    return true;
+            }
             return false;
-
         }
-        public static bool CanQueenMoveTo(ChessFigure figure, int targetX, int targetY)
+
+        public static bool CanKingMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
@@ -114,11 +75,68 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if ((CanBishopMoveTo(figure, targetX, targetY) == true) ||
-            (CanTowerMoveTo(figure, targetX, targetY) == true))
-                return true;
-            return false;
 
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if (CanFigureMoveAround(targetX, targetY, x + 1, y + 0) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x - 1, y + 0) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x + 1, y + 1) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x + 0, y + 1) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x - 1, y + 1) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x - 1, y - 1) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x + 0, y - 1) == true)
+                    return true;
+                if (CanFigureMoveAround(targetX, targetY, x + 1, y - 1) == true)
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool CanTowerMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
+        {
+            if (!IsOnTheTable(figures, targetX, targetY))
+                return false;
+
+            int x = figure.GetX();
+            int y = figure.GetY();
+
+
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 1, y + 0) == true)
+                    return true;
+                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x - 1, y - 0) == true)
+                    return true;
+                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y - 1) == true)
+                    return true;
+                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y + 1) == true)
+                    return true;
+            }
+            return false;
+        }
+
+        public static bool CanQueenMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
+        {
+            if (!IsOnTheTable(figures, targetX, targetY))
+                return false;
+
+            int x = figure.GetX();
+            int y = figure.GetY();
+
+
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if ((CanBishopMoveTo(figure, targetX, targetY, color) == true) ||
+                (CanTowerMoveTo(figure, targetX, targetY, color) == true))
+                    return true;
+            }
+            return false;
             #region anteriorcodigo
             //ChessFigure? f;
             //int xx;
@@ -255,7 +273,7 @@ namespace Classes
             #endregion
         }
 
-        public static bool CanPawnMoveTo(ChessFigure figure, int targetX, int targetY)
+        public static bool CanPawnMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
         {
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
@@ -263,11 +281,14 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-            if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 1) == true)
-                return true;
-            if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 2) == true)
-                return true;
-            return true;
+            if (HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
+            {
+                if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 1) == true)
+                    return true;
+                if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 2) == true)
+                    return true;
+            }
+            return false;
         }
 
         public static ChessFigure? GetFigureAt(List<ChessFigure> figures, int x, int y)
@@ -354,22 +375,20 @@ namespace Classes
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
 
-            if (targetX > xx && targetY > yy)
-            {
                 while (xx != targetX || yy != targetY)
                 {
                     ChessFigure? f = GetFigureAt(figures, xx, yy);
-                    if (f != null && f.GetColorType() == color)
+                    if (f != null)
                     {
-                        return true;
+                        if (f.GetColorType() == color)
+                            return true;
+                        else
+                        return false;
                     }
                     xx++;
                     yy++;
                 }
                 return false;
-            }
-            return false;
         }
-
     }
 }

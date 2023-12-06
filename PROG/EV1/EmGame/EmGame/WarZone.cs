@@ -24,16 +24,37 @@ namespace EmGame
                 {
                     Warrior? warrior = GetWarriorAt(x, y);
 
-                    if (warrior != null)
+                    if (warrior != null && warrior.GetTeamType() == TeamType.HUMAN)
                     {
                         Console.BackgroundColor = ConsoleColor.Green;
-                        Console.Write(" W ");
+                        Console.Write(" H ");
                         Console.ResetColor();
                     }
-                 
-                    else 
+
+                    else if (warrior != null && warrior.GetTeamType() == TeamType.ORC)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.Write(" O ");
+                        Console.ResetColor();
+                    }
+
+                    else if (warrior != null && warrior.GetTeamType() == TeamType.DWARF)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.Write(" D ");
+                        Console.ResetColor();
+                    }
+
+                    else if (warrior != null && warrior.GetTeamType() == TeamType.ELF)
                     {
                         Console.BackgroundColor = ConsoleColor.Red;
+                        Console.Write(" E ");
+                        Console.ResetColor();
+                    }
+
+                    else 
+                    {
+                        Console.BackgroundColor = ConsoleColor.White;
                         Console.Write(" I ");
                         Console.ResetColor();
                     }
@@ -69,7 +90,6 @@ namespace EmGame
                     warriors.Add(warrior);
                     i++;
                 }
-                
             }
         }
 
@@ -103,7 +123,6 @@ namespace EmGame
 
                     warrior.SetX(x);
                     warrior.SetY(y);
-                    
                 }
             }
         }

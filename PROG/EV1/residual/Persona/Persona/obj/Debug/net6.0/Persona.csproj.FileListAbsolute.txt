@@ -1,0 +1,15 @@
+C:\Users\carcarcor\source\repos\Persona\Persona\bin\Debug\net6.0\Persona.exe
+C:\Users\carcarcor\source\repos\Persona\Persona\bin\Debug\net6.0\Persona.deps.json
+C:\Users\carcarcor\source\repos\Persona\Persona\bin\Debug\net6.0\Persona.runtimeconfig.json
+C:\Users\carcarcor\source\repos\Persona\Persona\bin\Debug\net6.0\Persona.dll
+C:\Users\carcarcor\source\repos\Persona\Persona\bin\Debug\net6.0\Persona.pdb
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.csproj.AssemblyReference.cache
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.AssemblyInfoInputs.cache
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.AssemblyInfo.cs
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.dll
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\refint\Persona.dll
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.pdb
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\Persona.genruntimeconfig.cache
+C:\Users\carcarcor\source\repos\Persona\Persona\obj\Debug\net6.0\ref\Persona.dll

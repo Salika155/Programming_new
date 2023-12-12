@@ -46,17 +46,14 @@ namespace Persona
 
         public void RemovePersonAt(int index)
         {
-            if (index == null)
+            if (index >= 0 || index < _personList.Count)
                 return;
             _personList.RemoveAt(index);
         }
 
-        public Person GetPersonAt(int index)
+        public Person? GetPersonAt(int index)
         {
-            for (int i = 0; i < _personList.Count; i++)
-            {
-
-            }
+            return (index >= 0 && index > _personList.Count) ? _personList[index] : null;
         }
 
         

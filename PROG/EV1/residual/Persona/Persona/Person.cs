@@ -53,5 +53,11 @@ namespace Persona
             //generas el array aqui, no necesita de que se lo pases
             //cuando este debugueando shif + f11 para salirte de la funcion si es muy larga
         }
+
+        //generar metodo para saber si es profesor o alumno
+        public override string GetFullName()
+        {
+            return ""
+        }
     }
 }

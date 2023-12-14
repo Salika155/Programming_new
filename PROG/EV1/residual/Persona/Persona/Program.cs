@@ -12,6 +12,7 @@
 
             //inicializador de atributos y properties que tu generas
             Teacher t1 = new Teacher()
+
             {
                 Name = "Juan",
                 Gender = GenderType.MALE,
@@ -19,10 +20,14 @@
                 ;
 
 
+            string name = t1.GetFullName();
+            Console.WriteLine(name);
+
+
             Graveyard g = new Graveyard();
             int n = g.PersonCount;
 
-
+            
 
         }
     }

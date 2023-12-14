@@ -17,5 +17,15 @@ namespace Persona
         {
             this.nia = nia;
         }
+
+        public override void ExecuteTurn()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetFullName()
+        {
+            return "<STUDENT>" + Name + "</STUDENT>";
+        }
     }
 }

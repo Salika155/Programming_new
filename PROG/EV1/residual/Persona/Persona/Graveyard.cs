@@ -56,6 +56,13 @@ namespace Persona
             return (index >= 0 && index > _personList.Count) ? _personList[index] : null;
         }
 
-        
+        public void ExecuteFrame()
+        {
+            for (int i = 0; i < _personList.Count; i++)
+            {
+                Person p = _personList[i];
+                p.ExecuteTurn();
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace Persona
         FEMALE,
         UNKNOWN
     }
-    public class Person
+    public abstract class Person
     {
         private string _name = "";
         private GenderType _gender = GenderType.UNKNOWN;
@@ -55,9 +55,15 @@ namespace Persona
         }
 
         //generar metodo para saber si es profesor o alumno
-        public override string GetFullName()
+        public virtual string GetFullName()
         {
-            return ""
+            return "<PROFESOR>" + Name + "<PROFESOR";
         }
+
+        //obliga a que los hijos hereden de esta, no tiene cuerpo y no puede crear newperson, o pongo la clase abstract o propago el metodo
+        public abstract void ExecuteTurn();
+        
+
+        //hay clases que pueden tener que ser abstractas puras, que tienen todos sus metodos, y su clase principal, pero ningun atributo
     }
 }

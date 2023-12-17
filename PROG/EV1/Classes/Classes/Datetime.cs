@@ -66,6 +66,7 @@ namespace Classes
             {
                 if (_year < int.MaxValue && _month <= 12 && _day <= 31)
                 {
+                    // Javi: No estás contemplando los meses de 30 0 31 dias
                     if (_month == 2)
                     {
                         if (IsLeap(_year))
@@ -83,6 +84,7 @@ namespace Classes
             return false;
         }
 
+        // Javi: Perfecto!!!!
         public bool IsLeap()
         {
             return IsLeap(_year);
@@ -97,7 +99,7 @@ namespace Classes
         public void IncrementDays()
         {
             _day++;
-
+            // Javi: Bien
             if (_day > GetDaysCount(_year, _month))
             {
                 _day = 1;
@@ -128,6 +130,7 @@ namespace Classes
                     if (_hour >= 24)
                     { 
                         _hour = 0;
+                        // Javi: Bien
                         IncrementDays();
                     }
                 }
@@ -249,6 +252,7 @@ namespace Classes
 
         public static int GetDaysCount(int year, int month)
         {
+            // Javi: Deberías haber usado esta función en otra que tenias al principio
                 if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
                     return 31;
                 else if (month == 4 || month == 6 || month == 5 || month == 9 || month == 11)

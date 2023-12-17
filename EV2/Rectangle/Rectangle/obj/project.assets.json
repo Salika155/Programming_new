@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Rectangle\\Rectangle\\Rectangle.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Rectangle\\Rectangle\\Rectangle.csproj",
       "projectName": "Rectangle",
-      "projectPath": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Rectangle\\Rectangle\\Rectangle.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Rectangle\\Rectangle\\Rectangle.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\programacion 2da\\practicas\\Rectangle\\Rectangle\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV2\\Rectangle\\Rectangle\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,7 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

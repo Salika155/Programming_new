@@ -40,6 +40,7 @@ namespace Classes
         //+GetPieceCount():int
         public int GetPieceCount()
         {
+            // Javi: _piece no puede ser null nunca, es privada
             if (_piece != null)
                 return _piece.Count;
             return -1;
@@ -48,6 +49,7 @@ namespace Classes
         //+AddPiece(piece.DominoPiece)
         public void AddPiece(DominoPiece piece)
         {
+            // Javi: Comprobar null
             if (ContainsPiece(piece) == false)
                 _piece.Add(piece);
         }
@@ -69,6 +71,7 @@ namespace Classes
 
             for (int i = 0; i < GetPieceCount(); i++)
             {
+                // Javi: Muy bien
                 if (GetPieceAt(i).IsEqual(piece))
                 return true;
             }

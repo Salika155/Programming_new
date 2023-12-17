@@ -34,6 +34,7 @@ namespace BigNumber
             // Determinar el signo original
             int sign = (bignumber == 0) ? 0 : 1;
 
+            // Javi: Este bucle creo que está mal planteado
             while (bignumber != 0)
             {
                 if (bignumber > 0)
@@ -68,6 +69,7 @@ namespace BigNumber
             }
 
 
+            // Javi: Esto lo has probado??
             for (int i = bignumber.Length - 1; i >= 0; i--)
             {
                 char c = bignumber[i];
@@ -87,6 +89,7 @@ namespace BigNumber
             
         }
 
+        // Javi: Función estática
         private long GetAbsoluteValue(long number)
         {
             return number < 0 ? -number : number;
@@ -151,6 +154,7 @@ namespace BigNumber
 
             long carry = 0;
 
+            // Javi: El algoritmo parece correcto, pero no creo que hiciese falta hacer un clone de los números de entrada
             for (int i = 0; i < result.GetDigitCount(); i++)
             {
                 long digit1 = result.GetDigitAt(i);

@@ -9,8 +9,10 @@ using System.Xml.Schema;
 
 namespace Classes
 {
+    // Javi: A ver, en general este archivo tiene buena pinta, pero creo que hay funciones que no has probado
     public class ChessUtils
     {
+        // Javi: Esto no debería ir aquí
         private static List<ChessFigure> figures = new List<ChessFigure>();
 
         public static bool CanKnightMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
@@ -22,6 +24,7 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
+            // Javi: Esto tiene buena pinta
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikeKnightTo(targetX, targetY, x + 1, y - 2) == true)
@@ -53,6 +56,7 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
+            // Javi: imposible, esto debería estar en un bucle
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
                 if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)

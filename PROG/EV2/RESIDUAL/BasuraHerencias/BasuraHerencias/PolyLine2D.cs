@@ -70,7 +70,7 @@ namespace BasuraHerencias
 
         public override bool HasArea()
         {
-            throw new NotImplementedException();
+            return false;
         }
 
         

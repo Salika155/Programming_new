@@ -24,7 +24,16 @@ namespace BasuraHerencias
 
         public double GetArea(double area)
         {
-            return area;
+            //comprobacion
+            for (int i = 0; i < _shapes.Count; i++)
+            {
+                
+                if (area == _shapes[i].GetArea())
+                {
+                    return area;
+                }
+            }
+            return -1;
         }
 
         public IShape GetShapeAt(int index)

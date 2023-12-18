@@ -15,7 +15,11 @@ namespace BasuraHerencias
 
         public Rect2D(Point2D position, string name) : base(position, name)
         {
+            
+        }
 
+        public Rect2D()
+        {
         }
 
         //public Rect2D()
@@ -94,6 +98,11 @@ namespace BasuraHerencias
         public void SetMax(Point2D max) 
         {
             _max = max;
+        }
+
+        public override ShapeType GetShapeType()
+        {
+            return ShapeType.RECT2D;
         }
     }
 }

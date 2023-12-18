@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,11 @@ namespace BasuraHerencias
         //hay un getarea pero no es visible
 
         private List<Point2D> _points;
+
+        public PolyLine2D(Point2D position, string name)
+        {
+            _points = new List<Point2D>();
+        }
 
         public void AddPoint(Point2D point)
         {
@@ -46,9 +52,9 @@ namespace BasuraHerencias
 
         }
 
-        public void SetPositionAt()
+        public void SetPositionAt(int index, Point2D point)
         {
-
+            throw new NotImplementedException();
         }
 
         public void RemovePersonAt(int index)

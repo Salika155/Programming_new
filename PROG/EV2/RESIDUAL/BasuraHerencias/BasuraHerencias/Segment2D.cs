@@ -12,5 +12,9 @@ namespace BasuraHerencias
 
         private Point2D _from;
         private Point2D _to;
+
+        public Segment2D(Point2D position, string name) : base(position, name)
+        {
+        }
     }
 }

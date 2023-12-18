@@ -11,47 +11,49 @@ namespace BasuraHerencias
         protected Point2D _position;
         private string _name;
 
-        //-position:Point2D
-        //-name:string
+        //-_position:Point2D
+        //-_name:string
         //public string GetName()
         //{
 
         //}
-        public abstract double GetArea();
+        
 
         public string GetName()
         {
-            throw new NotImplementedException();
+           return _name;
+        }
+        public void SetName(string name)
+        {
+            _name= name;
         }
 
         public Point2D GetPosition2D()
         {
-            throw new NotImplementedException();
+            return _position;
         }
-
-        public ShapeType GetShapeType()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool HasArea()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetName(string name)
-        {
-            throw new NotImplementedException();
-        }
-
         public void SetPosition2D(Point2D position2D)
         {
-            throw new NotImplementedException();
+            _position = position2D;
         }
 
-        double IShape.GetArea()
+        public virtual ShapeType GetShapeType()
+        {
+            return 0;
+        }
+
+        public virtual bool HasArea()
         {
             throw new NotImplementedException();
         }
+
+
+        public abstract double GetArea();
+
+
+        //double IShape.GetArea()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

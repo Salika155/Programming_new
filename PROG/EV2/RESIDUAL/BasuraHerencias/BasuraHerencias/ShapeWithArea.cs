@@ -30,8 +30,9 @@ namespace BasuraHerencias
 
         public override double GetArea()
         {
-            return double.NaN;
+            return GetArea();
         }
+        
 
         //public override ShapeType GetShapeType()
         //{

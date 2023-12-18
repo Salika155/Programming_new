@@ -18,9 +18,11 @@ namespace BasuraHerencias
 
         }
 
-        public Rect2D()
-        {
-        }
+        //public Rect2D()
+        //{
+
+        //}
+
 
         //+Set/Get/Min/Max
         //+GetHeight():double

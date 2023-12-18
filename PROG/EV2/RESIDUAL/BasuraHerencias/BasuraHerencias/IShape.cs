@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,29 @@ namespace BasuraHerencias
         //+GetShapeType():shapetype
         //+GetName/+SetName
 
+        public ShapeType Type
+        {
+            get
+            {
+                return Type;
+            }
+            set
+            {
+                Type = GetShapeType();
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return Name;
+            }
+            set
+            {
+                Name = value;
+            }
+        }
 
         public Point2D GetPosition2D();
 

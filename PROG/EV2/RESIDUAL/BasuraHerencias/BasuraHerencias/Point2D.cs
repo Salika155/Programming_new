@@ -22,5 +22,17 @@ namespace BasuraHerencias
 
         }
 
+        public double X
+        { 
+          get { return _x; } 
+          set { _x = value; } 
+        }
+
+        public double Y
+        {
+            get { return _y; } 
+            set { _y = value; }
+        }
+
     }
 }

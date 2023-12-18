@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BasuraHerencias
 {
-    public class PolyLine2D
+    public class PolyLine2D : ShapeWithArea
     {
         //+AddPoint(print )
         //+GetPointCount()
@@ -21,9 +21,9 @@ namespace BasuraHerencias
 
         private List<Point2D> _points;
 
-        public PolyLine2D(Point2D position, string name)
+        public PolyLine2D(Point2D position, string name) : base(position, name)
         {
-            _points = new List<Point2D>();
+
         }
 
         public void AddPoint(Point2D point)
@@ -54,7 +54,12 @@ namespace BasuraHerencias
 
         public void SetPositionAt(int index, Point2D point)
         {
-            throw new NotImplementedException();
+            if (index >= 0 && index < _points.Count)
+            {
+                _points[index] = point;
+            }
+            else
+                return;
         }
 
         public void RemovePersonAt(int index)

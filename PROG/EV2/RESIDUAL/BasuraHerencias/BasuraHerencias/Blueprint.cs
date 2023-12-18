@@ -29,17 +29,28 @@ namespace BasuraHerencias
 
         public IShape GetShapeAt(int index)
         {
-            throw new NotImplementedException();
+            if (index >= 0 && index < _shapes.Count)
+            {
+                return _shapes[index];
+            }
+            else
+                return null;
         }
 
         public int GetShapeCount()
         {
-            return _shapes.Count;
+            if (_shapes != null)
+                return _shapes.Count;
+            return -1;
         }
 
         public void RemoveShapeAt(int index)
         {
-            throw new NotImplementedException();
+            if (index < 0 || index > GetShapeCount())
+                return;
+
+            _shapes.RemoveAt(index);
+
         }
     }
 }

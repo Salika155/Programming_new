@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BasuraHerencias
+﻿namespace BasuraHerencias
 {
     public class Circle2D : ShapeWithArea
     {
@@ -17,6 +11,8 @@ namespace BasuraHerencias
         {
             _radius = radius;
         }
+
+        
 
         public double GetRadius()
         {

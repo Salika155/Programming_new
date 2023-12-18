@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\PokerCards\\PokerCards\\PokerCards.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\residual\\PokerCards\\PokerCards\\PokerCards.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\PokerCards\\PokerCards\\PokerCards.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\residual\\PokerCards\\PokerCards\\PokerCards.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\PokerCards\\PokerCards\\PokerCards.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\residual\\PokerCards\\PokerCards\\PokerCards.csproj",
         "projectName": "PokerCards",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\PokerCards\\PokerCards\\PokerCards.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\residual\\PokerCards\\PokerCards\\PokerCards.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\PokerCards\\PokerCards\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV1\\residual\\PokerCards\\PokerCards\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

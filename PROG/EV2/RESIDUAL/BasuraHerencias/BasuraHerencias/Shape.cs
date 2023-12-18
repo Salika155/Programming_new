@@ -17,7 +17,36 @@ namespace BasuraHerencias
         //{
 
         //}
-        
+
+        public Shape(Point2D position, string name)
+        {
+            _position = position;
+            _name = name;
+        }
+
+        public Point2D Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+
+        public string Name
+        {
+            get 
+            { 
+                return _name; 
+            }
+            set
+            { 
+                _name = value; 
+            }
+        }
 
         public string GetName()
         {
@@ -37,14 +66,12 @@ namespace BasuraHerencias
             _position = position2D;
         }
 
-        public virtual ShapeType GetShapeType()
-        {
-            return 0;
-        }
+        public abstract ShapeType GetShapeType();
+        
 
         public virtual bool HasArea()
         {
-            throw new NotImplementedException();
+            return GetArea() != null;
         }
 
 

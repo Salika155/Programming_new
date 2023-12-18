@@ -21,5 +21,10 @@ namespace BasuraHerencias
         {
             return GetArea();
         }
+
+        public override ShapeType GetShapeType()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -9,7 +9,10 @@ namespace BasuraHerencias
     public abstract class Shape : IShape
     {
         protected Point2D _position;
-        private string _name;
+        private string _name = "";
+        
+
+        //protected ShapeType _type;
 
         //-_position:Point2D
         //-_name:string
@@ -18,62 +21,78 @@ namespace BasuraHerencias
 
         //}
 
-        public Shape(Point2D position, string name)
+        //public Shape(Point2D position, string name = "")
+        //{
+        //    _position = position;
+        //    _name = name;
+        //}
+
+        protected Shape(Point2D position, string name) : this(position)
         {
-            _position = position;
+            if (name != null)
             _name = name;
         }
 
-        public Point2D Position
+        protected Shape(Point2D position)
         {
-            get
-            {
-                return _position;
-            }
-            set
-            {
-                _position = value;
-            }
+            this._position = position;
         }
 
-        public string Name
-        {
-            get 
-            { 
-                return _name; 
-            }
-            set
-            { 
-                _name = value; 
-            }
-        }
+        //public Shape(ShapeType type)
+        //{
+        //    _type = type;
+        //}
 
-        public string GetName()
+        //public Point2D Position
+        //{
+        //    get
+        //    {
+        //        return _position;
+        //    }
+        //    set
+        //    {
+        //        _position = value;
+        //    }
+        //}
+
+        //public string Name
+        //{
+        //    get 
+        //    { 
+        //        return _name; 
+        //    }
+        //    set
+        //    { 
+        //        _name = value; 
+        //    }
+        //}
+
+        public virtual string GetName()
         {
            return _name;
         }
         public void SetName(string name)
         {
+            //comprobar null
             _name= name;
         }
 
-        public Point2D GetPosition2D()
+        public virtual Point2D GetPosition2D()
         {
             return _position;
         }
+
         public void SetPosition2D(Point2D position2D)
         {
+            //comprobar null
             _position = position2D;
         }
 
         public abstract ShapeType GetShapeType();
+
+
+        public abstract bool HasArea();
         
-
-        public virtual bool HasArea()
-        {
-            return GetArea() != null;
-        }
-
 
         public abstract double GetArea();
 

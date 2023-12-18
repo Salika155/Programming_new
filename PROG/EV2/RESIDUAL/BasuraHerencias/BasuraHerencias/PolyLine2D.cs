@@ -19,7 +19,8 @@ namespace BasuraHerencias
 
         //hay un getarea pero no es visible
 
-        private List<Point2D> _points;
+        private List<Point2D> _points = new List<Point2D>();
+
 
         public PolyLine2D(Point2D position, string name) : base(position, name)
         {
@@ -43,12 +44,7 @@ namespace BasuraHerencias
             if (index < 0 || index >= _points.Count)
                 return null;
 
-            for (int i = 0; i < _points.Count; i++)
-            {
-                Point2D point = _points[i];
-                return point;
-            }
-            return null;
+            return _points[index];
 
         }
 
@@ -67,6 +63,17 @@ namespace BasuraHerencias
             _points.RemoveAt(index);
         }
 
+        public override ShapeType GetShapeType()
+        {
+            return ShapeType.POLYLINE2D;
+        }
+
+        public override bool HasArea()
+        {
+            throw new NotImplementedException();
+        }
+
+        
 
     }
 }

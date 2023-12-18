@@ -14,6 +14,8 @@ namespace BasuraHerencias
         POINTSHAPE2D,
         RECT2D,
         SEGMENT2D,
+        CIRCLE2D,
+        UNKNOWN
 
 
     }
@@ -26,29 +28,29 @@ namespace BasuraHerencias
         //+GetShapeType():shapetype
         //+GetName/+SetName
 
-        public ShapeType Type
-        {
-            get
-            {
-                return Type;
-            }
-            set
-            {
-                Type = GetShapeType();
-            }
-        }
+        //public ShapeType Type
+        //{
+        //    get
+        //    {
+        //        return Type;
+        //    }
+        //    set
+        //    {
+        //        Type = GetShapeType();
+        //    }
+        //}
 
-        public string Name
-        {
-            get
-            {
-                return Name;
-            }
-            set
-            {
-                Name = value;
-            }
-        }
+        //public string Name
+        //{
+        //    get
+        //    {
+        //        return Name;
+        //    }
+        //    set
+        //    {
+        //        Name = value;
+        //    }
+        //}
 
         public Point2D GetPosition2D();
 

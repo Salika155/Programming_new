@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace BasuraHerencias
 {
-    public class ShapeWithoutArea : Shape
+    public abstract class ShapeWithoutArea : Shape
     {
-        private Point2D _position;
-        private string _name;
+        //private Point2D _position;
+        //private string _name;
 
-        public ShapeWithoutArea(Point2D position, string name)
+        protected ShapeWithoutArea(Point2D position, string name) : base (position, name)
         {
-            this._position = position;
-            this._name = name;
+            
         }
 
         public override double GetArea()
         {
-            return GetArea();
+            return double.NaN;
         }
 
-        public override ShapeType GetShapeType()
+        public override bool HasArea()
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

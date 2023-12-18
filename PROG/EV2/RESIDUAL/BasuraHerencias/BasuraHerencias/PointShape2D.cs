@@ -13,7 +13,17 @@ namespace BasuraHerencias
 
         public PointShape2D(Point2D position, string name) : base(position, name)
         {
-            _points = new List<Point2D>();
+            
+        }
+
+        public PointShape2D(Point2D position) : base(position, string.Empty)
+        {
+
+        }
+
+        public override ShapeType GetShapeType()
+        {
+            return ShapeType.POINTSHAPE2D;
         }
     }
 }

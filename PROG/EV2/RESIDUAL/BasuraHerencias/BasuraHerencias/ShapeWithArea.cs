@@ -6,36 +6,41 @@ using System.Threading.Tasks;
 
 namespace BasuraHerencias
 {
-    public class ShapeWithArea : Shape
+    public abstract class ShapeWithArea : Shape
     {
-        private Point2D position;
-        private string name;
+        //private Point2D position;
+        //private string name;
 
-        public ShapeWithArea(Point2D position, string name) : base(position, name)
+        protected ShapeWithArea(Point2D position, string name) : base(position, name)
         {
-            
+
         }
 
-        public Point2D Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
+        //public Point2D Position
+        //{
+        //    get { return position; }
+        //    set { position = value; }
+        //}
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        //public string Name
+        //{
+        //    get { return name; }
+        //    set { name = value; }
+        //}
 
         public override double GetArea()
         {
-            return GetArea();
+            return double.NaN;
         }
 
-        public override ShapeType GetShapeType()
+        //public override ShapeType GetShapeType()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public override bool HasArea()
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

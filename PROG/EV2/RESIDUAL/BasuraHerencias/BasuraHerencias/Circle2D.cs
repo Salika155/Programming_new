@@ -10,6 +10,7 @@
         public Circle2D(double radius, Point2D position, string name) : base(position, name)
         {
             _radius = radius;
+            //pasarle el type para comprobar que sea circulo
         }
 
         
@@ -22,6 +23,11 @@
         public void SetRadius(double radius)
         {
             _radius = radius;
+        }
+
+        public override ShapeType GetShapeType()
+        {
+            return ShapeType.CIRCLE2D;
         }
     }
 }

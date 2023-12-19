@@ -10,7 +10,7 @@
         public Circle2D(double radius, Point2D position, string name) : base(position, name)
         {
             _radius = radius;
-            //pasarle el type para comprobar que sea circulo
+            //pasarle el type para comprobar que sea circulo o hacerle un getshape type
 
         }
 

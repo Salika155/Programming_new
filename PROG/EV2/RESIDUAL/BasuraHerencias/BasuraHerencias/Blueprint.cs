@@ -42,8 +42,7 @@ namespace BasuraHerencias
             {
                 return _shapes[index];
             }
-            else
-                return null;
+            return null;
         }
 
         public int GetShapeCount()

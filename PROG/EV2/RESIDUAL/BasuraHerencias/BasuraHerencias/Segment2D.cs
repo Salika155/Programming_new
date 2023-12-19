@@ -15,13 +15,18 @@ namespace BasuraHerencias
 
         public Segment2D(Point2D position, string name) : base(position, name)
         {
-            //from y to
+           
 
         }
 
         public override ShapeType GetShapeType()
         {
             return ShapeType.SEGMENT2D;
+        }
+
+        public void SetName()
+        {
+            throw new NotImplementedException();
         }
     }
 }

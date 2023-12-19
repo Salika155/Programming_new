@@ -36,7 +36,9 @@ namespace BasuraHerencias
             return -1;
         }
 
-        public IShape GetShapeAt(int index)
+        public abstract double GetArea();
+
+        public IShape? GetShapeAt(int index)
         {
             if (index >= 0 && index < _shapes.Count)
             {

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BasuraHerencias
 {
@@ -13,73 +15,57 @@ namespace BasuraHerencias
         private Point2D _min;
         private Point2D _max;
 
-        public Rect2D(Point2D position, string name) : base(position, name)
+        public Rect2D(Point2D position, string name, Point2D min, Point2D max) : base(position, name)
         {
+            _min = min;
+            _max = max;
+            
+            //_type = GetShapeType();
             
         }
-
-        public Rect2D()
-        {
-        }
-
-
-
-        //public Rect2D()
-        //{
-
-        //}
-
 
         //+Set/Get/Min/Max
         //+GetHeight():double
         //+GetWidth():double
-
-        //public Rect2D (Point2D min, Point2D max)
-        //{
-        //    _min = min;
-        //    _max = max;
+        
+        //public Point2D Min { 
+        //    get 
+        //    { 
+        //        return _min; 
+        //    } 
+        //    set
+        //    {
+        //        _min = value;
+        //    }
         //}
 
-        //public Rect2D()
+        //public Point2D Max
         //{
+        //    get
+        //    {
+        //        return _max;
+        //    }
+        //    set
+        //    {
+        //        _max = value;
+        //    }
         //}
-
-        public Point2D Min { 
-            get 
-            { 
-                return _min; 
-            } 
-            set
-            {
-                _min = value;
-            }
-        }
-
-        public Point2D Max
-        {
-            get
-            {
-                return _max;
-            }
-            set
-            {
-                _max = value;
-            }
-        }
 
         public override double GetArea()
         {
-            return GetHeight() * GetWidth();
+            double with = GetWidth();
+            double height = GetHeight();
+            return with * height;
         }
 
         public double GetHeight()
         {
-            return Math.Abs(Max._y - Min._y);
+            return _max._y - _min._y;
         }
 
         public double GetWidth() 
         {
-            return Math.Abs(Max._x - Min._x);
+            return _max._x - _min._x;
         }
 
         public Point2D GetMin()
@@ -106,5 +92,10 @@ namespace BasuraHerencias
         {
             return ShapeType.RECT2D;
         }
+
+        
+
+
+
     }
 }

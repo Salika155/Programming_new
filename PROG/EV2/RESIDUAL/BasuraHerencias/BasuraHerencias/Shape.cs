@@ -29,7 +29,9 @@ namespace BasuraHerencias
 
         protected Shape(Point2D position, string name) : this(position)
         {
-            if (name != null)
+            if (name == null || position == null)
+                return;
+            _position = position;
             _name = name;
         }
 
@@ -43,38 +45,40 @@ namespace BasuraHerencias
         //    _type = type;
         //}
 
-        //public Point2D Position
-        //{
-        //    get
-        //    {
-        //        return _position;
-        //    }
-        //    set
-        //    {
-        //        _position = value;
-        //    }
-        //}
+        public Point2D Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
 
-        //public string Name
-        //{
-        //    get 
-        //    { 
-        //        return _name; 
-        //    }
-        //    set
-        //    { 
-        //        _name = value; 
-        //    }
-        //}
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
 
-        public virtual string GetName()
+        public string GetName()
         {
            return _name;
         }
         public void SetName(string name)
         {
             //comprobar null
+            if (name != null)
             _name= name;
+
         }
 
         public virtual Point2D GetPosition2D()
@@ -91,10 +95,19 @@ namespace BasuraHerencias
         public abstract ShapeType GetShapeType();
 
 
-        public abstract bool HasArea();
+        public virtual bool HasArea()
+        {
+            return GetArea() != 0;
+        }
         
 
         public abstract double GetArea();
+
+        public void SetName()
+        {
+            _name = Name;
+        }
+
 
 
         //double IShape.GetArea()

@@ -27,6 +27,8 @@ namespace BasuraHerencias
 
         }
 
+        
+
         public void AddPoint(Point2D point)
         {
             if (point == null)
@@ -60,6 +62,8 @@ namespace BasuraHerencias
 
         public void RemovePersonAt(int index)
         {
+            if (index < 0 || index >= _points.Count)
+                return;
             _points.RemoveAt(index);
         }
 
@@ -73,7 +77,9 @@ namespace BasuraHerencias
             return false;
         }
 
-        
-
+        public void SetName()
+        {
+            
+        }
     }
 }

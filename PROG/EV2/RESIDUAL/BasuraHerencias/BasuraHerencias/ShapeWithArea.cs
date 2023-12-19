@@ -13,7 +13,9 @@ namespace BasuraHerencias
 
         protected ShapeWithArea(Point2D position, string name) : base(position, name)
         {
-
+           
+            
+            
         }
 
         //public Point2D Position
@@ -30,7 +32,7 @@ namespace BasuraHerencias
 
         public override double GetArea()
         {
-            return GetArea();
+            return 0;
         }
         
 

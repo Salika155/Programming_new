@@ -10,7 +10,7 @@ namespace BasuraHerencias
     public enum ShapeType
     {
         POLYLINE2D,
-        POINT2D,
+        //POINT2D,
         POINTSHAPE2D,
         RECT2D,
         SEGMENT2D,
@@ -28,30 +28,6 @@ namespace BasuraHerencias
         //+GetShapeType():shapetype
         //+GetName/+SetName
 
-        //public ShapeType Type
-        //{
-        //    get
-        //    {
-        //        return Type;
-        //    }
-        //    set
-        //    {
-        //        Type = GetShapeType();
-        //    }
-        //}
-
-        //public string Name
-        //{
-        //    get
-        //    {
-        //        return Name;
-        //    }
-        //    set
-        //    {
-        //        Name = value;
-        //    }
-        //}
-
         public Point2D GetPosition2D();
 
         public void SetPosition2D(Point2D position2D);
@@ -59,7 +35,7 @@ namespace BasuraHerencias
         public bool HasArea();
         public ShapeType GetShapeType();
         public string GetName();
-        public void SetName(string name);
+        public void SetName();
 
         
         

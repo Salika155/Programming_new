@@ -11,6 +11,7 @@
         {
             _radius = radius;
             //pasarle el type para comprobar que sea circulo
+
         }
 
         
@@ -28,6 +29,11 @@
         public override ShapeType GetShapeType()
         {
             return ShapeType.CIRCLE2D;
+        }
+
+        public void SetName()
+        {
+            throw new NotImplementedException();
         }
     }
 }

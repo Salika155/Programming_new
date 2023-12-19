@@ -25,5 +25,10 @@ namespace BasuraHerencias
         {
             return ShapeType.POINTSHAPE2D;
         }
+
+        public void SetName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

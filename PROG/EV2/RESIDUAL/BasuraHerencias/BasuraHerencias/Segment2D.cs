@@ -15,6 +15,7 @@ namespace BasuraHerencias
 
         public Segment2D(Point2D position, string name) : base(position, name)
         {
+           this.Name = name;
            
 
         }
@@ -24,9 +25,9 @@ namespace BasuraHerencias
             return ShapeType.SEGMENT2D;
         }
 
-        public void SetName()
+        public new virtual void SetName(string name)
         {
-            throw new NotImplementedException();
+            Name = name;
         }
     }
 }

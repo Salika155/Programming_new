@@ -8,9 +8,6 @@ namespace BasuraHerencias
 {
     public class PointShape2D : ShapeWithoutArea
     {
-        //tiene lista de Point2D
-        private List<Point2D> _points;
-
         public PointShape2D(Point2D position, string name) : base(position, name)
         {
             
@@ -26,9 +23,9 @@ namespace BasuraHerencias
             return ShapeType.POINTSHAPE2D;
         }
 
-        public void SetName()
+        public new virtual void SetName(string name)
         {
-            throw new NotImplementedException();
+            Name = name;
         }
     }
 }

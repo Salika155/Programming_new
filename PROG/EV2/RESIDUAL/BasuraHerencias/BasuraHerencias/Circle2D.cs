@@ -1,4 +1,6 @@
-﻿namespace BasuraHerencias
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace BasuraHerencias
 {
     public class Circle2D : ShapeWithArea
     {
@@ -11,10 +13,7 @@
         {
             _radius = radius;
             //pasarle el type para comprobar que sea circulo o hacerle un getshape type
-
         }
-
-        
 
         public double GetRadius()
         {
@@ -31,9 +30,9 @@
             return ShapeType.CIRCLE2D;
         }
 
-        public void SetName()
+        public new virtual void SetName(string name)
         {
-            throw new NotImplementedException();
+            Name = name;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace BasuraHerencias
 
         //hay un getarea pero no es visible
 
-        private List<Point2D> _points = new List<Point2D>();
+        private readonly List<Point2D> _points = new List<Point2D>();
 
 
         public PolyLine2D(Point2D position, string name) : base(position, name)
@@ -77,9 +77,9 @@ namespace BasuraHerencias
             return false;
         }
 
-        public void SetName()
+        public new virtual void SetName(string name)
         {
-            
+            Name = name;
         }
     }
 }

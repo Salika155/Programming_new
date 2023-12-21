@@ -10,7 +10,7 @@ namespace BasuraHerencias
     {
        
         //tiene lista de IShape
-        private List<IShape> _shapes;
+        private readonly List<IShape> _shapes;
 
         public Blueprint()
         {

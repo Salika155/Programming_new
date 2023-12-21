@@ -23,15 +23,6 @@
             }
             rect.GetArea();
 
-            
-            
-
-            
-
-            // Crear un objeto Rect2D con los elementos necesarios
-            
-
-            // Ahora puedes usar el objeto rect como Rect2D
             double area = rect.GetArea();
             Console.WriteLine("Área del rectángulo: " + area);
         }

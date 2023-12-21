@@ -19,6 +19,7 @@ namespace BasuraHerencias
 
         public void AddShape(IShape shape)
         {
+            //COMPROBAR
             _shapes.Add(shape);
         }
 
@@ -49,14 +50,12 @@ namespace BasuraHerencias
 
         public int GetShapeCount()
         {
-            if (_shapes != null)
-                return _shapes.Count;
-            return -1;
+            return _shapes.Count;
         }
 
         public void RemoveShapeAt(int index)
         {
-            if (index < 0 || index > GetShapeCount())
+            if (index < 0 || index >= GetShapeCount())
                 return;
 
             _shapes.RemoveAt(index);

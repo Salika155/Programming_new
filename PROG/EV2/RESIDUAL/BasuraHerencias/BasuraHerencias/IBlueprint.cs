@@ -14,10 +14,10 @@ namespace BasuraHerencias
         //+RemoveShapeAt(int)
         //+GetArea():double
 
-        public void AddShape(IShape shape);
-        public int GetShapeCount();
-        public IShape? GetShapeAt(int index);
-        public void RemoveShapeAt(int index);
-        public double GetArea();
+        void AddShape(IShape shape);
+        int GetShapeCount();
+        IShape? GetShapeAt(int index);
+        void RemoveShapeAt(int index);
+        double GetArea();
     }
 }

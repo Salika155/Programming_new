@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasuraHerencias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97c378983e84808250a4483dea88ffab1c7d31e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasuraHerencias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasuraHerencias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

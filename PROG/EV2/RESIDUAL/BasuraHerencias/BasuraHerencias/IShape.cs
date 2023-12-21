@@ -28,14 +28,14 @@ namespace BasuraHerencias
         //+GetShapeType():shapetype
         //+GetName/+SetName
 
-        public Point2D GetPosition2D();
+        Point2D GetPosition2D();
 
-        public void SetPosition2D(Point2D position2D);
-        public double GetArea();
-        public bool HasArea();
-        public ShapeType GetShapeType();
-        public string GetName();
-        public void SetName();
+        void SetPosition2D(Point2D position2D);
+        double GetArea();
+        bool HasArea();
+        ShapeType GetShapeType();
+        string GetName();
+        void SetName();
 
         
         

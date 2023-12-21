@@ -12,8 +12,8 @@ namespace BasuraHerencias
     {
         //-min, -max:Point2D
 
-        private Point2D _min;
-        private Point2D _max;
+        private Point2D _min = new Point2D();
+        private Point2D _max = new Point2D();
 
         public Rect2D(Point2D position, string name, Point2D min, Point2D max) : base(position, name)
         {
@@ -80,12 +80,19 @@ namespace BasuraHerencias
 
         public void SetMin(Point2D min) 
         {
-            _min = min;
+            //_min = min;
+            //esto lo que hace es apuntar a la variable, no iguala el valor, sino que apunta directamente.
+            //importante esto sera una prueba evaluable
+            //comprobar null
+            _min._x = min._x;
+            _min._y = min._y;
         }
 
         public void SetMax(Point2D max) 
         {
-            _max = max;
+            //comprobar null
+            _max._x = max._x;
+            _max._y = max._y;
         }
 
         public override ShapeType GetShapeType()

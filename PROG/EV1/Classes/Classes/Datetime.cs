@@ -141,7 +141,6 @@ namespace Classes
         {
             int totalDays = (_day + MonthCode() + YearCode()) % 7;
             return (DaysOfWeek)totalDays;
-
         }
 
         public int WeekCode()

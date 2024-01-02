@@ -185,21 +185,12 @@ namespace Classes
             return result;
         }
 
-        //public void PrintMonedas(List<CoinChange> monedas)
-        //{
-
-        //    for (int i = 0; i < monedas.Count; i++)
-        //    {
-        //        Console.WriteLine(monedas[i]);
-        //    }
-        //}
 
         //al hacer el print es mas accesible a la hora de imprimir los valores.
         //imprimo los valores de la lista, no la lista como tal.
 
         public static void PrintMonedas(List<CoinValor> monedas1)
         {
-
             for (int i = 0; i < monedas1.Count; i++)
             {
                 Console.WriteLine(monedas1[i]);

@@ -9,7 +9,8 @@ namespace EmGame
         DWARF,
         ORC,
         ELF,
-        WINNER
+        WINNER,
+        UNKNOWN
     }
     public class Warrior
     {
@@ -22,6 +23,9 @@ namespace EmGame
         private TeamType _team;
         private int _cooldown;
         private Weapon _weapon;
+
+        
+
 
         public Warrior()
         {
@@ -125,7 +129,6 @@ namespace EmGame
             int y = UtilsEmGame.GetRandom(1, warZone.GetHeight() + 1);
 
             warZone.MoveWarrior(x, y);
-
         }
 
         public void Move(int x, int y)

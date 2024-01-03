@@ -5,6 +5,7 @@ namespace EmGame
 {
     public class EmGame
     {
+        List<Warrior> warriors = new List<Warrior>();
         public void Start(int a, int b, int c, int d, WarZone warZone)
         {
 
@@ -19,24 +20,41 @@ namespace EmGame
             }
         }
 
+        //decidir que equipo ha ganado la partida
         public TeamType GetWinner()
         {
-            List <Warrior> warriors = new List <Warrior>();
+            if (warriors.Count == 1)
+            {
+                warriors[0].SetTeamType(TeamType.WINNER);
+                return TeamType.WINNER;
+            }
+
+            Warrior? winningWarrior = GetWinningWarrior();
+
+            if (winningWarrior != null)
+            {
+                winningWarrior.SetTeamType(TeamType.WINNER);
+                return winningWarrior.GetTeamType();
+            }
+
+            return TeamType.UNKNOWN;
+        }
+
+
+        private Warrior? GetWinningWarrior()
+        {
+            Warrior? winningWarrior = null;
+
             for (int i = 0; i < warriors.Count; i++)
             {
-                if (warriors.Count == 1)
-                {
-                    warriors[0].SetTeamType(TeamType.WINNER);
-                    return TeamType.WINNER;
-                }
-                else
-                {
+                Warrior currentWarrior = warriors[i];
 
+                if ((winningWarrior == null) || (currentWarrior.GetLife() > winningWarrior.GetLife()))
+                {
+                    winningWarrior = currentWarrior;
                 }
-
             }
-            return TeamType.WINNER;
-            
+            return winningWarrior;
         }
 
 
@@ -44,7 +62,13 @@ namespace EmGame
 
         public void PlayTurn(WarZone warZone)
         {
+            int count = warriors.Count;
 
+            for (int i = 0; i < count; i++)
+            {
+                Warrior warrior = warriors[i];
+                warrior.ExecuteTurn(warZone);
+            }
         }
     }
 }

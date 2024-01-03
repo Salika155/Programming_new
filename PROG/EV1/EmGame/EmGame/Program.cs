@@ -30,7 +30,7 @@
             //while (gameRunning == true)
             //    gm.PlayTurn(warZone);
 
-            emGame.GetWinner();
+            EmGame.GetWinner();
         }
     }
 }

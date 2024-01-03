@@ -41,16 +41,16 @@ namespace Classes
         public int GetPieceCount()
         {
             // Javi: _piece no puede ser null nunca, es privada
-            if (_piece != null)
+            //if (_piece != null)
                 return _piece.Count;
-            return -1;
+            //return -1;
         }
 
         //+AddPiece(piece.DominoPiece)
         public void AddPiece(DominoPiece piece)
         {
             // Javi: Comprobar null
-            if (ContainsPiece(piece) == false)
+            if ((piece != null) && !ContainsPiece(piece))
                 _piece.Add(piece);
         }
 

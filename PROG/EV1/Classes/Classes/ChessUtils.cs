@@ -49,7 +49,6 @@ namespace Classes
 
         public static bool CanBishopMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
         {
-
             if (!IsOnTheTable(figures, targetX, targetY))
                 return false;
 
@@ -59,16 +58,15 @@ namespace Classes
             // Javi: imposible, esto debería estar en un bucle
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
-                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y + 1) == true)
-                    return true;
-                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y - 1) == true)
-                    return true;
-                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x + 1, y - 1) == true)
-                    return true;
-                if (CanFiguresMoveLikeBishopTo(targetX, targetY, x - 1, y + 1) == true)
-                    return true;
+                while(x != targetX || y != targetY)
+                {
+                    x += targetX > x ? 1 : -1;
+                    y += targetY > y ? 1 : -1;
+                }
+                if (!CanFiguresMoveLikeBishopTo(targetX, targetY, x, y))
+                    return false;
             }
-            return false;
+            return true;
         }
 
         public static bool CanKingMoveTo(ChessFigure figure, int targetX, int targetY, ChessFigureColor color)
@@ -79,25 +77,20 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
-                if (CanFigureMoveAround(targetX, targetY, x + 1, y + 0) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x - 1, y + 0) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x + 1, y + 1) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x + 0, y + 1) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x - 1, y + 1) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x - 1, y - 1) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x + 0, y - 1) == true)
-                    return true;
-                if (CanFigureMoveAround(targetX, targetY, x + 1, y - 1) == true)
-                    return true;
+                int dx, dy;
+                dx = targetX > x ? 1 : (targetX < x ? -1 : 0);
+                dy = targetY > y ? 1 : (targetY < y ? -1 : 0);
+
+                while (x != targetX || y != targetY)
+                {
+                    x += dx;
+                    y += dy;
+
+                    if(CanFigureMoveAround(targetX, targetY, x, y) == true)
+                        return true;
+                }
             }
             return false;
         }
@@ -110,17 +103,20 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
-                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 1, y + 0) == true)
-                    return true;
-                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x - 1, y - 0) == true)
-                    return true;
-                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y - 1) == true)
-                    return true;
-                if (CanFiguresMoveLikeTowerTo(targetX, targetY, x + 0, y + 1) == true)
-                    return true;
+                int dx, dy;
+                dx = targetX > x ? 1 : (targetX < x ? -1 : 0);
+                dy = targetY > y ? 1 : (targetY < y ? -1 : 0);
+
+                while (x != targetX || y != targetY)
+                {
+                    x += dx;
+                    y += dy;
+
+                    if (CanFiguresMoveLikeTowerTo(targetX, targetY, x, y))
+                        return true;
+                }
             }
             return false;
         }
@@ -133,12 +129,21 @@ namespace Classes
             int x = figure.GetX();
             int y = figure.GetY();
 
-
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
+                int dx, dy;
+                dx = targetX > x ? 1 : (targetX < x ? -1 : 0);
+                dy = targetY > y ? 1 : (targetY < y ? -1 : 0);
+
+                while (x != targetX || y != targetY)
+                {
+                    x += dx;
+                    y += dy;
+
                 if ((CanBishopMoveTo(figure, targetX, targetY, color) == true) ||
                 (CanTowerMoveTo(figure, targetX, targetY, color) == true))
-                    return true;
+                        return true;
+                }
             }
             return false;
             #region anteriorcodigo
@@ -287,10 +292,13 @@ namespace Classes
 
             if (!HasTargetFigureTheSameColor(targetX, targetY, x, y, color))
             {
-                if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 1) == true)
-                    return true;
-                if (CanFiguresMoveLikePawnTo(targetX, targetY, x + 0, y + 2) == true)
-                    return true;
+                int dy = (color == ChessFigureColor.WHITE) ? 1 : -1;
+
+                while (y + dy == targetY)
+                {
+                    if (CanFiguresMoveLikePawnTo(targetX, targetY, x, y + dy))
+                        return true;
+                }
             }
             return false;
         }

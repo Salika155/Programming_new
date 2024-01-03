@@ -64,21 +64,28 @@ namespace Classes
         {
             if (_year > 0 && _month > 0 && _day > 0)
             {
-                if (_year < int.MaxValue && _month <= 12 && _day <= 31)
+                if (_month <= 12)
                 {
                     // Javi: No estás contemplando los meses de 30 0 31 dias
                     if (_month == 2)
                     {
                         if (IsLeap(_year))
                         {
-                            return _day == 29;
+                            return _day <= 29;
                         }
                         else
                         {
-                            return _day == 28;
+                            return _day <= 28;
                         }
                     }
-                   return true;
+                    else if (_month == 4 || _month == 6 || _month == 9 || _month == 11)
+                    {
+                        return _day <= 30;
+                    }
+                    else
+                    {
+                        return _day <= 31;
+                    }   
                 }
             }
             return false;

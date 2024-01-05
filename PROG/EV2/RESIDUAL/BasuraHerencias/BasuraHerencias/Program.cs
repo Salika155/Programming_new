@@ -25,6 +25,17 @@
 
             double area = rect.GetArea();
             Console.WriteLine("Área del rectángulo: " + area);
+
+            //ejemplo profesor prueba referencias objetos
+            //Segment2D s1 = new Segment2D();
+            //Segment2D s2 = new Segment2D();
+
+            //s1.SetMin(s2.GetMin());
+            //s1.GetMin()._x = 10;
+            //s2.GetMin()._x = 20;
+
+            //Console.WriteLine(s1.GetMin().x);
+            //Console.WriteLine(s2.GetMin().x);
         }
     }
 }

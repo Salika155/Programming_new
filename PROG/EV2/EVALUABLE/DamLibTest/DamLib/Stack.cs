@@ -18,7 +18,7 @@ namespace DamLib
         public void Push(T newElement)
         {
             T[] stackAux = new T[_stack.Length + 1];
-            for (int i = 0; i < _stack.Length - 1; i++)
+            for (int i = 0; i < _stack.Length; i++)
             {
                 stackAux[i] = _stack[i];
             }
@@ -28,27 +28,48 @@ namespace DamLib
         }
         //+Pop():T;
 
-        public T Pop()
+        public T? Pop()
         {
-            if ((_stack.Length == 0) || (_stack == null)) 
-            for (int i = 0; i < _stack.Length; i++)
-            {
-                _stack[i] = newElement;
-            }
-        }
-        //+GetTop():T;
+            if ((_stack.Length == 0) || (_stack == null))
+                return default(T);
 
-        public T GetTop()
+            T popElement = _stack[_stack.Length - 1];
+
+            T[] stackAux = new T[_stack.Length - 1];
+            for (int i = 0; i < _stack.Length - 1; i++)
+            {
+                stackAux[i] = _stack[i];
+            }
+            _stack = stackAux;
+            return popElement;
+        }
+
+        //+GetTop():T;
+        public T? GetTop()
         {
+            if ((_stack.Length == 0) || (_stack == null))
+                return default(T);
+
             return _stack[_stack.Length - 1];
         }
         //+IsEmpty():bool
 
+        public bool IsEmpty()
+        {
+            //si el tamaño es 0, esta vacio
+            return _stack.Length == 0;
+        }
 
         //+GetCount():int
         public int GetCount()
         {
-            return _stack.Length;
+            if ((_stack.Length == 0) || (_stack == null))
+                return 0;
+            else
+            {
+                return _stack.Length;
+            }
+            
         }
 
 

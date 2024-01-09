@@ -10,3 +10,15 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABL
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\refint\DamLib.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\ref\DamLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\bin\Debug\net6.0\DamLib.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\bin\Debug\net6.0\DamLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\bin\Debug\net6.0\DamLib.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\refint\DamLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\DamLib.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLib\obj\Debug\net6.0\ref\DamLib.dll

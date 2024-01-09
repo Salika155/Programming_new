@@ -30,7 +30,7 @@ namespace DamLib
 
         public T? Pop()
         {
-            if ((_stack.Length == 0) || (_stack == null))
+            if (_stack.Length == 0)
                 return default(T);
 
             T popElement = _stack[_stack.Length - 1];
@@ -47,7 +47,7 @@ namespace DamLib
         //+GetTop():T;
         public T? GetTop()
         {
-            if ((_stack.Length == 0) || (_stack == null))
+            if (_stack.Length == 0)
                 return default(T);
 
             return _stack[_stack.Length - 1];
@@ -63,13 +63,7 @@ namespace DamLib
         //+GetCount():int
         public int GetCount()
         {
-            if ((_stack.Length == 0) || (_stack == null))
-                return 0;
-            else
-            {
-                return _stack.Length;
-            }
-            
+            return _stack.Length;
         }
 
 

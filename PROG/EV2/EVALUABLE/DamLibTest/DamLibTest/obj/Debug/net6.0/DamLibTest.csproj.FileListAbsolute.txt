@@ -17,3 +17,21 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABL
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\ref\DamLibTest.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLibTest.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLibTest.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLibTest.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLibTest.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLibTest.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\bin\Debug\net6.0\DamLib.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.csproj.CopyComplete
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\refint\DamLibTest.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\DamLibTest.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\DamLibTest\DamLibTest\obj\Debug\net6.0\ref\DamLibTest.dll

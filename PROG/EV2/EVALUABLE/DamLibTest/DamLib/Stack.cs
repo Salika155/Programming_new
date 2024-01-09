@@ -10,7 +10,7 @@ namespace DamLib
     public class Stack <T>
     {
         //Stack<T>
-
+        
         //- _stack:T[]
         private T[] _stack = new T[0]; 
         //+Push(newElement:T);

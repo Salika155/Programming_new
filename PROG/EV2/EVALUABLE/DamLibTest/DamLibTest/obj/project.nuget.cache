@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "cQjVqrxpp9yLXwf9wjc0s8b0OteQMck6Ee/C5m/CIvxoDtojJS0BF9jGfBKeyH+ehs58cfmkgq+yKRYhm/fgKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
+=======
+  "dgSpecHash": "TXrSeSHZ+g+ozUMC0QpdKc8YqxBzM3WfjAeW2B+EDNFObleW7Yx5h1aR4fLlmkqoAh7gWeU/RejrHE4TYS93kw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
+>>>>>>> d2f756ce4519223b0134e7af9d277805b1c6b717
   "expectedPackageFiles": [],
   "logs": []
 }

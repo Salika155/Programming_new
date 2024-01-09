@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {}
   },
   "projects": {
@@ -12,23 +13,45 @@
         "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\obj\\",
+=======
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
+        "projectName": "DamLib",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\obj\\",
+>>>>>>> d2f756ce4519223b0134e7af9d277805b1c6b717
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+=======
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> d2f756ce4519223b0134e7af9d277805b1c6b717
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+<<<<<<< HEAD
           "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\Programacion 1º Repetido\\nugget": {},
+=======
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> d2f756ce4519223b0134e7af9d277805b1c6b717
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

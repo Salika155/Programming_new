@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj": {}
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
         "projectName": "DamLibTest",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {
-                "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj"
+              "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj"
               }
             }
           }
@@ -60,21 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
         "projectName": "DamLib",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\DamLib.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +81,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -116,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

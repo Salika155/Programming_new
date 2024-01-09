@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cQjVqrxpp9yLXwf9wjc0s8b0OteQMck6Ee/C5m/CIvxoDtojJS0BF9jGfBKeyH+ehs58cfmkgq+yKRYhm/fgKw==",
+  "dgSpecHash": "luMO9CYOK9DG+FQasaPlIM5ZfH5NEkda/V5SY7w3wT+YrkFE+OR3txapgjnYCUu/N3BRU3UhIU0flXs6thZMkw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\DamLibTest.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DamLibTest\\DamLibTest\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

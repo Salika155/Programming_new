@@ -42,7 +42,14 @@ namespace DamLib
 
         public T Remove(T element)
         {
+            if (IndexOf(element) == -1)
+                return;
 
+            T[] setelement = new T[_count - 1];
+            for (int i = 0; i < Count; i++)
+            {
+
+            }
 
         }
         // +Empty: bool
@@ -65,16 +72,23 @@ namespace DamLib
         {
             for (int i = 0; i < _count; i++)
             {
-                //if (_set[i] Equals(element));
-                        
+                if (_set[i].Equals(element));
+                return true;
             }
-            
-            
+            return false;
+
         }
 
-        public bool IndexOf(T element)
+        public int IndexOf(T element)
         {
-
+            for (int i = 0; i < _set.Length; i++)
+            {
+                if (_set[i].Equals(element))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         //con contain hacer otra funcion privada que sea IndexOf

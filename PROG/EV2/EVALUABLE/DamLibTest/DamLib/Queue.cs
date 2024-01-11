@@ -20,6 +20,7 @@ namespace DamLib
 
         public void EnQueue(T element)
         {
+            
             T[] queueAux = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
@@ -27,14 +28,14 @@ namespace DamLib
             }
             queueAux[_count] = element;
             _queue = queueAux;
-            _count++;
+            
         }
 
         //+Dequeue():T
 
-        public T Dequeue()
+        public T? Dequeue()
         {
-            if (_queue.Length == 0)
+            if (Empty)
                 return default(T);
 
             T dequeuedElement = _queue[0];
@@ -61,7 +62,7 @@ namespace DamLib
 
         //+First:T
 
-        public T First
+        public T? First
         {
             get
             {
@@ -72,9 +73,16 @@ namespace DamLib
                 return _queue[0]; 
             }
         }
+
+        //public T First => IsEmpty ? default(T) : _queue[0];
+
+        //evitar warning default con una directiva de procesador
+#nullable disable
+        //en estas lineas no avisara del warning del null
+#nullable enable
         //+Last:T
 
-        public T Last
+        public T? Last
         {
             get
             {

@@ -17,16 +17,16 @@ namespace DamLib
 
         //+Queue(element:T)
 
-
         public void EnQueue(T element)
         {
-            T[] queueAux = new T[_queue.Length + 1];
-            for (int i = 1; i < _queue.Length - 1; i++)
+            T[] queueAux = new T[_count + 1];
+            for (int i = 1; i < _count; i++)
             {
                 queueAux[i] = _queue[i];
             }
-            queueAux[queueAux.Length - 1] = element;
+            queueAux[_count] = element;
             _queue = queueAux;
+            _count++;
         }
 
         //+Dequeue():T
@@ -34,6 +34,13 @@ namespace DamLib
         public void Dequeue(T element)
         {
 
+            T[] deQueueAux = new T[_count - 1];
+            for (int  i = 0; i < _count - 1; i++)
+            {
+                deQueueAux[i] = _queue[i + 1];
+            }
+            _queue = deQueueAux;
+            _count--;
         }
         //a partir de aqui mayusculas son properties excepto clear
 
@@ -52,8 +59,10 @@ namespace DamLib
             get
             {
                 if (Empty)
+                {
                     return default(T);
-                return (_queue[Count - 1]);
+                }
+                return _queue[0]; 
             }
         }
         //+Last:T
@@ -63,16 +72,21 @@ namespace DamLib
             get
             {
                 if (Empty)
+                {
                     return default(T);
+                }
+                return _queue[_count - 1];
             }
-            return (_queue[0])
+        }
 
-    
-           
 
-    
-        
         //+Clear();
+
+        public void Clear()
+        {
+            _queue = new T[0];
+            _count = 0;
+        }
 
         //+Empty:bool
 

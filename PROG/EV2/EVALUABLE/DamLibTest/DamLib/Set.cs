@@ -48,7 +48,7 @@ namespace DamLib
             T[] setelement = new T[_count - 1];
             for (int i = 0; i < Count; i++)
             {
-
+                T elementToRemove = _set[i];
             }
 
         }

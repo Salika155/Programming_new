@@ -18,16 +18,31 @@ namespace DamLib
 
         // +Add(element:T)
 
+        public override bool Equals(object? obj)
+        {
+            if (this == obj)
+                return true;
+            if (obj is not Set<T>)
+                return false;
+            Set<T> s = (Set<T>)obj;
+            return s._set == _set && s._count == _count;
+        }
+
         public void Add(T element)
         {
             T[] setelement = new T[_count + 1];
-         
+            for (int i = 0; i < setelement.Length; i++)
+            {
+                setelement[i] = element;
+            }
+            _set = setelement;
 
         }
         // +Remove(element:T)
 
         public T Remove(T element)
         {
+
 
         }
         // +Empty: bool
@@ -48,9 +63,22 @@ namespace DamLib
 
         public bool Cointains(T element)
         {
+            for (int i = 0; i < _count; i++)
+            {
+                //if (_set[i] Equals(element));
+                        
+            }
             
             
         }
+
+        public bool IndexOf(T element)
+        {
+
+        }
+
+        //con contain hacer otra funcion privada que sea IndexOf
+        // IndexOf(element:T):int
 
 
     }

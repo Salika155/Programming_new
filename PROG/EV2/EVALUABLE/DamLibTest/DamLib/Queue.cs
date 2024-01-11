@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -20,7 +21,7 @@ namespace DamLib
         public void EnQueue(T element)
         {
             T[] queueAux = new T[_count + 1];
-            for (int i = 1; i < _count; i++)
+            for (int i = 0; i < _count; i++)
             {
                 queueAux[i] = _queue[i];
             }
@@ -31,8 +32,12 @@ namespace DamLib
 
         //+Dequeue():T
 
-        public void Dequeue(T element)
+        public T Dequeue()
         {
+            if (_queue.Length == 0)
+                return default(T);
+
+            T dequeuedElement = _queue[0];
 
             T[] deQueueAux = new T[_count - 1];
             for (int  i = 0; i < _count - 1; i++)
@@ -41,6 +46,8 @@ namespace DamLib
             }
             _queue = deQueueAux;
             _count--;
+
+            return dequeuedElement;
         }
         //a partir de aqui mayusculas son properties excepto clear
 
@@ -94,6 +101,5 @@ namespace DamLib
         {
             get => _count == 0;
         }
-
     }
 }

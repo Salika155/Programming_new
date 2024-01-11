@@ -40,7 +40,7 @@ namespace DamLib
         }
         // +Remove(element:T)
 
-        public T Remove(T element)
+        public void Remove(T element)
         {
             if (IndexOf(element) == -1)
                 return;
@@ -48,7 +48,7 @@ namespace DamLib
             T[] setelement = new T[_count - 1];
             for (int i = 0; i < Count; i++)
             {
-                T elementToRemove = _set[i];
+               _set[i].Equals(element);
             }
 
         }

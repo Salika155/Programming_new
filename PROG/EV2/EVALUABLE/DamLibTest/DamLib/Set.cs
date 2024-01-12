@@ -31,11 +31,13 @@ namespace DamLib
         public void Add(T element)
         {
             T[] setelement = new T[_count + 1];
-            for (int i = 0; i < setelement.Length; i++)
+            for (int i = 0; i < _count; i++)
             {
-                setelement[i] = element;
+                setelement[i] = _set[i];
             }
+            setelement[_count] = element;
             _set = setelement;
+            _count++;
 
         }
         // +Remove(element:T)
@@ -72,7 +74,7 @@ namespace DamLib
         {
             for (int i = 0; i < _count; i++)
             {
-                if (_set[i].Equals(element));
+                if (_set[i].Equals(element))
                 return true;
             }
             return false;

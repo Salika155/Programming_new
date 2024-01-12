@@ -57,7 +57,7 @@ namespace DamLib
                 newArray[i] = _set[i];
 
             for (int i = index + 1; i < Count; i++)
-                newArray[i - 1] = _set[i]; 
+                newArray[i - 1] = _set[i];
 
             /*
              for (int i = 0; i < Count; i++)

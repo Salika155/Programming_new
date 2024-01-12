@@ -30,6 +30,8 @@ namespace DamLib
 
         public void Add(T element)
         {
+            if (element == null || Contains(element))
+                    return;
             T[] setelement = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
@@ -44,14 +46,28 @@ namespace DamLib
 
         public void Remove(T element)
         {
-            if (IndexOf(element) == -1)
+
+            if (element == null || Contains(element))
                 return;
 
-            T[] setelement = new T[_count - 1];
-            for (int i = 0; i < Count; i++)
+            int index = IndexOf(element);
+            T[] newArray = new T[Count - 1];
+
+            for (int i = 0; i < index; i++)
+                newArray[i] = _set[i];
+
+            for (int i = index + 1; i < Count; i++)
+                newArray[i - 1] = _set[i]; 
+
+            /*
+             for (int i = 0; i < Count; i++)
             {
-               _set[i].Equals(element);
-            }
+                if (i == position)
+                {
+                    j++;
+                }
+                faltan cosas
+             */
 
         }
         // +Empty: bool
@@ -70,7 +86,7 @@ namespace DamLib
 
         // +Contains(element:T):bool
 
-        public bool Cointains(T element)
+        public bool Contains(T element)
         {
             for (int i = 0; i < _count; i++)
             {
@@ -83,6 +99,9 @@ namespace DamLib
 
         public int IndexOf(T element)
         {
+            if (element == null)
+                return -1;
+
             for (int i = 0; i < _set.Length; i++)
             {
                 if (_set[i].Equals(element))

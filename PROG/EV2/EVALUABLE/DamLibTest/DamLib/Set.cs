@@ -41,7 +41,6 @@ namespace DamLib
 
         }
         // +Remove(element:T)
-
         public void Remove(T element)
         {
 
@@ -69,14 +68,12 @@ namespace DamLib
 
         }
         // +Empty: bool
-
         public bool Empty
         {
             get => _count == 0;
         }
 
         // +Count:int
-
         public int Count
         {
             get => _count;
@@ -92,7 +89,6 @@ namespace DamLib
                 return true;
             }
             return false;
-
         }
 
         public int IndexOf(T element)

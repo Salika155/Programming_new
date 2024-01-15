@@ -94,9 +94,7 @@ namespace DamLib
             }
         }
 
-
         //+Clear();
-
         public void Clear()
         {
             _queue = new T[0];
@@ -104,7 +102,6 @@ namespace DamLib
         }
 
         //+Empty:bool
-
         public bool Empty
         {
             get => _count == 0;

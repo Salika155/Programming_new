@@ -12,11 +12,17 @@ namespace DamLib
         {
             public T element;
             public int hash;
+
+            public Item(T element, int hash)
+            {
+                this.element = element;
+                this.hash = hash;
+            }
         }
 
-        private Item[] _items;
+        private List<Item> _items = new List<Item>();
+        private int _count = 0;
 
-        Item _items = new Item();
 
         public override bool Equals(object? obj)
         {
@@ -24,8 +30,26 @@ namespace DamLib
                 return true;
             if (obj is not ItemSet<T>)
                 return false;
-            ItemSet<T> s = (ItemSet<T>)obj;
-            return s.element == _set && s._count == _count;
+            ItemSet<T> itemElement = (ItemSet<T>)obj;
+            return itemElement._items == _items && itemElement._count == _count;
+            
+            //for (int i = 0; i < _count; i++)
+            //{
+            //    if (_items[i].element.Equals(_items[i].element))
+            //        return true;
+            //}
+            //return false;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 5;
+            for (int i = 0; i < _count; i++)
+            {
+                int elementHash = _items[i].hash;
+                hash = hash * 31 + elementHash;
+            }
+            return hash;
         }
 
         // +Add(element:T)
@@ -33,13 +57,13 @@ namespace DamLib
         {
             if (element == null || Contains(element))
                 return;
-            T[] setelement = new T[_count + 1];
+            T[] setElement = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
-                setelement[i] = _set[i];
+                setElement[i] = _items[i].element;
             }
-            setelement[_count] = element;
-            _set = setelement;
+            setElement[_count] = element;
+            _items = setElement;
             _count++;
 
         }
@@ -48,17 +72,17 @@ namespace DamLib
         public void Remove(T element)
         {
 
-            if (element == null || Contains(element))
+            if (element == null || !Contains(element))
                 return;
 
             int index = IndexOf(element);
             T[] newArray = new T[Count - 1];
 
             for (int i = 0; i < index; i++)
-                newArray[i] = _set[i];
+                newArray[i] = _items[i].element;
 
             for (int i = index + 1; i < Count; i++)
-                newArray[i - 1] = _set[i];
+                newArray[i - 1] = _items[i].element;
 
             /*
              for (int i = 0; i < Count; i++)
@@ -91,7 +115,7 @@ namespace DamLib
         {
             for (int i = 0; i < _count; i++)
             {
-                if (_set[i].Equals(element))
+                if (_items[i].Equals(element))
                     return true;
             }
             return false;
@@ -103,9 +127,9 @@ namespace DamLib
             if (element == null)
                 return -1;
 
-            for (int i = 0; i < _set.Length; i++)
+            for (int i = 0; i < _items.Count; i++)
             {
-                if (_set[i].Equals(element))
+                if (_items[i].element.Equals(element))
                 {
                     return i;
                 }

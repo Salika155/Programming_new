@@ -27,7 +27,13 @@ namespace DamLib
 
         public override int GetHashCode()
         {
-            return _hash.GetHashCode() + Count;
+            int hash = 5;
+            for (int i = 0; i < _set.Length; i++)
+            {
+                int element = _set[i].GetHashCode();
+                hash = hash * 31 + element;
+            }
+            return hash;
         }
 
         // +Add(element:T)

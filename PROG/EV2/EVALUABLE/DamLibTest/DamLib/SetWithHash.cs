@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,13 +9,13 @@ namespace DamLib
 {
     public class SetWithHash<T>
     {
-            //Set<T>
-            //- _set:T[]
-            private T[] _set = new T[0];
-            private T[] _hash = new T[0];
-            private int _count = 0;
+        //Set<T>
+        //- _set:T[]
+        private T[] _set = new T[0];
+        private int[] _hash = new int[0];
+        private int _count = 0;
 
-            public override bool Equals(object? obj)
+        public override bool Equals(object? obj)
             {
                 if (this == obj)
                     return true;
@@ -30,18 +31,26 @@ namespace DamLib
         }
 
         // +Add(element:T)
-        public void Add(T element)
+        public void Add(T newElement)
         {
-            if (element == null || Contains(element))
+            if (newElement == null || Contains(newElement))
                 return;
 
+            int hash = newElement.GetHashCode();
+
             T[] setelement = new T[_count + 1];
+            T[] hashArray = new T[_count + 1];
+
             for (int i = 0; i < _count; i++)
             {
                 setelement[i] = _set[i];
+                hashArray[i] = _hash[i];
             }
-            setelement[_count] = element;
+            setelement[_count] = newElement;
+            hashArray[_count] = hash;
+
             _set = setelement;
+            _hash = hashArray;
             _count++;
         }
 
@@ -53,12 +62,27 @@ namespace DamLib
 
             int index = IndexOf(element);
             T[] newArray = new T[Count - 1];
+            int[] newHashArray = new int[Count - 1];
 
             for (int i = 0; i < index; i++)
+            {
                 newArray[i] = _set[i];
+                newHashArray[i] = _hash[i];
+            }
+                
 
             for (int i = index + 1; i < Count; i++)
+            {
                 newArray[i - 1] = _set[i];
+                newHashArray[i - 1] = _hash[i];
+            }
+
+            _set = newArray;
+            _hash = newHashArray;
+            _count--;
+
+                
+                
         }
         /*
          for (int i = 0; i < Count; i++)
@@ -86,11 +110,12 @@ namespace DamLib
 
             // +Contains(element:T):bool
 
-        public bool Contains(T element)
+        public bool Contains(T checkElement)
         {
+            int hash = checkElement.GetHashCode();
             for (int i = 0; i < _count; i++)
             {
-                if (_set[i].Equals(element))
+                if (_hash[i] == hash && _set[i].Equals(checkElement))
                     return true;
             }
             return false;
@@ -102,9 +127,10 @@ namespace DamLib
             if (element == null)
                 return -1;
 
+            int hash = element.GetHashCode();
             for (int i = 0; i < _set.Length; i++)
             {
-                if (_set[i].Equals(element))
+                if (_hash[i] == hash && _set[i].Equals(element))
                 {
                     return i;
                 }
@@ -114,5 +140,6 @@ namespace DamLib
 
             //con contain hacer otra funcion privada que sea IndexOf
             // IndexOf(element:T):int
+
     }
 }

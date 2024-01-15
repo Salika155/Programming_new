@@ -11,7 +11,6 @@ namespace DamLib
     {
 
         //Set<T>
-
         //- _set:T[]
         private T[] _set = new T[0];
         private int _count = 0;

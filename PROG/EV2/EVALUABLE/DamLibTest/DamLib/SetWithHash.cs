@@ -17,8 +17,6 @@ namespace DamLib
             private T[] _hash = new T[0];
             private int _count = 0;
 
-            // +Add(element:T)
-
             public override bool Equals(object? obj)
             {
                 if (this == obj)
@@ -34,23 +32,26 @@ namespace DamLib
             return _hash.GetHashCode() + Count;
         }
 
+        // +Add(element:T)
+
         public void Add(T element)
+        {
+            if (element == null || Contains(element))
+                return;
+
+            T[] setelement = new T[_count + 1];
+            for (int i = 0; i < _count; i++)
             {
-                if (element == null || Contains(element))
-                    return;
-                T[] setelement = new T[_count + 1];
-                for (int i = 0; i < _count; i++)
-                {
-                    setelement[i] = _set[i];
-                }
-                setelement[_count] = element;
-                _set = setelement;
-                _count++;
-
+                setelement[i] = _set[i];
             }
-            // +Remove(element:T)
+            setelement[_count] = element;
+            _set = setelement;
+            _count++;
+        }
 
-            public void Remove(T element)
+        // +Remove(element:T)
+
+        public void Remove(T element)
             {
 
                 if (element == null || Contains(element))

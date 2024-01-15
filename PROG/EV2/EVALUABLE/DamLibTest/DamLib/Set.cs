@@ -16,8 +16,6 @@ namespace DamLib
         private T[] _set = new T[0];
         private int _count = 0;
 
-        // +Add(element:T)
-
         public override bool Equals(object? obj)
         {
             if (this == obj)
@@ -28,6 +26,7 @@ namespace DamLib
             return s._set == _set && s._count == _count;
         }
 
+        // +Add(element:T)
         public void Add(T element)
         {
             if (element == null || Contains(element))

@@ -39,29 +39,27 @@ namespace DamLib
             int hash = newElement.GetHashCode();
 
             T[] setelement = new T[_count + 1];
-            T[] hashArray = new T[_count + 1];
+            int[] hashArray = new int[_count + 1];
 
             for (int i = 0; i < _count; i++)
             {
                 setelement[i] = _set[i];
-                
+                hashArray[i] = hash;
             }
 
-            for (int i = 0; i < hashArray.Length; i++)
-            {
-                hashArray[_count] = hash;
-            }
+            //for (int i = 0; i < hashArray.Length; i++)
+            //{
+            //    hashArray[i] = hash;
+            //}
 
             //arrayTemporal[_set.Length] ) element;
             //_set = arrayTemporal;
 
+            setelement[_count] = newElement;
             _hash[hashArray.Length] = hash;
-            
 
-            
-
-            
-            _count++;
+            _set = setelement;
+            _hash = hashArray;
         }
 
         // +Remove(element:T)
@@ -70,7 +68,6 @@ namespace DamLib
             int index = IndexOf(element);
             if (index < 0)
                 return;
-
             
             T[] newArray = new T[Count - 1];
             int[] newHashArray = new int[Count - 1];
@@ -94,10 +91,7 @@ namespace DamLib
 
             _set = newArray;
             _hash = newHashArray;
-            _count--;
-
-                
-                
+            
         }
         /*
          for (int i = 0; i < Count; i++)

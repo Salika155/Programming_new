@@ -44,28 +44,43 @@ namespace DamLib
             for (int i = 0; i < _count; i++)
             {
                 setelement[i] = _set[i];
-                hashArray[i] = _hash[i];
+                
             }
-            setelement[_count] = newElement;
-            hashArray[_count] = hash;
 
-            _set = setelement;
-            _hash = hashArray;
+            for (int i = 0; i < hashArray.Length; i++)
+            {
+                hashArray[_count] = hash;
+            }
+
+            //arrayTemporal[_set.Length] ) element;
+            //_set = arrayTemporal;
+
+            _hash[hashArray.Length] = hash;
+            
+
+            
+
+            
             _count++;
         }
 
         // +Remove(element:T)
         public void Remove(T element)
         {
-            if (element == null || Contains(element))
+            int index = IndexOf(element);
+            if (index < 0)
                 return;
 
-            int index = IndexOf(element);
+            
             T[] newArray = new T[Count - 1];
             int[] newHashArray = new int[Count - 1];
 
-            for (int i = 0; i < index; i++)
+            for (int i = 0, j = 0; i < Count - 1; i++, j++)
             {
+                if (index == i)
+                {
+                    j++;
+                }
                 newArray[i] = _set[i];
                 newHashArray[i] = _hash[i];
             }
@@ -130,7 +145,7 @@ namespace DamLib
             int hash = element.GetHashCode();
             for (int i = 0; i < _set.Length; i++)
             {
-                if (_hash[i] == hash && _set[i].Equals(element))
+                if (hash == _hash[i] && _set[i].Equals(element))
                 {
                     return i;
                 }
@@ -140,6 +155,8 @@ namespace DamLib
 
             //con contain hacer otra funcion privada que sea IndexOf
             // IndexOf(element:T):int
+
+        //SI implemento equals necesariamente en cada clase debe de ir el GetHashCode
 
     }
 }

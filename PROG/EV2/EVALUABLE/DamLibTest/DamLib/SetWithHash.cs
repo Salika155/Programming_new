@@ -8,10 +8,7 @@ namespace DamLib
 {
     public class SetWithHash<T>
     {
-       
-
             //Set<T>
-
             //- _set:T[]
             private T[] _set = new T[0];
             private T[] _hash = new T[0];
@@ -33,7 +30,6 @@ namespace DamLib
         }
 
         // +Add(element:T)
-
         public void Add(T element)
         {
             if (element == null || Contains(element))
@@ -50,79 +46,73 @@ namespace DamLib
         }
 
         // +Remove(element:T)
-
         public void Remove(T element)
+        {
+            if (element == null || Contains(element))
+                return;
+
+            int index = IndexOf(element);
+            T[] newArray = new T[Count - 1];
+
+            for (int i = 0; i < index; i++)
+                newArray[i] = _set[i];
+
+            for (int i = index + 1; i < Count; i++)
+                newArray[i - 1] = _set[i];
+        }
+        /*
+         for (int i = 0; i < Count; i++)
+        {
+            if (i == position)
             {
-
-                if (element == null || Contains(element))
-                    return;
-
-                int index = IndexOf(element);
-                T[] newArray = new T[Count - 1];
-
-                for (int i = 0; i < index; i++)
-                    newArray[i] = _set[i];
-
-                for (int i = index + 1; i < Count; i++)
-                    newArray[i - 1] = _set[i];
-
-                /*
-                 for (int i = 0; i < Count; i++)
-                {
-                    if (i == position)
-                    {
-                        j++;
-                    }
-                    faltan cosas
-                 */
-
+                j++;
             }
-            // +Empty: bool
+            faltan cosas
+         */
 
-            public bool Empty
-            {
-                get => _count == 0;
-            }
+
+        // +Empty: bool
+        public bool Empty
+        {
+            get => _count == 0;
+        }
 
             // +Count:int
 
-            public int Count
-            {
-                get => _count;
-            }
+        public int Count
+        {
+            get => _count;
+        }
 
             // +Contains(element:T):bool
 
-            public bool Contains(T element)
+        public bool Contains(T element)
+        {
+            for (int i = 0; i < _count; i++)
             {
-                for (int i = 0; i < _count; i++)
-                {
-                    if (_set[i].Equals(element))
-                        return true;
-                }
-                return false;
-
+                if (_set[i].Equals(element))
+                    return true;
             }
+            return false;
 
-            public int IndexOf(T element)
-            {
-                if (element == null)
-                    return -1;
+        }
 
-                for (int i = 0; i < _set.Length; i++)
-                {
-                    if (_set[i].Equals(element))
-                    {
-                        return i;
-                    }
-                }
+        public int IndexOf(T element)
+        {
+            if (element == null)
                 return -1;
+
+            for (int i = 0; i < _set.Length; i++)
+            {
+                if (_set[i].Equals(element))
+                {
+                    return i;
+                }
             }
+            return -1;
+        }
 
             //con contain hacer otra funcion privada que sea IndexOf
             // IndexOf(element:T):int
-
-
-        
     }
 }

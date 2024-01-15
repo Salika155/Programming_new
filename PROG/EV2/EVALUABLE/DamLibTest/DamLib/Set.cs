@@ -30,13 +30,13 @@ namespace DamLib
         {
             if (element == null || Contains(element))
                     return;
-            T[] setelement = new T[_count + 1];
+            T[] setElement = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
-                setelement[i] = _set[i];
+                setElement[i] = _set[i];
             }
-            setelement[_count] = element;
-            _set = setelement;
+            setElement[_count] = element;
+            _set = setElement;
             _count++;
 
         }

@@ -10,12 +10,12 @@ namespace DamLib
     {
         private class Item
         {
-            public T element;
+            public T Element;
             public int hash;
 
             public Item(T element, int hash)
             {
-                this.element = element;
+                this.Element = element;
                 this.hash = hash;
             }
             
@@ -139,6 +139,7 @@ namespace DamLib
                     return true;
             }
             return false;
+            //return indexof(element)
         }
 
         public int IndexOf(T index)
@@ -148,7 +149,7 @@ namespace DamLib
 
             for (int i = 0; i < _items.Count; i++)
             {
-                if (_items[i].element.Equals(index))
+                if (_items[i].Element.Equals(index))
                 {
                     return i;
                 }

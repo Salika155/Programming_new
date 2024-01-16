@@ -30,6 +30,7 @@ namespace DamLib
         {
             if (element == null || Contains(element))
                     return;
+
             T[] setElement = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
@@ -47,14 +48,25 @@ namespace DamLib
             if (element == null || Contains(element))
                 return;
 
-            int index = IndexOf(element);
+            
             T[] newArray = new T[Count - 1];
+            int index = IndexOf(element);
+            int j = 0;
 
-            for (int i = 0; i < index; i++)
-                newArray[i] = _set[i];
+            for (int i = 0; i < _set.Length; i++)
+            {
+                if (i != index)
+                {
+                    newArray[i] = _set[i];
+                    j++;
+                }
+            }
+            return;
+                
+                
 
-            for (int i = index + 1; i < Count; i++)
-                newArray[i - 1] = _set[i];
+            //for (int i = index + 1; i < Count; i++)
+            //    newArray[i - 1] = _set[i];
 
             /*
              for (int i = 0; i < Count; i++)

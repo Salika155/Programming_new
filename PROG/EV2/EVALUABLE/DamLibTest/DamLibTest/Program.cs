@@ -62,33 +62,71 @@
 
             Console.WriteLine("---------------------");
 
-            //Stack
+            //Set
 
-            DamLib.Stack<string> stack = new DamLib.Stack<string>();
+            DamLib.Set<string> stack = new DamLib.Set<string>();
 
-            stack.Push("hola");
-            stack.Push("que");
-            stack.Push("tal");
-            stack.Push(null);
+            stack.Add("hola");
+            stack.Add("que");
+            stack.Add("tal");
+            stack.Add(null);
 
-            Console.WriteLine("Elemento del top es: " + stack.GetTop());
-            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.GetCount());
+            Console.WriteLine("Elemento del top es: " + stack.Contains);
+            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.Count);
 
-            string stackElement1 = stack.Pop();
+            string stackElement1 = stack.Remove();
             Console.WriteLine("Elemento saliente es: " + stackElement1);
-            string stackElement2 = stack.Pop();
+            string stackElement2 = stack.Remove();
             Console.WriteLine("Elemento saliente es: " + stackElement2);
-            Console.WriteLine("Elemento del top es: " + stack.GetTop());
-            string stackElement3 = stack.Pop();
+            Console.WriteLine("Elemento del top es: " + stack.Contains);
+            string stackElement3 = stack.Remove();
             Console.WriteLine("Elemento saliente es: " + stackElement3);
-            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.GetCount());
+            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.Count);
 
-            string stackElement4 = stack.Pop();
+            string stackElement4 = stack.Remove();
             Console.WriteLine("Elemento saliente es: " + stackElement4);
-            string stackElement5 = stack.Pop();
+            string stackElement5 = stack.Remove();
             Console.WriteLine("Elemento saliente es: " + stackElement5);
 
             Console.WriteLine("---------------------");
+
+            //SetWithHash
+
+            DamLib.SetWithHash<string> sethash = new DamLib.SetWithHash<string>();
+
+            sethash.Add("hola");
+            sethash.Add("que");
+            sethash.Add("tal");
+            sethash.Add(null);
+
+            Console.WriteLine("Elemento del top es: " + sethash.Contains);
+            Console.WriteLine("El número de elementos dentro de la cola es: " + sethash.Contains);
+
+            //string stackhashElement1 = sethash.Remove();
+            //Console.WriteLine("Elemento saliente es: " + stackhashElement1);
+            //string stackhashElement2 = sethash. Remove();
+            //Console.WriteLine("Elemento saliente es: " + stackhashElement2);
+            //Console.WriteLine("Elemento del top es: " + sethash.Count);
+            //string stackhashElement3 = sethash.Remove();
+            //Console.WriteLine("Elemento saliente es: " + stackhashElement3);
+            //Console.WriteLine("El número de elementos dentro de la cola es: " + sethash.Count);
+
+            //string stackhashElement4 = sethash.Remove();
+            //Console.WriteLine("Elemento saliente es: " + stackhashElement4);
+            //string stackhashElement5 = sethash.Remove();
+            //Console.WriteLine("Elemento saliente es: " + stackhashElement5);
+
+            Console.WriteLine("---------------------");
+
+            DamLib.ItemSet<string> item = new DamLib.ItemSet<string>();
+
+            item.Add("hola");
+            item.Add("que");
+            item.Add("tal");
+            item.Add(null);
+
+            Console.WriteLine("Elemento del top es: " + item.Contains);
+            Console.WriteLine("El número de elementos dentro de la cola es: " + item.Contains);
 
             //Stack <string> s = new Stack<string>();
             //s.Pop(); 

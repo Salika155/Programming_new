@@ -18,11 +18,12 @@ namespace DamLib
                 this.element = element;
                 this.hash = hash;
             }
+
+            
         }
 
         private List<Item> _items = new List<Item>();
         private int _count = 0;
-
 
         public override bool Equals(object? obj)
         {
@@ -57,15 +58,19 @@ namespace DamLib
         {
             if (element == null || Contains(element))
                 return;
-            T[] setElement = new T[_count + 1];
-            for (int i = 0; i < _count; i++)
-            {
-                setElement[i] = _items[i].element;
-            }
-            setElement[_count] = element;
-            _items = setElement;
+            int hash = element.GetHashCode();
+            Item newItem = new Item(element, hash);
+            _items.Add(newItem);
             _count++;
 
+            //T[] setElement = new T[_count + 1];
+            //for (int i = 0; i < _count; i++)
+            //{
+            //    setElement[i] = _items[i].element;
+            //}
+            //setElement[_count] = element;
+            //_items = setElement;
+            //_count++;
         }
         // +Remove(element:T)
 
@@ -75,14 +80,29 @@ namespace DamLib
             if (element == null || !Contains(element))
                 return;
 
-            int index = IndexOf(element);
-            T[] newArray = new T[Count - 1];
+            int index = -1;
+            for (int i = 0; i < _count; i++)
+            {
+                if (_items[i].Equals(element))
+                {
+                    index = i;
+                    break;
+                }
+            }
 
-            for (int i = 0; i < index; i++)
-                newArray[i] = _items[i].element;
+            if (index != -1)
+            {
+                _items.RemoveAt(index);
+                _count--;
+            }
 
-            for (int i = index + 1; i < Count; i++)
-                newArray[i - 1] = _items[i].element;
+            //T[] newArray = new T[Count - 1];
+
+            //for (int i = 0; i < index; i++)
+            //    newArray[i] = _items[i].element;
+
+            //for (int i = index + 1; i < Count; i++)
+            //    newArray[i - 1] = _items[i].element;
 
             /*
              for (int i = 0; i < Count; i++)
@@ -119,17 +139,16 @@ namespace DamLib
                     return true;
             }
             return false;
-
         }
 
-        public int IndexOf(T element)
+        public int IndexOf(T index)
         {
-            if (element == null)
+            if (index == null)
                 return -1;
 
             for (int i = 0; i < _items.Count; i++)
             {
-                if (_items[i].element.Equals(element))
+                if (_items[i].element.Equals(index))
                 {
                     return i;
                 }

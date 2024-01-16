@@ -49,11 +49,11 @@ namespace DamLib
                 return;
 
             
-            T[] newArray = new T[Count - 1];
+            T[] newArray = new T[_count - 1];
             int index = IndexOf(element);
-            int j = 0;
+            
 
-            for (int i = 0; i < _set.Length; i++)
+            for (int i = 0, j = 0; i < _count; i++)
             {
                 if (i != index)
                 {
@@ -61,9 +61,9 @@ namespace DamLib
                     j++;
                 }
             }
-            return;
-                
-                
+            _set = newArray;
+            _count--;
+
 
             //for (int i = index + 1; i < Count; i++)
             //    newArray[i - 1] = _set[i];
@@ -95,6 +95,9 @@ namespace DamLib
 
         public bool Contains(T element)
         {
+            if (Empty)
+                return false;
+
             for (int i = 0; i < _count; i++)
             {
                 if (_set[i].Equals(element))
@@ -105,10 +108,10 @@ namespace DamLib
 
         public int IndexOf(T element)
         {
-            if (element == null)
+            if (element == null || Empty)
                 return -1;
 
-            for (int i = 0; i < _set.Length; i++)
+            for (int i = 0; i < _count; i++)
             {
                 if (_set[i].Equals(element))
                 {

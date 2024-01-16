@@ -18,12 +18,11 @@ namespace DamLib
                 this.element = element;
                 this.hash = hash;
             }
-
             
         }
 
         private List<Item> _items = new List<Item>();
-        private T[] _item =  new T[0];
+        private T[] _item1 =  new T[0];
         private int _count = 0;
 
         public override bool Equals(object? obj)

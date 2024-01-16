@@ -60,6 +60,35 @@
             string deqElement5 = q.Dequeue();
             Console.WriteLine("Elemento saliente es: " + deqElement5);
 
+            Console.WriteLine("---------------------");
+
+            //Stack
+
+            DamLib.Stack<string> stack = new DamLib.Stack<string>();
+
+            stack.Push("hola");
+            stack.Push("que");
+            stack.Push("tal");
+            stack.Push(null);
+
+            Console.WriteLine("Elemento del top es: " + stack.GetTop());
+            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.GetCount());
+
+            string stackElement1 = stack.Pop();
+            Console.WriteLine("Elemento saliente es: " + stackElement1);
+            string stackElement2 = stack.Pop();
+            Console.WriteLine("Elemento saliente es: " + stackElement2);
+            Console.WriteLine("Elemento del top es: " + stack.GetTop());
+            string stackElement3 = stack.Pop();
+            Console.WriteLine("Elemento saliente es: " + stackElement3);
+            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.GetCount());
+
+            string stackElement4 = stack.Pop();
+            Console.WriteLine("Elemento saliente es: " + stackElement4);
+            string stackElement5 = stack.Pop();
+            Console.WriteLine("Elemento saliente es: " + stackElement5);
+
+            Console.WriteLine("---------------------");
 
             //Stack <string> s = new Stack<string>();
             //s.Pop(); 

@@ -1,4 +1,6 @@
-﻿namespace DamLibTest
+﻿using DamLib;
+
+namespace DamLibTest
 {
     public class Program
     {
@@ -64,29 +66,18 @@
 
             //Set
 
-            DamLib.Set<string> stack = new DamLib.Set<string>();
+            DamLib.Set<string> set = new DamLib.Set<string>();
 
-            stack.Add("hola");
-            stack.Add("que");
-            stack.Add("tal");
-            stack.Add(null);
+            set.Add("hola");
+            set.Add("que");
+            set.Add("tal");
+            set.Add(null);
 
-            Console.WriteLine("Elemento del top es: " + stack.Contains);
-            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.Count);
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + set.Count);
 
-            string stackElement1 = stack.Remove();
-            Console.WriteLine("Elemento saliente es: " + stackElement1);
-            string stackElement2 = stack.Remove();
-            Console.WriteLine("Elemento saliente es: " + stackElement2);
-            Console.WriteLine("Elemento del top es: " + stack.Contains);
-            string stackElement3 = stack.Remove();
-            Console.WriteLine("Elemento saliente es: " + stackElement3);
-            Console.WriteLine("El número de elementos dentro de la cola es: " + stack.Count);
-
-            string stackElement4 = stack.Remove();
-            Console.WriteLine("Elemento saliente es: " + stackElement4);
-            string stackElement5 = stack.Remove();
-            Console.WriteLine("Elemento saliente es: " + stackElement5);
+            string elementSetToRemove = "que";
+            set.Remove(elementSetToRemove);
+            Console.WriteLine($"Elemento '{elementSetToRemove}' eliminado");
 
             Console.WriteLine("---------------------");
 
@@ -99,25 +90,15 @@
             sethash.Add("tal");
             sethash.Add(null);
 
-            Console.WriteLine("Elemento del top es: " + sethash.Contains);
-            Console.WriteLine("El número de elementos dentro de la cola es: " + sethash.Contains);
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + sethash.Count);
 
-            //string stackhashElement1 = sethash.Remove();
-            //Console.WriteLine("Elemento saliente es: " + stackhashElement1);
-            //string stackhashElement2 = sethash. Remove();
-            //Console.WriteLine("Elemento saliente es: " + stackhashElement2);
-            //Console.WriteLine("Elemento del top es: " + sethash.Count);
-            //string stackhashElement3 = sethash.Remove();
-            //Console.WriteLine("Elemento saliente es: " + stackhashElement3);
-            //Console.WriteLine("El número de elementos dentro de la cola es: " + sethash.Count);
-
-            //string stackhashElement4 = sethash.Remove();
-            //Console.WriteLine("Elemento saliente es: " + stackhashElement4);
-            //string stackhashElement5 = sethash.Remove();
-            //Console.WriteLine("Elemento saliente es: " + stackhashElement5);
+            string elementToRemove = "que";
+            sethash.Remove(elementToRemove);
+            Console.WriteLine($"Elemento '{elementToRemove}' eliminado");
 
             Console.WriteLine("---------------------");
 
+            //ItemSet
             DamLib.ItemSet<string> item = new DamLib.ItemSet<string>();
 
             item.Add("hola");

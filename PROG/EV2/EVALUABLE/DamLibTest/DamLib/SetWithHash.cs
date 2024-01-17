@@ -62,7 +62,7 @@ namespace DamLib
             //_set = arrayTemporal;
 
             setelement[_count] = newElement;
-            _hash[hashArray.Length] = hash;
+            hashArray[_count] = hash;
 
             _set = setelement;
             _hash = hashArray;
@@ -78,17 +78,16 @@ namespace DamLib
             T[] newArray = new T[Count - 1];
             int[] newHashArray = new int[Count - 1];
 
-            for (int i = 0, j = 0; i < Count - 1; i++, j++)
+            for (int i = 0, j = 0; i < Count; i++)
             {
-                if (index == i)
+                if (i != index)
                 {
+                    newArray[i] = _set[i];
+                    newHashArray[j] = _hash[i];
                     j++;
                 }
-                newArray[i] = _set[i];
-                newHashArray[i] = _hash[i];
             }
-                
-
+               
             for (int i = index + 1; i < Count; i++)
             {
                 newArray[i - 1] = _set[i];

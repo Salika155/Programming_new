@@ -76,7 +76,6 @@ namespace DamLib
         // +Remove(element:T)
         public void Remove(T element)
         {
-
             if (element == null || !Contains(element))
                 return;
 
@@ -160,31 +159,30 @@ namespace DamLib
 
         //hay que hacer un binary search
 
-        private int BinarySearch(int targetHash)
+        public bool BinarySearch(T element)
         {
-            int left = 0;
-            int right = _count - 1;
+            if (element == null || _count == 0)
+                return false;
 
-            while (left <= right)
+            int min = 0;
+            int max = _count - 1;
+
+            while (min <= max)
             {
-                int middle = left + (right - left) / 2;
+                int med = (min + max) / 2;
 
-                if (_item1[middle].hash == targetHash)
-                {
-                    return middle; // Elemento encontrado
-                }
-                else if (_item1[middle].hash < targetHash)
-                {
-                    left = middle + 1; // Buscar en la mitad derecha
-                }
+                if (_item1[med].Element.Equals(element))
+                    return true;
+                else if (_item1[med].Element.GetHashCode() < element.GetHashCode())
+                    min = med + 1;
                 else
-                {
-                    right = middle - 1; // Buscar en la mitad izquierda
-                }
+                    max = med - 1;
             }
 
-            return -1; // Elemento no encontrado
+            return false;
         }
+
+
     }
 }
 

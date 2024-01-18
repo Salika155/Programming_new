@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            double r1, r2;
+            Tupla.SolveEquation2(1, 2, 3, out r1, out r2); 
+            
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\bin\Debug\net6.0\BasuraTupla.exe
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\bin\Debug\net6.0\BasuraTupla.deps.json
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\bin\Debug\net6.0\BasuraTupla.runtimeconfig.json
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\bin\Debug\net6.0\BasuraTupla.dll
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\bin\Debug\net6.0\BasuraTupla.pdb
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.csproj.AssemblyReference.cache
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.AssemblyInfoInputs.cache
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.AssemblyInfo.cs
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.dll
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\refint\BasuraTupla.dll
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.pdb
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\BasuraTupla.genruntimeconfig.cache
+C:\Users\carcarcor\source\repos\BasuraTupla\BasuraTupla\obj\Debug\net6.0\ref\BasuraTupla.dll

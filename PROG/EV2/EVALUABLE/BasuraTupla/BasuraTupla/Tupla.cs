@@ -43,10 +43,13 @@ namespace BasuraTupla
             res2 = (-b - root) * (denom);
 
             return true;
-
-
         }
-        
-        
+
+        public static bool SolveEcuation3(double a, double b, double c, out double res1, out double res2)
+        {
+            ResultadoTupla(a, b, c, out res1, out res2);
+            return true;
+        }
+
     }
 }

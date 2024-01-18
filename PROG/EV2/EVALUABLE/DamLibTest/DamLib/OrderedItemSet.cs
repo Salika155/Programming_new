@@ -187,3 +187,8 @@ namespace DamLib
         }
     }
 }
+
+//pasame la direccion de memoria ram donde se encuentra el entero, que en la funcion es llamado resultentero y es donde se encuentra el resultado de la verdadera variable
+//3 maneras: out, in y ref -> pasame la direccion de memoria ram donde se encuentra el valor
+//si es out solo se puede escribir en esa variable,
+//si es in solo puedo leer de ella, ref es que puedo leer y escribir

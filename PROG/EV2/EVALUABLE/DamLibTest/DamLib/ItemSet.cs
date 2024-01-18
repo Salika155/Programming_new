@@ -83,21 +83,22 @@ namespace DamLib
                 return;
 
             int index = IndexOf(element);
-            for (int i = 0; i < _count; i++)
+
+            Item[] newArray = new Item[_count - 1];
+
+            for (int i = 0; i < index; i++)
             {
-                if (_items[i].Equals(element))
-                {
-                    index = i;
-                    break;
-                }
+                newArray[i] = _items[i];
             }
 
-            if (index != -1)
+            for (int i = index + 1; i < _count; i++)
             {
-                _items.RemoveAt(index);
-                _count--;
+                newArray[i - 1] = _items[i];
             }
+            _items = newArray;
+            _count--;
 
+            #region comentado
             //T[] newArray = new T[Count - 1];
 
             //for (int i = 0; i < index; i++)
@@ -115,10 +116,10 @@ namespace DamLib
                 }
                 faltan cosas
              */
-
+            #endregion
         }
-        // +Empty: bool
 
+        // +Empty: bool
         public bool Empty
         {
             get => _count == 0;
@@ -137,7 +138,7 @@ namespace DamLib
         {
             for (int i = 0; i < _count; i++)
             {
-                if (_items[i].Equals(element))
+                if (_items[i].Element.Equals(element))
                     return true;
             }
             return false;
@@ -149,7 +150,7 @@ namespace DamLib
             if (index == null)
                 return -1;
 
-            for (int i = 0; i < _items.Count; i++)
+            for (int i = 0; i < _count; i++)
             {
                 if (_items[i].Element.Equals(index))
                 {

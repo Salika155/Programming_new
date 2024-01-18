@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DamLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2051a13d4f06437f4c600c72fec15aa514ddde3f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DamLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DamLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

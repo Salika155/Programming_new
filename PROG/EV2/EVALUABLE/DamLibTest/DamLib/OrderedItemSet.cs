@@ -8,7 +8,6 @@ namespace DamLib
 {
     public class OrderedItemSet<T>
     {
-        
             private class Item
             {
                 public T Element;
@@ -21,123 +20,170 @@ namespace DamLib
                 }
             }
 
-            private T[] _item1 = new T[0];
+            private Item[] _item1 = new Item[0];
             private int _count = 0;
 
-            public override bool Equals(object? obj)
-            {
-                if (this == obj)
-                    return true;
-                if (obj is not OrderedItemSet<T>)
-                    return false;
-                OrderedItemSet<T> itemElement = (OrderedItemSet<T>)obj;
-                return itemElement._item1 == _item1 && itemElement._count == _count;
-
-                //for (int i = 0; i < _count; i++)
-                //{
-                //    if (_item1[i].Equals(_item1[i]))
-                //        return true;
-                //}
-                //return false;
-            }
-
-            public override int GetHashCode()
-            {
-                int hash = 5;
-                for (int i = 0; i < _count; i++)
-                {
-                int elementHash = 1;
-                    hash = hash * 31 + elementHash;
-                }
-                return hash;
-            }
-
-            // +Add(element:T)
-            public void Add(T element)
-            {
-                if (element == null || Contains(element))
-                    return;
-                
-
-                //T[] setElement = new T[_count + 1];
-                //for (int i = 0; i < _count; i++)
-                //{
-                //    setElement[i] = _items[i].element;
-                //}
-                //setElement[_count] = element;
-                //_items = setElement;
-                //_count++;
-
-            //hay que hacer cosas en el add
-            }
-
-
-            // +Remove(element:T)
-
-            public void Remove(T element)
-            {
-
-                if (element == null || !Contains(element))
-                    return;
-
-                
-
-
-                //T[] newArray = new T[Count - 1];
-
-                //for (int i = 0; i < index; i++)
-                //    newArray[i] = _items[i].element;
-
-                //for (int i = index + 1; i < Count; i++)
-                //    newArray[i - 1] = _items[i].element;
-
-                /*
-                 for (int i = 0; i < Count; i++)
-                {
-                    if (i == position)
-                    {
-                        j++;
-                    }
-                    faltan cosas
-                 */
-
-            }
-            // +Empty: bool
-
-            public bool Empty
-            {
-                get => _count == 0;
-            }
-
-            // +Count:int
-
-            public int Count
-            {
-                get => _count;
-            }
-
-            // +Contains(element:T):bool
-
-            public bool Contains(T element)
-            {
-                for (int i = 0; i < _count; i++)
-                {
-                    if (_item1[i].Equals(element))
-                        return true;
-                }
+        public override bool Equals(object? obj)
+        {
+            if (this == obj)
+                return true;
+            if (obj is not OrderedItemSet<T>)
                 return false;
-                //return indexof(element)
-            }
+            OrderedItemSet<T> itemElement = (OrderedItemSet<T>)obj;
 
-            public int IndexOf(T index)
+            if (_count != itemElement.Count)
+                return false;
+
+            for (int i = 0; i < _count; i++)
             {
-                if (index == null)
-                    return -1;
-
-               
-                return -1;
+                if (!_item1[i].Element.Equals(itemElement._item1[i].Element))
+                    return false;
             }
-        
-            //hay que hacer un binary search
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            int hash = 5;
+            for (int i = 0; i < _count; i++)
+            {
+                int elementHash = _item1[i].hash;
+                hash = hash * 31 + elementHash;
+            }
+            return hash;
+        }
+
+        // +Add(element:T)
+        public void Add(T element)
+        {
+            if (element == null || Contains(element))
+                return;
+
+            int hash = element.GetHashCode();
+            Item newItem = new Item(element, hash);
+
+            Item[] newArray = new Item[_count + 1];
+
+            for (int i = 0; i < _count; i++)
+            {
+                newArray[i] = _item1[i];
+            }
+            newArray[_count] = newItem;
+            _item1 = newArray;
+            _count++;
+        }
+
+        // +Remove(element:T)
+        public void Remove(T element)
+        {
+
+            if (element == null || !Contains(element))
+                return;
+
+            int index = IndexOf(element);
+
+            Item[] newArray = new Item[_count - 1];
+
+            for (int i = 0; i < index; i++)
+            {
+                newArray[i] = _item1[i];
+            }
+
+            for (int i = index + 1; i < _count; i++)
+            {
+                newArray[i - 1] = _item1[i];
+            }
+            _item1 = newArray;
+            _count--;
+
+            #region comentado
+            //T[] newArray = new T[Count - 1];
+
+            //for (int i = 0; i < index; i++)
+            //    newArray[i] = _items[i].element;
+
+            //for (int i = index + 1; i < Count; i++)
+            //    newArray[i - 1] = _items[i].element;
+
+            /*
+             for (int i = 0; i < Count; i++)
+            {
+                if (i == position)
+                {
+                    j++;
+                }
+                faltan cosas
+             */
+            #endregion
+        }
+
+        // +Empty: bool
+        public bool Empty
+        {
+            get => _count == 0;
+        }
+
+        // +Count:int
+
+        public int Count
+        {
+            get => _count;
+        }
+
+        // +Contains(element:T):bool
+
+        public bool Contains(T element)
+        {
+            for (int i = 0; i < _count; i++)
+            {
+                if (_item1[i].Element.Equals(element))
+                    return true;
+            }
+            return false;
+            //return indexof(element)
+        }
+
+        public int IndexOf(T index)
+        {
+            if (index == null)
+                return -1;
+
+            for (int i = 0; i < _count; i++)
+            {
+                if (_item1[i].Element.Equals(index))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        //hay que hacer un binary search
+
+        private int BinarySearch(int targetHash)
+        {
+            int left = 0;
+            int right = _count - 1;
+
+            while (left <= right)
+            {
+                int middle = left + (right - left) / 2;
+
+                if (_item1[middle].hash == targetHash)
+                {
+                    return middle; // Elemento encontrado
+                }
+                else if (_item1[middle].hash < targetHash)
+                {
+                    left = middle + 1; // Buscar en la mitad derecha
+                }
+                else
+                {
+                    right = middle - 1; // Buscar en la mitad izquierda
+                }
+            }
+
+            return -1; // Elemento no encontrado
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace DamLibTest
 
             DamLib.Stack<string> s = new DamLib.Stack<string>();
 
+            Console.WriteLine("Stack");
             //Stack
             s.Push("hola");
             s.Push("que");
@@ -36,6 +37,7 @@ namespace DamLibTest
             Console.WriteLine("Elemento saliente es: " + popElement5);
 
             Console.WriteLine("---------------------");
+            Console.WriteLine("Queue");
 
             //Queue
             DamLib.Queue<string> q = new DamLib.Queue<string>();
@@ -63,13 +65,15 @@ namespace DamLibTest
             Console.WriteLine("Elemento saliente es: " + deqElement5);
 
             Console.WriteLine("---------------------");
+            Console.WriteLine("Set");
 
             //Set
 
-            DamLib.Set<string> set = new DamLib.Set<string>();
+            DamLib.Set<string> set = new Set<string>();
 
             set.Add("hola");
             set.Add("que");
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + set.Count);
             set.Add("tal");
             set.Add(null);
 
@@ -77,16 +81,18 @@ namespace DamLibTest
 
             string elementSetToRemove = "que";
             set.Remove(elementSetToRemove);
-            Console.WriteLine($"Elemento '{elementSetToRemove}' eliminado");
+            Console.WriteLine("Elemento eliminado = " + elementSetToRemove);
 
             Console.WriteLine("---------------------");
+            Console.WriteLine("SetWithHash");
 
             //SetWithHash
 
-            DamLib.SetWithHash<string> sethash = new DamLib.SetWithHash<string>();
+            DamLib.SetWithHash<string> sethash = new SetWithHash<string>();
 
             sethash.Add("hola");
             sethash.Add("que");
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + sethash.Count);
             sethash.Add("tal");
             sethash.Add(null);
 
@@ -97,17 +103,33 @@ namespace DamLibTest
             Console.WriteLine($"Elemento '{elementToRemove}' eliminado");
 
             Console.WriteLine("---------------------");
+            Console.WriteLine("ItemSet");
 
             //ItemSet
-            DamLib.ItemSet<string> item = new DamLib.ItemSet<string>();
+            DamLib.ItemSet<string> itemSet = new ItemSet<string>();
 
-            item.Add("hola");
-            item.Add("que");
-            item.Add("tal");
-            item.Add(null);
+            itemSet.Add("hola");
+            itemSet.Add("que");
+            itemSet.Add("tal");
+            itemSet.Add(null);
 
-            Console.WriteLine("Elemento del top es: " + item.Contains);
-            Console.WriteLine("El número de elementos dentro de la cola es: " + item.Contains);
+            Console.WriteLine("---------------------");
+            Console.WriteLine("El número de elementos en el conjunto es: " + itemSet.Count);
+
+            Console.WriteLine("¿Contiene 'hola'? " + itemSet.Contains("hola"));
+            Console.WriteLine("Conjunto actual: ");
+            for (int i = 0; i < itemSet.Count; i++)
+            {
+                //Console.WriteLine(itemSet[i]);
+            }
+
+            itemSet.Remove("que");
+
+            Console.WriteLine("¿El conjunto está vacío? " + itemSet.Empty);
+            
+
+
+
 
             //Stack <string> s = new Stack<string>();
             //s.Pop(); 

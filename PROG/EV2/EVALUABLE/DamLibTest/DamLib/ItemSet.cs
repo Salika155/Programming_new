@@ -11,18 +11,18 @@ namespace DamLib
         private class Item
         {
             public T Element;
-            public int hash;
+            public int Hash;
 
             public Item(T element, int hash)
             {
                 this.Element = element;
-                this.hash = hash;
+                this.Hash = hash;
             }
             
         }
 
-        private List<Item> _items = new List<Item>();
-        private T[] _item1 =  new T[0];
+        
+        private Item[] _items =  new Item[0];
         private int _count = 0;
 
         public override bool Equals(object? obj)
@@ -32,14 +32,16 @@ namespace DamLib
             if (obj is not ItemSet<T>)
                 return false;
             ItemSet<T> itemElement = (ItemSet<T>)obj;
-            return itemElement._items == _items && itemElement._count == _count;
-            
-            //for (int i = 0; i < _count; i++)
-            //{
-            //    if (_items[i].element.Equals(_items[i].element))
-            //        return true;
-            //}
-            //return false;
+
+            if (_count != itemElement._count)
+                return false;
+
+            for (int i = 0; i < _count; i++)
+            {
+                if (!_items[i].Element.Equals(itemElement._items[i].Element))
+                    return false;
+            }
+            return true;
         }
 
         public override int GetHashCode()
@@ -47,7 +49,7 @@ namespace DamLib
             int hash = 5;
             for (int i = 0; i < _count; i++)
             {
-                int elementHash = _items[i].hash;
+                int elementHash = _items[i].Hash;
                 hash = hash * 31 + elementHash;
             }
             return hash;
@@ -58,29 +60,29 @@ namespace DamLib
         {
             if (element == null || Contains(element))
                 return;
+
             int hash = element.GetHashCode();
             Item newItem = new Item(element, hash);
-            _items.Add(newItem);
+
+            Item[] newArray = new Item[_count + 1];
+
+            for (int i = 0; i < _count; i++)
+            {
+                newArray[i] = _items[i];
+            }
+            newArray[_count] = newItem;
+            _items = newArray;
             _count++;
-
-            //T[] setElement = new T[_count + 1];
-            //for (int i = 0; i < _count; i++)
-            //{
-            //    setElement[i] = _items[i].element;
-            //}
-            //setElement[_count] = element;
-            //_items = setElement;
-            //_count++;
         }
-        // +Remove(element:T)
 
+        // +Remove(element:T)
         public void Remove(T element)
         {
 
             if (element == null || !Contains(element))
                 return;
 
-            int index = -1;
+            int index = IndexOf(element);
             for (int i = 0; i < _count; i++)
             {
                 if (_items[i].Equals(element))

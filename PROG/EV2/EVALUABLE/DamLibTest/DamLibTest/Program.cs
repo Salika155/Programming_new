@@ -26,18 +26,18 @@ namespace DamLibTest
 
         }
         //Test de caja blanca
-        public static Test1Result Test1(ISet<string> set)
+        public static Test1Result Test1(DamLib.ISet<string> set)
         {
             Test1Result result = new Test1Result(); 
             set.Clear();
-            result.Empty = set.IsEmpty;
+            result.Empty = set.Empty;
             result.Count = set.Count;
             set.Remove(null);
             set.Add(null);
             set.Contains(null);
             set.Add("Juan");
 
-            result.EmptyJuan = set.IsEmpty;
+            result.EmptyJuan = set.Empty;
             result.CountJuan = set.Count;
             result.ContainsJuan = set.Contains("Juan");
 

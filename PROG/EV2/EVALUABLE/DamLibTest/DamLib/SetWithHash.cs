@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DamLib
 {
-    public class SetWithHash<T>
+    public class SetWithHash<T> : ISet<T>
     {
         //Set<T>
         //- _set:T[]
@@ -25,6 +25,7 @@ namespace DamLib
                 return s._set == _set && s.Count == _count;
             }
 
+#nullable disable
         public override int GetHashCode()
         {
             int hash = 5;
@@ -35,6 +36,7 @@ namespace DamLib
             }
             return hash;
         }
+#nullable enable
 
         // +Add(element:T)
         public void Add(T newElement)
@@ -122,8 +124,9 @@ namespace DamLib
             get => _count;
         }
 
-            // +Contains(element:T):bool
+        // +Contains(element:T):bool
 
+#nullable disable
         public bool Contains(T checkElement)
         {
             int hash = checkElement.GetHashCode();
@@ -135,7 +138,9 @@ namespace DamLib
             return false;
 
         }
+#nullable enable
 
+#nullable disable
         public int IndexOf(T element)
         {
             if (element == null)
@@ -151,9 +156,15 @@ namespace DamLib
             }
             return -1;
         }
+#nullable enable
 
-            //con contain hacer otra funcion privada que sea IndexOf
-            // IndexOf(element:T):int
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        //con contain hacer otra funcion privada que sea IndexOf
+        // IndexOf(element:T):int
 
         //SI implemento equals necesariamente en cada clase debe de ir el GetHashCode
 

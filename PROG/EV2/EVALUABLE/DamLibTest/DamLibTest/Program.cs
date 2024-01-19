@@ -1,19 +1,79 @@
 ﻿using DamLib;
+using System.Text.Json;
 
 namespace DamLibTest
 {
     public class Program
     {
-        //Test de caja blanca
-        public static void Test1(Set<string> set)
+        public class Test1Result
         {
+            public bool Empty { get; set; }
+            public int Count { get; set; }
+            public bool Empty1 { get; set; }
+            public int Count1 { get; set; }
+            public bool EmptyJuan { get; set; }
+            public int CountJuan { get; set; }
+            public bool ContainsJuan { get; set; }
+            public bool EmptyJuan2 { get; set; }
+            public int CountJuan2 { get; set; }
+            public bool ContainsJuan2 { get; set; }
+            public bool EmptyAna { get; set; }
+            public int CountAna { get; set; }
+            public bool ContainsAna2 { get; set; }
+            public bool EmptyAna2 { get; set; }
+            public int CountAna2 { get; set; }
+            public bool ContainsAna { get; set; }
 
         }
+        //Test de caja blanca
+        public static Test1Result Test1(ISet<string> set)
+        {
+            Test1Result result = new Test1Result(); 
+            set.Clear();
+            result.Empty = set.IsEmpty;
+            result.Count = set.Count;
+            set.Remove(null);
+            set.Add(null);
+            set.Contains(null);
+            set.Add("Juan");
+
+            result.EmptyJuan = set.IsEmpty;
+            result.CountJuan = set.Count;
+            result.ContainsJuan = set.Contains("Juan");
+
+
+
+            return result;
+        }
+
+        //public interface ISet<T>
+        //{
+        //    //en c# puedo definir una propertie en interface
+        //    //si tienes get y set normalmente en la misma crea una variable privada, pero en una interface es solo una llamada
+        //    bool IsEmpty
+        //    {
+        //        get;
+        //    }
+        //    int Count { get; }
+        //    void Clear();
+        //    void Add(T item);
+        //    void Remove(T item);
+        //    bool Contains(T item);
+        //}
+
+
         static void Main(string[] args)
         {
 
             Set<string> setExample = new Set<string>();
-            Test1(setExample);
+            Test1Result result1 = Test1((ISet<string>)setExample);
+
+            ItemSet<string> ItemSetExample2 = new ItemSet<string>();
+            Test1Result result2 = Test1((ISet<string>)ItemSetExample2);
+
+            string stringResult = JsonSerializer.Serialize(result1);
+            string stringResult2 = JsonSerializer.Serialize(result2);
+
 
             //Stack s;
             //DamLib.Stack s1;
@@ -80,16 +140,16 @@ namespace DamLibTest
 
             DamLib.Set<string> set = new Set<string>();
 
-            setExample.Add("hola");
-            setExample.Add("que");
-            Console.WriteLine("El número de elementos dentro del conjunto es: " + setExample.Count);
-            setExample.Add("tal");
-            setExample.Add(null);
+            set.Add("hola");
+            set.Add("que");
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + set.Count);
+            set.Add("tal");
+            set.Add(null);
 
             Console.WriteLine("El número de elementos dentro del conjunto es: " + setExample.Count);
 
             string elementSetToRemove = "que";
-            setExample.Remove(elementSetToRemove);
+            set.Remove(elementSetToRemove);
             Console.WriteLine("Elemento eliminado = " + elementSetToRemove);
 
             Console.WriteLine("---------------------");

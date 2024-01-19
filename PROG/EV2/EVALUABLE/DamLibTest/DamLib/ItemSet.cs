@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DamLib
 {
-    public class ItemSet<T>
+    public class ItemSet<T> : ISet<T>
     {
         private class Item
         {
@@ -158,6 +158,11 @@ namespace DamLib
                 }
             }
             return -1;
+        }
+
+        public void Clear()
+        {
+            _count = 0;
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DamLib
 {
-    public class Set<T>
+    public class Set<T> : ISet<T>
     {
 
         //Set<T>
@@ -119,6 +119,11 @@ namespace DamLib
                 }
             }
             return -1;
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
         }
 
         //con contain hacer otra funcion privada que sea IndexOf

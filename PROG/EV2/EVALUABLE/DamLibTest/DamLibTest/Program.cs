@@ -4,8 +4,17 @@ namespace DamLibTest
 {
     public class Program
     {
+        //Test de caja blanca
+        public static void Test1(Set<string> set)
+        {
+
+        }
         static void Main(string[] args)
         {
+
+            Set<string> setExample = new Set<string>();
+            Test1(setExample);
+
             //Stack s;
             //DamLib.Stack s1;
 
@@ -71,16 +80,16 @@ namespace DamLibTest
 
             DamLib.Set<string> set = new Set<string>();
 
-            set.Add("hola");
-            set.Add("que");
-            Console.WriteLine("El número de elementos dentro del conjunto es: " + set.Count);
-            set.Add("tal");
-            set.Add(null);
+            setExample.Add("hola");
+            setExample.Add("que");
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + setExample.Count);
+            setExample.Add("tal");
+            setExample.Add(null);
 
-            Console.WriteLine("El número de elementos dentro del conjunto es: " + set.Count);
+            Console.WriteLine("El número de elementos dentro del conjunto es: " + setExample.Count);
 
             string elementSetToRemove = "que";
-            set.Remove(elementSetToRemove);
+            setExample.Remove(elementSetToRemove);
             Console.WriteLine("Elemento eliminado = " + elementSetToRemove);
 
             Console.WriteLine("---------------------");

@@ -123,7 +123,7 @@ namespace DamLib
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _count = 0;
         }
 
         //con contain hacer otra funcion privada que sea IndexOf

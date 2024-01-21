@@ -41,11 +41,10 @@ namespace DamLibTest
             result.CountJuan = set.Count;
             result.ContainsJuan = set.Contains("Juan");
 
-
-
             return result;
         }
 
+        #region Test
         //public interface ISet<T>
         //{
         //    //en c# puedo definir una propertie en interface
@@ -60,21 +59,30 @@ namespace DamLibTest
         //    void Remove(T item);
         //    bool Contains(T item);
         //}
-
+        #endregion
 
         static void Main(string[] args)
         {
 
             Set<string> setExample = new Set<string>();
-            Test1Result result1 = Test1((ISet<string>)setExample);
+            Test1Result result1 = Test1(setExample);
 
             ItemSet<string> ItemSetExample2 = new ItemSet<string>();
-            Test1Result result2 = Test1((ISet<string>)ItemSetExample2);
+            Test1Result result2 = Test1(ItemSetExample2);
 
             string stringResult = JsonSerializer.Serialize(result1);
             string stringResult2 = JsonSerializer.Serialize(result2);
 
-
+            if (stringResult == stringResult2)
+            {
+                Console.WriteLine("Los resultados son iguales.");
+            }
+            else
+            {
+                Console.WriteLine("Los resultados son diferentes.");
+                Console.WriteLine("Resultado 1: " + stringResult);
+                Console.WriteLine("Resultado 2: " + stringResult2);
+            }
             //Stack s;
             //DamLib.Stack s1;
 
@@ -196,9 +204,6 @@ namespace DamLibTest
 
             Console.WriteLine("¿El conjunto está vacío? " + itemSet.Empty);
             
-
-
-
 
             //Stack <string> s = new Stack<string>();
             //s.Pop(); 

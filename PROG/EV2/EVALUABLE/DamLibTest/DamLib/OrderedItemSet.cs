@@ -182,6 +182,11 @@ namespace DamLib
             return false;
         }
 
+        public void Clear()
+        {
+            _count = 0;
+        }
+
 
     }
 }

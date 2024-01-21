@@ -75,11 +75,11 @@ namespace DamLibTest
 
             if (stringResult == stringResult2)
             {
-                Console.WriteLine("Los resultados son iguales.");
+                Console.WriteLine("Son iguales.");
             }
             else
             {
-                Console.WriteLine("Los resultados son diferentes.");
+                Console.WriteLine("Son diferentes.");
                 Console.WriteLine("Resultado 1: " + stringResult);
                 Console.WriteLine("Resultado 2: " + stringResult2);
             }

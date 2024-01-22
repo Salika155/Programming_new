@@ -39,7 +39,7 @@ namespace DamLibTest
 
             result.EmptyJuan = set.Empty;
             result.CountJuan = set.Count;
-            result.ContainsJuan = set.Contains("JuanO");
+            result.ContainsJuan = set.Contains("Juan");
 
             return result;
         }

@@ -31,23 +31,56 @@ namespace DiccionarioApp
 
         //}
 
-        public int Count => 0;
-        public bool IsEmpty => true;
+        public int Count => _items.Length;
+        public bool IsEmpty => _items.Length == 0;
 
         public void Clear()
         {
-
+            _items = new Item[0];
         }
 
         public void Add(K key, V value)
         {
             //if key es igual que sale un throw new exception
+            Item[] newArray = new Item[_items.Length + 1];
+            for (int i = 0; i < _items.Length; i++)
+            {
+                newArray[i] = _items[i];
+            }
+            newArray[_items.Length] = new Item
+            {
+                key = key,
+                value = value
+            };
+            _items = newArray;
 
         }
 
         public void AddOrReplace(K key, V value)
         {
+            int index = IndexOfKey(key);
+            if (index != -1)
+            {
+                _items[index].value = value;
+               
+            }
+            else
+            {
+                Add(key, value);
+            }
 
+        }
+
+        private int IndexOfKey(K key)
+        {
+            for (int i = 0; i < _items.Length; i++)
+            {
+                if (_items[i].key.Equals(key))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         public bool Contains(K key)
@@ -70,10 +103,16 @@ namespace DiccionarioApp
 
         }
 
-        public Dicctionary<K, V> Filter(DiccionaryFilterDelegate<K,V> where, Dicctionary<K, V> ret)
+        public Dictionary<K, V> Filter(DiccionaryFilterDelegate<K,V> where, Dicctionary<K, V> ret)
         {
-            
             var ret = new Dictionary<K, V>();
+
+            if (ret == null)
+            {
+                throw new ArgumentNullException(nameof(ret));
+            }
+
+            ret.Clear();
 
             for (int i = 0; i < _items.Length; i++)
             {

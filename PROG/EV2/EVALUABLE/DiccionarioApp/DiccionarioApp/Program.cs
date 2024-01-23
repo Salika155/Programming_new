@@ -6,7 +6,7 @@
         {
             Dictionary<int, string> d = new Dictionary<int, string>();
 
-            var result = d.Filter(
+            d.Filter(
 
                 (key, value) =>
                 {

@@ -15,7 +15,6 @@ namespace DiccionarioApp
         {
             public K key;
             public V value;
-
         }
 
         private Item[] _items = new Item[0];
@@ -150,8 +149,6 @@ namespace DiccionarioApp
                 throw new ArgumentNullException(nameof(ret));
             }
 
-            ret.Clear();
-
             for (int i = 0; i < _items.Length; i++)
             {
                 Item item = _items[i];
@@ -165,14 +162,14 @@ namespace DiccionarioApp
             return ret;
         }
 
-        private void AddKeyValue(K key, V value)
-        {
-            //Append nombre para añadir en array
-            Item item = new Item();
-            item.key = key;
-            item.value = value;
-            _items = Append(_items, item);
-        }
+        //private void AddKeyValue(K key, V value)
+        //{
+        //    //Append nombre para añadir en array
+        //    Item item = new Item();
+        //    item.key = key;
+        //    item.value = value;
+        //    _items = Append(_items, item);
+        //}
 
         //void Remove
 

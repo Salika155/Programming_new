@@ -8,35 +8,27 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\carcarcor\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\carre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
       "projectName": "ConsoleApp2",
-      "projectPath": "C:\\Users\\carcarcor\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
-      "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carcarcor\\source\\repos\\ConsoleApp2\\ConsoleApp2\\obj\\",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\EVALUABLE\\ConsoleApp2\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\Programacion 1º Repetido\\nugget": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -70,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

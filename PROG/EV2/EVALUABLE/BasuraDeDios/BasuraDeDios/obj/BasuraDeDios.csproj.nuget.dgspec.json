@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj": {}
+    "C:\\Users\\carcarcor\\source\\repos\\BasuraDeDios\\BasuraDeDios\\BasuraDeDios.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj": {
+    "C:\\Users\\carcarcor\\source\\repos\\BasuraDeDios\\BasuraDeDios\\BasuraDeDios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj",
-        "projectName": "DiccionarioApp",
-        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\BasuraDeDios\\BasuraDeDios\\BasuraDeDios.csproj",
+        "projectName": "BasuraDeDios",
+        "projectPath": "C:\\Users\\carcarcor\\source\\repos\\BasuraDeDios\\BasuraDeDios\\BasuraDeDios.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\EVALUABLE\\DiccionarioApp\\DiccionarioApp\\obj\\",
+        "outputPath": "C:\\Users\\carcarcor\\source\\repos\\BasuraDeDios\\BasuraDeDios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

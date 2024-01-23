@@ -141,7 +141,7 @@ namespace DiccionarioApp
 
         }
 
-        public Dictionary<K,V> Filter(DiccionaryFilterDelegate<K,V> where, Dicctionary<K,V> ret)
+        public Dictionary<K,V> Filter(DiccionaryFilterDelegate<K,V> where)
         {
             var ret = new Dictionary<K,V>();
 
@@ -156,12 +156,40 @@ namespace DiccionarioApp
             {
                 Item item = _items[i];
                 bool addToNewDictionary = where(item.key, item.value);
+                if (addToNewDictionary)
+                    ret.Add(item.key, item.value);
+                //mejor una funcion que los meta directo, porque ya estan ordenados al ejecutarse
+                //AddKeyValue
                 
             }
             return ret;
         }
 
+        private void AddKeyValue(K key, V value)
+        {
+            //Append nombre para añadir en array
+            Item item = new Item();
+            item.key = key;
+            item.value = value;
+            _items = Append(_items, item);
+        }
+
         //void Remove
+
+        public void Remove(DiccionaryFilterDelegate<K, V> where)
+        {
+            for (int i = 0; i < _items.Length; i++)
+            {
+                Item item = _items[i];
+                bool hasToBeRemoved = where(item.key, item.value);
+                if (hasToBeRemoved)
+                {
+                    Remove(item.key);
+                    i--;
+                }
+            }
+
+        }
 
 
         //lamda es pasar en vez de un parametro una funcion, y en funcion de lo que devuelva esa funcion haces una cosa u otra.

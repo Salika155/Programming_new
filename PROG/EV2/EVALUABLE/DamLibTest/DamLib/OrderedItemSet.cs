@@ -166,19 +166,19 @@ namespace DamLib
 
             int min = 0;
             int max = _count - 1;
+            int hash = element.GetHashCode();
 
             while (min <= max)
             {
-                int med = (min + max) / 2;
+                int med = (min + max) >> 1; //desplazar un bit a la derecha -> shift
 
-                if (_item1[med].Element.Equals(element))
+                if (_item1[med].hash == hash)
                     return true;
-                else if (_item1[med].Element.GetHashCode() < element.GetHashCode())
+                if (_item1[med].hash < hash)
                     min = med + 1;
                 else
                     max = med - 1;
             }
-
             return false;
         }
 
@@ -186,6 +186,8 @@ namespace DamLib
         {
             _count = 0;
         }
+
+        //Sort
 
 
     }

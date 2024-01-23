@@ -85,27 +85,65 @@ namespace DiccionarioApp
 
         public bool Contains(K key)
         {
+            for (int i = 0; i < _items.Length; i++)
+            {
+                if (_items[i].key.Equals(key))
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
         public void Remove(K key)
         {
+            int index = IndexOfKey(key);
+            if (index != -1)
+            {
+                Item[] newArrayItem = new Item[_items.Length - 1];
+                for (int i = 0, j = 0; i < _items.Length; i++)
+                {
+                    if (i != index)
+                    {
+                        newArrayItem[j] = _items[i];
+                        j++;
+                    }
+                }
+                _items = newArrayItem;
+            }
 
         }
 
         public V GetValueWithKey(K key)
         {
-
+            for (int i = 0; i < _items.Length; i++)
+            {
+                if (_items[i].key.Equals(key))
+                {
+                    return _items[i].value;
+                }
+            }
+            return default(V);
         }
 
         public bool TryGetValue(K key, out V value)
         {
+            for (int i = 0; i < _items.Length; i++)
+            {
+                if (_items[i].key.Equals(key))
+                {
+                    value = _items[i].value;
+                    return true;
+                }
+            }
+            value = default(V);
+            return false;
 
         }
 
-        public Dictionary<K, V> Filter(DiccionaryFilterDelegate<K,V> where, Dicctionary<K, V> ret)
+        public Dictionary<K,V> Filter(DiccionaryFilterDelegate<K,V> where, Dicctionary<K,V> ret)
         {
-            var ret = new Dictionary<K, V>();
+            var ret = new Dictionary<K,V>();
 
             if (ret == null)
             {

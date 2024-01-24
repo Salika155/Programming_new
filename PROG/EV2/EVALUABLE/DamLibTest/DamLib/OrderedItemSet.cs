@@ -144,9 +144,9 @@ namespace DamLib
 
         public int IndexOf(T index)
         {
-            if (index == null)
+            if (index == null || _count <= 0)
                 return -1;
-
+            
             for (int i = 0; i < _count; i++)
             {
                 if (_item1[i].Element.Equals(index))
@@ -161,7 +161,7 @@ namespace DamLib
 
         public bool BinarySearch(T element)
         {
-            if (element == null || _count == 0)
+            if (element == null || _count <= 0)
                 return false;
 
             int min = 0;

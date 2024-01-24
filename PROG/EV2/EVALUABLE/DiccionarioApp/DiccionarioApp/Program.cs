@@ -6,9 +6,20 @@
         {
             Dictionary<int, string> d = new Dictionary<int, string>();
 
-            d.Filter(
+            d.Add(1, "uno");
+            d.Add(2, "dos");
+            d.Add(3, "tres");
 
-                (key, value) =>
+            //var filteredDictionary = d.Filter(
+            //    (key, value) => key.ToString().Contains("1")
+            //);
+
+            //d.Remove(
+            //    (key, value) => key.ToString().Contains("2")
+            //);
+
+
+            (key, value) =>
                 {
                     return key.Contains("a") || key.Contains("A");
                 }

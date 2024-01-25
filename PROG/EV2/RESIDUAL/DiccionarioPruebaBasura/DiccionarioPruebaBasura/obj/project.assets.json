@@ -111,11 +111,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\RESIDUAL\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
       "projectName": "DiccionarioPruebaBasura",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\RESIDUAL\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\RESIDUAL\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

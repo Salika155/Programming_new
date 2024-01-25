@@ -177,7 +177,7 @@ namespace DiccionarioApp
         {
             for (int i = 0; i < _items.Length; i++)
             {
-                Item item = _items[i];
+                Item item = new Item();
                 bool hasToBeRemoved = where(item.key, item.value);
                 if (hasToBeRemoved)
                 {

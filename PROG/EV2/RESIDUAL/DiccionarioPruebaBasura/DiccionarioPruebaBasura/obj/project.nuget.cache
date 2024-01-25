@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tlmQ0bTzdGUoaTj8CHnuhWZu/UDXygBixlDTicZyVbuwFRS8wbSJvjYmeNtgNxMLzVs7trJ01/x56xD+9PcIkg==",
+  "dgSpecHash": "Jl2Zi/GvUXQhNWAw5lA0mrmIkn/ZaWaOEZBn6l6UL2LekS/pVBSwaA0jFy+U9x+VGD5T7/rzHy7Hgd+T5X0S4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\RESIDUAL\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura\\DiccionarioPruebaBasura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carre\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.0\\microsoft.dotnet.ilcompiler.8.0.0.nupkg.sha512",
     "C:\\Users\\carre\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.0\\microsoft.net.illink.tasks.8.0.0.nupkg.sha512",

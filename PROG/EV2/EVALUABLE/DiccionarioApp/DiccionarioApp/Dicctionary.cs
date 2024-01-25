@@ -146,7 +146,7 @@ namespace DiccionarioApp
 
             if (ret == null)
             {
-                throw new ArgumentNullException(nameof(ret));
+                throw new ArgumentNullException(/*nameof(ret)*/);
             }
 
             for (int i = 0; i < _items.Length; i++)

@@ -27,6 +27,7 @@ namespace BasuraDeDios
                     if (comparer(array[i], array[j]) < 0)
                     {
                         Swap(ref array[i],ref array[j]);
+                        
                     }
                 }
             }
@@ -55,3 +56,59 @@ record Student(string Name, int Age)
 }
 //esencia de que todos sus parametros sean readonly
 //esto es un objeto referenciado creado en el heap
+
+//clases pueden heredar y implementar interfaces
+//struct no pueden heredar pero si implementar
+//record 
+//struct creacion variable temporal o que este dentro de otro objeto
+
+//void YerkoQuiereAEnrique()
+//{
+//    for (int i = 0; i <= 0; i--)
+//    {
+//        Beso b = new BesoEnLaBoca();
+//          para el caso BesoEnLaBoca hereda de Beso
+//              SE CREA en algun lugar del heap -> b apunta a ese heap
+//              tendra 3 variables, la de la funcion y lugar de memoria, la del resultado del for, y la de la propia b
+//EN ACABAR el proceso de B, b apuntará a null, y en teoría se destruiria
+//runtime de C# para funcionamiento programas -> el objeto no va a microprocesador, sino codigo legible por runtime 
+//la app se lo pide al runtime, el runtime se lo pide al S.O. el S.O. se lo devuelve al runtime, y el runtime se lo devuelve a C#
+//cuando el runtime dice a c# de borrar el objeto, este no es borrado, es dejado en una minicache por si en algun momento futuro se necesita
+//lo mete en una lista de objetos que estan muertos llamada Garbage Collector
+//App --> Runtime --> SO --> Runtime --> SO (Garbage Collector) -> pool (contenedor temporal de memoria para uso temporal)
+//    }
+//}
+
+
+//esencia autoreference counting que algo se vaya generando y destruya cuando no haga falta
+//no controlas cuando se destruye un objeto no puedes controlar el destructor
+
+//nODE <t> Parent {get; set;}
+//bool IsRoot {get;}
+//bool IsLeaf{get}
+//int ChildCount{get}
+//int Level {get}
+//node <T> Root {get;set}
+
+//int GetLevel()
+//{
+// if (_parent == null)
+//return 0;
+//return _parent.GetLevel()+1;
+
+//Node<T> GetRoot()
+//{
+//if (_parent == null)
+//return this;
+//return _parent.GetRoot();
+//}
+
+//Node<T> GetChildAt(int index)
+
+//void Unlink o Detach()
+//{_parent.Remove(this) (tiene que ser private) }
+
+//void AddChild(Node<T> child)
+
+
+

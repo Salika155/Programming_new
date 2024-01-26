@@ -36,12 +36,15 @@ namespace BasuraDeDios
 
 
 
-//CUANDO creas un objeto en memoria se guarda en el heap, y un struct, que es como una variable se guardaria en el stack, que es de tamaño fijo, no como el heap  que es variable
+//CUANDO creas un objeto en memoria se guarda en el heap, y un struct, que es como una variable
+//se guardaria en el stack, que es de tamaño fijo, no como el heap  que es variable
 //En el stack se copia la variable de los parametros de la funcion, el resultado, y la referencia
 //cuando es struc no creas objetos, estas apuntando al stack
-//si una variable es parte de un objeto que se encuentra en el heap, esta variable y clase siguen estando dentro del heap
+//si una variable es parte de un objeto que se encuentra en el heap, esta variable y clase siguen estando
+//dentro del heap
 //referencetypes y valuetypes
-//struct como un entero donde mete cosas a 0 directamenjte, son menos ciclos de reloj y no reserva espacio en el heap de lo que puede ser una nueva clase,
+//struct como un entero donde mete cosas a 0 directamenjte, son menos ciclos de reloj y no reserva
+//espacio en el heap de lo que puede ser una nueva clase,
 //diferenciar entre si querer hacer una copia o que apunten al mismo sitio
 
 //clase inmutable y que no herede de nadie

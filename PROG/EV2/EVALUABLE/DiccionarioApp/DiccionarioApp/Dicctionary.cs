@@ -9,6 +9,7 @@ namespace DiccionarioApp
 {
     //funcion delegado para hacer lambda -> prototipo de algo generico que le paso un key y un value y devuelve un booleano
     public delegate bool DiccionaryFilterDelegate<K, V>(K key, V value);
+    public delegate int ComparatorDelegate<T>(T n1, T n2);
     public class Dicctionary <K, V>
     {
         private class Item
@@ -186,6 +187,27 @@ namespace DiccionarioApp
                 }
             }
 
+        }
+
+        public static void Sort<T>(T[] array, ComparatorDelegate<T> comparer)
+        {
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (comparer(array[i], array[j]) < 0)
+                    {
+                        Swap(ref array[i], ref array[j]);
+                    }
+                }
+            }
+        }
+
+        public static void Swap<T>(ref T a, ref T b)
+        {
+            T aux = a;
+            a = b;
+            b = aux;
         }
 
 

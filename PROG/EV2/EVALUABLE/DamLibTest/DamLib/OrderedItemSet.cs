@@ -189,6 +189,25 @@ namespace DamLib
 
         //Sort
 
+        public void Sort()
+        {
+            if (_count <= 0)
+                return;
+
+            for (int i = 0; i < _count - 1; i++)
+            {
+                for (int j = i + 1; j < _count; j++)
+                {
+                    if (_item1[i].hash > _item1[j].hash)
+                    {
+                        Item aux = _item1[i];
+                        _item1[i] = _item1[j];
+                        _item1[j] = aux;
+                    }
+                }
+            }
+        }
+
 
     }
 }

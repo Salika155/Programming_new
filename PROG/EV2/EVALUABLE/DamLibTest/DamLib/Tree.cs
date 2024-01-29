@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -117,7 +118,7 @@ namespace DamLib
             {
                 if (_parent != null)
                 {
-                    _parent._children.Remove(this);
+                    _parent.RemoveChild(this);
                     _parent = null;
                 }
             }
@@ -129,6 +130,87 @@ namespace DamLib
                 child.Unlink();
                 child._parent = this;
                 _children.Add(child);
+            }
+
+            //public void RemoveChild(Node<T> node)
+            //{
+            //    int index = IndexOf(node);
+            //      if (index >= 0)
+                        
+            //    _children.RemoveAt(index);
+            //}
+
+            //public int IndexOf(Node<T> node)
+            //{
+
+            //}
+
+            void SetParent(Node<T> node)
+            {
+                if (node == null)
+                    Unlink();
+                else
+                    node.AddChild(this);
+            }
+
+            bool HasSibling()
+            {
+                if(_parent != null)
+                    return _parent._children.Count > 0;
+                return false;
+            }
+
+            bool ContainsAncestor(Node<T> node)
+            {
+                if (node == null || _parent == null)
+                    return false;
+                if (_parent == node)
+                    return true;
+                return _parent.ContainsAncestor(node);
+            }
+
+            bool ContainsDescendant(Node<T> node)
+            {
+                //comprobar sea null
+                if (node == null)
+                    return false;
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    if (_children[i] == node)
+                        return true;
+                    if(_children[i].ContainsDescendant(node))
+                    return true;
+
+                }
+                return false;
+            }
+
+            delegate void VisitDelegade<T>(Node<T> node);
+
+            //recorrer todos los nodos
+            void Visit(VisitDelegade<T> visitor)
+            {
+                if (visitor == null)
+                    return;
+                visitor(this);
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    _children[i].Visit(visitor);
+                }
+            }
+
+            delegate bool CheckDelegate<T>(Node<T> node);
+
+            Node<T> FindNode(CheckDelegate<T> checker)
+            {
+
+            }
+
+            delegate bool CheckDelegateNode<T>(T element);
+
+            Node<T> FindNode2(CheckDelegateNode<T> checker)
+            {
+
             }
 
 

@@ -203,13 +203,21 @@ namespace DamLibTest
             itemSet.Remove("que");
 
             Console.WriteLine("¿El conjunto está vacío? " + itemSet.Empty);
-            
+
 
             //Stack <string> s = new Stack<string>();
             //s.Pop(); 
 
             //buscar informacion default(T);
 
+
+
+            var root = new Node<string>();
+            // ...
+            root.FindNode((comosea) =>
+            {
+                return true;
+            });
         }
     }
 }

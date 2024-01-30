@@ -46,6 +46,7 @@ namespace DamLib
 
            
 
+
             public bool IsRoot
             {
                 get
@@ -234,9 +235,10 @@ namespace DamLib
 
                 for (int i = 0; i < _children.Count; i++)
                 {
-                    Node<T> result = _children[i].FindNode(checker);
-                    if (result != null)
-                        return result;
+                   var child = _children[i];
+                   var node = child.FindNode(checker);
+                    if (node != null)
+                        return node;
                 }
                 return null;
             }
@@ -244,21 +246,18 @@ namespace DamLib
 
             delegate bool CheckDelegateNode<T>(T element);
 
-            Node<T> FindNode2(CheckDelegateNode<T> checker)
+            void FindNode2(CheckDelegateNode<T> checker, List<Node<T>> list)
             {
-                if (checker == null)
-                    return null;
+                var result = new List<Node<T>>();
 
-                if (checker(_content))
-                    return this;
+                result.FindNode(checker, result)
 
-                for (int i = 0; i < _children.Count; i++)
-                {
-                    Node<T> result = _children[i].FindNode2(checker);
-                    if (result != null)
-                        return result;
-                }
-                return null;
+                return result;
+            }
+
+            List<Node<T>> Filter(CheckDelegateNode<T> checker)
+            {
+                return FindNode(checker);
             }
 
 
@@ -289,6 +288,17 @@ namespace DamLib
 
             //void AddChild(Node<T> child)
 
+
+            //Memory Leak cuando las referencias de fuera desaparecen y se crea unas referencias de objetos circular
+            //existen referencias weak y strong, las strong son las hechas hasta ahora, las weak son referencias que no cuentan para el reference count.
+            //el padre es el que tiene que ser weak, si no se produce la destruccion de la referencia pero el objeto queda en memoria
+            //class Node<T>
+            //{
+            //Node<T> _parent;
+            //WeakReference<Node<T>> _parent;
+            //}
+
+            //para trabajar con una weak reference primero la pasas a strong, trabajas con la variable y luego sera lo que tenga que ser con la weak;
 
         }
     }

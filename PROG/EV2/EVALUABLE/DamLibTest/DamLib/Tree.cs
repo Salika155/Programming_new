@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DamLib
 {
@@ -14,12 +15,13 @@ namespace DamLib
             private T _content;
             private List<Node<T>> _children = new List<Node<T>>();
             private Node<T>? _parent;
+            private Node<T> _root;
+
 
             public Node(T content)
             {
                 _content = content;
             }
-
 
             public Node<T> Parent
             {
@@ -31,7 +33,7 @@ namespace DamLib
                 {
                     if (_parent != null)
                     {
-                        _parent._children.Remove(this);
+                        _parent.RemoveChild(this);
                     }
                     _parent = value;
 
@@ -41,6 +43,8 @@ namespace DamLib
                     }
                 }
             }
+
+           
 
             public bool IsRoot
             {
@@ -86,6 +90,26 @@ namespace DamLib
                 }
             }
 
+            public int IndexOf(Node<T> node)
+            {
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    if (_children[i] == node)
+                    {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+
+            private void RemoveChild(Node<T> node)
+            {
+                int index = IndexOf(node);
+                if (index != -1)
+                {
+                    _children.RemoveAt(index);
+                }
+            }
             public int GetLevel()
             {
                 if (_parent == null)
@@ -110,7 +134,7 @@ namespace DamLib
             public void Unlink()
             {
                 if (_parent != null)
-                    _parent._children.Remove(this);
+                    _parent.RemoveChild(this);
                 _parent = null;
             }
 
@@ -135,9 +159,9 @@ namespace DamLib
             //public void RemoveChild(Node<T> node)
             //{
             //    int index = IndexOf(node);
-            //      if (index >= 0)
-                        
-            //    _children.RemoveAt(index);
+            //    if (index >= 0)
+
+            //        _children.RemoveAt(index);
             //}
 
             //public int IndexOf(Node<T> node)
@@ -145,7 +169,7 @@ namespace DamLib
 
             //}
 
-            void SetParent(Node<T> node)
+            public void SetParent(Node<T> node)
             {
                 if (node == null)
                     Unlink();
@@ -153,7 +177,7 @@ namespace DamLib
                     node.AddChild(this);
             }
 
-            bool HasSibling()
+            public bool HasSibling()
             {
                 if(_parent != null)
                     return _parent._children.Count > 0;
@@ -180,7 +204,6 @@ namespace DamLib
                         return true;
                     if(_children[i].ContainsDescendant(node))
                     return true;
-
                 }
                 return false;
             }
@@ -203,14 +226,39 @@ namespace DamLib
 
             Node<T> FindNode(CheckDelegate<T> checker)
             {
+                if (checker == null)
+                    return null;
 
+                if (checker(this))
+                    return this;
+
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    Node<T> result = _children[i].FindNode(checker);
+                    if (result != null)
+                        return result;
+                }
+                return null;
             }
+
 
             delegate bool CheckDelegateNode<T>(T element);
 
             Node<T> FindNode2(CheckDelegateNode<T> checker)
             {
+                if (checker == null)
+                    return null;
 
+                if (checker(_content))
+                    return this;
+
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    Node<T> result = _children[i].FindNode2(checker);
+                    if (result != null)
+                        return result;
+                }
+                return null;
             }
 
 

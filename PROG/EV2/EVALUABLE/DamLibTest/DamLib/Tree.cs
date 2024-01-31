@@ -246,18 +246,33 @@ namespace DamLib
 
             delegate bool CheckDelegateNode<T>(T element);
 
-            void FindNode2(CheckDelegateNode<T> checker, List<Node<T>> list)
+            public void FindNode2(CheckDelegateNode<T> checker, List<Node<T>> list)
             {
                 var result = new List<Node<T>>();
 
-                result.FindNode(checker, result)
-
-                return result;
+                //result.FindNode(checker, result)
+                FindNodes(this, checker, result);
+                //return;
             }
 
-            List<Node<T>> Filter(CheckDelegateNode<T> checker)
+            private void FindNodes(Node<T> node, CheckDelegateNode<T> checker, List<Node<T>> result)
             {
-                return FindNode(checker);
+                if (checker(node._content))
+                {
+                    result.Add(node);
+                }
+
+                for (int i = 0; i < node._children.Count; i++)
+                {
+                    FindNodes(node._children[i], checker, result);
+                }
+            }
+
+            public  List<Node<T>>? Filter(CheckDelegateNode<T> checker)
+            {
+                var result = new List<Node<T>>();
+                FindNodes(this, checker, result);
+                return result;
             }
 
 

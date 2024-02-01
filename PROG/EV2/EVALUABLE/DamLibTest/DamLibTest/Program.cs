@@ -212,12 +212,14 @@ namespace DamLibTest
 
 
 
-            var root = new Node<string>();
-            // ...
-            root.FindNode((comosea) =>
-            {
-                return true;
-            });
+            //    var root = new Node<string>();
+            //    // ...
+            //    root.FindNode((comosea) =>
+            //    {
+            //        return true;
+            //    });
+
+          
         }
     }
 }

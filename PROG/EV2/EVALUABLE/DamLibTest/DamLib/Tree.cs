@@ -16,6 +16,7 @@ namespace DamLib
             private List<Node<T>> _children = new List<Node<T>>();
             private Node<T>? _parent;
             private Node<T> _root;
+            //WeakReference<Node<T>> _parentWeak;
 
 
             public Node(T content)
@@ -44,7 +45,7 @@ namespace DamLib
                 }
             }
 
-           
+
 
 
             public bool IsRoot
@@ -180,7 +181,7 @@ namespace DamLib
 
             public bool HasSibling()
             {
-                if(_parent != null)
+                if (_parent != null)
                     return _parent._children.Count > 0;
                 return false;
             }
@@ -203,8 +204,8 @@ namespace DamLib
                 {
                     if (_children[i] == node)
                         return true;
-                    if(_children[i].ContainsDescendant(node))
-                    return true;
+                    if (_children[i].ContainsDescendant(node))
+                        return true;
                 }
                 return false;
             }
@@ -235,8 +236,8 @@ namespace DamLib
 
                 for (int i = 0; i < _children.Count; i++)
                 {
-                   var child = _children[i];
-                   var node = child.FindNode(checker);
+                    var child = _children[i];
+                    var node = child.FindNode(checker);
                     if (node != null)
                         return node;
                 }
@@ -246,9 +247,26 @@ namespace DamLib
 
             delegate bool CheckDelegateNode<T>(T element);
 
-            public void FindNode2(CheckDelegateNode<T> checker, List<Node<T>> list)
+            private List<Node<T>> FindNode(CheckDelegateNode<T> checker/* List<Node<T>> list*/)
             {
                 var result = new List<Node<T>>();
+
+                if (checker == null)
+                    return result;
+                
+                if (checker(_content))
+                {
+                    result.Add(this);
+                }
+
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    var child = _children[i];
+                    var node = child.FindNode(checker);
+                    if (node != null)
+                        return node;
+                }
+                return result;
 
                 //result.FindNode(checker, result)
                 FindNodes(this, checker, result);
@@ -271,17 +289,32 @@ namespace DamLib
             public List<Node<T>>? Filter(CheckDelegateNode<T> checker)
             {
                 var result = new List<Node<T>>();
+                if (checker == null)
+                    return result;
+                if (checker(_content))
+                {
+                    result.Add(this);
+                }
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    var child = _children[i];
+                    var node = child.FindNode(checker);
+                    if (node != null)
+                        result.Add(child);
+                }
+
                 FindNodes(this, checker, result);
                 return result;
             }
 
-
+            #region codigoviejo
             //nODE <t> Parent {get; set;}
             //bool IsRoot {get;}
             //bool IsLeaf{get}
             //int ChildCount{get}
             //int Level {get}
             //node <T> Root {get;set}
+
 
             //int GetLevel()
             //{
@@ -315,6 +348,15 @@ namespace DamLib
 
             //para trabajar con una weak reference primero la pasas a strong, trabajas con la variable y luego sera lo que tenga que ser con la weak;
 
+
+            //foreach(var node in children)
+            //{
+            //AddChild(node);
+            //}
+            //para indexof es indispensable usar el for, el foreach se puede usar en otros casos
+
+            //hacer un override tostring
+            #endregion
         }
     }
 }

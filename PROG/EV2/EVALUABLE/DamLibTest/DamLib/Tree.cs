@@ -268,7 +268,7 @@ namespace DamLib
                 }
             }
 
-            public  List<Node<T>>? Filter(CheckDelegateNode<T> checker)
+            public List<Node<T>>? Filter(CheckDelegateNode<T> checker)
             {
                 var result = new List<Node<T>>();
                 FindNodes(this, checker, result);

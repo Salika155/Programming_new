@@ -146,7 +146,7 @@ namespace DamLibTest
 
             //Set
 
-            DamLib.Set<string> set = new Set<string>();
+            DamLib.Set<string> set = new DamLib.Set<string>();
 
             set.Add("hola");
             set.Add("que");
@@ -218,6 +218,20 @@ namespace DamLibTest
             //    {
             //        return true;
             //    });
+
+
+
+            DamLib.Tree<string> tree = new Tree<string>();
+
+            
+
+            
+
+           
+            
+
+            
+
 
           
         }

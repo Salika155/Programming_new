@@ -235,9 +235,9 @@ namespace DamLib
                 for (int i = 0; i < _children.Count; i++)
                 {
                     var child = _children[i];
-                    var node = child.FindNode(checker);
-                    if (node != null)
-                        return node;
+                    var nodeSearched = child.FindNode(checker);
+                    if (nodeSearched != null)
+                        return nodeSearched;
                 }
                 return null;
             }

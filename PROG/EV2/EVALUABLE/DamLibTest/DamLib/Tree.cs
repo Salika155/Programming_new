@@ -184,7 +184,7 @@ namespace DamLib
                 return false;
             }
 
-            bool ContainsAncestor(Node<T> node)
+            public bool ContainsAncestor(Node<T> node)
             {
                 if (node == null || _parent == null)
                     return false;
@@ -196,7 +196,7 @@ namespace DamLib
                 return _parent.ContainsAncestor(node);
             }
 
-            bool ContainsDescendant(Node<T> node)
+            public bool ContainsDescendant(Node<T> node)
             {
                 //comprobar sea null
                 if (node == null)
@@ -227,7 +227,7 @@ namespace DamLib
 
             public delegate bool CheckDelegate<T>(Node<T> node);
 
-            Node<T> FindNode(CheckDelegate<T> checker)
+            public Node<T> FindNode(CheckDelegate<T> checker)
             {
                 if (checker == null)
                     return null;

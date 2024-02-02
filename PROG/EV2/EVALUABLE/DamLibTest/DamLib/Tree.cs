@@ -10,12 +10,12 @@ namespace DamLib
 {
     public class Tree <T>
     {
-        private class Node<T>
+        public class Node<T>
         {
             private T _content;
             private List<Node<T>> _children = new List<Node<T>>();
             private Node<T>? _parent;
-            private Node<T> _root;
+            private Node<T>? _root;
             //WeakReference<Node<T>> _parentWeak;
 
 
@@ -45,9 +45,7 @@ namespace DamLib
                 }
             }
 
-
-
-
+            
             public bool IsRoot
             {
                 get
@@ -82,7 +80,7 @@ namespace DamLib
                 }
             }
 
-            public Node<T> Root
+            private Node<T> Root
             {
                 get
                 {
@@ -224,7 +222,7 @@ namespace DamLib
                 }
             }
 
-            delegate bool CheckDelegate<T>(Node<T> node);
+            public delegate bool CheckDelegate<T>(Node<T> node);
 
             Node<T> FindNode(CheckDelegate<T> checker)
             {
@@ -245,7 +243,7 @@ namespace DamLib
             }
 
 
-            delegate bool CheckDelegateNode<T>(T element);
+            public delegate bool CheckDelegateNode<T>(T element);
 
             private List<Node<T>> FindNode(CheckDelegateNode<T> checker/* List<Node<T>> list*/)
             {
@@ -269,7 +267,7 @@ namespace DamLib
                 return result;
 
                 //result.FindNode(checker, result)
-                FindNodes(this, checker, result);
+                //FindNodes(this, checker, result);
                 //return;
             }
 
@@ -298,12 +296,17 @@ namespace DamLib
                 for (int i = 0; i < _children.Count; i++)
                 {
                     var child = _children[i];
-                    var node = child.FindNode(checker);
-                    if (node != null)
-                        result.Add(child);
+                    var node = child.Filter(checker);
+
+                    foreach (var childNode in node)
+                    {
+                        result.Add(childNode);
+                    }
+                    //if (node != null)
+                    //    result.Add(child);
                 }
 
-                FindNodes(this, checker, result);
+                //FindNodes(this, checker, result);
                 return result;
             }
 

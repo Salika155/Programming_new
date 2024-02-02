@@ -221,7 +221,11 @@ namespace DamLibTest
 
 
 
-            DamLib.Tree<string> tree = new Tree<string>();
+            Node<string> root = new Node<string>("A");
+            DamLib.Tree<string> node1 = new DamLib.Tree<string>("B", root);
+            DamLib.Tree<string> node2 = new DamLib.Tree<string>("C", root);
+
+            
 
             
 

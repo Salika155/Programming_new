@@ -190,6 +190,9 @@ namespace DamLib
                     return false;
                 if (_parent == node)
                     return true;
+
+                //var child = _children[i];
+
                 return _parent.ContainsAncestor(node);
             }
 
@@ -304,6 +307,8 @@ namespace DamLib
                     }
                     //if (node != null)
                     //    result.Add(child);
+
+                    //puedo comprobar el contenido tambien con el checker this con la otra lambda
                 }
 
                 //FindNodes(this, checker, result);
@@ -360,6 +365,8 @@ namespace DamLib
 
             //hacer un override tostring
             #endregion
+
+            //para hacer weakreference tengo que hacer funcion getparent y cambiar el setparent
         }
     }
 }

@@ -45,6 +45,17 @@ namespace DamLib
                 }
             }
 
+            public T Content
+            {
+                get
+                {
+                    return _content;
+                }
+                set
+                {
+                    _content = value;
+                }
+            }
             
             public bool IsRoot
             {
@@ -89,6 +100,8 @@ namespace DamLib
                     return _parent.Root;
                 }
             }
+
+
 
             public int IndexOf(Node<T> node)
             {
@@ -138,14 +151,14 @@ namespace DamLib
                 _parent = null;
             }
 
-            private void Unlink1()
-            {
-                if (_parent != null)
-                {
-                    _parent.RemoveChild(this);
-                    _parent = null;
-                }
-            }
+            //private void Unlink1()
+            //{
+            //    if (_parent != null)
+            //    {
+            //        _parent.RemoveChild(this);
+            //        _parent = null;
+            //    }
+            //}
 
             public void AddChild(Node<T> child)
             {
@@ -227,7 +240,7 @@ namespace DamLib
 
             public delegate bool CheckDelegate<T>(Node<T> node);
 
-            public Node<T> FindNode(CheckDelegate<T> checker)
+            public Node<T>? FindNode(CheckDelegate<T> checker)
             {
                 if (checker == null)
                     return null;

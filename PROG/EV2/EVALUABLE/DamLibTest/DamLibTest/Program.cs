@@ -205,6 +205,7 @@ namespace DamLibTest
             itemSet.Remove("que");
 
             Console.WriteLine("¿El conjunto está vacío? " + itemSet.Empty);
+            Console.WriteLine("---------------------");
 
 
             //Stack <string> s = new Stack<string>();
@@ -222,59 +223,68 @@ namespace DamLibTest
             //    });
 
 
-            {
-                // Crear una instancia de Tree<int>
-                Tree<int> intTree = new Tree<int>();
-                
 
-                // Crear algunos nodos y agregarlos al árbol
-                Tree<int>.Node<int> root = new Tree<int>.Node<int>(1);
-                Tree<int>.Node<int> child1 = new Tree<int>.Node<int>(2);
-                Tree<int>.Node<int> child2 = new Tree<int>.Node<int>(3);
-                Tree<int>.Node<int> child3 = new Tree<int>.Node<int>(4);
-                Tree<int>.Node<int> child4 = new Tree<int>.Node<int>(5);
-                Tree<int>.Node<int> child5 = new Tree<int>.Node<int>(6);
-                Tree<int>.Node<int> child6 = new Tree<int>.Node<int>(7);
-                Tree<int>.Node<int> child7 = new Tree<int>.Node<int>(8);
-                Tree<int>.Node<int> child8 = new Tree<int>.Node<int>(9);
-                Tree<int>.Node<int> child9 = new Tree<int>.Node<int>(10);
+            // Crear una instancia de Tree<int>
+            Tree<int> intTree = new Tree<int>();
 
-                // Establecer el nodo raíz en el árbol
-                intTree<int>.root = root;
+            // Crear algunos nodos y agregarlos al árbol
+            // Establecer el nodo raíz en el árbol
+            Tree<int>.Node<int> root = new Tree<int>.Node<int>(1);
+            Tree<int>.Node<int> child1 = new Tree<int>.Node<int>(2);
+            Tree<int>.Node<int> child2 = new Tree<int>.Node<int>(3);
+            Tree<int>.Node<int> child3 = new Tree<int>.Node<int>(4);
+            Tree<int>.Node<int> child4 = new Tree<int>.Node<int>(5);
+            Tree<int>.Node<int> child5 = new Tree<int>.Node<int>(6);
+            Tree<int>.Node<int> child6 = new Tree<int>.Node<int>(7);
+            Tree<int>.Node<int> child7 = new Tree<int>.Node<int>(8);
+            Tree<int>.Node<int> child8 = new Tree<int>.Node<int>(9);
+            Tree<int>.Node<int> child9 = new Tree<int>.Node<int>(10);
 
-                // Agregar hijos a la raíz
-                root.AddChild(child1);
-                root.AddChild(child2);
-                child1.AddChild(child3);
-                child3.AddChild(child4);
-                child2.AddChild(child5);
-                child3.AddChild(child6);
 
-                // Realizar algunas operaciones
-                Console.WriteLine("Root Value: " + intTree._root.Content);
-                Console.WriteLine("Is Root? " + intTree.Root.IsRoot);
-                Console.WriteLine("Child Count: " + intTree.Root.ChildCount);
+            // Agregar hijos a la raíz
+            root.AddChild(child1);
+            root.AddChild(child2);
+            child1.AddChild(child3);
+            child3.AddChild(child4);
+            child2.AddChild(child5);
+            child3.AddChild(child6);
 
-                // Agregar más nodos y realizar operaciones adicionales
-                Tree<int>.Node<int> grandchild = new Tree<int>.Node<int>(4);
-                child1.AddChild(grandchild);
+            // Set the root node of the tree
+            
 
-                Console.WriteLine("Is Leaf? " + child1.IsLeaf);
-                Console.WriteLine("Level: " + grandchild.Level);
-
-                // Realizar una búsqueda en el árbol
-                Tree<int>.Node<int>? foundNode = intTree.FindNode(node => node.Content == 4);
-                if (foundNode != null)
-                {
-                    Console.WriteLine("Node Found: " + foundNode.Content);
-                }
-                else
-                {
-                    Console.WriteLine("Node Not Found");
-                }
+            // Realizar algunas operaciones
+            Console.WriteLine("Root Value: " + root.GetRoot().Content);
+            Console.WriteLine("Is Root? " + root.IsRoot);
+            Console.WriteLine("Is Root? " + child6.IsRoot);
+            Console.WriteLine("Level Value: " + child4.GetLevel());
+            Console.WriteLine("Is Descendant? " + root.ContainsDescendant(child6));
+            Console.WriteLine("Is Descendant? " + child5.ContainsDescendant(child6));
+            Console.WriteLine("Is Ancestor? " + child3.ContainsAncestor(child1));
+            Console.WriteLine("Is Ancestor? " + child5.ContainsAncestor(child4));
+            Console.WriteLine("Number of Childs: " + child1.ChildCount);
+            Console.WriteLine("Number of Childs: " + child3.ChildCount);
 
 
 
-            }
+            // Agregar más nodos y realizar operaciones adicionales
+            Tree<int>.Node<int> grandchild = new(11);
+            child1.AddChild(grandchild);
+
+            Console.WriteLine("Is Leaf? " + child1.IsLeaf);
+            Console.WriteLine("Level: " + grandchild.Level);
+
+            //// Realizar una búsqueda en el árbol
+            //Tree<int>.Node<int>? foundNode = intTree.FindNode(node => node.Content.Equals(11));
+            //if (foundNode != null)
+            //{
+            //    Console.WriteLine("Node Found: " + foundNode.Content);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Node Not Found");
+            //}
+
+
+        }   
     }
 }

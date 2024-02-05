@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿
 
 namespace DamLib
 {
@@ -180,14 +174,14 @@ namespace DamLib
                 Parent = null;
             }
 
-            private void Unlink1()
-            {
-                if (Parent != null)
-                {
-                    Parent.RemoveChild(this);
-                    Parent = null;
-                }
-            }
+            //private void Unlink1()
+            //{
+            //    if (Parent != null)
+            //    {
+            //        Parent.RemoveChild(this);
+            //        Parent = null;
+            //    }
+            //}
 
             public void AddChild(Node<T> child)
             {

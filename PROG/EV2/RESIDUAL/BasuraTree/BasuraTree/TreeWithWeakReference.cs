@@ -8,10 +8,12 @@ namespace DamLib
         {
             private T _content;
             private List<Node<T>> _children = new List<Node<T>>();
+            //mejor empezar apuntandolas a null
             //private Node<T>? _parent;
             //private Node<T>? _root;
-            WeakReference<Node<T>> _parent;
+            private WeakReference<Node<T>>? _parent = new(null);
 
+            //public Node<T> Parent { get; set; }
 
             public Node(T content)
             {
@@ -148,6 +150,7 @@ namespace DamLib
             }
             public int GetLevel()
             {
+
                 if (_parent == null)
                     return 0;
                 return Parent.GetLevel() + 1;
@@ -155,9 +158,10 @@ namespace DamLib
 
             public Node<T> GetRoot()
             {
-                if (_parent == null)
+                var parent = Parent;
+                if (parent == null)
                     return this;
-                return Parent.GetRoot();
+                return parent.GetRoot();
             }
 
             public Node<T>? GetChildAt(int index)
@@ -169,8 +173,9 @@ namespace DamLib
 
             public void Unlink()
             {
-                if (Parent != null)
-                    Parent.RemoveChild(this);
+                var parent = Parent;
+                if (parent != null)
+                    parent.RemoveChild(this);
                 Parent = null;
             }
 
@@ -205,13 +210,13 @@ namespace DamLib
 
             //}
 
-            //public void SetParent(Node<T> node)
-            //{
-            //    if (node == null)
-            //        Unlink();
-            //    else
-            //        node.AddChild(this);
-            //}
+            public void SetParent(Node<T> node)
+            {
+                if (node == null)
+                    Unlink();
+                else
+                    node.AddChild(this);
+            }
 
             public bool HasSibling()
             {
@@ -220,12 +225,25 @@ namespace DamLib
                 return false;
             }
 
+            public bool Contains(Node<T> node)
+            {
+                if (node == null)
+                    return false;
+                if (node == this)
+                    return true;
+                for (int i = 0; i < _children.Count; i++)
+                {
+                    if (_children[i].Contains(node))
+                        return true;
+                }
+                return false;
+            }   
             public bool ContainsAncestor(Node<T> node)
             {
                 var _parent = GetParent();
                 if (node == null || _parent == null)
                     return false;
-                if (_parent == node)
+                if (this == node)
                     return true;
 
                 //var child = _children[i];

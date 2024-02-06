@@ -118,7 +118,60 @@ namespace BasuraTree
             //    Console.WriteLine("Node Not Found");
             //}
 
+            //node1.Filter(node1 =>
+            //{
+            //    return node1.Content.Equals(11);
+            //}
+            //);
 
+            //List<int> l = new List<int>();
+            //var ll = l.Where(item => true);
+
+            //switch(intTree1)
+            //{
+            //    case TreeWithWeakReference<int> tree:
+            //        Console.WriteLine("Es un arbol");
+            //        break;
+            //    case TreeWithWeakReference<int>.Node<int> node:
+            //        Console.WriteLine("Es un nodo");
+            //        break;
+            //    default:
+            //        Console.WriteLine("No es un arbol ni un nodo");
+            //        break;
+            //}
+
+            //try
+            //{
+            //    intTree1.AddChild(child11, root1);
+            //}
+
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //    //out of bounds, null exception, stack overflow
+            //    //cosas que no se pueden controlar: abrir archivo, acceder a un servidor BBDD o HTTP, parsear un string(convertir a int)
+            //    y abrir sockets
+            //}
+            //catch (OtraExcepcion e)
+            //{
+            //}
+            //finally
+            //{
+            //    Console.WriteLine("Finally");
+            //    //cerrar archivo, cerrar conexión, liberar recursos
+            //    throw new Exception("Finally");
+            //    class MyException : Exception
+        
+            //public MyException(string message) : base(message)
+
+
+
+
+                
+    
+
+
+            
 
 
         }

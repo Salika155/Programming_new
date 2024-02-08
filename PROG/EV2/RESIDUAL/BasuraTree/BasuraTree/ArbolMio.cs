@@ -120,10 +120,11 @@ namespace BasuraTree
 
             public int IndexOf(Nodo<T> index)
             {
-                if (index == null)
+                if (index == null || _children == null)
                     return -1;
 
-                for (int i = 0; i < _children.Count; i++)
+                int n = _children.Count;
+                for (int i = 0; i < n; i++)
                 {
                     if (_children[i] == index)
                         return i;

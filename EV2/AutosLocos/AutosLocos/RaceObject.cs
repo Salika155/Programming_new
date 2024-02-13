@@ -12,7 +12,9 @@ namespace AutosLocos
         Obstacle,
         Rock,
         Charco,
-        Bomb
+        Bomb,
+        Unknown,
+        Car
     }
 
     public abstract class RaceObject

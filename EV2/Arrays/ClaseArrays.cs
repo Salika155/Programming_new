@@ -29,6 +29,7 @@ namespace Arrays
                 {
                     array[i] = array[j];
                     array[j] = array[i + 1];
+                    array[i + 1] = array[i];
                 }
             }
         }

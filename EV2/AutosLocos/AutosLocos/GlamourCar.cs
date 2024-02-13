@@ -12,21 +12,36 @@ namespace AutosLocos
         private double _finetunning;
         private double _ritmo;
 
-        public GlamourCar(string name, double finetunning, double ritmo) :base()
+        public GlamourCar(string name, double finetunning, double ritmo) : base(name, finetunning, ritmo)
         {
             _name = name;
             _finetunning = finetunning;
             _ritmo = 20;
         }
 
-        
-
-       /* public GlamourCar()
+        public override ObjectType GetObjectType()
         {
-
+            throw new NotImplementedException();
         }
 
-        public double GetVelocityExtra();*/
+        public override bool IsEnable()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Simulate(IRace race)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        /* public GlamourCar()
+         {
+
+         }
+
+         public double GetVelocityExtra();*/
 
     }
 }

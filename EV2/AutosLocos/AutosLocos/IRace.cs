@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutosLocos
 {
-    public interface IRace : Race
+    public interface IRace
     {
         void Init(double distance);
 

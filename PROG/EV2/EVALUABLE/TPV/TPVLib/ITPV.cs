@@ -16,7 +16,7 @@ namespace TPVLib
         void RemoveProduct(long id);
         Product? GetProduct(long id);
         void UpdateProductWithId(long id, Product product);
-        List<Product> GetProducts(int offset, int limit);
+        Dictionary<long, Product> GetProducts(int offset, int limit);
 
         void RemoveProduct(Product product)
         {

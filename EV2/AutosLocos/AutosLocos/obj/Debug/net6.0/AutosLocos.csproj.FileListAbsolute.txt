@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\bin\Debug\net6.0\AutosLocos.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\bin\Debug\net6.0\AutosLocos.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\bin\Debug\net6.0\AutosLocos.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\bin\Debug\net6.0\AutosLocos.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\bin\Debug\net6.0\AutosLocos.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\refint\AutosLocos.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\AutosLocos.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV2\AutosLocos\AutosLocos\obj\Debug\net6.0\ref\AutosLocos.dll

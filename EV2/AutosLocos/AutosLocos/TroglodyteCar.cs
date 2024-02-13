@@ -15,6 +15,23 @@ namespace AutosLocos
         {
         }
 
+        public override ObjectType GetObjectType(RaceObject raceObject)
+        {
+            if (raceObject is Car)
+            {
+                return ObjectType.Car;
+            }
+            else if (raceObject is Obstacle)
+            {
+                return ObjectType.Obstacle;
+            }
+            else
+            {
+                return ObjectType.Unknown;
+            }
+
+        }
+
         public override ObjectType GetObjectType()
         {
             throw new NotImplementedException();
@@ -22,12 +39,17 @@ namespace AutosLocos
 
         public override bool IsEnable()
         {
-            throw new NotImplementedException();
+            return Velocity > 0;
         }
 
         public override void Simulate(IRace race)
         {
-            throw new NotImplementedException();
+           if (IsEnable())
+            {
+                
+
+            }
+          
         }
     }
 }

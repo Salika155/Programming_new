@@ -18,13 +18,21 @@ namespace TPVLib
 
         public Product Clone()
         {
-            Product product = new Product();
-            product.Id = Id;
-            product.Name = Name;
-            product.Price = Price;
-            product.Stock = Stock;
-            product.Description = "";
-            return product;
+            return new Product
+            {
+                Id = Id,
+                Name = Name,
+                Price = Price,
+                Stock = Stock,
+                Description = ""
+            };
+            //Product product = new Product();
+            //product.Id = Id;
+            //product.Name = Name;
+            //product.Price = Price;
+            //product.Stock = Stock;
+            //product.Description = "";
+            //return product;
         }
 
         //public Product(long id, string name, double price, int stock)

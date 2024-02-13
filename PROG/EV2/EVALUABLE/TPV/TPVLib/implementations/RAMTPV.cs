@@ -43,15 +43,7 @@ namespace TPVLib
 
         public Product? GetProduct(long id)
         {
-            if (id < 0)
-            {
-                throw new ArgumentException("El id no es valido");
-            }
-            if (_products.TryGetValue(id, out Product? value))
-            {
-                return value;
-            }
-            return null;
+            //for (int i = 0; i < _products.Count; i++)
         }
 
         public void UpdateProductWithId(long id, Product product)
@@ -71,28 +63,38 @@ namespace TPVLib
             }
         }
 
-        Dictionary<long, Product> ITPV.GetProducts(int offset, int limit)
+        public List<Product> GetProducts(int offset, int limit, List<Product> products)
         {
+            int startPos = offset - 1;
+            int endPos = Math.Min(startPos + limit, products.Count);
             if (offset < 0 || limit < 0 || offset > _products.Count || limit > _products.Count)
             {
-                throw new ArgumentException("El limit no es valido");
+                return new List<Product>();
             }
 
-            Dictionary<long, Product> products = new Dictionary<long, Product>();
-            int count = 0;
-            foreach (var kvp in _products)
+            var productPage = new List<Product>();
+
+            for (int i = startPos; i < endPos; i++)
             {
-                if (count >= offset && count < offset + limit)
-                {
-                    products.Add(kvp.Key, kvp.Value);
-                }
-                count++;
-                if (count >= offset + limit)
-                {
-                    break;
-                }
+                productPage.Add(products[i]);
             }
-            return products;
+            return productPage;
+
+            //Dictionary<long, Product> products = new Dictionary<long, Product>();
+            //int count = 0;
+            //foreach (var kvp in _products)
+            //{
+            //    if (count >= offset && count < offset + limit)
+            //    {
+            //        products.Add(kvp.Key, kvp.Value);
+            //    }
+            //    count++;
+            //    if (count >= offset + limit)
+            //    {
+            //        break;
+            //    }
+            //}
+            //return products;
         }
 
     

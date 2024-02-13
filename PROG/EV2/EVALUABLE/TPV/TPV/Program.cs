@@ -2,11 +2,12 @@
 
 namespace TPV
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args, ITPV tpv)
         {
-            ITPV tpv = ITPV.CreateNewTPV();
+            ITPV ITPV = ITPV.CreateNewTPV();
+            
 
             Product product1 = new Product
             {
@@ -52,6 +53,16 @@ namespace TPV
             //}
 
 
+            bool isRunning = true;
+
+            var tpvn = ITPV.CreateNewTPV();
+
+            while (isRunning)
+            {
+                //string <= Console.ReadLine();
+
+                //UI.ShowMainMenu
+            }
         }
 
 

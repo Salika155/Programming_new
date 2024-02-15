@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPVTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f742d0a7c19d41a158e990b6bd413894f6a59eae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8755a67a258e53dc112d67e12f59b48497be893")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPVTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPVTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

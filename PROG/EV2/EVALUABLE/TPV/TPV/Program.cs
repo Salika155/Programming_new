@@ -1,10 +1,11 @@
 ﻿using TPVLib;
+using System;
 
 namespace TPV
 {
-    public class Program
+    class Program
     {
-        static void Main(string[] args, ITPV tpv)
+        public static void Main(string[] args)
         {
             ITPV ITPV = ITPV.CreateNewTPV();
 

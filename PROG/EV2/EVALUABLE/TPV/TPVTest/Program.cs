@@ -1,4 +1,5 @@
 ﻿using TPVLib;
+using System;
 
 namespace TPVTest
 {
@@ -34,13 +35,16 @@ namespace TPVTest
             Console.WriteLine("Producto" + product2.Name + "registrado correctamente");
 
             Product? productoRecienInsertado = tpv.GetProduct(product1Id);
-            Console.WriteLine("Producto" + productoRecienInsertado.Name + "recuperado correctamente");
+            Console.WriteLine($"Producto{productoRecienInsertado.Name}recuperado correctamente");
 
             Product? productoRecienInsertado2 = tpv.GetProduct(product2Id);
-            Console.WriteLine("Producto" + productoRecienInsertado2.Name + "recuperado correctamente");
+            Console.WriteLine($"Producto{productoRecienInsertado2.Name}recuperado correctamente");
 
             tpv.RemoveProduct(product1Id);
-            Console.WriteLine("Producto eliminado con éxito.");
+            Console.WriteLine("Producto eliminado con éxito."); 
+
+
+
 
         }
     }

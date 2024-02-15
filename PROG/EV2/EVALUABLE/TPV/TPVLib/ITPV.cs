@@ -1,7 +1,4 @@
 ﻿
-
-using System.Security.Cryptography.X509Certificates;
-
 namespace TPVLib
 {
     public interface ITPV

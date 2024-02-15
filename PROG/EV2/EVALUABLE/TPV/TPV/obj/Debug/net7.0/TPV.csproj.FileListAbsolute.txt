@@ -3,3 +3,9 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\o
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.AssemblyInfoInputs.cache
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.AssemblyInfo.cs
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.sourcelink.json

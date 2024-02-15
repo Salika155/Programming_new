@@ -43,7 +43,14 @@ namespace TPVLib
 
         public Product? GetProduct(long id)
         {
-            //for (int i = 0; i < _products.Count; i++)
+            for (int i = 0; i < _products.Count; i++)
+            {
+                if (_products.ContainsKey(id))
+                {
+                    return _products[id];
+                }
+            }
+            return null;
         }
 
         public void UpdateProductWithId(long id, Product product)
@@ -108,7 +115,12 @@ namespace TPVLib
             return _products.ContainsKey(id);
         }
 
-       
+        public Dictionary<long, Product> GetProducts(int offset, int limit)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
 
 

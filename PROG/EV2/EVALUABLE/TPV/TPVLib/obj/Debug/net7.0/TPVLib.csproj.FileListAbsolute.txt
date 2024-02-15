@@ -9,3 +9,15 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLi
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\refint\TPVLib.dll
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.pdb
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\ref\TPVLib.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\bin\Debug\net7.0\TPVLib.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\bin\Debug\net7.0\TPVLib.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\bin\Debug\net7.0\TPVLib.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\refint\TPVLib.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\TPVLib.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVLib\obj\Debug\net7.0\ref\TPVLib.dll

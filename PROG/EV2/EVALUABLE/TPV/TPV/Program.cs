@@ -7,8 +7,8 @@ namespace TPV
         static void Main(string[] args, ITPV tpv)
         {
             ITPV ITPV = ITPV.CreateNewTPV();
-            
 
+            #region antiguoprogram
             Product product1 = new Product
             {
                 Id = 1,
@@ -42,7 +42,7 @@ namespace TPV
             tpv.RemoveProduct(product1Id);
             Console.WriteLine("Producto eliminado con éxito.");
 
-           
+
             //if (!tpv.Contains(product1Id))
             //{
             //    Console.WriteLine("El producto ya no existe en el sistema.");
@@ -51,7 +51,7 @@ namespace TPV
             //{
             //    Console.WriteLine("Error: El producto todavía existe en el sistema.");
             //}
-
+            #endregion
 
             bool isRunning = true;
 
@@ -59,9 +59,10 @@ namespace TPV
 
             while (isRunning)
             {
-                //string <= Console.ReadLine();
+                string option = Console.ReadLine();
 
-                //UI.ShowMainMenu
+
+                UI.ShowMainMenu(tpv);
             }
         }
 

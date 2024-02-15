@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TPVTest/1.0.0": {
+        "dependencies": {
+          "TPVLib": "1.0.0"
+        },
+        "runtime": {
+          "TPVTest.dll": {}
+        }
+      },
+      "TPVLib/1.0.0": {
+        "runtime": {
+          "TPVLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TPVTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TPVLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -19,3 +19,16 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABL
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\refint\TPV.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\ref\TPV.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPV.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPV.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPV.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPV.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPV.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPVLib.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\bin\Debug\net7.0\TPVLib.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.csproj.CopyComplete
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\refint\TPV.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\TPV.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPV\obj\Debug\net7.0\ref\TPV.dll

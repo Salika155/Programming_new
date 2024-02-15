@@ -1,9 +1,21 @@
 ﻿
 
+using TPVLib;
+
 namespace TPV
 {
     public class Controllers
     {
+        
+        public static void RunMainMenu(ITPV tpv)
+        {
+            bool IsRunning = true;
+            while(IsRunning)
+            {
+
+            }
+        }
+
         //public static void AddProduct(TPVLib.ITPV tpv)
         //{
         //    Console.WriteLine("Enter the name of the product");

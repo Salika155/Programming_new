@@ -8,7 +8,10 @@ namespace TPVLib
         private Dictionary<long, Product> _products= new Dictionary<long, Product>();
         //private list
         //propertie publicount
-        public int ProductCount { get; set; }
+        public int ProductCount => _products.Count;
+
+        int ITPV.ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         //private long _currentGeneratingId = 1;
         private long _currentGeneratingId = 1;
 
@@ -26,28 +29,23 @@ namespace TPVLib
 
         public void RemoveProduct(long id)
         {
-            if (id < 0)
+            //extraño que lance un throw exception
+            if (id <= 0)
             {
                 throw new ArgumentException("El id no es valido");
             }
-            if (_products.ContainsKey(id))
-            {
-                _products.Remove(id);
-            }
-            else
-            {
-                throw new ArgumentException("El producto no existe");
-            }
-
+            _products.Remove(id);
         }
 
         public Product? GetProduct(long id)
         {
-            for (int i = 0; i < _products.Count; i++)
+            foreach(var entry in _products)
             {
-                if (_products.ContainsKey(id))
+                long key = entry.Key;
+                Product value = entry.Value;
+                if (key == id)
                 {
-                    return _products[id];
+                   return value.Clone();
                 }
             }
             return null;
@@ -55,35 +53,30 @@ namespace TPVLib
 
         public void UpdateProductWithId(long id, Product product)
         {
-            if (id < 0 || product == null)
+            foreach(var kvp in _products)
             {
-                throw new ArgumentException("El id o producto no es valido");
-            }
-           
-            if (_products.ContainsKey(id))
-            {
-                _products[id] = product;
-            }
-            else
-            {
-                throw new ArgumentException("El producto no existe");
+                long key = kvp.Key;
+                Product value = kvp.Value;
+                if (key == id)
+                {
+                    _products[kvp.Key] = product;
+                }
             }
         }
 
-        public List<Product> GetProducts(int offset, int limit, List<Product> products)
+        public List<Product> GetProducts(int offset, int limit)
         {
             int startPos = offset - 1;
-            int endPos = Math.Min(startPos + limit, products.Count);
+            int endPos = Math.Min(startPos + limit, ProductCount);
             if (offset < 0 || limit < 0 || offset > _products.Count || limit > _products.Count)
-            {
                 return new List<Product>();
-            }
+            
 
             var productPage = new List<Product>();
 
             for (int i = startPos; i < endPos; i++)
             {
-                productPage.Add(products[i]);
+                productPage.Add(_products[i]);
             }
             return productPage;
 
@@ -115,10 +108,10 @@ namespace TPVLib
             return _products.ContainsKey(id);
         }
 
-        public Dictionary<long, Product> GetProducts(int offset, int limit)
-        {
-            throw new NotImplementedException();
-        }
+        //public Dictionary<long, Product> GetProducts(int offset, int limit)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
 
 

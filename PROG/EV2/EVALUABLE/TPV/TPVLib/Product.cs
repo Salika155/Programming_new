@@ -26,6 +26,7 @@ namespace TPVLib
                 Stock = Stock,
                 Description = ""
             };
+
             //Product product = new Product();
             //product.Id = Id;
             //product.Name = Name;

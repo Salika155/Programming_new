@@ -8,9 +8,11 @@ namespace TPV
 {
     public class UI
     {
-
+        //imprimir de pantalla o leer de pantalla tiene que ir en esta clase
         public static void ShowMainMenu(TPVLib.ITPV tpv)
         {
+            Console.Clear();
+
             Console.WriteLine("Welcome to the TPV");
             Console.WriteLine("1. Add product");
             Console.WriteLine("2. Remove product");
@@ -20,5 +22,6 @@ namespace TPV
             Console.WriteLine("6. Exit");
         }
 
+        
     }
 }

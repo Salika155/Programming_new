@@ -102,9 +102,7 @@ namespace TPVLib
         public bool ContainsProduct(long id)
         {
             if (id < 0)
-            {
-                throw new ArgumentException("El id no es valido");
-            }
+                return false;
             return _products.ContainsKey(id);
         }
 

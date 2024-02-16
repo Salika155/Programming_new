@@ -13,13 +13,11 @@ namespace TPV
         {
             Console.Clear();
 
-            Console.WriteLine("Welcome to the TPV");
-            Console.WriteLine("1. Add product");
-            Console.WriteLine("2. Remove product");
-            Console.WriteLine("3. Update product");
-            Console.WriteLine("4. Show product");
-            Console.WriteLine("5. Show all products");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("Bienvenido al TPV (Terminal Punto de Venta)");
+            Console.WriteLine("1. Realizar venta");
+            Console.WriteLine("2. Ver lista de productos");
+            Console.WriteLine("3. Ver carrito de compras");
+            Console.WriteLine("4. Salir");
         }
 
         

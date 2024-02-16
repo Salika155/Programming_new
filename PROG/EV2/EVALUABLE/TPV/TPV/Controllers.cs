@@ -1,6 +1,4 @@
-﻿
-
-using TPVLib;
+﻿using TPVLib;
 
 namespace TPV
 {
@@ -12,8 +10,30 @@ namespace TPV
             bool IsRunning = true;
             while(IsRunning)
             {
+                UI.ShowMainMenu(tpv);
+                string option = Console.ReadLine();
 
+                switch(option)
+                {
+                    case "1":
+                        Console.WriteLine("Comprar producto");
+                        break;
+                    case "2":
+                        Console.WriteLine("Ver lista de productos");
+                        break;
+                    case "3":
+                        Console.WriteLine("Ver carrito de compras");
+                        break;
+                    default:
+                        IsRunning = false;
+                        break;
+                }
             }
+        }
+
+        public static void Start(ITPV iTPV)
+        {
+            throw new NotImplementedException();
         }
 
         //public static void AddProduct(TPVLib.ITPV tpv)
@@ -39,6 +59,6 @@ namespace TPV
         //    Console.WriteLine("Product " + product.Name + " registered correctly with id " + id);
         //}
 
-       
+
     }
 }

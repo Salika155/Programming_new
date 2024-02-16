@@ -7,7 +7,8 @@ namespace TPV
     {
         public static void Main(string[] args)
         {
-            //ITPV ITPV = ITPV.CreateNewTPV();
+            ITPV ITPV = ITPV.CreateNewTPV();
+            Controllers.Start(ITPV);
 
             #region antiguoprogram
             //Product product1 = new Product
@@ -54,19 +55,19 @@ namespace TPV
             //}
             #endregion
 
-            bool isRunning = true;
+            //bool isRunning = true;
 
-            var tpvn = ITPV.CreateNewTPV();
+            
 
-            while (isRunning)
-            {
-                string option = Console.ReadLine();
+            //while (isRunning)
+            //{
+            //    string option = Console.ReadLine();
 
 
-                ITPV tpv = null;
+                
 
-                UI.ShowMainMenu(tpv);
-            }
+            //    UI.ShowMainMenu(tpv);
+            //}
         }
 
 

@@ -17,14 +17,19 @@ namespace TPV
                 {
                     case "1":
                         Console.WriteLine("Comprar producto");
+                        Console.WriteLine("Introduzca el código del producto que desea");
+
                         break;
                     case "2":
                         Console.WriteLine("Ver lista de productos");
+                        Console.WriteLine("Elija el producto que desee consultar");
                         break;
                     case "3":
                         Console.WriteLine("Ver carrito de compras");
+
                         break;
                     default:
+                        Console.WriteLine("Adios, tenga un buen día");
                         IsRunning = false;
                         break;
                 }
@@ -33,7 +38,10 @@ namespace TPV
 
         public static void Start(ITPV iTPV)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Bienvenido al TPV para pedir!");
+            Console.WriteLine("Por favor, elige una opción:");
+            
+            RunMainMenu(iTPV);
         }
 
         //public static void AddProduct(TPVLib.ITPV tpv)

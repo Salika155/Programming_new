@@ -6,31 +6,31 @@ using System.Threading.Tasks;
 
 namespace TPVLib
 {
-    public class TicketHeader
-    {
-        public long Id { get; set; }
-        public string Barcode { get; set; }
+    //public class TicketHeader
+    //{
+    //    public long Id { get; set; }
+    //    public string Barcode { get; set; }
 
-    }
+    //}
 
-    public class TicketLine
-    {
-        public string Details { get; set; }
-        public double Quantity { get; set; }
-        public Product Product;
-    }
-    public class TicketBody
-    {
-        TicketLine[] Lines;
-    }
+    //public class TicketLine
+    //{
+    //    public string Details { get; set; }
+    //    public double Quantity { get; set; }
+    //    public Product Product;
+    //}
+    //public class TicketBody
+    //{
+    //    TicketLine[] Lines;
+    //}
 
-    public class Ticket
-    {
-        public TicketHeader Header { get; set; }
-        public List<TicketBody> Body { get; set; }
-        public double TotalPrize { get; set; }
+    //public class Ticket
+    //{
+    //    public TicketHeader Header { get; set; }
+    //    public List<TicketBody> Body { get; set; }
+    //    public double TotalPrize { get; set; }
 
-    }
+    //}
 
     //MODELO DE DATOS
     //crear un idatabase y funciones como AddTicketHeader, AddTicketLine

@@ -12,6 +12,8 @@ namespace TPVLib
     {
 
         RAMTicket AddTicket(TicketHeader header, TicketBody body);
+
+
         void RemoveTicket(long id);
         RAMTicket? GetTicket(long id);
         void UpdateTicketWithId(long id, RAMTicket ticket);

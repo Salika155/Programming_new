@@ -1,3 +1,5 @@
+using TPVLib.implementations;
+
 namespace TPVLib
 {
 
@@ -104,6 +106,11 @@ namespace TPVLib
             if (id < 0)
                 return false;
             return _products.ContainsKey(id);
+        }
+
+        public void AddTicket(RAMTicket t)
+        {
+            throw new NotImplementedException();
         }
 
         //public Dictionary<long, Product> GetProducts(int offset, int limit)

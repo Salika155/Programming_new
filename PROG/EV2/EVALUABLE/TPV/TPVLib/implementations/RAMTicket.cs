@@ -29,14 +29,13 @@ namespace TPVLib.implementations
             double totalPrize = 0;
             foreach (var line in body.Lines)
             {
-                // Asumiendo que cada línea tiene un producto y una cantidad
+                // 1 prd 1 cant
                 totalPrize += line.Product.Price * line.Quantity;
             }
 
             // Asignar el precio total al ticket creado
             newTicket.TotalPrize = totalPrize;
 
-            // Retornar el nuevo ticket creado
             return newTicket;
         }
 

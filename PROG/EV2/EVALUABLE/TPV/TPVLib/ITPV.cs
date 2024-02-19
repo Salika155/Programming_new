@@ -1,4 +1,6 @@
 ﻿
+using TPVLib.implementations;
+
 namespace TPVLib
 {
     public interface ITPV
@@ -10,6 +12,9 @@ namespace TPVLib
         }
 
         long AddProduct(Product product);
+
+        void AddTicket(RAMTicket t);
+
         void RemoveProduct(long id);
         Product? GetProduct(long id);
         void UpdateProductWithId(long id, Product product);

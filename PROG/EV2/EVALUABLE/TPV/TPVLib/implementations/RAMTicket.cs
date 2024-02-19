@@ -8,6 +8,7 @@ namespace TPVLib.implementations
 {
     public class RAMTicket : ITicket
     {
+        
         public TicketHeader? Header { get; set; }
         public List<TicketBody>? Body { get; set; }
         public double TotalPrize { get; set; }

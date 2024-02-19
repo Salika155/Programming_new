@@ -28,6 +28,11 @@ namespace TPVLib
             }
         }   
 
+        void SaveTicket(RAMTicket[] ticket)
+        {
+            //aqui se guarda el ticket
+        }
+
         //a lo mejor quiero pasar la funcion aqui, y es mejor hacerla aqui porque siempre va a ser igual
         
 

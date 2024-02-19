@@ -1,5 +1,6 @@
 ﻿using TPVLib;
 using System;
+using TPVLib.implementations;
 
 namespace TPV
 {
@@ -9,6 +10,10 @@ namespace TPV
         {
             ITPV ITPV = ITPV.CreateNewTPV();
             Controllers.Start(ITPV);
+
+            IDatabase database = new RAMDatabase();
+            
+            
 
             #region antiguoprogram
             //Product product1 = new Product

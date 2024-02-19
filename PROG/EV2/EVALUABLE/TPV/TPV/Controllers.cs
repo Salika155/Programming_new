@@ -17,6 +17,8 @@ namespace TPV
                 {
                     case "1":
                         Console.WriteLine("Comprar producto");
+                        //UI.AddProduct(tpv);
+                        //hacer funcion en la ui para añadir producto
                         Console.WriteLine("Introduzca el código del producto que desea");
 
                         break;
@@ -36,12 +38,12 @@ namespace TPV
             }
         }
 
-        public static void Start(ITPV iTPV)
+        public static void Start(ITPV itpv)
         {
             Console.WriteLine("Bienvenido al TPV para pedir!");
             Console.WriteLine("Por favor, elige una opción:");
             
-            RunMainMenu(iTPV);
+            RunMainMenu(itpv);
         }
 
         //public static void AddProduct(TPVLib.ITPV tpv)

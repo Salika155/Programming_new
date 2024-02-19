@@ -1,10 +1,20 @@
-﻿
-namespace TPVLib
+﻿namespace TPVLib.implementations
 {
-    internal class RAMDatabase : IDatabase
+    public class RAMDatabase : IDatabase
     {
         private Dictionary<long, Product> _products = new Dictionary<long, Product>();
+        
         public int ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public void AddLineToTicketWithId(long ticketid, TicketLine line)
+        {
+            if (line == null)
+            {
+                throw new ArgumentException("Ticket must have a header and a body");
+            }
+            
+            
+        }
 
         public void AddProduct(Product product)
         {
@@ -12,7 +22,7 @@ namespace TPVLib
             {
                 throw new Exception("no se puede añadir");
             }
-            
+
             RAMDatabase db = new RAMDatabase
             {
                 ProductCount = 1
@@ -22,11 +32,13 @@ namespace TPVLib
 
         }
 
-        public void AddTicketHeader(TicketHeader header)
+        
+
+        public long AddTicket(TicketHeader header)
         {
             if (header == null)
             {
-                throw new ArgumentException("Ticket must have a header and a body");
+                throw new Exception("no se puede añadir");
             }
 
             TicketHeader newTicketHeader = new TicketHeader
@@ -34,6 +46,8 @@ namespace TPVLib
                 Id = header.Id,
                 Barcode = header.Barcode,
             };
+
+            return newTicketHeader.Id;
         }
 
         public void AddTicketLine(TicketLine line)

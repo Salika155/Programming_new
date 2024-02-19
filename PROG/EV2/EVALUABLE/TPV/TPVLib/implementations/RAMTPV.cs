@@ -108,6 +108,37 @@ namespace TPVLib
             return _products.ContainsKey(id);
         }
 
+        //public long AddTicket(RAMTicket t)
+        //{
+        //    try
+        //    {
+        //        _database.BeginTransaction();
+        //        long id = _database.AddTicket(TicketHeader Header);
+        //        foreach (var line in t.Body.Lines)
+        //        {
+        //            _database.AddLineToTicketWithId(id, line);
+        //        }
+        //    }
+        //    catch(Exception e)
+        //    {
+        //        _database.RollbackTransaction();
+        //        throw e;
+        //    }
+        //    return Id;
+        //}
+
+        public void SaveTicket(RAMTicket[] t)
+        {
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public void AddTicket(RAMTicket t)
         {
             throw new NotImplementedException();

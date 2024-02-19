@@ -9,6 +9,9 @@ namespace TPVLib
 {
     public interface IDatabase
     {
+        //void BeginTransaction();
+        //void CommitTransaction();
+        //void RollbackTransaction();
         int ProductCount { get; set; }
         static IDatabase CreateNewDatabase()
         {
@@ -16,8 +19,13 @@ namespace TPVLib
         }
 
         void AddProduct(Product product);
-        void AddTicketHeader(TicketHeader header);
+        long AddTicket(TicketHeader header);
+        void AddLineToTicketWithId(long ticketid, TicketLine line);
         void AddTicketLine(TicketLine line);
+        //void AddTicketBody(TicketBody body);
+        //body no existe nada mas que para trabajarlo
+
+
 
 
         void RemoveProduct(long id);

@@ -12,7 +12,7 @@ namespace TPVLib
         //void BeginTransaction();
         //void CommitTransaction();
         //void RollbackTransaction();
-        int ProductCount { get; set; }
+        
         static IDatabase CreateNewDatabase()
         {
             return new RAMDatabase();

@@ -8,8 +8,20 @@ namespace TPVLib
         int ProductCount { get; set; }
         static ITPV CreateNewTPV()
         {
+
             return new RAMTPV();
         }
+
+        //diccionario
+        //idatabase crea new Database Y SE LA PASO POR CONSTRUCTOR
+        //private Dictionary<> = new();
+        //IDatabase db = new RAMDatabase();
+
+        //public RAMDatabase( db)
+        //{ 
+        //    this.db = db;
+        //}
+            
 
         long AddProduct(Product product);
 

@@ -37,6 +37,14 @@ namespace TPVLib
     //la base de datos tiene que ser simple y que sea otro el que añada las cosas
     //MODELO DE NEGOCIO -> ITPV -> addTicket(Ticket ticket)
 
+    public enum TaxesType
+    {
+        IVA_4,
+        IVA_10,
+        IVA_21,
+        IVA_0,
+    }
+
     public class Product
     {
        //se trasbaja con properties en c# ademas de que las clases de aplicaciones sean pojo es porque cuando se hace consulta solo devuelve un objeto con las properties, 
@@ -46,6 +54,9 @@ namespace TPVLib
         public double Price { get; set; }
         public int Stock { get; set; }
         public string? Description { get; set; }
+        public double IVA { get; set; }
+        public TaxesType Type { get; set; }
+
 
 
         public Product Clone()
@@ -56,7 +67,9 @@ namespace TPVLib
                 Name = Name,
                 Price = Price,
                 Stock = Stock,
-                Description = ""
+                Description = "",
+                IVA = IVA,
+                Type = Type
             };
 
             //Product product = new Product();

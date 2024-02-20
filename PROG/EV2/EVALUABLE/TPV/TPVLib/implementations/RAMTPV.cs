@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using TPVLib.implementations;
 
 namespace TPVLib
@@ -11,6 +12,13 @@ namespace TPVLib
         //private list
         //propertie publicount
         public int ProductCount => _products.Count;
+
+        private IDatabase _db;
+
+        //public RAMDatabase(IDatabase db)
+        //{
+        //    _db = db;
+        //}
 
         int ITPV.ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -100,7 +108,6 @@ namespace TPVLib
         }
 
     
-
         public bool ContainsProduct(long id)
         {
             if (id < 0)
@@ -129,19 +136,25 @@ namespace TPVLib
 
         public void SaveTicket(RAMTicket[] t)
         {
-            try
+            List<RAMTicket> savedTickets = new List<RAMTicket>();
+            
+            foreach(var ticket in t)
             {
-
+                try
+                {
+                    savedTickets.Add(ticket);
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
+            
         }
 
         public void AddTicket(RAMTicket t)
         {
-            throw new NotImplementedException();
+            
         }
 
         //public Dictionary<long, Product> GetProducts(int offset, int limit)

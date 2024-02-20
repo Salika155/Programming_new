@@ -11,5 +11,6 @@ namespace TPVLib
     {
         public long Id { get; set; }
         public string? Barcode { get; set; }
+        public DateTime Date { get; set; }
     }
 }

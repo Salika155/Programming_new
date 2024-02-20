@@ -3,7 +3,19 @@
     public class RAMDatabase : IDatabase
     {
         private Dictionary<long, Product> _products = new Dictionary<long, Product>();
-        
+
+        private IDatabase _db;
+
+        public RAMDatabase()
+        {
+        }
+
+        public RAMDatabase(IDatabase db)
+        {
+            _db = db;
+        }
+
+
         public int ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public void AddLineToTicketWithId(long ticketid, TicketLine line)
@@ -12,6 +24,7 @@
             {
                 throw new ArgumentException("Ticket must have a header and a body");
             }
+
             
             
         }
@@ -23,12 +36,12 @@
                 throw new Exception("no se puede añadir");
             }
 
-            RAMDatabase db = new RAMDatabase
-            {
-                ProductCount = 1
-            };
+            //RAMDatabase db = new()
+            //{
+            //    ProductCount = 1
+            //};
 
-            db.AddProduct(product);
+            _db.AddProduct(product);
 
         }
 
@@ -80,22 +93,38 @@
 
         public List<Product> GetProducts(int offset, int limit)
         {
-            throw new NotImplementedException();
+            if (offset < 0 || limit < 0)
+            {
+                throw new ArgumentException("Offset and limit must be greater than 0");
+            }
+            for (int i = 0; i < _products.Count; i++)
+            {
+                if (i >= offset && i < limit)
+                {
+                    return new List<Product>(_products.Values);
+                }
+            }
+            return new List<Product>();
         }
 
         public void RemoveProduct(long id)
         {
-            throw new NotImplementedException();
+            if (id <= 0)
+            {
+                throw new ArgumentException("El id no es valido");
+            }
+            _products.Remove(id);
         }
 
         public void UpdateProductWithId(long id, Product product)
         {
-            throw new NotImplementedException();
+           
         }
 
         void IDatabase.AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            
+
         }
 
         Product? IDatabase.GetProduct(long id)

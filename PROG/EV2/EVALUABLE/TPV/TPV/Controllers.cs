@@ -16,15 +16,17 @@ namespace TPV
                 switch(option)
                 {
                     case "1":
-                        Console.WriteLine("Comprar producto");
-                        //UI.AddProduct(tpv);
-                        //hacer funcion en la ui para añadir producto
-                        Console.WriteLine("Introduzca el código del producto que desea");
+                        //Console.WriteLine("Comprar producto");
+                        ////UI.AddProduct(tpv);
+                        ////hacer funcion en la ui para añadir producto no debe existir consoles writelines
+                        //Console.WriteLine("Introduzca el código del producto que desea");
+                        UI.Case1Product(tpv);
 
                         break;
                     case "2":
-                        Console.WriteLine("Ver lista de productos");
-                        Console.WriteLine("Elija el producto que desee consultar");
+                        //Console.WriteLine("Ver lista de productos");
+                        //Console.WriteLine("Elija el producto que desee consultar");
+                        UI.ShowProductList(tpv);
                         break;
                     case "3":
                         Console.WriteLine("Ver carrito de compras");

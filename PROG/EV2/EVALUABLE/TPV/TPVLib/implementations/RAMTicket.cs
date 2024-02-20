@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TPVLib.implementations
 {
-    public class RAMTicket : ITicket
+    public class RAMTicket
     {
-        
+        Product[] products = new Product[0];
+
         public TicketHeader? Header { get; set; }
         public List<TicketBody>? Body { get; set; }
         public double TotalPrize { get; set; }
@@ -43,22 +44,53 @@ namespace TPVLib.implementations
 
         public RAMTicket? GetTicket(long id)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < products.Length; i++)
+            {
+                if (products[i].Id == id)
+                {
+                    return this;
+                }
+            }
+            return null;
         }
 
         public List<RAMTicket> GetTickets(int offset, int limit)
         {
-            throw new NotImplementedException();
+            if (offset < 0 || limit < 0)
+            {
+                throw new ArgumentException("Offset and limit must be greater than 0");
+            }
+            for (int i = 0; i < products.Length; i++)
+            {
+                if (i >= offset && i < limit)
+                {
+                    return new List<RAMTicket> { this };
+                }
+            }
+            return new List<RAMTicket>();
         }
 
         public void RemoveTicket(long id)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < products.Length; i++)
+            {
+                if (products[i].Id == id)
+                {
+                    RemoveTicket(products[i].Id);
+                    
+                }
+            }
         }
 
         public void UpdateTicketWithId(long id, RAMTicket ticket)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < products.Length; i++)
+            {
+                if (products[i].Id == id)
+                {
+                    
+                }
+            }
         }
     }
 }

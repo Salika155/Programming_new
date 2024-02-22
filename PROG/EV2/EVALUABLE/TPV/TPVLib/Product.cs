@@ -57,6 +57,16 @@ namespace TPVLib
         public double IVA { get; set; }
         public TaxesType Type { get; set; }
 
+        public Product()
+        {
+            Id = 0;
+            Name = "";
+            Price = 0;
+            Stock = 0;
+            Description = "";
+            IVA = 0;
+            Type = TaxesType.IVA_21;
+        }
 
 
         public Product Clone()

@@ -29,7 +29,7 @@ namespace TPV
                         UI.ShowProductList(tpv);
                         break;
                     case "3":
-                        Console.WriteLine("Ver carrito de compras");
+                        Console.WriteLine("Registrar producto");
 
                         break;
                     default:

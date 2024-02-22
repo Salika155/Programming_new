@@ -8,10 +8,11 @@ namespace TPV
     {
         public static void Main(string[] args)
         {
+            IDatabase database = new RAMDatabase();
             ITPV ITPV = ITPV.CreateNewTPV();
             Controllers.Start(ITPV);
 
-            IDatabase database = new RAMDatabase();
+            
             
             
 

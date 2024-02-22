@@ -12,15 +12,15 @@ namespace TPVLib
         //void BeginTransaction();
         //void CommitTransaction();
         //void RollbackTransaction();
-        
-        static IDatabase CreateNewDatabase()
+
+        static IDatabase CreateNewDatabase(IDatabase database)
         {
             return new RAMDatabase();
         }
 
-        void AddProduct(Product product);
+        long AddProduct(Product product);
         long AddTicket(TicketHeader header);
-        void AddLineToTicketWithId(long ticketid, TicketLine line);
+        //void AddLineToTicketWithId(long ticketid, TicketLine line);
         void AddTicketLine(TicketLine line);
         //void AddTicketBody(TicketBody body);
         //body no existe nada mas que para trabajarlo

@@ -1,11 +1,8 @@
-﻿
-using TPVLib.implementations;
-
-namespace TPVLib
+﻿namespace TPVLib
 {
     public interface ITPV
     {
-        int ProductCount { get; set; }
+        int ProductCount { get; }
         static ITPV CreateNewTPV()
         {
 
@@ -17,15 +14,12 @@ namespace TPVLib
         //private Dictionary<> = new();
         //IDatabase db = new RAMDatabase();
 
-        //public RAMDatabase( db)
-        //{ 
-        //    this.db = db;
-        //}
-            
+
+
 
         long AddProduct(Product product);
 
-        void AddTicket(RAMTicket t);
+        //void AddTicket(RAMTicket t);
 
         void RemoveProduct(long id);
         Product? GetProduct(long id);
@@ -40,10 +34,10 @@ namespace TPVLib
             }
         }   
 
-        void SaveTicket(RAMTicket[] ticket)
-        {
-            //aqui se guarda el ticket
-        }
+        //void SaveTicket(RAMTicket[] ticket)
+        //{
+        //    //aqui se guarda el ticket
+        //}
 
         //a lo mejor quiero pasar la funcion aqui, y es mejor hacerla aqui porque siempre va a ser igual
         

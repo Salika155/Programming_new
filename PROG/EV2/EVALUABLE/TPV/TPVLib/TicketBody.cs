@@ -9,7 +9,7 @@ namespace TPVLib
 {
     public class TicketBody
     {
-        public TicketLine[] Lines { get; set; }
+        public TicketLine[] Lines { get; set; } = new TicketLine[0];
 
         public void AddLine(TicketLine line)
         {

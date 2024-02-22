@@ -3,64 +3,72 @@
     public class RAMDatabase : IDatabase
     {
         private Dictionary<long, Product> _products = new Dictionary<long, Product>();
+        private long _currentGeneratingId = 1;
 
         private IDatabase _db;
 
-        public RAMDatabase()
-        {
-        }
-
-        public RAMDatabase(IDatabase db)
-        {
-            _db = db;
-        }
+        
 
 
-        public int ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int ProductCount => _products.Count;
 
-        public void AddLineToTicketWithId(long ticketid, TicketLine line)
-        {
-            if (line == null)
-            {
-                throw new ArgumentException("Ticket must have a header and a body");
-            }
 
-            
-            
-        }
+        //public void AddLineToTicketWithId(long ticketid, TicketLine line)
+        //{
+        //    if (line == null)
+        //    {
+        //        throw new ArgumentException("Ticket must have a header and a body");
+        //    }
+        //    TicketLine newTicketLine = new TicketLine
+        //    {
+        //        Details = line.Details,
+        //        Quantity = line.Quantity,
+        //        Product = line.Product,
+        //    };
 
-        public void AddProduct(Product product)
+
+
+        //}
+
+        public long AddProduct(Product product)
         {
             if (product == null)
             {
                 throw new Exception("no se puede añadir");
             }
-
-            //RAMDatabase db = new()
-            //{
-            //    ProductCount = 1
-            //};
-
-            _db.AddProduct(product);
-
+            var cloneProduct = product.Clone();
+            cloneProduct.Id = _currentGeneratingId++;
+            _products.Add(cloneProduct.Id, cloneProduct);
+            return cloneProduct.Id;
+            
         }
 
         
 
         public long AddTicket(TicketHeader header)
         {
-            if (header == null)
-            {
-                throw new Exception("no se puede añadir");
-            }
+            TicketHeader ticketHeader = new TicketHeader
+            ticketHeader.Id = _currentGeneratingId++;
+            long id = ticketHeader.Id;
+            newTicket.Header = header;
+            _tickets.Add(id, newTicket)
+                return id;
 
-            TicketHeader newTicketHeader = new TicketHeader
-            {
-                Id = header.Id,
-                Barcode = header.Barcode,
-            };
-
-            return newTicketHeader.Id;
+            //try
+            //{
+            //    _db.BeginTransaction();
+            //    long id = _db.AddTicket(TicketHeader Header);
+            //    foreach (var line in t.Body.Lines)
+            //    {
+            //        _database.AddLineToTicketWithId(id, line);
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    _database.RollbackTransaction();
+            //    throw e;
+            //}
+            //return Id;
         }
 
         public void AddTicketLine(TicketLine line)
@@ -70,12 +78,15 @@
                 throw new ArgumentException("Ticket must have a header and a body");
             }
 
-            TicketLine newTicketLine = new TicketLine
+            foreach(var entry in _products)
             {
-                Details = line.Details,
-                Quantity = line.Quantity,
-                Product = line.Product,
-            };
+                long key = entry.Key;
+                Product value = entry.Value;
+                if (key == line.Product.Id)
+                {
+                    //return value.Clone();
+                }
+            }
         }
 
         //public RAMDatabase? GetProduct(long id)
@@ -93,18 +104,7 @@
 
         public List<Product> GetProducts(int offset, int limit)
         {
-            if (offset < 0 || limit < 0)
-            {
-                throw new ArgumentException("Offset and limit must be greater than 0");
-            }
-            for (int i = 0; i < _products.Count; i++)
-            {
-                if (i >= offset && i < limit)
-                {
-                    return new List<Product>(_products.Values);
-                }
-            }
-            return new List<Product>();
+            throw new NotImplementedException();
         }
 
         public void RemoveProduct(long id)
@@ -118,14 +118,23 @@
 
         public void UpdateProductWithId(long id, Product product)
         {
+            foreach (var kvp in _products)
+            {
+                long key = kvp.Key;
+                Product value = kvp.Value;
+                if (key == id)
+                {
+                    _products[kvp.Key] = product;
+                }
+            }
            
         }
 
-        void IDatabase.AddProduct(Product product)
-        {
+        //long IDatabase.AddProduct(Product product)
+        //{
             
 
-        }
+        //}
 
         Product? IDatabase.GetProduct(long id)
         {

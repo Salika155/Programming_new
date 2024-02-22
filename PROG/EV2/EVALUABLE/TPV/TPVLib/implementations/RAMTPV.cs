@@ -1,5 +1,5 @@
 using System.Net.Sockets;
-using TPVLib.implementations;
+using System.Reflection.Metadata.Ecma335;
 
 namespace TPVLib
 {
@@ -15,96 +15,81 @@ namespace TPVLib
 
         private IDatabase _db;
 
-        //public RAMDatabase(IDatabase db)
-        //{
-        //    _db = db;
-        //}
+        //INYECCION DE DEPENDENCIAS
+        public RAMTPV(IDatabase db)
+        {
+            _db = db;
+        }
 
-        int ITPV.ProductCount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public RAMTPV()
+        {
+            
+        }
+
 
         //private long _currentGeneratingId = 1;
         private long _currentGeneratingId = 1;
 
         public long AddProduct(Product product)
         {
-            if (product == null)
-            {
-                throw new Exception("no se puede añadir");
-            }
-            var cloneProduct = product.Clone();
-            cloneProduct.Id = _currentGeneratingId++;
-            _products.Add(cloneProduct.Id, cloneProduct);
-            return cloneProduct.Id;
+            //if (product == null)
+            //{
+            //    throw new Exception("no se puede añadir");
+            //}
+            //var cloneProduct = product.Clone();
+            //cloneProduct.Id = _currentGeneratingId++;
+            //_products.Add(cloneProduct.Id, cloneProduct);
+            //return cloneProduct.Id;
+            return _db.AddProduct(product);
         }
 
         public void RemoveProduct(long id)
         {
             //extraño que lance un throw exception
-            if (id <= 0)
-            {
-                throw new ArgumentException("El id no es valido");
-            }
-            _products.Remove(id);
+            //if (id <= 0)
+            //{
+            //    throw new ArgumentException("El id no es valido");
+            //}
+            //_products.Remove(id);
+            _db.RemoveProduct(id);
         }
 
         public Product? GetProduct(long id)
         {
-            foreach(var entry in _products)
-            {
-                long key = entry.Key;
-                Product value = entry.Value;
-                if (key == id)
-                {
-                   return value.Clone();
-                }
-            }
-            return null;
+            return _db.GetProduct(id);
         }
 
         public void UpdateProductWithId(long id, Product product)
         {
-            foreach(var kvp in _products)
-            {
-                long key = kvp.Key;
-                Product value = kvp.Value;
-                if (key == id)
-                {
-                    _products[kvp.Key] = product;
-                }
-            }
+            //foreach(var kvp in _products)
+            //{
+            //    long key = kvp.Key;
+            //    Product value = kvp.Value;
+            //    if (key == id)
+            //    {
+            //        _products[kvp.Key] = product;
+            //    }
+            //}
+            _db.UpdateProductWithId(id, product);
         }
 
         public List<Product> GetProducts(int offset, int limit)
         {
-            int startPos = offset - 1;
-            int endPos = Math.Min(startPos + limit, ProductCount);
-            if (offset < 0 || limit < 0 || offset > _products.Count || limit > _products.Count)
-                return new List<Product>();
+            //int startPos = offset - 1;
+            //int endPos = Math.Min(startPos + limit, ProductCount);
+            //if (offset < 0 || limit < 0 || offset > _products.Count || limit > _products.Count)
+            //    return new List<Product>();
             
 
-            var productPage = new List<Product>();
+            //var productPage = new List<Product>();
 
-            for (int i = startPos; i < endPos; i++)
-            {
-                productPage.Add(_products[i]);
-            }
-            return productPage;
-
-            //Dictionary<long, Product> products = new Dictionary<long, Product>();
-            //int count = 0;
-            //foreach (var kvp in _products)
+            //for (int i = startPos; i < endPos; i++)
             //{
-            //    if (count >= offset && count < offset + limit)
-            //    {
-            //        products.Add(kvp.Key, kvp.Value);
-            //    }
-            //    count++;
-            //    if (count >= offset + limit)
-            //    {
-            //        break;
-            //    }
+            //    productPage.Add(_products[i]);
             //}
-            //return products;
+            //return productPage;
+            return _db.GetProducts(offset, limit);
+            
         }
 
     
@@ -114,6 +99,7 @@ namespace TPVLib
                 return false;
             return _products.ContainsKey(id);
         }
+        
 
         //public long AddTicket(RAMTicket t)
         //{
@@ -134,28 +120,29 @@ namespace TPVLib
         //    return Id;
         //}
 
-        public void SaveTicket(RAMTicket[] t)
-        {
-            List<RAMTicket> savedTickets = new List<RAMTicket>();
-            
-            foreach(var ticket in t)
-            {
-                try
-                {
-                    savedTickets.Add(ticket);
-                }
-                catch (Exception e)
-                {
-                    throw e;
-                }
-            }
-            
-        }
 
-        public void AddTicket(RAMTicket t)
-        {
+        //public void SaveTicket(RAMTicket[] t)
+        //{
+        //    List<RAMTicket> savedTickets = new List<RAMTicket>();
             
-        }
+        //    foreach(var ticket in t)
+        //    {
+        //        try
+        //        {
+        //            savedTickets.Add(ticket);
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            throw e;
+        //        }
+        //    }
+            
+        //}
+
+        //public void AddTicket(RAMTicket t)
+        //{
+            
+        //}
 
         //public Dictionary<long, Product> GetProducts(int offset, int limit)
         //{

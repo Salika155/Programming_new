@@ -47,12 +47,12 @@
 
         public long AddTicket(TicketHeader header)
         {
-            TicketHeader ticketHeader = new TicketHeader
-            ticketHeader.Id = _currentGeneratingId++;
-            long id = ticketHeader.Id;
-            newTicket.Header = header;
-            _tickets.Add(id, newTicket)
-                return id;
+            //TicketHeader ticketHeader = new TicketHeader
+            //ticketHeader.Id = _currentGeneratingId++;
+            //long id = ticketHeader.Id;
+            //newTicket.Header = header;
+            header.Add(id, newTicket)
+                return TicketHeader.id;
 
             //try
             //{

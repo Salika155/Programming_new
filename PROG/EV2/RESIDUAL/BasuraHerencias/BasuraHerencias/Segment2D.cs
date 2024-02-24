@@ -17,7 +17,6 @@ namespace BasuraHerencias
         {
            this.Name = name;
            
-
         }
 
         public override ShapeType GetShapeType()
@@ -25,7 +24,7 @@ namespace BasuraHerencias
             return ShapeType.SEGMENT2D;
         }
 
-        public new virtual void SetName(string name)
+        public virtual void SetName(string name)
         {
             Name = name;
         }

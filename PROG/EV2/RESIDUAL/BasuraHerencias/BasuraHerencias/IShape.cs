@@ -21,7 +21,7 @@ namespace BasuraHerencias
     }
     public interface IShape
     {
-        //+GetPosition():Position2D
+        //+GetPosition():Point2D
         //+SetPosition(point:Point2D)
         //+GetArea():double
         //+HasArea():bool
@@ -32,7 +32,7 @@ namespace BasuraHerencias
 
         void SetPosition2D(Point2D position2D);
         double GetArea();
-        bool HasArea();
+        bool HasArea();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
         ShapeType GetShapeType();
         string GetName();
         void SetName();

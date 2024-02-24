@@ -23,7 +23,7 @@ namespace BasuraHerencias
             return ShapeType.POINTSHAPE2D;
         }
 
-        public new virtual void SetName(string name)
+        public virtual void SetName(string name)
         {
             Name = name;
         }

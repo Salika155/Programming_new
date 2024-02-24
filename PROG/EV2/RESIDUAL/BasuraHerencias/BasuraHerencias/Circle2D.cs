@@ -33,7 +33,7 @@ namespace BasuraHerencias
 
         //ESTO NO SIRVE
         //NO TENER OVERRIDE PARA HACER LO MISMO DOS VECES
-        public new virtual void SetName(string name)
+        public virtual void SetName(string name)
         {
             Name = name;
         }

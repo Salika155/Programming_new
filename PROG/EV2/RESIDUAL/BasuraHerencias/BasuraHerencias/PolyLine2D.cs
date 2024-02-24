@@ -77,7 +77,7 @@ namespace BasuraHerencias
             return false;
         }
 
-        public new virtual void SetName(string name)
+        public virtual void SetName(string name)
         {
             Name = name;
         }

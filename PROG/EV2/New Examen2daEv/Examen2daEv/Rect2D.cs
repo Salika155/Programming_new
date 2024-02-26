@@ -8,19 +8,14 @@ namespace Examen2daEv
 {
     public class Rect2D
     {
-        
+        public Point2D BottomLeft { get; set; }
+        public Point2D TopRight { get; set; }
 
-        private Point2D _xi;
-        private Point2D _yi;
-        private Point2D _xs;
-        private Point2D _ys;
 
-        public Rect2D(Point2D xi, Point2D yi, Point2D xs, Point2D ys)
+        public Rect2D(Point2D bottomLeft, Point2D topRight)
         {
-            _xi = xi;
-            _yi = yi;
-            _xs = xs;
-            _ys = ys;
+            BottomLeft = bottomLeft;
+            TopRight = topRight;
         }
 
         //public override void DrawRectangle()

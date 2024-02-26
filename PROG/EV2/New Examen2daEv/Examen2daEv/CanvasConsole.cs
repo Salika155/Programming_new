@@ -6,37 +6,53 @@ using System.Threading.Tasks;
 
 namespace Examen2daEv
 {
+
+
     public abstract class CanvasConsole : ICanvas
     {
 
-        public int Width { get; set; }
-        public int Height { get; set; }
+        public int Width { get;}
+        public int Height { get; }
         public Color CurrentColor { get; set; }
 
-        public CanvasConsole(double width, double height, Color color)
+        public CanvasConsole(int width, int height, Color color)
         {
-
+            Width = width;
+            Height = height;
+            CurrentColor = color;
         }
 
-        
-        public virtual void DrawCircle(Rect2D circle, Color color)
+        public void SetColor(double r, double g, double b, double a)
         {
-            
+            CurrentColor = new Color(r, g, b, a);
         }
 
-        public virtual void DrawPolygon(Point2D[] point2Ds, Color color)
+        public void DrawRectangle(Color color)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Dibujando rectángulo de color {GetColorName(CurrentColor)}");
         }
 
-        public virtual void DrawRectangle(Color color)
+        public void DrawCircle(Rect2D circle)
         {
-            
+            Console.WriteLine($"Dibujando círculo de color {GetColorName(CurrentColor)}");
         }
 
-        public virtual void SetColor(Color color)
+        public void DrawPolygon(Point2D[] point2Ds)
         {
-            
+            Console.WriteLine($"Dibujando polígono de color {GetColorName(CurrentColor)}");
         }
+
+        private string GetColorName(Color color)
+        {
+            if (color.R == 1.0 && color.G == 0.0 && color.B == 0.0 && color.A == 0.0)
+                return "rojo";
+            else if (color.R == 0.0 && color.G == 1.0 && color.B == 0.0 && color.A == 0.0)
+                return "verde";
+            else if (color.R == 0.0 && color.G == 0.0 && color.B == 1.0 && color.A == 0.0)
+                return "azul";
+            else 
+                return "alfa";
+        }
+
     }
 }

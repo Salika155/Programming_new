@@ -14,10 +14,12 @@ namespace Examen2daEv
         int Height { get; }
         Color CurrentColor { get; }
 
-        void SetColor(Color color);
+        void SetColor(double r, double g, double b, double a);
         void DrawRectangle(Color color);
-        void DrawCircle(Rect2D circle, Color color);
-        void DrawPolygon(Point2D[] point2Ds, Color color);
+        void DrawCircle(Rect2D circle);
+        void DrawPolygon(Point2D[] point2Ds);
+
+       
         
     }
 }

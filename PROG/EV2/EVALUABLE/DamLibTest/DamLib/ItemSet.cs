@@ -50,7 +50,7 @@ namespace DamLib
             for (int i = 0; i < _count; i++)
             {
                 int elementHash = _items[i].Hash;
-                hash = hash * 31 + elementHash;
+                hash = hash * 31 + elementHash;                                                                                          
             }
             return hash;
         }

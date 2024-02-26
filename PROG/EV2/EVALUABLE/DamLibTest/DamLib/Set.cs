@@ -14,6 +14,7 @@ namespace DamLib
         //- _set:T[]
         private T[] _set = new T[0];
         private int _count = 0;
+        
 
         public override bool Equals(object? obj)
         {

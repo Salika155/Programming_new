@@ -14,8 +14,8 @@ namespace DiccionarioApp
     {
         private class Item
         {
-            public K key;
-            public V value;
+            public K? key;
+            public V? value;
         }
 
         private Item[] _items = new Item[0];
@@ -114,7 +114,7 @@ namespace DiccionarioApp
 
         }
 
-        public V GetValueWithKey(K key)
+        public V? GetValueWithKey(K key)
         {
             for (int i = 0; i < _items.Length; i++)
             {

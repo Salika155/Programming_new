@@ -20,7 +20,6 @@ namespace DamLib
 
         public void EnQueue(T element)
         {
-            
             T[] queueAux = new T[_count + 1];
             for (int i = 0; i < _count; i++)
             {
@@ -28,7 +27,6 @@ namespace DamLib
             }
             queueAux[_count] = element;
             _queue = queueAux;
-            
         }
 
         //+Dequeue():T

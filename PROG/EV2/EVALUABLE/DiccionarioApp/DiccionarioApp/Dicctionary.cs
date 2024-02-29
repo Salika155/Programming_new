@@ -62,13 +62,11 @@ namespace DiccionarioApp
             if (index != -1)
             {
                 _items[index].value = value;
-               
             }
             else
             {
                 Add(key, value);
             }
-
         }
 
         private int IndexOfKey(K key)
@@ -111,7 +109,6 @@ namespace DiccionarioApp
                 }
                 _items = newArrayItem;
             }
-
         }
 
         public V? GetValueWithKey(K key)
@@ -138,7 +135,6 @@ namespace DiccionarioApp
             }
             value = default(V);
             return false;
-
         }
 
         public Dictionary<K,V> Filter(DiccionaryFilterDelegate<K,V> where)
@@ -158,7 +154,6 @@ namespace DiccionarioApp
                     ret.Add(item.key, item.value);
                 //mejor una funcion que los meta directo, porque ya estan ordenados al ejecutarse
                 //AddKeyValue
-                
             }
             return ret;
         }
@@ -186,7 +181,6 @@ namespace DiccionarioApp
                     i--;
                 }
             }
-
         }
 
         public static void Sort<T>(T[] array, ComparatorDelegate<T> comparer)

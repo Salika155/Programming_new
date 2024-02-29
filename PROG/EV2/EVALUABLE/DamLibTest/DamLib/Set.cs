@@ -45,15 +45,12 @@ namespace DamLib
         // +Remove(element:T)
         public void Remove(T element)
         {
-
             if (element == null || Contains(element))
                 return;
 
-            
             T[] newArray = new T[_count - 1];
             int index = IndexOf(element);
             
-
             for (int i = 0, j = 0; i < _count; i++)
             {
                 if (i != index)

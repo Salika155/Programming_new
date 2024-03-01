@@ -1,0 +1,14 @@
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\bin\Debug\net8.0\ExamenLogica.exe
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\bin\Debug\net8.0\ExamenLogica.deps.json
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\bin\Debug\net8.0\ExamenLogica.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\bin\Debug\net8.0\ExamenLogica.dll
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\bin\Debug\net8.0\ExamenLogica.pdb
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.dll
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\refint\ExamenLogica.dll
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.pdb
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ExamenLogica.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\ExamenLogica\ExamenLogica\obj\Debug\net8.0\ref\ExamenLogica.dll

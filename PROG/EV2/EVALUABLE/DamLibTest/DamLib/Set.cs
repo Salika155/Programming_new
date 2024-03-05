@@ -127,6 +127,5 @@ namespace DamLib
         //con contain hacer otra funcion privada que sea IndexOf
         // IndexOf(element:T):int
 
-
     }
 }

@@ -6,37 +6,40 @@ using System.Threading.Tasks;
 
 //namespace ExamenLogica
 //{
-//    internal class Ej26
+//    internal class Ej29
 //    {
 //        public class ClaseA
 //        {
-//            public virtual int GetAge() { return 10; }
+//            public virtual int F1()
+//            {
+//                Console.Write("1");
+//                return 1;
+//            }
 //        }
 
 //        public class ClaseB : ClaseA
 //        {
-//            public override int GetAge()
+//            public override int F1()
 //            {
-//                return GetAge();
+//                Console.Write("2");
+//                return 2;
 //            }
 //        }
 
 //        public class ClaseC : ClaseB
 //        {
-//            public override int GetAge()
+//            public override int F1()
 //            {
-//                return base.GetAge();
+//                Console.Write("3");
+//                return 3;
 //            }
 //        }
 
 //        public static void Main(string[] args)
 //        {
-//            ClaseC a = new ClaseC();
-//            Console.Write(a.GetAge());
+//            ClaseA a = new ClaseC();
+//            Console.Write(a.F1());
 //        }
-//        //solucion = STACKOVERFLOW SO
+//        //solucion = 33
 //    }
 //}
-
-
-

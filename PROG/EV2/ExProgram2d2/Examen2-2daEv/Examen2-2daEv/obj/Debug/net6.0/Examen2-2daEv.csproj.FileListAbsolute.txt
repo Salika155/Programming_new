@@ -1,0 +1,14 @@
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\bin\Debug\net6.0\Examen2-2daEv.exe
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\bin\Debug\net6.0\Examen2-2daEv.deps.json
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\bin\Debug\net6.0\Examen2-2daEv.runtimeconfig.json
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\bin\Debug\net6.0\Examen2-2daEv.dll
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\bin\Debug\net6.0\Examen2-2daEv.pdb
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.AssemblyInfoInputs.cache
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.AssemblyInfo.cs
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.csproj.CoreCompileInputs.cache
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.dll
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\refint\Examen2-2daEv.dll
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.pdb
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\Examen2-2daEv.genruntimeconfig.cache
+C:\Users\alumno\source\repos\Examen2-2daEv\Examen2-2daEv\obj\Debug\net6.0\ref\Examen2-2daEv.dll

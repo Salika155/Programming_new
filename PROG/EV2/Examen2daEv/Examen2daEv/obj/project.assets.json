@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\carcarcor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alumno\\source\\repos\\Examen2daEv\\Examen2daEv\\Examen2daEv.csproj",
+      "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen2daEv\\Examen2daEv\\Examen2daEv.csproj",
       "projectName": "Examen2daEv",
-      "projectPath": "C:\\Users\\alumno\\source\\repos\\Examen2daEv\\Examen2daEv\\Examen2daEv.csproj",
-      "packagesPath": "C:\\Users\\alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alumno\\source\\repos\\Examen2daEv\\Examen2daEv\\obj\\",
+      "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen2daEv\\Examen2daEv\\Examen2daEv.csproj",
+      "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen2daEv\\Examen2daEv\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

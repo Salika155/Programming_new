@@ -24,7 +24,9 @@ namespace Examen2_2daEv
 
 
 
+        //contains ? indexof >= 0
 
+        //try catch cosas imposibles de controlar
     }
 
     

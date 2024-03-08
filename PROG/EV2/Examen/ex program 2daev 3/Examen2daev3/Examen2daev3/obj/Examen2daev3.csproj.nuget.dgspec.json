@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ExProgram2d2\\Examen2-2daEv\\Examen2-2daEv\\Examen2-2daEv.csproj": {}
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ex program 2daev 3\\Examen2daev3\\Examen2daev3\\Examen2daev3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ExProgram2d2\\Examen2-2daEv\\Examen2-2daEv\\Examen2-2daEv.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ex program 2daev 3\\Examen2daev3\\Examen2daev3\\Examen2daev3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ExProgram2d2\\Examen2-2daEv\\Examen2-2daEv\\Examen2-2daEv.csproj",
-        "projectName": "Examen2-2daEv",
-        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ExProgram2d2\\Examen2-2daEv\\Examen2-2daEv\\Examen2-2daEv.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ex program 2daev 3\\Examen2daev3\\Examen2daev3\\Examen2daev3.csproj",
+        "projectName": "Examen2daev3",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ex program 2daev 3\\Examen2daev3\\Examen2daev3\\Examen2daev3.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ExProgram2d2\\Examen2-2daEv\\Examen2-2daEv\\obj\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV2\\Examen\\ex program 2daev 3\\Examen2daev3\\Examen2daev3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",

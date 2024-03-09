@@ -8,6 +8,7 @@ namespace ConsoleApp2
 {
     internal class Stack
     {
+        //ESTO NO VALE
         //Stack<T>
 
         //- _stack:T[]

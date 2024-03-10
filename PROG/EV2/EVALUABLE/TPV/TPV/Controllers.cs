@@ -28,7 +28,8 @@ namespace TPV
                         UI.ShowProductList(tpv);
                         break;
                     case "3":
-                        Console.WriteLine("Registrar producto");
+                        //Console.WriteLine("Registrar producto");
+                        UI.Case3RegistProduct(tpv);
                         break;
                     default:
                         Console.WriteLine("Adios, tenga un buen día");

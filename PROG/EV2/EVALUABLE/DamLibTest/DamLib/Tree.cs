@@ -372,7 +372,8 @@ namespace DamLib
 
             //hacer un override tostring
             #endregion
-            //para hacer weakreference tengo que hacer funcion getparent y cambiar el setparent
         }
     }
 }
+
+//para hacer weakreference tengo que hacer funcion getparent y cambiar el setparent

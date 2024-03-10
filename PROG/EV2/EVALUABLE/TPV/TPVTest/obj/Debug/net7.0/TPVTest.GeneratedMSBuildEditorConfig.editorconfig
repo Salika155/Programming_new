@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TPVTest
-build_property.ProjectDir = C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVTest\
+build_property.ProjectDir = C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\EVALUABLE\TPV\TPVTest\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

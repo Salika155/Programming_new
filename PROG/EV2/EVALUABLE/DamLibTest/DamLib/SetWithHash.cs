@@ -16,14 +16,14 @@ namespace DamLib
         private int _count = 0;
 
         public override bool Equals(object? obj)
-            {
-                if (this == obj)
-                    return true;
-                if (obj is not SetWithHash<T>)
-                    return false;
-                SetWithHash<T> s = (SetWithHash<T>)obj;
+        {
+            if (this == obj)
+                return true;
+            if (obj is not SetWithHash<T>)
+                return false;
+            SetWithHash<T> s = (SetWithHash<T>)obj;
                 return s._set == _set && s.Count == _count;
-            }
+        }
 
 #nullable disable
         public override int GetHashCode()
@@ -98,8 +98,8 @@ namespace DamLib
 
             _set = newArray;
             _hash = newHashArray;
-            
         }
+        #region comentado
         /*
          for (int i = 0; i < Count; i++)
         {
@@ -109,7 +109,7 @@ namespace DamLib
             }
             faltan cosas
          */
-
+        #endregion
 
         // +Empty: bool
         public bool Empty
@@ -117,15 +117,13 @@ namespace DamLib
             get => _count == 0;
         }
 
-            // +Count:int
-
+       // +Count:int
         public int Count
         {
             get => _count;
         }
 
         // +Contains(element:T):bool
-
 #nullable disable
         public bool Contains(T checkElement)
         {
@@ -136,7 +134,6 @@ namespace DamLib
                     return true;
             }
             return false;
-
         }
 #nullable enable
 

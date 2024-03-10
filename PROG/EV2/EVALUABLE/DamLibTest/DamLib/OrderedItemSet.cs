@@ -158,7 +158,6 @@ namespace DamLib
         }
 
         //hay que hacer un binary search
-
         public bool BinarySearch(T element)
         {
             if (element == null || _count <= 0)
@@ -188,7 +187,6 @@ namespace DamLib
         }
 
         //Sort
-
         public void Sort()
         {
             if (_count <= 0)
@@ -207,8 +205,6 @@ namespace DamLib
                 }
             }
         }
-
-
     }
 }
 

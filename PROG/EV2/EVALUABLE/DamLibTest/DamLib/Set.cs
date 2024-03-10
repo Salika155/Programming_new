@@ -9,13 +9,11 @@ namespace DamLib
 {
     public class Set<T> : ISet<T>
     {
-
         //Set<T>
         //- _set:T[]
         private T[] _set = new T[0];
         private int _count = 0;
         
-
         public override bool Equals(object? obj)
         {
             if (this == obj)
@@ -62,7 +60,6 @@ namespace DamLib
             _set = newArray;
             _count--;
 
-
             //for (int i = index + 1; i < Count; i++)
             //    newArray[i - 1] = _set[i];
 
@@ -75,8 +72,8 @@ namespace DamLib
                 }
                 faltan cosas
              */
-
         }
+
         // +Empty: bool
         public bool Empty
         {
@@ -90,7 +87,6 @@ namespace DamLib
         }
 
         // +Contains(element:T):bool
-
         public bool Contains(T element)
         {
             if (Empty)
@@ -126,6 +122,5 @@ namespace DamLib
 
         //con contain hacer otra funcion privada que sea IndexOf
         // IndexOf(element:T):int
-
     }
 }

@@ -7,7 +7,6 @@ namespace TPVTest
     {
         static void Main(string[] args)
         {
-
             ITPV tpv = ITPV.CreateNewTPV();
 
             Product product1 = new Product
@@ -42,10 +41,6 @@ namespace TPVTest
 
             tpv.RemoveProduct(product1Id);
             Console.WriteLine("Producto eliminado con éxito."); 
-
-
-
-
         }
     }
 }

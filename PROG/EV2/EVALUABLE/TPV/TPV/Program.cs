@@ -12,10 +12,6 @@ namespace TPV
             ITPV ITPV = ITPV.CreateNewTPV();
             Controllers.Start(ITPV);
 
-            
-            
-            
-
             #region antiguoprogram
             //Product product1 = new Product
             //{
@@ -59,38 +55,30 @@ namespace TPV
             //{
             //    Console.WriteLine("Error: El producto todavía existe en el sistema.");
             //}
-            #endregion
 
             //bool isRunning = true;
-
-            
 
             //while (isRunning)
             //{
             //    string option = Console.ReadLine();
 
-
-                
-
             //    UI.ShowMainMenu(tpv);
             //}
+            #endregion
         }
-
-
-
-        //CRUD
-        //Interface IProduct
-        //long AddProduct(Product product)Throw Exception;
-        //void RemoveProduct(long id)Throw Exception;
-        //Product GetProduct(long id);
-        //void UpdateProductWithId(long id, Product product)Throw Exception;
-        //void RemoveProduct(Product product)
-        //if (product != null)
-        //RemoveProduct(product.Id);
-
-        //int ProductCount { get; }
-        //List<Product> GetProducts(int offset, int limit);
-        //este tipo de consultas siempre se consultan ordenadas. offset pone el limite inicial de donde empieza y limit hasta donde llega.
-
     }
 }
+
+//CRUD
+//Interface IProduct
+//long AddProduct(Product product)Throw Exception;
+//void RemoveProduct(long id)Throw Exception;
+//Product GetProduct(long id);
+//void UpdateProductWithId(long id, Product product)Throw Exception;
+//void RemoveProduct(Product product)
+//if (product != null)
+//RemoveProduct(product.Id);
+
+//int ProductCount { get; }
+//List<Product> GetProducts(int offset, int limit);
+//este tipo de consultas siempre se consultan ordenadas. offset pone el limite inicial de donde empieza y limit hasta donde llega.

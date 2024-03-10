@@ -10,11 +10,10 @@ namespace DamLib
     public class Stack <T>
     {
         //Stack<T>
-        
         //- _stack:T[]
         private T[] _stack = new T[0]; 
-        //+Push(newElement:T);
 
+        //+Push(newElement:T);
         public void Push(T newElement)
         {
             T[] stackAux = new T[_stack.Length + 1];
@@ -24,10 +23,9 @@ namespace DamLib
             }
             stackAux[stackAux.Length - 1] = newElement;
             _stack = stackAux;
-            
         }
-        //+Pop():T;
 
+        //+Pop():T;
         public T? Pop()
         {
             if (_stack.Length == 0)
@@ -52,8 +50,8 @@ namespace DamLib
 
             return _stack[_stack.Length - 1];
         }
-        //+IsEmpty():bool
 
+        //+IsEmpty():bool
         public bool IsEmpty()
         {
             //si el tamaño es 0, esta vacio
@@ -66,11 +64,8 @@ namespace DamLib
             return _stack.Length;
         }
 
-
         //-> Libreria -> DAMLibTest
         //DAMlibTest
-        //DAMLib -> nuevo proyecto a añadir en la libreria (Biblioteca de clases
-
-
+        //DAMLib -> nuevo proyecto a añadir en la libreria (Biblioteca de clases)
     }
 }

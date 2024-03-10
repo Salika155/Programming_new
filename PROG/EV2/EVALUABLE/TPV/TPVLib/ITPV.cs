@@ -5,7 +5,6 @@
         int ProductCount { get; }
         static ITPV CreateNewTPV()
         {
-
             return new RAMTPV();
         }
 
@@ -13,9 +12,6 @@
         //idatabase crea new Database Y SE LA PASO POR CONSTRUCTOR
         //private Dictionary<> = new();
         //IDatabase db = new RAMDatabase();
-
-
-
 
         long AddProduct(Product product);
 
@@ -32,16 +28,17 @@
             {
                 RemoveProduct(product.Id);
             }
-        }   
+        }
 
+        #region comentado
         //void SaveTicket(RAMTicket[] ticket)
         //{
         //    //aqui se guarda el ticket
         //}
 
         //a lo mejor quiero pasar la funcion aqui, y es mejor hacerla aqui porque siempre va a ser igual
-        
 
         //hay que hacer el add product
+        #endregion
     }
 }

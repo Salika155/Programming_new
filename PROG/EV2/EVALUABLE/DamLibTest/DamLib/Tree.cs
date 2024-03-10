@@ -18,7 +18,6 @@ namespace DamLib
             private Node<T>? _root;
             //WeakReference<Node<T>> _parentWeak;
 
-
             public Node(T content)
             {
                 _content = content;
@@ -101,8 +100,6 @@ namespace DamLib
                 }
             }
 
-
-
             public int IndexOf(Node<T> node)
             {
                 for (int i = 0; i < _children.Count; i++)
@@ -150,7 +147,7 @@ namespace DamLib
                     _parent.RemoveChild(this);
                 _parent = null;
             }
-
+            
             //private void Unlink1()
             //{
             //    if (_parent != null)
@@ -205,7 +202,6 @@ namespace DamLib
                     return true;
 
                 //var child = _children[i];
-
                 return _parent.ContainsAncestor(node);
             }
 
@@ -257,7 +253,6 @@ namespace DamLib
                 }
                 return null;
             }
-
 
             public delegate bool CheckDelegateNode<T>(T element);
 
@@ -323,7 +318,6 @@ namespace DamLib
 
                     //puedo comprobar el contenido tambien con el checker this con la otra lambda
                 }
-
                 //FindNodes(this, checker, result);
                 return result;
             }
@@ -378,7 +372,6 @@ namespace DamLib
 
             //hacer un override tostring
             #endregion
-
             //para hacer weakreference tengo que hacer funcion getparent y cambiar el setparent
         }
     }

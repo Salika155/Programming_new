@@ -24,10 +24,6 @@ namespace TPVLib
         void AddTicketLine(TicketLine line);
         //void AddTicketBody(TicketBody body);
         //body no existe nada mas que para trabajarlo
-
-
-
-
         void RemoveProduct(long id);
         Product? GetProduct(long id);
         void UpdateProductWithId(long id, Product product);

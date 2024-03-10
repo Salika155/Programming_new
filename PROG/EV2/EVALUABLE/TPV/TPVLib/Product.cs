@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPVLib
 {
+    #region comentado
     //public class TicketHeader
     //{
     //    public long Id { get; set; }
@@ -36,6 +37,7 @@ namespace TPVLib
     //crear un idatabase y funciones como AddTicketHeader, AddTicketLine
     //la base de datos tiene que ser simple y que sea otro el que añada las cosas
     //MODELO DE NEGOCIO -> ITPV -> addTicket(Ticket ticket)
+    #endregion
 
     public enum TaxesType
     {
@@ -68,7 +70,6 @@ namespace TPVLib
             Type = TaxesType.IVA_21;
         }
 
-
         public Product Clone()
         {
             return new Product
@@ -82,6 +83,7 @@ namespace TPVLib
                 Type = Type
             };
 
+            #region comentado
             //Product product = new Product();
             //product.Id = Id;
             //product.Name = Name;
@@ -89,8 +91,9 @@ namespace TPVLib
             //product.Stock = Stock;
             //product.Description = "";
             //return product;
+            #endregion
         }
-
+        #region comentado
         //public Product(long id, string name, double price, int stock)
         //{
         //    Id = id;
@@ -99,6 +102,6 @@ namespace TPVLib
         //    Stock = stock;
         //    Description = "";
         //}
-
+        #endregion
     }
 }

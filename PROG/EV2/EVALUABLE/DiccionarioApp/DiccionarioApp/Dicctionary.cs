@@ -27,9 +27,7 @@ namespace DiccionarioApp
 
         //para llamar al constructor de ariba
         //public Dicctionary(Dicctionary<K, V> d) : this()
-        //{
-
-        //}
+        //{ }
 
         public int Count => _items.Length;
         public bool IsEmpty => _items.Length == 0;
@@ -53,7 +51,6 @@ namespace DiccionarioApp
                 value = value
             };
             _items = newArray;
-
         }
 
         public void AddOrReplace(K key, V value)
@@ -158,6 +155,7 @@ namespace DiccionarioApp
             return ret;
         }
 
+        #region comentado
         //private void AddKeyValue(K key, V value)
         //{
         //    //Append nombre para añadir en array
@@ -166,9 +164,9 @@ namespace DiccionarioApp
         //    item.value = value;
         //    _items = Append(_items, item);
         //}
+        #endregion
 
         //void Remove
-
         public void Remove(DiccionaryFilterDelegate<K, V> where)
         {
             for (int i = 0; i < _items.Length; i++)
@@ -203,9 +201,7 @@ namespace DiccionarioApp
             a = b;
             b = aux;
         }
-
-
-        //lamda es pasar en vez de un parametro una funcion, y en funcion de lo que devuelva esa funcion haces una cosa u otra.
-
     }
 }
+
+//lamda es pasar en vez de un parametro una funcion, y en funcion de lo que devuelva esa funcion haces una cosa u otra.

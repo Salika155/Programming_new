@@ -13,7 +13,6 @@ namespace TPV
         public static void ShowMainMenu(TPVLib.ITPV tpv)
         {
             Console.Clear();
-
             Console.WriteLine("Bienvenido al TPV (Terminal Punto de Venta)");
             Console.WriteLine("1. Realizar venta");
             Console.WriteLine("2. Ver lista de productos");
@@ -33,7 +32,6 @@ namespace TPV
             //{
             //    Console.WriteLine("La cantidad no puede ser nula");
             //}
-            
         }
 
         public static void ShowProductList(ITPV tPV)
@@ -51,9 +49,6 @@ namespace TPV
             Console.WriteLine("8. Producto 8");
             Console.WriteLine("9. Producto 9");
             Console.WriteLine("10. Producto 10");
-
         }
-
-        
     }
 }

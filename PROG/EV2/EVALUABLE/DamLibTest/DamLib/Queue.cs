@@ -15,7 +15,6 @@ namespace DamLib
         private int _count = 0;
 
         //- _queue:T[]
-
         //+Queue(element:T)
 
         public void EnQueue(T element)
@@ -30,7 +29,6 @@ namespace DamLib
         }
 
         //+Dequeue():T
-
         public T? Dequeue()
         {
             if (Empty)
@@ -48,18 +46,15 @@ namespace DamLib
 
             return dequeuedElement;
         }
+
         //a partir de aqui mayusculas son properties excepto clear
-
         //+Count:int;
-
         public int Count
         {
             get => _count;
         }
 
-
         //+First:T
-
         public T? First
         {
             get
@@ -71,15 +66,13 @@ namespace DamLib
                 return _queue[0]; 
             }
         }
-
         //public T First => IsEmpty ? default(T) : _queue[0];
-
         //evitar warning default con una directiva de procesador
 #nullable disable
         //en estas lineas no avisara del warning del null
 #nullable enable
-        //+Last:T
 
+        //+Last:T
         public T? Last
         {
             get

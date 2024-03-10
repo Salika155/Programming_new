@@ -9,7 +9,6 @@ namespace TPVLib
 {
     public class TicketLine
     {
-        
         public string? Details { get; set; }
         public double Quantity { get; set; }
         public Product Product { get; set; }

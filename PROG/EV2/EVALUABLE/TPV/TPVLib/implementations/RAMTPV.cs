@@ -6,7 +6,6 @@ namespace TPVLib
 
     public class RAMTPV : ITPV
     {
-
         //private dictionary
         private Dictionary<long, Product> _products= new Dictionary<long, Product>();
         //private list
@@ -26,12 +25,12 @@ namespace TPVLib
             
         }
 
-
         //private long _currentGeneratingId = 1;
         private long _currentGeneratingId = 1;
 
         public long AddProduct(Product product)
         {
+            #region comentado
             //if (product == null)
             //{
             //    throw new Exception("no se puede añadir");
@@ -40,17 +39,20 @@ namespace TPVLib
             //cloneProduct.Id = _currentGeneratingId++;
             //_products.Add(cloneProduct.Id, cloneProduct);
             //return cloneProduct.Id;
+            #endregion
             return _db.AddProduct(product);
         }
 
         public void RemoveProduct(long id)
         {
+            #region comentado
             //extraño que lance un throw exception
             //if (id <= 0)
             //{
             //    throw new ArgumentException("El id no es valido");
             //}
             //_products.Remove(id);
+            #endregion
             _db.RemoveProduct(id);
         }
 
@@ -61,6 +63,7 @@ namespace TPVLib
 
         public void UpdateProductWithId(long id, Product product)
         {
+            #region comentado
             //foreach(var kvp in _products)
             //{
             //    long key = kvp.Key;
@@ -70,16 +73,18 @@ namespace TPVLib
             //        _products[kvp.Key] = product;
             //    }
             //}
+            #endregion
             _db.UpdateProductWithId(id, product);
         }
 
         public List<Product> GetProducts(int offset, int limit)
         {
+            #region comentado
             //int startPos = offset - 1;
             //int endPos = Math.Min(startPos + limit, ProductCount);
             //if (offset < 0 || limit < 0 || offset > _products.Count || limit > _products.Count)
             //    return new List<Product>();
-            
+
 
             //var productPage = new List<Product>();
 
@@ -88,10 +93,9 @@ namespace TPVLib
             //    productPage.Add(_products[i]);
             //}
             //return productPage;
+            #endregion
             return _db.GetProducts(offset, limit);
-            
         }
-
     
         public bool ContainsProduct(long id)
         {
@@ -99,8 +103,8 @@ namespace TPVLib
                 return false;
             return _products.ContainsKey(id);
         }
-        
 
+        #region comentado
         //public long AddTicket(RAMTicket t)
         //{
         //    try
@@ -124,7 +128,7 @@ namespace TPVLib
         //public void SaveTicket(RAMTicket[] t)
         //{
         //    List<RAMTicket> savedTickets = new List<RAMTicket>();
-            
+
         //    foreach(var ticket in t)
         //    {
         //        try
@@ -136,22 +140,18 @@ namespace TPVLib
         //            throw e;
         //        }
         //    }
-            
+
         //}
 
         //public void AddTicket(RAMTicket t)
         //{
-            
+
         //}
 
         //public Dictionary<long, Product> GetProducts(int offset, int limit)
         //{
         //    throw new NotImplementedException();
         //}
-
-
-
-
 
         //public long addproduct(product product)
         //var cloneProduct = product.Clone();
@@ -169,6 +169,7 @@ namespace TPVLib
         //
 
         //public bool ContainsProduct(long id)
+        #endregion
     }
 
     //record es para crearlo y no modificarlo nunca

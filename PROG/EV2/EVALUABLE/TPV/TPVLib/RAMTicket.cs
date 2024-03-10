@@ -14,8 +14,7 @@ namespace TPVLib
         public TicketBody Body { get; set; } = new TicketBody();
         public double TotalPrize { get; set; }
 
-        
-
+        #region comentado
         //public RAMTicket AddTicket(TicketHeader header, TicketBody body)
         //{
         //    if (header == null || body == null)
@@ -94,5 +93,6 @@ namespace TPVLib
         //        }
         //    }
         //}
+        #endregion
     }
 }

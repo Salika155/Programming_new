@@ -10,9 +10,7 @@ namespace TPVLib
 {
     public interface ITicket
     {
-
         RAMTicket AddTicket(TicketHeader header, TicketBody body);
-
 
         void RemoveTicket(long id);
         RAMTicket? GetTicket(long id);
@@ -25,7 +23,6 @@ namespace TPVLib
             {
                 RemoveTicket(ticket.Header.Id);
             }
-            
         }
     }
 }

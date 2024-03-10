@@ -4,7 +4,6 @@ namespace TPV
 {
     public class Controllers
     {
-        
         public static void RunMainMenu(ITPV tpv)
         {
             bool IsRunning = true;
@@ -30,12 +29,11 @@ namespace TPV
                         break;
                     case "3":
                         Console.WriteLine("Registrar producto");
-
                         break;
                     default:
                         Console.WriteLine("Adios, tenga un buen día");
                         IsRunning = false;
-                        break;
+                    break;
                 }
             }
         }
@@ -47,7 +45,7 @@ namespace TPV
             
             RunMainMenu(itpv);
         }
-
+        #region comentado
         //public static void AddProduct(TPVLib.ITPV tpv)
         //{
         //    Console.WriteLine("Enter the name of the product");
@@ -70,7 +68,6 @@ namespace TPV
         //    long id = tpv.AddProduct(product);
         //    Console.WriteLine("Product " + product.Name + " registered correctly with id " + id);
         //}
-
-
+        #endregion
     }
 }

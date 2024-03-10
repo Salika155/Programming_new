@@ -18,10 +18,8 @@ namespace DamLib
                 this.Element = element;
                 this.Hash = hash;
             }
-            
         }
 
-        
         private Item[] _items =  new Item[0];
         private int _count = 0;
 
@@ -78,7 +76,6 @@ namespace DamLib
         // +Remove(element:T)
         public void Remove(T element)
         {
-
             if (element == null || !Contains(element))
                 return;
 
@@ -126,14 +123,12 @@ namespace DamLib
         }
 
         // +Count:int
-
         public int Count
         {
             get => _count;
         }
 
         // +Contains(element:T):bool
-
         public bool Contains(T element)
         {
             for (int i = 0; i < _count; i++)

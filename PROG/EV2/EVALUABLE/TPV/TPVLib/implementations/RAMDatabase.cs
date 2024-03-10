@@ -7,12 +7,9 @@
 
         private IDatabase _db;
 
-        
-
-
         public int ProductCount => _products.Count;
 
-
+        #region comentado
         //public void AddLineToTicketWithId(long ticketid, TicketLine line)
         //{
         //    if (line == null)
@@ -25,10 +22,8 @@
         //        Quantity = line.Quantity,
         //        Product = line.Product,
         //    };
-
-
-
         //}
+        #endregion
 
         public long AddProduct(Product product)
         {
@@ -40,20 +35,21 @@
             cloneProduct.Id = _currentGeneratingId++;
             _products.Add(cloneProduct.Id, cloneProduct);
             return cloneProduct.Id;
-            
         }
-
-        
 
         public long AddTicket(TicketHeader header)
         {
-            //TicketHeader ticketHeader = new TicketHeader
-            //ticketHeader.Id = _currentGeneratingId++;
-            //long id = ticketHeader.Id;
-            //newTicket.Header = header;
-            header.Add(id, newTicket)
-                return TicketHeader.id;
+            if (header == null)
+            {
+                throw new ArgumentException("Necesitas un header valido");
+            }
 
+            _currentGeneratingId++;
+            header.Id = _currentGeneratingId;
+            _db.AddTicket(header);
+            return header.Id;
+
+            #region comentado
             //try
             //{
             //    _db.BeginTransaction();
@@ -69,6 +65,7 @@
             //    throw e;
             //}
             //return Id;
+            #endregion
         }
 
         public void AddTicketLine(TicketLine line)
@@ -84,11 +81,12 @@
                 Product value = entry.Value;
                 if (key == line.Product.Id)
                 {
-                    //return value.Clone();
+                    value.Clone();
                 }
             }
         }
 
+        #region comentado
         //public RAMDatabase? GetProduct(long id)
         //{
         //    foreach (var entry in _products)
@@ -101,6 +99,7 @@
         //        }
         //    }
         //}
+        #endregion
 
         public List<Product> GetProducts(int offset, int limit)
         {
@@ -127,13 +126,10 @@
                     _products[kvp.Key] = product;
                 }
             }
-           
         }
 
         //long IDatabase.AddProduct(Product product)
         //{
-            
-
         //}
 
         Product? IDatabase.GetProduct(long id)

@@ -21,6 +21,8 @@
 
             Console.WriteLine(ficha.GetN1());   
             Console.WriteLine(ficha.GetN2());
+            
+
             Console.WriteLine(ficha.GetFicha());
         }
     }

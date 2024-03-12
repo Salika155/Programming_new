@@ -1,0 +1,14 @@
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\bin\Debug\net7.0\DominoSimulacro.exe
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\bin\Debug\net7.0\DominoSimulacro.deps.json
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\bin\Debug\net7.0\DominoSimulacro.runtimeconfig.json
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\bin\Debug\net7.0\DominoSimulacro.dll
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\bin\Debug\net7.0\DominoSimulacro.pdb
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.AssemblyInfoInputs.cache
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.AssemblyInfo.cs
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.dll
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\refint\DominoSimulacro.dll
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.pdb
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\DominoSimulacro.genruntimeconfig.cache
+C:\Users\carcarcor\source\repos\DominoSimulacro\DominoSimulacro\obj\Debug\net7.0\ref\DominoSimulacro.dll

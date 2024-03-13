@@ -14,16 +14,21 @@
                 new Impulsivo()
             };
 
+            Monto montofichas = new Monto();
 
-            Ficha ficha = new Ficha();
-            ficha.SetN1(1);
-            ficha.SetN2(2);
+            montofichas.Shuffle();
 
-            Console.WriteLine(ficha.GetN1());   
-            Console.WriteLine(ficha.GetN2());
+
+
+            //Ficha ficha = new Ficha();
+            //ficha.SetN1(1);
+            //ficha.SetN2(2);
+
+            //Console.WriteLine(ficha.GetN1());   
+            //Console.WriteLine(ficha.GetN2());
             
 
-            Console.WriteLine(ficha.GetFicha());
+            //Console.WriteLine(ficha.GetFicha());
         }
     }
 }

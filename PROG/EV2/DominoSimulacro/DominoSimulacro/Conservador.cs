@@ -8,5 +8,9 @@ namespace DominoSimulacro
 {
     public class Conservador : Participante
     {
+        public Conservador() : base()
+        {
+            _nombre = "Conservador";
+        }
     }
 }

@@ -119,7 +119,5 @@ namespace DominoSimulacro
             }
             return null;
         }
-
-        
     }
 }

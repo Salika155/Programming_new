@@ -67,8 +67,6 @@ namespace DominoSimulacro
         {
             if (ficha == null)
                 return;
-        
-            
         }
 
         internal void Jugar()
@@ -78,7 +76,7 @@ namespace DominoSimulacro
 
         internal string GetNombre()
         {
-            throw new NotImplementedException();
+            return _nombre;
         }
     }
 }

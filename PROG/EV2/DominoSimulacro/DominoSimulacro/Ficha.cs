@@ -46,7 +46,6 @@ namespace DominoSimulacro
             get { return _n1 + _n2; }
         }
 
-
         public bool IsDouble()
         {
             return IsDoble;

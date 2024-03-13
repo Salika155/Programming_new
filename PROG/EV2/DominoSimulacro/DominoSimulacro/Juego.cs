@@ -36,7 +36,7 @@ namespace DominoSimulacro
         public void IniciarJuego()
         {
             montofichas = new Monto();
-            //montofichas.CreateFichas();
+            //montofichas.CreateMonto();
             montofichas.Shuffle();
         }
 
@@ -86,7 +86,18 @@ namespace DominoSimulacro
             }
             Console.WriteLine("El ganador es: " + ganador);
         }
+
+        public static Ficha CreateMonto()
+        {
+            Monto monto = new Monto();
+            for (int i = 0; i <= 6; i++)
+            {
+                for (int j = i; j <= 6; j++)
+                {
+                    monto.AddFicha(new Ficha(i, j));
+                }
+            }
+            return null;
+        }
     }
-
-
 }

@@ -9,27 +9,57 @@ namespace DominoSimulacro
 {
     public class Monto
     {
-        public List<Ficha>? _fichas;
+        private List<Ficha>? _monto;
+        public int montoCount { get { return _monto.Count; } }
 
         public Monto()
         {
-            _fichas = new List<Ficha>();
+            _monto = new List<Ficha>();
         }
         public Monto(List<Ficha> _Fichas)
         {
-            _fichas = _Fichas;
-        }  
-        
+            _monto = _Fichas;
+        }
+
+        public void CreateMonto()
+        {
+            Monto monto = new Monto();
+            for (int i = 0; i <= 6; i++)
+            {
+                for (int j = 0; j <= 6; j++)
+                {
+                    monto.AddFicha(new Ficha(i, j));
+                }
+            }
+        }
+
+        public void Shuffle()
+        {
+            Random random = new Random();
+
+            int n = _monto.Count;
+            while (n < 1000)
+            {
+                for (int i = n - 1; i > 0; i--)
+                {
+                    int j = random.Next(0, i + 1);
+                    Ficha temp = _monto[i];
+                    _monto[i] = _monto[j];
+                    _monto[j] = temp;
+                }
+            }
+        }
+
         public void AddFicha(Ficha ficha)
         {
             if (ficha == null && ContainFicha(ficha))
                 return;
-            _fichas.Add(ficha);
+            _monto.Add(ficha);
         }
 
         public bool ContainFicha(Ficha ficha)
         {
-            if (_fichas == null || ficha.GetSuma() < 0)
+            if (_monto == null || ficha.GetSuma() < 0)
                 return false;
 
             for (int i = 0; i < GetFichasCount(); i++)
@@ -59,43 +89,28 @@ namespace DominoSimulacro
         {
             if (ficha == null)
                 return;
-            _fichas.Remove(ficha);
+            _monto.Remove(ficha);
         }
 
         public void RemoveFichaAt(int index)
         {
-            if (index >= 0 || index < _fichas.Count)
-                _fichas.RemoveAt(index);
+            if (index >= 0 || index < _monto.Count)
+                _monto.RemoveAt(index);
         }
 
         public Ficha? GetFichaAt(int index)
         {
-            if (index < 0 && index > _fichas.Count)
+            if (index < 0 && index > _monto.Count)
                 return null;
-            return _fichas[index];
+            return _monto[index];
         }
 
         public int GetFichasCount()
         {
-            return _fichas.Count;
+            return _monto.Count;
         }
 
-        public void Shuffle()
-        {
-            Random random = new Random();
-            
-            int n = _fichas.Count;
-            while (n < 1000)
-            {
-                for (int i = n - 1; i > 0; i--)
-                {
-                    int j = random.Next(0, i + 1);
-                    Ficha temp = _fichas[i];
-                    _fichas[i] = _fichas[j];
-                    _fichas[j] = temp;
-                }
-            }
-        }
+        
         public static Ficha? CreateFicha(int n1, int n2)
         {
             if (n1 >= 0 && n1 <= 6 && n2 >= 0 && n2 <= 6)
@@ -105,17 +120,6 @@ namespace DominoSimulacro
             return null;
         }
 
-        public static Ficha CreateFichas()
-        {
-            Monto monto = new Monto();
-            for (int i = 0; i <= 6; i++)
-            {
-                for (int j = i; j <= 6; j++)
-                {
-                    monto.AddFicha(new Ficha(i, j));
-                }
-            }
-            return null;
-        }
+        
     }
 }

@@ -10,6 +10,7 @@ namespace DominoSimulacro
     {
         public List<Participante>? _participantes;
         public Monto montofichas { get; set; }
+        public int numParticipantes { get; set; }
 
         public List<Participante> Participantes
         {
@@ -41,12 +42,11 @@ namespace DominoSimulacro
 
         public void CreateParticipantes()
         {
-            for (uint i = 0; i < 4; i++)
+            for (uint i = 0; i < numParticipantes; i++)
             {
                 _participantes.Add(new Impulsivo());
                 _participantes.Add(new Conservador());
             }
-            
         }
 
         public void RepartirFichas()

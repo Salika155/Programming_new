@@ -9,12 +9,19 @@ namespace DominoSimulacro
 {
     public class Monto
     {
-        private List<Ficha>? _monto;
-        public int montoCount { get { return _monto.Count; } }
+        private List<Ficha>? _monto = new List<Ficha>();
+        public int MontoCount { get { return _monto.Count; } }
 
+        //clases basadas en listas de algo, sobreescribiendo esta property indexer ya 
+        //funciona lo que esta en program como var ficha = monto[7];
+        public Ficha? this[int index]
+        {
+            get { return _monto[index]; }
+            set { _monto[index] = value; }
+        }
         public Monto()
         {
-            _monto = new List<Ficha>();
+            
         }
         public Monto(List<Ficha> _Fichas)
         {
@@ -22,20 +29,22 @@ namespace DominoSimulacro
         }
 
         //crea el monto de fichas para iniciar el juego
-        public void CreateMonto()
+        public Monto CreateMonto()
         {
             Monto monto = new Monto();
             for (int i = 0; i <= 6; i++)
             {
                 for (int j = 0; j <= 6; j++)
                 {
-                    monto.AddFicha();
+                    Ficha ficha = new Ficha(i, j);
+                    monto.AddFicha(ficha);
                 }
             }
+            return this;
         }
 
         //baraja las fichas en el tablero
-        public void Shuffle()
+        public Monto Shuffle()
         {
             Random random = new Random();
 
@@ -50,20 +59,19 @@ namespace DominoSimulacro
                     _monto[j] = temp;
                 }
             }
+            return this;
         }
 
         //añade una ficha al monto, para añadir las fichas del 0:0 al 6:6
-        public void AddFicha()
+        public void AddFicha(Ficha ficha)
         {
-            for (int i = 0; i <= 6; i++)
+            if(_monto == null /*|| _monto.isvalid()== false)*/)
             {
-                for (int j = i; j <= 6; j++)
-                {
-                    Ficha? ficha = CreateFicha(i, j);
-                    if (ficha != null && !ContainFicha(ficha))
-                        _monto.Add(ficha);
-                }
+                return;
             }
+            _monto.Add(ficha);
+                
+            
         }
 
         //comprueba que la ficha exista en el monto para no añadir repes
@@ -105,10 +113,13 @@ namespace DominoSimulacro
         }
 
         //quita una ficha del monto por su index
-        public void RemoveFichaAt(int index)
+        public Ficha? RemoveFichaAt(int index)
         {
             if (index >= 0 || index < _monto.Count)
+                return null;
+            Ficha ficha = _monto[index];
                 _monto.RemoveAt(index);
+            return ficha;
         }
 
         //elige una ficha del monto
@@ -134,5 +145,10 @@ namespace DominoSimulacro
             }
             return null;
         }
+
+        //public int GetFichaIndex(Ficha ficha)
+        //{
+            
+        //}
     }
 }

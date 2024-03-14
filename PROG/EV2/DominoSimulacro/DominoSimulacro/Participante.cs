@@ -8,7 +8,7 @@ namespace DominoSimulacro
 {
     public abstract class Participante
     {
-        public List<Ficha>? _hand;
+        protected List<Ficha>? _hand = new();
         public int _puntos;
         public string _nombre;
 
@@ -121,5 +121,14 @@ namespace DominoSimulacro
                 }
             }
         }
+
+        //public int ChooseFichaToDraw()
+        //{
+        //    Random rnd = new Random();
+        //    return rnd.Next(0, _hand.Count);
+        //}
+
+        //algoritmo de ordenacion en los jugadores pasandole una lambda ya que el swap y sort
+        //va a ser igual en los dos jugadores, excepto en el tipo de ordenacion
     }
 }

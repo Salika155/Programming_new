@@ -14,8 +14,11 @@
                 new Impulsivo()
             };
 
+            //Monto montofichas = new Monto().Fill().Shuffle();
+            //para hacer esto devolver monto en los metodos
             Monto montofichas = new Monto();
-
+            //variable pero que llama a funcion
+            var ficha = montofichas[7];
             montofichas.Shuffle();
 
 

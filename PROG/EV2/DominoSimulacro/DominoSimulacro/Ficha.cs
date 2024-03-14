@@ -69,5 +69,12 @@ namespace DominoSimulacro
         {
             return Suma;
         }
+
+        public static Ficha? Create(int n1, int n2)
+        {
+            if (n1 >= 0 && n1 <= 6 && n2 >= 0 && n2 <= 6)
+                return new Ficha(n1, n2);
+            return null;
+        }
     }
 }

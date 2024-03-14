@@ -94,7 +94,7 @@ namespace DominoSimulacro
             {
                 for (int j = i; j <= 6; j++)
                 {
-                    monto.AddFicha(new Ficha(i, j));
+                    monto.AddFicha();
                 }
             }
             return null;

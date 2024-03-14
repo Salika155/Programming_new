@@ -8,75 +8,118 @@ namespace DominoSimulacro
 {
     public abstract class Participante
     {
-        public List<Ficha>? _fichas;
+        public List<Ficha>? _hand;
         public int _puntos;
         public string _nombre;
 
         public Participante()
         {
-            _fichas = new List<Ficha>();
+            _hand = new List<Ficha>();
             _puntos = 0;
         }
 
         public Participante(List<Ficha> fichas)
         {
-            _fichas = fichas;
+            _hand = fichas;
             _puntos = 0;
         }
 
-        public void AddFicha(Ficha ficha)
+        //añade una ficha a la mano
+        public virtual void AddFicha(Ficha ficha)
         {
             if (ficha == null && ContainFicha(ficha))
                 return;
-            _fichas.Add(ficha);
+            _hand.Add(ficha);
         }
 
-        private bool ContainFicha(Ficha? ficha)
+        //comprueba si la ficha esta en la mano
+        public virtual bool ContainFicha(Ficha? ficha)
         {
-            return _fichas.Contains(ficha);
+            return _hand.Contains(ficha);
         }
 
-        public int GetFichasCount()
+        //cuenta el numero de fichas en la mano
+        public virtual int GetFichasCount()
         {
-            return _fichas.Count;
+            return _hand.Count;
         }
 
+        //elige una ficha de la mano
         public Ficha GetFichaAt(int index)
         {
-            return _fichas[index];
+            return _hand[index];
         }
 
-        public void RemoveFicha(Ficha ficha)
+        //quita una ficha de la mano
+        public virtual void RemoveFicha(Ficha ficha)
         {
             if (ficha == null)
                 return;
-            _fichas.Remove(ficha);
+            _hand.Remove(ficha);
         }
 
-        public void AddPuntos(int puntos)
+        //añade puntos del jugador
+        public virtual void AddPuntos(int puntos)
         {
             _puntos += puntos;
         }
 
-        public int GetPuntos()
+        //obtiene los puntos del jugador
+        public virtual int GetPuntos()
         {
             return _puntos;
         }
 
-        public void PlayFicha(Ficha ficha)
+        public virtual void PlayFicha(Ficha ficha)
         {
             if (ficha == null)
                 return;
         }
 
-        internal void Jugar()
+        //seria para jugar el turno, la accion de poner ficha, pero no lo tengo claro
+        public void Jugar()
         {
             throw new NotImplementedException();
         }
 
-        internal string GetNombre()
+        public virtual string GetNombre()
         {
             return _nombre;
+        }
+
+        //metodo para barajar la mano, puede ser util
+        public void ShuffleHand()
+        {
+            Random rnd = new Random();
+            int n = _hand.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rnd.Next(n + 1);
+                Ficha value = _hand[k];
+                _hand[k] = _hand[n];
+                _hand[n] = value;
+            }
+        }
+
+        //metodo para ordenar la mano, sera util luego para el tipo de jugador
+        public void OrderHand(List<Ficha> _hand)
+        {
+            int n = _hand.Count;
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (_hand[j].GetSuma() > _hand[j + 1].GetSuma())
+                    {
+                        // intercambia fichas si la suma en posición j es mayor
+                        // que la suma de la ficha en posición j+1
+                        Ficha temp = _hand[j];
+                        _hand[j] = _hand[j + 1];
+                        _hand[j + 1] = temp;
+                    }
+                }
+            }
         }
     }
 }

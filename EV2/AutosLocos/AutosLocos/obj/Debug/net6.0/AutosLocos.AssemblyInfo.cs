@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutosLocos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50aa38e64a5618963a43fc3b9c3a33b5a7e9fcd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutosLocos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutosLocos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

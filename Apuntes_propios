@@ -47,5 +47,46 @@ Para llamar al constructor desde el Main:
 #### Funciones Anónimas:
     - Sin nombre
     - Se ejecutan en el mismo lugar de definicion o se asignan a variables
+    - Permite indicar el tipo de retorno y los parámetros que recibió una función.
+Ej: Funcion que recibe un string y devuelve un entero.
+    public delegate int MiDelegado(string param);
 
+    public static int MiFuncion(string param)
+    {
+        return param.Lenght;
+    }
+Crearemos una variable tipo delegado, y asignamos la funcion a ese delegado.
+Ej:
+
+  MiDelegado d1 = MiFuncion;
+  Console.WriteLine(d1("Hola"));
+
+Utilizando funcion anonima: anonima es porque a la derecha no tiene ningun nombre de funcion.
+Crea variable delegado y asignamos un delegado que recibe parametros, para devolver 
+un int. 
+
+  MiDelegado d2 = delegate(string param)
+  {  
+    return param.Length;
+  }
+
+*OJO se pueden unir delegados. Delegado procesal recive algo por parametro pero que no devuelva nada.
+  EJ: delegate void ProcesarPersona(Persona p);
+
+      static void NombreMayus(Persona p)
+      {
+        p.Nombre = p.Nombre.ToUpper();
+      }
+
+      static void IncrementarEdad(Persona p)
+      {
+        p.Edad++;
+      }
+
+        ProcesarPersona p1 = NombreMayus;
+        ProcesarPersona p2 = IncrementarEdad;
+        ProcesarPersona resultado = p1 + p2;
+        resultado(persona[0]);
+
+- Se pueden utilizar para ordenar una lista de elementos dentro de un array
 

@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Simulacion_Autos_Locos
 {
-    internal class Human
+    public class Human : Driver
     {
+        public Human(string name) : base(name) 
+        {
+
+        }
+
+        public override double GetVelocityExtra()
+        {
+            return 0;
+        }
     }
 }

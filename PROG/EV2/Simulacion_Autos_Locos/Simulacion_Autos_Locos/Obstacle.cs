@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace Simulacion_Autos_Locos
 {
-    internal class Obstacle
+    public abstract class Obstacle : RaceObject
     {
+        public Obstacle(string name, double position) : base(name, position)
+        {
+        }
+
+        public override bool IsAlive => true;
+
+        public override ObjectType GetObjectType()
+        {
+            return ObjectType.Obstacle;
+        }
+
+        public override bool IsEnabled()
+        {
+            return true;
+        }
+
+        //para este caso no se implementa aqui tampoco, como
+        //es abstracta, las clases que hereden de esta clase
+        //deberan implementar el metodo
+        public abstract override void Simulate(IRace race);
+       
     }
 }

@@ -28,4 +28,11 @@ Puede existir mas de un constructor de la misma clase, pero la diferencia serán
 - No es necesario pasarle todos los parametros.
 
 Para llamar al constructor desde el Main:
+  - Crear una instancia del objeto. Ej -> Clase clase = new Clase()
+  - Normalmente, dentro de esos parentesis se le pasaran los parametros a meter para que el constructor se inicialize.
+    Ej -> Clase clase = new Clase(5, 7)
+  - Si posteriormente queremos llamar métodos utilizando la instancia de objeto solo necesitamos poner el nombre
+    del objeto recien creado: clase + .NombreDelMetodo
+
+  OJO: Dependiendo de los parámetros que le pasemos, el compilador puede llamar a uno u otro constructor
   

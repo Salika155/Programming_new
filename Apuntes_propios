@@ -1,6 +1,6 @@
 Posibles apuntes de programación propios: ideas y conceptos sueltos a modo de guía para reforzar y mantener un orden.
 
-Constructores:
+#### Constructores:
 - Para dar valores iniciales a un objeto, sin necesidad de utilizar setters.
 - Normalmente son funciones de visibilidad publicos, pero puede existir la necesidad de hacerlo privado.
 - No devuelve ningun tipo de valor.
@@ -42,3 +42,10 @@ Para llamar al constructor desde el Main:
   {
   }
   Destructores utilizados para liberar memomria dinámica, no muy frecuentes.
+
+
+#### Funciones Anónimas:
+    - Sin nombre
+    - Se ejecutan en el mismo lugar de definicion o se asignan a variables
+
+

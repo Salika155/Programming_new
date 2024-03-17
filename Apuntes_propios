@@ -1,2 +1,13 @@
 Posibles apuntes de programación propios: ideas y conceptos sueltos a modo de guía para reforzar y mantener un orden.
 
+Constructores:
+- Para dar valores iniciales a un objeto, sin necesidad de utilizar setters
+- Normalmente son funciones de visibilidad publicos, pero puede existir la necesidad de hacerlo privado.
+
+Estructura de los constructores: 
+  - public o private + nombre de la clase + ()
+  - public Clase()
+    {
+  
+    }
+  - Dentro de los corchetes se define como será el objeto

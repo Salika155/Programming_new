@@ -35,4 +35,10 @@ Para llamar al constructor desde el Main:
     del objeto recien creado: clase + .NombreDelMetodo
 
   OJO: Dependiendo de los parámetros que le pasemos, el compilador puede llamar a uno u otro constructor
-  
+
+* Para ampliar: Existen también Destructores. Serán llamados dentro de la clase al igual que el constructor.
+  Se crea utilizando el símbolo "~" delante del nombre
+ - ~Clase()
+  {
+  }
+  Destructores utilizados para liberar memomria dinámica, no muy frecuentes.

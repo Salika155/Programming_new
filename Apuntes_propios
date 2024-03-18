@@ -1,0 +1,92 @@
+Posibles apuntes de programación propios: ideas y conceptos sueltos a modo de guía para reforzar y mantener un orden.
+
+#### Constructores:
+- Para dar valores iniciales a un objeto, sin necesidad de utilizar setters.
+- Normalmente son funciones de visibilidad publicos, pero puede existir la necesidad de hacerlo privado.
+- No devuelve ningun tipo de valor.
+
+Estructura de los constructores: 
+  - public o private + nombre de la clase + ()
+  Constructor por defecto:
+  - public Clase()
+    {
+  
+    }
+  - Dentro de los corchetes se define como será el objeto
+  - public Clase()
+    {
+      x = 35;
+      y = 5;
+    }
+
+Puede existir mas de un constructor de la misma clase, pero la diferencia serán los parámetros que se le pasarán
+- public Clase(int newX, int newY)
+    {
+      x = newX;
+      y = newY;
+    }
+- No es necesario pasarle todos los parametros.
+
+Para llamar al constructor desde el Main:
+  - Crear una instancia del objeto. Ej -> Clase clase = new Clase()
+  - Normalmente, dentro de esos parentesis se le pasaran los parametros a meter para que el constructor se inicialize.
+    Ej -> Clase clase = new Clase(5, 7)
+  - Si posteriormente queremos llamar métodos utilizando la instancia de objeto solo necesitamos poner el nombre
+    del objeto recien creado: clase + .NombreDelMetodo
+
+  OJO: Dependiendo de los parámetros que le pasemos, el compilador puede llamar a uno u otro constructor
+
+* Para ampliar: Existen también Destructores. Serán llamados dentro de la clase al igual que el constructor.
+  Se crea utilizando el símbolo "~" delante del nombre
+ - ~Clase()
+  {
+  }
+  Destructores utilizados para liberar memomria dinámica, no muy frecuentes.
+
+
+#### Funciones Anónimas:
+    - Sin nombre
+    - Se ejecutan en el mismo lugar de definicion o se asignan a variables
+    - Permite indicar el tipo de retorno y los parámetros que recibió una función.
+Ej: Funcion que recibe un string y devuelve un entero.
+    public delegate int MiDelegado(string param);
+
+    public static int MiFuncion(string param)
+    {
+        return param.Lenght;
+    }
+Crearemos una variable tipo delegado, y asignamos la funcion a ese delegado.
+Ej:
+
+  MiDelegado d1 = MiFuncion;
+  Console.WriteLine(d1("Hola"));
+
+Utilizando funcion anonima: anonima es porque a la derecha no tiene ningun nombre de funcion.
+Crea variable delegado y asignamos un delegado que recibe parametros, para devolver 
+un int. 
+
+  MiDelegado d2 = delegate(string param)
+  {  
+    return param.Length;
+  }
+
+*OJO se pueden unir delegados. Delegado procesal recive algo por parametro pero que no devuelva nada.
+  EJ: delegate void ProcesarPersona(Persona p);
+
+      static void NombreMayus(Persona p)
+      {
+        p.Nombre = p.Nombre.ToUpper();
+      }
+
+      static void IncrementarEdad(Persona p)
+      {
+        p.Edad++;
+      }
+
+        ProcesarPersona p1 = NombreMayus;
+        ProcesarPersona p2 = IncrementarEdad;
+        ProcesarPersona resultado = p1 + p2;
+        resultado(persona[0]);
+
+- Se pueden utilizar para ordenar una lista de elementos dentro de un array
+

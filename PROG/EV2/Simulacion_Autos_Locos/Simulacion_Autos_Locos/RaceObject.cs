@@ -18,8 +18,7 @@ namespace Simulacion_Autos_Locos
         private string _name;
         private double _position;
         //private bool _isAlive;
-        private bool _isAlive;
-
+        private bool _isAlive = true;
         protected int _turnsDisabled;
 
         public string Name

@@ -23,7 +23,7 @@ namespace Simulacion_Autos_Locos
             return new Race();
         }
 
-        public void AddObject(RaceObject obj, double position)
+        public void AddObject(RaceObject? obj, double position)
         {
             if (position > 0 && position < _distance)
             {
@@ -78,19 +78,26 @@ namespace Simulacion_Autos_Locos
 
         public void Init(double distance)
         {
+            if (distance > 0)
+                _distance = 0;
             _distance = distance;
         }
 
+        //cada turno llama al simulate de todos y comprueba de que esten vivos
+        //funciones agregadas para visitar los objetos
         public void SimulateStep()
         {
             foreach (RaceObject obj in _RaceObjects)
             {
                 obj.Simulate(this);
             }
+            _RaceObjects.RemoveAll(obj => !obj.IsAlive);
         }
 
         public void VisitCars(List<RaceObject> visitor)
         {
+            if (visitor == null)
+                return;
             foreach (RaceObject obj in _RaceObjects)
             {
                 if (obj.GetObjectType() == ObjectType.Car)

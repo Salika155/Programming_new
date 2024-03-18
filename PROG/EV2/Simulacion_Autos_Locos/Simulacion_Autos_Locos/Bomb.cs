@@ -41,7 +41,7 @@ namespace Simulacion_Autos_Locos
                 {
                     double displacement = Utils.GetRandomInt(-50, 50);
                     raceObject.Position += displacement;
-                    raceObject.Disable(3);
+                    
                 }
             }
             _exploded = true;

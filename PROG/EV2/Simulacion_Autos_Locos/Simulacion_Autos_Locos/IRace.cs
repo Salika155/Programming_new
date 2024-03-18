@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Simulacion_Autos_Locos
 {
+    //public delegate void ActionDrivers<T>(T obj);
     public interface IRace
     {
         List<RaceObject> GetRacers();

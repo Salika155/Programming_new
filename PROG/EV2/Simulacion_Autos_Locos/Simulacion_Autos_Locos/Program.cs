@@ -20,6 +20,12 @@ namespace Simulacion_Autos_Locos
             race.AddObject(new Puddle(15), Utils.GetRandomInt(0, 1000));
             race.AddObject(new Bomb(20, Utils.GetRandomInt(0, 1000)));
 
+
+            //race.VisitDrivers(obj =>
+            //{
+            //    Driver d = (Driver)obj;
+            //});
+
             //inicializo la carrera
             race.Init(1000);
 

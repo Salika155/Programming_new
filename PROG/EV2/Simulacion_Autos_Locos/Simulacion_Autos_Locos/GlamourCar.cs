@@ -16,5 +16,19 @@ namespace Simulacion_Autos_Locos
         {
             return new List<Driver> { new Human("Penelope") };
         }
+
+        public override void Simulate(IRace race)
+        {
+            if (race == null) 
+                return;
+            if (_turnsDisabled > 0)
+            {
+                _turnsDisabled--;
+                return;
+            }
+            Position += 20 + _finetunning;
+        }
+
+        //isdisabled
     }
 }

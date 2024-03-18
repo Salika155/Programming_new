@@ -89,4 +89,10 @@ un int.
         resultado(persona[0]);
 
 - Se pueden utilizar para ordenar una lista de elementos dentro de un array
+EJ: delegate int ComparadorPersona(Persona p1, Persona p2);
+
+static int CompararPorEdad(Persona p1, Persona p2)
+{
+  return p1.Nombre.CompareTo(p2.Nombre);
+}
 

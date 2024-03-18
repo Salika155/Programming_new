@@ -11,6 +11,8 @@ namespace Simulacion_Autos_Locos
         private int _turnsToExplosion;
         private bool _exploded = false;
 
+        public override bool IsAlive => base.IsAlive;
+
         public Bomb(int turns, double position) : base("Bob-ombs", position)
         {
             _turnsToExplosion = turns;
@@ -20,13 +22,21 @@ namespace Simulacion_Autos_Locos
         {
             if (_turnsToExplosion == 0)
             {
-                Explode(race);
-            }
-            else
-            {
                 _turnsToExplosion--;
+                return;
             }
+            _exploded = true;
+
+            //race.VisitCars(car =>
+            //{
+            //    if (Utils.Probability(0.5))
+            //    {
+            //        car.Disable(3);
+            //    }
+            //});
+        
         }
+
 
         private void Explode(IRace race) 
         {
@@ -39,12 +49,14 @@ namespace Simulacion_Autos_Locos
                 double distance = Utils.CalculateDistance(bombPosition, raceObject.Position);
                 if (distance < 20)
                 {
-                    double displacement = Utils.GetRandomInt(-50, 50);
+                    double displacement = Utils.GetRandomInt(-50, 51);
                     raceObject.Position += displacement;
                     
                 }
             }
             _exploded = true;
         }
+
+
     }
 }

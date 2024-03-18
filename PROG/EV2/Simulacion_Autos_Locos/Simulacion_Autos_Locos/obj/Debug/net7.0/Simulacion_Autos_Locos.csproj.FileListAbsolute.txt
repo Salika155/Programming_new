@@ -13,3 +13,17 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Simulaci
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\ref\Simulacion_Autos_Locos.dll
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.exe
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.deps.json
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.runtimeconfig.json
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.dll
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.pdb
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.AssemblyInfo.cs
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.dll
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\refint\Simulacion_Autos_Locos.dll
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.pdb
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.genruntimeconfig.cache
+C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\ref\Simulacion_Autos_Locos.dll

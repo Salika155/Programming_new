@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj": {}
+    "C:\\Users\\carre\\Desktop\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj": {
+    "C:\\Users\\carre\\Desktop\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj",
         "projectName": "Simulacion_Autos_Locos",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\Simulacion_Autos_Locos\\Simulacion_Autos_Locos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

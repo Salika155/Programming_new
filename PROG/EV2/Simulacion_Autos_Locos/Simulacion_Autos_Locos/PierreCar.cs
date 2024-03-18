@@ -20,6 +20,7 @@ namespace Simulacion_Autos_Locos
         public override void Simulate(IRace race)
         {
             base.Simulate(race);
+            //TODO: Implementar la lógica de Pierre Nodoyuna
         }
     }
     

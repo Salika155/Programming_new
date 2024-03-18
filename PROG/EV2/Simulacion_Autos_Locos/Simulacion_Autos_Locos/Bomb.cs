@@ -32,14 +32,16 @@ namespace Simulacion_Autos_Locos
         {
             double bombPosition = this.Position;
 
-            foreach (var racer in race.GetRacers())
+            for (int i = 0; i < race.GetObjectsCount(); i++)
             {
-                double distance = Utils.CalculateDistance(bombPosition, racer.Position);
+                RaceObject raceObject = race.GetObjectAt(i);
+                
+                double distance = Utils.CalculateDistance(bombPosition, raceObject.Position);
                 if (distance < 20)
                 {
                     double displacement = Utils.GetRandomInt(-50, 50);
-                    racer.Position += displacement;
-                    racer.Disable(3);
+                    raceObject.Position += displacement;
+                    raceObject.Disable(3);
                 }
             }
             _exploded = true;

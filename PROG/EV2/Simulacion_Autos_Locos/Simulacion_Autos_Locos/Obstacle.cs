@@ -24,9 +24,11 @@ namespace Simulacion_Autos_Locos
             return true;
         }
 
+        #region anotaciones
         //para este caso no se implementa aqui tampoco, como
         //es abstracta, las clases que hereden de esta clase
         //deberan implementar el metodo
+        #endregion
         public abstract override void Simulate(IRace race);
        
     }

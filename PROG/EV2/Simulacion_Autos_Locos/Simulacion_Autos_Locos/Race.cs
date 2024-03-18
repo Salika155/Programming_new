@@ -34,7 +34,6 @@ namespace Simulacion_Autos_Locos
 
         public void AddObject(Bomb bomb)
         {
-
             _RaceObjects.Add(bomb);
         }
 
@@ -127,9 +126,14 @@ namespace Simulacion_Autos_Locos
             }
         }
 
-        object IRace.IsWinner()
+        void IRace.IsWinner()
         {
-            return GetWinner();
+            GetWinner();
         }
+
+        //public override RaceObject IsWinner()
+        //{
+        //    return GetWinner();
+        //}
     }
 }

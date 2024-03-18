@@ -27,7 +27,9 @@ namespace Simulacion_Autos_Locos
         //devuelve el objeto en la posicion index
         RaceObject GetObjectAt(int index);
         void AddObject(Bomb bomb);
-        object IsWinner();
+
+        //la unica forma que encontre de que funcionase
+        void IsWinner();
         RaceObject GetWinner();
         //RaceObject GetRacers();
     }

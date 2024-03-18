@@ -24,22 +24,21 @@ namespace Simulacion_Autos_Locos
             double rockPosition = Position;
             List<RaceObject> _racers = race.GetRacers();
 
-            foreach (RaceObject raceObject1 in race.GetRacers()) 
+            for (int i = 0; i < race.GetObjectsCount(); i++)
             {
-                double distance = Utils.CalculateDistance(rockPosition, raceObject1.Position);
+                RaceObject raceObject = race.GetObjectAt(i);
+                double distance = Utils.CalculateDistance(rockPosition, raceObject.Position);
 
                 if (distance < 40)
                 {
                     double delayProbability = 0.1 + (_weight / 100);
                     if (Utils.Probability(delayProbability))
                     {
-                        raceObject1.Position -= 25;
+                        raceObject.Position -= 25;
                     }
                 }
                 //TODO: implementar el comportamiento de la roca
             }
-
-
         }
     }
 }

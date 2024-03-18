@@ -12,7 +12,6 @@ namespace Simulacion_Autos_Locos
         {
         }
 
-       
         static List<Driver> GenerateDrivers(string driverName)
         {
             return new List<Driver> { new Human("Penelope") };

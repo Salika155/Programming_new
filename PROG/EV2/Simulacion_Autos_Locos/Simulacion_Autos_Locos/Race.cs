@@ -34,6 +34,7 @@ namespace Simulacion_Autos_Locos
 
         public void AddObject(Bomb bomb)
         {
+
             _RaceObjects.Add(bomb);
         }
 
@@ -67,9 +68,11 @@ namespace Simulacion_Autos_Locos
 
         public RaceObject GetWinner()
         {
-            if (IsWinner())
+            List<RaceObject> racers = GetRacers();
+
+            if (racers != null && racers.Count > 0 && IsWinner())
             {
-                return GetRacers()[0];
+                return racers[0]; 
             }
             return null;
         }

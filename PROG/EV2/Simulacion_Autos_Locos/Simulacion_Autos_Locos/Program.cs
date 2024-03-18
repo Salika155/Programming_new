@@ -1,4 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
+﻿
 
 namespace Simulacion_Autos_Locos
 {
@@ -38,6 +38,9 @@ namespace Simulacion_Autos_Locos
             {
                 Console.WriteLine("No hay ganador");
             }
+
+        //enlace de una carrera de autos locos que encontre:
+        //https://www.youtube.com/watch?v=gNTol7swS00&ab_channel=HernanNadal
         }
     }
 }

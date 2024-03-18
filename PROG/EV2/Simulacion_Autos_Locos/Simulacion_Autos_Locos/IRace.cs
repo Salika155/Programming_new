@@ -8,8 +8,10 @@ namespace Simulacion_Autos_Locos
 {
     public interface IRace
     {
+        List<RaceObject> GetRacers();
         //Agrega un objeto a la carrera en una posicion
         void AddObject(RaceObject obj, double position);
+        //void AddObjectBomb(RaceObject obj, int turns, double position);
         //Inicia la carrera con una distancia
         void Init(double distance);
         //Simula el avance de la carrera
@@ -24,5 +26,9 @@ namespace Simulacion_Autos_Locos
         int GetObjectsCount();
         //devuelve el objeto en la posicion index
         RaceObject GetObjectAt(int index);
+        void AddObject(Bomb bomb);
+        object IsWinner();
+        RaceObject GetWinner();
+        //RaceObject GetRacers();
     }
 }

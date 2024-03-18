@@ -17,6 +17,12 @@ namespace Simulacion_Autos_Locos
             _RaceObjects = new List<RaceObject>();
         }
 
+        //para acceder al constructor privado
+        public static Race CreateRace()
+        {
+            return new Race();
+        }
+
         public void AddObject(RaceObject obj, double position)
         {
             if (position > 0 && position < _distance)
@@ -25,6 +31,17 @@ namespace Simulacion_Autos_Locos
                 _RaceObjects.Add(obj);
             }
         }
+
+        public void AddObject(Bomb bomb)
+        {
+            _RaceObjects.Add(bomb);
+        }
+
+        //public void AddObjectBomb(RaceObject obj, int turns, double position)
+        //{
+        //    obj.Position = position;
+        //    _RaceObjects.Add(obj, turns);
+        //}
 
         public RaceObject GetObjectAt(int index)
         {
@@ -43,34 +60,73 @@ namespace Simulacion_Autos_Locos
             return _RaceObjects;
         }
 
+        public bool IsWinner()
+        {
+            return GetRacers().Count == 1;
+        }
+
+        public RaceObject GetWinner()
+        {
+            if (IsWinner())
+            {
+                return GetRacers()[0];
+            }
+            return null;
+        }
+
         public void Init(double distance)
         {
-            throw new NotImplementedException();
+            _distance = distance;
         }
 
         public void SimulateStep()
         {
-            throw new NotImplementedException();
+            foreach (RaceObject obj in _RaceObjects)
+            {
+                obj.Simulate(this);
+            }
         }
 
         public void VisitCars(List<RaceObject> visitor)
         {
-            throw new NotImplementedException();
+            foreach (RaceObject obj in _RaceObjects)
+            {
+                if (obj.GetObjectType() == ObjectType.Car)
+                    visitor.Add(obj);
+            }
         }
 
         public void VisitDrivers(List<RaceObject> visitor)
         {
-            throw new NotImplementedException();
+            foreach (RaceObject obj in _RaceObjects)
+            {
+                if (obj.GetObjectType() == ObjectType.Driver)
+                    visitor.Add(obj);
+            }
         }
 
         public void VisitObjects(List<RaceObject> visitor)
         {
-            throw new NotImplementedException();
+            foreach (RaceObject obj in _RaceObjects)
+            {
+                visitor.Add(obj);
+            }
         }
 
         public void VisitObstacles(List<RaceObject> visitor)
         {
-            throw new NotImplementedException();
+            foreach (RaceObject raceObject in _RaceObjects)
+            {
+                if (raceObject.GetObjectType() == ObjectType.Obstacle)
+                {
+                    visitor.Add(raceObject);
+                }
+            }
+        }
+
+        object IRace.IsWinner()
+        {
+            return GetWinner();
         }
     }
 }

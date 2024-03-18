@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Simulacion_Autos_Locos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adff7cb00c95face784ebcb99872e8c0460c5a55")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04b4563be1aa06bfa1b7305e789e25a51f4b20c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Simulacion_Autos_Locos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Simulacion_Autos_Locos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

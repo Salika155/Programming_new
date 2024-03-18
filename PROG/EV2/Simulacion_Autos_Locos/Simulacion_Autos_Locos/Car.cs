@@ -19,7 +19,11 @@ namespace Simulacion_Autos_Locos
             _velocity = velocity;
             _drivers = drivers;
         }
-        public override bool IsAlive => throw new NotImplementedException();
+
+        public override bool IsAlive
+        {
+            get { return _turnsDisabled <= 0; }
+        }
 
         public override ObjectType GetObjectType()
         {

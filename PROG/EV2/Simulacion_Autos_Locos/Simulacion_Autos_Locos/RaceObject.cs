@@ -63,5 +63,10 @@ namespace Simulacion_Autos_Locos
                 _turnsDisabled += turns;
             return;
         }
+
+        public string GetName()
+        {
+            return _name;
+        }
     }
 }

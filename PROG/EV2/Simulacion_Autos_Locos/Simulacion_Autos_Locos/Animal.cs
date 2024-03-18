@@ -10,6 +10,7 @@ namespace Simulacion_Autos_Locos
     {
         public Animal(string name) : base(name)
         {
+
         }
 
         public override double GetVelocityExtra()

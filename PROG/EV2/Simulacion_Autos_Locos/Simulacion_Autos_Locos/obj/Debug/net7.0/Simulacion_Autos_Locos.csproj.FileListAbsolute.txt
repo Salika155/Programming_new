@@ -27,3 +27,17 @@ C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\n
 C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.pdb
 C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.genruntimeconfig.cache
 C:\Users\carre\Desktop\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\ref\Simulacion_Autos_Locos.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\bin\Debug\net7.0\Simulacion_Autos_Locos.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\refint\Simulacion_Autos_Locos.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\Simulacion_Autos_Locos.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV2\Simulacion_Autos_Locos\Simulacion_Autos_Locos\obj\Debug\net7.0\ref\Simulacion_Autos_Locos.dll

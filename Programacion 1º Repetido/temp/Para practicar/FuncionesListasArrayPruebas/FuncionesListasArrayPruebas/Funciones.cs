@@ -188,6 +188,8 @@ namespace FuncionesListasArrayPruebas
 
         //Funcion igual con array
 
+        //crear funcion countelements para que funcione
+
         //RemoveValues que estan en una lista 
 
         //removevalues para array

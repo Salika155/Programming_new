@@ -36,6 +36,7 @@ namespace DamLib
 
             for (int i = 0; i < _count; i++)
             {
+                //primero se compara el hash y luego el elemento
                 if (!_items[i].Element.Equals(itemElement._items[i].Element))
                     return false;
             }
@@ -54,6 +55,7 @@ namespace DamLib
         }
 
         // +Add(element:T)
+        //mejor crear el newitem en un constructor
         public void Add(T element)
         {
             if (element == null || Contains(element))

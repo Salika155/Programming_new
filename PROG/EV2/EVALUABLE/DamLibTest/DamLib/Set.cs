@@ -49,12 +49,12 @@ namespace DamLib
             T[] newArray = new T[_count - 1];
             int index = IndexOf(element);
             
-            for (int i = 0, j = 0; i < _count; i++)
+            for (int i = 0;  i < _count; i++)
             {
                 if (i != index)
                 {
-                    newArray[i] = _set[i];
-                    j++;
+                    newArray[index++] = _set[i];
+                    
                 }
             }
             _set = newArray;

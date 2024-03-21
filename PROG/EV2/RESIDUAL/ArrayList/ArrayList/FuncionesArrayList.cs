@@ -253,12 +253,12 @@ namespace ArrayList
             int max = listasinordenar[0];
 
 
-            //for (int i = 1; i < listasinordenar.Count; i++)
-            //{
-            //    //rehacer
-            //    if (listasinordenar[i] == GetNumberMayorRepeated(listasinordenar))
-            //        countrepet++;
-            //}
+            for (int i = 1; i < listasinordenar.Count; i++)
+            {
+                //rehacer
+                if (listasinordenar[i] == GetNumberMayorRepeated(listasinordenar))
+                    countrepet++;
+            }
             return countrepet;
 
         }

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamLibTest", "DamLibTest\DamLibTest.csproj", "{88C42AD5-9D87-4F05-AC0A-B4A3FA05AFAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DamLib", "DamLib\DamLib.csproj", "{4BFF6120-139B-4779-9799-346CC58C294C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C42AD5-9D87-4F05-AC0A-B4A3FA05AFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C42AD5-9D87-4F05-AC0A-B4A3FA05AFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C42AD5-9D87-4F05-AC0A-B4A3FA05AFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C42AD5-9D87-4F05-AC0A-B4A3FA05AFAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFF6120-139B-4779-9799-346CC58C294C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFF6120-139B-4779-9799-346CC58C294C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFF6120-139B-4779-9799-346CC58C294C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFF6120-139B-4779-9799-346CC58C294C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DFB3F9D-4194-46EC-9658-9B10BC0C7560}
+	EndGlobalSection
+EndGlobal

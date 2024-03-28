@@ -8,13 +8,19 @@ using System.Xml.Linq;
 
 namespace DamLib
 {
-    public class Tree <T>
+    public class Tree<T>
     {
+        // Javi: Pon esto arriba del todo
+        delegate void VisitDelegade<T>(Node<T> node);
+        // Javi: Arriba del todo
+        public delegate bool CheckDelegate<T>(Node<T> node);
+
         public class Node<T>
         {
             private T _content;
             private List<Node<T>> _children = new List<Node<T>>();
             private Node<T>? _parent;
+            // Javi: NO!! Esto no es un atributo
             private Node<T>? _root;
             //WeakReference<Node<T>> _parentWeak;
 
@@ -31,6 +37,7 @@ namespace DamLib
                 }
                 set
                 {
+                    // Javi: Muy bien
                     if (_parent != null)
                     {
                         _parent.RemoveChild(this);
@@ -55,7 +62,7 @@ namespace DamLib
                     _content = value;
                 }
             }
-            
+
             public bool IsRoot
             {
                 get
@@ -84,9 +91,11 @@ namespace DamLib
             {
                 get
                 {
-                    if (_parent == null)
-                        return 0;
-                    return _parent.Level + 1;
+                    // Javi: Por que no llamas a la funcion que tienes abajo??
+                    //if (_parent == null)
+                    //    return 0;
+                    //return _parent.Level + 1;
+                    return GetLevel();
                 }
             }
 
@@ -94,13 +103,16 @@ namespace DamLib
             {
                 get
                 {
-                    if (_parent == null)
-                        return this;
-                    return _parent.Root;
+                    // Javi: Por que no llamas a la funcion que tienes abajo??
+                    //if (_parent == null)
+                    //    return this;
+                    //return _parent.Root;
+                    return GetRoot();
                 }
             }
 
-            public int IndexOf(Node<T> node)
+            // Javi: Mejor, IndexOfChild
+            public int IndexOfChild(Node<T> node)
             {
                 for (int i = 0; i < _children.Count; i++)
                 {
@@ -114,7 +126,7 @@ namespace DamLib
 
             private void RemoveChild(Node<T> node)
             {
-                int index = IndexOf(node);
+                int index = IndexOfChild(node);
                 if (index != -1)
                 {
                     _children.RemoveAt(index);
@@ -147,7 +159,7 @@ namespace DamLib
                     _parent.RemoveChild(this);
                 _parent = null;
             }
-            
+
             //private void Unlink1()
             //{
             //    if (_parent != null)
@@ -190,7 +202,7 @@ namespace DamLib
             public bool HasSibling()
             {
                 if (_parent != null)
-                    return _parent._children.Count > 0;
+                    return _parent._children.Count > 1; // Javi: 1
                 return false;
             }
 
@@ -220,8 +232,6 @@ namespace DamLib
                 return false;
             }
 
-            delegate void VisitDelegade<T>(Node<T> node);
-
             //recorrer todos los nodos
             void Visit(VisitDelegade<T> visitor)
             {
@@ -233,8 +243,6 @@ namespace DamLib
                     _children[i].Visit(visitor);
                 }
             }
-
-            public delegate bool CheckDelegate<T>(Node<T> node);
 
             public Node<T>? FindNode(CheckDelegate<T> checker)
             {
@@ -262,7 +270,7 @@ namespace DamLib
 
                 if (checker == null)
                     return result;
-                
+
                 if (checker(_content))
                 {
                     result.Add(this);
@@ -309,9 +317,13 @@ namespace DamLib
                     var child = _children[i];
                     var node = child.Filter(checker);
 
-                    foreach (var childNode in node)
+                    // Javi: Mal
+                    if (node != null)
                     {
-                        result.Add(childNode);
+                        foreach (var childNode in node)
+                        {
+                            result.Add(childNode);
+                        }
                     }
                     //if (node != null)
                     //    result.Add(child);

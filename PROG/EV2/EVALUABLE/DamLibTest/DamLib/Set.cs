@@ -12,8 +12,9 @@ namespace DamLib
         //Set<T>
         //- _set:T[]
         private T[] _set = new T[0];
+        // Javi: En realidad este atributo no debería ser necesario
         private int _count = 0;
-        
+
         public override bool Equals(object? obj)
         {
             if (this == obj)
@@ -21,14 +22,24 @@ namespace DamLib
             if (obj is not Set<T>)
                 return false;
             Set<T> s = (Set<T>)obj;
-            return s._set == _set && s._count == _count;
+            // Javi: Hasta aquí bien, esto mal
+            //return s._set == obj && s._count == _count;
+            if (s.Count != _count)
+                return false;
+
+            foreach(var item in _set)
+            {
+                if (!s._set.Contains(item))
+                    return false;
+            }
+            return true;
         }
 
         // +Add(element:T)
         public void Add(T element)
         {
             if (element == null || Contains(element))
-                    return;
+                return;
 
             T[] setElement = new T[_count + 1];
             for (int i = 0; i < _count; i++)
@@ -48,13 +59,13 @@ namespace DamLib
 
             T[] newArray = new T[_count - 1];
             int index = IndexOf(element);
-            
-            for (int i = 0;  i < _count; i++)
+
+            for (int i = 0, j = 0; i < _count; i++)
             {
                 if (i != index)
                 {
-                    newArray[index++] = _set[i];
-                    
+                    newArray[i] = _set[i];
+                    j++;
                 }
             }
             _set = newArray;
@@ -86,18 +97,20 @@ namespace DamLib
             get => _count;
         }
 
+        // Javi: MAL!!!, llama al index of
         // +Contains(element:T):bool
         public bool Contains(T element)
         {
-            if (Empty)
-                return false;
+            //if (Empty)
+            //    return false;
 
-            for (int i = 0; i < _count; i++)
-            {
-                if (_set[i].Equals(element))
-                return true;
-            }
-            return false;
+            //for (int i = 0; i < _count; i++)
+            //{
+            //    if (_set[i].Equals(element))
+            //        return true;
+            //}
+            //return false;
+            return IndexOf(element) != -1;
         }
 
         public int IndexOf(T element)

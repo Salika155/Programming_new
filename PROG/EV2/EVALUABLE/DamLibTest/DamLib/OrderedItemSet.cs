@@ -3,25 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DamLib
 {
     public class OrderedItemSet<T>
     {
-            private class Item
+        private class Item
+        {
+            public T Element;
+            public int hash;
+
+            public Item(T element, int hash)
             {
-                public T Element;
-                public int hash;
-
-                public Item(T element, int hash)
-                {
-                    this.Element = element;
-                    this.hash = hash;
-                }
+                this.Element = element;
+                this.hash = hash;
             }
+        }
 
-            private Item[] _item1 = new Item[0];
-            private int _count = 0;
+        private Item[] _item1 = new Item[0];
+        private int _count = 0;
+
+        // +Empty: bool
+        public bool Empty
+        {
+            get => _count == 0;
+        }
+
+        // +Count:int
+
+        public int Count
+        {
+            get => _count;
+        }
 
         public override bool Equals(object? obj)
         {
@@ -71,29 +85,33 @@ namespace DamLib
             newArray[_count] = newItem;
             _item1 = newArray;
             _count++;
+
+            Sort();
+            // Javi: Y cuando ordenas
         }
 
         // +Remove(element:T)
         public void Remove(T element)
         {
-            if (element == null || !Contains(element))
-                return;
-
+             // Javi: Mejor haber usado IndexOf antes, y te ahorras el Contains
             int index = IndexOf(element);
 
-            Item[] newArray = new Item[_count - 1];
-
-            for (int i = 0; i < index; i++)
+            if (index != -1)
             {
-                newArray[i] = _item1[i];
-            }
+                Item[] newArray = new Item[_count - 1];
 
-            for (int i = index + 1; i < _count; i++)
-            {
-                newArray[i - 1] = _item1[i];
+                for (int i = 0; i < index; i++)
+                {
+                    newArray[i] = _item1[i];
+                }
+
+                for (int i = index + 1; i < _count; i++)
+                {
+                    newArray[i - 1] = _item1[i];
+                }
+                _item1 = newArray;
+                _count--;
             }
-            _item1 = newArray;
-            _count--;
 
             #region comentado
             //T[] newArray = new T[Count - 1];
@@ -116,40 +134,25 @@ namespace DamLib
             #endregion
         }
 
-        // +Empty: bool
-        public bool Empty
-        {
-            get => _count == 0;
-        }
-
-        // +Count:int
-
-        public int Count
-        {
-            get => _count;
-        }
-
         // +Contains(element:T):bool
-
         public bool Contains(T element)
         {
-            for (int i = 0; i < _count; i++)
-            {
-                if (_item1[i].Element.Equals(element))
-                    return true;
-            }
-            return false;
+            return IndexOf(element) != -1;
             //return indexof(element)
         }
 
         public int IndexOf(T index)
         {
-            if (index == null || _count <= 0)
+            if (index == null)
                 return -1;
-            
+
+            int hasCode = index.GetHashCode();
+
             for (int i = 0; i < _count; i++)
             {
-                if (_item1[i].Element.Equals(index))
+                T currentElement = _item1[i].Element;
+                // Javi: No usas el hash
+                if (currentElement.GetHashCode() == hasCode && currentElement.Equals(index))
                 {
                     return i;
                 }
@@ -157,6 +160,7 @@ namespace DamLib
             return -1;
         }
 
+        // Javi: Esto es el index of
         //hay que hacer un binary search
         public bool BinarySearch(T element)
         {
@@ -187,7 +191,8 @@ namespace DamLib
         }
 
         //Sort
-        public void Sort()
+        // Javi: Primero, esto es private, segundo, cuando lo usas!??!?!!?
+        private void Sort()
         {
             if (_count <= 0)
                 return;

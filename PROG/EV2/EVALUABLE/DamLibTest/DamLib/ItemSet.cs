@@ -23,6 +23,18 @@ namespace DamLib
         private Item[] _items =  new Item[0];
         private int _count = 0;
 
+        // +Empty: bool
+        public bool Empty
+        {
+            get => _count == 0;
+        }
+
+        // +Count:int
+        public int Count
+        {
+            get => _count;
+        }
+
         public override bool Equals(object? obj)
         {
             if (this == obj)
@@ -30,10 +42,10 @@ namespace DamLib
             if (obj is not ItemSet<T>)
                 return false;
             ItemSet<T> itemElement = (ItemSet<T>)obj;
-
+            // Javi: Busca un nombre mejor
             if (_count != itemElement._count)
                 return false;
-
+            // Javi: MUY BIEN!!!!!!!!!!!
             for (int i = 0; i < _count; i++)
             {
                 //primero se compara el hash y luego el elemento
@@ -46,6 +58,7 @@ namespace DamLib
         public override int GetHashCode()
         {
             int hash = 5;
+            // Javi: Muy bien!!!!!
             for (int i = 0; i < _count; i++)
             {
                 int elementHash = _items[i].Hash;
@@ -78,25 +91,25 @@ namespace DamLib
         // +Remove(element:T)
         public void Remove(T element)
         {
-            if (element == null || !Contains(element))
-                return;
-
+            // Javi: Mejor haber usado IndexOf antes, y te ahorras el Contains
             int index = IndexOf(element);
 
-            Item[] newArray = new Item[_count - 1];
-
-            for (int i = 0; i < index; i++)
+            if (index != -1)
             {
-                newArray[i] = _items[i];
-            }
+                Item[] newArray = new Item[_count - 1];
 
-            for (int i = index + 1; i < _count; i++)
-            {
-                newArray[i - 1] = _items[i];
-            }
-            _items = newArray;
-            _count--;
+                for (int i = 0; i < index; i++)
+                {
+                    newArray[i] = _items[i];
+                }
 
+                for (int i = index + 1; i < _count; i++)
+                {
+                    newArray[i - 1] = _items[i];
+                }
+                _items = newArray;
+                _count--;
+            }
             #region comentado
             //T[] newArray = new T[Count - 1];
 
@@ -118,38 +131,26 @@ namespace DamLib
             #endregion
         }
 
-        // +Empty: bool
-        public bool Empty
-        {
-            get => _count == 0;
-        }
-
-        // +Count:int
-        public int Count
-        {
-            get => _count;
-        }
-
+        // Javi: MAL!!!! Usa IndexOf
         // +Contains(element:T):bool
         public bool Contains(T element)
         {
-            for (int i = 0; i < _count; i++)
-            {
-                if (_items[i].Element.Equals(element))
-                    return true;
-            }
-            return false;
+           return IndexOf(element) != -1;
             //return indexof(element)
         }
 
-        public int IndexOf(T index)
+        public int IndexOf(T element)
         {
-            if (index == null)
+            if (element == null)
                 return -1;
+
+            int hasCode = element.GetHashCode();
 
             for (int i = 0; i < _count; i++)
             {
-                if (_items[i].Element.Equals(index))
+                T currentElement = _items[i].Element;
+                // Javi: No usas el hash
+                if (currentElement.GetHashCode() == hasCode && currentElement.Equals(element))
                 {
                     return i;
                 }

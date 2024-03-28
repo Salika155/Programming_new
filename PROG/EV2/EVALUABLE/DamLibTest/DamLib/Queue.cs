@@ -26,6 +26,8 @@ namespace DamLib
             }
             queueAux[_count] = element;
             _queue = queueAux;
+            _count++;
+            // Javi: Y _count que?
         }
 
         //+Dequeue():T
@@ -37,7 +39,7 @@ namespace DamLib
             T dequeuedElement = _queue[0];
 
             T[] deQueueAux = new T[_count - 1];
-            for (int  i = 0; i < _count - 1; i++)
+            for (int i = 0; i < _count - 1; i++)
             {
                 deQueueAux[i] = _queue[i + 1];
             }
@@ -63,7 +65,7 @@ namespace DamLib
                 {
                     return default(T);
                 }
-                return _queue[0]; 
+                return _queue[0];
             }
         }
         //public T First => IsEmpty ? default(T) : _queue[0];

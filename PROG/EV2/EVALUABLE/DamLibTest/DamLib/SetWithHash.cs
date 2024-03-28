@@ -15,6 +15,18 @@ namespace DamLib
         private int[] _hash = new int[0];
         private int _count = 0;
 
+        // +Empty: bool
+        public bool Empty
+        {
+            get => _count == 0;
+        }
+
+        // +Count:int
+        public int Count
+        {
+            get => _count;
+        }
+
         public override bool Equals(object? obj)
         {
             if (this == obj)
@@ -22,7 +34,16 @@ namespace DamLib
             if (obj is not SetWithHash<T>)
                 return false;
             SetWithHash<T> s = (SetWithHash<T>)obj;
-                return s._set == _set && s.Count == _count;
+            //return s._set == _set && s.Count == _count;
+            if (s.Count != _count)
+                return false;
+
+            foreach (var item in _set)
+            {
+                if (!s._set.Contains(item))
+                    return false;
+            }
+            return true;
         }
 
 #nullable disable
@@ -44,31 +65,37 @@ namespace DamLib
             if (newElement == null || Contains(newElement))
                 return;
 
-            int hash = newElement.GetHashCode();
-
-            T[] setelement = new T[_count + 1];
-            int[] hashArray = new int[_count + 1];
-
-            for (int i = 0; i < _count; i++)
+            if (_count == _set.Length)
             {
-                setelement[i] = _set[i];
-                hashArray[i] = hash;
+                // Duplicar el tamaño del arreglo
+                T[] newSet = new T[_set.Length * 2];
+                int[] newHash = new int[_hash.Length * 2];
+
+                // Copiar los elementos existentes al nuevo arreglo
+                for (int i = 0; i < _count; i++)
+                {
+                    newSet[i] = _set[i];
+                    newHash[i] = _hash[i];
+                }
+
+                // Actualizar referencias
+                _set = newSet;
+                _hash = newHash;
             }
 
-            //for (int i = 0; i < hashArray.Length; i++)
-            //{
-            //    hashArray[i] = hash;
-            //}
-
-            //arrayTemporal[_set.Length] ) element;
-            //_set = arrayTemporal;
-
-            setelement[_count] = newElement;
-            hashArray[_count] = hash;
-
-            _set = setelement;
-            _hash = hashArray;
+            // Agregar el nuevo elemento al final del arreglo
+            _set[_count] = newElement;
+            _hash[_count] = newElement.GetHashCode();
+            _count++; // Incrementar el contador de elementos
         }
+
+        //for (int i = 0; i < hashArray.Length; i++)
+        //{
+        //    hashArray[i] = hash;
+        //}
+
+        //arrayTemporal[_set.Length] ) element;
+        //_set = arrayTemporal;
 
         // +Remove(element:T)
         public void Remove(T element)
@@ -76,7 +103,7 @@ namespace DamLib
             int index = IndexOf(element);
             if (index < 0)
                 return;
-            
+
             T[] newArray = new T[Count - 1];
             int[] newHashArray = new int[Count - 1];
 
@@ -84,12 +111,13 @@ namespace DamLib
             {
                 if (i != index)
                 {
-                    newArray[i] = _set[i];
+                    // Javi: Mal
+                    newArray[j] = _set[i];
                     newHashArray[j] = _hash[i];
                     j++;
                 }
             }
-               
+
             for (int i = index + 1; i < Count; i++)
             {
                 newArray[i - 1] = _set[i];
@@ -111,29 +139,19 @@ namespace DamLib
          */
         #endregion
 
-        // +Empty: bool
-        public bool Empty
-        {
-            get => _count == 0;
-        }
-
-       // +Count:int
-        public int Count
-        {
-            get => _count;
-        }
-
         // +Contains(element:T):bool
 #nullable disable
+        // Javi: Mal, llamar al index of
         public bool Contains(T checkElement)
         {
-            int hash = checkElement.GetHashCode();
-            for (int i = 0; i < _count; i++)
-            {
-                if (_hash[i] == hash && _set[i].Equals(checkElement))
-                    return true;
-            }
-            return false;
+            //int hash = checkElement.GetHashCode();
+            //for (int i = 0; i < _count; i++)
+            //{
+            //    if (_hash[i] == hash && _set[i].Equals(checkElement))
+            //        return true;
+            //}
+            //return false;
+            return IndexOf(checkElement) != -1;
         }
 #nullable enable
 

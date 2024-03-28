@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DamLib
 {
-    public class Stack <T>
+    public class Stack<T>
     {
         //Stack<T>
         //- _stack:T[]
-        private T[] _stack = new T[0]; 
+        private T[] _stack = new T[0];
 
         //+Push(newElement:T);
         public void Push(T newElement)

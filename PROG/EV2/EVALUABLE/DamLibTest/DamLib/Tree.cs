@@ -15,13 +15,15 @@ namespace DamLib
         // Javi: Arriba del todo
         public delegate bool CheckDelegate<T>(Node<T> node);
 
+        public delegate bool CheckDelegateNode<T>(T element);
+
         public class Node<T>
         {
             private T _content;
             private List<Node<T>> _children = new List<Node<T>>();
             private Node<T>? _parent;
             // Javi: NO!! Esto no es un atributo
-            private Node<T>? _root;
+            //private Node<T>? _root;
             //WeakReference<Node<T>> _parentWeak;
 
             public Node(T content)
@@ -132,6 +134,7 @@ namespace DamLib
                     _children.RemoveAt(index);
                 }
             }
+
             public int GetLevel()
             {
                 if (_parent == null)
@@ -262,7 +265,6 @@ namespace DamLib
                 return null;
             }
 
-            public delegate bool CheckDelegateNode<T>(T element);
 
             private List<Node<T>> FindNode(CheckDelegateNode<T> checker/* List<Node<T>> list*/)
             {

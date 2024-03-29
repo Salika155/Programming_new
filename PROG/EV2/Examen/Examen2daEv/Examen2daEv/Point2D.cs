@@ -10,26 +10,28 @@ namespace Examen2daEv
     {
         private double _x;
         private double _y;
+        
 
-        public Point2D()
+        // Javi: Ok
+        public Point2D(double x, double y)
         {
-
+            this._x = x;
+            this._y = y;
         }
 
-        public Point2D(double x, double y) 
+        public override string ToString()
         {
-            _x = x;
-            _y = y;
+            return "(" + _x + ", " + _y + ")";
         }
 
-        public double getX() 
-        {
-            return _x;
-        }
+        //public double getX()
+        //{
+        //    return _x;
+        //}
 
-        public double getY()
-        {
-            return _y;        
-        }
+        //public double getY()
+        //{
+        //    return _y;
+        //}
     }
 }

@@ -14,6 +14,19 @@ namespace Examen2daEv
         public double B;
         public double A;
 
+        public Color(double r, double g, double b, double a)
+        {
+            R = r;
+            G = g;
+            B = b;
+            A = a;
+        }
+
+        public override string ToString()
+        {
+            //averiguar el por que de hacer esto
+            return "(" + R + ", " + G + ", " + B + ", " + A + ")";
+        }
 
     }
 }

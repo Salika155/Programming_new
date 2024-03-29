@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 
 namespace Examen2daEv
 {
+
+    // Javi: Rectángulo mal planteado, no tiene 4 puntos, no has cumplido las especificaciones
     public class Rect2D
     {
+        // Javi: Y estos intros
+
+        public double X { get;}
+        public double Y { get; }
+        public double Width { get; }
+        public double Height { get; }
+
+        public Rect2D(double x, double y, double width, double height)
+        {
+            X = x;
+            Y = y;
+            Width = width;
+            Height = height;
+        }
         
 
-        private Point2D _xi;
-        private Point2D _yi;
-        private Point2D _xs;
-        private Point2D _ys;
-
-        public Rect2D(Point2D xi, Point2D yi, Point2D xs, Point2D ys)
-        {
-            _xi = xi;
-            _yi = yi;
-            _xs = xs;
-            _ys = ys;
-        }
+        public bool IsValid() => Width != null && Height != null;
 
         //public override void DrawRectangle()
         //{

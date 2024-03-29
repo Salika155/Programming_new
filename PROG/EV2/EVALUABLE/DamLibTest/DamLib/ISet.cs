@@ -9,10 +9,7 @@ namespace DamLib
 {
     public interface ISet<T>
     {
-        bool Empty
-        {
-            get;
-        }
+        bool Empty => Count == 0;
         int Count { get; }
         void Clear();
         void Add(T item);
@@ -20,7 +17,5 @@ namespace DamLib
         bool Contains(T item);
 
         //pruebas unitarias
-
-        
     }
 }

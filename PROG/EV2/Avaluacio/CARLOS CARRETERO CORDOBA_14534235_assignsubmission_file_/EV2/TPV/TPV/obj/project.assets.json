@@ -1,0 +1,92 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "TPVLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/TPVLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TPVLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TPVLib/1.0.0": {
+      "type": "project",
+      "path": "../TPVLib/TPVLib.csproj",
+      "msbuildProject": "../TPVLib/TPVLib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "TPVLib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\carre\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\TPV\\TPV\\TPV.csproj",
+      "projectName": "TPV",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\TPV\\TPV\\TPV.csproj",
+      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\TPV\\TPV\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\TPV\\TPVLib\\TPVLib.csproj": {
+              "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\TPV\\TPVLib\\TPVLib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

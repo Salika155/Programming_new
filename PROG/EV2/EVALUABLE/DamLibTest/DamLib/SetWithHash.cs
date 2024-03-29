@@ -16,16 +16,16 @@ namespace DamLib
         private int _count = 0;
 
         // +Empty: bool
-        public bool Empty
-        {
-            get => _count == 0;
-        }
+        public bool Empty => _count == 0;
+        //{
+        //    get => _count == 0;
+        //}
 
         // +Count:int
-        public int Count
-        {
-            get => _count;
-        }
+        public int Count => _count;
+        //{
+        //    get => _count;
+        //}
 
         public override bool Equals(object? obj)
         {

@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj",
+        "projectName": "DiccionarioApp",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\DiccionarioApp\\DiccionarioApp\\DiccionarioApp.csproj",
+        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Avaluacio\\CARLOS CARRETERO CORDOBA_14534235_assignsubmission_file_\\EV2\\DiccionarioApp\\DiccionarioApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

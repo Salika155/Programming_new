@@ -22,6 +22,7 @@ namespace Examen2daEv
         public virtual void DrawCircle(Rect2D circle, Color color)
         {
             
+            
         }
 
         // Javi: No implementada
@@ -39,7 +40,10 @@ namespace Examen2daEv
         // Javi: No implementada
         public virtual void SetColor(Color color)
         {
-            
+            if (color == null)
+            {
+               SetColor(color);
+            }
         }
     }
 }

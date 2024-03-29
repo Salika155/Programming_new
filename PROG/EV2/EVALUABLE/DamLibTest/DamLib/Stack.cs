@@ -52,17 +52,17 @@ namespace DamLib
         }
 
         //+IsEmpty():bool
-        public bool IsEmpty()
-        {
-            //si el tamaño es 0, esta vacio
-            return _stack.Length == 0;
-        }
+        public bool IsEmpty() => _stack.Length == 0;
+        //{
+        //    //si el tamaño es 0, esta vacio
+        //    return _stack.Length == 0;
+        //}
 
         //+GetCount():int
-        public int GetCount()
-        {
-            return _stack.Length;
-        }
+        public int GetCount() => _stack.Length;
+        //{
+        //    return _stack.Length;
+        //}
 
         //-> Libreria -> DAMLibTest
         //DAMlibTest

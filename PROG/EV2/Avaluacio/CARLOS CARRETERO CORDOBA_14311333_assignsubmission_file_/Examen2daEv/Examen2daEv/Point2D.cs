@@ -30,6 +30,7 @@ namespace Examen2daEv
 
         public double getY()
         {
-            return _y;        }
+            return _y;        
+        }
     }
 }

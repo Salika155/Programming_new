@@ -33,10 +33,8 @@ namespace DamLib
 
             public Node<T> Parent
             {
-                get
-                {
-                    return _parent;
-                }
+                get => _parent;
+                
                 set
                 {
                     // Javi: Muy bien
@@ -55,63 +53,48 @@ namespace DamLib
 
             public T Content
             {
-                get
-                {
-                    return _content;
-                }
-                set
-                {
-                    _content = value;
-                }
+                get => _content;
+                set => _content = value;
             }
 
-            public bool IsRoot
-            {
-                get
-                {
-                    return _parent == null;
-                }
-            }
+            public bool IsRoot => _parent == null;
+            //{
+            //    get => _parent == null;
+            //}
 
-            public bool IsLeaf
-            {
-                get
-                {
-                    return _children.Count == 0;
-                }
-            }
+            public bool IsLeaf => _children.Count == 0;
+            //{
+            //    get => _children.Count == 0;
+            //}
 
-            public int ChildCount
-            {
-                get
-                {
-                    return _children.Count;
-                }
-            }
+            public int ChildCount => _children.Count;
+            //{
+            //    get => _children.Count;
+            //}
 
-            public int Level
-            {
-                get
-                {
-                    // Javi: Por que no llamas a la funcion que tienes abajo??
-                    //if (_parent == null)
-                    //    return 0;
-                    //return _parent.Level + 1;
-                    return GetLevel();
-                }
-            }
+            public int Level => GetLevel();
+            //{
+            //    get => GetLevel();
+            //    //{
+            //    //    // Javi: Por que no llamas a la funcion que tienes abajo??
+            //    //    //if (_parent == null)
+            //    //    //    return 0;
+            //    //    //return _parent.Level + 1;
+            //    //    return GetLevel();
+            //    //}
+            //}
 
-            private Node<T> Root
-            {
-                get
-                {
-                    // Javi: Por que no llamas a la funcion que tienes abajo??
-                    //if (_parent == null)
-                    //    return this;
-                    //return _parent.Root;
-                    return GetRoot();
-                }
-            }
+            private Node<T> Root => GetRoot();
+            //{
+            //    get => GetRoot();
+            //    //{
+            //    //    // Javi: Por que no llamas a la funcion que tienes abajo??
+            //    //    //if (_parent == null)
+            //    //    //    return this;
+            //    //    //return _parent.Root;
+            //    //    return GetRoot();
+            //    //}
+            //}
 
             // Javi: Mejor, IndexOfChild
             public int IndexOfChild(Node<T> node)

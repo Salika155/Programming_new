@@ -8,15 +8,19 @@ namespace Examen2_2daEv
 {
     public interface IShape
     {
+
+
+        // Javi: Todas las properties están mal
+        // aparte de eso, todas dan stack overflow
         public string Name
         {
             get
             {
-                return Name;
+                return _name;
             }
             set
             {
-                Name = value;
+                _name = value;
             }
         }
 
@@ -39,34 +43,35 @@ namespace Examen2_2daEv
                 return false;
             }
         }
-                
 
-        public double Area 
+
+        public double Area
         {
             get
             {
                 return Area;
-            } 
-         }
-        public double Perimeter 
+            }
+        }
+        public double Perimeter
         {
             get
             {
                 return Perimeter;
             }
         }
-        Point2D Center {
+        Point2D Center
+        {
             get
             {
                 return Center;
             }
         }
-        Rect2D Rect 
+        Rect2D Rect
         {
             get
             {
                 return Rect;
-            } 
+            }
         }
 
         void DrawCircle(ICanvas canvas);

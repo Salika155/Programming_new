@@ -11,13 +11,10 @@ namespace Examen2_2daEv
         public int ShapeCount { get; set; }
         
        
-        
-
-        
         public void AddShape(IShape shape)
         {
             if (shape == null)
-                return;
+                return;  
             
         }
 

@@ -6,33 +6,40 @@ using System.Threading.Tasks;
 
 namespace Examen2daev3
 {
-    public class ExList <T>
+    public class ExList<T>
     {
         T[] _list = new T[0];
 
-        public int Count { get { return _list.Length; } }
-        public T First { get { return _list[0]; } }
-        public T Last { get { return _list[Count]; } }
-
+        // Javi: Se puede saber por qué diantres has puesto esto private?!?!?!!?!?!?!?
+        private int Count { get { return _list.Length; } }
+        // Javi: Mal
+        private T First { get { return _list[0]; } }
+        // Javi: Mal
+        private T Last { get { return _list[Count]; } }
+        // Javi: Sin implementar
         //private T Reversed { get { return _list.Reverse(); } }
 
         public ExList()
         {
-            _list = new T[0];
+            // Javi: Mal
+            T[] _list = new T[0];
         }
 
+        // Javi: Devuelve un int!??!!?!?!?!?!?!?!?!?!??!!?
         public int GetElementAt(int index)
         {
-            if (index <  0 || index >= _list.Length)
+            if (index < 0 || index >= _list.Length)
                 return default;
-            for (int i = 0; i < _list.Length; i++) 
+            // Javi: Sólo por esto, está todo el examen mal
+            for (int i = 0; i < _list.Length; i++)
             {
-                
-                    return i;
+
+                return i;
             }
             return default;
         }
 
+        // Javi: No entiendo nada
         public T[] Reverse(T item)
         {
             T[] _list = new T[0];
@@ -47,42 +54,44 @@ namespace Examen2daev3
             return _list;
         }
 
+        // Javi: Mal
         public void SetElementAt(int index, T element)
         {
             if (index < 0 || index > _list.Length)
                 return;
 
-            
+
             for (int i = 0; i < _list.Length; ++i)
             {
-               
-                    _list[i] = element;
+
+                _list[i] = element;
 
 
-                
+
             }
 
         }
 
+        // Javi: Mal
         public void Add(T element)
         {
             if (element == null)
                 return;
-            
-                Add(element);
+
+            Add(element);
         }
 
-        public T RemoveAt(int index) 
+        public T RemoveAt(int index)
         {
             for (int i = 0; i < _list.Length; i++)
             {
                 for (int j = i + 1; j < _list.GetLength(i); j++)
                 {
-                    T[] arraynuevo = new T[_list.Length -1];
+                    T[] arraynuevo = new T[_list.Length - 1];
                     //if (_list[i] = 
-                    
+
                 }
-                
+
 
             }
             return (T)_list[index];
@@ -90,10 +99,11 @@ namespace Examen2daev3
 
         public void Clear()
         {
+            // Javi: Mal
             T[] _list = new T[0];
         }
 
-         
+
 
         public int IndexOf(T element)
         {
@@ -107,13 +117,14 @@ namespace Examen2daev3
             return -1;
         }
 
-        public bool Contains(T element) 
+        public bool Contains(T element)
         {
+            // Javi: Ya dije que esto no se podía hacer
             return _list.Contains(element);
 
         }
 
-        
+
 
 
     }

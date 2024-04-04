@@ -466,6 +466,8 @@ namespace ArrayList
                     max2 = element;
                 }    
             }
+            result.Add(max1);
+            result.Add(max2);
             return result;  
         }
 
@@ -587,7 +589,6 @@ namespace ArrayList
                     count++;
                 }
             }
-
             return count;
         }
 

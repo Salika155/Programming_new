@@ -1,0 +1,4 @@
+
+ "input foders" : ["f1", "f2", "f3"],
+ "options" : ["keep directories", "keep files"],
+ "output_folder" : "out1",

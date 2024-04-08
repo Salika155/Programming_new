@@ -12,18 +12,15 @@ namespace Proyecto_Detecta_Copias
         private string _name;
         private bool _isDuplicate;
 
-        public string Ruta { get => _ruta; /*set;*/ }
+        public string Ruta { get; set; }
         public string Name { get; set; }
         public bool IsDuplicate { get; set; }
 
         public FileClass(string ruta)
         {
-            Ruta = ruta;
-            Name = System.IO.Path.GetFileName(ruta);
+            _ruta = ruta;
+            _name = System.IO.Path.GetFileName(ruta);
             IsDuplicate = false;
         }
-
-
-
     }
 }

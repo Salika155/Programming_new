@@ -4,12 +4,12 @@ using System.Text.Json;
 namespace Proyecto_Detecta_Copias
 {
 
-    public class AppParams
-    {
-        public string[]? imput_folders  { get; set; }
-        public string[]? options { get; set; }
-        public string? output_folder { get; set;}
-    }
+    //public class AppParams
+    //{
+    //    public string[]? Imput_folders  { get; set; }
+    //    public string[]? Options { get; set; }
+    //    public string? OutputFolder { get; set;}
+    //}
     internal class Program
     {
         static void Main(string[] args)
@@ -110,17 +110,17 @@ namespace Proyecto_Detecta_Copias
             //}
             #endregion
 
-            string RUTAdELaRCHIVOcONlOSPath = args[0];
-            try
-            {
-                string jsonContent = File.ReadAllText(RUTAdELaRCHIVOcONlOSPath);
-                var obj = JsonSerializer.Deserialize<AppParams>(jsonContent);
+            //string RUTAdELaRCHIVOcONlOSPath = args[0];
+            //try
+            //{
+            //    string jsonContent = File.ReadAllText(RUTAdELaRCHIVOcONlOSPath);
+            //    var obj = JsonSerializer.Deserialize<AppParams>(jsonContent);
 
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
 
             //if (args.Length < 2)
             //{

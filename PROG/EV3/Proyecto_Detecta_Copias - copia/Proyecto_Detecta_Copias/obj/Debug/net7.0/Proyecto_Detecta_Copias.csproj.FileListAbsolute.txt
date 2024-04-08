@@ -20,3 +20,10 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Co
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.dll
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\refint\Proyecto_Detecta_Copias.dll
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\Proyecto_Detecta_Copias - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\ref\Proyecto_Detecta_Copias.dll

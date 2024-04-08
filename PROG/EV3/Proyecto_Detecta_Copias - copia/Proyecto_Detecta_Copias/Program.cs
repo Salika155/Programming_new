@@ -1,7 +1,15 @@
 ﻿using System.Security.Cryptography;
+using System.Text.Json;
 
 namespace Proyecto_Detecta_Copias
 {
+
+    public class AppParams
+    {
+        public string[]? imput_folders  { get; set; }
+        public string[]? options { get; set; }
+        public string? output_folder { get; set;}
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -102,6 +110,17 @@ namespace Proyecto_Detecta_Copias
             //}
             #endregion
 
+            string RUTAdELaRCHIVOcONlOSPath = args[0];
+            try
+            {
+                string jsonContent = File.ReadAllText(RUTAdELaRCHIVOcONlOSPath);
+                var obj = JsonSerializer.Deserialize<AppParams>(jsonContent);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
 
             //if (args.Length < 2)
             //{
@@ -127,6 +146,20 @@ namespace Proyecto_Detecta_Copias
             Console.WriteLine("Completado");
 
         }
+
+        //foreach(string route in args)
+        //{ Console.WriteLine(route); }
+        //MODO RELEASE PARA EJECUTAR DESDE CMD no esta codigo fuente
+        //desensamblador 
+        //ofuscador de codigo para que no se pueda leer el codigo fuente
+        //csharp environment variables
+        //depurar codigo
+
+        //esto va dentro de un doc txt
+        //"input foders" : ["f1", "f2", "f3"],
+        //options" : ["keep directories", "keep files"],
+        //"output_folder" : "out1"
+
     }
 }
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace nuevoEx1raRep
 {
-    public enum Gender
+    public enum GenderType
     {
         M, F, N
     }
@@ -16,7 +16,7 @@ namespace nuevoEx1raRep
     {
         private string _name = "";
         private int _age;
-        private Gender _gender;
+        private GenderType _gender;
         private double _height;
         private double _weight;
         private Notes _notes = new Notes();
@@ -33,7 +33,7 @@ namespace nuevoEx1raRep
             set => _age = value;
         }
 
-        public Gender Gender
+        public GenderType Gender
         {
             get => _gender;
             set => _gender = value;

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace nuevoEx1raRep
 {
-    public class Notes : Student
+   
+    public class Notes
     {
+        private List<Note> noteList = new List<Note>();
+
         private double _math;
         private double _literature;
         private double _english;
@@ -18,12 +21,31 @@ namespace nuevoEx1raRep
 
         public Notes() 
         {
+            for (int i = 0; i < (int)AsignatureType.Count - 1; i++)
+            {
+                Note note = new((AsignatureType)i);
+                noteList.Add(note);
+            }
+        }
 
+        public Notes(Notes notes)
+        {
+            for (int i = 0; i < notes.Count; i++)
+            {
+                noteList.Add(notes.noteList[i]);
+            }
+
+        }
+
+        public bool IsValid(int index)
+        {
+            return index >= 0 && index < noteList.Count;
         }
 
         public double Count
         {
             get => _notesCount;
+            set { _notesCount = value; }
         }
 
         public double Math
@@ -69,10 +91,109 @@ namespace nuevoEx1raRep
             return notes;
         }
 
-        public void SetQualificationForSignature()
+        public Note? GetNoteAt(int index)
         {
-            
+            if (IsValid(index))
+                return noteList[index];
+            return null;
         }
+
+        public Note? GetNoteByAsignature(AsignatureType asignature)
+        {
+            foreach (var note in noteList)
+            {
+                if (note.Asignature == asignature)
+                    return note;
+            }
+            return null;
+        }
+
+        public double GetMarkWithAsignature(AsignatureType asignature)
+        {
+            Note? note = GetNoteByAsignature(asignature);
+            if (note != null)
+                return note.Value;
+            return 0;
+        }
+
+        public void SetMarkWithAsignature(AsignatureType asignature, double mark)
+        {
+            Note? note = GetNoteByAsignature(asignature);
+            if (note != null)
+                note.Value = mark;
+        }
+
+        public double GetMayorMark()
+        {
+            double mayor = 0;
+            foreach (var note in noteList)
+            {
+                if (note.Value > mayor)
+                    mayor = note.Value;
+            }
+            return mayor;
+        }
+
+        public double GetNoteWithHigherQualification()
+        {
+            double mayor = 0;
+            foreach (var note in noteList)
+            {
+                if (note.Value > mayor)
+                    mayor = note.Value;
+            }
+            return mayor;
+        }
+
+        public double GetNoteWithLowerQualification()
+        {
+            double menor = 10;
+            foreach (var note in noteList)
+            {
+                if (note.Value < menor)
+                    menor = note.Value;
+            }
+            return menor;
+        }
+
+
+
+
+
+
+        //public static double GetQualificationForSignature(Notes notes, string subject)
+        //{
+            
+        //}
+        //public static void SetQualificationForSignature(Notes notes, string subject, double qualification)
+        //{
+            
+        //}
+
+        //public static double GetAverageAll(Notes notes)
+        //{
+            
+        //}
+
+        //public static double GetSignatureWithHigherQualification(Notes notes)
+        //{
+            
+        //}
+
+        //public static double GetSignatureWithLowerQualification(Notes notes)
+        //{
+            
+        //}
+
+        //public static double GetHigherMark(Notes notes)
+        //{
+            
+        //}
+
+        //public static double GetLowerMark(Notes notes)
+        //{
+            
+        //}
 
 
     }

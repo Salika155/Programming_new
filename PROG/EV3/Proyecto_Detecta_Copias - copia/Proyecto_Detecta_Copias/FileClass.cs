@@ -12,7 +12,7 @@ namespace Proyecto_Detecta_Copias
         private string _name;
         private bool _isDuplicate;
 
-        public string Ruta { get; set; }
+        public string Ruta { get => _ruta;}
         public string Name { get; set; }
         public bool IsDuplicate { get; set; }
 
@@ -22,5 +22,6 @@ namespace Proyecto_Detecta_Copias
             _name = System.IO.Path.GetFileName(ruta);
             IsDuplicate = false;
         }
+        //https://www.tutorialsteacher.com/csharp/csharp-stream-io
     }
 }

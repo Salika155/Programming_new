@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\bin\Debug\net7.0\nuevoEx1raRep.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\bin\Debug\net7.0\nuevoEx1raRep.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\bin\Debug\net7.0\nuevoEx1raRep.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\bin\Debug\net7.0\nuevoEx1raRep.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\bin\Debug\net7.0\nuevoEx1raRep.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\refint\nuevoEx1raRep.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\nuevoEx1raRep.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\nuevoEx1raRep\nuevoEx1raRep\obj\Debug\net7.0\ref\nuevoEx1raRep.dll

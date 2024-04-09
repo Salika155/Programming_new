@@ -12,36 +12,33 @@ namespace nuevoEx1raRep
     }
     public class Note
     {
-        
         private AsignatureType _asignature;
         private double _value;
-        private AsignatureType i;
 
-        public AsignatureType Asignature
-        {
-            get => _asignature;
-            set => _asignature = value;
-        }
-
-        public double Value
-        {
-            get => _value;
-            set => _value = value;
-        }
-
-        public Note()
-        {
-        }
-
-        public Note (AsignatureType asignature, double value)
+        public Note(AsignatureType asignature)
         {
             _asignature = asignature;
+        }
+
+        public AsignatureType GetAsignature()
+        {
+            return _asignature;
+        }
+
+        public double GetValue()
+        {
+            return _value;
+        }  
+        
+        public void SetValue(double value)
+        {
+            if (IsValid(value))
             _value = value;
         }
 
-        public Note(AsignatureType i)
+        public bool IsValid(double value)
         {
-            this.i = i;
+           return value >= 0 && value <= 10;
         }
     }
 }

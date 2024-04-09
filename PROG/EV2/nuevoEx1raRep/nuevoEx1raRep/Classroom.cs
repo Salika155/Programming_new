@@ -17,7 +17,7 @@ namespace nuevoEx1raRep
 
         public Classroom(List<Student> students)
         {
-            
+            _students = students;
 
         }
 
@@ -32,6 +32,14 @@ namespace nuevoEx1raRep
             set => _name = value;
         }
 
+        public Student? GetStudentAt(int index)
+        {
+            if (index >= 0 && index < _students.Count)
+                return _students[index];
+            return null;
+
+        }
+
         public void AddStudent(Student student)
         {
             if (student == null)
@@ -41,10 +49,34 @@ namespace nuevoEx1raRep
 
         public void RemoveStudentAt(int index)
         {
-            if (index < 0 || index >= _students.Count)
-                return;
-            _students.RemoveAt(index);
+            if (index >= 0 && index < _students.Count)
+                _students.RemoveAt(index);
         }
+
+        public int GetStudentWithName(string name)
+        {
+            if (name == null)
+                return -1;
+            for (int i = 0; i < _students.Count; i++)
+            {
+                if (_students[i].Name == name)
+                    return i;
+            }
+            return -1;
+        }
+
+        public List<int> GetStudentsIndexWithName(string name)
+        {
+            List<int> result = new List<int>();
+            for(int i = 0; i < _students.Count; i++)
+            {
+                if (_students[i].Name == name)
+                    result.Add(i);
+            }
+            return result;
+        }
+
+
 
         public bool ContainStudentWithName(string name)
         {
@@ -56,7 +88,7 @@ namespace nuevoEx1raRep
             //        return true;
             //}
             //return false;
-            return IndexOfStudentWithName(name) != -1;
+            return (GetStudentsIndexWithName != null);
 
         }
 
@@ -72,22 +104,35 @@ namespace nuevoEx1raRep
             //        return;
             //    }
             //}
-            int index = IndexOfStudentWithName(name);
-            if (index != -1)
-                _students.RemoveAt(index);
-
+            int deleteCount = 0;
+            List<int> result = GetStudentsIndexWithName(name);
+            foreach (var index in result)
+            {
+                _students.RemoveAt(index - deleteCount);
+                deleteCount++;
+            }
         }
 
-        public int IndexOfStudentWithName(string name)
-        {
-            if (name == null)
-                return -1;
-           for (int i = 0; i < _students.Count; i++)
-           {
-                if (_students[i].Name == name)
-                    return i;
-           }
-           return -1;
-        }
+        //public int IndexOfStudentWithName(string name)
+        //{
+        //    if (name == null)
+        //        return -1;
+        //   for (int i = 0; i < _students.Count; i++)
+        //   {
+        //        if (_students[i].Name == name)
+        //            return i;
+        //   }
+        //   return -1;
+        //}
+        //public List<Student> GetStudentsWithAge(int age)
+        //{
+        //    List<Student> students = new List<Student>();
+        //    foreach (var student in _students)
+        //    {
+        //        if (student.Age == age)
+        //            students.Add(student);
+        //    }
+        //    return students;
+        //}
     }
 }

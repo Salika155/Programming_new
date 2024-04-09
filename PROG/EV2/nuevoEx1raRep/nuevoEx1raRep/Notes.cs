@@ -9,7 +9,7 @@ namespace nuevoEx1raRep
    
     public class Notes
     {
-        private List<Note> noteList = new List<Note>();
+        private readonly List<Note> noteList = new List<Note>();
 
         private double _math;
         private double _literature;
@@ -21,7 +21,7 @@ namespace nuevoEx1raRep
 
         public Notes() 
         {
-            for (int i = 0; i < (int)AsignatureType.Count - 1; i++)
+            for (int i = 0; i < (int)AsignatureType.Count; i++)
             {
                 Note note = new((AsignatureType)i);
                 noteList.Add(note);
@@ -32,9 +32,8 @@ namespace nuevoEx1raRep
         {
             for (int i = 0; i < notes.Count; i++)
             {
-                noteList.Add(notes.noteList[i]);
+                noteList.Add(GetNoteAt(i));
             }
-
         }
 
         public bool IsValid(int index)
@@ -89,6 +88,7 @@ namespace nuevoEx1raRep
             notes.Science = _science;
 
             return notes;
+            //return new Notes(this);
         }
 
         public Note? GetNoteAt(int index)
@@ -100,66 +100,86 @@ namespace nuevoEx1raRep
 
         public Note? GetNoteByAsignature(AsignatureType asignature)
         {
-            foreach (var note in noteList)
+            for (int i = 0; i < noteList.Count; i++)
             {
-                if (note.Asignature == asignature)
-                    return note;
+                if (noteList[i].GetAsignature() == asignature)
+                    return noteList[i];
             }
             return null;
         }
 
         public double GetMarkWithAsignature(AsignatureType asignature)
         {
-            Note? note = GetNoteByAsignature(asignature);
-            if (note != null)
-                return note.Value;
-            return 0;
+           for (int i = 0; i < noteList.Count; i++)
+            {
+                if (noteList[i].GetAsignature() == asignature)
+                    return noteList[i].GetValue();
+            }
+            return -1;
         }
 
         public void SetMarkWithAsignature(AsignatureType asignature, double mark)
         {
-            Note? note = GetNoteByAsignature(asignature);
-            if (note != null)
-                note.Value = mark;
+            for (int i = 0; i < noteList.Count; i++)
+            {
+                if (noteList[i].GetAsignature() == asignature)
+                    noteList[i].SetValue(mark);
+            }
         }
 
         public double GetMayorMark()
         {
+            int count = 0;
             double mayor = 0;
-            foreach (var note in noteList)
+            for (int i = 0; i < noteList.Count;i++) 
             {
-                if (note.Value > mayor)
-                    mayor = note.Value;
+                mayor += noteList[i].GetValue();
+                count++;
             }
-            return mayor;
+            return mayor / count;
         }
 
-        public double GetNoteWithHigherQualification()
+        public Note GetNoteWithHigherQualification()
         {
-            double mayor = 0;
-            foreach (var note in noteList)
+           var note = noteList[0];
+            for (int i = 0; i < noteList.Count; i++)
             {
-                if (note.Value > mayor)
-                    mayor = note.Value;
+                if (noteList[i].GetValue() > note.GetValue())
+                    note = noteList[i];
             }
-            return mayor;
+            return note;
         }
 
-        public double GetNoteWithLowerQualification()
+        public Note GetNoteWithLowerQualification()
         {
-            double menor = 10;
-            foreach (var note in noteList)
+            var note = noteList[0];
+            for (int i = 0; i < noteList.Count; i++)
             {
-                if (note.Value < menor)
-                    menor = note.Value;
+                if (noteList[i].GetValue() < note.GetValue())
+                    note = noteList[i];
             }
-            return menor;
+            return note;
         }
 
+        public AsignatureType GetAsignatureWithHigherMark()
+        {
+            return GetNoteWithHigherQualification().GetAsignature();
+        }
 
+        public AsignatureType GetAsignatureWithLowerMark()
+        {
+            return GetNoteWithLowerQualification().GetAsignature();
+        }
 
+        public double GetHigherMark()
+        {
+            return GetNoteWithHigherQualification().GetValue();
+        }
 
-
+        public double GetLowerMark()
+        {
+            return GetNoteWithLowerQualification().GetValue();
+        }
 
         //public static double GetQualificationForSignature(Notes notes, string subject)
         //{
@@ -194,7 +214,6 @@ namespace nuevoEx1raRep
         //{
             
         //}
-
 
     }
 }

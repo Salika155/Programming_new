@@ -29,7 +29,7 @@ namespace nuevoEx1raRep
 
         public int Age
         {
-            get => _age;
+            get => GetAge();
             set => _age = value;
         }
 
@@ -69,10 +69,32 @@ namespace nuevoEx1raRep
             Age = age;
         }
 
-        public static  double GetCalculateIMC(double height, double weight)
+        public int GetAge()
+        {
+            return _age;
+        }
+
+        public double GetIMC()
+        {
+            return _weight / (_height * _height);
+        }
+
+        public static double GetCalculateIMC(double height, double weight)
         {
             return weight / (height * height);
         }
+
+        public double GetBestMark()
+        {
+            double result = _notes.GetNoteAt(0).GetValue();
+            for (int i = 1; i < _notes.Count; i++)
+            {
+                if (_notes.GetNoteAt(i).GetValue() > result)
+                    result = _notes.GetNoteAt(i).GetValue();
+            }
+            return result;
+        }
+       
 
         public static double GetAverageAsignature(Notes notes)
         {

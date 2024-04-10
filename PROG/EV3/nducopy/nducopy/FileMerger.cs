@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nducopy
 {
-    internal class File
+    internal class FileMerger
     {
     }
 }

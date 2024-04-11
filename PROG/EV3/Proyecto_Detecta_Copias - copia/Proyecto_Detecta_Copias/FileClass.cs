@@ -22,6 +22,5 @@ namespace Proyecto_Detecta_Copias
             _name = System.IO.Path.GetFileName(ruta);
             IsDuplicate = false;
         }
-        //https://www.tutorialsteacher.com/csharp/csharp-stream-io
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nducopy
 {
-    internal class DuplicateFileGestor
+    public class DuplicateFileGestor
     {
         //HACER FUNCION CON BUCLE, RECORRER UN STREAM Y ALMACENAR EN UN ARRAY DE BYTES
         //PARA COMPARAR CON OTRO ARCHIVO PRIMERO SE COMPARAN LOS HASHES. SI COINCIDEN,

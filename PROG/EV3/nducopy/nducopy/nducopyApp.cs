@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace nducopy
 {
-    internal class nducopyApp
+    public class NducopyApp
     {
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace nducopy
 {
-    internal class ArgsGestor
+    public class ArgsGestor
     {
     }
 }

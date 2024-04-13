@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Data;
+using System.Security.Cryptography;
 
 namespace nducopy
 {
@@ -38,6 +35,33 @@ namespace nducopy
             }
         }
 
+        public static string GetHashFromFile(string filePath)
+        {
+            try
+            {
+                using (var fileHash = SHA256.Create())
+                {
+                    using (var fs = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                    {
+                        byte[] buffer = new byte[2048];
+                        int bytesRead;
+                        while ((bytesRead = fs.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            fileHash.TransformBlock(buffer, 0, bytesRead, null, 0);
+                        }
+                        fileHash.TransformFinalBlock(buffer, 0, 0);
+                        byte[]? hashArrayBytes = fileHash.Hash;
+                        return BitConverter.ToString(fileHash.Hash).Replace("-", string.Empty);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error en la obtención del Hash desde el archivo: {e.Message}");
+                return null;
+            }
+        }
+
         public static bool CompareFilesByBytes(string file1, string file2)
         {
             if (!File.Exists(file1) || !File.Exists(file2))
@@ -59,17 +83,12 @@ namespace nducopy
                             return false;
                     }
                 }
-
-               
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                throw;
+                return false;
             }
-
-
-
         }
     }
 }

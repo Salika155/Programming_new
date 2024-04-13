@@ -22,5 +22,14 @@ namespace nducopy
         //NOMBRE DE FICHERO ALGO QUE INDIQUE LA FECHA DE CREACION DEL FICHERO.
         //FUNCION PARA COMPARAR DOS FICHEROS QUE NO NECESITEN QUE EL CONTENIDO ENTERO DEL FICHERO
         //ESTE EN MEMORIA RAM.
+        private string _pathOut = "";
+        private List<string> _directories = new List<string>();
+        private List<FileUser> _files = new List<FileUser>();
+        private List<FileUser> _duplicates = new List<FileUser>();
+        private bool _isCopy = false;
+        private bool _isSuccess = false;
+
+        public bool HasDirectories => _directories.Count > 0;
+        public bool HasFiles => _files.Count > 0;
     }
 }

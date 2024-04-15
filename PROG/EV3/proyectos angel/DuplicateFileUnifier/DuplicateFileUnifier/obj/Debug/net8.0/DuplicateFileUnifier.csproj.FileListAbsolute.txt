@@ -1,0 +1,15 @@
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\bin\Debug\net8.0\DuplicateFileUnifier.exe
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\bin\Debug\net8.0\DuplicateFileUnifier.deps.json
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\bin\Debug\net8.0\DuplicateFileUnifier.runtimeconfig.json
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\bin\Debug\net8.0\DuplicateFileUnifier.dll
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\bin\Debug\net8.0\DuplicateFileUnifier.pdb
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.GeneratedMSBuildEditorConfig.editorconfig
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.AssemblyInfoInputs.cache
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.AssemblyInfo.cs
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.csproj.CoreCompileInputs.cache
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.sourcelink.json
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.dll
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\refint\DuplicateFileUnifier.dll
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.pdb
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\DuplicateFileUnifier.genruntimeconfig.cache
+D:\repositorios\entornos-de-desarrollo\temp\DuplicateFileUnifier\DuplicateFileUnifier\obj\Debug\net8.0\ref\DuplicateFileUnifier.dll

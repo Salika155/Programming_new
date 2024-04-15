@@ -128,10 +128,10 @@ namespace Proyecto_Detecta_Copias
             //    return;
             //}
 
-            var directorioOrigen1 = @"C:\Users\carcarcor\Desktop\carpeta_origen";
+            var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
             //var directorioOrigen2 = args[1];
             //var directorioOrigen3 = args[2];
-            var directorioDestino = @"C:\Users\carcarcor\Desktop\carpeta_destino";
+            var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
 
             var files = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
 

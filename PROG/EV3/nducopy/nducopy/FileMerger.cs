@@ -87,7 +87,6 @@ namespace nducopy
                     {
                         file2.Disabled = true;
                         _duplicates.Add(file2);
-
                     }
                 }
             }

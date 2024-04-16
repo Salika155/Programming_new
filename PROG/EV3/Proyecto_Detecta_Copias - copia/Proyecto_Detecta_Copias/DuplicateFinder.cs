@@ -9,22 +9,22 @@ namespace Proyecto_Detecta_Copias
     public class DuplicateFinder
     {
 
-        //public static bool CompareFiles(string file1, string file2)
-        //{
-        //    using (var fileManager1 = new FileManager(file1))
-        //    using (var fileManager2 = new FileManager(file2))
-        //    {
-        //        var buffer1 = fileManager1.ReadAllBytes();
-        //        var buffer2 = fileManager2.ReadAllBytes();
+        public static bool CompareFiles(string file1, string file2)
+        {
+            using (var fileManager1 = new FileManager(file1))
+            using (var fileManager2 = new FileManager(file2))
+            {
+                var buffer1 = fileManager1.ReadAllBytes();
+                var buffer2 = fileManager2.ReadAllBytes();
 
-        //        if (buffer1.Length != buffer2.Length)
-        //        {
-        //            return false;
-        //        }
-        //        return true;
-                
-        //    }
-        //}
+                if (buffer1.Length != buffer2.Length)
+                {
+                    return false;
+                }
+                return true;
+
+            }
+        }
 
         public string[] FindDuplicates(string[] files)
         {

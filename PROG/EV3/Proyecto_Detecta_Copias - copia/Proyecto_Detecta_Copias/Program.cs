@@ -133,15 +133,45 @@ namespace Proyecto_Detecta_Copias
             //var directorioOrigen3 = args[2];
             var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
 
+            var filesOrigen1 = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
+            var filesDestino = Directory.GetFiles(directorioDestino, "*.*", SearchOption.AllDirectories);
             var files = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
 
-            var duplicateFinder = new DuplicateFinder();
-            var duplicates = duplicateFinder.FindDuplicates(files);
-
-            foreach(var duplicate in duplicates)
+            if (!Directory.Exists(directorioDestino))
             {
-                File.Copy(duplicate, Path.Combine(directorioDestino, Path.GetFileName(duplicate)));
-                Console.WriteLine(duplicate);
+                try
+                {
+                    // Intentar crear el directorio de destino
+                    Directory.CreateDirectory(directorioDestino);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al crear el directorio de destino: {ex.Message}");
+                    return; // Salir del programa si ocurre un error al crear el directorio
+                }
+            }
+
+            foreach (var file in filesOrigen1)
+            {
+                var nombreArchivo = Path.GetFileName(file);
+                var rutaDestino = Path.Combine(directorioDestino, nombreArchivo);
+                if (!filesOrigen1.Contains(rutaDestino))
+                {
+                    try
+                    {
+                        // Intentar copiar el archivo al directorio de destino
+                        File.Copy(file, rutaDestino);
+                        Console.WriteLine($"Copiando {nombreArchivo} a {directorioDestino}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {ex.Message}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"El archivo {nombreArchivo} ya existe en {directorioDestino}");
+                }
             }
             Console.WriteLine("Completado");
 

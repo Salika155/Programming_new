@@ -8,6 +8,11 @@ namespace nducopy
 {
     public class NducopyApp
     {
+        public static void Run(string[] args)
+        { 
+            FileGestor fileGestor = new FileGestor();
+
+        }
 
     }
 }

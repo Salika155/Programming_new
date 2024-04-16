@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -92,9 +93,55 @@ namespace nducopy
             }
         }
 
-        public void Copy()
+        public void CopyFiles()
         {
+            if (!IsSetPathOut || !HasDirectories || !HasFiles)
+                return;
 
+            string directoryPath = Directory.GetParent(_directories[0]).FullName;
+            if (directoryPath == null)
+                throw new Exception("Error al obtener la ruta del directorio");
+
+            //foreach (var file in _files)
+            //{
+            //    if(file.Disabled)
+            //        continue;
+            //    string filePath = file.Path;
+            //    var path = GetDestinationRoute()
+            //}
+
+            foreach (var file in _files)
+            {
+                if (file.Disabled)
+                    continue;
+
+                string destinationPath = Path.Combine(_pathOut, Path.GetFileName(file.Path));
+
+                try
+                {
+                    File.Copy(file.Path, destinationPath, true);
+                    Console.WriteLine($"El archivo {file.Path} fue copiado a {destinationPath}.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al copiar el archivo {file.Path}: {ex.Message}");
+                }
+            }
+        }
+
+        public void MakeTextFileOfDuplicates()
+        {
+            if (!ExportDuplicates || _duplicates.Count == 0)
+                return;
+            string filePath = Path.Combine(_pathOut, "duplicates.txt");
+            using (Stream stream = File.Open(filePath, FileMode.Create))
+            {
+                using (StreamWriter writer = new StreamWriter(stream))
+                {
+                    foreach (var file in _duplicates)
+                        writer.WriteLine(file.Path);
+                }
+            }
         }
     }
 }

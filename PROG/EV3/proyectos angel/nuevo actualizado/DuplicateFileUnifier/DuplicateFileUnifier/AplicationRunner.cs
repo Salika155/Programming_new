@@ -8,7 +8,7 @@ public static class AplicationRunner
         ArgumentParser.ParseArgs(args, fileUnifier);
         if (fileUnifier.IsOutputPathSet && fileUnifier.HasDirectories)
         {
-            fileUnifier.ListFiles();
+            fileUnifier.ListFiles(); 
             fileUnifier.CompareFiles();
             fileUnifier.CopyFiles();
             if (fileUnifier.ExportDuplicates)

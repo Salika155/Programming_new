@@ -131,3 +131,6 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBib
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\refint\Buscaminas.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\refint\Buscaminas.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.pdb

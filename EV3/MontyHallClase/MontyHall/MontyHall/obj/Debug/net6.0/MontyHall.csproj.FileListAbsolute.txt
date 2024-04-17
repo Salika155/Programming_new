@@ -33,3 +33,17 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\MontyHallClas
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\ref\MontyHall.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\bin\Debug\net6.0\MontyHall.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\bin\Debug\net6.0\MontyHall.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\bin\Debug\net6.0\MontyHall.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\bin\Debug\net6.0\MontyHall.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\bin\Debug\net6.0\MontyHall.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\refint\MontyHall.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\MontyHall.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\MontyHallClase\MontyHall\MontyHall\obj\Debug\net6.0\ref\MontyHall.dll

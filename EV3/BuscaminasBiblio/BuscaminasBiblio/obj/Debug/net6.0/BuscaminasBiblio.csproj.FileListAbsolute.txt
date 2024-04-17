@@ -35,3 +35,6 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBib
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\refint\BuscaminasBiblio.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\BuscaminasBiblio.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\ref\BuscaminasBiblio.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\BuscaminasBiblio.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\refint\BuscaminasBiblio.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\EV3\BuscaminasBiblio\BuscaminasBiblio\obj\Debug\net6.0\BuscaminasBiblio.pdb

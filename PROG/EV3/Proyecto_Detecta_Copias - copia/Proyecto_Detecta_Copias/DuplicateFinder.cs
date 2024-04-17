@@ -45,5 +45,14 @@ namespace Proyecto_Detecta_Copias
             }
             return duplicates.ToArray();
         }
+
+        public static string CalculateHash(string filePath)
+        {
+            using (var fileManager = new FileManager(filePath))
+            {
+                var buffer = fileManager.ReadAllBytes();
+                return Utils.HashCalculator(buffer);
+            }
+        }
     }
 }

@@ -168,8 +168,6 @@ namespace BuscaminasBiblio
 
         public bool HasWin(int x, int y)
         {
-            
-
             bool isWinner = true;
 
             if (IsFlagAt(x, y))

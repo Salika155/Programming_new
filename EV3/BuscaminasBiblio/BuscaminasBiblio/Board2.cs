@@ -147,7 +147,17 @@ namespace BuscaminasBiblio
 
         void IBoard.DeleteFlagAt(int x, int y)
         {
-            throw new NotImplementedException();
+           if (IsFlagAt(x, y) == true)
+            {
+                for(int i = 0; i < flags.Length; i++)
+                {
+                    if (flags[i].position.x == x && flags[i].position.y == y)
+                    {
+                        flags[i].position.x = -1;
+                        flags[i].position.y = -1;
+                    }
+                }
+            }
         }
     }
 }

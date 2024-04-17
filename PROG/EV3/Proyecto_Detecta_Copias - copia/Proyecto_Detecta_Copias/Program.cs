@@ -14,6 +14,11 @@ namespace Proyecto_Detecta_Copias
     {
         static void Main(string[] args)
         {
+            if (args.Length < 2)
+            {
+                Console.WriteLine("Usage: dotnet run <source_directory> <destination_directory>");
+                return;
+            }
             #region codigoviejo
             //Stream s = File.OpenRead("Hola.txt");
             //byte[] buffer = new byte[2048];

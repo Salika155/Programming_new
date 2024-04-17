@@ -21,7 +21,7 @@ namespace MontyHall
             DoorNumber = doorNumber;
             IsSelected = false;
             IsOpen = true;
-            SetPrize();
+            SetPrize(DoorType.CAR);
             
         }
 
@@ -33,9 +33,9 @@ namespace MontyHall
         /// <summary>
         /// Coloca el premio en una de las puertas
         /// </summary>
-        public void SetPrize()
+        public void SetPrize(DoorType car)
         {
-            int randomNumber = Contest.random.Next(0, 2);
+            int randomNumber = Utils.GetRandomNumber(0, 2);
             if (randomNumber == 0) 
             {
                 Type = DoorType.CAR;

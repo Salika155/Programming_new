@@ -25,13 +25,15 @@ namespace MontyHall
     /// </summary>
     public class Contest
     {
-        public static List<Door> doorsList = new List<Door>();
-        public static Random random = new Random();
-        private int doorNumber;
+        private List<Door> doorsList;
+        private Random _random;
+        //private int doorNumber;
 
         public Contest()
         {
-            
+            doorsList = new List<Door>();
+            _random = new Random();
+            Init();
 
         }
         /// <summary>
@@ -63,23 +65,26 @@ namespace MontyHall
 
         private void Init()
         {
-            int winningDoor = Utils.GetRandomNumber(0, 2);
             
-
             for (int i = 1; i <= 3; i++)
             {
                 Door door = new Door(i);
-
-                if (winningDoor == i)
-                {
-                   door.Type = DoorType.CAR;
-                }
-                else
-                {
-                    door.Type = DoorType.GOAT;
-                }
                 doorsList.Add(door);
             }
+
+            int winningDoorIndex = Utils.GetRandomNumber(0, 2);
+            doorsList[winningDoorIndex].Type = DoorType.CAR;
+
+            //if (winningDoor == i)
+            //    {
+            //       door.Type = DoorType.CAR;
+            //    }
+            //    else
+            //    {
+            //        door.Type = DoorType.GOAT;
+            //    }
+            //    doorsList.Add(door);
+            //}
         }
         /// <summary>
         /// Funcion que permite al concursante elegir una puerta
@@ -88,14 +93,14 @@ namespace MontyHall
         //Concursante elige una puerta
         public void ChooseDoor(int doorNumber)
         {
-            for (int i = 0; i < doorsList.Count; i++)
-            {
-                if (doorsList[i].DoorNumber == doorNumber)
+           foreach (Door door in doorsList)
+           {
+                if (door.DoorNumber == doorNumber)
                 {
-                    doorsList[i].IsSelected = true;
+                    door.IsSelected = true;
                     break;
                 }
-            }
+           }
         }
 
         /// <summary>
@@ -111,7 +116,6 @@ namespace MontyHall
                 {
                     return 1;
                 }
-                
             }
             return 0;
         }
@@ -133,40 +137,13 @@ namespace MontyHall
             }
         }
 
-
-        public string GetDoorContent(int doorNumber, int doorSelected)
-        {
-            foreach (Door door in doorsList)
-            {
-                if (door.DoorNumber == doorNumber)
-                {
-                    if (door.IsSelected && door.Type == DoorType.GOAT)
-                    {
-                        return DoorType.GOAT.ToString();
-                    }
-                    else if (door.DoorNumber != doorSelected)
-                    {
-                        return door.Type.ToString();
-                    }
-                }
-            }
-            return "";
-        }
-
         public void SwitchDoor(Door selectedDoor, Door newSelectedDoor)
         {
-            foreach (Door door in doorsList)
-            {
-                if (door == selectedDoor)
-                {
-                    door.IsSelected = false;
-                }
-                else if (door == newSelectedDoor)
-                    door.IsSelected = true;
-            }
+            selectedDoor.IsSelected = false;
+            newSelectedDoor.IsSelected = true;
         }
 
-        public Door GetSelectedDoor()
+        public Door? GetSelectedDoor()
         {
             foreach (Door door in doorsList)
             {
@@ -178,11 +155,11 @@ namespace MontyHall
             return null;
         }
 
-        public string GetDoorContent(int doorSelected)
+        public string GetDoorContent(int doorNumber)
         {
             foreach (Door door in doorsList)
             {
-                if (door.DoorNumber == doorSelected)
+                if (door.DoorNumber == doorNumber)
                 {
                     return door.Type.ToString();
                 }
@@ -190,7 +167,7 @@ namespace MontyHall
             return "";
         }
 
-        internal Door GetDoorByNumber(int doorNumber)
+        public Door? GetDoorByNumber(int doorNumber)
         {
             foreach (Door door in doorsList)
             {

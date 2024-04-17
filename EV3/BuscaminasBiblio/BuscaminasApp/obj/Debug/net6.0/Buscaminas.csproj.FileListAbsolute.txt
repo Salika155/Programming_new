@@ -122,3 +122,12 @@ E:\DAM\asignaturas\PROGRAMACION\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\
 E:\DAM\asignaturas\PROGRAMACION\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.pdb
 E:\DAM\asignaturas\PROGRAMACION\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.genruntimeconfig.cache
 E:\DAM\asignaturas\PROGRAMACION\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\ref\Buscaminas.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\refint\Buscaminas.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\EV3\BuscaminasBiblio\BuscaminasApp\obj\Debug\net6.0\Buscaminas.pdb

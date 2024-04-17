@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj": {}
   },
   "projects": {
-    "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
         "projectName": "MontyHall",
-        "projectPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\MontyHall.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "E:\\DAM\\asignaturas\\PROGRAMACION\\MontyHallClase\\MontyHall\\MontyHall\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\EV3\\MontyHallClase\\MontyHall\\MontyHall\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "E:\\DAM\\asignaturas\\PROGRAMACION\\nuggetcasa": {},
+          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

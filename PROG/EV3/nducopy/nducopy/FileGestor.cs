@@ -90,5 +90,10 @@ namespace nducopy
                 return false;
             }
         }
+
+        internal IEnumerable<object> FindDuplicates(string[] files)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

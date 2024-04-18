@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    public class SpecialDefense : Defense
+    internal class Utils
     {
-        public SpecialDefense(string name, TeamType team, int X, int y) : base(name, team, X, y)
+        Random random = new Random();
+
+        public int GetRandomNumber(int min, int max)
         {
+            return random.Next(min, max);
         }
+
     }
 }

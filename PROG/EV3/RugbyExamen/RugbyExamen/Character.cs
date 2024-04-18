@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Character
+    public class Character : ICharacter
     {
+
+        public int _x;
+        public int _y;
+
+
+        public Character() 
+        {
+
+        }
+
+
     }
 }

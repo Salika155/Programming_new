@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Striker
+    public class Striker : Player
     {
+        public Striker(string name, TeamType team, int X, int y) : base(name, team, X, y)
+        {
+        }
     }
 }

@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Player
+    public class Player : Character
     {
+        private string _Name { get; set; }
+        private TeamType _Team { get; set; }
+        private int _InitialX;
+        private int _InitialY;
+        
+
+        public Player(string name, TeamType team, int X, int y)
+        {
+            _Name = name;
+            _Team = team;
+            _InitialX = X;
+            _InitialY = y;
+        }
+
+        public string Name {get { return _Name; }}
+        public TeamType Team { get { return _Team; }}
+        public int InitialX { get { return _InitialX; }}
+        public int InitialY { get { return _InitialY; }}
+
     }
 }

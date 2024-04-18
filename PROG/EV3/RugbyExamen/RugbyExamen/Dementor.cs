@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Dementor
+    internal class Dementor : Character
     {
+        //4 dementores
     }
 }

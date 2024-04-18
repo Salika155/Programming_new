@@ -6,7 +6,27 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Team
+    public enum TeamType
     {
+        Blue,
+        Red
+    }
+    public class Team
+    {
+        private string _name;
+        public Player[] team = new Player[10];
+        private int _score;
+        private TeamType _teamType;
+
+        public Team(string name, TeamType teamType)
+        {
+            _name = name;
+            _teamType = teamType;
+        }
+
+        //addjugadores
+
+
+
     }
 }

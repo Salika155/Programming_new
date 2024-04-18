@@ -8,7 +8,7 @@ namespace RugbyExamen
 {
     public class SpecialDefense : Defense
     {
-        public SpecialDefense(string name, TeamType team, int X, int y) : base(name, team, X, y)
+        public SpecialDefense(string name, TeamType team, int x, int y) : base(name, team, x, y)
         {
         }
     }

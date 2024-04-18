@@ -14,11 +14,11 @@ namespace RugbyExamen
         private int _InitialY;
         
 
-        public Player(string name, TeamType team, int X, int y)
+        public Player(string name, TeamType team, int x, int y)
         {
             _Name = name;
             _Team = team;
-            _InitialX = X;
+            _InitialX = x;
             _InitialY = y;
         }
 

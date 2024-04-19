@@ -13,6 +13,7 @@ namespace RugbyExamen
     {
         public Striker(Team team) : base(team)
         {
+
         }
 
         public override void ExecuteTurn()
@@ -32,9 +33,9 @@ namespace RugbyExamen
 
         }
 
-        private void TryToPass()
+        private static void TryToPass()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void GoToBall()
@@ -59,7 +60,7 @@ namespace RugbyExamen
             }
         }
 
-        private void GoToGoal()
+        private static void GoToGoal()
         {
            
         }
@@ -79,15 +80,15 @@ namespace RugbyExamen
             return false;
         }
 
-        public static bool HasBall()
+        public static bool HasBall(Character character, Ball ball)
         {
-            //return _game.HasBall(this);
-            return false;
+            return character._x == ball.X && character.Y == ball.Y;
+            
         }
 
-        private bool IsCellEmpty(int x, int y)
+        public static bool IsCellEmpty(Character character)
         {
-            throw new NotImplementedException();
+            
         }
 
         

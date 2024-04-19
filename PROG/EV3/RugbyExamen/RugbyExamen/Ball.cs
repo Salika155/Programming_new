@@ -13,8 +13,8 @@ namespace RugbyExamen
 
         public Ball(int x, int y)
         {
-            X = 0;
-            Y = 0;
+            X = x;
+            Y = y;
         }
 
         public int GetXValue { get { return X; } }

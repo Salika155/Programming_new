@@ -15,11 +15,11 @@ namespace RugbyExamen
             return r.Next(min, max);
         }
 
-        public static int RandomRangeInt(int min, int max)
-        {
-            int r = (int)RandomRange(min, max);
-            return r;
-        }
+        //public static int RandomRangeInt(int min, int max)
+        //{
+        //    int r = (int)RandomRange(min, max);
+        //    return r;
+        //}
 
         public static bool IsInRange(int x, int y, int x2, int y2, int range)
         {

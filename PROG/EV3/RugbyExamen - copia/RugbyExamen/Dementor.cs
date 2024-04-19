@@ -15,7 +15,7 @@ namespace RugbyExamen
             
         }
 
-        public Dementor(string v1, Team team1, int v2, int v3) : this(v1, team1, v2, v3)
+        public Dementor(Team team1, Position position) : this()
         {
         }
 

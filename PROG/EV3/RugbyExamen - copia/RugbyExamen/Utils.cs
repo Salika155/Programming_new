@@ -10,11 +10,9 @@ namespace RugbyExamen
     {
         private static Random r = new();
 
-        public static double RandomRange(double min, double max)
+        public static int GetRandom(int min, int max)
         {
-            if (min > max)
-                return RandomRange(max, min);
-            return r.NextDouble() * (max - min) + min;
+            return r.Next(min, max);
         }
 
         public static int RandomRangeInt(int min, int max)

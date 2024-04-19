@@ -8,14 +8,26 @@ namespace RugbyExamen
 {
     public class Position
     {
-        public int x;
-        public int y;
-
         public Position(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
+
+        public Position()
+        {
+        }
+
+        public int x { get; set; }
+        public int y { get; set; }
+
+        //el no construiria un constructor
+
+        //public Position(int x, int y)
+        //{
+        //    this.x = x;
+        //    this.y = y;
+        //}
 
         public int GetX()
         {
@@ -54,15 +66,15 @@ namespace RugbyExamen
             return base.Equals(obj);
         }
 
-        public static Position operator + (Position p1, Position p2)
-        {
-            return new Position(p1.x + p2.x, p1.y + p2.y);
-        }
+        //public static Position operator + (Position p1, Position p2)
+        //{
+        //    return new Position(p1.x + p2.x, p1.y + p2.y);
+        //}
 
-        public static Position operator - (Position p1, Position p2)
-        {
-            return new Position(p1.x - p2.x, p1.y - p2.y);
-        }
+        //public static Position operator - (Position p1, Position p2)
+        //{
+        //    return new Position(p1.x - p2.x, p1.y - p2.y);
+        //}
 
         public override string ToString()
         {

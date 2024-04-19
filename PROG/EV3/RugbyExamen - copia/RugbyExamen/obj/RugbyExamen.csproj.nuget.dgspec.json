@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen\\RugbyExamen\\RugbyExamen.csproj": {}
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen - copia\\RugbyExamen\\RugbyExamen.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen\\RugbyExamen\\RugbyExamen.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen - copia\\RugbyExamen\\RugbyExamen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen\\RugbyExamen\\RugbyExamen.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen - copia\\RugbyExamen\\RugbyExamen.csproj",
         "projectName": "RugbyExamen",
-        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen\\RugbyExamen\\RugbyExamen.csproj",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen - copia\\RugbyExamen\\RugbyExamen.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen\\RugbyExamen\\obj\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\RugbyExamen - copia\\RugbyExamen\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -25,6 +25,10 @@ namespace RugbyExamen
             _teamType = teamType;
         }
 
+        public Team()
+        {
+        }
+
         public int Score
         {
             get { return _score; }

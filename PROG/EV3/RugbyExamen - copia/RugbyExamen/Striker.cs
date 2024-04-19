@@ -11,86 +11,89 @@ namespace RugbyExamen
 {
     public class Striker : Player
     {
-        public Striker(Team team) : base(team)
+        public Striker(string name, Team team, Position position) : base(name, team, position)
         {
 
         }
 
-        public override void ExecuteTurn()
-        {
-            if (HasBall() && CanGoToGoal())
-            {
-                GoToGoal();
-            }
-            else if(!HasBall())
-            {
-                GoToBall();
-            }
-            else
-            {
-                TryToPass();
-            }
+        //public override void ExecuteTurn()
+        //{
+        //    if (HasBall() && CanGoToGoal())
+        //    {
+        //        GoToGoal();
+        //    }
+        //    else if(!HasBall())
+        //    {
+        //        GoToBall();
+        //    }
+        //    else
+        //    {
+        //        TryToPass();
+        //    }
 
-        }
+        //}
 
-        private static void TryToPass()
-        {
+        //private static void TryToPass()
+        //{
             
-        }
+        //}
 
-        private void GoToBall()
-        {
-            int currentX = this.X;
-            int currentY = this.Y;
+        //private void GoToBall()
+        //{
+        //    int currentX = this.X;
+        //    int currentY = this.Y;
 
-            int ballX = 0;
-            int ballY = 0;
+        //    int ballX = 0;
+        //    int ballY = 0;
 
-            int moveX = Math.Sign(ballX - currentX);
-            int moveY = Math.Sign(ballY - currentY);
+        //    int moveX = Math.Sign(ballX - currentX);
+        //    int moveY = Math.Sign(ballY - currentY);
 
-            if (IsCellEmpty(currentX + moveX, currentY + moveY))
-            {
-                this.X += moveX;
-                this.Y += moveY;
-            }
-            else
-            {
+        //    if (IsCellEmpty(currentX + moveX, currentY + moveY))
+        //    {
+        //        this.X += moveX;
+        //        this.Y += moveY;
+        //    }
+        //    else
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
-        private static void GoToGoal()
-        {
+        //private static void GoToGoal()
+        //{
            
-        }
+        //}
 
-        public static bool CanGoToGoal(Character character, TeamType team, int[,] board)
-        {
-            int goal = (team == TeamType.Blue) ? 0 : 19;
+        //public static bool CanGoToGoal(Character character, TeamType team, int[,] board)
+        //{
+        //    int goal = (team == TeamType.Blue) ? 0 : 19;
 
-            if ((team == TeamType.Blue && character.Y < goal) || (team == TeamType.Red && character.Y > goal))
-            {
-                int nextY = (team == TeamType.Blue) ? character.Y + 1 : character.Y - 1;
-                if (board[character.X, nextY] == 0)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        //    if ((team == TeamType.Blue && character.Y < goal) || (team == TeamType.Red && character.Y > goal))
+        //    {
+        //        int nextY = (team == TeamType.Blue) ? character.Y + 1 : character.Y - 1;
+        //        if (board[character.X, nextY] == 0)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
-        public static bool HasBall(Character character, Ball ball)
-        {
-            return character._x == ball.X && character.Y == ball.Y;
+        //public static bool HasBall(Character character, Ball ball)
+        //{
+        //    return character._x == ball.X && character.Y == ball.Y;
             
-        }
+        //}
 
-        public static bool IsCellEmpty(Character character, Game game)
+        //public static bool IsCellEmpty(Character character, Game game)
+        //{
+        //    return !game.IsOccupied(character.X, character.Y);
+        //}
+
+        public override void ExecuteTurn(IBoardGame boardGame)
         {
-            return !game.IsOccupied(character.X, character.Y);
+            throw new NotImplementedException();
         }
-
-        
     }
 }

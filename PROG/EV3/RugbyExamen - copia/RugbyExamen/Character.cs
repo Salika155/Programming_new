@@ -32,12 +32,12 @@ namespace RugbyExamen
             
             return possibleMoves;
         }
-        
 
-        public virtual void ExecuteTurn()
-        {
-           
-        }
+
+        public abstract void ExecuteTurn(IBoardGame boardGame);
+        //pasarle un partido
+
+
 
         //public void Move(int x, int y)
         //{

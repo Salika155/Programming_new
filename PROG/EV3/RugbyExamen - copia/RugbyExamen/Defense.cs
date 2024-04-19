@@ -8,11 +8,19 @@ namespace RugbyExamen
 {
     public class Defense : Player
     {
-        public Defense(Team team) : base(team)
+        public Defense(string name, Team team, Position position) : base(name, team, position)
         {
         }
 
-        public override void ExecuteTurn()
+        public Defense(string v1, Team team1, int v2, int v3)
+        {
+        }
+
+        //public Defense(string name, Team team, int initialX, int initialY) : this(name, team, initialX, initialY)
+        //{
+        //}
+
+        public override void ExecuteTurn(IBoardGame boardGame)
         {
             throw new NotImplementedException();
         }

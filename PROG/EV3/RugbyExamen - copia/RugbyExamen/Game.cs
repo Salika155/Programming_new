@@ -2,7 +2,7 @@
 
 namespace RugbyExamen
 {
-    public delegate bool Visitor(Character character);
+    public delegate void Visitor(Character character);
 
     //public enum CharacterType
     //{
@@ -14,10 +14,12 @@ namespace RugbyExamen
 
     public class Game
     {
-        private List<Character> _chars = new List<Character>();
+        private IBoardGame _boardGame = new BoardGameBasedInList();
+        private List<Character> _charList = new List<Character>();
         private Position _size;
-        private Team _team1;
-        private Team _team2;
+        private Team _team1 = new Team();
+        private Team _team2 = new Team();
+        //private Team[_team1, team2]
         private int _duration;
         private Ball _ball;
         private int _turns;
@@ -30,7 +32,7 @@ namespace RugbyExamen
         {
             _size = new Position(10, 20);
             _duration = 1000;
-            _ball = new Ball(GetRandomPositionOnGame());
+            //_ball = new Ball(GetRandomPositionOnGame());
             _team1 = new Team(TeamBlue, TeamType.Blue);
             _team2 = new Team(TeamRed, TeamType.Red);
             //CreateBoard();
@@ -39,249 +41,350 @@ namespace RugbyExamen
             //BallPositioned();
         }
 
-        private Position GetRandomPositionOnGame()
+        private void GeneratePlayers()
         {
-            Position position = new Position();
+            _charList.Add(new Defense("a", _team1, 3, 1));
+            _charList.Add(new Dementor("b", _team1, 3, 2));
 
+            var list = _boardGame.IsAvailable();
+            for (int i = 0; i < 4; i++) 
+            {
+                var index = Utils.GetRandom(0, list.Count - 1);
+                var coordenadas = list[index];
+                var dementor = new Dementor(coordenadas);
+                _boardGame.AddPlayer(dementor);
+                list.RemoveAt(index);
+            }
+        }
+
+        private void MeterLosJugadoresACampo()
+        {
+            Visit(pj => _boardGame.AddPlayer(pj));
+            //Visit(_boardGame.AddPlayer);
             
         }
 
-        private void CreateBoard()
+        public void Visit(Action<Character> visitor)
         {
-           for (int y = 0; y < 10; y++)
-           {
-               for (int x = 0; x < 20; x++)
-               {
-                    
-               }
-           }
-        }
-
-        public List<Character> Chars { get => _chars; set => _chars = value; }
-
-
-        public void Star()
-        {
-            //for (int i = 0; i < _duration; i++)
-            //{
-            //   foreach (Character character in _chars)
-            //   {
-            //        character.ExecuteTurn();
-            //   }
-
-            //   if (IsGameOver())
-            //   {
-            //        //PrintScore();
-            //        break;
-            //   }
-            //}
-            _ball.Position = GetRandomPositionOnGame();
-
-        }
-
-        public void Exec()
-        {
-            for (int i = 0; i < _duration; i++)
+            if (visitor == null)
             {
-                foreach (Character character in _chars)
+                return;
+            }
+            foreach (var p in _charList)
+            {
+                visitor(p);
+            }
+        }
+
+        List<Position> GetAvailableCells()
+        {
+            List<Position> availableCells = new List<Position>();
+            for (int x = 0; x < IBoardGame.WIDTH; x++)
+            {
+                for (int y = 0; y < IBoardGame.HEIGHT; y++)
                 {
-                    character.ExecuteTurn();
+                    if (IsAvailable(x, y))
+                    {
+                        availableCells.Add(new Position(x, y));
+                    }
                 }
-
-
-               
             }
-            
-            PlayersPositioned();
-            DementorsPositioned();
-            BallPositioned();
+            return availableCells;
         }
 
-        private bool IsGameOver()
+        public bool IsAvailable(int x, int y)
         {
-            return _turns == _duration;
-        }   
-
-        private static void BallPositioned()
-        {
-            
+            if (x < 0 || x >= 10)
+                return false;
+            if (y < 0 || y >= 20)
+                return false;
+            if (_boardGame.GetCharacterAt(x, y) != null)
+                return false;
+            return true;
         }
 
-        public Team GetWinnerTeam()
+        public void Start()
         {
-            if (_team1.Score > _team2.Score)
-                return _team1;
-            else if (_team1.Score < _team2.Score)
-                return _team2;
-            else
-                return new Team("Empataron", TeamType.UNKNOWN);
+            GeneratePlayers();
+            MeterLosJugadoresACampo();
         }
 
-        public void Visit(Visitor visitor)
+        public void Jugar()
         {
-            foreach (Character character in _chars)
+            for (int round = 0; round < _duration; round++)
             {
-                if (visitor(character))
-                    break;
+                Hacerquelosjugadoresrealicensujugada();
+                if (HayGol())
+                {
+                    Sumarpuntuaciondegolalequipocorrespondiente();
+                    ReiniciarPosicionJugadores();
+                }
+                
             }
+
         }
 
-        private static void DementorsPositioned()
+        private bool HayGol()
         {
             throw new NotImplementedException();
         }
 
-        private void PlayersPositioned()
+        private void ReiniciarPosicionJugadores()
         {
-            int[] positionsX = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] positionsY = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
-            Team _team1 = new Team("Blue", TeamType.Blue);
-            Team _team2 = new Team("Red", TeamType.Red);
-
-            for (int i = 0; i < 10; i++)
-            {
-                Defense defense1Team1 = new Defense(_team1);
-                //defense1Team1 = positionsX[i];
-                //defense1Team1 = positionsY[i];
-                defense1Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(defense1Team1);
-
-                Defense defense2Team1 = new Defense(_team1);
-                //defense2Team1.X = positionsX[i];
-                //defense2Team1.Y = positionsY[i];
-                defense2Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(defense2Team1);
-
-                Defense defense1Team2 = new Defense(_team2);
-                //defense1Team2.X = positionsX[i];
-                //defense1Team2.Y = positionsY[i];
-                defense1Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(defense1Team2);
-
-                Defense defense2Team2 = new Defense(_team2);
-                //defense2Team2.X = positionsX[i];
-                //defense2Team2.Y = positionsY[i];
-                defense2Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(defense2Team2);
-
-                Striker striker1Team1 = new Striker(_team1);
-                //striker1Team1.X = positionsX[i];
-                //striker1Team1.Y = positionsY[i];
-                striker1Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker1Team1);
-
-                Striker striker2Team1 = new Striker(_team1);
-                //striker2Team1.X = positionsX[i];
-                //striker2Team1.Y = positionsY[i];
-                striker2Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker2Team1);
-
-                Striker striker3Team1 = new Striker(_team1);
-                //striker3Team1.X = positionsX[i];
-                //striker3Team1.Y = positionsY[i];
-                striker3Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker3Team1);
-
-                Striker striker4Team1 = new Striker(_team1);
-                //striker4Team1.X = positionsX[i];
-                //striker4Team1.Y = positionsY[i];
-                striker4Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker4Team1);
-
-                Striker striker1Team2 = new Striker(_team2);
-                //striker1Team2.X = positionsX[i];
-                //striker1Team2.Y = positionsY[i];
-                striker1Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker1Team2);
-
-                Striker striker2Team2 = new Striker(_team2);
-                //striker2Team2.X = positionsX[i];
-                //striker2Team2.Y = positionsY[i];
-                striker2Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker2Team2);
-
-                Striker striker3Team2 = new Striker(_team2);
-                //striker3Team2.X = positionsX[i];
-                //striker3Team2.Y = positionsY[i];
-                striker3Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker3Team2);
-
-                Striker striker4Team2 = new Striker(_team2);
-                //striker4Team2.X = positionsX[i];
-                //striker4Team2.Y = positionsY[i];
-                striker4Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(striker4Team2);
-
-                SpecialDefense specialDefense1Team1 = new SpecialDefense(_team1);
-                //specialDefense1Team1.X = positionsX[i];
-                //specialDefense1Team1.Y = positionsY[i];
-                specialDefense1Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(specialDefense1Team1);
-
-                SpecialDefense specialDefense2Team1 = new SpecialDefense(_team1);
-                //specialDefense2Team1.X = positionsX[i];
-                //specialDefense2Team1.Y = positionsY[i];
-                specialDefense2Team1.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(specialDefense2Team1);
-
-                SpecialDefense specialDefense1Team2 = new SpecialDefense(_team2);
-                //specialDefense1Team2.X = positionsX[i];
-                //specialDefense1Team2.Y = positionsY[i];
-                specialDefense1Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(specialDefense1Team2);
-
-                SpecialDefense specialDefense2Team2 = new SpecialDefense(_team2);
-                //specialDefense2Team2.X = positionsX[i];
-                //specialDefense2Team2.Y = positionsY[i];
-                specialDefense2Team2.Position = new Position(positionsX[i], positionsY[i]);
-                _chars.Add(specialDefense2Team2);
-
-            }
+            throw new NotImplementedException();
         }
 
-        public bool PlayerHasBall(int x, int y)
+        private void Sumarpuntuaciondegolalequipocorrespondiente()
         {
-            foreach (var character in _chars)
-            {
-               
-
-            }
-            return false;
-
-
-
+            throw new NotImplementedException();
         }
 
-        public static Character GetCharacterAt(List<Character> character, int x, int y)
+        private void Hacerquelosjugadoresrealicensujugada()
         {
-            for (int i = 0; i < character.Count; i++)
-            {
-                Character character1 = character[i];
-                if (character1.X == x && character1.Y == y)
-                {
-                    return character1;
-                }
-            }
-            return null;
+            throw new NotImplementedException();
         }
 
-        public bool IsOccupied(Position pos)
-        {
-            foreach (Character c in _chars)
-            {
-                if (c.Position == pos)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        //private Position GetRandomPositionOnGame()
+        //{
+        //    Position position = new Position();
 
-        public override void ExecuteTurn()
-        {
-            if (PlayerHasBall(this, _game.Ball))
-        }
+
+        //}
+
+        //private void CreateBoard()
+        //{
+        //   for (int y = 0; y < 10; y++)
+        //   {
+        //       for (int x = 0; x < 20; x++)
+        //       {
+
+        //       }
+        //   }
+        //}
+
+        //public List<Character> Chars { get => _charList; set => _charList = value; }
+
+
+        //public void Star()
+        //{
+        //    //for (int i = 0; i < _duration; i++)
+        //    //{
+        //    //   foreach (Character character in _chars)
+        //    //   {
+        //    //        character.ExecuteTurn();
+        //    //   }
+
+        //    //   if (IsGameOver())
+        //    //   {
+        //    //        //PrintScore();
+        //    //        break;
+        //    //   }
+        //    //}
+        //    _ball.Position = GetRandomPositionOnGame();
+
+        //}
+
+        //public void Exec()
+        //{
+        //    for (int i = 0; i < _duration; i++)
+        //    {
+        //        foreach (Character character in _charList)
+        //        {
+        //            character.ExecuteTurn();
+        //        }
+
+
+
+        //    }
+
+        //    PlayersPositioned();
+        //    DementorsPositioned();
+        //    BallPositioned();
+        //}
+
+        //private bool IsGameOver()
+        //{
+        //    return _turns == _duration;
+        //}   
+
+        //private static void BallPositioned()
+        //{
+
+        //}
+
+        //public Team GetWinnerTeam()
+        //{
+        //    if (_team1.Score > _team2.Score)
+        //        return _team1;
+        //    else if (_team1.Score < _team2.Score)
+        //        return _team2;
+        //    else
+        //        return new Team("Empataron", TeamType.UNKNOWN);
+        //}
+
+        //public void Visit(Visitor visitor)
+        //{
+        //    foreach (Character character in _charList)
+        //    {
+        //        if (visitor(character))
+        //            break;
+        //    }
+        //}
+
+        //private static void DementorsPositioned()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //private void PlayersPositioned()
+        //{
+        //    int[] positionsX = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        //    int[] positionsY = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+        //    Team _team1 = new Team("Blue", TeamType.Blue);
+        //    Team _team2 = new Team("Red", TeamType.Red);
+
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Defense defense1Team1 = new Defense(_team1);
+        //        //defense1Team1 = positionsX[i];
+        //        //defense1Team1 = positionsY[i];
+        //        defense1Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(defense1Team1);
+
+        //        Defense defense2Team1 = new Defense(_team1);
+        //        //defense2Team1.X = positionsX[i];
+        //        //defense2Team1.Y = positionsY[i];
+        //        defense2Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(defense2Team1);
+
+        //        Defense defense1Team2 = new Defense(_team2);
+        //        //defense1Team2.X = positionsX[i];
+        //        //defense1Team2.Y = positionsY[i];
+        //        defense1Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(defense1Team2);
+
+        //        Defense defense2Team2 = new Defense(_team2);
+        //        //defense2Team2.X = positionsX[i];
+        //        //defense2Team2.Y = positionsY[i];
+        //        defense2Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(defense2Team2);
+
+        //        Striker striker1Team1 = new Striker(_team1);
+        //        //striker1Team1.X = positionsX[i];
+        //        //striker1Team1.Y = positionsY[i];
+        //        striker1Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker1Team1);
+
+        //        Striker striker2Team1 = new Striker(_team1);
+        //        //striker2Team1.X = positionsX[i];
+        //        //striker2Team1.Y = positionsY[i];
+        //        striker2Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker2Team1);
+
+        //        Striker striker3Team1 = new Striker(_team1);
+        //        //striker3Team1.X = positionsX[i];
+        //        //striker3Team1.Y = positionsY[i];
+        //        striker3Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker3Team1);
+
+        //        Striker striker4Team1 = new Striker(_team1);
+        //        //striker4Team1.X = positionsX[i];
+        //        //striker4Team1.Y = positionsY[i];
+        //        striker4Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker4Team1);
+
+        //        Striker striker1Team2 = new Striker(_team2);
+        //        //striker1Team2.X = positionsX[i];
+        //        //striker1Team2.Y = positionsY[i];
+        //        striker1Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker1Team2);
+
+        //        Striker striker2Team2 = new Striker(_team2);
+        //        //striker2Team2.X = positionsX[i];
+        //        //striker2Team2.Y = positionsY[i];
+        //        striker2Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker2Team2);
+
+        //        Striker striker3Team2 = new Striker(_team2);
+        //        //striker3Team2.X = positionsX[i];
+        //        //striker3Team2.Y = positionsY[i];
+        //        striker3Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker3Team2);
+
+        //        Striker striker4Team2 = new Striker(_team2);
+        //        //striker4Team2.X = positionsX[i];
+        //        //striker4Team2.Y = positionsY[i];
+        //        striker4Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(striker4Team2);
+
+        //        SpecialDefense specialDefense1Team1 = new SpecialDefense(_team1);
+        //        //specialDefense1Team1.X = positionsX[i];
+        //        //specialDefense1Team1.Y = positionsY[i];
+        //        specialDefense1Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(specialDefense1Team1);
+
+        //        SpecialDefense specialDefense2Team1 = new SpecialDefense(_team1);
+        //        //specialDefense2Team1.X = positionsX[i];
+        //        //specialDefense2Team1.Y = positionsY[i];
+        //        specialDefense2Team1.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(specialDefense2Team1);
+
+        //        SpecialDefense specialDefense1Team2 = new SpecialDefense(_team2);
+        //        //specialDefense1Team2.X = positionsX[i];
+        //        //specialDefense1Team2.Y = positionsY[i];
+        //        specialDefense1Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(specialDefense1Team2);
+
+        //        SpecialDefense specialDefense2Team2 = new SpecialDefense(_team2);
+        //        //specialDefense2Team2.X = positionsX[i];
+        //        //specialDefense2Team2.Y = positionsY[i];
+        //        specialDefense2Team2.Position = new Position(positionsX[i], positionsY[i]);
+        //        _charList.Add(specialDefense2Team2);
+
+        //    }
+        //}
+
+        //public bool PlayerHasBall(int x, int y)
+        //{
+        //    foreach (var character in _charList)
+        //    {
+
+
+        //    }
+        //    return false;
+
+
+
+        //}
+
+        //public static Character GetCharacterAt(List<Character> character, int x, int y)
+        //{
+        //    for (int i = 0; i < character.Count; i++)
+        //    {
+        //        Character character1 = character[i];
+        //        if (character1.X == x && character1.Y == y)
+        //        {
+        //            return character1;
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        //public bool IsOccupied(Position pos)
+        //{
+        //    foreach (Character c in _charList)
+        //    {
+        //        if (c.Position == pos)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+
+
+
 
 
     }

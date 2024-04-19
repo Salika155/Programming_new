@@ -1,0 +1,4 @@
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\RugbyExamen - copia\RugbyExamen\obj\Debug\net7.0\RugbyExamen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\RugbyExamen - copia\RugbyExamen\obj\Debug\net7.0\RugbyExamen.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\RugbyExamen - copia\RugbyExamen\obj\Debug\net7.0\RugbyExamen.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\RugbyExamen - copia\RugbyExamen\obj\Debug\net7.0\RugbyExamen.csproj.CoreCompileInputs.cache

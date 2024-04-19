@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    public class Character : ICharacter
+    public abstract class Character
     {
 
         public int _x;
@@ -15,9 +15,27 @@ namespace RugbyExamen
 
         public Character() 
         {
-
+            _x = 0;
+            _y = 0;
         }
 
+        public int X
+        { get { return _x; } set { _x = value; } }
+        public int Y
+        { get { return _y; } set { _y = value; } }
+        
+        
+
+        public virtual void ExecuteTurn()
+        {
+           
+        }
+
+        //public void Move(int x, int y)
+        //{
+        //    _x = x;
+        //    _y = y;
+        //}
 
     }
 }

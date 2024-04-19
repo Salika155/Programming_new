@@ -6,7 +6,34 @@ using System.Threading.Tasks;
 
 namespace RugbyExamen
 {
-    internal class Ball
+    public class Ball
     {
+        public int X { get; set; }
+        public int Y { get; set; }
+
+        public Ball(int x, int y)
+        {
+            X = 0;
+            Y = 0;
+        }
+
+        public int GetXValue { get { return X; } }
+        public int GetYValue { get { return Y; } }
+
+        public int GetX()
+        {
+            return X;
+        }
+
+        public int GetY() 
+        {
+            return Y;
+        }
+
+        public void Move(int newx, int newy)
+        {
+            X = newx;
+            Y = newy;
+        }
     }
 }

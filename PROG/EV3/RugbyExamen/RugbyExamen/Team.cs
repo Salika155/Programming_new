@@ -15,7 +15,7 @@ namespace RugbyExamen
     {
         private string _name;
         public Player[] team = new Player[10];
-        private int _score;
+        //private int _score;
         private TeamType _teamType;
 
         public Team(string name, TeamType teamType)
@@ -24,9 +24,15 @@ namespace RugbyExamen
             _teamType = teamType;
         }
 
-        //addjugadores
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+
+            //addjugadores
 
 
-
+        }
     }
 }

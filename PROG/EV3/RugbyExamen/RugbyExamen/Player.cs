@@ -8,24 +8,34 @@ namespace RugbyExamen
 {
     public class Player : Character
     {
-        private string _Name { get; set; }
-        private TeamType _Team { get; set; }
+        private string _Name = "";
+        private Team _Team;
         private int _InitialX;
         private int _InitialY;
-        
 
-        public Player(string name, TeamType team, int x, int y)
+
+        public Player(Team team)
         {
-            _Name = name;
+            //_Name = name;
             _Team = team;
-            _InitialX = x;
-            _InitialY = y;
+            _InitialX = 0;
+            _InitialY = 0;
+            
         }
 
-        public string Name {get { return _Name; }}
-        public TeamType Team { get { return _Team; }}
-        public int InitialX { get { return _InitialX; }}
-        public int InitialY { get { return _InitialY; }}
+        public string Name {get { return _Name; } set { _Name = value; } }
+        public Team Team { get { return _Team; }}
+        public int InitialX { get { return _InitialX; } set { _InitialX = value; } }
+        public int InitialY { get { return _InitialY; } set { _InitialY = value; } }
 
+        public override void ExecuteTurn()
+        {
+           
+        }
+
+        public Team GetTeam()
+        {
+            return _Team;
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace RugbyExamen
     {
         //4 dementores
 
-        public Dementor(int x, int y) : base()
+        public Dementor(Position position) : base(position)
         {
             
         }

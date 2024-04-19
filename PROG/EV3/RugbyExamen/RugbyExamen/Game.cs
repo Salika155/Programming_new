@@ -15,25 +15,35 @@ namespace RugbyExamen
     public class Game
     {
         private List<Character> _chars = new List<Character>();
-        
+        private Position _size;
         private Team _team1;
         private Team _team2;
         private int _duration;
         private Ball _ball;
+        private int _turns;
         
+        public Position Size
+        { get => _size; }
         
 
-        public Game(string TeamBlue, string TeamRed)
+    public Game(string TeamBlue, string TeamRed)
         {
-            _board = new int[20, 10];
+            _size = new Position(10, 20);
             _duration = 1000;
-            Ball ball = new Ball(0, 0);
+            _ball = new Ball(GetRandomPositionOnGame());
             _team1 = new Team(TeamBlue, TeamType.Blue);
             _team2 = new Team(TeamRed, TeamType.Red);
-            CreateBoard();
-            PlayersPositioned();
-            DementorsPositioned();
-            BallPositioned();
+            //CreateBoard();
+            //PlayersPositioned();
+            //DementorsPositioned();
+            //BallPositioned();
+        }
+
+        private Position GetRandomPositionOnGame()
+        {
+            Position position = new Position();
+
+            
         }
 
         private void CreateBoard()
@@ -42,7 +52,7 @@ namespace RugbyExamen
            {
                for (int x = 0; x < 20; x++)
                {
-                    _board[y, x] = 0;
+                    
                }
            }
         }
@@ -52,23 +62,36 @@ namespace RugbyExamen
 
         public void Star()
         {
-            for (int i = 0; i < _duration; i++)
-            {
-               foreach (Character character in _chars)
-               {
-                    character.ExecuteTurn();
-               }
+            //for (int i = 0; i < _duration; i++)
+            //{
+            //   foreach (Character character in _chars)
+            //   {
+            //        character.ExecuteTurn();
+            //   }
 
-               if (IsGameOver())
-               {
-                    //PrintScore();
-                    break;
-               }
-            }
+            //   if (IsGameOver())
+            //   {
+            //        //PrintScore();
+            //        break;
+            //   }
+            //}
+            _ball.Position = GetRandomPositionOnGame();
+
         }
 
         public void Exec()
         {
+            for (int i = 0; i < _duration; i++)
+            {
+                foreach (Character character in _chars)
+                {
+                    character.ExecuteTurn();
+                }
+
+
+               
+            }
+            
             PlayersPositioned();
             DementorsPositioned();
             BallPositioned();
@@ -82,6 +105,25 @@ namespace RugbyExamen
         private static void BallPositioned()
         {
             
+        }
+
+        public Team GetWinnerTeam()
+        {
+            if (_team1.Score > _team2.Score)
+                return _team1;
+            else if (_team1.Score < _team2.Score)
+                return _team2;
+            else
+                return new Team("Empataron", TeamType.UNKNOWN);
+        }
+
+        public void Visit(Visitor visitor)
+        {
+            foreach (Character character in _chars)
+            {
+                if (visitor(character))
+                    break;
+            }
         }
 
         private static void DementorsPositioned()
@@ -100,97 +142,109 @@ namespace RugbyExamen
             for (int i = 0; i < 10; i++)
             {
                 Defense defense1Team1 = new Defense(_team1);
-                defense1Team1.X = positionsX[i];
-                defense1Team1.Y = positionsY[i];
+                //defense1Team1 = positionsX[i];
+                //defense1Team1 = positionsY[i];
+                defense1Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(defense1Team1);
 
                 Defense defense2Team1 = new Defense(_team1);
-                defense2Team1.X = positionsX[i];
-                defense2Team1.Y = positionsY[i];
+                //defense2Team1.X = positionsX[i];
+                //defense2Team1.Y = positionsY[i];
+                defense2Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(defense2Team1);
 
                 Defense defense1Team2 = new Defense(_team2);
-                defense1Team2.X = positionsX[i];
-                defense1Team2.Y = positionsY[i];
+                //defense1Team2.X = positionsX[i];
+                //defense1Team2.Y = positionsY[i];
+                defense1Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(defense1Team2);
 
                 Defense defense2Team2 = new Defense(_team2);
-                defense2Team2.X = positionsX[i];
-                defense2Team2.Y = positionsY[i];
+                //defense2Team2.X = positionsX[i];
+                //defense2Team2.Y = positionsY[i];
+                defense2Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(defense2Team2);
 
                 Striker striker1Team1 = new Striker(_team1);
-                striker1Team1.X = positionsX[i];
-                striker1Team1.Y = positionsY[i];
+                //striker1Team1.X = positionsX[i];
+                //striker1Team1.Y = positionsY[i];
+                striker1Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker1Team1);
 
                 Striker striker2Team1 = new Striker(_team1);
-                striker2Team1.X = positionsX[i];
-                striker2Team1.Y = positionsY[i];
+                //striker2Team1.X = positionsX[i];
+                //striker2Team1.Y = positionsY[i];
+                striker2Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker2Team1);
 
                 Striker striker3Team1 = new Striker(_team1);
-                striker3Team1.X = positionsX[i];
-                striker3Team1.Y = positionsY[i];
+                //striker3Team1.X = positionsX[i];
+                //striker3Team1.Y = positionsY[i];
+                striker3Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker3Team1);
 
                 Striker striker4Team1 = new Striker(_team1);
-                striker4Team1.X = positionsX[i];
-                striker4Team1.Y = positionsY[i];
+                //striker4Team1.X = positionsX[i];
+                //striker4Team1.Y = positionsY[i];
+                striker4Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker4Team1);
 
                 Striker striker1Team2 = new Striker(_team2);
-                striker1Team2.X = positionsX[i];
-                striker1Team2.Y = positionsY[i];
+                //striker1Team2.X = positionsX[i];
+                //striker1Team2.Y = positionsY[i];
+                striker1Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker1Team2);
 
                 Striker striker2Team2 = new Striker(_team2);
-                striker2Team2.X = positionsX[i];
-                striker2Team2.Y = positionsY[i];
+                //striker2Team2.X = positionsX[i];
+                //striker2Team2.Y = positionsY[i];
+                striker2Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker2Team2);
 
                 Striker striker3Team2 = new Striker(_team2);
-                striker3Team2.X = positionsX[i];
-                striker3Team2.Y = positionsY[i];
+                //striker3Team2.X = positionsX[i];
+                //striker3Team2.Y = positionsY[i];
+                striker3Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker3Team2);
 
                 Striker striker4Team2 = new Striker(_team2);
-                striker4Team2.X = positionsX[i];
-                striker4Team2.Y = positionsY[i];
+                //striker4Team2.X = positionsX[i];
+                //striker4Team2.Y = positionsY[i];
+                striker4Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(striker4Team2);
 
                 SpecialDefense specialDefense1Team1 = new SpecialDefense(_team1);
-                specialDefense1Team1.X = positionsX[i];
-                specialDefense1Team1.Y = positionsY[i];
+                //specialDefense1Team1.X = positionsX[i];
+                //specialDefense1Team1.Y = positionsY[i];
+                specialDefense1Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(specialDefense1Team1);
 
                 SpecialDefense specialDefense2Team1 = new SpecialDefense(_team1);
-                specialDefense2Team1.X = positionsX[i];
-                specialDefense2Team1.Y = positionsY[i];
+                //specialDefense2Team1.X = positionsX[i];
+                //specialDefense2Team1.Y = positionsY[i];
+                specialDefense2Team1.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(specialDefense2Team1);
 
                 SpecialDefense specialDefense1Team2 = new SpecialDefense(_team2);
-                specialDefense1Team2.X = positionsX[i];
-                specialDefense1Team2.Y = positionsY[i];
+                //specialDefense1Team2.X = positionsX[i];
+                //specialDefense1Team2.Y = positionsY[i];
+                specialDefense1Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(specialDefense1Team2);
 
                 SpecialDefense specialDefense2Team2 = new SpecialDefense(_team2);
-                specialDefense2Team2.X = positionsX[i];
-                specialDefense2Team2.Y = positionsY[i];
+                //specialDefense2Team2.X = positionsX[i];
+                //specialDefense2Team2.Y = positionsY[i];
+                specialDefense2Team2.Position = new Position(positionsX[i], positionsY[i]);
                 _chars.Add(specialDefense2Team2);
 
-
-
-                
             }
-
-
         }
 
         public bool PlayerHasBall(int x, int y)
         {
             foreach (var character in _chars)
             {
+               
 
             }
             return false;
@@ -211,6 +265,25 @@ namespace RugbyExamen
             }
             return null;
         }
+
+        public bool IsOccupied(Position pos)
+        {
+            foreach (Character c in _chars)
+            {
+                if (c.Position == pos)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public override void ExecuteTurn()
+        {
+            if (PlayerHasBall(this, _game.Ball))
+        }
+
+
     }
 }
 

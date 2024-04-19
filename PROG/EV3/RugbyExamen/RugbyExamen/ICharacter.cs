@@ -8,11 +8,10 @@ namespace RugbyExamen
 {
     public enum CharacterType
     {
-        Player,
         Ball,
-        Team,
         Defense,
-        SpecialDefense
+        SpecialDefense,
+        Striker,
     }
     internal interface ICharacter
     {

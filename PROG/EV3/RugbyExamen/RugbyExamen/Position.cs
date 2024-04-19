@@ -33,7 +33,36 @@ namespace RugbyExamen
             y = newy;
         }
 
+        public static bool operator == (Position p1, Position p2)
+        {
+            return p1.x == p2.x && p1.y == p2.y;
+        }
 
+        public static bool operator != (Position p1, Position p2)
+        {
+            return p1.x != p2.x || p1.y != p2.y;
+        }
+
+        public override bool Equals(object obj)
+        {
+            //if (obj == null || GetType() != obj.GetType())
+            //{
+            //    return false;
+            //}
+            //Position p = (Position)obj;
+            //return x == p.x && y == p.y;
+            return base.Equals(obj);
+        }
+
+        public static Position operator + (Position p1, Position p2)
+        {
+            return new Position(p1.x + p2.x, p1.y + p2.y);
+        }
+
+        public static Position operator - (Position p1, Position p2)
+        {
+            return new Position(p1.x - p2.x, p1.y - p2.y);
+        }
 
         public override string ToString()
         {

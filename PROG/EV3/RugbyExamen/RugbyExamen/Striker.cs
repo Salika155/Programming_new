@@ -86,9 +86,9 @@ namespace RugbyExamen
             
         }
 
-        public static bool IsCellEmpty(Character character)
+        public static bool IsCellEmpty(Character character, Game game)
         {
-            
+            return !game.IsOccupied(character.X, character.Y);
         }
 
         

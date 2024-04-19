@@ -11,6 +11,7 @@ namespace RugbyExamen
         List<Character> _characterList;
         private int _width;
         private int _height;
+        private Ball _ball;
 
         public BoardGame(int width, int height)
         {
@@ -25,18 +26,30 @@ namespace RugbyExamen
             {
                 for(int x = 0; x <= _width; x++)
                 {
-                    
+                    Position position = new Position(x, y);
+                    if (_ball.Position == position)
+                    {
+                        Console.Write("O ");
+                    }
+                    else if (IsOccupied(position))
+                    {
+                        Console.Write("X ");
+                    }
+                    else
+                    {
+                        Console.Write("- ");
+                    }
                 }
             }
         }
 
         
 
-        public bool IsOccupied(int x, int y)
+        public bool IsOccupied(Position position)
         {
             for (int i = 0; i < _characterList.Count; i++)
             {
-                if (_characterList[i].X == x && _characterList[i].Y == y)
+                if (_characterList[i].Position == position)
                 {
                     return true;
                 }

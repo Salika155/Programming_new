@@ -11,10 +11,11 @@ namespace RugbyExamen
         public int X { get; set; }
         public int Y { get; set; }
 
-        public Ball(int x, int y)
+        public Position Position;
+
+        public Ball(Position position)
         {
-            X = x;
-            Y = y;
+           Position = position;
         }
 
         public int GetXValue { get { return X; } }

@@ -9,7 +9,8 @@ namespace RugbyExamen
     public enum TeamType
     {
         Blue,
-        Red
+        Red,
+        UNKNOWN
     }
     public class Team
     {
@@ -81,5 +82,5 @@ namespace RugbyExamen
 
 
     }
-    }
+    
 }

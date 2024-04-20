@@ -44,16 +44,17 @@ namespace RugbyExamen
         private void GeneratePlayers()
         {
             _charList.Add(new Defense("a", _team1, 3, 1));
-            _charList.Add(new Dementor("b", _team1, 3, 2));
+            _charList.Add(new Dementor("b", 3, 2));
 
             var list = _boardGame.IsAvailable();
+            var availablePositions = new List<Position>(list);
             for (int i = 0; i < 4; i++) 
             {
-                var index = Utils.GetRandom(0, list.Count - 1);
-                var coordenadas = list[index];
+                var index = Utils.GetRandom(0, availablePositions.Count - 1);
+                var coordenadas = availablePositions[index];
                 var dementor = new Dementor(coordenadas);
                 _boardGame.AddPlayer(dementor);
-                list.RemoveAt(index);
+                availablePositions.RemoveAt(index);
             }
         }
 

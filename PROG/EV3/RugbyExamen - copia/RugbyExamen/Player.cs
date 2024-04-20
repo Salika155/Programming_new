@@ -23,7 +23,7 @@ namespace RugbyExamen
             
         }
 
-        public string Name {get { return Name; } set { Name = value; } }
+        public string Name {get { return _name; } set { _name = value; } }
         public Team Team { get { return _team; }}
         public int InitialX { get { return _InitialX; } set { _InitialX = value; } }
         public int InitialY { get { return _InitialY; } set { _InitialY = value; } }

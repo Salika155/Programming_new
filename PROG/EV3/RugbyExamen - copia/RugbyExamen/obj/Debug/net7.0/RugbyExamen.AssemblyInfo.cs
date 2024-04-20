@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RugbyExamen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5aca87d488781d9b89c6cdf5678d296001947015")]
 [assembly: System.Reflection.AssemblyProductAttribute("RugbyExamen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RugbyExamen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

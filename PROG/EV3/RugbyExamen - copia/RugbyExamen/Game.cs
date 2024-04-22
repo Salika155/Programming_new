@@ -64,6 +64,20 @@ namespace RugbyExamen
             
         }
 
+        private List<Character> GetPersonajesDeUnEquipo(Team team)
+        {
+            var ret = new List<Character>();
+
+            foreach (var character in _charList)
+            {
+                if (character is Player pj && pj.Team == team)
+                {
+                    ret.Add(character);
+                }
+            }
+            return ret;
+        }
+
         public void Visit(Action<Character> visitor)
         {
             if (visitor == null)
@@ -114,7 +128,7 @@ namespace RugbyExamen
             for (int round = 0; round < _duration; round++)
             {
                 Hacerquelosjugadoresrealicensujugada();
-                if (HayGol())
+                if (GetJugadorQueHaMarcado())
                 {
                     Sumarpuntuaciondegolalequipocorrespondiente();
                     ReiniciarPosicionJugadores();
@@ -124,24 +138,93 @@ namespace RugbyExamen
 
         }
 
+        private Player? GetJugadorQueHaMarcado()
+        {
+            Ball ball = _boardGame.GetBall();
+
+            foreach (Character pj in _charList)
+            {
+                //pattermatter
+                if (pj is Player player)
+                {
+                    if (player.HaMarcado(ball))
+                        return player;
+                }
+            }
+            return null;
+
+        }
+
         private bool HayGol()
         {
-            throw new NotImplementedException();
+            return GetJugadorQueHaMarcado() != null;
+            //Ball ball = _boardGame.GetBall();
+
+            //foreach (Character pj in _charList)
+            //{
+            //    //pattermatter
+            //    if (pj is Player player)
+            //    {
+            //        if (player.HaMarcado(ball))
+            //            return true;
+            //    }
+            //}
+            //return false;
+
         }
 
         private void ReiniciarPosicionJugadores()
         {
-            throw new NotImplementedException();
+            var list = GetPersonajesDeUnEquipo(_team1);
+            int defensaIndex = 0;
+            int delanteroIndex = 0;
+
+            {
+                foreach (var pj in list)
+                {
+                   if (pj is SpecialDefense)
+                   {
+                        
+                   }
+                   else if (pj is Defense)
+                   {
+                        Utils.ConfigurarDefensa(pj, defensaIndex++);
+                   }
+                   else if (pj is Striker)
+                   {
+                        
+                   }
+                }
+            }
+        }
+
+        public void PonerAlosJugadoresEnPosicionDeOrigen()
+        {
+
         }
 
         private void Sumarpuntuaciondegolalequipocorrespondiente()
         {
-            throw new NotImplementedException();
+            Player player = GetJugadorQueHaMarcado();
+            if (player == null)
+                return;
+
+            if (player is SpecialDefense)
+                player.Team.Score += 1;
+            else if (player is Defense)
+                player.Team.Score += 1;
+            else 
+                player.Team.Score += 10;
+                
+            
         }
 
         private void Hacerquelosjugadoresrealicensujugada()
         {
-            throw new NotImplementedException();
+            foreach (var pj in _charList)
+            {
+                pj.ExecuteTurn(_boardGame);
+            }
         }
 
         //private Position GetRandomPositionOnGame()

@@ -8,12 +8,13 @@ namespace RugbyExamen
 {
     public enum TeamType
     {
-        Blue,
-        Red,
+        Blue = -1,
+        Red = 1,
         UNKNOWN
     }
     public class Team
     {
+        
         private string _name;
         public Player[] team = new Player[10];
         private int _score;

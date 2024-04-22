@@ -31,5 +31,24 @@ namespace RugbyExamen
         //    return Math.Abs(x - x2) + Math.Abs(y - y2);
         //}
 
+        public static void ConfigurarDefensa(Player player, int index)
+        {
+            var dir = player.Team.TeamType;
+            int y = 0;
+
+            if (dir == TeamType.Blue)
+            {
+                y = 19;
+            }
+            
+            if (index == 0)
+            {
+                player.Position.x = 0;
+                player.Position.y = 0;
+            }
+            
+        }
+
+
     }
 }

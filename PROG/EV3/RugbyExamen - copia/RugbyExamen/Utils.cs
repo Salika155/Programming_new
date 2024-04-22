@@ -15,21 +15,10 @@ namespace RugbyExamen
             return r.Next(min, max);
         }
 
-        //public static int RandomRangeInt(int min, int max)
-        //{
-        //    int r = (int)RandomRange(min, max);
-        //    return r;
-        //}
-
         public static bool IsInRange(int x, int y, int x2, int y2, int range)
         {
             return Math.Abs(x - x2) <= range && Math.Abs(y - y2) <= range;
         }
-
-        //public int GetDistance(int x, int y, int x2, int y2)
-        //{
-        //    return Math.Abs(x - x2) + Math.Abs(y - y2);
-        //}
 
         public static void ConfigurarDefensa(Player player, int index)
         {
@@ -45,10 +34,7 @@ namespace RugbyExamen
             {
                 player.Position.x = 0;
                 player.Position.y = 0;
-            }
-            
+            }  
         }
-
-
     }
 }

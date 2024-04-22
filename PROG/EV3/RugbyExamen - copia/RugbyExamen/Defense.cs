@@ -12,7 +12,7 @@ namespace RugbyExamen
         {
         }
 
-        public Defense(string name, Team team1, int v2, int v3) : this(name, team1, new Position(v2, v3))
+        public Defense(string name, Team team, int initialX, int initialY) : this(name, team, new Position(initialX, initialY))
         {
         }
 

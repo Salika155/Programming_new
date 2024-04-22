@@ -66,16 +66,6 @@ namespace RugbyExamen
             return base.Equals(obj);
         }
 
-        //public static Position operator + (Position p1, Position p2)
-        //{
-        //    return new Position(p1.x + p2.x, p1.y + p2.y);
-        //}
-
-        //public static Position operator - (Position p1, Position p2)
-        //{
-        //    return new Position(p1.x - p2.x, p1.y - p2.y);
-        //}
-
         public override string ToString()
         {
             return "(" + x + ", " + y + ")";

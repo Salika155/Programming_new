@@ -16,7 +16,7 @@ namespace RugbyExamen
             
         }
 
-        public Dementor(Position position) : this(position)
+        public Dementor(string name, int initialX, int initialY) : this(name, new Position(initialX, initialY))
         {
            
         }

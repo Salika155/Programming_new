@@ -21,11 +21,6 @@ namespace RugbyExamen
             Position = position;
         }
 
-        //public int X
-        //{ get { return _x; } set { _x = value; } }
-        //public int Y
-        //{ get { return _y; } set { _y = value; } }
-        
         public List<Position> GetPossibleMoves(Game g, int distance)
         {
             List<Position> possibleMoves = new List<Position>();
@@ -33,17 +28,8 @@ namespace RugbyExamen
             return possibleMoves;
         }
 
-
         public abstract void ExecuteTurn(IBoardGame boardGame);
         //pasarle un partido
-
-
-
-        //public void Move(int x, int y)
-        //{
-        //    _x = x;
-        //    _y = y;
-        //}
 
     }
 }

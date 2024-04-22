@@ -13,8 +13,6 @@ namespace RugbyExamen
         private int _InitialX;
         private int _InitialY;
 
-        
-
 
         public Player(string name, Team team, Position position) : base(position)
         {
@@ -33,7 +31,7 @@ namespace RugbyExamen
 
         
        public bool HaMarcado(Ball ball)
-        {
+       {
             bool tengolapelota =  ball.PlayerThatHaveTheBall == this;
             if (tengolapelota)
             {
@@ -53,9 +51,6 @@ namespace RugbyExamen
                 }
             }
             return false;
-            
-        }
-
-       
+       }
     }
 }

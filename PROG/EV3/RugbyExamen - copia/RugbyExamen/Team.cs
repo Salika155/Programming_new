@@ -71,17 +71,7 @@ namespace RugbyExamen
             _score += points;
         }
 
-        //public bool TeamHasBall(Game game)
-        //{
-        //    foreach (Player player in team)
-        //    {
-        //        if (game.HasBall(player))
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
+ 
 
         //addjugadores
 

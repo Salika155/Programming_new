@@ -25,8 +25,8 @@ namespace RugbyExamen
 
         public string Name {get { return _name; } set { _name = value; } }
         public Team Team { get { return _team; }}
-        public int InitialX { get { return _InitialX; } set { _InitialX = value; } }
-        public int InitialY { get { return _InitialY; } set { _InitialY = value; } }
+        //public int InitialX { get { return _InitialX; } set { _InitialX = value; } }
+        //public int InitialY { get { return _InitialY; } set { _InitialY = value; } }
         public TeamType TeamType => _team.TeamType;
 
         
@@ -52,5 +52,15 @@ namespace RugbyExamen
             }
             return false;
        }
+
+        public override bool TengoLaPelota(IBoardGame boardGame)
+        {
+            return boardGame.Ball.PlayerThatHaveTheBall == this;
+        }
+
+        public override bool TengoLaPelota(Ball ball)
+        {
+            return ball.PlayerThatHaveTheBall.;
+        }
     }
 }

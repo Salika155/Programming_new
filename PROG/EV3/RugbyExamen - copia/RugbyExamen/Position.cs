@@ -70,5 +70,22 @@ namespace RugbyExamen
         {
             return "(" + x + ", " + y + ")";
         }
+
+        public static bool operator == (Position a, Position b)
+        {
+            return a.x == b.x && a.y == b.y;
+        }
+
+        public static bool operator != (Position a, Position b)
+        {
+            return !(a == b);
+        }
+
+        public double GetDistance(Position p)
+        {
+            int dx = p.x - x;
+            int dy = p.y - y;
+            return Math.Sqrt(dx * dx + dy * dy);
+        }
     }
 }

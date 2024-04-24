@@ -8,7 +8,7 @@ namespace nuncopy_definitivo
 {
     public class FileReader
     {
-        public static bool CompareFiles(Ufile file1, Ufile file2)
+        public static bool CompareFilesByBytes(Ufile file1, Ufile file2)
         {
             if (file1.Size != file2.Size && file1.Hash != file2.Hash)
             {

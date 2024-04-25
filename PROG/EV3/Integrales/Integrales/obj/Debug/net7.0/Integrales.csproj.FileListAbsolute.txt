@@ -1,0 +1,14 @@
+C:\Users\carcarcor\source\repos\Integrales\Integrales\bin\Debug\net7.0\Integrales.exe
+C:\Users\carcarcor\source\repos\Integrales\Integrales\bin\Debug\net7.0\Integrales.deps.json
+C:\Users\carcarcor\source\repos\Integrales\Integrales\bin\Debug\net7.0\Integrales.runtimeconfig.json
+C:\Users\carcarcor\source\repos\Integrales\Integrales\bin\Debug\net7.0\Integrales.dll
+C:\Users\carcarcor\source\repos\Integrales\Integrales\bin\Debug\net7.0\Integrales.pdb
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.AssemblyInfoInputs.cache
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.AssemblyInfo.cs
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.dll
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\refint\Integrales.dll
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.pdb
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\Integrales.genruntimeconfig.cache
+C:\Users\carcarcor\source\repos\Integrales\Integrales\obj\Debug\net7.0\ref\Integrales.dll

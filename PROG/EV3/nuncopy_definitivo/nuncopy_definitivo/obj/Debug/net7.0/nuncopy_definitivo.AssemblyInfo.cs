@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nuncopy_definitivo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bf46f4a3a08a25d391898ab43ff836c0a16ea1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("nuncopy_definitivo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nuncopy_definitivo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

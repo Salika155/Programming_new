@@ -13,10 +13,17 @@ namespace nuncopy_definitivo
         private bool _disabled;
         private long _size;
 
-        public string? Path
+        //public string? Path { get; set; }
+        //public string? Hash { get; set; }
+        //public bool Disabled { get; set; }
+        //public long Size { get; set; }
+
+
+        public string? PathFile
         {
             get => _path;
             set => _path = value;
+
         }
 
         public string? Hash

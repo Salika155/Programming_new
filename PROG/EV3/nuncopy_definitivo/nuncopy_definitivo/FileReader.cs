@@ -16,5 +16,19 @@ namespace nuncopy_definitivo
             }
             return true;
         }
+
+        public static string GetHash(string file)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static long GetSize(string filePath)
+        {
+            if (filePath == null)
+                throw new ArgumentNullException("No se encontro el archivo");
+
+           FileInfo info = new FileInfo(filePath);
+           return info.Length;
+        }
     }
 }

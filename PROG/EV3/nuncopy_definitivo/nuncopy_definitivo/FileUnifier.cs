@@ -83,9 +83,7 @@ namespace nuncopy_definitivo
                             }
                         }
                     }
-                    
                 }
-                
             }
         }
 
@@ -96,5 +94,24 @@ namespace nuncopy_definitivo
                 throw new ArgumentNullException("No se encontro el directorio de salida");
             
         }
+
+        //public string[] FindDuplicates(string[] stringfiles)
+        //{
+        //    var hashes = new HashSet<string>();
+        //    var duplicates = new HashSet<string>();
+
+        //    foreach (var file in stringfiles)
+        //    {
+        //        using (var fileUnifier = new FileUnifier(stringfiles))
+        //        {
+        //            var hash = Utils.HashCalculator(fileUnifier.ReadAllBytes());
+        //            if (!string.IsNullOrEmpty(hash) && !hashes.Add(hash))
+        //            {
+        //                duplicates.Add(file);
+        //            }
+        //        }
+                
+        //    }
+        //}
     }
 }

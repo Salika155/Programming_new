@@ -8,10 +8,12 @@ namespace nuncopy_definitivo
 {
     public class AppRunner
     {
-        FileUnifier fileUnifier = new FileUnifier();
+        
 
         public static void RunApp(string[] args)
         {
+            FileUnifier fileUnifier = new FileUnifier();
+            //pasar los argumentos por el parse
             throw new NotImplementedException();
             //pasarle el path con el directorio de los archivos a comparar, incluyendo subdirectorios
             //pasarle el path con el directorio de salida

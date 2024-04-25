@@ -10,6 +10,7 @@ namespace nuncopy_definitivo
     {
         private string? _path;
         private string? _hash;
+        private string? _name;
         private bool _disabled;
         private long _size;
 
@@ -42,6 +43,21 @@ namespace nuncopy_definitivo
         {
             get => _size;
             set => _size = value;
+        }
+
+        public string? Name
+        {
+            get => _name;
+            set => _name = value;
+        }
+
+        public Ufile()
+        {
+            _path = string.Empty;
+            _hash = string.Empty;
+            _disabled = false;
+            _size = 0;
+            _name = System.IO.Path.GetFileName(_path);
         }
 
     }

@@ -10,6 +10,12 @@ namespace nuncopy_definitivo
     {
         private FileReader _fileReader;
 
+        //public FileReader FileRead
+        //{
+        //    get { return _fileReader; }
+        //    set { _fileReader = value; }
+        //}
+
         //public FileReader(string path)
         //{
             

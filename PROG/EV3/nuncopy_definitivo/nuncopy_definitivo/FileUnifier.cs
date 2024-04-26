@@ -30,12 +30,16 @@ namespace nuncopy_definitivo
             _files.Add(file);
         }
 
-        public void AddDirectory(string pathDirectoriy)
+        public void AddDirectory(string pathDirectory)
         {
-           if(Directory.Exists(pathDirectoriy))
-                _directories.Add(pathDirectoriy);
-           Directory.CreateDirectory(_outputPath);
-                
+            if (Directory.Exists(pathDirectory))
+            {
+                _directories.Add(pathDirectory);
+            }
+            else
+            {
+                Console.WriteLine($"El directorio '{pathDirectory}' no existe.");
+            }
         }
 
         public void ListFiles()
@@ -91,9 +95,70 @@ namespace nuncopy_definitivo
         {
             //TODO: implementar la copia de archivos
             //esto creo que seria mejor encapsularlo en un metodo aparte
-            if (!IsOutputPathSet || !HasDirectories || !HasFiles || HasDuplicades)
+            if (!IsOutputPathSet || !HasDirectories || !HasFiles)
                 throw new ArgumentNullException("No se encontro el directorio de salida");
-            
+
+            string? directoryPathParent = Directory.GetParent(_directories[0]).FullName;
+            foreach (var file in _files)
+            {
+                if (file.Disabled)
+                    continue;
+                string targetPath = Path.Combine(_outputPath, file.PathFile.Substring(directoryPathParent.Length + 1));
+                string targetDirPath = Path.GetDirectoryName(targetPath);
+                if (!Directory.Exists(targetDirPath))
+                    Directory.CreateDirectory(targetDirPath);
+                File.Copy(file.PathFile, targetPath);
+                _success++;
+            }
+        }
+
+        private (string targetPath, string? targetDirPath) GetDestinationRoute(string filePath, string parentDirectoryPath, Ufile file)
+        {
+            string relativePath = parentDirectoryPath != null ? filePath.Substring(parentDirectoryPath.Length + 1) : file.PathFile; //Comprobar después
+            string targetPath = Path.Combine(_outputPath, relativePath);
+            string? targetDirPath = Path.GetDirectoryName(targetPath);
+            return (targetPath, targetDirPath);
+        }
+
+        //public void SetOutputPath(string path)
+        //{
+        //    if (Directory.Exists(path))
+        //    {
+        //        string newPath = Path.Combine(path, "FileUnifierOutput");
+        //        Directory.CreateDirectory(newPath);
+        //        _outputPath = newPath;
+        //    }
+        //}
+
+        //public void SetOutputPath(string outputPath)
+        //{
+        //    if (Directory.Exists(outputPath))
+        //    {
+        //        _outputPath = Path.Combine(outputPath, "FileUnifierOutput");
+        //        Directory.CreateDirectory(_outputPath);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"El directorio de salida '{outputPath}' no existe.");
+        //    }
+        //}
+
+        public void SetOutputPath(string outputPath)
+        {
+            if (!Directory.Exists(outputPath))
+            {
+                Console.WriteLine($"El directorio '{outputPath}' no existe. Creando el directorio en el escritorio...");
+
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                _outputPath = Path.Combine(desktopPath, "FileUnifierOutput");
+
+                Directory.CreateDirectory(_outputPath);
+            }
+            else
+            {
+                _outputPath = Path.Combine(outputPath, "FileUnifierOutput");
+                Directory.CreateDirectory(_outputPath);
+            }
         }
 
         //public string[] FindDuplicates(string[] stringfiles)
@@ -119,13 +184,7 @@ namespace nuncopy_definitivo
         //TODO: implementar la implementacion de los paths de los archivos y el path de salida
 
         //es esto pero de otra manera, tengo que pensar  como hacerlo:
-        //private (string targetPath, string? targetDirPath) GetDestinationRoute(string filePath, string parentDirectoryPath, UFile file)
-        //{
-        //    string relativePath = parentDirectoryPath != null ? filePath.Substring(parentDirectoryPath.Length + 1) : file.Path; //Comprobar después
-        //    string targetPath = Path.Combine(_outputPath, relativePath);
-        //    string? targetDirPath = Path.GetDirectoryName(targetPath);
-        //    return (targetPath, targetDirPath);
-        //}
+
 
         //public void MakeTextFileOfDuplicates()
         //{

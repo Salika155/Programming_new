@@ -12,9 +12,14 @@ namespace nuncopy_definitivo
         public static void RunApp(string[] args)
         {
             FileUnifier fileUnifier = new FileUnifier();
+
+            // Define los directorios de entrada y salida directamente en el código
+            string[] inputDirectories = new string[] { "C:\\Users\\carre\\Desktop\\Brandon Sanderson", "C:\\Users\\carre\\Desktop\\carpeta_origen" };
+            string outputDirectory = "C:\\Users\\carre\\Desktop\\carpeta_destino";
+            ArgumentManager.SetDirectories(fileUnifier, inputDirectories, outputDirectory);
             //pasar los argumentos por el parse
 
-            if (fileUnifier.HasDirectories)
+            if (fileUnifier.HasDirectories && fileUnifier.IsOutputPathSet)
             {
                 //llamar a los metodos de la clase FileUnifier
                 //listfiles para obtener los archivos

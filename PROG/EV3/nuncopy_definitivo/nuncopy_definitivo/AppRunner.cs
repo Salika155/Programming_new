@@ -9,12 +9,28 @@ namespace nuncopy_definitivo
     public class AppRunner
     {
         
-
         public static void RunApp(string[] args)
         {
             FileUnifier fileUnifier = new FileUnifier();
             //pasar los argumentos por el parse
-            throw new NotImplementedException();
+
+            if (fileUnifier.HasDirectories)
+            {
+                //llamar a los metodos de la clase FileUnifier
+                //listfiles para obtener los archivos
+                fileUnifier.ListFiles();
+                //comparefiles para comparar los archivos
+                fileUnifier.CompareFiles();
+                //copyfiles para copiar los archivos
+                fileUnifier.CopyFiles();
+                //si hay duplicados y no se quieren exportar, se deshabilitan
+                if(fileUnifier.HasDuplicades)
+                {
+                    fileUnifier.ExportDuplicates = false;
+                    
+                }
+            }
+            
             //pasarle el path con el directorio de los archivos a comparar, incluyendo subdirectorios
             //pasarle el path con el directorio de salida
 

@@ -89,6 +89,7 @@ namespace nuncopy_definitivo
 
         public void CopyFiles()
         {
+            //TODO: implementar la copia de archivos
             //esto creo que seria mejor encapsularlo en un metodo aparte
             if (!IsOutputPathSet || !HasDirectories || !HasFiles || HasDuplicades)
                 throw new ArgumentNullException("No se encontro el directorio de salida");
@@ -110,7 +111,44 @@ namespace nuncopy_definitivo
         //                duplicates.Add(file);
         //            }
         //        }
-                
+
+        //    }
+        //}
+
+        //TODO: implementar la exportacion de archivos duplicados y no duplicados
+        //TODO: implementar la implementacion de los paths de los archivos y el path de salida
+
+        //es esto pero de otra manera, tengo que pensar  como hacerlo:
+        //private (string targetPath, string? targetDirPath) GetDestinationRoute(string filePath, string parentDirectoryPath, UFile file)
+        //{
+        //    string relativePath = parentDirectoryPath != null ? filePath.Substring(parentDirectoryPath.Length + 1) : file.Path; //Comprobar después
+        //    string targetPath = Path.Combine(_outputPath, relativePath);
+        //    string? targetDirPath = Path.GetDirectoryName(targetPath);
+        //    return (targetPath, targetDirPath);
+        //}
+
+        //public void MakeTextFileOfDuplicates()
+        //{
+        //    if (!ExportDuplicates || _duplicates.Count == 0)
+        //        return;
+        //    string filePath = Path.Combine(_outputPath, "duplicates.txt");
+        //    using (Stream stream = File.Open(filePath, FileMode.Create))
+        //    {
+        //        using (StreamWriter writer = new StreamWriter(stream))
+        //        {
+        //            foreach (var file in _duplicates)
+        //                writer.WriteLine(file.Path);
+        //        }
+        //    }
+        //}
+
+        //public void SetOutputPath(string path)
+        //{
+        //    if (Directory.Exists(path))
+        //    {
+        //        string newPath = Path.Combine(path, "FileUnifierOutput");
+        //        Directory.CreateDirectory(newPath);
+        //        _outputPath = newPath;
         //    }
         //}
     }

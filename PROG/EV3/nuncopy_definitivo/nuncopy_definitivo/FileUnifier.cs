@@ -33,13 +33,9 @@ namespace nuncopy_definitivo
         public void AddDirectory(string pathDirectory)
         {
             if (Directory.Exists(pathDirectory))
-            {
                 _directories.Add(pathDirectory);
-            }
             else
-            {
                 Console.WriteLine($"El directorio '{pathDirectory}' no existe.");
-            }
         }
 
         public void ListFiles()

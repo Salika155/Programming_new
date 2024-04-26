@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            Environment.ExitCode = 0;
+
             FileUnifier fileUnifier = new FileUnifier();
 
             // Define los directorios de entrada y salida directamente en el código

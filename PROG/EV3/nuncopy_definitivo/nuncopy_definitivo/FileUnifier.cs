@@ -21,6 +21,7 @@ namespace nuncopy_definitivo
         public bool HasFiles => _files.Count > 0;
         public bool HasDuplicades => _duplicades.Count > 0;
         public bool ExportDuplicates { get; set; } = false;
+        public bool HasErrors => _errors > 0;
         
 
         public void AddFile(Ufile file)
@@ -90,7 +91,7 @@ namespace nuncopy_definitivo
         public void CopyFiles()
         {
             //TODO: implementar la copia de archivos
-            //esto creo que seria mejor encapsularlo en un metodo aparte
+            //esto creo que seria mejor encapsularlo en un metodo aparte pero no veo como trocearlo
             if (!IsOutputPathSet || !HasDirectories || !HasFiles)
                 throw new ArgumentNullException("No se encontro el directorio de salida");
 
@@ -103,19 +104,36 @@ namespace nuncopy_definitivo
                 string targetDirPath = Path.GetDirectoryName(targetPath);
                 if (!Directory.Exists(targetDirPath))
                     Directory.CreateDirectory(targetDirPath);
+                else if (File.Exists(targetPath))
+                {
+                    Console.WriteLine($"El archivo '{file.PathFile}' ya existe en '{targetPath}'");
+                    _errors++;
+                    continue;
+                }
                 File.Copy(file.PathFile, targetPath);
+                Console.WriteLine($"Copiando archivo '{file.PathFile}' a '{targetPath}'");
                 _success++;
             }
+            Console.WriteLine($"Se copiaron {_success} archivos con éxito.");
         }
 
         private (string targetPath, string? targetDirPath) GetDestinationRoute(string filePath, string parentDirectoryPath, Ufile file)
         {
-            string relativePath = parentDirectoryPath != null ? filePath.Substring(parentDirectoryPath.Length + 1) : file.PathFile; //Comprobar después
+            // Esta línea obtiene la ruta relativa del archivo dentro del directorio de origen.
+            // Si se le pasa un directorio padre (parentDirectoryPath), la ruta relativa se calcula tomando la subcadena de filePath
+            // que está después de parentDirectoryPath.
+            // De lo contrario, se toma la ruta del archivo directamente de file.PathFile.
+            string relativePath = parentDirectoryPath != null ? filePath.Substring(parentDirectoryPath.Length + 1) : file.PathFile;
+            // Combina la ruta relativa con la ruta de salida (_outputPath) usando Path.Combine().
+            // Se compacta para definir la ruta completa de destino donde se copiará el archivo.
             string targetPath = Path.Combine(_outputPath, relativePath);
+            // Obtenemos el directorio de destino de la ruta completa usando Path.GetDirectoryName(). Nos aseguramos que existe el directorio
             string? targetDirPath = Path.GetDirectoryName(targetPath);
+            // Finalmente, se devuelve la ruta completa de destino (targetPath) y el directorio de destino (targetDirPath).
             return (targetPath, targetDirPath);
         }
 
+        #region codigo viejo
         //public void SetOutputPath(string path)
         //{
         //    if (Directory.Exists(path))
@@ -138,6 +156,7 @@ namespace nuncopy_definitivo
         //        Console.WriteLine($"El directorio de salida '{outputPath}' no existe.");
         //    }
         //}
+        #endregion
 
         public void SetOutputPath(string outputPath)
         {
@@ -146,17 +165,19 @@ namespace nuncopy_definitivo
                 Console.WriteLine($"El directorio '{outputPath}' no existe. Creando el directorio en el escritorio...");
 
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                _outputPath = Path.Combine(desktopPath, "FileUnifierOutput");
+                _outputPath = Path.Combine(desktopPath, "nuncopyOutputFile");
 
                 Directory.CreateDirectory(_outputPath);
             }
             else
             {
-                _outputPath = Path.Combine(outputPath, "FileUnifierOutput");
+                _outputPath = Path.Combine(outputPath, "nuncopyOutputFile");
                 Directory.CreateDirectory(_outputPath);
             }
         }
 
+        #region intento fallido
+        //esto me devolvia y copiaba los duplicados ya
         //public string[] FindDuplicates(string[] stringfiles)
         //{
         //    var hashes = new HashSet<string>();
@@ -206,5 +227,7 @@ namespace nuncopy_definitivo
         //        _outputPath = newPath;
         //    }
         //}
+        #endregion
+
     }
 }

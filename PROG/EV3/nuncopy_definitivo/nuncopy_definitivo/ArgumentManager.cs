@@ -8,6 +8,7 @@ namespace nuncopy_definitivo
 {
     public static class ArgumentManager
     {
+        
         public static void CheckArguments(string[] args, FileUnifier fileUnifier)
         {
             if (args.Length == 0)

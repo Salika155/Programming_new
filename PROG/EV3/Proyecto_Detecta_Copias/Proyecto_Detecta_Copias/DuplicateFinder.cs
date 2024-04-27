@@ -23,9 +23,13 @@ namespace Proyecto_Detecta_Copias
                     {
                         duplicates.Add(file);
                     }
+                    else
+                    {
+                        hashes.Add(hash);
+                    }
                 }
             }
-            return duplicates.ToArray();
+            return hashes.ToArray();
         }
     }
 }

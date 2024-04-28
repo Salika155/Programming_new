@@ -85,6 +85,45 @@ namespace nuncopy_definitivo
                 Console.WriteLine($"El directorio de salida '{outputDirectory}' no existe.");
             }
         }
+
+        //public static void SetDirectories(FileUnifier fileUnifier, string[] inputDirectories, string outputDirectory)
+        //{
+        //    try
+        //    {
+        //        if (inputDirectories != null)
+        //        {
+        //            foreach (var inputDirectory in inputDirectories)
+                        
+                
+        //            if (Directory.Exists(inputDirectory))
+        //            {
+        //                fileUnifier.AddDirectory(inputDirectory);
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine($"El directorio de entrada '{inputDirectory}' no existe.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("El arreglo de directorios de entrada es nulo.");
+        //        }
+
+        //        if (Directory.Exists(outputDirectory))
+        //        {
+        //            fileUnifier.SetOutputPath(outputDirectory);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"El directorio de salida '{outputDirectory}' no existe.");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Se produjo una excepción en SetDirectories: {ex.Message}");
+        //        // Puedes agregar más información de depuración si lo deseas.
+        //    }
+        //}
     }
 
     

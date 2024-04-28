@@ -107,14 +107,16 @@ namespace nuncopy_definitivo
                 else if (File.Exists(targetPath))
                 {
                     _errors++;
-                    Console.WriteLine($"El archivo '{file.PathFile}' ya existe en '{targetPath}, hubo un total de {_errors} errores.'");
+                    Console.WriteLine($"El archivo '{file.PathFile}' ya existe en '{targetPath}.'");
                     continue;
+                    
                 }
                 File.Copy(file.PathFile, targetPath);
                 Console.WriteLine($"Copiando archivo '{file.PathFile}' a '{targetPath}'");
                 _success++;
+                
             }
-            Console.WriteLine($"Se copiaron {_success} archivos con éxito y no hubo errores.");
+            Console.WriteLine($"Se copiaron {_success} archivos con éxito y hubo {_errors} errores.");
         }
 
         private (string targetPath, string? targetDirPath) GetDestinationRoute(string filePath, string parentDirectoryPath, Ufile file)

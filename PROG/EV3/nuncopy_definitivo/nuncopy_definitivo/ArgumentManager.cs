@@ -32,10 +32,10 @@ namespace nuncopy_definitivo
                                 i++;
                             }
                             else
-                                Console.WriteLine("Directory does not exist");
+                                Console.WriteLine("El directorio no existe");
                         }
                         else
-                            Console.WriteLine("No directory provided");
+                            Console.WriteLine("No se ha provisto de un directorio");
                         break;
                     case "-o":
                         if (!fileUnifier.IsOutputPathSet && i + 1 < args.Length)
@@ -47,16 +47,16 @@ namespace nuncopy_definitivo
                                 i++;
                             }
                             else
-                                Console.WriteLine("Directory does not exist");
+                                Console.WriteLine("El directorio no existe");
                         }
                         else
-                            Console.WriteLine("No directory provided or output path is already set");
+                            Console.WriteLine("El directorio no ha sido provisto o el path de salida esta en uso");
                         break;
                     case "-t":
                         fileUnifier.ExportDuplicates = true;
                         break;
                     default:
-                        Console.WriteLine("Invalid argument");
+                        Console.WriteLine("Argumento invalido");
                         break;
                 }
             }

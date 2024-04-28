@@ -10,48 +10,48 @@ namespace nuncopy_definitivo
     public class AppRunner
     {
         #region Intento de implementar JSON
-        //public static void RunApp(string[] inputDirectories)
-        //{
-        //    // Ruta del archivo JSON
-        //    string jsonFilePath = "C:\\Users\\carre\\Desktop\\carpeta_origen\\json.json"; // Cambiar por la ruta de tu archivo JSON
+        public static void RunApp(string[] inputDirectories)
+        {
+            // Ruta del archivo JSON
+            string jsonFilePath = "C:\\Users\\carre\\Desktop\\carpeta_origen\\json.json"; // Cambiar por la ruta de tu archivo JSON
 
-        //    // Verificar si el archivo existe
-        //    if (File.Exists(jsonFilePath))
-        //    {
-        //        try
-        //        {
-        //            // Leer el contenido del archivo JSON
-        //            string jsonContent = File.ReadAllText(jsonFilePath);
+            // Verificar si el archivo existe
+            if (File.Exists(jsonFilePath))
+            {
+                try
+                {
+                    // Leer el contenido del archivo JSON
+                    string jsonContent = File.ReadAllText(jsonFilePath);
 
-        //            // Deserializar el JSON a un objeto
-        //            JsonFile inputOutputDirectories = JsonSerializer.Deserialize<JsonFile>(jsonContent);
+                    // Deserializar el JSON a un objeto
+                    JsonFile inputOutputDirectories = JsonSerializer.Deserialize<JsonFile>(jsonContent);
 
-        //            // Establecer los directorios en el FileUnifier
-        //            FileUnifier fileUnifier = new FileUnifier();
-        //            ArgumentManager.SetDirectories(fileUnifier, inputOutputDirectories.inputDirectories, inputOutputDirectories.outputDirectory);
+                    // Establecer los directorios en el FileUnifier
+                    FileUnifier fileUnifier = new FileUnifier();
+                    ArgumentManager.SetDirectories(fileUnifier, inputOutputDirectories.inputDirectories, inputOutputDirectories.outputDirectory);
 
-        //            // Llamar a los métodos de la clase FileUnifier
-        //            if (fileUnifier.HasDirectories && fileUnifier.IsOutputPathSet)
-        //            {
-        //                fileUnifier.ListFiles();
-        //                fileUnifier.CompareFiles();
-        //                fileUnifier.CopyFiles();
-        //                if (fileUnifier.HasDuplicades)
-        //                {
-        //                    fileUnifier.ExportDuplicates = false;
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            Console.WriteLine($"Error al procesar el archivo JSON: {ex.Message}");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("El archivo JSON no existe.");
-        //    }
-        //}
+                    // Llamar a los métodos de la clase FileUnifier
+                    if (fileUnifier.HasDirectories && fileUnifier.IsOutputPathSet)
+                    {
+                        fileUnifier.ListFiles();
+                        fileUnifier.CompareFiles();
+                        fileUnifier.CopyFiles();
+                        if (fileUnifier.HasDuplicades)
+                        {
+                            fileUnifier.ExportDuplicates = false;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al procesar el archivo JSON: {ex.Message}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("El archivo JSON no existe.");
+            }
+        }
         #endregion
 
         public static void RunApp(string[] args)

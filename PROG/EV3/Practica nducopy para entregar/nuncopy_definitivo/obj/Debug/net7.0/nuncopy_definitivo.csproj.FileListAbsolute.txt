@@ -1,0 +1,29 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\refint\nuncopy_definitivo.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\ref\nuncopy_definitivo.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\bin\Debug\net7.0\nuncopy_definitivo.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\refint\nuncopy_definitivo.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\nuncopy_definitivo.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\nuncopy_definitivo\nuncopy_definitivo\obj\Debug\net7.0\ref\nuncopy_definitivo.dll

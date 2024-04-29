@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\MiPrimerWPF\\MiPrimerWPF\\MiPrimerWPF.csproj",
+      "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\MiPrimerWPF\\MiPrimerWPF\\MiPrimerWPF.csproj",
       "projectName": "MiPrimerWPF",
-      "projectPath": "C:\\Users\\carcarcor\\source\\repos\\MiPrimerWPF\\MiPrimerWPF\\MiPrimerWPF.csproj",
+      "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\MiPrimerWPF\\MiPrimerWPF\\MiPrimerWPF.csproj",
       "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carcarcor\\source\\repos\\MiPrimerWPF\\MiPrimerWPF\\obj\\",
+      "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\MiPrimerWPF\\MiPrimerWPF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",

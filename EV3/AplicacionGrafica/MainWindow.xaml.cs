@@ -54,8 +54,9 @@ namespace AplicacionGrafica
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Student student = new Student();
             string name = textboxname.Text;
-            int age = ;
+            int age = 10;
             string description = textboxdescript.Text;
                 
         }

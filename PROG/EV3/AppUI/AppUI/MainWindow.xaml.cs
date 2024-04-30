@@ -25,6 +25,7 @@ namespace AppUI
         private void ButtonDerecha(object sender, RoutedEventArgs e)
         {
 
+
         }
 
 
@@ -35,6 +36,7 @@ namespace AppUI
 
         private void Button_Añadir(object sender, RoutedEventArgs e)
         {
+
 
         }
 

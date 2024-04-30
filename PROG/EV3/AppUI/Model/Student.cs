@@ -15,6 +15,8 @@
             Description = description;
         }
 
-
+        public Student()
+        {
+        }
     }
 }

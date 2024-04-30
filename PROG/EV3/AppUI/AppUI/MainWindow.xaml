@@ -7,19 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid Margin="27,27,27,27">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32*"/>
+                <ColumnDefinition Width="341*"/>
+                <ColumnDefinition Width="343*"/>
+                <ColumnDefinition Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="62*"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="173*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.RowSpan="4">
+                <Border BorderBrush="Black" BorderThickness="1" Margin="46,9,46,331" CornerRadius="5,5,5,5"/>
+            </Border>
+            <Button x:Name="ButtonAddStudent" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Click="AddStudentButton" Height="20" Width="33"/>
+        </Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="189"/>
-            <ColumnDefinition Width="167*"/>
-            <ColumnDefinition Width="444*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="132*"/>
-            <RowDefinition Height="67*"/>
         </Grid.RowDefinitions>
-
     </Grid>
 </Window>

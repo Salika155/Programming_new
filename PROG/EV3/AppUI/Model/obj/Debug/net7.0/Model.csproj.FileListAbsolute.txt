@@ -1,0 +1,11 @@
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\bin\Debug\net7.0\Model.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\bin\Debug\net7.0\Model.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\bin\Debug\net7.0\Model.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\refint\Model.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\ref\Model.dll

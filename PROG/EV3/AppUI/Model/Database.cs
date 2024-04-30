@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Model
+﻿namespace Model
 {
     public class Database : IDatabase
     {
@@ -26,7 +20,7 @@ namespace Model
         {
             if (student == null)
                 return;
-            
+
             student.Id = _studentId++;
             _students.Add(student);
         }
@@ -52,7 +46,7 @@ namespace Model
             if (student == null)
                 return;
 
-            foreach(var s in _students)
+            foreach (var s in _students)
             {
                 if (s.Id == id)
                 {
@@ -62,7 +56,7 @@ namespace Model
                     return;
                 }
             }
-            
+
         }
 
         public void RemoveStudent(long id)
@@ -75,7 +69,7 @@ namespace Model
                     return;
                 }
             }
-            
+
         }
 
         public Student? GetStudentAt(int index)
@@ -83,7 +77,7 @@ namespace Model
             if (index < 0 || index >= _students.Count)
                 return null;
             return _students[index];
-            
+
         }
 
         public int GetStudentCount() => _students.Count;

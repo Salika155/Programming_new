@@ -7,27 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid Margin="27,27,27,27">
+        <!-- Barra de navegación -->
+        <Grid Margin="0,0,0,54">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="32*"/>
-                <ColumnDefinition Width="341*"/>
-                <ColumnDefinition Width="343*"/>
-                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" MinWidth="150"/>
+                <ColumnDefinition Width="Auto" MinWidth="150"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding CurrentStudentIndex}" VerticalAlignment="Center" Grid.Column="2" Margin="5,0"/>
+            <Button Content="Anterior" Click="PreviousButton_Click" Margin="84,14,10,333" Grid.Column="2"/>
+            <Button Content="Siguiente" Click="NextButton_Click" Margin="0,14,15,333" HorizontalAlignment="Right" Width="60" Grid.Column="1"/>
+            <TextBox x:Name="StudentNumberTextBox" Grid.Row="0" Grid.Column="2" Margin="10,14,96,333" RenderTransformOrigin="-0.114,4.66"/>
+        </Grid>
+
+        <!-- Detalles del estudiante -->
+        <Grid Margin="20,50,20,98">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="253*" />
+                <ColumnDefinition Width="507*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="62*"/>
-                <RowDefinition Height="75*"/>
-                <RowDefinition Height="173*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" MinHeight="107"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="4" Grid.RowSpan="4">
-                <Border BorderBrush="Black" BorderThickness="1" Margin="46,9,46,331" CornerRadius="5,5,5,5"/>
-            </Border>
-            <Button x:Name="ButtonAddStudent" Grid.Column="2" Content="+" HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Click="AddStudentButton" Height="20" Width="33"/>
+            <Label Content="Nombre:" Grid.Row="0" Margin="167,10,0,5" HorizontalAlignment="Left" Width="56"/>
+            <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="5,10,5,10"/>
+            <Label Content="Edad:" Grid.Row="1" Margin="167,5,0,5" HorizontalAlignment="Left" Width="62"/>
+            <TextBox x:Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5"/>
+            <Label Content="Descripción:" Grid.Row="2" Margin="167,5,0,5" RenderTransformOrigin="-0.419,0.621" HorizontalAlignment="Left" Width="68"/>
+            <TextBox x:Name="DescriptionTextBox" Grid.Row="2" Grid.Column="1" Margin="5,5,5,5"
+                     TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+            <Button Content="Eliminar Estudiante" Click="DeleteStudentButton_Click" HorizontalAlignment="Right" Margin="0,18,275,28" Width="105" Grid.Column="1" Grid.Row="3"/>
         </Grid>
-        <Grid.ColumnDefinitions>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-        </Grid.RowDefinitions>
+
+        <!-- Botón para abrir ventana de agregar estudiante -->
+        <Button Content="Añadir Estudiante" Click="AddStudentButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,254,421,0" Height="53"/>
     </Grid>
 </Window>

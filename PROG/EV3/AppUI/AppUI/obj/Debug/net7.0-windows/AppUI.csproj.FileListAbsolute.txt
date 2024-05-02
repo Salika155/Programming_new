@@ -18,3 +18,13 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Deb
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.pdb
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.genruntimeconfig.cache
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\ref\AppUI.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AddStudent.baml
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AddStudent.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI_MarkupCompile.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI_MarkupCompile.lref
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\refint\AppUI.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.pdb

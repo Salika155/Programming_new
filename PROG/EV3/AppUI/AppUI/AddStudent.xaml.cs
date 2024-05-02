@@ -26,7 +26,7 @@ namespace AppUI
         }
 
 
-        private void SaveButton_AddStudents(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             
             string name = NameTextBox.Text;
@@ -41,6 +41,25 @@ namespace AppUI
 
             // Cerrar la ventana
             this.Close();
+
+        }
+
+        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string name = NameTextBox.Text;
+
+
+        }
+
+        private void AgeTextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            string age = AgeTextBox.Text;
+
+        }
+
+        private void DescriptionTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string description = DescriptionTextBox.Text;
 
         }
     }

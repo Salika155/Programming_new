@@ -10,6 +10,15 @@ namespace AppUI
     {
         private int _index = 0;
 
+        public long CurrentStudentId
+        {
+            get
+            {
+                Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+                return currentStudent != null ? currentStudent.Id : -1; // Devuelve -1 si no hay estudiante actual
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -18,7 +27,7 @@ namespace AppUI
 
         private void UpdateStudentDetails()
         {
-            Student currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+            Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
 
             if (currentStudent != null)
             {
@@ -57,7 +66,7 @@ namespace AppUI
 
         private void DeleteStudentButton_Click(object sender, RoutedEventArgs e)
         {
-            Student currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+            Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
             if (currentStudent != null)
             {
                 long currentStudentId = currentStudent.Id;
@@ -83,7 +92,9 @@ namespace AppUI
 
         private void StudentNumberBox(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            Student currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+            Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+            currentStudent.Id = long.Parse(StudentNumberTextBox.Text);
+            
 
         }
     }

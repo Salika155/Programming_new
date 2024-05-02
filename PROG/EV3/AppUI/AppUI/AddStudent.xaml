@@ -20,20 +20,20 @@
 
         <!-- Etiquetas y controles de entrada -->
         <Label Content="Nombre:" Grid.Row="0" Margin="0,0,0,38" Grid.RowSpan="2"/>
-        <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" TextChanged="NameTextBox_TextChanged" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
 
         <Label Content="Edad:" Grid.Row="1" Margin="0,0,0,120" Grid.RowSpan="2"/>
-        <TextBox x:Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" TextChanged="AgeTextBox_TextChanged_1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
 
         <Label Content="Descripción:" Grid.Row="2" Margin="0,0,0,88" Grid.RowSpan="2"/>
         <TextBox x:Name="DescriptionTextBox" Grid.Row="2" Grid.Column="1" Margin="10,10,10,10"
-                 TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
-                 Height="100" TextChanged="DescriptionTextBox_TextChanged" Grid.ColumnSpan="2"/>
+         TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
+         Height="100" Grid.ColumnSpan="2"/>
         <!-- Establece la altura del TextBox para mostrar varias líneas -->
 
         <!-- Botón de guardar -->
         <Button Content="Guardar" Click="SaveButton_Click" Grid.Row="3" Grid.Column="2"
                 HorizontalAlignment="Left" Margin="46,10,0,49"/>
-        <Button Grid.Column="2" Content="Guardar" HorizontalAlignment="Left" Margin="30,0,0,0" Grid.Row="3" VerticalAlignment="Center" Click="SaveButton_AddStudents"/>
+        <Button Grid.Column="2" Content="Guardar" HorizontalAlignment="Left" Margin="30,0,0,0" Grid.Row="3" VerticalAlignment="Center" Click="SaveButton_Click"/>
     </Grid>
 </Window>

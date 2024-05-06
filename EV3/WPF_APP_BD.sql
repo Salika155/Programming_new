@@ -1,0 +1,19 @@
+
+CREATE DATABASE WPF_APP_BD
+
+USE WPF_APP_BD
+
+CREATE TABLE STUDENTS(
+
+	id INT IDENTITY,
+	name VARCHAR(100),
+	age TINYINT,
+	description VARCHAR(200)
+
+	CONSTRAINT PK_STUDENTS PRIMARY KEY (id),
+	CONSTRAINT CK_age CHECK (age <= 130)
+	)
+
+
+	select *
+	from students

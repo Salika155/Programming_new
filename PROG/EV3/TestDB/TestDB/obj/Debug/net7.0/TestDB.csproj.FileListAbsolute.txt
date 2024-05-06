@@ -1,0 +1,5 @@
+C:\Users\carcarcor\source\repos\TestDB\TestDB\obj\Debug\net7.0\TestDB.csproj.AssemblyReference.cache
+C:\Users\carcarcor\source\repos\TestDB\TestDB\obj\Debug\net7.0\TestDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\source\repos\TestDB\TestDB\obj\Debug\net7.0\TestDB.AssemblyInfoInputs.cache
+C:\Users\carcarcor\source\repos\TestDB\TestDB\obj\Debug\net7.0\TestDB.AssemblyInfo.cs
+C:\Users\carcarcor\source\repos\TestDB\TestDB\obj\Debug\net7.0\TestDB.csproj.CoreCompileInputs.cache

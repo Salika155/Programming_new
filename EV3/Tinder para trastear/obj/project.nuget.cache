@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZWIByqC1rLtPeWKiSutNJNr3trOh7lKRefALN3G9cP2uE96jb7JLb5ckcb1miR/X5DF204cvxcW7P37UgRelQg==",
+  "dgSpecHash": "K6ssUJYlEWFsCjNdkCZgxsgwJTQjHw+ON+3SLaBw7rDSUk+H7Bj46w2v0JgJiGwoklDtGRUEEA1Oc2QlhmfMQw==",
   "success": true,
-  "projectFilePath": "F:\\DAM\\asignaturas\\PROGRAMACION\\Tinder para trastear\\Tinder_para_trastear.csproj",
+  "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\EV3\\Tinder para trastear\\Tinder_para_trastear.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carcarcor\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

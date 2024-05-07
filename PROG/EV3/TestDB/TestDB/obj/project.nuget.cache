@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OfL9IeIgR5WlazT3Qu9vreiPfBiJTpovWM0FiQmF2bFoo9+UNdoB5wTXFg06mUklLkaZOsc5lLAExiG+0XPPbw==",
+  "dgSpecHash": "SIW9v7S2WhXEhO+wgoxA9n8jlc3lKyV5uHiaYUTHOBBaxyDcHYEPtf0jk854lA51rMfK3+SKH4D4kY4/kZJyRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\TestDB.csproj",
+  "projectFilePath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\TestDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carcarcor\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\carcarcor\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

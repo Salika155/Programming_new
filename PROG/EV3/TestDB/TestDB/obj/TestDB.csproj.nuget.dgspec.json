@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\TestDB.csproj": {}
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\TestDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\TestDB.csproj": {
+    "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\TestDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\TestDB.csproj",
+        "projectUniqueName": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\TestDB.csproj",
         "projectName": "TestDB",
-        "projectPath": "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\TestDB.csproj",
+        "projectPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\TestDB.csproj",
         "packagesPath": "C:\\Users\\carcarcor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carcarcor\\source\\repos\\TestDB\\TestDB\\obj\\",
+        "outputPath": "C:\\Users\\carcarcor\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\TestDB\\TestDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carcarcor\\AppData\\Roaming\\NuGet\\NuGet.Config",

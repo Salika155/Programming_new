@@ -144,6 +144,7 @@ namespace ArrayList
             return true;
         }
 
+        //TODO: me quede por aqui
         //lista ordenada de otra manera
         public static bool IsOrderedAsc1(List<int> listaordenada)
         {

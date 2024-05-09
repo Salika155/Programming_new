@@ -1,17 +1,17 @@
 ﻿namespace Model
 {
-    public class Database : IDatabase
+    public class DatabaseRam : IDatabase
     {
-        private static Database _database = new Database();
+        private static DatabaseRam _database = new DatabaseRam();
         private List<Student> _students = new List<Student>();
         //private Dictionary<long, Student> _students = new Dictionary<long, Student>();
         private long _studentId = 1;
 
-        public static Database Instance => _database;
+        public static DatabaseRam Instance => _database;
         public int StudentCount => _students.Count;
 
 
-        private Database()
+        private DatabaseRam()
         {
 
         }

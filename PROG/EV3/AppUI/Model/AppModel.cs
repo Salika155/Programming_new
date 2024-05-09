@@ -5,7 +5,8 @@
         private static AppModel _app = new AppModel();
         public static AppModel Instance => _app;
 
-        public Database Database => Database.Instance;
+        public DatabaseRam Database => DatabaseRam.Instance;
+        public DatabaseBBDD databaseBBDD => DatabaseBBDD.Instance;
 
         private AppModel()
         {

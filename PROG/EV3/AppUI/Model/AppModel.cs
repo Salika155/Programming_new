@@ -6,7 +6,7 @@
         public static AppModel Instance => _app;
 
         public DatabaseRam Database => DatabaseRam.Instance;
-        public DatabaseBBDD databaseBBDD => DatabaseBBDD.Instance;
+        public DatabaseSQL databaseBBDD => DatabaseSQL.Instance;
 
         private AppModel()
         {

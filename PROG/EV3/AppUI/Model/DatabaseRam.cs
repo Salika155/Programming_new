@@ -10,27 +10,29 @@
         public static DatabaseRam Instance => _database;
         public int StudentCount => _students.Count;
 
+        public int Count => _students.Count;
 
         private DatabaseRam()
         {
 
         }
 
-        public void AddStudent(Student student)
+        public long AddStudent(Student student)
         {
             if (student == null)
-                return;
+                return -1;
 
             student.Id = _studentId++;
             _students.Add(student);
+            return student.Id;
         }
 
         public bool ContainsStudent(long id)
         {
-            return GetStudent(id) != null;
+            return GetStudentById(id) != null;
         }
 
-        public Student? GetStudent(long id)
+        public Student? GetStudentById(long id)
         {
             foreach (var s in _students)
             {

@@ -45,3 +45,15 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\Ap
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.csproj.CopyComplete
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\ref\AppUI.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\Model.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\bin\Debug\net7.0-windows\Model.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AddStudent.baml
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AddStudent.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\AppUI\obj\Debug\net7.0-windows\AppUI.csproj.CopyComplete

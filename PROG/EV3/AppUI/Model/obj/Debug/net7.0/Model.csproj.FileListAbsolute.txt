@@ -21,3 +21,4 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\Mo
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\refint\Model.dll
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\ref\Model.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\AppUI\Model\obj\Debug\net7.0\Model.csproj.AssemblyReference.cache

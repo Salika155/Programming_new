@@ -15,6 +15,9 @@ namespace Model
         public const string connectionString = "Data Source=192.168.56.101; Initial Catalog=WPF_APP_BD; ID=sa; Password=SqlServer123";
         //private string connectionString = "YourConnectionStringHere";
         public static DatabaseSQL Instance => _database;
+
+        public int Count => throw new NotImplementedException(); /* SELECT COUNT (ID) FROM STUDENTS */
+
         //public int StudentCount => _students.Count;
 
         private DatabaseSQL()
@@ -22,7 +25,7 @@ namespace Model
 
         }
 
-        public void AddStudent(Student student)
+        public long AddStudent(Student student)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -37,9 +40,10 @@ namespace Model
                 }
                 
             }
+            return student.Id;
         }
 
-        public Student? GetStudent(long id)
+        public Student? GetStudentById(long id)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -72,22 +76,77 @@ namespace Model
 
         public Student? GetStudentAt(int index)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using SqlCommand command = new SqlCommand("GetStudentByIdProcedure", connection);
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", index);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Student
+                            {
+                                Id = (long)reader["Id"],
+                                Name = (string)reader["Name"],
+                                Age = (int)reader["Age"],
+                                Description = (string)reader["Description"]
+                            };
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            }
+            
         }
 
         public int GetStudentCount()
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using SqlCommand command = new SqlCommand("GetStudentCountProcedure", connection);
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    return (int)command.ExecuteScalar();
+                }
+            }
         }
 
         public void RemoveStudent(long id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using SqlCommand command = new SqlCommand("RemoveStudentProcedure", connection);
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
         public void UpdateStudent(Student student, long id)
         {
-            throw new NotImplementedException();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using SqlCommand command = new SqlCommand("UpdateStudentProcedure", connection);
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@Name", student.Name);
+                    command.Parameters.AddWithValue("@Age", student.Age);
+                    command.Parameters.AddWithValue("@Description", student.Description);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

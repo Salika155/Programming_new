@@ -2,12 +2,12 @@
 {
     public interface IDatabase
     {
-        void AddStudent(Student student);
-        Student? GetStudent(long id);
+        long AddStudent(Student student);
+        Student? GetStudentById(long id);
         void UpdateStudent(Student student, long id);
         void RemoveStudent(long id);
         Student? GetStudentAt(int index);
-        int GetStudentCount();
+        int Count { get;}
 
     }
 }

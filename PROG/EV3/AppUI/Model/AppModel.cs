@@ -11,7 +11,5 @@
         private AppModel()
         {
         }
-
-
     }
 }

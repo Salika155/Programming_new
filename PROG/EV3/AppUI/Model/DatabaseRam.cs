@@ -8,9 +8,11 @@
         private long _studentId = 1;
 
         public static DatabaseRam Instance => _database;
-        public int StudentCount => _students.Count;
 
-        public int Count => _students.Count;
+        public int GetCount()
+        {
+            return _students.Count;
+        }
 
         private DatabaseRam()
         {

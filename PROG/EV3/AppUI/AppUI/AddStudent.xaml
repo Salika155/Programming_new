@@ -22,8 +22,8 @@
         <Label Content="Nombre:" Grid.Row="0" Margin="0,0,0,38" Grid.RowSpan="2"/>
         <TextBox x:Name="NameTextBox" Grid.Row="0" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
 
-        <Label Content="Edad:" Grid.Row="1" Margin="0,0,0,120" Grid.RowSpan="2"/>
-        <TextBox x:Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10" Grid.ColumnSpan="2"/>
+        <Label Content="Edad:" Grid.Row="1" Margin="0,0,0,38"/>
+        <TextBox x:Name="AgeTextBox" Grid.Row="1" Grid.Column="1" Margin="10,10,10,47" Grid.ColumnSpan="2"/>
 
         <Label Content="Descripción:" Grid.Row="2" Margin="0,0,0,88" Grid.RowSpan="2"/>
         <TextBox x:Name="DescriptionTextBox" Grid.Row="2" Grid.Column="1" Margin="10,10,10,10"

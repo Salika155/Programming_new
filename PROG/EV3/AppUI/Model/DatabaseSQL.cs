@@ -16,7 +16,12 @@ namespace Model
         //private string connectionString = "YourConnectionStringHere";
         public static DatabaseSQL Instance => _database;
 
-        public int Count => throw new NotImplementedException(); /* SELECT COUNT (ID) FROM STUDENTS */
+        public int GetCount()
+        {
+            /*int("SELECT COUNT(ID) FROM STUDENTS") /* SELECT COUNT (ID) FROM STUDENTS */
+            return -1;
+        }
+
 
         //public int StudentCount => _students.Count;
 

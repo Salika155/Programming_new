@@ -7,7 +7,6 @@
         void UpdateStudent(Student student, long id);
         void RemoveStudent(long id);
         Student? GetStudentAt(int index);
-        int Count { get;}
-
+        int GetCount();
     }
 }

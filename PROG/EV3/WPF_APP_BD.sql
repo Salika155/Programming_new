@@ -142,5 +142,36 @@ BEGIN
 	END
 
 
+CREATE OR ALTER PROCEDURE removeStudents (@id int)
 
+AS
+BEGIN
+	BEGIN TRY
+
+	IF NOT EXISTS (SELECT *
+					FROM STUDENTS
+					WHERE id = @id)
+
+		BEGIN
+			PRINT 'El estudiante no existe'
+			RETURN -1
+		END
+
+	BEGIN TRAN
+
+	DELETE FROM STUDENTS
+	WHERE id = @id
+
+	COMMIT
+END TRY
+
+BEGIN CATCH
+	ROLLBACK
+	PRINT CONCAT('ERROR: ', ERROR_NUMBER(),
+                     'DESC: ', ERROR_MESSAGE(),
+                     'LINEA: ', ERROR_LINE(),
+                     'PROC: ', ERROR_PROCEDURE())
+    END CATCH
+END
+	
 

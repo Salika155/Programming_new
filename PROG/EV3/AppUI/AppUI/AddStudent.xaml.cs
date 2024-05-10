@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Model;
 
 namespace AppUI
@@ -30,11 +19,11 @@ namespace AppUI
         {
             
             string name = NameTextBox.Text;
-            int age = int.Parse(AgeTextBox.Text);
+            int ageText = int.Parse(AgeTextBox.Text);
             string description = DescriptionTextBox.Text;
 
             // Crear un nuevo estudiante con los valores ingresados
-            Student newStudent = new Student(name, age, description);
+            Student newStudent = new Student(name, ageText, description);
 
             // Agregar el estudiante a la base de datos
             AppModel.Instance.Database.AddStudent(newStudent);

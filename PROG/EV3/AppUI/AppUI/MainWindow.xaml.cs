@@ -90,12 +90,10 @@ namespace AppUI
 
         }
 
-        private void StudentNumberBox(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
-            currentStudent.Id = long.Parse(StudentNumberTextBox.Text);
-            
-
-        }
+        //private void StudentNumberBox(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        //{
+        //    Student? currentStudent = AppModel.Instance.Database.GetStudentAt(_index);
+        //    currentStudent.Id = long.Parse(StudentNumberTextBox.Text);
+        //}
     }
 }

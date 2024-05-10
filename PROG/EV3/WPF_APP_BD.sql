@@ -94,7 +94,7 @@ AS
 BEGIN
 	BEGIN TRY
 
-	DECLARE @errors INT
+	DECLARE @errors INT = ''
 
 	IF @name IS NULL
 	SET @errors += 'name'
@@ -122,8 +122,14 @@ BEGIN
 
 	BEGIN TRAN
 
-	
-	VALUES (@name, @age, @description)
+	UPDATE STUDENTS
+	SET
+            name = @name,
+            age = @age,
+            description = @description
+        WHERE
+            ID = @id
+        COMMIT
 
 	END TRY
 	BEGIN CATCH

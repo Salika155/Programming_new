@@ -371,7 +371,20 @@ namespace ArrayPruebasAPRENDER
         //hacer a partir de aqui
 
         // Ordena una lista de enteros
+public static List<int> OrderList(List<int> list)
+{
+if (list == null)
+return null;
 
+int = int.MiNvalue;
+
+for (int i = 0; i < List.Count; i++)
+{
+for (j = i +1; j < list.Count - 1; j++)
+{
+}
+}
+}
 
         // Calcula la serie de Collatz para un número dado
 

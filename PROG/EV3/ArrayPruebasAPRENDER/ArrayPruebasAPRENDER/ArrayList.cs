@@ -1,4 +1,4 @@
-﻿using System;
+lo﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -371,21 +371,27 @@ namespace ArrayPruebasAPRENDER
         //hacer a partir de aqui
 
         // Ordena una lista de enteros
+
 public static List<int> OrderList(List<int> list)
 {
-if (list == null)
-return null;
+    if (list == null)
+        return null;
 
-int = int.MiNvalue;
-
-for (int i = 0; i < List.Count; i++)
-{
-for (j = i +1; j < list.Count - 1; j++)
-{
+    for (int i = 0; i < list.Count; i++)
+    {
+        for (int j = 0; j < list.Count - i - 1; j++)
+        {
+            if (list[j] > list[j + 1])
+            {
+                // Intercambia los elementos
+                int temp = list[j];
+                list[j] = list[j + 1];
+                list[j + 1] = temp;
+            }
+        }
+    }
+    return list;
 }
-}
-}
-
         // Calcula la serie de Collatz para un número dado
 
 

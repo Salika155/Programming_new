@@ -333,7 +333,7 @@ namespace ArrayList
             }
             return listSinInvertir;
         }
-
+        //TODO:HERE
         //Funcion que le paso un array de enteros, y un entero, y quiero que esa funcion añada el entero que se le pasa al array
 
         public static int[] AddToArray(int[] arrayenteros, int n)
@@ -443,7 +443,7 @@ namespace ArrayList
 
         // Funcion que le pase una lista y me devuelva una lista con los dos elementos mayores
 
-        public static List<int> GetElementosMayoresLista(List<int> listamayores)
+        public static List<int>? GetElementosMayoresLista(List<int> listamayores)
         {
             if (listamayores == null || listamayores.Count < 2)
                 return null;

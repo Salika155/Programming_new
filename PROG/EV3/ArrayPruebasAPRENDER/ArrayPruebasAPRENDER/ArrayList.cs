@@ -1,4 +1,4 @@
-lo﻿using System;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -347,7 +347,7 @@ namespace ArrayPruebasAPRENDER
             return result;
         }
 
-        // Ordena un array de enteros
+        // Ordena un array de enteros (short)
         public static int[] ArrayEnterosOrdered(int[] arraydes)
         {
             if (arraydes == null)
@@ -370,48 +370,205 @@ namespace ArrayPruebasAPRENDER
         }
         //hacer a partir de aqui
 
-        // Ordena una lista de enteros
-
-public static List<int> OrderList(List<int> list)
-{
-    if (list == null)
-        return null;
-
-    for (int i = 0; i < list.Count; i++)
-    {
-        for (int j = 0; j < list.Count - i - 1; j++)
+        // Ordena una lista de enteros (short lista)
+        public static List<int> OrderList(List<int> list)
         {
-            if (list[j] > list[j + 1])
+            if (list == null)
+                return null;
+
+            for (int i = 0; i < list.Count; i++)
             {
-                // Intercambia los elementos
-                int temp = list[j];
-                list[j] = list[j + 1];
-                list[j + 1] = temp;
+                for (int j = 0; j < list.Count - i - 1; j++)
+                {
+                    if (list[j] > list[j + 1])
+                    {
+                        // Intercambia los elementos
+                        int temp = list[j];
+                        list[j] = list[j + 1];
+                        list[j + 1] = temp;
+                    }
+                }
             }
+            return list;
         }
-    }
-    return list;
-}
+
+        public static List<int> SortLista(List<int> listashort)
+        {
+
+            //int n = listashort.Count; -> caso especial
+            //int n2 = n1 - 1;
+            //for (int i = 0; i < n; i++)
+            for (int i = 0; i < listashort.Count - 1; i++)
+            {
+                //for(<n2;)
+                for (int j = i + 1; j < listashort.Count; j++)
+                {
+                    if (listashort[i] > listashort[j])
+                    {
+                        int aux;
+                        aux = listashort[i];
+                        listashort[i] = listashort[j];
+                        listashort[j] = aux;
+                    }
+                }
+            }
+            return listashort;
+        }
+
         // Calcula la serie de Collatz para un número dado
 
 
         // Devuelve los dos elementos mayores de una lista de enteros
+        public static List<int> GetTwoElementsBigger(List<int> list)
+        {
+            if (list == null || list.Count < 2)
+                return null;
 
+            List<int> mayores = new List<int>();
+
+            int max1 = int.MinValue;
+            int max2 = int.MinValue;
+
+            for (int i = 0; i < mayores.Count; i++)
+            {
+                int elem = mayores[i];
+                if (elem > max1)
+                {
+                    max2 = max1;
+                    max1 = elem;
+                }
+                else if (elem > max2)
+                    max2 = elem;
+            }
+            mayores.Add(max1);
+            mayores.Add(max2);
+            return mayores;
+        }
 
         // Devuelve una lista con los elementos pares de una lista de enteros
+        public static List<int> GetParesLista(List<int> elem)
+        {
+            if (elem == null)
+                return null;
 
+            List<int> result = new List<int>();
+
+            for (int i = 0; i < elem.Count; i++)
+            {
+                int element = elem[i];
+                if (element % 2 == 0)
+                    result.Add(element);
+            }
+            return result;
+        }
 
         // Devuelve un array con los elementos pares de una lista de enteros
+        public static int[] ArrayPares(int[] array)
+        {
+            if (array == null)
+                return null;
 
+            int count = 0;
+
+            // Contar la cantidad de elementos pares
+            foreach (int num in array)
+            {
+                if (num % 2 == 0)
+                {
+                    count++;
+                }
+            }
+
+            // Crear un nuevo array con el tamaño exacto para almacenar solo los elementos pares
+            int[] result = new int[count];
+
+            // Almacenar solo los elementos pares en el nuevo array
+            int index = 0;
+            foreach (int num in array)
+            {
+                if (num % 2 == 0)
+                {
+                    result[index] = num;
+                    index++;
+                }
+            }
+            return result;
+        }
 
         // Elimina un elemento en una posición dada de una lista de enteros
+        public static void RemoveElemenFromList(List<int> list, int n)
+        {
+            if (list == null)
+                return;
+            list.RemoveAt(n);
+        }
 
+        public static int FindIndex(List<int> list, int value)
+        {
+            if (list == null)
+                return -1; // Retorna -1 si la lista es nula
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == value)
+                {
+                    return i; // Retorna el índice del elemento si se encuentra
+                }
+            }
+
+            return -1; // Retorna -1 si el elemento no se encuentra en la lista
+        }
 
         // Elimina todas las ocurrencias de un valor dado en una lista de enteros
 
+        public static List<int> RemoveValueFromList(List<int> list, int value)
+        {
+            if (list == null)
+                return null;
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == value)
+                {
+                    list.RemoveAt(i);
+                    i--; // Restamos 1 al índice para compensar la eliminación
+                }
+            }
+            return list;
+        }//prefiero devolver la lista para trabajar con ella, o en todo caso podria hacer un clon
 
         // Elimina todas las ocurrencias de un valor dado en un array de enteros
+        // Elimina todas las ocurrencias de un valor dado en un array de enteros
+        public static int[]? RemovePositionArray(int[] array, int n)
+        {
+            if (array == null)
+                return null;
 
+            // Cuenta cuántas veces aparece el valor 'n' en el array 'array'
+            int count = 0;
+
+            for (int i = 0; i < array.Length; i++)
+                if (array[i] == n)
+                    count++;
+
+            // Crea un nuevo array con una longitud igual a la longitud del array original menos el número de ocurrencias del valor 'n'
+            int[] result = new int[array.Length - count];
+
+            // Inicializa un contador 'j' que se usará para llenar el nuevo array 'result'
+            int j = 0;
+
+            // Recorre todo el array original 'array'
+            for (int i = 0; i < array.Length; i++)
+            {
+                // Comprueba si el elemento actual del array no es igual al valor 'n'
+                if (array[i] != n)
+                    // Si el elemento actual no es igual a 'n', se asigna ese elemento al nuevo array 'result' en la posición 'j' y se incrementa 'j'
+                    result[j++] = array[i];
+            }
+
+            // Devuelve el nuevo array 'result' que contiene todos los elementos que no son 'n'
+            return result;
+        }
 
         // Cuenta el número de ocurrencias de un valor dado en un array de enteros
 

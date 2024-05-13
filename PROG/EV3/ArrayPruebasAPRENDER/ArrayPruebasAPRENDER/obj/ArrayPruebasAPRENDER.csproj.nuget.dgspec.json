@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj",
         "projectName": "ArrayPruebasAPRENDER",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\ArrayPruebasAPRENDER\\ArrayPruebasAPRENDER\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

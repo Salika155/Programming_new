@@ -331,7 +331,7 @@ namespace ArrayPruebasAPRENDER
 
         //TODO: here
         // Añade un elemento a un array de enteros
-        public static int[] AddToArray(int[] array, int n)
+        public static int[]? AddToArray(int[] array, int n)
         {
             if (array == null)
                 return null;
@@ -348,7 +348,7 @@ namespace ArrayPruebasAPRENDER
         }
 
         // Ordena un array de enteros (short)
-        public static int[] ArrayEnterosOrdered(int[] arraydes)
+        public static int[]? ArrayEnterosOrdered(int[] arraydes)
         {
             if (arraydes == null)
                 return null;
@@ -371,7 +371,7 @@ namespace ArrayPruebasAPRENDER
         //hacer a partir de aqui
 
         // Ordena una lista de enteros (short lista)
-        public static List<int> OrderList(List<int> list)
+        public static List<int>? OrderList(List<int> list)
         {
             if (list == null)
                 return null;
@@ -419,7 +419,7 @@ namespace ArrayPruebasAPRENDER
 
 
         // Devuelve los dos elementos mayores de una lista de enteros
-        public static List<int> GetTwoElementsBigger(List<int> list)
+        public static List<int>? GetTwoElementsBigger(List<int> list)
         {
             if (list == null || list.Count < 2)
                 return null;
@@ -446,7 +446,7 @@ namespace ArrayPruebasAPRENDER
         }
 
         // Devuelve una lista con los elementos pares de una lista de enteros
-        public static List<int> GetParesLista(List<int> elem)
+        public static List<int>? GetParesLista(List<int> elem)
         {
             if (elem == null)
                 return null;
@@ -463,7 +463,7 @@ namespace ArrayPruebasAPRENDER
         }
 
         // Devuelve un array con los elementos pares de una lista de enteros
-        public static int[] ArrayPares(int[] array)
+        public static int[]? ArrayPares(int[] array)
         {
             if (array == null)
                 return null;
@@ -521,7 +521,7 @@ namespace ArrayPruebasAPRENDER
 
         // Elimina todas las ocurrencias de un valor dado en una lista de enteros
 
-        public static List<int> RemoveValueFromList(List<int> list, int value)
+        public static List<int>? RemoveValueFromList(List<int> list, int value)
         {
             if (list == null)
                 return null;
@@ -571,13 +571,82 @@ namespace ArrayPruebasAPRENDER
         }
 
         // Cuenta el número de ocurrencias de un valor dado en un array de enteros
+        public static int CountElements(int[] array, int n)
+        {
+            if (array == null)
+                return 0;
 
+            int count = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == n)
+                    count++;
+            }
+            return count;
+        }
 
         // Elimina los valores de una lista de enteros que están contenidos en otra lista
+        public static void RemoveValuesFromList(List<int> l1, List<int> l2)
+        {
+            if (l1 == null || l2 == null)
+                return;
+
+            for (int i = 0; i < l1.Count; i++)
+            {
+                if (Contains(l2, l1[i]))
+                {
+                    l1.RemoveAt(i);
+                    i--; // Disminuye el índice para compensar la eliminación
+                }
+            }
+        }
+
+        public static bool Contains(List<int> list, int value)
+        {
+            foreach (int item in list)
+            {
+                if (item == value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
-        // Elimina los valores de una lista de enteros que están contenidos en otra lista (versión para array)
+        // Elimina los valores de un array de enteros que están contenidos en otro array
+        // Verifica si un valor está contenido en un array de enteros
+        private static bool Contains(int[] array, int value)
+        {
+            foreach (int item in array)
+            {
+                if (item == value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
+        // Elimina los valores de un array de enteros que están contenidos en otro array
+        public static int[] RemoveValuesFromArray(int[] array1, int[] array2)
+        {
+            if (array1 == null || array2 == null)
+                return null;
+
+            List<int> result = new List<int>();
+
+            foreach (int item in array1)
+            {
+                if (!Contains(array2, item))
+                {
+                    result.Add(item);
+                }
+            }
+
+            return result.ToArray();
+        }
 
     }
 

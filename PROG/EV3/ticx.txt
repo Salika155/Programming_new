@@ -1,0 +1,156 @@
+
+Para proporcionar una descripción completa del modelo relacional y 
+el diagrama Entidad-Relación (ER), aquí está la información actualizada:
+
+Modelo Relacional
+Tablas y sus Atributos:
+
+JUEGO
+
+ID (INT, PRIMARY KEY)
+Nombre (VARCHAR(100))
+Descripcion (VARCHAR(300))
+ReleaseYear (SMALLDATETIME)
+Rating (INT)
+img (VARCHAR(400))
+Genre_ID (INT, FOREIGN KEY REFERENCES GENRE(ID_Genre))
+Developer_ID (INT, FOREIGN KEY REFERENCES DEVELOPER(ID_Developer))
+Price (DECIMAL(10, 2))
+PurchaseDate (SMALLDATETIME)
+CompletionDate (SMALLDATETIME)
+Status (VARCHAR(50))
+GENRE
+
+ID_Genre (INT, PRIMARY KEY)
+Name_genres (VARCHAR(100))
+DEVELOPER
+
+ID_Developer (INT, PRIMARY KEY)
+Name_Developer (VARCHAR(100))
+GAME_PLATFORM
+
+Platform_ID (INT, PRIMARY KEY)
+Name_Platform (VARCHAR(100))
+JUEGO_PLATFORM
+
+Juego_ID (INT, PRIMARY KEY, FOREIGN KEY REFERENCES JUEGO(ID))
+Platform_ID (INT, PRIMARY KEY, FOREIGN KEY REFERENCES GAME_PLATFORM(Platform_ID))
+Diagrama Entidad-Relación (ER)
+plaintext
+Copiar código
++------------------+          +---------------+         +------------------+
+|      JUEGO       |          |     GENRE     |         |     DEVELOPER    |
++------------------+          +---------------+         +------------------+
+| ID (PK)          |          | ID_Genre (PK) |         | ID_Developer (PK)|
+| Nombre           |          | Name_genres   |         | Name_Developer   |
+| Descripcion      |          +---------------+         +------------------+
+| ReleaseYear      |  
+| Rating           |
+| img              |
+| Genre_ID (FK)----+---------|
+| Developer_ID (FK)|----+------|
+| Price            |    |      |
+| PurchaseDate     |    |      |
+| CompletionDate   |    |      |
+| Status           |    |      |
++------------------+    |      |
+                        |      |
+                        |      |
+                        |      |
+                        |      |
+                        |      |
++-------------------+   |      |
+|  GAME_PLATFORM    |<--+      |
++-------------------+          |
+| Platform_ID (PK)  |          |
+| Name_Platform     |          |
++-------------------+          |
+                               |
+                               |
++-------------------+          |
+|  JUEGO_PLATFORM   |          |
++-------------------+          |
+| Juego_ID (PK, FK) |<---------+
+| Platform_ID (PK, FK)
++-------------------+
+SQL para la Creación de las Tablas
+sql
+Copiar código
+CREATE DATABASE WPF_JUEGOS;
+
+CREATE TABLE GENRE (
+    ID_Genre INT PRIMARY KEY,
+    Name_genres VARCHAR(100)
+);
+
+CREATE TABLE DEVELOPER (
+    ID_Developer INT PRIMARY KEY,
+    Name_Developer VARCHAR(100)
+);
+
+CREATE TABLE GAME_PLATFORM (
+    Platform_ID INT PRIMARY KEY,
+    Name_Platform VARCHAR(100)
+);
+
+CREATE TABLE JUEGO (
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR(100),
+    Descripcion VARCHAR(300),
+    ReleaseYear SMALLDATETIME,
+    Rating INT,
+    img VARCHAR(400),
+    Genre_ID INT,
+    Developer_ID INT,
+    Price DECIMAL(10, 2),
+    PurchaseDate SMALLDATETIME,
+    CompletionDate SMALLDATETIME,
+    Status VARCHAR(50),
+    CONSTRAINT FK_JUEGO_GENRE FOREIGN KEY (Genre_ID) REFERENCES GENRE(ID_Genre),
+    CONSTRAINT FK_JUEGO_DEVELOPER FOREIGN KEY (Developer_ID) REFERENCES DEVELOPER(ID_Developer)
+);
+
+CREATE TABLE JUEGO_PLATFORM (
+    Juego_ID INT,
+    Platform_ID INT,
+    CONSTRAINT PK_JUEGO_PLATFORM PRIMARY KEY (Juego_ID, Platform_ID),
+    CONSTRAINT FK_JUEGO_PLATFORM_JUEGO FOREIGN KEY (Juego_ID) REFERENCES JUEGO(ID),
+    CONSTRAINT FK_JUEGO_PLATFORM_PLATFORM FOREIGN KEY (Platform_ID) REFERENCES GAME_PLATFORM(Platform_ID)
+);
+Descripción de las Relaciones:
+JUEGO tiene una relación muchos-a-uno con GENRE:
+
+Un juego pertenece a un solo género (Genre_ID es una clave foránea en JUEGO).
+Un género puede tener múltiples juegos (ID_Genre es clave primaria en GENRE).
+JUEGO tiene una relación muchos-a-uno con DEVELOPER:
+
+Un juego es desarrollado por una sola desarrolladora (Developer_ID es una clave foránea en JUEGO).
+Una desarrolladora puede desarrollar múltiples juegos (ID_Developer es clave primaria en DEVELOPER).
+JUEGO tiene una relación muchos-a-muchos con GAME_PLATFORM a través de JUEGO_PLATFORM:
+
+Un juego puede estar disponible en múltiples plataformas (Juego_ID y Platform_ID 
+son claves foráneas en JUEGO_PLATFORM).
+Una plataforma puede tener múltiples juegos (Platform_ID es clave primaria en GAME_PLATFORM).
+Implementación y Conexión en WPF
+Para implementar esto en tu aplicación WPF utilizando C#, seguirías estos pasos:
+
+Configurar el entorno de desarrollo:
+
+Crear el proyecto en Visual Studio.
+Instalar los paquetes necesarios para trabajar con SQLite (o cualquier otro motor de base de 
+datos local que prefieras).
+Configurar la conexión a la base de datos:
+
+Configurar la cadena de conexión a la base de datos local en tu aplicación WPF.
+Crear modelos y métodos de acceso a datos:
+
+Crear las clases modelo que representen las tablas de la base de datos.
+Implementar métodos CRUD (Crear, Leer, Actualizar, Eliminar) para interactuar con la base de datos.
+Diseñar la interfaz de usuario:
+
+Crear las vistas necesarias para agregar, editar y visualizar juegos.
+Asegurarse de que la interfaz de usuario permita gestionar las relaciones (por ejemplo, 
+seleccionar plataformas múltiples para un juego).
+Conectar la interfaz de usuario con la lógica de negocio:
+
+Enlazar los controles de la UI con los modelos y los métodos de acceso a datos.

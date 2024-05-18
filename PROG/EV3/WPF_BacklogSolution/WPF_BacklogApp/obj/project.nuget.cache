@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YkvE2Bk4sth9+rz25i9tgw7fZ6Xvt+Jig3haMhihd14QAQiRk/okivBYzjdhKhFLbMYno4EXYiuhy0Rjq/nMhQ==",
+  "dgSpecHash": "+mK1iyVUZNCZeHF+MRsK+m20A1XXLsCKDks23sOfHf0nP21i+twEPxqDG1CAVAFB9C8EXORjpyJ0KRvgXQ02sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\carre\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\carre\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WPF_BacklogApp
 {
     /// <summary>
@@ -16,9 +17,16 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        //public MainWindow()
+        //{
+        //    InitializeComponent();
+        //}
+
+        //public MainWindow(User user)
+        //{
+        //    User = user;
+        //}
+
+        //public User User { get; }
     }
 }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_BacklogData", "WPF_BacklogData\WPF_BacklogData.csproj", "{1383538F-7E9F-4F08-9D54-5A0932607C50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_BacklogData", "WPF_BacklogData\WPF_BacklogData.csproj", "{1383538F-7E9F-4F08-9D54-5A0932607C50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_BacklogApp", "WPF_BacklogApp\WPF_BacklogApp.csproj", "{871825EA-B8E1-4A17-A422-B9F16B154A71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF_BacklogApp", "WPF_BacklogApp\WPF_BacklogApp.csproj", "{871825EA-B8E1-4A17-A422-B9F16B154A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBacklogApp", "MyBacklogApp\MyBacklogApp.csproj", "{41ADA075-64B5-4679-BE3E-BE8AFFF91D4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{871825EA-B8E1-4A17-A422-B9F16B154A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871825EA-B8E1-4A17-A422-B9F16B154A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871825EA-B8E1-4A17-A422-B9F16B154A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41ADA075-64B5-4679-BE3E-BE8AFFF91D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41ADA075-64B5-4679-BE3E-BE8AFFF91D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41ADA075-64B5-4679-BE3E-BE8AFFF91D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41ADA075-64B5-4679-BE3E-BE8AFFF91D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

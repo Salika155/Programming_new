@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Windows.Controls;
+
 
 namespace WPF_BacklogApp
 {
@@ -9,6 +11,9 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class App : Application
     {
+        
+
+        
     }
 
 }

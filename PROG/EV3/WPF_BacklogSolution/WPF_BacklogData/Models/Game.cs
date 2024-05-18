@@ -8,10 +8,12 @@ namespace WPF_BacklogData.Models
 {
     public class Game
     {
+        
+
         public int ID { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
-        public DateTime ReseaseYear { get; set; }
+        public DateTime ReleaseYear { get; set; }
         public int Rating { get; set; }
         public string? Img { get; set; }
         public int Genre_ID { get; set; }
@@ -22,5 +24,6 @@ namespace WPF_BacklogData.Models
         public DateTime CompletionDate { get; set; }
         public DateTime DurationTime { get; set; }
         public string? Status { get; set; }
+ 
     }
 }

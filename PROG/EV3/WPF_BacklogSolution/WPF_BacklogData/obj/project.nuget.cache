@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NMpHFYQ7XCj/jRSmV4wP2gaTb2VoHRKKKsIGDUgRAJ7v8iSMdZ3I7AJOfZihuDG0wCcsD2wiSkU2nPzfXiSk5g==",
+  "dgSpecHash": "y9YLX5CkquMP7RRbwq91+lFEO8MGisLyMbg7d3koyc11cgktfSm71KBUbudK5Zz1oYIdvn8k7dVqC/T3DgdrCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
+  "projectFilePath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carre\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\carre\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

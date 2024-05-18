@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\bin\Debug\net7.0\MyBacklogApp.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\bin\Debug\net7.0\MyBacklogApp.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\bin\Debug\net7.0\MyBacklogApp.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\bin\Debug\net7.0\MyBacklogApp.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\bin\Debug\net7.0\MyBacklogApp.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\refint\MyBacklogApp.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\MyBacklogApp.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\MyBacklogApp\obj\Debug\net7.0\ref\MyBacklogApp.dll

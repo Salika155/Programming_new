@@ -56,3 +56,16 @@ CREATE TABLE JUEGO_PLATAFORM (
     CONSTRAINT FK_JUEGO_PLATAFORM_JUEGO FOREIGN KEY (Juego_ID) REFERENCES GAME(ID_Game),
     CONSTRAINT FK_JUEGO_PLATFORM_PLATAFORM FOREIGN KEY (Platform_ID) REFERENCES PLATAFORMA(Platform_ID)
 );
+
+
+
+--------------------------------------------------------------------------------------------
+GO
+CREATE OR ALTER PROCEDURE AddUser
+    @Name VARCHAR(100),
+    @Email VARCHAR(100),
+    @Password VARCHAR(100)
+AS
+BEGIN
+    INSERT INTO USER (Name, Email, Password) VALUES (@Name, @Email, @Password);
+END

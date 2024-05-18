@@ -8,4 +8,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WPF_BacklogData\WPF_BacklogData.csproj" />
+  </ItemGroup>
+
 </Project>

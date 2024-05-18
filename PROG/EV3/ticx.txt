@@ -154,3 +154,51 @@ seleccionar plataformas múltiples para un juego).
 Conectar la interfaz de usuario con la lógica de negocio:
 
 Enlazar los controles de la UI con los modelos y los métodos de acceso a datos.
+
+
++------------------+          +---------------+         +------------------+
+|     USUARIO      |          |     GENRE     |         |     DEVELOPER    |
++------------------+          +---------------+         +------------------+
+| ID (PK)          |          | ID_Genre (PK) |         | ID_Developer (PK)|
+| Nombre           |          | Name_genres   |         | Name_Developer   |
+| Email            |          +---------------+         +------------------+
+| Password         |  
++------------------+  
+         |
+         |
+         |
+         |       +------------------+
+         |       |      JUEGO       |
+         |       +------------------+
+         +-------| ID (PK)          |
+                 | Nombre           |
+                 | Descripcion      |
+                 | ReleaseYear      |
+                 | Rating           |
+                 | img              |
+                 | Genre_ID (FK)----+---------+
+                 | Developer_ID (FK)|----+------+
+                 | User_ID (FK)-----+----|      |
+                 | Price            |    |      |
+                 | PurchaseDate     |    |      |
+                 | CompletionDate   |    |      |
+                 | Status           |    |      |
+                 +------------------+    |      |
+                                          |      |
+                                          |      |
+                                          |      |
+                                          |      |
+                                          |      |
++-------------------+                     |      |
+|     PLATFORM      |<--------------------+      |
++-------------------+                            |
+| Platform_ID (PK)  |                            |
+| Name_Platform     |                            |
++-------------------+                            |
+                                                 |
++-------------------+                            |
+|  JUEGO_PLATFORM   |                            |
++-------------------+                            |
+| Juego_ID (PK, FK) |<---------------------------+
+| Platform_ID (PK, FK)
++-------------------+

@@ -9,10 +9,23 @@ namespace WPF_BacklogData.Interfaces
 {
     public interface IBacklogDataBase
     {
-        void AddUser(string name, string email, string password);
-        User GetUser(string email, string password);
+        //void AddUser(string name, string email, string password);
+        void AddUser(User user);
+        User GetUserByID(int userID);
+        void DeleteUser(int userId);
+        void UpdateUser(User user);
+
+
+        //User GetUser(string email, string password);
+        //void AddGame(Game game);
         void AddGame(Game game);
-        List<Game> GetGamesByUser(int userId);
+        List<Game> GetGamesByUserID(int userId);
         void RemoveGame(long id);
+        void UpdateGame(Game game);
+
+        //void AddUser(User user);
+        //List<Game> GetGamesByUserId(int userId);
+        //void DeleteGame(int gameId);
+
     }
 }

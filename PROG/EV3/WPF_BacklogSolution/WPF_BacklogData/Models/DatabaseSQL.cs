@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.SqlServer.Server;
 using WPF_BacklogData.Interfaces;
 
@@ -135,21 +137,6 @@ namespace WPF_BacklogData.Models
             //return game.ID;
         }
 
-        //QUIZAS REMOVERGAME SERIA CONVENIENTE HACERLO PASANDOLE EL NOMBRE DEL JUEGO
-        public void RemoveGame(long id)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                using SqlCommand command = new SqlCommand("RemoveStudentProcedure", connection);
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Id", id);
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-
         public List<Game> GetGamesByUserID(int userId)
         {
             List<Game> games = new List<Game>();
@@ -184,11 +171,15 @@ namespace WPF_BacklogData.Models
                             };
                             games.Add(game);
                         }
-                    } 
+                    }
                 }
                 return games;
             }
         }
+
+      
+
+        
 
         public void DeleteGame(int gameId)
         {
@@ -246,7 +237,13 @@ namespace WPF_BacklogData.Models
                     command.Parameters.AddWithValue("@Name", game.Name);
                     //command.Parameters.AddWithValue("@Age", game.Age);
                     command.Parameters.AddWithValue("@Description", game.Description);
+                    //Name = reader.GetString(reader.GetOrdinal("Name")),
+                    //Description = reader.GetString(reader.GetOrdinal("Description")),
+                    //ReleaseYear = reader.GetDateTime(reader.GetOrdinal("ReleaseYear")),
+                    //Rating = reader.GetInt32(reader.GetOrdinal("Rating")),
+                    //Img = reader.GetString(reader.GetOrdinal("img")),
                     command.ExecuteNonQuery();
+
                 }
             }
         }
@@ -260,6 +257,20 @@ namespace WPF_BacklogData.Models
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
+        public void RemoveGame(long id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using SqlCommand command = new SqlCommand("RemoveStudentProcedure", connection);
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.ExecuteNonQuery();
                 }
             }
         }
@@ -326,7 +337,7 @@ namespace WPF_BacklogData.Models
         //}
 
 
-        
+
 
         //// Método para obtener todos los géneros
         //public List<Genre> GetGenres()
@@ -357,6 +368,8 @@ namespace WPF_BacklogData.Models
         //        return connection.Query<Developer>(sql).ToList();
         //    }
         //}
+
+        //QUIZAS REMOVERGAME SERIA CONVENIENTE HACERLO PASANDOLE EL NOMBRE DEL JUEGO
 
 
     }

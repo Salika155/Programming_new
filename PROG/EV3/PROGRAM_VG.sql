@@ -114,6 +114,16 @@ BEGIN
     WHERE User_ID = @UserID;
 END
 
+--GetUserCount
+
+GO
+CREATE OR ALTER PROCEDURE GetUserCount
+AS
+BEGIN
+    SELECT COUNT(*) AS UserCount 
+	FROM USERTABLE;
+END
+
 --AddGame
 
 GO
@@ -179,6 +189,18 @@ CREATE OR ALTER PROCEDURE RemoveGame
     @ID_Game INT
 AS
 BEGIN
-    DELETE FROM GAME
+    DELETE 
+	FROM GAME
     WHERE ID_Game = @ID_Game;
+END
+
+--GetGameCount
+GO
+CREATE OR ALTER PROCEDURE GetGameCount
+	@ID_User INT
+AS
+BEGIN
+    SELECT COUNT(*) AS GameCount 
+	FROM GAME
+	WHERE User_ID = @ID_User;
 END

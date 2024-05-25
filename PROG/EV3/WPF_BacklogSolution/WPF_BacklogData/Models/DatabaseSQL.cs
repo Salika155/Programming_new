@@ -52,7 +52,7 @@ namespace WPF_BacklogData.Models
             {
                 connection.Open();
                 //string query = "SELECT * FROM USER WHERE Email = @Email AND Password = @Password";
-                using (SqlCommand cmd = new SqlCommand("GetUserByIDProc", connection))
+                using (SqlCommand cmd = new SqlCommand("GetUserByID", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserID", userID);
@@ -62,14 +62,10 @@ namespace WPF_BacklogData.Models
                         {
                             return new User
                             {
-                                //ID = reader.GetInt32(reader.GetOrdinal("User_ID")),
                                 ID = (int)reader["UserID"],
                                 Name = (string)reader["Name"],
                                 Email = (string)reader["Email"],
                                 Password = (string)reader["Password"]
-                                //Name = reader.GetString(reader.GetOrdinal("Name")),
-                                //Email = reader.GetString(reader.GetOrdinal("Email")),
-                                //Password = reader.GetString(reader.GetOrdinal("Password"))
                             };
                         }
                         else
@@ -86,7 +82,7 @@ namespace WPF_BacklogData.Models
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using SqlCommand command = new SqlCommand("GetStudentByIDProced", connection);
+                using SqlCommand command = new SqlCommand("GetUserByID", connection);
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ID", index);
@@ -130,7 +126,7 @@ namespace WPF_BacklogData.Models
             {
                 connection.Open();
                 //string query = "DELETE FROM app_users WHERE User_ID = @UserId";
-                using (SqlCommand cmd = new SqlCommand("DeleteUserProced", connection))
+                using (SqlCommand cmd = new SqlCommand("DeleteUser", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserId", userId);
@@ -145,7 +141,7 @@ namespace WPF_BacklogData.Models
             {
                 connection.Open();
                 //string query = "UPDATE app_users SET Name = @Name, Email = @Email, Password = @Password WHERE User_ID = @UserId";
-                using (SqlCommand cmd = new SqlCommand("UpdateUsersProcedure", connection))
+                using (SqlCommand cmd = new SqlCommand("UpdateUser", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@UserId", id);
@@ -165,7 +161,7 @@ namespace WPF_BacklogData.Models
                 //string query = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, " +
                 //    "Price, PurchaseDate, CompletionDate, Status) " +
                 //    "VALUES (@Name, @Description, @ReleaseYear, @Rating, @img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Status)";
-                using (SqlCommand cmd = new SqlCommand("AddGameProcedure", connection))
+                using (SqlCommand cmd = new SqlCommand("AddGame", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Name", game.Name);
@@ -237,7 +233,7 @@ namespace WPF_BacklogData.Models
                 using (SqlConnection c = new SqlConnection(connectionString))
                 {
                     c.Open();
-                    using SqlCommand command = new SqlCommand("GetGameByIdProcedure", c);
+                    using SqlCommand command = new SqlCommand("GetGamesByUserID", c);
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@User_ID", index);
@@ -293,7 +289,7 @@ namespace WPF_BacklogData.Models
             {
                 connection.Open();
                 //string query = "DELETE FROM GAME WHERE ID_Game = @GameId";
-                using (SqlCommand cmd = new SqlCommand("RemoveGameProcedure", connection))
+                using (SqlCommand cmd = new SqlCommand("RemoveGame", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@GameId", gameId);
@@ -307,7 +303,7 @@ namespace WPF_BacklogData.Models
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using SqlCommand command = new SqlCommand("UpdateStudentProcedure", connection);
+                using SqlCommand command = new SqlCommand("UpdateGame", connection);
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ID_Game", game.ID);
@@ -364,7 +360,7 @@ namespace WPF_BacklogData.Models
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using SqlCommand command = new SqlCommand("GetStudentCountProcedure", connection);
+                using SqlCommand command = new SqlCommand("GetGameCount", connection);
                 {
                     command.CommandType = CommandType.StoredProcedure;
                     return (int)command.ExecuteScalar();

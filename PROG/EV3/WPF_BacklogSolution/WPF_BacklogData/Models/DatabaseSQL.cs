@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Xml.Linq;
 using WPF_BacklogData.Interfaces;
 
 namespace WPF_BacklogData.Models
@@ -32,7 +34,7 @@ namespace WPF_BacklogData.Models
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                using (SqlCommand cmd = new SqlCommand("AddUserProcedure", connection))
+                using (SqlCommand cmd = new SqlCommand("AddUser", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Name", user.Name);
@@ -228,41 +230,48 @@ namespace WPF_BacklogData.Models
 
         public List<Game> GetGamesAt(int index)
         {
-            using (SqlConnection c = new SqlConnection(connectionString))
+            List<Game> g = new List<Game>();
+
+            try
             {
-                c.Open();
-                using SqlCommand command = new SqlCommand("GetGameByIdProcedure", c);
+                using (SqlConnection c = new SqlConnection(connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@User_ID", index);
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    c.Open();
+                    using SqlCommand command = new SqlCommand("GetGameByIdProcedure", c);
                     {
-                        if (reader.Read())
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@User_ID", index);
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            return new List<Game>
+                            while (reader.Read())
                             {
-                                ID = (int)reader["ID_Game"],
-                                Name = (string)reader["Name"],
-                                Description = (string)reader["Description"],
-                                ReleaseYear = (DateTime)reader["ReleaseYear"],
-                                Rating = (int)reader["Rating"],
-                                Img = (string)reader["img"],
-                                Genre_ID = (int)reader["Genre_ID"],
-                                Developer_ID = (int)reader["Developer_ID"],
-                                User_ID = (int)reader["User_ID"],
-                                Price = (decimal)reader["Price"],
-                                PurchaseDate = (DateTime)reader["PurchaseDate"],
-                                CompletionDate = (DateTime)reader["CompletionDate"],
-                                Status = (string)reader["Status"]
-                            };
-                        }
-                        else
-                        {
-                            return null;
+                                Game game = new Game
+                                {
+                                    ID = (int)reader["ID_Game"],
+                                    Name = (string)reader["Name"],
+                                    Description = (string)reader["Description"],
+                                    ReleaseYear = (DateTime)reader["ReleaseYear"],
+                                    Rating = (int)reader["Rating"],
+                                    Img = (string)reader["img"],
+                                    Genre_ID = (int)reader["Genre_ID"],
+                                    Developer_ID = (int)reader["Developer_ID"],
+                                    User_ID = (int)reader["User_ID"],
+                                    Price = (decimal)reader["Price"],
+                                    PurchaseDate = (DateTime)reader["PurchaseDate"],
+                                    CompletionDate = (DateTime)reader["CompletionDate"],
+                                    Status = (string)reader["Status"]
+                                };
+                                g.Add(game);
+                            }
                         }
                     }
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("error");
+            }
+            return g;
         }
 
         //public int GetGameCount()
@@ -301,17 +310,20 @@ namespace WPF_BacklogData.Models
                 using SqlCommand command = new SqlCommand("UpdateStudentProcedure", connection);
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Id", game.ID);
+                    command.Parameters.AddWithValue("@ID_Game", game.ID);
                     command.Parameters.AddWithValue("@Name", game.Name);
-                    //command.Parameters.AddWithValue("@Age", game.Age);
                     command.Parameters.AddWithValue("@Description", game.Description);
-                    //Name = reader.GetString(reader.GetOrdinal("Name")),
-                    //Description = reader.GetString(reader.GetOrdinal("Description")),
-                    //ReleaseYear = reader.GetDateTime(reader.GetOrdinal("ReleaseYear")),
-                    //Rating = reader.GetInt32(reader.GetOrdinal("Rating")),
-                    //Img = reader.GetString(reader.GetOrdinal("img")),
-                    command.ExecuteNonQuery();
-
+                    command.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
+                    command.Parameters.AddWithValue("@Rating", game.Rating);
+                    command.Parameters.AddWithValue("@Img", game.Img);
+                    command.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
+                    command.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
+                    command.Parameters.AddWithValue("@User_ID", game.User_ID);
+                    command.Parameters.AddWithValue("@Price", game.Price);
+                    command.Parameters.AddWithValue("@PurchaseData", game.PurchaseDate);
+                    command.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
+                    command.Parameters.AddWithValue("@Status", game.Status);
+                    command.ExecuteNonQuery();               
                 }
             }
         }
@@ -360,10 +372,7 @@ namespace WPF_BacklogData.Models
             }
         }
 
-        public void UpdateUser(User user)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         //public void RemoveGame(long id)
         //{

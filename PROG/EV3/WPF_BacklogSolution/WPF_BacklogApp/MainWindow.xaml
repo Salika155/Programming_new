@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_BacklogApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Backlog App" Height="450" Width="800">
     <Grid>
+        <!-- Definición de columnas del grid principal -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <!-- Panel izquierdo para la información del usuario -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <!-- Borde alrededor de la imagen del usuario -->
+            <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,10">
+                <Image Source="{Binding UserImage}" Width="100" Height="100"/>
+            </Border>
+
+            <!-- TextBox para el nombre del usuario -->
+            <TextBox Text="{Binding UserName}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" IsReadOnly="True" Width="150" Height="20"/>
+
+            <!-- TextBox para el número total de juegos -->
+            <TextBox Text="{Binding TotalGames}" FontSize="14" HorizontalAlignment="Center" Margin="0,0,0,10" IsReadOnly="True" Width="150" Height="20"/>
+
+            <!-- Botones para añadir o quitar juegos -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <Button Content="Añadir" Width="70" Margin="5" Click="AddGame_Click"/>
+                <Button Content="Quitar" Width="70" Margin="5" Click="RemoveGame_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Panel derecho para la lista de juegos y filtros -->
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Panel para los filtros de estado -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,10">
+                <TextBox Width="100" Margin="5" Text="Filtro 1" TextChanged="TextBox_TextChanged"/>
+                <TextBox Width="100" Margin="5" Text="Filtro 2" TextChanged="TextBox_TextChanged_1"/>
+                <TextBox Width="100" Margin="5" Text="Filtro 3" TextChanged="TextBox_TextChanged_2"/>
+                <TextBox Width="100" Margin="5" Text="Filtro 4" TextChanged="TextBox_TextChanged_3"/>
+            </StackPanel>
+
+            <!-- ListView para mostrar la lista de juegos -->
+            <ListView x:Name="gameListView" Grid.Row="1" HorizontalContentAlignment="Stretch">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="5">
+                            <StackPanel>
+                                <Image Source="{Binding GameImage}" Width="100" Height="100" Margin="5"/>
+                                <TextBlock Text="{Binding GameName}" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>

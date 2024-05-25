@@ -17,6 +17,50 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private void AddGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddRemoveGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveGame_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_3(object sender, TextChangedEventArgs e)
+        {
+
+        }
         //public MainWindow()
         //{
         //    InitializeComponent();

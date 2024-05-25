@@ -13,14 +13,14 @@ namespace WPF_BacklogData.Interfaces
         void AddUser(User user);
         User GetUserByID(int userID);
         void DeleteUser(int userId);
-        void UpdateUser(User user);
+        void UpdateUser(User user, int id);
 
 
         //User GetUser(string email, string password);
         //void AddGame(Game game);
         void AddGame(Game game);
         List<Game> GetGamesByUserID(int userId);
-        void RemoveGame(long id);
+        void RemoveGame(int id);
         void UpdateGame(Game game);
 
         //void AddUser(User user);

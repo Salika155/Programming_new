@@ -49,7 +49,8 @@
                 <Button Content="Jugados" Width="100" Margin="5" Click="AddGame_Click"/>
                 <Button Content="WishList" Width="100" Margin="5" Click="AddGame_Click"/>
             </StackPanel>
-
+            
+            
             <ScrollViewer Grid.Row="1" Grid.Column="1">
                 <ItemsControl x:Name="ItemsPool">
                     <ItemsControl.ItemTemplate>

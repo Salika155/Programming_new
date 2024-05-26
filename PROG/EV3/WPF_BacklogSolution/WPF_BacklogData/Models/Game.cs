@@ -45,6 +45,10 @@ namespace WPF_BacklogData.Models
         {
 
         }
+    }
 
+    public interface ISGameListener
+    {
+        void OnStudentSelected(Game game);
     }
 }

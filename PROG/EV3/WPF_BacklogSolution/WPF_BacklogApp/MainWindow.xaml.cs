@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_BacklogData.Models;
 
 
 namespace WPF_BacklogApp
@@ -15,8 +17,18 @@ namespace WPF_BacklogApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, ISGameListener
     {
+        ObservableCollection<Game> _games = new ObservableCollection<Game>();
+        Game? _gamesCollectables;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            //aqui se debera cargar la lista de juegos
+        }
+
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
 
@@ -61,6 +73,14 @@ namespace WPF_BacklogApp
         {
 
         }
+
+        public void OnStudentSelected(Game game)
+        {
+            _gamesCollectables = game;
+
+        }
+
+
         //public MainWindow()
         //{
         //    InitializeComponent();

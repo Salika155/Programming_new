@@ -28,80 +28,103 @@ namespace WPF_BacklogData.Models
 
         public void AddUser(User user)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("AddUser", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Name", user.Name);
-                    cmd.Parameters.AddWithValue("@Email", user.Email);
-                    cmd.Parameters.AddWithValue("@Password", user.Password);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("AddUser", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", user.Name);
+                        cmd.Parameters.AddWithValue("@Email", user.Email);
+                        cmd.Parameters.AddWithValue("@Password", user.Password);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("Error añadiendo");
             }
         }
 
         //esto tengo que remirarlo de hacerlo
         public User? GetUserByID(int userID)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "SELECT * FROM USER WHERE Email = @Email AND Password = @Password";
-                using (SqlCommand cmd = new SqlCommand("GetUserByID", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@UserID", userID);
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    connection.Open();
+                    //string query = "SELECT * FROM USER WHERE Email = @Email AND Password = @Password";
+                    using (SqlCommand cmd = new SqlCommand("GetUserByID", connection))
                     {
-                        if (reader.Read())
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserID", userID);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            return new User
+                            if (reader.Read())
                             {
-                                ID = (int)reader["UserID"],
-                                Name = (string)reader["Name"],
-                                Email = (string)reader["Email"],
-                                Password = (string)reader["Password"]
-                            };
-                        }
-                        else
-                        {
-                            return null;
+                                return new User
+                                {
+                                    ID = (int)reader["UserID"],
+                                    Name = (string)reader["Name"],
+                                    Email = (string)reader["Email"],
+                                    Password = (string)reader["Password"]
+                                };
+                            }
+                            else
+                            {
+                                return null;
+                            }
                         }
                     }
                 }
             }
+            catch
+            {
+                throw new Exception("No se pudo encontrar");
+            }
+            
         }
 
         public User? GetUserAt(int index)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                using SqlCommand command = new SqlCommand("GetUserByID", connection);
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ID", index);
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    using SqlCommand command = new SqlCommand("GetUserByID", connection);
                     {
-                        if (reader.Read())
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID", index);
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            return new User
+                            if (reader.Read())
                             {
-                                ID = (int)reader["UserID"],
-                                Name = (string)reader["Name"],
-                                Email = (string)reader["Email"],
-                                Password = (string)reader["Password"]
-                            };
-                        }
-                        else
-                        {
-                            return null;
+                                return new User
+                                {
+                                    ID = (int)reader["UserID"],
+                                    Name = (string)reader["Name"],
+                                    Email = (string)reader["Email"],
+                                    Password = (string)reader["Password"]
+                                };
+                            }
+                            else
+                            {
+                                return null;
+                            }
                         }
                     }
                 }
             }
+            catch
+            {
+                throw new Exception("No se pudo encontrar");
+            }
+            
         }
 
         //public int GetUserCount()
@@ -119,64 +142,85 @@ namespace WPF_BacklogData.Models
 
         public void DeleteUser(int userId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "DELETE FROM app_users WHERE User_ID = @UserId";
-                using (SqlCommand cmd = new SqlCommand("DeleteUser", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@UserId", userId);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    //string query = "DELETE FROM app_users WHERE User_ID = @UserId";
+                    using (SqlCommand cmd = new SqlCommand("DeleteUser", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserId", userId);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("No se pudo borrar");
             }
         }
 
         public void UpdateUser(User user, int id)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "UPDATE app_users SET Name = @Name, Email = @Email, Password = @Password WHERE User_ID = @UserId";
-                using (SqlCommand cmd = new SqlCommand("UpdateUser", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@UserId", id);
-                    cmd.Parameters.AddWithValue("@Name", user.Name);
-                    cmd.Parameters.AddWithValue("@Email", user.Email);
-                    cmd.Parameters.AddWithValue("@Password", user.Password);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    //string query = "UPDATE app_users SET Name = @Name, Email = @Email, Password = @Password WHERE User_ID = @UserId";
+                    using (SqlCommand cmd = new SqlCommand("UpdateUser", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@UserId", id);
+                        cmd.Parameters.AddWithValue("@Name", user.Name);
+                        cmd.Parameters.AddWithValue("@Email", user.Email);
+                        cmd.Parameters.AddWithValue("@Password", user.Password);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("No se pudo actualizar");
             }
         }
 
         public void AddGame(Game game)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, " +
-                //    "Price, PurchaseDate, CompletionDate, Status) " +
-                //    "VALUES (@Name, @Description, @ReleaseYear, @Rating, @img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Status)";
-                using (SqlCommand cmd = new SqlCommand("AddGame", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Name", game.Name);
-                    cmd.Parameters.AddWithValue("@Description", game.Description);
-                    cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
-                    cmd.Parameters.AddWithValue("@Rating", game.Rating);
-                    cmd.Parameters.AddWithValue("@img", game.Img);
-                    cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
-                    cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
-                    cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
-                    cmd.Parameters.AddWithValue("@Price", game.Price);
-                    cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
-                    cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                    cmd.Parameters.AddWithValue("@Status", game.Status);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    //string query = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, " +
+                    //    "Price, PurchaseDate, CompletionDate, Status) " +
+                    //    "VALUES (@Name, @Description, @ReleaseYear, @Rating, @img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Status)";
+                    using (SqlCommand cmd = new SqlCommand("AddGame", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", game.Name);
+                        cmd.Parameters.AddWithValue("@Description", game.Description);
+                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
+                        cmd.Parameters.AddWithValue("@Rating", game.Rating);
+                        cmd.Parameters.AddWithValue("@img", game.Img);
+                        cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
+                        cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
+                        cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
+                        cmd.Parameters.AddWithValue("@Price", game.Price);
+                        cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
+                        cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
+                        cmd.Parameters.AddWithValue("@Status", game.Status);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+                //return game.ID;
             }
-            //return game.ID;
+            catch
+            {
+                throw new Exception("No se pudo añadir el juego");
+            }
         }
 
         //esto tiene que estar mal. o tiene que añadir los juegos a la lista?
@@ -184,40 +228,47 @@ namespace WPF_BacklogData.Models
         {
             List<Game> games = new List<Game>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "SELECT * FROM GAME WHERE User_ID = @User_ID";
-                using (SqlCommand cmd = new SqlCommand("GetGamesByUserID", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@User_ID", userId);
-
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    connection.Open();
+                    //string query = "SELECT * FROM GAME WHERE User_ID = @User_ID";
+                    using (SqlCommand cmd = new SqlCommand("GetGamesByUserID", connection))
                     {
-                        while (reader.Read())
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@User_ID", userId);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            Game game = new Game
+                            while (reader.Read())
                             {
-                                ID = (int)reader["ID_Game"],
-                                Name = (string)reader["Name"],
-                                Description =(string)reader["Description"],
-                                ReleaseYear = (DateTime)reader["ReleaseYear"],
-                                Rating = (int)reader["Rating"],
-                                Img = (string)reader["img"],
-                                Genre_ID = (int)reader["Genre_ID"],
-                                Developer_ID =(int)reader["Developer_ID"],
-                                User_ID = (int)reader["User_ID"],
-                                Price = (decimal)reader["Price"],
-                                PurchaseDate = (DateTime)reader["PurchaseDate"],
-                                CompletionDate =(DateTime)reader["CompletionDate"],
-                                Status = (string)reader["Status"]
-                            };
-                            games.Add(game);
+                                Game game = new Game
+                                {
+                                    ID = (int)reader["ID_Game"],
+                                    Name = (string)reader["Name"],
+                                    Description = (string)reader["Description"],
+                                    ReleaseYear = (DateTime)reader["ReleaseYear"],
+                                    Rating = (int)reader["Rating"],
+                                    Img = (string)reader["img"],
+                                    Genre_ID = (int)reader["Genre_ID"],
+                                    Developer_ID = (int)reader["Developer_ID"],
+                                    User_ID = (int)reader["User_ID"],
+                                    Price = (decimal)reader["Price"],
+                                    PurchaseDate = (DateTime)reader["PurchaseDate"],
+                                    CompletionDate = (DateTime)reader["CompletionDate"],
+                                    Status = (string)reader["Status"]
+                                };
+                                games.Add(game);
+                            }
                         }
                     }
+                    return games;
                 }
-                return games;
+            }
+            catch
+            {
+                throw new Exception("No se pudo encontrar el juego");
             }
         }
 
@@ -260,9 +311,9 @@ namespace WPF_BacklogData.Models
                     }
                 }
             }
-            catch (Exception e)
+            catch
             {
-                Console.WriteLine("error");
+                throw new Exception("No se pudo obtener el juego deseado");
             }
             return g;
         }
@@ -282,42 +333,56 @@ namespace WPF_BacklogData.Models
 
         public void RemoveGame(int gameId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                //string query = "DELETE FROM GAME WHERE ID_Game = @GameId";
-                using (SqlCommand cmd = new SqlCommand("RemoveGame", connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@GameId", gameId);
-                    cmd.ExecuteNonQuery();
+                    connection.Open();
+                    //string query = "DELETE FROM GAME WHERE ID_Game = @GameId";
+                    using (SqlCommand cmd = new SqlCommand("RemoveGame", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@GameId", gameId);
+                        cmd.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("No se pudo quitar el juego");
             }
         }
 
         public void UpdateGame(Game game)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                using SqlCommand command = new SqlCommand("UpdateGame", connection);
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ID_Game", game.ID);
-                    command.Parameters.AddWithValue("@Name", game.Name);
-                    command.Parameters.AddWithValue("@Description", game.Description);
-                    command.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
-                    command.Parameters.AddWithValue("@Rating", game.Rating);
-                    command.Parameters.AddWithValue("@Img", game.Img);
-                    command.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
-                    command.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
-                    command.Parameters.AddWithValue("@User_ID", game.User_ID);
-                    command.Parameters.AddWithValue("@Price", game.Price);
-                    command.Parameters.AddWithValue("@PurchaseData", game.PurchaseDate);
-                    command.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                    command.Parameters.AddWithValue("@Status", game.Status);
-                    command.ExecuteNonQuery();               
+                    connection.Open();
+                    using SqlCommand command = new SqlCommand("UpdateGame", connection);
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ID_Game", game.ID);
+                        command.Parameters.AddWithValue("@Name", game.Name);
+                        command.Parameters.AddWithValue("@Description", game.Description);
+                        command.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
+                        command.Parameters.AddWithValue("@Rating", game.Rating);
+                        command.Parameters.AddWithValue("@Img", game.Img);
+                        command.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
+                        command.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
+                        command.Parameters.AddWithValue("@User_ID", game.User_ID);
+                        command.Parameters.AddWithValue("@Price", game.Price);
+                        command.Parameters.AddWithValue("@PurchaseData", game.PurchaseDate);
+                        command.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
+                        command.Parameters.AddWithValue("@Status", game.Status);
+                        command.ExecuteNonQuery();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("No se pudo actualizar el juego");
             }
         }
 
@@ -354,14 +419,21 @@ namespace WPF_BacklogData.Models
 
         public int GetGametCount()
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                using SqlCommand command = new SqlCommand("GetGameCount", connection);
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    return (int)command.ExecuteScalar();
+                    connection.Open();
+                    using SqlCommand command = new SqlCommand("GetGameCount", connection);
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        return (int)command.ExecuteScalar();
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception("No se pudo obtener el numero de juegos");
             }
         }
 

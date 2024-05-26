@@ -1,15 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using WPF_BacklogData.Interfaces;
 using WPF_BacklogData.Models;
 
 
@@ -24,15 +15,15 @@ namespace WPF_BacklogApp
         Game? _gamesCollectables;
 
         private User _currentUser;
-        public User CurrentUser
-        {
-            get => _currentUser;
-            set
-            {
-                _currentUser = value;
+        //public User CurrentUser
+        //{
+        //    get => _currentUser;
+        //    set
+        //    {
+        //        _currentUser = value;
 
-            }
-        }
+        //    }
+        //}
 
         
 
@@ -41,6 +32,11 @@ namespace WPF_BacklogApp
             InitializeComponent();
 
             //aqui se debera cargar la lista de juegos
+            _games.Add(new Game() { ID = 0, Name = "Roberto1", Description = "Rob1", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8"});
+            _games.Add(new Game() { ID = 1, Name = "Roberto2", Description = "Rob2", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 2, Name = "Roberto3", Description = "Rob3", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+
+            ItemsPool.ItemsSource = _games;
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)

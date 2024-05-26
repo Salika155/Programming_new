@@ -31,3 +31,6 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_Back
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\ref\WPF_BacklogApp.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.baml

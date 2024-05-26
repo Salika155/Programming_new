@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_BacklogData.Interfaces;
 using WPF_BacklogData.Models;
 
 
@@ -21,6 +22,19 @@ namespace WPF_BacklogApp
     {
         ObservableCollection<Game> _games = new ObservableCollection<Game>();
         Game? _gamesCollectables;
+
+        private User _currentUser;
+        public User CurrentUser
+        {
+            get => _currentUser;
+            set
+            {
+                _currentUser = value;
+
+            }
+        }
+
+        
 
         public MainWindow()
         {

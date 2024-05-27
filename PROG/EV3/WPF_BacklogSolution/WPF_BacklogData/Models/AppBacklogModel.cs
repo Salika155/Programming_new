@@ -9,11 +9,13 @@ namespace WPF_BacklogData.Models
 {
     public class AppBacklogModel
     {
+        #region SINGLETON
         private static AppBacklogModel _app = new AppBacklogModel();
         public static AppBacklogModel Instance => _app;
 
         //public DatabaseRam Database => DatabaseRam.Instance;
         public DatabaseSQL databaseBBDD => DatabaseSQL.Instance;
+        #endregion
 
         public AppBacklogModel()
         {
@@ -68,5 +70,7 @@ namespace WPF_BacklogData.Models
         //            where u.Id == id
         //            select u).First();
         //}
+
+        //descativar intellisense -> herramientas -> opciones -> editor de texto -> c# -> intellisense -> desactivar las 5 primeras y las 4 ultimas
     }
 }

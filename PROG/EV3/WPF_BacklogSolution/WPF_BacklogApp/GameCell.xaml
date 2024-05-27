@@ -17,6 +17,7 @@
         <Rectangle Fill="White" Stroke="Black" StrokeThickness="2" RadiusX="5" RadiusY="5" Grid.RowSpan="3" Grid.ColumnSpan="3" ></Rectangle>
         <Image Grid.Column="0" Grid.Row="0" Source="{Binding Game.Img}"/>
         <Label Content="{Binding Game.Name}" Grid.Row="1" Margin="10"/>
+        <!--<TextBox Name="TexboxCell" Text="{Binding Path= Game.Name}"></TextBox>-->
 
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
         </StackPanel>

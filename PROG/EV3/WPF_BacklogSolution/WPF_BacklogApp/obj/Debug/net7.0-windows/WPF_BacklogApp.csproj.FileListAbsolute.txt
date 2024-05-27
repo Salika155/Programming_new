@@ -34,3 +34,38 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_Back
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.g.cs
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.baml
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogApp.exe
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogApp.deps.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogApp.runtimeconfig.json
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogApp.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogApp.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogData.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\bin\Debug\net7.0-windows\WPF_BacklogData.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.csproj.AssemblyReference.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\LoginWindow.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp_MarkupCompile.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp_MarkupCompile.lref
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameCell.baml
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\LoginWindow.baml
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.g.resources
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.AssemblyInfo.cs
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.csproj.CopyComplete
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\refint\WPF_BacklogApp.dll
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.pdb
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\WPF_BacklogApp.genruntimeconfig.cache
+C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\ref\WPF_BacklogApp.dll

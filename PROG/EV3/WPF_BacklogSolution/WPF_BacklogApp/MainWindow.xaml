@@ -34,7 +34,7 @@
         </StackPanel>
 
         <!-- Panel derecho para la lista de juegos y filtros -->
-        <Grid Grid.Column="1" Margin="10" >
+        <Grid Grid.Column="1" Margin="20" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>

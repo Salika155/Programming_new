@@ -60,7 +60,7 @@
                     </ItemsControl.ItemTemplate>
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="120" Height="160" Margin="20,0,20,0"></StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="500" Height="200" Margin="20,0,20,0"></StackPanel>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>

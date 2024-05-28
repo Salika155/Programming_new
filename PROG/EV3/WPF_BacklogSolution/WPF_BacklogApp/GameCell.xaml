@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_BacklogApp"
              mc:Ignorable="d" 
-             d:DesignHeight="120" d:DesignWidth="80">
+             d:DesignHeight="160" d:DesignWidth="120">
+    <!--<Border BorderThickness="1" BorderBrush="Black" Margin="5">-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -16,10 +17,16 @@
         </Grid.RowDefinitions>
         <Rectangle Fill="White" Stroke="Black" StrokeThickness="2" RadiusX="5" RadiusY="5" Grid.RowSpan="3" Grid.ColumnSpan="3" ></Rectangle>
         <Image Grid.Column="0" Grid.Row="0" Source="{Binding Game.Img}"/>
-        <Label Content="{Binding Game.Name}" Grid.Row="1" Margin="10"/>
+        <!--<Label Content="{Binding Game.Name}" Grid.Row="1" Margin="10"/>-->
         <!--<TextBox Name="TexboxCell" Text="{Binding Path= Game.Name}"></TextBox>-->
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Image Source="{Binding Img}" Width="100" Height="100" Margin="5"/>
         </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" TextAlignment="Center"/>
+        </StackPanel>
+        
+        
     </Grid>
 </UserControl>

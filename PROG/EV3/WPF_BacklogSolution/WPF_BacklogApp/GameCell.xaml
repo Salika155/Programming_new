@@ -21,10 +21,10 @@
         <!--<TextBox Name="TexboxCell" Text="{Binding Path= Game.Name}"></TextBox>-->
 
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-            <Image Source="{Binding Img}" Width="100" Height="100" Margin="5"/>
+            <Image Source="{Binding Img}" Width="100" Height="100" Margin="10,5,5,5"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-            <TextBlock Text="{Binding Name}" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" TextAlignment="Center" FontSize="10"/>
         </StackPanel>
         
         

@@ -15,31 +15,40 @@ namespace WPF_BacklogApp
         Game? _gamesCollectables;
 
         private User _currentUser;
-        //public User CurrentUser
-        //{
-        //    get => _currentUser;
-        //    set
-        //    {
-        //        _currentUser = value;
 
-        //    }
-        //}
-
-        
+        public User CurrentUser
+        {
+            get => _currentUser;
+            set => _currentUser = value;
+        //    OnPropertyChanged(nameof(CurrentUser)
+        //);
+        }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            //Game game = new Game();
-            //game.Name = "Roberto";
-            //game.Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8";
-            //this.DataContext = game;
+            CurrentUser = new User
+            {
+                ID = 1,
+                Name = "Usuario Ejemplo",
+                Email = "usuario@ejemplo.com",
+                Password = "password",
+                Image = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8",
+                TotalGames = 6
+            };
+
+            DataContext = this;
+            
+            var games = new ObservableCollection<Game>();
 
             //aqui se debera cargar la lista de juegos
-            _games.Add(new Game() { ID = 0, Name = "Roberto1", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8"});
-            _games.Add(new Game() { ID = 1, Name = "Roberto2", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-            _games.Add(new Game() { ID = 2, Name = "Roberto3", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 0, Name = "The Legend Of Zelda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8"});
+            _games.Add(new Game() { ID = 1, Name = "Trails Of Cold Steel", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 2, Name = "YS IX Monstrum Nox", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 3, Name = "Pokemon Esmeralda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 4, Name = "Fire Emblem", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
+            _games.Add(new Game() { ID = 5, Name = "Dragon Quest VII", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
 
             DataContext = this;
             ItemsPool.ItemsSource = _games;

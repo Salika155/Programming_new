@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WPF_BacklogApp
-build_property.ProjectDir = C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\

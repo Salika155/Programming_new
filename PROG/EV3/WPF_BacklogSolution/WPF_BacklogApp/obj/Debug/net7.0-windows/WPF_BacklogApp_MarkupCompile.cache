@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\App.xaml
-31440577768
+4960230267
 
-7-2046390788
+8-1930136497
 200-910006806
-GameCell.xaml;LoginWindow.xaml;MainWindow.xaml;
+AddRemoveGameWindow.xaml;GameCell.xaml;LoginWindow.xaml;MainWindow.xaml;
 
 False
 

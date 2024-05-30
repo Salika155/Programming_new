@@ -41,6 +41,8 @@ namespace WPF_BacklogApp
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
+            AddRemoveGameWindow addRemoveGameWindow = new AddRemoveGameWindow();
+            addRemoveGameWindow.ShowDialog();
 
         }
 
@@ -51,6 +53,8 @@ namespace WPF_BacklogApp
 
         private void DeleteGame_Click(object sender, RoutedEventArgs e)
         {
+            AddRemoveGameWindow addRemoveGameWindow = new AddRemoveGameWindow();
+            addRemoveGameWindow.ShowDialog();
 
         }
 

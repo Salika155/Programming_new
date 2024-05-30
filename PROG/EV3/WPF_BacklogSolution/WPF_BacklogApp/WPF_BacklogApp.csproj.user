@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddRemoveGameWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GameCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddRemoveGameWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="GameCell.xaml">
       <SubType>Designer</SubType>
     </Page>

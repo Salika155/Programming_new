@@ -17,11 +17,7 @@ namespace WPF_BacklogApp
 {
     public partial class LoginWindow : Window
     {
-        public LoginWindow()
-        {
-            InitializeComponent();
-        }
-
         
+
     }
 }

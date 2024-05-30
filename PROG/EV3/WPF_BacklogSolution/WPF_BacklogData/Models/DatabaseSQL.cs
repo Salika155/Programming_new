@@ -50,7 +50,7 @@ namespace WPF_BacklogData.Models
         }
 
         //esto tengo que remirarlo de hacerlo
-        public User? GetUserByID(int userID)
+        public User GetUserByID(int userID)
         {
             try
             {

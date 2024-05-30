@@ -16,15 +16,15 @@
         <!-- Panel izquierdo para la información del usuario -->
         <StackPanel Grid.Column="0" Margin="10">
             <!-- Borde alrededor de la imagen del usuario -->
-            <Border BorderBrush="Black" BorderThickness="2" Margin="30,10,30,10">
-                <Image Source="{Binding CurrentUser.Image}" Width="100" Height="100" Margin="0,0,0,10"/>
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Padding="5" Background="DarkGray" Margin="10">
+                <Image Source="{Binding Image}" Width="100" Height="100" Margin="0,10,0,10"/>
             </Border>
 
             <!-- TextBox para el nombre del usuario -->
-            <TextBox Text="{Binding CurrentUser.Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" Width="150" Height="20"/>
-            <!-- TextBox para el número total de juegos -->
+            <TextBox Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10" Width="150" Height="20"/>
+            <!-- TextBlock para el número total de juegos -->
             <TextBlock Text="Total Games:" FontSize="14" HorizontalAlignment="Center"/>
-            <TextBox Text="{Binding CurrentUser.TotalGames}" FontSize="18" HorizontalAlignment="Center" Margin="0,10,0,10" Width="60" Height="20"/>
+            <TextBox Text="{Binding CurrentUser.TotalGames}" FontSize="18" HorizontalAlignment="Center" Margin="10" Width="60" Height="30" Padding="5" Background="White"/>
 
             <!-- Botones para añadir o quitar juegos -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">

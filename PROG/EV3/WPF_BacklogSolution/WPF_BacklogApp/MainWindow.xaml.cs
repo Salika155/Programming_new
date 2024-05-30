@@ -11,48 +11,33 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class MainWindow : Window, ISGameListener
     {
-        ObservableCollection<Game> _games = new ObservableCollection<Game>();
-        Game? _gamesCollectables;
-
-        private User _currentUser;
-
-        public User CurrentUser
-        {
-            get => _currentUser;
-            set => _currentUser = value;
+        public static User? AppUser { get; private set; }
+        private ObservableCollection<Game> _games;
         //    OnPropertyChanged(nameof(CurrentUser)
         //);
-        }
+    
 
-        public MainWindow()
+        public MainWindow(User user)
         {
             InitializeComponent();
+            AppUser = user;
+            DataContext = AppUser;
 
-            CurrentUser = new User
+            // Inicializar y cargar la lista de juegos
+            _games = new ObservableCollection<Game>
             {
-                ID = 1,
-                Name = "Usuario Ejemplo",
-                Email = "usuario@ejemplo.com",
-                Password = "password",
-                Image = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8",
-                TotalGames = 6
+                new Game() { ID = 0, Name = "The Legend Of Zelda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+                new Game() { ID = 1, Name = "Trails Of Cold Steel", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+                new Game() { ID = 2, Name = "YS IX Monstrum Nox", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+                new Game() { ID = 3, Name = "Pokemon Esmeralda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+                new Game() { ID = 4, Name = "Fire Emblem", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+                new Game() { ID = 5, Name = "Dragon Quest VII", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" }
             };
 
-            DataContext = this;
-            
-            var games = new ObservableCollection<Game>();
-
-            //aqui se debera cargar la lista de juegos
-            _games.Add(new Game() { ID = 0, Name = "The Legend Of Zelda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8"});
-            _games.Add(new Game() { ID = 1, Name = "Trails Of Cold Steel", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-            _games.Add(new Game() { ID = 2, Name = "YS IX Monstrum Nox", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-            _games.Add(new Game() { ID = 3, Name = "Pokemon Esmeralda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-            _games.Add(new Game() { ID = 4, Name = "Fire Emblem", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-            _games.Add(new Game() { ID = 5, Name = "Dragon Quest VII", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" });
-
-            DataContext = this;
             ItemsPool.ItemsSource = _games;
         }
+
+        
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
@@ -99,9 +84,10 @@ namespace WPF_BacklogApp
 
         }
 
-        public void OnStudentSelected(Game game)
+        public void OnStudentSelected(Game game) => _games = AppUser.Games;
+
+        private void TextBox_TextChanged_4(object sender, TextChangedEventArgs e)
         {
-            _gamesCollectables = game;
 
         }
 

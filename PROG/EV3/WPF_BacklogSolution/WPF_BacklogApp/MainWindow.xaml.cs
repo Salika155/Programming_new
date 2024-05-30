@@ -46,27 +46,15 @@ namespace WPF_BacklogApp
 
         }
 
-        private void EditGame_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void DeleteGame_Click(object sender, RoutedEventArgs e)
+        private void RemoveGame_Click(object sender, RoutedEventArgs e)
         {
             AddRemoveGameWindow addRemoveGameWindow = new AddRemoveGameWindow();
             addRemoveGameWindow.ShowDialog();
 
         }
 
-        private void AddRemoveGame_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RemoveGame_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -91,6 +79,16 @@ namespace WPF_BacklogApp
         public void OnStudentSelected(Game game) => _games = AppUser.Games;
 
         private void TextBox_TextChanged_4(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void FiltGameByState(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FilterGameByState(object sender, RoutedEventArgs e)
         {
 
         }

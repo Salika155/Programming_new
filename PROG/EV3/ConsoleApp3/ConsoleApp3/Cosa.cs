@@ -122,6 +122,35 @@ namespace ConsoleApp3
             //MyDelegate2 f = PrepareDelegate(3);
             //CallFunction(f);
 
+
+            Dictionary<int, string> dic = new Dictionary<int, string>();
+            //dic.TryGetValue();
+            //funcion swap generica que le paso dos elementos y los intercambio
+         
+            int a = 3;
+            int b = 4;
+            Swap(ref a, ref b);
         }
+        public static void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+
+
+        public static bool SolveEquation(double a, double b, double c, out double r1, out double r2)
+        {
+            r1 = 0.0;
+            r2 = 0.0;
+            double d = b * b - 4 * a * c;
+            if (d < 0)
+                return false;
+            r1 = (-b + Math.Sqrt(d)) / (2 * a);
+            r2 = (-b - Math.Sqrt(d)) / (2 * a);
+            return true;
+        }
+
+
     }
 }

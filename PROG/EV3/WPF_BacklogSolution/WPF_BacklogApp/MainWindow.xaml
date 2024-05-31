@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="Backlog App" Height="450" Width="800">
     <Grid>
+        <!--ejemplo de color-->
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Gray"/>
+                <GradientStop Color="Blue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>-->
         <!-- Definición de columnas del grid principal -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>

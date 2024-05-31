@@ -46,6 +46,12 @@ namespace WPF_BacklogApp
             AddRemoveGameWindow addGameWindow = new AddRemoveGameWindow();
             addGameWindow.ShowDialog();
 
+            //_games = new ObservableCollection<Game>
+            //{
+            //    new Game() { ID = }
+            //};
+            //ItemsPool.ItemsSource = _games;
+
         }
 
 

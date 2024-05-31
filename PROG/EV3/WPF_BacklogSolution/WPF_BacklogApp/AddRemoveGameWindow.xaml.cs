@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System.Diagnostics;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using WPF_BacklogData.Models;
+using WPF_BacklogData.Interfaces;
+
 
 namespace WPF_BacklogApp
 {
@@ -19,23 +14,50 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class AddRemoveGameWindow : Window
     {
+        public Game NewGame { get; set; }
+        private readonly DatabaseSQL _database;
+
+
         public AddRemoveGameWindow()
         {
             InitializeComponent();
+            _database = DatabaseSQL.Instance;
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
-            string gameName = GameNameTextBox.Text;
-            if (!string.IsNullOrEmpty(gameName))
+
+            NewGame = new Game
             {
-                MessageBox.Show($"Juego '{gameName}' añadido con éxito.");
-                // Aquí puedes actualizar la lista de juegos en MainWindow
-            }
-            else
+                Name = GameNameTextBox.Text,
+                Img = GameImageTextBox.Text,
+                Platform_ID = 1,
+                Status = "Backlog"
+            };
+
+            try
             {
-                MessageBox.Show("Necesitas introducir un nombre de juego válido.");
+                _database.AddGame(NewGame);
+                MessageBox.Show($"Juego '{NewGame.Name}' añadido con éxito.");
+                DialogResult = true;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al añadir el juego: {ex.Message}");
+                DialogResult = false;
+            }
+            Close();
+
+            //string gameName = GameNameTextBox.Text;
+            //if (!string.IsNullOrEmpty(gameName))
+            //{
+            //    MessageBox.Show($"Juego '{gameName}' añadido con éxito.");
+            //    // Aquí puedes actualizar la lista de juegos en MainWindow
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Necesitas introducir un nombre de juego válido.");
+            //}
 
         }
 
@@ -44,8 +66,18 @@ namespace WPF_BacklogApp
             string gameName = GameNameTextBox.Text;
             if (!string.IsNullOrEmpty(gameName))
             {
-                MessageBox.Show($"Juego '{gameName}' removido con éxito.");
-                // Aquí puedes actualizar la lista de juegos en MainWindow
+                try
+                {
+                    _database.RemoveGame(gameName);
+                    MessageBox.Show($"Juego '{gameName}' removido con éxito.");
+                    DialogResult = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al remover el juego: {ex.Message}");
+                    DialogResult = false;
+                }
+                Close();
             }
             else
             {

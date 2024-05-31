@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPF_BacklogData.Models;
 
 namespace WPF_BacklogData.Models
 {
@@ -16,6 +17,8 @@ namespace WPF_BacklogData.Models
         //public DatabaseRam Database => DatabaseRam.Instance;
         public DatabaseSQL databaseBBDD => DatabaseSQL.Instance;
         #endregion
+        private static AppBacklogModel _instance;
+
 
         public AppBacklogModel()
         {

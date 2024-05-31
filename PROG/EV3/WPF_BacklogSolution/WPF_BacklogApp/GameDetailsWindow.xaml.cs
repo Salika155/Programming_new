@@ -20,19 +20,11 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class GameDetailsWindow : Window
     {
-        private GameCell? gameCell;
+        
 
         public Game? Game { get; set; }
 
-        public GameDetailsWindow(GameCell gameCell)
-        {
-            this.gameCell = gameCell;
-        }
-
-        public GameDetailsWindow()
-        {
-
-        }
+        
         public GameDetailsWindow(Game game)
         {
             InitializeComponent();
@@ -57,22 +49,27 @@ namespace WPF_BacklogApp
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            Game.Name = GameNameTextBox.Text;
-            Game.Description = GameDescriptionTextBox.Text;
-            Game.Platform_ID = int.Parse(GamePlatformTextBox.Text);
-            Game.ReleaseDate = DateTime.Parse(GameReleaseDateTextBox.Text);
-            Game.Rating = int.Parse(GameRatingTextBox.Text);
-            Game.Img = GameImageTextBox.Text;
-            Game.Genre_ID = int.Parse(GameGenreTextBox.Text);
-            Game.Developer_ID = int.Parse(GameDeveloperTextBox.Text);
-            //Game.Publisher = GamePublisherTextBox.Text;
-            //Game.Price = decimal.Parse(GamePriceTextBox.Text);
-            //Game.PurchaseDate = DateTime.Parse(GamePurchaseDateTextBox.Text);
-            //Game.CompletionDate = DateTime.Parse(GameCompletionDateTextBox.Text);
-            //Game.DurationTime = DateTime.Parse(GameDurationTimeTextBox.Text);
-            //Game.Status = GameStatusTextBox.Text;
-            DialogResult = true;
-            Close();
+            try
+            {
+                // Actualizar los campos del objeto Game
+                Game.Name = GameNameTextBox.Text;
+                Game.Description = GameDescriptionTextBox.Text;
+                Game.Platform_ID = int.Parse(GamePlatformTextBox.Text);
+                Game.ReleaseDate = DateTime.Parse(GameReleaseDateTextBox.Text);
+                Game.Rating = int.Parse(GameRatingTextBox.Text);
+                Game.Img = GameImageTextBox.Text;
+                Game.Genre_ID = int.Parse(GameGenreTextBox.Text);
+                Game.Developer_ID = int.Parse(GameDeveloperTextBox.Text);
+
+                // Guardar los cambios y cerrar la ventana
+                DialogResult = true;
+                Close();
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier error que pueda ocurrir durante la actualización
+                MessageBox.Show("Error al actualizar el juego: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

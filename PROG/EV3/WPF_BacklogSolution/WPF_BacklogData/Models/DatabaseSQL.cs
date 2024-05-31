@@ -353,6 +353,39 @@ namespace WPF_BacklogData.Models
             }
         }
 
+        public void RemoveGame(string gameName)
+        {
+            try
+            {
+                int gameId;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT ID_Game FROM Game WHERE Name = @Name", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Name", gameName);
+                        gameId = (int)cmd.ExecuteScalar();
+                    }
+                }
+
+                // Ahora que tenemos el ID del juego, podemos eliminarlo
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("RemoveGameById", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID_Game", gameId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo quitar el juego: " + ex.Message);
+            }
+        }
+
         public void UpdateGame(Game game)
         {
             try

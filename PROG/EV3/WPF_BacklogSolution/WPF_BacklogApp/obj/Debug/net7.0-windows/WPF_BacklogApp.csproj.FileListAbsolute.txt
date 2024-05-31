@@ -73,3 +73,7 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_Back
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\AddRemoveGameWindow.g.cs
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\AddRemoveGameWindow.baml
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\AddRemoveGameWindow.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameDetailsWindow.baml
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\GameDetailsWindow.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\Window1.g.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogApp\obj\Debug\net7.0-windows\Window1.baml

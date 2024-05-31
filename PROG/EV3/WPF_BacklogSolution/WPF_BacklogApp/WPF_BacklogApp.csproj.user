@@ -13,7 +13,13 @@
     <Compile Update="GameCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="GameDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -24,10 +30,16 @@
     <Page Update="GameCell.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="GameDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="LoginWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

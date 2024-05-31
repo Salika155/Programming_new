@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WPF_BacklogData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af6371ea1cf053c85db3119279f74ae0ce159cab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d164df3270a3647ace6bdc84e01136a53f398f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("WPF_BacklogData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WPF_BacklogData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

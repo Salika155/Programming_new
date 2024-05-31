@@ -1,8 +1,6 @@
 ﻿
 using System.Windows;
 using System.Windows.Controls;
-using WPF_BacklogData.Models;
-
 
 
 
@@ -18,17 +16,6 @@ namespace WPF_BacklogApp
             InitializeComponent();
         }
 
-        public void GameCellClick(object sender, RoutedEventArgs e)
-        {
-            var game = DataContext as Game;
-            if (game != null)
-            {
-                GameDetailsWindow detailsWindow = new GameDetailsWindow(game);
-                if (detailsWindow.ShowDialog()== true)
-                {
-
-                }
-            }
-        }
+        
     }
 }

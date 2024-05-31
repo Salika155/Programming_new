@@ -95,18 +95,7 @@ namespace WPF_BacklogApp
 
         }
 
-        //private void GameDetailsWindow(object sender, MouseButtonEventArgs e)
-        //{
-        //    var selectedGame = ((FrameworkElement)sender).DataContext as Game;
-        //    if (selectedGame != null)
-        //    {
-        //        GameDetailsWindow detailsWindow = new GameDetailsWindow(selectedGame);
-        //        if (detailsWindow.ShowDialog() == true)
-        //        {
-        //            // Actualiza la lista de juegos o realiza las acciones necesarias después de guardar los detalles del juego.
-        //        }
-        //    }
-        //}
+
 
 
         //public MainWindow()

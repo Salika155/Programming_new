@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WPF_BacklogApp.GameDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Game Details" Height="636" Width="400">
+        Title="Game Details" Height="737" Width="400">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="10">
             <TextBlock Text="Game Name:" VerticalAlignment="Center"/>

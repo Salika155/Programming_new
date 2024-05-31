@@ -20,7 +20,19 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class GameDetailsWindow : Window
     {
-        public Game Game { get; set; }
+        private GameCell? gameCell;
+
+        public Game? Game { get; set; }
+
+        public GameDetailsWindow(GameCell gameCell)
+        {
+            this.gameCell = gameCell;
+        }
+
+        public GameDetailsWindow()
+        {
+
+        }
         public GameDetailsWindow(Game game)
         {
             InitializeComponent();
@@ -40,6 +52,8 @@ namespace WPF_BacklogApp
             //GameDurationTimeTextBox.Text = game.DurationTime.ToString("hh\\:mm\\:ss");
             //GameStatusTextBox.Text = game.Status;
         }
+
+       
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {

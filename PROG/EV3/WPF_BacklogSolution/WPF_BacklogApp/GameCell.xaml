@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_BacklogApp"
              mc:Ignorable="d" 
-             d:DesignHeight="160" d:DesignWidth="120">
+             d:DesignHeight="200" d:DesignWidth="120">
     <!--<Border BorderThickness="1" BorderBrush="Black" Margin="5">-->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -13,6 +13,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Rectangle Fill="White" Stroke="Black" StrokeThickness="2" RadiusX="5" RadiusY="5" Grid.RowSpan="3" Grid.ColumnSpan="3" ></Rectangle>
@@ -23,8 +24,13 @@
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Image Source="{Binding Img}" Width="100" Height="100" Margin="10,5,5,5"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="10"/>
         </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Detalles" Width="80" Height="25" Margin="5" Padding="5" FontSize="10" Click="DetailsGameClick"></Button>
+                <!--<Button Content="Añadir" Width="70" Margin="5" Padding="5" Click="AddGame_Click"/>-->
+        </StackPanel>
+        
     </Grid>
 </UserControl>

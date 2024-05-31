@@ -25,17 +25,22 @@ namespace WPF_BacklogApp
         {
             InitializeComponent();
             Game = game;
-
+            GameNameTextBox.Text = game.Name;
+            GameImageTextBox.Text = game.Img;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            Game.Name = GameNameTextBox.Text;
+            Game.Img = GameImageTextBox.Text;
+            DialogResult = true;
+            Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            DialogResult = false;
+            Close();
         }
     }
 }

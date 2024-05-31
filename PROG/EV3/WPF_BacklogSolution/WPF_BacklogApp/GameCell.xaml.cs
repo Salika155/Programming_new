@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using WPF_BacklogData.Models;
+
+
+
 
 namespace WPF_BacklogApp
 {
@@ -23,6 +16,19 @@ namespace WPF_BacklogApp
         public GameCell()
         {
             InitializeComponent();
+        }
+
+        public void GameCellClick(object sender, RoutedEventArgs e)
+        {
+            var game = DataContext as Game;
+            if (game != null)
+            {
+                GameDetailsWindow detailsWindow = new GameDetailsWindow(game);
+                if (detailsWindow.ShowDialog()== true)
+                {
+
+                }
+            }
         }
     }
 }

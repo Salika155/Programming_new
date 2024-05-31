@@ -16,14 +16,14 @@
             <TextBlock Text="Release Date:" VerticalAlignment="Center" Margin="0,10,0,0"/>
             <TextBox x:Name="GameReleaseDateTextBox" Margin="0,5,0,5"/>
 
-            <!--rating-->
+            <!--rating sera como el del ejemplo, esto es temporal-->
             <TextBlock Text="Rating:" VerticalAlignment="Center" Margin="0,10,0,0"/>
             <TextBox x:Name="GameRatingTextBox" Margin="0,5,0,5"/>
 
             <TextBlock Text="Game Image:" VerticalAlignment="Center" Margin="0,10,0,0"/>
             <TextBox x:Name="GameImageTextBox" Margin="0,5,0,5"/>
 
-            <!-- Add more fields for each property of the Game class -->
+            <!--desplegable-->
             <TextBlock Text="Genre:" VerticalAlignment="Center" Margin="0,10,0,0"/>
             <TextBox x:Name="GameGenreTextBox" Margin="0,5,0,5"/>
 
@@ -36,14 +36,6 @@
             <!--durationtime-->
             <TextBlock Text="Publisher:" VerticalAlignment="Center" Margin="0,10,0,0"/>
             <TextBox x:Name="GamePublisherTextBox" Margin="0,5,0,5"/>
-
-            
-
-            
-
-            
-
-            <!-- Add more fields as necessary -->
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
                 <Button Content="Save" Width="100" Margin="5" Click="Save_Click"/>

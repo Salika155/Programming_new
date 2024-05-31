@@ -26,7 +26,5 @@
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="10"/>
         </StackPanel>
-        
-        
     </Grid>
 </UserControl>

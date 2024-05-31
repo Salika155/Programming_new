@@ -41,16 +41,16 @@ namespace WPF_BacklogApp
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
-            AddRemoveGameWindow addRemoveGameWindow = new AddRemoveGameWindow();
-            addRemoveGameWindow.ShowDialog();
+            AddRemoveGameWindow addGameWindow = new AddRemoveGameWindow();
+            addGameWindow.ShowDialog();
 
         }
 
 
         private void RemoveGame_Click(object sender, RoutedEventArgs e)
         {
-            AddRemoveGameWindow addRemoveGameWindow = new AddRemoveGameWindow();
-            addRemoveGameWindow.ShowDialog();
+            AddRemoveGameWindow removeGameWindow = new AddRemoveGameWindow();
+            removeGameWindow.ShowDialog();
 
         }
 

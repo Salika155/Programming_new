@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyBacklogApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d164df3270a3647ace6bdc84e01136a53f398f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac8d53bb7d446b618127556c89723756c2c3c4a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyBacklogApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyBacklogApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

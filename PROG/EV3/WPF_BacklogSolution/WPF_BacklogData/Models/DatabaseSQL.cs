@@ -202,7 +202,7 @@ namespace WPF_BacklogData.Models
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Name", game.Name);
                         cmd.Parameters.AddWithValue("@Description", game.Description);
-                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
+                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
                         cmd.Parameters.AddWithValue("@Rating", game.Rating);
                         cmd.Parameters.AddWithValue("@img", game.Img);
                         cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
@@ -248,7 +248,7 @@ namespace WPF_BacklogData.Models
                                     ID = (int)reader["ID_Game"],
                                     Name = (string)reader["Name"],
                                     Description = (string)reader["Description"],
-                                    ReleaseYear = (DateTime)reader["ReleaseYear"],
+                                    ReleaseDate = (DateTime)reader["ReleaseYear"],
                                     Rating = (int)reader["Rating"],
                                     Img = (string)reader["img"],
                                     Genre_ID = (int)reader["Genre_ID"],
@@ -294,7 +294,7 @@ namespace WPF_BacklogData.Models
                                     ID = (int)reader["ID_Game"],
                                     Name = (string)reader["Name"],
                                     Description = (string)reader["Description"],
-                                    ReleaseYear = (DateTime)reader["ReleaseYear"],
+                                    ReleaseDate = (DateTime)reader["ReleaseYear"],
                                     Rating = (int)reader["Rating"],
                                     Img = (string)reader["img"],
                                     Genre_ID = (int)reader["Genre_ID"],
@@ -366,7 +366,7 @@ namespace WPF_BacklogData.Models
                         command.Parameters.AddWithValue("@ID_Game", game.ID);
                         command.Parameters.AddWithValue("@Name", game.Name);
                         command.Parameters.AddWithValue("@Description", game.Description);
-                        command.Parameters.AddWithValue("@ReleaseYear", game.ReleaseYear);
+                        command.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
                         command.Parameters.AddWithValue("@Rating", game.Rating);
                         command.Parameters.AddWithValue("@Img", game.Img);
                         command.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);

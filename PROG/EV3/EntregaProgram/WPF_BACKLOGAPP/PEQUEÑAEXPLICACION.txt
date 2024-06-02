@@ -1,0 +1,33 @@
+
+Pequeña explicación:
+
+Para loguearse utilizar
+	-login:a@hotmail.com
+	-pw:ab
+
+Hice un login sencillo, no pude implementar el SHA265 para hashearlo
+
+Tampoco pude hacer un registro de usuarios, los usuarios estan metidos a traves
+de la tabla de la bbdd de momento.
+
+Dentro hay una lista de juegos que estan insertados en la BBDD
+
+El insertar juego desde la app no me funciona, el eliminar si funciona 
+porque lo he probado y el actualizar parece que tambien aunque haya algunos
+registros que no se muestren.
+
+No se actualiza cuando se produce un cambio en la parte del stackpanel del main,
+es decir que no cambian en el apartado visible los juegos que se muestran pero
+en los datos de la bbdd si se ven alterados.
+
+Las imagenes se las pase por URL, lo pense un poco y ya que era una app en local
+y sencilla preferia no cargarle mayor peso guardando las imagenes en una carpeta,
+lo malo es si no hay internet que no se mostrarán.
+
+ADJUNTO EL SCRIPT DE LA BBDD
+
+La conexion utilizada para la realizacion del ejercicio fue la BD de Carlos de sus clases.
+
+
+
+

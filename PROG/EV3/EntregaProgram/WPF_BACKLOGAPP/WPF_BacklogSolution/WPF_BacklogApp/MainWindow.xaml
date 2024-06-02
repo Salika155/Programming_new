@@ -1,0 +1,79 @@
+﻿<Window x:Class="WPF_BacklogApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_BacklogApp"
+        mc:Ignorable="d"
+        Title="Backlog App" Height="450" Width="800">
+    <Grid>
+        <!--ejemplo de color-->
+        <!--<Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Gray"/>
+                <GradientStop Color="Blue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>-->
+        <!-- Definición de columnas del grid principal -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Panel izquierdo para la información del usuario -->
+        <StackPanel Grid.Column="0" Margin="10">
+            <!-- Borde alrededor de la imagen del usuario -->
+            <Border BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Padding="5" Background="DarkGray" Margin="10">
+                <Image Source="{Binding Image}" Width="100" Height="100" Margin="0,10,0,10"/>
+            </Border>
+
+            <!-- TextBox para el nombre del usuario -->
+            <TextBox Text="{Binding Name}" FontSize="16" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10" Width="150" Height="30"/>
+            <!-- TextBlock para el número total de juegos -->
+            <TextBlock Text="Total Games:" FontSize="14" HorizontalAlignment="Center"/>
+            <TextBox Text="{Binding GameCount, RelativeSource={RelativeSource AncestorType=Window}}" TextAlignment="Center" FontSize="18" HorizontalAlignment="Center" Margin="10" Width="60" Height="40" Padding="5" Background="White"/>
+
+            <!-- Botones para añadir o quitar juegos -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+                <Button Content="Añadir" Width="70" Margin="5" Padding="5" Click="AddGame_Click"/>
+                <Button Content="Quitar" Width="70" Margin="5" Padding="5" Click="RemoveGame_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Panel derecho para la lista de juegos y filtros -->
+        <Grid Grid.Column="1" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Panel para los filtros de estado -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,10">
+                <Button Content="Backlog" Width="100" Margin="5" Padding="5" Click="FiltGameByState"/>
+                <Button Content="Jugando" Width="100" Margin="5" Padding="5" Click="FiltGameByState"/>
+                <Button Content="Jugados" Width="100" Margin="5" Padding="5" Click="FiltGameByState"/>
+                <Button Content="WishList" Width="100" Margin="5" Padding="5" Click="FilterGameByState"/>
+                <!--<Button Content="Jugando" Width="100" Margin="5" Click="AddGame_Click"/>
+                <Button Content="Backlog" Width="100" Margin="5" Click="AddGame_Click"/>
+                <Button Content="Jugados" Width="100" Margin="5" Click="AddGame_Click"/>
+                <Button Content="WishList" Width="100" Margin="5" Click="AddGame_Click"/>-->
+            </StackPanel>
+
+            <!-- ScrollViewer para desplazarse horizontalmente -->
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                <ItemsControl x:Name="ItemsPool">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <local:GameCell HorizontalAlignment="Stretch"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

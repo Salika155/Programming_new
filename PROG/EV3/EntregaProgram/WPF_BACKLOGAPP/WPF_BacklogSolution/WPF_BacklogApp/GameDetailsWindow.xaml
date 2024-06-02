@@ -1,0 +1,46 @@
+﻿<Window x:Class="WPF_BacklogApp.GameDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Details" Height="737" Width="400">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+            <TextBlock Text="Game Name:" VerticalAlignment="Center"/>
+            <TextBox x:Name="GameNameTextBox" Margin="0,5,0,5"/>
+
+            <TextBlock Text="Game Description:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameDescriptionTextBox" Margin="0,5,0,5"/>
+
+            <TextBlock Text="Platform:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GamePlatformTextBox" Margin="0,5,0,5"/>
+            <!--releaseyear-->
+            <TextBlock Text="Release Date:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameReleaseDateTextBox" Margin="0,5,0,5"/>
+
+            <!--rating sera como el del ejemplo, esto es temporal-->
+            <TextBlock Text="Rating:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameRatingTextBox" Margin="0,5,0,5"/>
+
+            <TextBlock Text="Game Image:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameImageTextBox" Margin="0,5,0,5"/>
+
+            <!--desplegable-->
+            <TextBlock Text="Genre:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameGenreTextBox" Margin="0,5,0,5"/>
+
+            <TextBlock Text="Developer:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GameDeveloperTextBox" Margin="0,5,0,5"/>
+
+            <!--price-->
+            <!--purchasedata-->
+            <!--completitiondata-->
+            <!--durationtime-->
+            <TextBlock Text="Publisher:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+            <TextBox x:Name="GamePublisherTextBox" Margin="0,5,0,5"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button Content="Guardar" Width="100" Margin="5" Click="Save_Click"/>
+                <Button Content="Cancelar" Width="100" Margin="5" Click="Cancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

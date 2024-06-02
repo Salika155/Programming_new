@@ -1,0 +1,7 @@
+
+La aplicacion funciona tanto con una carpeta como con varias, solo que hay que poner su path en el programa.
+Intente pasarselo por json pero no fue posible
+
+Mantiene la estructura interna de las carpetas a la hora de copiarlas.
+
+Crea una carpeta que contiene todos los elementos

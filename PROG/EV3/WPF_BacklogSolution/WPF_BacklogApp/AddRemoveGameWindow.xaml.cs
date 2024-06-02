@@ -31,8 +31,8 @@ namespace WPF_BacklogApp
             {
                 Name = GameNameTextBox.Text,
                 Img = GameImageTextBox.Text,
-                Platform_ID = 1,
-                Status = "Backlog"
+                Platform_ID = GamePlatform.TabIndex,
+                Status = GameStatus.PorJugar
             };
 
             try
@@ -83,6 +83,11 @@ namespace WPF_BacklogApp
             {
                 MessageBox.Show("Necesitas introducir un nombre de juego válido.");
             }
+        }
+
+        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

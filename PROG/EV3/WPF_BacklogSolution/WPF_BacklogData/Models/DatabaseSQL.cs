@@ -217,16 +217,7 @@ namespace WPF_BacklogData.Models
                         cmd.Parameters.AddWithValue("@Status", game.Status.ToString());
                         cmd.ExecuteNonQuery();
                     }
-                    string queryPlatform = "INSERT INTO JUEGO_PLATAFORM (Juego_ID, Platform_ID) VALUES (@Juego_ID, @Platform_ID)";
-                    foreach (var platform in (Platform)game.Platform_ID)
-                    {
-                        using (SqlCommand cmdPlatform = new SqlCommand(queryPlatform, connection))
-                        {
-                            cmdPlatform.Parameters.AddWithValue("@Juego_ID", gameId);
-                            cmdPlatform.Parameters.AddWithValue("@Platform_ID", (int)platform);
-                            cmdPlatform.ExecuteNonQuery();
-                        }
-                    }
+                    
                 }
                 //return game.ID;
             }
@@ -377,15 +368,35 @@ namespace WPF_BacklogData.Models
                     using (SqlCommand cmd = new SqlCommand("SELECT ID_Game FROM Game WHERE Name = @Name", connection))
                     {
                         cmd.Parameters.AddWithValue("@Name", gameName);
-                        gameId = (int)cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null)
+                        {
+                            gameId = (int)result;
+                        }
+                        else
+                        {
+                            throw new Exception("No se encontró el juego con el nombre proporcionado.");
+                        }
                     }
                 }
 
-                // Ahora que tenemos el ID del juego, podemos eliminarlo
+                // Eliminar referencias en JUEGO_PLATAFORM
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("RemoveGameById", connection))
+                    using (SqlCommand cmd = new SqlCommand("DELETE FROM JUEGO_PLATAFORM WHERE Juego_ID = @ID_Game", connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ID_Game", gameId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                // Ahora que no hay referencias, podemos eliminar el juego
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("RemoveGame", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@ID_Game", gameId);
@@ -398,6 +409,7 @@ namespace WPF_BacklogData.Models
                 throw new Exception("No se pudo quitar el juego: " + ex.Message);
             }
         }
+
 
         public void UpdateGame(Game game)
         {

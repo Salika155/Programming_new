@@ -38,8 +38,8 @@
             <TextBox x:Name="GamePublisherTextBox" Margin="0,5,0,5"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-                <Button Content="Save" Width="100" Margin="5" Click="Save_Click"/>
-                <Button Content="Cancel" Width="100" Margin="5" Click="Cancel_Click"/>
+                <Button Content="Guardar" Width="100" Margin="5" Click="Save_Click"/>
+                <Button Content="Cancelar" Width="100" Margin="5" Click="Cancel_Click"/>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

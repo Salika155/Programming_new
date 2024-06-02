@@ -11,7 +11,7 @@ CREATE TABLE USERTABLE(
     User_ID INT IDENTITY PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Email VARCHAR(100) NOT NULL,
-    Password VARCHAR(100) NOT NULL
+    Password VARCHAR(100) NOT NULL,
 );
 
 CREATE TABLE GENRE (
@@ -36,7 +36,7 @@ CREATE TABLE GAME (
     ReleaseYear SMALLDATETIME,
     Rating INT,
     img VARCHAR(400),
-    Genre_ID INT NOT NULL,
+    Genre_ID INT,
     Developer_ID INT ,
     User_ID INT NOT NULL,
     Price DECIMAL(10, 2),
@@ -228,6 +228,8 @@ INSERT INTO GENRE (Name_genres)
 VALUES ('Rol');
 INSERT INTO GENRE (Name_genres) 
 VALUES ('Simulación');
+INSERT INTO GENRE (Name_genres)
+VALUES ('JRPG');
 
 -- Insertar desarrolladores
 INSERT INTO DEVELOPER (Name_Developer) 
@@ -242,6 +244,8 @@ INSERT INTO DEVELOPER (Name_Developer)
 VALUES ('CD Projekt Red');
 INSERT INTO DEVELOPER (Name_Developer) 
 VALUES ('Nintendo');
+INSERT INTO DEVELOPER (Name_Developer)
+VALUES ('Nihon Falcom');
 
 -- Insertar plataformas
 INSERT INTO PLATAFORMA (Name_Platform) 
@@ -273,6 +277,9 @@ VALUES ('The Legend of Zelda: Breath of the Wild', 'Juego de aventuras', '2017-0
 
 INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Platform_ID, Status)
 VALUES ('Cyberpunk 2077', 'Juego de rol y acción', '2020-12-10', 7, 'cyberpunk_2077.jpg', 5, 5, 2, 49.99, '2023-04-20', NULL, 2, 'Jugando');
+
+INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Platform_ID, Status)
+VALUES ('The Legend of Heroes Trails of Cold Steel IV', 'JRPG con Worldbuilding masivo', '2019-03-09', 9, 'https://assetsio.gnwcdn.com/co31wc.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp',  2, 6, 1, 59.99, '2022-12-01', '2023-03-10', 1, 'Jugando');
 
 -- Insertar juegos-plataformas
 --INSERT INTO JUEGO_PLATAFORM (Juego_ID, Platform_ID) 

@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Media;
 using WPF_BacklogData.Models;
 using WPF_BacklogData.Interfaces;
+using System.Collections.ObjectModel;
 
 
 namespace WPF_BacklogApp
@@ -16,12 +17,16 @@ namespace WPF_BacklogApp
     {
         public Game NewGame { get; set; }
         private readonly DatabaseSQL _database;
+        private ObservableCollection<Platform> _platforms;
 
 
         public AddRemoveGameWindow()
         {
             InitializeComponent();
             _database = DatabaseSQL.Instance;
+
+            //_platforms = new ObservableCollection<Platform>(_database.LoadPlatformsFromDatabase());
+            //GamePlatform.ItemsSource = _platforms;
         }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
@@ -47,18 +52,6 @@ namespace WPF_BacklogApp
                 DialogResult = false;
             }
             Close();
-
-            //string gameName = GameNameTextBox.Text;
-            //if (!string.IsNullOrEmpty(gameName))
-            //{
-            //    MessageBox.Show($"Juego '{gameName}' añadido con éxito.");
-            //    // Aquí puedes actualizar la lista de juegos en MainWindow
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Necesitas introducir un nombre de juego válido.");
-            //}
-
         }
 
         private void RemoveGame_Click(object sender, RoutedEventArgs e)
@@ -87,7 +80,25 @@ namespace WPF_BacklogApp
 
         private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
+            LoadPlatforms();
+        }
 
+        private void LoadPlatforms()
+        {
+            try
+            {
+                List<Platform> platforms = LoadPlatformsFromDatabase();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las plataformas: {ex.Message}");
+            }
+        }
+
+        private List<Platform> LoadPlatformsFromDatabase()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -128,19 +128,6 @@ namespace WPF_BacklogData.Models
             
         }
 
-        //public int GetUserCount()
-        //{
-        //    using (SqlConnection c = new SqlConnection(connectionString))
-        //    {
-        //        c.Open();
-        //        using SqlCommand com = new SqlCommand("GetUserCountProced", c);
-        //        {
-        //            c.CommandType = CommandType.StoredProcedure;
-        //            return (int)c.ExecuteScalar();
-        //        }
-        //    }
-        //}
-
         public void DeleteUser(int userId)
         {
             try
@@ -323,18 +310,6 @@ namespace WPF_BacklogData.Models
             return g;
         }
 
-        //public int GetGameCount()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        using SqlCommand command = new SqlCommand("GetGameCountProcedure", connection);
-        //        {
-        //            command.CommandType = CommandType.StoredProcedure;
-        //            return (int)command.ExecuteScalar();
-        //        }
-        //    }
-        //}
 
         public void RemoveGame(int gameId)
         {
@@ -501,151 +476,8 @@ namespace WPF_BacklogData.Models
             }
             return gameList;
         }
-
-        //private List<Game> LoadGamesFromDatabase()
-        //{
-        //    List<Game> gameList = new List<Game>();
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        using (SqlCommand cmd = new SqlCommand("SELECT * FROM Game", connection))
-        //        {
-        //            using (SqlDataReader reader = cmd.ExecuteReader())
-        //            {
-        //                while (reader.Read())
-        //                {
-        //                    gameList.Add(new Game
-        //                    {
-        //                        ID = (int)reader["ID_Game"],
-        //                        Name = (string)reader["Name"],
-        //                        Img = (string)reader["Img"],
-        //                        Platform_ID = (int)reader["Platform_ID"],
-        //                        Status = (GameStatus)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
-        //                    });
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return gameList;
-        //}
-
-
-        //public void RemoveGame(long id)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void RemoveGame(long id)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        using SqlCommand command = new SqlCommand("RemoveStudentProcedure", connection);
-        //        {
-        //            command.CommandType = CommandType.StoredProcedure;
-        //            command.Parameters.AddWithValue("@Id", id);
-        //            command.ExecuteNonQuery();
-        //        }
-        //    }
-        //}
-
-
-        //public void AuthenticateUser(string email, string password)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        string sql = "SELECT * FROM USERS"
-        //    }
-        //}
-
-
-        //public Game? GetGameAt(int index)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        using SqlCommand command = new SqlCommand("GetStudentByIdProcedure", connection);
-        //        {
-        //            command.CommandType = CommandType.StoredProcedure;
-        //            command.Parameters.AddWithValue("@ID_Game", index);
-        //            using (SqlDataReader reader = command.ExecuteReader())
-        //            {
-        //                if (reader.Read())
-        //                {
-        //                    return new Game
-        //                    {
-        //                        ID = (long)reader["Id_Game"],
-        //                        Name = (string)reader["Name"],
-        //                        //Age = (int)reader["Age"],
-        //                        Description = (string)reader["Description"]
-        //                    };
-        //                }
-        //                else
-        //                {
-        //                    return null;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-
-        //// Método para registrar un usuario
-        //public void RegisterUser(User user)
-        //{
-        //    using (var connection = new SQLiteConnection(_connectionString))
-        //    {
-        //        string sql = "INSERT INTO USER (Name, Email, Password) VALUES (@Name, @Email, @Password)";
-        //        connection.Execute(sql, user);
-        //    }
-        //}
-
-        //// Método para autenticar un usuario
-        //public User AuthenticateUser(string email, string password)
-        //{
-        //    using (var connection = new SQLiteConnection(_connectionString))
-        //    {
-        //        string sql = "SELECT * FROM USER WHERE Email = @Email AND Password = @Password";
-        //        return connection.QueryFirstOrDefault<User>(sql, new { Email = email, Password = password });
-        //    }
-        //}
-
-
-
-
-        //// Método para obtener todos los géneros
-        //public List<Genre> GetGenres()
-        //{
-        //    using (var connection = new SQLiteConnection(_connectionString))
-        //    {
-        //        string sql = "SELECT * FROM GENRE";
-        //        return connection.Query<Genre>(sql).ToList();
-        //    }
-        //}
-
-        //// Método para obtener todas las plataformas
-        //public List<Platform> GetPlatforms()
-        //{
-        //    using (var connection = new SQLiteConnection(_connectionString))
-        //    {
-        //        string sql = "SELECT * FROM PLATAFORMA";
-        //        return connection.Query<Platform>(sql).ToList();
-        //    }
-        //}
-
-        //// Método para obtener todos los desarrolladores
-        //public List<Developer> GetDevelopers()
-        //{
-        //    using (var connection = new SQLiteConnection(_connectionString))
-        //    {
-        //        string sql = "SELECT * FROM DEVELOPER";
-        //        return connection.Query<Developer>(sql).ToList();
-        //    }
-        //}
-
-        //QUIZAS REMOVERGAME SERIA CONVENIENTE HACERLO PASANDOLE EL NOMBRE DEL JUEGO
-
-
     }
 }
+
+//QUIZAS REMOVERGAME SERIA CONVENIENTE HACERLO PASANDOLE EL NOMBRE DEL JUEGO
 

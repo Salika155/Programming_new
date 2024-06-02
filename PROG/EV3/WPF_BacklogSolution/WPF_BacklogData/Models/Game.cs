@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace WPF_BacklogData.Models
 {
+    public enum GameStatus
+    {
+        PorJugar,
+        Jugando,
+        Completado,
+        Abandonado
+    }
     public class Game
     {
         
@@ -23,10 +31,10 @@ namespace WPF_BacklogData.Models
         public DateTime PurchaseDate { get; set; }
         public DateTime CompletionDate { get; set; }
         public DateTime DurationTime { get; set; }
-        public string? Status { get; set; }
+        public GameStatus Status { get; set; }
         
 
-        public Game(int gameId, string name, string description, DateTime releaseDate, int rating, string img, int genreId, int developerId, int userId, decimal price, DateTime purchaseDate, DateTime completionDate, string status, int Platform_id)
+        public Game(int gameId, string name, string description, DateTime releaseDate, int rating, string img, int genreId, int developerId, int userId, decimal price, DateTime purchaseDate, DateTime completionDate, GameStatus status, int Platform_id)
         {
             ID = gameId;
             Name = name;
@@ -42,6 +50,14 @@ namespace WPF_BacklogData.Models
             CompletionDate = completionDate;
             Status = status;
             Platform_ID = Platform_id;
+        }
+
+        public Game(int gameId, string name, string img, GameStatus status)
+        {
+            ID = gameId;
+            Name = name;
+            Img = img;
+            Status = status;
         }
 
         public Game()

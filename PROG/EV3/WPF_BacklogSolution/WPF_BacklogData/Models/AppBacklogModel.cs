@@ -43,7 +43,7 @@ namespace WPF_BacklogData.Models
         ////Calls the DBManager to add an user
         //public void AddUser(string name, int age, string description, string image, string gender, float valoration)
         //{
-        //    DBManager.AddUser(name, age, description, image, gender, valoration);
+        //    DatabaseSQL.AddUser(name, age, description, image, gender, valoration);
         //}
 
         ////Calls the DBManager to delete user, also removes the user from the user list

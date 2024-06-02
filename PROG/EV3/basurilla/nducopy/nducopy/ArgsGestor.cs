@@ -22,7 +22,7 @@ namespace nducopy
 
             foreach(var duplicate in duplicates)
             {
-                File.Copy(duplicate, Path.Combine(directorioDestino, Path.GetFileName(duplicate)));
+                File.Copy((string)duplicate, Path.Combine(directorioDestino, Path.GetFileName((string?)duplicate)));
                 Console.WriteLine(duplicate);
             }
             Console.WriteLine("Completado");

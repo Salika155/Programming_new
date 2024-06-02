@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\Examen3ra2022_23\\Examen3ra2022_23\\Examen3ra2022_23.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Examen3ra2022_23\\Examen3ra2022_23\\Examen3ra2022_23.csproj",
       "projectName": "Examen3ra2022_23",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\Examen3ra2022_23\\Examen3ra2022_23\\Examen3ra2022_23.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Examen3ra2022_23\\Examen3ra2022_23\\Examen3ra2022_23.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\Examen3ra2022_23\\Examen3ra2022_23\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Examen3ra2022_23\\Examen3ra2022_23\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

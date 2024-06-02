@@ -444,36 +444,7 @@ namespace WPF_BacklogData.Models
             }
         }
 
-
-        ////esto tengo que remirarlo de hacerlo
-        //public User? GetUser(string email, string password)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString))
-        //    {
-        //        connection.Open();
-        //        //string query = "SELECT * FROM USER WHERE Email = @Email AND Password = @Password";
-        //        using (SqlCommand cmd = new SqlCommand(query, connection))
-        //        {
-        //            cmd.Parameters.AddWithValue("@Email", email);
-        //            cmd.Parameters.AddWithValue("@Password", password);
-
-        //            SqlDataReader reader = cmd.ExecuteReader();
-        //            if (reader.Read())
-        //            {
-        //                return new User
-        //                {
-        //                    ID = reader.GetInt32(0),
-        //                    Name = reader.GetString(1),
-        //                    Email = reader.GetString(2),
-        //                    Password = reader.GetString(3)
-        //                };
-        //            }
-        //            return null;
-        //        }
-        //    }
-        //}
-
-
+       
 
         public int GetGametCount()
         {
@@ -495,7 +466,68 @@ namespace WPF_BacklogData.Models
             }
         }
 
-       
+        //no funciona
+        public List<Game> LoadGamesFromDatabase()
+        {
+            List<Game> gameList = new List<Game>();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Game", connection))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                gameList.Add(new Game
+                                {
+                                    ID = (int)reader["ID_Game"],
+                                    Name = (string)reader["Name"],
+                                    Img = (string)reader["Img"],
+                                    Platform_ID = (int)reader["Platform_ID"],
+                                    Status = (GameStatus)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al cargar los juegos desde la base de datos: " + ex.Message, ex);
+            }
+            return gameList;
+        }
+
+        //private List<Game> LoadGamesFromDatabase()
+        //{
+        //    List<Game> gameList = new List<Game>();
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        using (SqlCommand cmd = new SqlCommand("SELECT * FROM Game", connection))
+        //        {
+        //            using (SqlDataReader reader = cmd.ExecuteReader())
+        //            {
+        //                while (reader.Read())
+        //                {
+        //                    gameList.Add(new Game
+        //                    {
+        //                        ID = (int)reader["ID_Game"],
+        //                        Name = (string)reader["Name"],
+        //                        Img = (string)reader["Img"],
+        //                        Platform_ID = (int)reader["Platform_ID"],
+        //                        Status = (GameStatus)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
+        //                    });
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return gameList;
+        //}
+
 
         //public void RemoveGame(long id)
         //{

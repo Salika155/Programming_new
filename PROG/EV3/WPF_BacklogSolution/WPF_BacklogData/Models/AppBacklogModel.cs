@@ -17,7 +17,7 @@ namespace WPF_BacklogData.Models
         //public DatabaseRam Database => DatabaseRam.Instance;
         public DatabaseSQL databaseBBDD => DatabaseSQL.Instance;
         #endregion
-        private static AppBacklogModel _instance;
+        //private static AppBacklogModel _instance;
 
 
         public AppBacklogModel()

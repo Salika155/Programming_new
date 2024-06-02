@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WPF_BacklogData.Models;
+
 
 
 
@@ -13,11 +15,10 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class MainWindow : Window, ISGameListener
     {
-        public static User? AppUser { get; private set; }
         private ObservableCollection<Game> _games;
-        //    OnPropertyChanged(nameof(CurrentUser)
-        //);
-    
+        public static User? AppUser { get; set; }
+        public int GameCount { get; set; }
+
 
         public MainWindow(User user)
         {
@@ -25,33 +26,39 @@ namespace WPF_BacklogApp
             AppUser = user;
             DataContext = AppUser;
 
-            // Inicializar y cargar la lista de juegos
-            _games = new ObservableCollection<Game>
-            {
-                new Game() { ID = 0, Name = "The Legend Of Zelda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
-                new Game() { ID = 1, Name = "Trails Of Cold Steel", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
-                new Game() { ID = 2, Name = "YS IX Monstrum Nox", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
-                new Game() { ID = 3, Name = "Pokemon Esmeralda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
-                new Game() { ID = 4, Name = "Fire Emblem", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
-                new Game() { ID = 5, Name = "Dragon Quest VII", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" }
-            };
+            _games = new ObservableCollection<Game>(DatabaseSQL.Instance.LoadGamesFromDatabase());
 
+            //// Inicializar y cargar la lista de juegos
+            //_games = new ObservableCollection<Game>
+            //{
+            //    new Game() { ID = 0, Name = "The Legend Of Zelda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+            //    new Game() { ID = 1, Name = "Trails Of Cold Steel", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+            //    new Game() { ID = 2, Name = "YS IX Monstrum Nox", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+            //    new Game() { ID = 3, Name = "Pokemon Esmeralda", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+            //    new Game() { ID = 4, Name = "Fire Emblem", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" },
+            //    new Game() { ID = 5, Name = "Dragon Quest VII", Img = "https://img.asmedia.epimg.net/resizer/v2/KUYWWFPNXVHSNH5IOUFD3NC22E.jpg?auth=611cfe3f84263d1fc2a947a7c723b6336e0df65d2be43aeff13f024fe578bed8" }
+            //};
+
+            GameCount = _games.Count;
             ItemsPool.ItemsSource = _games;
         }
 
-        
+        public int GetGameCount()
+        {
+            try
+            {
+                return _games.Count;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("No se pudo obtener el número de juegos.", ex);
+            }
+        }
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
             AddRemoveGameWindow addGameWindow = new AddRemoveGameWindow();
             addGameWindow.ShowDialog();
-
-            //_games = new ObservableCollection<Game>
-            //{
-            //    new Game() { ID = }
-            //};
-            //ItemsPool.ItemsSource = _games;
-
         }
 
 
@@ -61,8 +68,6 @@ namespace WPF_BacklogApp
             removeGameWindow.ShowDialog();
 
         }
-
-        
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -101,19 +106,5 @@ namespace WPF_BacklogApp
 
         }
 
-
-
-
-        //public MainWindow()
-        //{
-        //    InitializeComponent();
-        //}
-
-        //public MainWindow(User user)
-        //{
-        //    User = user;
-        //}
-
-        //public User User { get; }
     }
 }

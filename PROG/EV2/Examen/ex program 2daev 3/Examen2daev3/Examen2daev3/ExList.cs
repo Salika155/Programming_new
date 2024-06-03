@@ -26,17 +26,17 @@ namespace Examen2daev3
         }
 
         // Javi: Devuelve un int!??!!?!?!?!?!?!?!?!?!??!!?
-        public int GetElementAt(int index)
+        public T GetElementAt(int index)
         {
             if (index < 0 || index >= _list.Length)
-                return default;
+                return default(T);
             // Javi: Sólo por esto, está todo el examen mal
-            for (int i = 0; i < _list.Length; i++)
-            {
-
-                return i;
-            }
-            return default;
+            //for (int i = 0; i < _list.Length; i++)
+            //{
+            //    return i;
+            //}
+            //return default;
+            return _list[index];
         }
 
         // Javi: No entiendo nada
@@ -120,7 +120,8 @@ namespace Examen2daev3
         public bool Contains(T element)
         {
             // Javi: Ya dije que esto no se podía hacer
-            return _list.Contains(element);
+            //return _list.Contains(element);
+            return IndexOf(element) != -1;
 
         }
 

@@ -8,5 +8,16 @@ namespace Oca
 {
     internal class Dice
     {
+        private Random random;
+
+        public Dice()
+        {
+            random = new Random();
+        }
+
+        public int RollDice()
+        {
+            return random.Next(1, 7);
+        }
     }
 }

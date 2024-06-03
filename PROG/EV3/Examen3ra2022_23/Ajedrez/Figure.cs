@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Ajedrez
 {
     abstract class Figure : IFigure
@@ -17,6 +18,7 @@ namespace Ajedrez
         {
             Color = color;
             Position = position;
+            HasMoved = false;
         }
 
         public Position GetPosition()

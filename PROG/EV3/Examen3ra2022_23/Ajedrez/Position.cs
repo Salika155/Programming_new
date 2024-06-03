@@ -17,6 +17,21 @@ namespace Ajedrez
             this.Y = y;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj is Position)
+            {
+                Position other = (Position)obj;
+                return X == other.X && Y == other.Y;
+            }
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return $"({X}), ({Y})";
+        }
+
 
     }
 }

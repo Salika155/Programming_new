@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examen3ra2022_23", "Examen3ra2022_23\Examen3ra2022_23.csproj", "{5EC7C5FA-6062-43D4-9B75-F2496D8F5F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Examen3ra2022_23", "Examen3ra2022_23\Examen3ra2022_23.csproj", "{5EC7C5FA-6062-43D4-9B75-F2496D8F5F53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{C297751C-AD2E-4FF8-BF5C-413731E5CF8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "Arrays\Arrays.csproj", "{C297751C-AD2E-4FF8-BF5C-413731E5CF8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ajedrez", "Ajedrez\Ajedrez.csproj", "{0951D8ED-6F85-4396-8E28-A1AAFF7A5566}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C297751C-AD2E-4FF8-BF5C-413731E5CF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C297751C-AD2E-4FF8-BF5C-413731E5CF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C297751C-AD2E-4FF8-BF5C-413731E5CF8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0951D8ED-6F85-4396-8E28-A1AAFF7A5566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0951D8ED-6F85-4396-8E28-A1AAFF7A5566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0951D8ED-6F85-4396-8E28-A1AAFF7A5566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0951D8ED-6F85-4396-8E28-A1AAFF7A5566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

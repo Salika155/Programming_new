@@ -25,6 +25,8 @@ namespace Arrays
             return max;
         }
 
+      
+
         public static double[] RemoveAllOccurrences(double[] array, double value)
         {
             if (array == null)
@@ -48,6 +50,33 @@ namespace Arrays
             }
             return arraynuevo;
         }
+
+        //public static double[] RemoveAllOccurrences(double[] array, double value)
+        //{
+        //    if (array == null)
+        //        return array;
+
+        //    int countOcurrences = 0;
+
+        //    foreach (var o in array)
+        //    {
+        //        if (o == value)
+        //        {
+        //            countOcurrences++;
+        //        }
+        //    }
+
+        //    double[] arraysinocurrencias = new double[array.Length - countOcurrences];
+        //    int index = 0;
+
+        //    foreach (var i in array)
+        //    {
+        //        if (i != value)
+        //            arraysinocurrencias[index] = i;
+        //        index++;
+        //    }
+        //    return arraysinocurrencias;
+        //}
 
         public static string[] SortStrings(string[] array)
         {
@@ -92,6 +121,26 @@ namespace Arrays
 
             return 0;  // Las cadenas son iguales
         }
+
+        public static int FindLongestStringIndex(string[] array)
+        {
+        if (array == null || array.Length == 0)
+            throw new ArgumentException("El array no puede ser nulo o vacío");
+
+        int maxLength = 0;
+        int maxIndex = -1;
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i].Length > maxLength)
+            {
+                maxLength = array[i].Length;
+                maxIndex = i;
+            }
+        }
+
+        return maxIndex;
+    }
 
     }
 }

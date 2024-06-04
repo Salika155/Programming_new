@@ -1,0 +1,14 @@
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\bin\Debug\net6.0\Ej1.exe
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\bin\Debug\net6.0\Ej1.deps.json
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\bin\Debug\net6.0\Ej1.runtimeconfig.json
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\bin\Debug\net6.0\Ej1.dll
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\bin\Debug\net6.0\Ej1.pdb
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.AssemblyInfoInputs.cache
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.AssemblyInfo.cs
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.csproj.CoreCompileInputs.cache
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.dll
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\refint\Ej1.dll
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.pdb
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\Ej1.genruntimeconfig.cache
+C:\Users\carcarcor\Desktop\V1\ExamenV1\Ej1\obj\Debug\net6.0\ref\Ej1.dll

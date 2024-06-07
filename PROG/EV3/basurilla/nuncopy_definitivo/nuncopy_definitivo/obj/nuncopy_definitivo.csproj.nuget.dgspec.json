@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj",
         "projectName": "nuncopy_definitivo",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\nuncopy_definitivo\\nuncopy_definitivo\\nuncopy_definitivo.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\nuncopy_definitivo\\nuncopy_definitivo\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\nuncopy_definitivo\\nuncopy_definitivo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

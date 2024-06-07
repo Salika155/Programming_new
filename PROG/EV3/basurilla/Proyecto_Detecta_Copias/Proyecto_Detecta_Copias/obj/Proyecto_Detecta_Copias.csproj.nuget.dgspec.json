@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj": {}
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj": {
+    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
+        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
         "projectName": "Proyecto_Detecta_Copias",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
+        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
         "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\obj\\",
+        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\basurilla\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

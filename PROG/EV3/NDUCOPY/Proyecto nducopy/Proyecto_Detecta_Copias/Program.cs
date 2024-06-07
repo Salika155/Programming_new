@@ -3,7 +3,6 @@ using System.Text.Json;
 
 namespace Proyecto_Detecta_Copias
 {
-
     //public class AppParams
     //{
     //    public string[]? Imput_folders  { get; set; }
@@ -128,6 +127,53 @@ namespace Proyecto_Detecta_Copias
             //    return;
             //}
 
+            //var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
+            ////var directorioOrigen2 = args[1];
+            ////var directorioOrigen3 = args[2];
+            //var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
+
+            //var filesOrigen1 = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
+            //var filesDestino = Directory.GetFiles(directorioDestino, "*.*", SearchOption.AllDirectories);
+            //var files = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
+
+            //if (!Directory.Exists(directorioDestino))
+            //{
+            //    try
+            //    {
+            //        // Intentar crear el directorio de destino
+            //        Directory.CreateDirectory(directorioDestino);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine($"Error al crear el directorio de destino: {ex.Message}");
+            //        return; // Salir del programa si ocurre un error al crear el directorio
+            //    }
+            //}
+
+            //foreach (var file in filesOrigen1)
+            //{
+            //    var nombreArchivo = Path.GetFileName(file);
+            //    var rutaDestino = Path.Combine(directorioDestino, nombreArchivo);
+            //    if (!filesOrigen1.Contains(rutaDestino))
+            //    {
+            //        try
+            //        {
+            //            // Intentar copiar el archivo al directorio de destino
+            //            File.Copy(file, rutaDestino);
+            //            Console.WriteLine($"Copiando {nombreArchivo} a {directorioDestino}");
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {ex.Message}");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"El archivo {nombreArchivo} ya existe en {directorioDestino}");
+            //    }
+            //}
+            //Console.WriteLine("Completado");
+
             var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
             //var directorioOrigen2 = args[1];
             //var directorioOrigen3 = args[2];
@@ -137,43 +183,8 @@ namespace Proyecto_Detecta_Copias
             var filesDestino = Directory.GetFiles(directorioDestino, "*.*", SearchOption.AllDirectories);
             var files = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
 
-            if (!Directory.Exists(directorioDestino))
-            {
-                try
-                {
-                    // Intentar crear el directorio de destino
-                    Directory.CreateDirectory(directorioDestino);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error al crear el directorio de destino: {ex.Message}");
-                    return; // Salir del programa si ocurre un error al crear el directorio
-                }
-            }
-
-            foreach (var file in filesOrigen1)
-            {
-                var nombreArchivo = Path.GetFileName(file);
-                var rutaDestino = Path.Combine(directorioDestino, nombreArchivo);
-                if (!filesOrigen1.Contains(rutaDestino))
-                {
-                    try
-                    {
-                        // Intentar copiar el archivo al directorio de destino
-                        File.Copy(file, rutaDestino);
-                        Console.WriteLine($"Copiando {nombreArchivo} a {directorioDestino}");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {ex.Message}");
-                    }
-                }
-                else
-                {
-                    Console.WriteLine($"El archivo {nombreArchivo} ya existe en {directorioDestino}");
-                }
-            }
-            Console.WriteLine("Completado");
+            FileApp app = new FileApp();
+            app.Execute(directorioOrigen1, directorioDestino);
 
         }
 

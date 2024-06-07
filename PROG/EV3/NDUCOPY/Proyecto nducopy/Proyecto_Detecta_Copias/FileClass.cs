@@ -20,7 +20,6 @@ namespace Proyecto_Detecta_Copias
         {
             _ruta = ruta;
             _name = System.IO.Path.GetFileName(ruta);
-            
         }
     }
 }

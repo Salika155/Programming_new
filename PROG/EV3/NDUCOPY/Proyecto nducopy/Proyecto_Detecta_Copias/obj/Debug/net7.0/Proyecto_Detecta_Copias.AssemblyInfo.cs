@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Proyecto_Detecta_Copias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+339e8ba8e6dba691836e00e9511ad7825dac5e2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a558672403a295a6b322c1eb0e2349059389993")]
 [assembly: System.Reflection.AssemblyProductAttribute("Proyecto_Detecta_Copias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Proyecto_Detecta_Copias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

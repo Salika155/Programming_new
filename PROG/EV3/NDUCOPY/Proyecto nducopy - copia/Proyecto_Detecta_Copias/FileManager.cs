@@ -10,7 +10,7 @@ namespace Proyecto_Detecta_Copias
 {
     public class FileManager : IDisposable
     {
-        private FileStream? _fileStream;
+        private FileStream _fileStream;
         private string? _filePath;
 
 

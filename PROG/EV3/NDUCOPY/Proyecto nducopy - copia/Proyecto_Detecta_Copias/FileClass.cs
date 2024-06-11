@@ -14,12 +14,17 @@ namespace Proyecto_Detecta_Copias
 
         public string Ruta { get => _ruta;}
         public string Name { get => _name;}
-        public bool IsDuplicate { get => _isDuplicate; }
+        public bool IsDuplicate 
+        { 
+            get => _isDuplicate;
+            set => _isDuplicate = value;
+        }
 
         public FileClass(string ruta)
         {
             _ruta = ruta;
-            _name = System.IO.Path.GetFileName(ruta);
+            _name = Path.GetFileName(ruta);
+            _isDuplicate = false;
         }
     }
 }

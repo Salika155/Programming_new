@@ -13,6 +13,11 @@ namespace Proyecto_Detecta_Copias
     {
         static void Main(string[] args)
         {
+
+            var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
+            //var directorioOrigen2 = args[1];
+            //var directorioOrigen3 = args[2];
+            var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
             #region codigoviejo
             //Stream s = File.OpenRead("Hola.txt");
             //byte[] buffer = new byte[2048];
@@ -174,10 +179,10 @@ namespace Proyecto_Detecta_Copias
             //}
             //Console.WriteLine("Completado");
 
-            var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
-            //var directorioOrigen2 = args[1];
-            //var directorioOrigen3 = args[2];
-            var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
+            //var directorioOrigen1 = @"C:\Users\carre\Desktop\carpeta_origen";
+            ////var directorioOrigen2 = args[1];
+            ////var directorioOrigen3 = args[2];
+            //var directorioDestino = @"C:\Users\carre\Desktop\carpeta_destino";
 
             var filesOrigen1 = Directory.GetFiles(directorioOrigen1, "*.*", SearchOption.AllDirectories);
             var filesDestino = Directory.GetFiles(directorioDestino, "*.*", SearchOption.AllDirectories);

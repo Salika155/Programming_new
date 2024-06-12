@@ -19,40 +19,79 @@ namespace Proyecto_Detecta_Copias
         {
         }
 
-        public bool CompareFiles(FileClass filePath1, FileClass filePath2)
+        //public bool CompareFiles(FileClass filePath1, FileClass filePath2)
+        //{
+        //    // Comparar contenidos byte por byte
+        //    using (FileStream fs1 = File.OpenRead(filePath1.Ruta))
+        //    using (FileStream fs2 = File.OpenRead(filePath2.Ruta))
+        //    {
+        //        int byte1, byte2;
+        //        do
+        //        {
+        //            //posible tener que pasarle aqui el readfilestobyte
+        //            byte1 = fs1.ReadByte();
+        //            byte2 = fs2.ReadByte();
+        //        }
+        //        while (byte1 == byte2 && byte1 != -1);
+
+        //        // Comparar tamaños primero para una comparación rápida
+        //        FileInfo fileInfo1 = new FileInfo(filePath1.Ruta);
+        //        FileInfo fileInfo2 = new FileInfo(filePath2.Ruta);
+
+        //        if (fileInfo1.Length != fileInfo2.Length)
+        //        {
+        //            return false;
+        //        }
+
+        //        bool areEquals = byte1 == byte2;
+
+        //        if (areEquals)
+        //        {
+        //            filePath1.IsDuplicate = true;
+        //            filePath2.IsDuplicate = true;
+        //        }
+
+        //        return areEquals;
+
+        //    }
+        //}
+
+        //pendiente de corregir, esto asi no funciona
+        public bool CompareFiles(FileClass file1, FileClass file2)
         {
-            // Comparar contenidos byte por byte
-            using (FileStream fs1 = File.OpenRead(filePath1.Ruta))
-            using (FileStream fs2 = File.OpenRead(filePath2.Ruta))
+            if (file1 == null || file2 == null)
             {
-                int byte1, byte2;
-                do
-                {
-                    byte1 = fs1.ReadByte();
-                    byte2 = fs2.ReadByte();
-                }
-                while (byte1 == byte2 && byte1 != -1);
-
-                // Comparar tamaños primero para una comparación rápida
-                FileInfo fileInfo1 = new FileInfo(filePath1.Ruta);
-                FileInfo fileInfo2 = new FileInfo(filePath2.Ruta);
-
-                if (fileInfo1.Length != fileInfo2.Length)
-                {
-                    return false;
-                }
-
-                bool areEquals = byte1 == byte2;
-
-                if (areEquals)
-                {
-                    filePath1.IsDuplicate = true;
-                    filePath2.IsDuplicate = true;
-                }
-
-                return areEquals;
-
+                throw new ArgumentNullException("FileClass instances cannot be null.");
             }
+
+            byte[] file1Bytes = _fileManager.ReadFilesToByte(file1.Ruta);
+            byte[] file2Bytes = _fileManager.ReadFilesToByte(file2.Ruta);
+
+            string hash1 = _fileManager.HashCalculator(file1Bytes);
+            string hash2 = _fileManager.HashCalculator(file2Bytes);
+
+            if (hash1 == hash2)
+            {
+                if (file1.Name == file2.Name)
+                {
+                    file1.IsDuplicate = true;
+                    file2.IsDuplicate = true;
+                    return true;
+                }
+            }
+            return false;
+            
+            
+
+            //for (int i = 0; i < file1Bytes.Length; i++)
+            //{
+            //    if (file1Bytes[i] != file2Bytes[i])
+            //    {
+            //        return false;
+            //    }
+            //}
+
+           
         }
     }
 }

@@ -10,16 +10,18 @@ namespace Proyecto_Detecta_Copias
     {
         private  DirectoryManager _directoryManager;
         private FileComparer _fileComparer;
+        private DuplicateFinder _duplicateFinder;
 
         public FileApp()
         {
             _directoryManager = new DirectoryManager();
-            _fileComparer = new FileComparer();
+            _fileComparer = new FileComparer(new FileManager());
+            _duplicateFinder = new DuplicateFinder();
         }
 
         public void Execute(string[] directoriosOrigen, string directorioDestino)
         {
-            if (!DirectoryExists(directorioDestino))
+            if (!CheckDirectoryExists(directorioDestino))
             {
                 return;
             }
@@ -34,14 +36,24 @@ namespace Proyecto_Detecta_Copias
                 var archivosDestino = LoadFiles(directorioDestino);
                 var archivosOrigen = LoadFiles(directorioOrigen);
 
+                //esto tengo que mirarlo
+                //var archivosDuplicados = _duplicateFinder.FindDuplicates(archivosOrigen.Select(f => f.Ruta).ToArray(), new FileManager());
+
                 ProcessFiles(directorioOrigen, directorioDestino, archivosOrigen, archivosDestino);
             }
         }
 
         private List<FileClass> LoadFiles(string directorio)
         {
-            //tengo que retocar esto porque no se que hace directamente
-            return _directoryManager.GetFiles(directorio).Select(file => new FileClass(file)).ToList();
+            var files = _directoryManager.GetFiles(directorio);
+            var fileClasses = new List<FileClass>();
+
+            foreach (var file in files)
+            {
+                fileClasses.Add(new FileClass(file));
+            }
+
+            return fileClasses;
         }
 
         private void ProcessFiles(string directorioOrigen, string directorioDestino, List<FileClass> archivosOrigen, List<FileClass> archivosDestino)
@@ -52,7 +64,15 @@ namespace Proyecto_Detecta_Copias
                 var pathRelativo = Path.GetRelativePath(directorioOrigen, archivoOrigen.Ruta);
                 var rutaDestino = Path.Combine(directorioDestino, pathRelativo);
 
-                bool existsInDestination = archivosDestino.Any(archivoDestino => _fileComparer.CompareFiles(archivoOrigen, archivoDestino));
+                bool existsInDestination = false;
+                foreach (var archivoDestino in archivosDestino)
+                {
+                    if (_fileComparer.CompareFiles(archivoOrigen, archivoDestino))
+                    {
+                        existsInDestination = true;
+                        break;
+                    }
+                }
 
                 if (!existsInDestination)
                 {
@@ -66,17 +86,47 @@ namespace Proyecto_Detecta_Copias
         }
 
         //el copy seguramente tenga que retocarlo ya que no puedo hacer uso del copy como funcion
+        //private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
+        //{
+        //    try
+        //    {
+        //        var rutaDirectorioDestino = Path.GetDirectoryName(rutaDestino);
+        //        if (!_directoryManager.DirectoryExists(rutaDirectorioDestino))
+        //        {
+        //            _directoryManager.CreateDirectory(rutaDirectorioDestino);
+        //        }
+
+        //        File.Copy(archivoOrigen.Ruta, rutaDestino);
+        //        Console.WriteLine($"Copiando {nombreArchivo} de {archivoOrigen.Ruta} a {rutaDestino}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {e.Message}");
+        //    }
+        //}
+
+
         private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
         {
             try
             {
-                var rutaDirectorioDestino = Path.GetDirectoryName(rutaDestino);
+                string? rutaDirectorioDestino = Path.GetDirectoryName(rutaDestino);
                 if (!_directoryManager.DirectoryExists(rutaDirectorioDestino))
                 {
                     _directoryManager.CreateDirectory(rutaDirectorioDestino);
                 }
 
-                File.Copy(archivoOrigen.Ruta, rutaDestino);
+                using (FileStream origenStream = new FileStream(archivoOrigen.Ruta, FileMode.Open, FileAccess.Read))
+                using (FileStream destinoStream = new FileStream(rutaDestino, FileMode.Create, FileAccess.Write))
+                {
+                    byte[] buffer = new byte[2048]; // Buffer de 2MB
+                    int bytesRead;
+                    while ((bytesRead = origenStream.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        destinoStream.Write(buffer, 0, bytesRead);
+                    }
+                }
+
                 Console.WriteLine($"Copiando {nombreArchivo} de {archivoOrigen.Ruta} a {rutaDestino}");
             }
             catch (Exception e)
@@ -95,7 +145,7 @@ namespace Proyecto_Detecta_Copias
             return true;
         }
 
-        private bool DirectoryExists(string directorioDestino)
+        private bool CheckDirectoryExists(string directorioDestino)
         {
             if (!_directoryManager.DirectoryExists(directorioDestino))
             {

@@ -36,7 +36,6 @@ namespace Proyecto_Detecta_Copias
 
             //DirectoryManager directoryHandler = new DirectoryManager();
             //FileComparer fileComparer = new FileComparer();
-
         }
 
 
@@ -53,14 +52,28 @@ namespace Proyecto_Detecta_Copias
         //"input foders" : ["f1", "f2", "f3"],
         //options" : ["keep directories", "keep files"],
         //"output_folder" : "out1"
-
-
     }
 }
 
+//Desglose de Pasos
+//Inicio y Validación de Argumentos:
+//Se inicia el programa y se validan los argumentos proporcionados.
+//Inicialización de Componentes:
+//Se inicializan FileApp, DirectoryManager, y FileComparer.
+//Verificación y Creación de Directorio de Destino:
+//CheckDirectoryExists verifica y crea el directorio de destino si es necesario.
+//Validación de Directorios de Origen:
+//ValidateSourceDirectory verifica la existencia de cada directorio de origen.
+//Carga y Comparación de Archivos:
+//LoadFiles carga los archivos de los directorios de origen y destino.
+//ProcessFiles compara cada archivo de origen con los archivos de destino.
+//Si no existe un archivo duplicado, CopyFile realiza una copia manual del archivo.
+//Comparación y Actualización de Duplicados:
+//CompareFiles compara los archivos byte por byte y establece IsDuplicate en true si son iguales.
 
-        
 
 
-    
+
+
+
 

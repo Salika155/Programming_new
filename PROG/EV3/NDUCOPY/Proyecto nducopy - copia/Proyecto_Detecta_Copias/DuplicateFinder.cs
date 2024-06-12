@@ -17,15 +17,15 @@ namespace Proyecto_Detecta_Copias
 
             foreach (var file in files)
             {
-                using(fileManager = new FileManager(file))
+                var fileBytes = fileManager.ReadFilesToByte(file);
+                var hash = fileManager.HashCalculator(fileBytes);
+                //var fileInfo = new FileInfo(file);
+                //var fileKey = $"{hash}-{fileInfo.Length}-{fileInfo.Name}";
+                if (!string.IsNullOrEmpty(hash) && !hashes.Add(hash))
                 {
-                    var fileBytes = fileManager.ReadFilesToByte(file);
-                    var hash = fileManager.HashCalculator(fileBytes);
-                    if (!string.IsNullOrEmpty(hash) && !hashes.Add(hash))
-                    {
-                        duplicates.Add(file);
-                    }
+                    duplicates.Add(file);
                 }
+
             }
             return duplicates.ToArray();
         }

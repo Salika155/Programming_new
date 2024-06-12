@@ -18,14 +18,46 @@ namespace Proyecto_Detecta_Copias
             return Directory.GetFiles(directoryPath, searchPattern, searchOption);
         }
 
+        //public bool DirectoryExists(string directoryPath)
+        //{
+        //    try
+        //    {
+        //        var directoryInfo = new DirectoryInfo(directoryPath);
+        //        return directoryInfo.Exists;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        return false;
+        //    }
+        //}
+
         public bool DirectoryExists(string directoryPath)
         {
-            return Directory.Exists(directoryPath);
+            try
+            {
+                var directoryInfo = new DirectoryInfo(directoryPath);
+                return directoryInfo.Exists;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public void CreateDirectory(string directoryPath)
         {
-            Directory.CreateDirectory(directoryPath);
+            var directoryInfo = new DirectoryInfo(directoryPath);
+            try
+            {
+                if (!directoryInfo.Exists)
+                {
+                    directoryInfo.Create();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new IOException($"Error al crear el directorio: {directoryPath}", ex);
+            }
         }
     }
 }

@@ -27,15 +27,44 @@ namespace Proyecto_Detecta_Copias
 
         public string? Length { get; set; }
 
+        //public byte[] ReadFilesToByte(string filepath)
+        //{
+        //    using (FileStream fileStream = File.OpenRead(filepath))
+        //    {
+        //        byte[] buffer = new byte[2048];
+        //        _fileStream.Read(buffer, 0, buffer.Length);
+        //        return buffer;
+        //    }
+
+        //}
+
+        //public byte[] ReadFilesToByte(string filepath)
+        //{
+        //    using (FileStream fileStream = File.Open(filepath, FileMode.Open, FileAccess.Read))
+        //    {
+        //        byte[] buffer = new byte[2048 * 2048];
+        //        int bytesRead = fileStream.Read(buffer, 0, buffer.Length);
+        //        if (bytesRead != buffer.Length)
+        //        {
+        //            throw new Exception("No se pudo leer todo el archivo.");
+        //        }
+        //        return buffer;
+        //    }
+        //}
+
         public byte[] ReadFilesToByte(string filepath)
         {
-            using (FileStream fileStream = File.OpenRead(filepath))
+            using (FileStream fileStream = new FileStream(filepath, FileMode.Open, FileAccess.Read))
+            using (MemoryStream ms = new MemoryStream())
             {
-                byte[] buffer = new byte[2048];
-                _fileStream.Read(buffer, 0, buffer.Length);
-                return buffer;
+                byte[] buffer = new byte[2048]; // Buffer de 2KB
+                int bytesRead;
+                while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    ms.Write(buffer, 0, bytesRead);
+                }
+                return ms.ToArray();
             }
-            
         }
 
         public string HashCalculator(byte[] buffer)

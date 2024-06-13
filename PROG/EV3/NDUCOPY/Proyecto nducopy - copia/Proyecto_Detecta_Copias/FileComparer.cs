@@ -15,9 +15,9 @@ namespace Proyecto_Detecta_Copias
             _fileManager = fileManager;
         }
 
-        public FileComparer()
-        {
-        }
+        //public FileComparer()
+        //{
+        //}
 
         //public bool CompareFiles(FileClass filePath1, FileClass filePath2)
         //{
@@ -64,20 +64,25 @@ namespace Proyecto_Detecta_Copias
                 throw new ArgumentNullException("FileClass instances cannot be null.");
             }
 
+            FileInfo fileInfo1 = new FileInfo(file1.Ruta);
+            FileInfo fileInfo2 = new FileInfo(file2.Ruta);
+
+            if (fileInfo1.Length != fileInfo2.Length)
+            {
+                return false;
+            }
+
             byte[] file1Bytes = _fileManager.ReadFilesToByte(file1.Ruta);
             byte[] file2Bytes = _fileManager.ReadFilesToByte(file2.Ruta);
 
             string hash1 = _fileManager.HashCalculator(file1Bytes);
             string hash2 = _fileManager.HashCalculator(file2Bytes);
 
-            if (hash1 == hash2)
+            if (hash1 == hash2 && file1.Name == file2.Name)
             {
-                if (file1.Name == file2.Name)
-                {
-                    file1.IsDuplicate = true;
-                    file2.IsDuplicate = true;
-                    return true;
-                }
+                file1.IsDuplicate = true;
+                file2.IsDuplicate = true;
+                return true;
             }
             return false;
             

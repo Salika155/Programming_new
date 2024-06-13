@@ -26,6 +26,9 @@ namespace Proyecto_Detecta_Copias
                 return;
             }
 
+            var archivosDestino = LoadFiles(directorioDestino);
+            var archivosFiltrados = new List<FileClass>();
+
             foreach (var directorioOrigen in directoriosOrigen)
             {
                 if (!ValidateSourceDirectory(directorioOrigen))
@@ -33,13 +36,19 @@ namespace Proyecto_Detecta_Copias
                     continue;
                 }
 
-                var archivosDestino = LoadFiles(directorioDestino);
                 var archivosOrigen = LoadFiles(directorioOrigen);
+                var archivosDuplicados = _duplicateFinder.FindDuplicates(archivosOrigen, new FileManager());
 
-                //esto tengo que mirarlo
-                //var archivosDuplicados = _duplicateFinder.FindDuplicates(archivosOrigen.Select(f => f.Ruta).ToArray(), new FileManager());
+                foreach (var archivo in archivosOrigen)
+                {
+                    if (!archivo.IsDuplicate)
+                    {
+                        archivosFiltrados.Add(archivo);
+                    }
+                }
 
-                ProcessFiles(directorioOrigen, directorioDestino, archivosOrigen, archivosDestino);
+                ProcessFiles(directorioOrigen, directorioDestino, archivosFiltrados, archivosDestino);
+                archivosFiltrados.Clear();
             }
         }
 
@@ -84,6 +93,34 @@ namespace Proyecto_Detecta_Copias
                 }
             }
         }
+        //private void ProcessFiles(string directorioOrigen, string directorioDestino, List<FileClass> archivosOrigen, List<FileClass> archivosDestino)
+        //{
+        //    foreach (var archivoOrigen in archivosOrigen)
+        //    {
+        //        var nombreArchivo = Path.GetFileName(archivoOrigen.Name);
+        //        var pathRelativo = Path.GetRelativePath(directorioOrigen, archivoOrigen.Ruta);
+        //        var rutaDestino = Path.Combine(directorioDestino, pathRelativo);
+
+        //        bool existsInDestination = false;
+        //        foreach (var archivoDestino in archivosDestino)
+        //        {
+        //            if (_fileComparer.CompareFiles(archivoOrigen, archivoDestino))
+        //            {
+        //                existsInDestination = true;
+        //                break;
+        //            }
+        //        }
+
+        //        if (!existsInDestination)
+        //        {
+        //            CopyFile(archivoOrigen, rutaDestino, nombreArchivo);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"El archivo {nombreArchivo} ya existe en {directorioDestino}");
+        //        }
+        //    }
+        //}
 
         //el copy seguramente tenga que retocarlo ya que no puedo hacer uso del copy como funcion
         //private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
@@ -105,6 +142,35 @@ namespace Proyecto_Detecta_Copias
         //    }
         //}
 
+
+        //private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
+        //{
+        //    try
+        //    {
+        //        string? rutaDirectorioDestino = Path.GetDirectoryName(rutaDestino);
+        //        if (!_directoryManager.DirectoryExists(rutaDirectorioDestino))
+        //        {
+        //            _directoryManager.CreateDirectory(rutaDirectorioDestino);
+        //        }
+
+        //        using (FileStream origenStream = new FileStream(archivoOrigen.Ruta, FileMode.Open, FileAccess.Read))
+        //        using (FileStream destinoStream = new FileStream(rutaDestino, FileMode.Create, FileAccess.Write))
+        //        {
+        //            byte[] buffer = new byte[2048]; // Buffer de 2MB
+        //            int bytesRead;
+        //            while ((bytesRead = origenStream.Read(buffer, 0, buffer.Length)) > 0)
+        //            {
+        //                destinoStream.Write(buffer, 0, bytesRead);
+        //            }
+        //        }
+
+        //        Console.WriteLine($"Copiando {nombreArchivo} de {archivoOrigen.Ruta} a {rutaDestino}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {e.Message}");
+        //    }
+        //}
 
         private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
         {

@@ -199,7 +199,8 @@ namespace Proyecto_Detecta_Copias
                 using (FileStream origenStream = new FileStream(archivoOrigen.Ruta, FileMode.Open, FileAccess.Read))
                 using (FileStream destinoStream = new FileStream(rutaDestino, FileMode.Create, FileAccess.Write))
                 {
-                    byte[] buffer = new byte[2048]; // Buffer de 2MB
+                    //solo hacer uso del read no necesario el fillbuffer
+                    byte[] buffer = new byte[2048];
                     int bytesRead;
                     while ((bytesRead = origenStream.Read(buffer, 0, buffer.Length)) > 0)
                     {

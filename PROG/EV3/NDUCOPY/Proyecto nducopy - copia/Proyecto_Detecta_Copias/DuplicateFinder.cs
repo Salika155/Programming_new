@@ -27,6 +27,7 @@ namespace Proyecto_Detecta_Copias
             // Comparar archivos con el mismo hash y tamaño
             for (int i = 0; i < fileHashes.Count; i++)
             {
+                bool isOriginal = true;
                 for (int j = i + 1; j < fileHashes.Count; j++)
                 {
                     //// Agregar depuración para verificar los índices y tamaños
@@ -35,19 +36,21 @@ namespace Proyecto_Detecta_Copias
 
                     if (fileHashes[i].hash == fileHashes[j].hash && fileHashes[i].file.Size == fileHashes[j].file.Size)
                     {
-                        fileHashes[i].file.IsDuplicate = true;
                         fileHashes[j].file.IsDuplicate = true;
+                        duplicates.Add(fileHashes[j].file);
+                        isOriginal = false;
 
-                        if (!IsInList(duplicates, fileHashes[i].file))
-                        {
-                            duplicates.Add(fileHashes[i].file);
-                        }
 
                         if (!IsInList(duplicates, fileHashes[j].file))
                         {
                             duplicates.Add(fileHashes[j].file);
                         }
                     }
+                }
+                if (!isOriginal)
+                {
+                    fileHashes[i].file.IsDuplicate = false; // Ensure the original is not marked as duplicate
+                    duplicates.Add(fileHashes[i].file);
                 }
             }
 

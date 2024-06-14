@@ -49,6 +49,18 @@ namespace Proyecto_Detecta_Copias
 
                 ProcessFiles(directorioOrigen, directorioDestino, archivosFiltrados, archivosDestino);
                 archivosFiltrados.Clear();
+
+                var originalDuplicados = new List<FileClass>();
+                foreach (var archivo in archivosDuplicados)
+                {
+                    if (!archivo.IsDuplicate && !originalDuplicados.Contains(archivo))
+                    {
+                        originalDuplicados.Add(archivo);
+                    }
+                }
+
+                ProcessFiles(directorioOrigen, directorioDestino, archivosFiltrados, archivosDestino);
+                archivosFiltrados.Clear();
             }
         }
 
@@ -93,6 +105,7 @@ namespace Proyecto_Detecta_Copias
                 }
             }
         }
+        #region oldcode
         //private void ProcessFiles(string directorioOrigen, string directorioDestino, List<FileClass> archivosOrigen, List<FileClass> archivosDestino)
         //{
         //    foreach (var archivoOrigen in archivosOrigen)
@@ -171,6 +184,7 @@ namespace Proyecto_Detecta_Copias
         //        Console.WriteLine($"Error al copiar el archivo {nombreArchivo}: {e.Message}");
         //    }
         //}
+        #endregion
 
         private void CopyFile(FileClass archivoOrigen, string rutaDestino, string nombreArchivo)
         {

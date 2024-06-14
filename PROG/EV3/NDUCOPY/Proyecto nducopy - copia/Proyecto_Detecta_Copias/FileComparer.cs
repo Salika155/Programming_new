@@ -80,23 +80,11 @@ namespace Proyecto_Detecta_Copias
 
             if (hash1 == hash2 && file1.Name == file2.Name)
             {
-                file1.IsDuplicate = true;
+                file1.IsDuplicate = false;
                 file2.IsDuplicate = true;
                 return true;
             }
             return false;
-            
-            
-
-            //for (int i = 0; i < file1Bytes.Length; i++)
-            //{
-            //    if (file1Bytes[i] != file2Bytes[i])
-            //    {
-            //        return false;
-            //    }
-            //}
-
-           
         }
     }
 }

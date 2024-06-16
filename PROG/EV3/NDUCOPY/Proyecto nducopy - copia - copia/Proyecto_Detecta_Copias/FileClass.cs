@@ -31,7 +31,7 @@ namespace Proyecto_Detecta_Copias
             _ruta = ruta;
             _name = Path.GetFileName(ruta);
             _isDuplicate = false;
-            _size = new FileInfo(ruta).Length; // Correctly calculate the file size here
+            _size = new FileInfo(ruta).Length; 
         }
     }
 }

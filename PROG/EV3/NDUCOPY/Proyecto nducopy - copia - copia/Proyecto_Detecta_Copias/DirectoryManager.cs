@@ -18,19 +18,6 @@ namespace Proyecto_Detecta_Copias
             return Directory.GetFiles(directoryPath, searchPattern, searchOption);
         }
 
-        //public bool DirectoryExists(string directoryPath)
-        //{
-        //    try
-        //    {
-        //        var directoryInfo = new DirectoryInfo(directoryPath);
-        //        return directoryInfo.Exists;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return false;
-        //    }
-        //}
-
         public bool DirectoryExists(string directoryPath)
         {
             try
@@ -46,17 +33,9 @@ namespace Proyecto_Detecta_Copias
 
         public void CreateDirectory(string directoryPath)
         {
-            var directoryInfo = new DirectoryInfo(directoryPath);
-            try
+            if (!Directory.Exists(directoryPath))
             {
-                if (!directoryInfo.Exists)
-                {
-                    directoryInfo.Create();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new IOException($"Error al crear el directorio: {directoryPath}", ex);
+                Directory.CreateDirectory(directoryPath);
             }
         }
     }

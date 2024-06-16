@@ -34,11 +34,7 @@ namespace Proyecto_Detecta_Copias
 
             Console.WriteLine("Completado");
 
-            //DirectoryManager directoryHandler = new DirectoryManager();
-            //FileComparer fileComparer = new FileComparer();
         }
-
-
 
         //foreach(string route in args)
         //{ Console.WriteLine(route); }

@@ -13,7 +13,6 @@ namespace Proyecto_Detecta_Copias
         private FileStream _fileStream;
         private string? _filePath;
 
-
         public FileManager()
         {
         }
@@ -22,35 +21,13 @@ namespace Proyecto_Detecta_Copias
         {
             _fileStream = File.OpenRead(filepath);
             _filePath = filepath;
-            
         }
 
-        public string? Length { get; set; }
-
-        //public byte[] ReadFilesToByte(string filepath)
-        //{
-        //    using (FileStream fileStream = File.OpenRead(filepath))
-        //    {
-        //        byte[] buffer = new byte[2048];
-        //        _fileStream.Read(buffer, 0, buffer.Length);
-        //        return buffer;
-        //    }
-
-        //}
-
-        //public byte[] ReadFilesToByte(string filepath)
-        //{
-        //    using (FileStream fileStream = File.Open(filepath, FileMode.Open, FileAccess.Read))
-        //    {
-        //        byte[] buffer = new byte[2048 * 2048];
-        //        int bytesRead = fileStream.Read(buffer, 0, buffer.Length);
-        //        if (bytesRead != buffer.Length)
-        //        {
-        //            throw new Exception("No se pudo leer todo el archivo.");
-        //        }
-        //        return buffer;
-        //    }
-        //}
+        public string? Length
+        {
+            get => _filePath;
+            set => _filePath = value;
+        }
 
         public byte[] ReadFilesToByte(string filepath)
         {
@@ -76,16 +53,16 @@ namespace Proyecto_Detecta_Copias
             }
         }
 
-
         public void Dispose()
         {
             _fileStream.Dispose();
         }
 
-        //internal void CopyFile(string file, string destinationPath)
-        //{
-        //    File.Copy(file, destinationPath, true);
-        //}
+        public string ComputeHash(string filePath)
+        {
+            var buffer = ReadFilesToByte(filePath);
+            return HashCalculator(buffer);
+        }
     }
-    
 }
+

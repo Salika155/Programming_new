@@ -220,8 +220,15 @@ namespace Proyecto_Detecta_Copias
         {
             if (!_directoryManager.DirectoryExists(directorioOrigen))
             {
-                Console.WriteLine($"El directorio de origen no existe: {directorioOrigen}");
-                return false;
+                try
+                {
+                    _directoryManager.CreateDirectory(directorioOrigen);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al crear el directorio: {ex.Message}");
+                    return false;
+                }
             }
             return true;
         }

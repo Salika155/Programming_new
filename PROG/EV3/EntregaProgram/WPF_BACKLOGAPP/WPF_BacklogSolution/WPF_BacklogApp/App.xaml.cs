@@ -11,9 +11,7 @@ namespace WPF_BacklogApp
     /// </summary>
     public partial class App : Application
     {
-        
-
-        
+          
     }
 
 }

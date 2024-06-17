@@ -23,3 +23,16 @@ C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\refint\WPF_BacklogData.dll
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.pdb
 C:\Users\carcarcor\Documents\GitHub\Programming_new\PROG\EV3\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\ref\WPF_BacklogData.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\bin\Debug\net7.0\WPF_BacklogData.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\bin\Debug\net7.0\WPF_BacklogData.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\bin\Debug\net7.0\WPF_BacklogData.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.csproj.AssemblyReference.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\refint\WPF_BacklogData.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\WPF_BacklogData.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\EntregaProgram\WPF_BACKLOGAPP\WPF_BacklogSolution\WPF_BacklogData\obj\Debug\net7.0\ref\WPF_BacklogData.dll

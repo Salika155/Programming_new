@@ -16,25 +16,24 @@ namespace WPF_BacklogData.Models
     }
     public class Game
     {
-        
+
         public int ID { get; set; }
-        public string? Name { get; set; }
-        public int Platform_ID { get; set; }
-        public string? Description { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         public DateTime ReleaseDate { get; set; }
         public int Rating { get; set; }
-        public string? Img { get; set; }
+        public string Img { get; set; }
         public int Genre_ID { get; set; }
         public int Developer_ID { get; set; }
         public int User_ID { get; set; }
         public decimal Price { get; set; }
         public DateTime PurchaseDate { get; set; }
-        public DateTime CompletionDate { get; set; }
-        public DateTime DurationTime { get; set; }
-        public GameStatus Status { get; set; }
-        
+        public DateTime? CompletionDate { get; set; }
+        public int Platform_ID { get; set; }
+        public string Status { get; set; }
 
-        public Game(int gameId, string name, string description, DateTime releaseDate, int rating, string img, int genreId, int developerId, int userId, decimal price, DateTime purchaseDate, DateTime completionDate, GameStatus status, int Platform_id)
+
+        public Game(int gameId, string name, string description, DateTime releaseDate, int rating, string img, int genreId, int developerId, int userId, decimal price, DateTime purchaseDate, DateTime completionDate, string status, int Platform_id)
         {
             ID = gameId;
             Name = name;
@@ -52,7 +51,7 @@ namespace WPF_BacklogData.Models
             Platform_ID = Platform_id;
         }
 
-        public Game(int gameId, string name, string img, GameStatus status)
+        public Game(int gameId, string name, string img, string status)
         {
             ID = gameId;
             Name = name;

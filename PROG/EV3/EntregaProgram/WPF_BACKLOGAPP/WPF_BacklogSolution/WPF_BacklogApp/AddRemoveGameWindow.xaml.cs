@@ -6,6 +6,7 @@ using System.Windows.Media;
 using WPF_BacklogData.Models;
 using WPF_BacklogData.Interfaces;
 using System.Collections.ObjectModel;
+using System.Windows.Controls.Primitives;
 
 
 namespace WPF_BacklogApp
@@ -37,7 +38,7 @@ namespace WPF_BacklogApp
                 Name = GameNameTextBox.Text,
                 Img = GameImageTextBox.Text,
                 Platform_ID = GamePlatform.TabIndex,
-                Status = GameStatus.PorJugar
+                
             };
 
             try

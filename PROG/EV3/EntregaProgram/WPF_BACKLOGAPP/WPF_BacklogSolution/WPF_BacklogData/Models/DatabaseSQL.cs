@@ -182,25 +182,25 @@ namespace WPF_BacklogData.Models
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string queryGame = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Platform_ID, Status) " +
-                                "VALUES (@Name, @Description, @ReleaseYear, @Rating, @Img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Platform_ID, @Status); " +
-                                "SELECT SCOPE_IDENTITY();"; // Obtiene el ID del juego insertado
-                    int gameId;
-                    //using (SqlCommand cmd = new SqlCommand("AddGame", connection))
-                    using (SqlCommand cmd = new SqlCommand(queryGame, connection))
+                    //string queryGame = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Platform_ID, Status) " +
+                    //            "VALUES (@Name, @Description, @ReleaseYear, @Rating, @Img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Platform_ID, @Status); " +
+                    //            "SELECT SCOPE_IDENTITY();"; // Obtiene el ID del juego insertado
+                    //int gameId;
+                    using (SqlCommand cmd = new SqlCommand("AddGame", connection))
+                    //using (SqlCommand cmd = new SqlCommand(queryGame, connection))
                     {
-                        //cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Name", game.Name);
-                        //cmd.Parameters.AddWithValue("@Description", game.Description);
-                        //cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
-                        //cmd.Parameters.AddWithValue("@Rating", game.Rating);
+                        cmd.Parameters.AddWithValue("@Description", game.Description);
+                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
+                        cmd.Parameters.AddWithValue("@Rating", game.Rating);
                         cmd.Parameters.AddWithValue("@img", game.Img);
-                        //cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
-                        //cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
+                        cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
+                        cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
                         cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
-                        //cmd.Parameters.AddWithValue("@Price", game.Price);
-                        //cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
-                        //cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
+                        cmd.Parameters.AddWithValue("@Price", game.Price);
+                        cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
+                        cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
                         cmd.Parameters.AddWithValue("@Status", game.Status.ToString());
                         cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
                         cmd.ExecuteNonQuery();
@@ -249,7 +249,7 @@ namespace WPF_BacklogData.Models
                                     Price = (decimal)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    Status = (GameStatus)reader["Status"]
+                                    Status = (string)reader["Status"]
                                 };
                                 games.Add(game);
                             }
@@ -295,7 +295,7 @@ namespace WPF_BacklogData.Models
                                     Price = (decimal)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    Status = (GameStatus)reader["Status"]
+                                    Status = (string)reader["Status"]
                                 };
                                 g.Add(game);
                             }
@@ -463,7 +463,7 @@ namespace WPF_BacklogData.Models
                                     Name = (string)reader["Name"],
                                     Img = (string)reader["Img"],
                                     Platform_ID = (int)reader["Platform_ID"],
-                                    Status = (GameStatus)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
+                                    Status = (string)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
                                 });
                             }
                         }

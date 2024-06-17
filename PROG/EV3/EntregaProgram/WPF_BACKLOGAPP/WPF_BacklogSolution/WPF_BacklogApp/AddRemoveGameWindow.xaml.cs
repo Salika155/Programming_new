@@ -18,7 +18,7 @@ namespace WPF_BacklogApp
     {
         public Game NewGame { get; set; }
         private readonly DatabaseSQL _database;
-        private ObservableCollection<Platform> _platforms;
+        //private ObservableCollection<Platform> _platforms;
 
 
         public AddRemoveGameWindow()
@@ -37,7 +37,7 @@ namespace WPF_BacklogApp
             {
                 Name = GameNameTextBox.Text,
                 Img = GameImageTextBox.Text,
-                Platform_ID = GamePlatform.TabIndex,
+                //Platform_ID = GamePlatform.TabIndex,
                 
             };
 
@@ -47,11 +47,13 @@ namespace WPF_BacklogApp
                 MessageBox.Show($"Juego '{NewGame.Name}' añadido con éxito.");
                 DialogResult = true;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al añadir el juego: {ex.Message}");
-                DialogResult = false;
-            }
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error al añadir el juego: {ex.Message}");
+            //    DialogResult = false;
+            //}
+            finally
+            { }
             Close();
         }
 

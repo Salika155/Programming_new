@@ -177,8 +177,9 @@ namespace WPF_BacklogData.Models
 
         public void AddGame(Game game)
         {
-            try
-            {
+
+            //try
+            //{
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -192,27 +193,27 @@ namespace WPF_BacklogData.Models
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Name", game.Name);
                         cmd.Parameters.AddWithValue("@Description", game.Description);
-                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
+                        //cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
                         cmd.Parameters.AddWithValue("@Rating", game.Rating);
                         cmd.Parameters.AddWithValue("@img", game.Img);
                         cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
                         cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
                         cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
                         cmd.Parameters.AddWithValue("@Price", game.Price);
-                        cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
-                        cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                        //cmd.Parameters.AddWithValue("@Status", game.Status.ToString());
+                        //cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
+                        //cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
+                        cmd.Parameters.AddWithValue("@Status", game.GameStatus);
                         cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
                         cmd.ExecuteNonQuery();
                     }
                     
                 }
                 //return game.ID;
-            }
-            catch
-            {
-                throw new Exception("No se pudo añadir el juego");
-            }
+            //}
+            //catch
+            //{
+            //    throw new Exception("No se pudo añadir el juego");
+            //}
         }
 
         //esto tiene que estar mal. o tiene que añadir los juegos a la lista?
@@ -246,10 +247,10 @@ namespace WPF_BacklogData.Models
                                     Genre_ID = (int)reader["Genre_ID"],
                                     Developer_ID = (int)reader["Developer_ID"],
                                     User_ID = (int)reader["User_ID"],
-                                    Price = (decimal)reader["Price"],
+                                    Price = (double)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    //Status = (string)reader["Status"]
+                                    GameStatus = (string)reader["Status"]
                                 };
                                 games.Add(game);
                             }
@@ -292,10 +293,10 @@ namespace WPF_BacklogData.Models
                                     Genre_ID = (int)reader["Genre_ID"],
                                     Developer_ID = (int)reader["Developer_ID"],
                                     User_ID = (int)reader["User_ID"],
-                                    Price = (decimal)reader["Price"],
+                                    Price = (double)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    //Status = (string)reader["Status"]
+                                    GameStatus = (string)reader["Status"]
                                 };
                                 g.Add(game);
                             }
@@ -409,7 +410,7 @@ namespace WPF_BacklogData.Models
                         command.Parameters.AddWithValue("@Price", game.Price);
                         command.Parameters.AddWithValue("@PurchaseData", game.PurchaseDate);
                         command.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                        //command.Parameters.AddWithValue("@Status", game.Status);
+                        command.Parameters.AddWithValue("@Status", game.GameStatus.ToString());
                         command.ExecuteNonQuery();
                     }
                 }
@@ -463,7 +464,7 @@ namespace WPF_BacklogData.Models
                                     Name = (string)reader["Name"],
                                     Img = (string)reader["Img"],
                                     Platform_ID = (int)reader["Platform_ID"],
-                                    //Status = (string)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
+                                    
                                 });
                             }
                         }

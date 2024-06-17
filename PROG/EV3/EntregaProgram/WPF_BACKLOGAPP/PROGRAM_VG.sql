@@ -41,8 +41,8 @@ CREATE TABLE GAME (
     Price DECIMAL(10, 2),
     PurchaseDate DATE,
     CompletionDate DATE,
-    Platform_ID INT NOT NULL,
-    StatusGame VARCHAR(50) NOT NULL,
+    StatusGame VARCHAR(50),
+	Platform_ID INT NOT NULL
     CONSTRAINT FK_JUEGO_GENRE FOREIGN KEY (Genre_ID) REFERENCES GENRE(ID_Genre),
     CONSTRAINT FK_JUEGO_DEVELOPER FOREIGN KEY (Developer_ID) REFERENCES DEVELOPER(ID_Developer),
     CONSTRAINT FK_JUEGO_USUARIO FOREIGN KEY (User_ID) REFERENCES USERTABLE(User_ID),
@@ -203,12 +203,12 @@ INSERT INTO PLATAFORMA (Name_Platform)
 VALUES ('PC'), ('PlayStation 4'), ('Xbox One'), ('Nintendo Switch'), ('PlayStation 5'), ('Xbox Series X');
 
 -- Insertar juegos
-INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID)
+INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Status, Platform_ID)
 VALUES ('The Witcher 3: Wild Hunt', 'RPG de acción', '2015-01-01', 9, 'https://image.api.playstation.com/vulcan/ap/rnd/202211/0714/ojKZ7l0T2M5egR9YHIjVhI0R.png', 1, 3, 1, 29.99, '2023-05-20', '2023-10-15', 'Completado', 3),
        ('Grand Theft Auto V', 'Juego de mundo abierto', '2013-01-01', 8, 'https://cdn1.epicgames.com/0584d2013f0149a791e7b9bad0eec102/offer/GTAV_EGS_Artwork_1200x1600_Portrait%20Store%20Banner-1200x1600-382243057711adf80322ed2aeea42191.jpg', 1, 1, 2, 39.99, '2023-07-10', NULL, 'Jugando', 1),
        ('FIFA 21', 'Juego de fútbol', '2020-10-09', 7, 'https://sm.ign.com/t/ign_es/screenshot/default/ea8bc81e-23e4-4317-aaf2-cc17917236cf_f6d7.1280.jpg', 4, 1, 2, 59.99, '2023-01-15', NULL, 4, 'PorJugar'),
        ('The Legend of Zelda: Breath of the Wild', 'Juego de aventuras', '2017-03-03', 10, 'https://www.nintendo.com/eu/media/images/08_content_images/games_6/nintendo_switch_7/nswitch_thelegendofzeldabreathofthewild/NSwitch_TheLegendOfZeldaBreathOfTheWild_wp_tablet_01.jpg', 2, 6, 1, 59.99, '2022-12-01', '2023-03-10', 'Abandonado', 1),
-       ('Cyberpunk 2077', 'Juego de rol y acción', '2020-12-10', 7, 'cyberpunk_2077.jpg', 5, 5, 2, 49.99, '2023-04-20', NULL, 2, 'Jugando'),
+       ('Cyberpunk 2077', 'Juego de rol y acción', '2020-12-10', 7, 'cyberpunk_2077.jpg', 5, 5, 2, 49.99, '2023-04-20', NULL, 'Jugando', 2),
        ('The Legend of Heroes Trails of Cold Steel IV', 'JRPG con Worldbuilding masivo', '2019-03-09', 9, 'https://assetsio.gnwcdn.com/co31wc.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp', 2, 6, 1, 59.99, '2022-12-01', '2023-03-10', 'Jugando', 1);
 
 -- Insertar juegos-plataformas

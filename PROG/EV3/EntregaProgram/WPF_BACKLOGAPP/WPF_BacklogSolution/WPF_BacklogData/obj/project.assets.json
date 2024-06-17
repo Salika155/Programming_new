@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
       "projectName": "WPF_BacklogData",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -493,11 +493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
       "projectName": "WPF_BacklogApp",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogApp\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -515,8 +515,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
-              "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj"
+            "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
+              "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj"
             }
           }
         }

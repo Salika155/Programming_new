@@ -201,7 +201,7 @@ namespace WPF_BacklogData.Models
                         cmd.Parameters.AddWithValue("@Price", game.Price);
                         cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
                         cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                        cmd.Parameters.AddWithValue("@Status", game.Status.ToString());
+                        //cmd.Parameters.AddWithValue("@Status", game.Status.ToString());
                         cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
                         cmd.ExecuteNonQuery();
                     }
@@ -249,7 +249,7 @@ namespace WPF_BacklogData.Models
                                     Price = (decimal)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    Status = (string)reader["Status"]
+                                    //Status = (string)reader["Status"]
                                 };
                                 games.Add(game);
                             }
@@ -295,7 +295,7 @@ namespace WPF_BacklogData.Models
                                     Price = (decimal)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    Status = (string)reader["Status"]
+                                    //Status = (string)reader["Status"]
                                 };
                                 g.Add(game);
                             }
@@ -409,7 +409,7 @@ namespace WPF_BacklogData.Models
                         command.Parameters.AddWithValue("@Price", game.Price);
                         command.Parameters.AddWithValue("@PurchaseData", game.PurchaseDate);
                         command.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                        command.Parameters.AddWithValue("@Status", game.Status);
+                        //command.Parameters.AddWithValue("@Status", game.Status);
                         command.ExecuteNonQuery();
                     }
                 }
@@ -463,7 +463,7 @@ namespace WPF_BacklogData.Models
                                     Name = (string)reader["Name"],
                                     Img = (string)reader["Img"],
                                     Platform_ID = (int)reader["Platform_ID"],
-                                    Status = (string)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
+                                    //Status = (string)Enum.Parse(typeof(GameStatus), (string)reader["Status"])
                                 });
                             }
                         }

@@ -110,18 +110,18 @@ END
 GO
 CREATE PROCEDURE AddGame
     @Name VARCHAR(100),
-    @Description VARCHAR(300),
-    @ReleaseYear DATE,
-    @Rating INT,
-    @img VARCHAR(400),
+    @Description NVARCHAR(MAX) = NULL,
+    @ReleaseYear INT = NULL,
+    @Rating INT = NULL,
+    @img NVARCHAR(255) = NULL,
     @Genre_ID INT = NULL,
     @Developer_ID INT = NULL,
     @User_ID INT,
-    @Price DECIMAL(10, 2),
-    @PurchaseDate DATE,
+    @Price FLOAT = NULL,
+    @PurchaseDate DATE = NULL,
     @CompletionDate DATE = NULL,
-    @StatusGame VARCHAR(50),
-    @Platform_ID INT
+    @StatusGame INT = NULL,
+    @Platform_ID INT = NULL
 AS
 BEGIN
     INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID)

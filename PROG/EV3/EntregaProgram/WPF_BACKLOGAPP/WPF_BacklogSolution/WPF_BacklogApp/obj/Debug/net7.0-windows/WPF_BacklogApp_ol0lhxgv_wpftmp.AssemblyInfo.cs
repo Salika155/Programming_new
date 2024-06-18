@@ -11,13 +11,15 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WPF_BacklogData")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("WPF_BacklogApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe7f220480c836825694f4ea27c0609ac1902b42")]
-[assembly: System.Reflection.AssemblyProductAttribute("WPF_BacklogData")]
-[assembly: System.Reflection.AssemblyTitleAttribute("WPF_BacklogData")]
+[assembly: System.Reflection.AssemblyProductAttribute("WPF_BacklogApp")]
+[assembly: System.Reflection.AssemblyTitleAttribute("WPF_BacklogApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 

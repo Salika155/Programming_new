@@ -55,6 +55,7 @@ namespace WPF_BacklogApp
             }
         }
 
+        //todo: esto es lo que falla
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
             AddRemoveGameWindow addGameWindow = new AddRemoveGameWindow();

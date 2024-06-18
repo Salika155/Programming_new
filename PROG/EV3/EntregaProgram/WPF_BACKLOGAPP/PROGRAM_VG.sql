@@ -42,7 +42,7 @@ CREATE TABLE GAME (
     PurchaseDate DATE DEFAULT('1900-01-01'),
     CompletionDate DATE,
     StatusGame VARCHAR(50),
-	Platform_ID INT NOT NULL
+	Platform_ID INT
     CONSTRAINT FK_JUEGO_GENRE FOREIGN KEY (Genre_ID) REFERENCES GENRE(ID_Genre),
     CONSTRAINT FK_JUEGO_DEVELOPER FOREIGN KEY (Developer_ID) REFERENCES DEVELOPER(ID_Developer),
     CONSTRAINT FK_JUEGO_USUARIO FOREIGN KEY (User_ID) REFERENCES USERTABLE(User_ID),
@@ -53,7 +53,7 @@ CREATE TABLE GAME (
 -- Si decides mantener la relación muchos a muchos entre juegos y plataformas:
 CREATE TABLE JUEGO_PLATAFORM (
     Juego_ID INT,
-    Platform_ID INT NOT NULL,
+    Platform_ID INT,
     CONSTRAINT PK_JUEGO_PLATAFORM PRIMARY KEY (Juego_ID, Platform_ID),
     CONSTRAINT FK_JUEGO_PLATAFORM_JUEGO FOREIGN KEY (Juego_ID) REFERENCES GAME(ID_Game),
     CONSTRAINT FK_JUEGO_PLATFORM_PLATAFORM FOREIGN KEY (Platform_ID) REFERENCES PLATAFORMA(Platform_ID)
@@ -106,34 +106,29 @@ BEGIN
     SELECT COUNT(*) AS UserCount
     FROM USERTABLE;
 END
+
 GO
-GO
-CREATE OR ALTER PROCEDURE AddGame
+CREATE PROCEDURE AddGame
     @Name VARCHAR(100),
     @Description VARCHAR(300),
     @ReleaseYear DATE,
     @Rating INT,
     @img VARCHAR(400),
-    @Genre_ID INT,
-    @Developer_ID INT,
+    @Genre_ID INT = NULL,
+    @Developer_ID INT = NULL,
     @User_ID INT,
     @Price DECIMAL(10, 2),
     @PurchaseDate DATE,
-    @CompletionDate DATE,
+    @CompletionDate DATE = NULL,
     @StatusGame VARCHAR(50),
-	@Platform_ID INT
-
+    @Platform_ID INT
 AS
 BEGIN
-    INSERT INTO GAME (
-        Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, 
-        Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID 
-    )
-    VALUES (
-        @Name, @Description, @ReleaseYear, @Rating, @img, @Genre_ID, @Developer_ID, @User_ID, 
-        @Price, @PurchaseDate, @CompletionDate, @StatusGame, @Platform_ID
-    );
+    INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID)
+    VALUES (@Name, @Description, @ReleaseYear, @Rating, @img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @StatusGame, @Platform_ID);
 END
+
+
 
 GO
 CREATE OR ALTER PROCEDURE GetGamesByUserID
@@ -246,5 +241,5 @@ FROM PLATAFORMA;
 
 select *
 from JUEGO_PLATAFORM
-select *
-from GAME
+
+

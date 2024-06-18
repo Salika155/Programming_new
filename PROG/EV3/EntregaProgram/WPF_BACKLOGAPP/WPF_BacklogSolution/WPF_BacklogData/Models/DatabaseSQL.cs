@@ -177,9 +177,12 @@ namespace WPF_BacklogData.Models
 
         public void AddGame(Game game)
         {
-
-            //try
-            //{
+            if (game == null)
+            {
+                throw new ArgumentNullException(nameof(game));
+            }
+            try
+            {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -190,30 +193,66 @@ namespace WPF_BacklogData.Models
                     using (SqlCommand cmd = new SqlCommand("AddGame", connection))
                     //using (SqlCommand cmd = new SqlCommand(queryGame, connection))
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Name", game.Name);
-                        cmd.Parameters.AddWithValue("@Description", game.Description);
+                        //todo: aqui en parameters:System.NullReferenceException: 'Object reference not set to an instance of an object'
+                        // wpf_backlogDataModels.Game.Description.get devolvio null
+                        //cmd.CommandType = CommandType.StoredProcedure;
+                        //cmd.Parameters.AddWithValue("@Name", game.Name);
+                        //cmd.Parameters.AddWithValue("@Description", game.Description.ToString());
                         //cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate);
-                        cmd.Parameters.AddWithValue("@Rating", game.Rating);
-                        cmd.Parameters.AddWithValue("@img", game.Img);
-                        cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
-                        cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
-                        cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
-                        cmd.Parameters.AddWithValue("@Price", game.Price);
+                        //cmd.Parameters.AddWithValue("@Rating", game.Rating);
+                        //cmd.Parameters.AddWithValue("@img", game.Img);
+                        //cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID);
+                        //cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID);
+                        //cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
+                        //cmd.Parameters.AddWithValue("@Price", game.Price);
                         //cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate);
                         //cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate);
-                        cmd.Parameters.AddWithValue("@Status", game.GameStatus);
-                        cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
-                        cmd.ExecuteNonQuery();
+                        //cmd.Parameters.AddWithValue("@Status", game.GameStatus);
+                        //cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
+                        //cmd.ExecuteNonQuery();
+
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Name", game.Name ?? string.Empty);
+                        cmd.Parameters.AddWithValue("@Description", game.Description ?? string.Empty);
+                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate == DateTime.MinValue ? (object)DBNull.Value : game.ReleaseDate);
+                        cmd.Parameters.AddWithValue("@Rating", game.Rating);
+                        cmd.Parameters.AddWithValue("@img", game.Img ?? string.Empty);
+                        cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID == 0 ? (object)DBNull.Value : game.Genre_ID);
+                        cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID == 0 ? (object)DBNull.Value : game.Developer_ID);
+                        cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
+                        cmd.Parameters.AddWithValue("@Price", game.Price);
+                        cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate == DateTime.MinValue ? (object)DBNull.Value : game.PurchaseDate);
+                        cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate.HasValue ? (object)game.CompletionDate.Value : DBNull.Value);
+                        cmd.Parameters.AddWithValue("@StatusGame", game.GameStatus);
+                        cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID == 0 ? (object)DBNull.Value : game.Platform_ID);
+
+                        foreach (SqlParameter param in cmd.Parameters)
+                        {
+                            Console.WriteLine($"{param.ParameterName}: {param.Value}");
+                        }
+
+                        //tod esto es extra
+                        // Ejecutar el comando
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        Console.WriteLine($"{rowsAffected} rows inserted.");
                     }
-                    
-                }
-                //return game.ID;
+
+                }   
+            }
+            //return game.ID;
             //}
-            //catch
-            //{
-            //    throw new Exception("No se pudo añadir el juego");
-            //}
+            catch (SqlException ex)
+            {
+                // Handle SQL exceptions (e.g., foreign key constraint violations)
+                // You might want to log the exception details or provide user-friendly error messages
+                throw new Exception("Error al añadir el juego: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                throw new Exception("Error al añadir el juego: " + ex.Message);
+            }
+            
         }
 
         //esto tiene que estar mal. o tiene que añadir los juegos a la lista?
@@ -250,7 +289,7 @@ namespace WPF_BacklogData.Models
                                     Price = (double)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    GameStatus = (string)reader["Status"]
+                                    GameStatus = (GameStatus)reader["Status"]
                                 };
                                 games.Add(game);
                             }
@@ -296,7 +335,7 @@ namespace WPF_BacklogData.Models
                                     Price = (double)reader["Price"],
                                     PurchaseDate = (DateTime)reader["PurchaseDate"],
                                     CompletionDate = (DateTime)reader["CompletionDate"],
-                                    GameStatus = (string)reader["Status"]
+                                    GameStatus = (GameStatus)reader["Status"]
                                 };
                                 g.Add(game);
                             }

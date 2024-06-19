@@ -7,11 +7,12 @@ using WPF_BacklogData.Interfaces;
 
 namespace WPF_BacklogData.Models
 {
-    public class DatabaseSQL : IBacklogDataBase
+    public class DatabaseSQL : IBacklogDataBase, IMessageService
     {
         private static DatabaseSQL _database = new DatabaseSQL();
         string connectionString = "Data Source=192.168.56.101; Initial Catalog=WPF_JUEGOS; User ID=sa; Password=SqlServer123";
         public static DatabaseSQL Instance => _database;
+        private readonly IMessageService messageService;
 
         private DatabaseSQL()
         {
@@ -32,22 +33,38 @@ namespace WPF_BacklogData.Models
             List<GamePlatform> platforms = new List<GamePlatform>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                SqlCommand command = new SqlCommand("SELECT Platform_ID, Platform_Name FROM PLATFORMA", connection);
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                try
                 {
-                    platforms.Add(new GamePlatform
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("SELECT Platform_ID, Name_Platform FROM dbo.PLATAFORMA", connection);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
                     {
-                        Platform_ID = (int)reader["Platform_ID"],
-                        Name_Platform = (Platform)reader["Name_Platform"]
-                    });
+                        platforms.Add(new GamePlatform
+                        {
+                            Platform_ID = (int)reader["Platform_ID"],
+                            Name_Platform = (Platform)Enum.Parse(typeof(Platform), (string)reader["Name_Platform"])
+                        });
+                    }
                 }
+                finally
+                { connection.Close(); }
+                //catch (SqlException ex)
+                //{
+                //    // Manejo específico de excepciones de SQL Server
+                //    MessageBox.Show($"SQL Error: {ex.Message}");
+                //}
+                //catch (Exception ex)
+                //{
+                //    // Manejo de otras excepciones
+                //    MessageBox.Show($"Error al cargar las plataformas: {ex.Message}");
+                //}
             }
             return platforms;
         }
+    
 
-        public void AddUser(User user)
+    public void AddUser(User user)
         {
             try
             {
@@ -525,6 +542,16 @@ namespace WPF_BacklogData.Models
                 throw new Exception("Error al cargar los juegos desde la base de datos: " + ex.Message, ex);
             }
             return gameList;
+        }
+
+        public void ShowMessage(string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowError(string errorMessage)
+        {
+            throw new NotImplementedException();
         }
     }
 }

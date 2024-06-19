@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace WPF_BacklogData.Interfaces
 {
-    internal interface IMessageService
+    public interface IMessageService
     {
+        void ShowMessage(string message);
+        void ShowError(string errorMessage);
     }
 }

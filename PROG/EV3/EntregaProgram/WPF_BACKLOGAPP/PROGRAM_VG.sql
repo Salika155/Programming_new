@@ -54,6 +54,7 @@ CREATE TABLE GAME (
 CREATE TABLE JUEGO_PLATAFORM (
     Juego_ID INT,
     Platform_ID INT,
+	Name_Platform VARCHAR(100)
     CONSTRAINT PK_JUEGO_PLATAFORM PRIMARY KEY (Juego_ID, Platform_ID),
     CONSTRAINT FK_JUEGO_PLATAFORM_JUEGO FOREIGN KEY (Juego_ID) REFERENCES GAME(ID_Game),
     CONSTRAINT FK_JUEGO_PLATFORM_PLATAFORM FOREIGN KEY (Platform_ID) REFERENCES PLATAFORMA(Platform_ID)
@@ -110,18 +111,18 @@ END
 GO
 CREATE PROCEDURE AddGame
     @Name VARCHAR(100),
-    @Description VARCHAR(300),
-    @ReleaseYear DATE,
-    @Rating INT,
-    @img VARCHAR(400),
+    @Description NVARCHAR(MAX) = NULL,
+    @ReleaseYear DATE = '1900-01-01',
+    @Rating INT = NULL,
+    @img NVARCHAR(255) = NULL,
     @Genre_ID INT = NULL,
     @Developer_ID INT = NULL,
     @User_ID INT,
-    @Price DECIMAL(10, 2),
-    @PurchaseDate DATE,
-    @CompletionDate DATE = NULL,
-    @StatusGame VARCHAR(50),
-    @Platform_ID INT
+    @Price FLOAT = NULL,
+    @PurchaseDate DATE = '1900-01-01',
+    @CompletionDate DATE = '2900-01-01',
+    @StatusGame INT = NULL,
+    @Platform_ID INT = NULL
 AS
 BEGIN
     INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID)

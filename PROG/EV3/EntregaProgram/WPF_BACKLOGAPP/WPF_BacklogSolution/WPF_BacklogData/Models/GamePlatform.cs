@@ -19,6 +19,7 @@ namespace WPF_BacklogData.Models
     public class GamePlatform
     {
         public int Juego_ID { get; set; }
-        public Platform Platform_ID { get; set; }
+        public int Platform_ID { get; set; }
+        public string Name { get; set; }
     }
 }

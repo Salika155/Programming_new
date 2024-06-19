@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 using WPF_BacklogData.Interfaces;
 
 namespace WPF_BacklogData.Models
@@ -26,6 +27,25 @@ namespace WPF_BacklogData.Models
         //}
         #endregion
 
+        public List<GamePlatform> LoadPlatformsFromDatabase()
+        {
+            List<GamePlatform> platforms = new List<GamePlatform>();
+            using (SqlConnection connection = new SqlConnection("your_connection_string"))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT Platform_ID, Platform_Name FROM PLATFORMA", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    platforms.Add(new GamePlatform
+                    {
+                        Platform_ID = (int)reader["Platform_ID"],
+                        Name = (string)reader["Name"]
+                    });
+                }
+            }
+            return platforms;
+        }
 
         public void AddUser(User user)
         {
@@ -213,28 +233,20 @@ namespace WPF_BacklogData.Models
 
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@Name", game.Name ?? string.Empty);
-                        cmd.Parameters.AddWithValue("@Description", game.Description ?? string.Empty);
-                        cmd.Parameters.AddWithValue("@ReleaseYear", game.ReleaseDate == DateTime.MinValue ? (object)DBNull.Value : game.ReleaseDate);
-                        cmd.Parameters.AddWithValue("@Rating", game.Rating);
+                        cmd.Parameters.AddWithValue("@Description", string.Empty);
+                        cmd.Parameters.AddWithValue("@ReleaseYear", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Rating", 0);
                         cmd.Parameters.AddWithValue("@img", game.Img ?? string.Empty);
-                        cmd.Parameters.AddWithValue("@Genre_ID", game.Genre_ID == 0 ? (object)DBNull.Value : game.Genre_ID);
-                        cmd.Parameters.AddWithValue("@Developer_ID", game.Developer_ID == 0 ? (object)DBNull.Value : game.Developer_ID);
-                        cmd.Parameters.AddWithValue("@User_ID", game.User_ID);
-                        cmd.Parameters.AddWithValue("@Price", game.Price);
-                        cmd.Parameters.AddWithValue("@PurchaseDate", game.PurchaseDate == DateTime.MinValue ? (object)DBNull.Value : game.PurchaseDate);
-                        cmd.Parameters.AddWithValue("@CompletionDate", game.CompletionDate.HasValue ? (object)game.CompletionDate.Value : DBNull.Value);
-                        cmd.Parameters.AddWithValue("@StatusGame", game.GameStatus);
-                        cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID == 0 ? (object)DBNull.Value : game.Platform_ID);
-
-                        foreach (SqlParameter param in cmd.Parameters)
-                        {
-                            Console.WriteLine($"{param.ParameterName}: {param.Value}");
-                        }
-
-                        //tod esto es extra
-                        // Ejecutar el comando
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        Console.WriteLine($"{rowsAffected} rows inserted.");
+                        cmd.Parameters.AddWithValue("@Genre_ID", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@Developer_ID", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@User_ID", 1); // Default User_ID, change as needed
+                        cmd.Parameters.AddWithValue("@Price", 0.0);
+                        cmd.Parameters.AddWithValue("@PurchaseDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@CompletionDate", DBNull.Value);
+                        cmd.Parameters.AddWithValue("@StatusGame", GameStatus.PorJugar); // Default status
+                        cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
+                        cmd.ExecuteNonQuery();
+                        
                     }
 
                 }   

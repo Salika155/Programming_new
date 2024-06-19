@@ -30,7 +30,7 @@ namespace WPF_BacklogData.Models
         public List<GamePlatform> LoadPlatformsFromDatabase()
         {
             List<GamePlatform> platforms = new List<GamePlatform>();
-            using (SqlConnection connection = new SqlConnection("your_connection_string"))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("SELECT Platform_ID, Platform_Name FROM PLATFORMA", connection);
@@ -40,7 +40,7 @@ namespace WPF_BacklogData.Models
                     platforms.Add(new GamePlatform
                     {
                         Platform_ID = (int)reader["Platform_ID"],
-                        Name = (string)reader["Name"]
+                        Name_Platform = (Platform)reader["Name_Platform"]
                     });
                 }
             }
@@ -232,7 +232,7 @@ namespace WPF_BacklogData.Models
                         //cmd.ExecuteNonQuery();
 
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@Name", game.Name ?? string.Empty);
+                        cmd.Parameters.AddWithValue("@Name", game.Name);
                         cmd.Parameters.AddWithValue("@Description", string.Empty);
                         cmd.Parameters.AddWithValue("@ReleaseYear", DBNull.Value);
                         cmd.Parameters.AddWithValue("@Rating", 0);
@@ -246,9 +246,7 @@ namespace WPF_BacklogData.Models
                         cmd.Parameters.AddWithValue("@StatusGame", GameStatus.PorJugar); // Default status
                         cmd.Parameters.AddWithValue("@Platform_ID", game.Platform_ID);
                         cmd.ExecuteNonQuery();
-                        
                     }
-
                 }   
             }
             //return game.ID;

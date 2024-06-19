@@ -13,13 +13,13 @@ namespace WPF_BacklogData.Models
         XboxOne,
         NintendoSwitch,
         PS5,
-        XboxSeriesX
+        XboxSeriesX,
+        Unknown
     }
 
     public class GamePlatform
     {
-        public int Juego_ID { get; set; }
         public int Platform_ID { get; set; }
-        public string Name { get; set; }
+        public Platform Name_Platform { get; set; }
     }
 }

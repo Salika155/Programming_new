@@ -98,53 +98,54 @@ namespace WPF_BacklogApp
             {
                 MessageBox.Show($"Error al cargar las plataformas: {ex.Message}");
             }
+
         }
 
-        //public List<GamePlatform> LoadPlatformsFromDatabase()
-        //{
-        //    List<Platform> platforms = new List<Platform>();
-        //    using (SqlConnection connection = new SqlConnection("Data Source=192.168.56.101; Initial Catalog=WPF_JUEGOS; User ID=sa; Password=SqlServer123"))
-        //    {
-        //        connection.Open();
-        //        SqlCommand command = new SqlCommand("SELECT Platform_ID, Name_Platform FROM PLATAFORMA", connection);
-        //        SqlDataReader reader = command.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-        //            Platform platform;
-        //            switch (reader["Name_Platform"].ToString())
-        //            {
-        //                case "PC":
-        //                    platform = Platform.PC;
-        //                    break;
-        //                case "PS4":
-        //                    platform = Platform.PS4;
-        //                    break;
-        //                case "XboxOne":
-        //                    platform = Platform.XboxOne;
-        //                    break;
-        //                case "NintendoSwitch":
-        //                    platform = Platform.NintendoSwitch;
-        //                    break;
-        //                case "PS5":
-        //                    platform = Platform.PS5;
-        //                    break;
-        //                case "XboxSeriesX":
-        //                    platform = Platform.XboxSeriesX;
-        //                    break;
-        //                default:
-        //                    platform = Platform.Unknown;
-        //                    break;
-        //            }
-        //            platforms.Add(platform);
-        //        }
-        //    }
+        public List<Platform> LoadPlatformsFromDatabase()
+        {
+            List<Platform> platforms = new List<Platform>();
+            using (SqlConnection connection = new SqlConnection("Data Source=192.168.56.101; Initial Catalog=WPF_JUEGOS; User ID=sa; Password=SqlServer123"))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT Platform_ID, Name_Platform FROM PLATAFORMA", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Platform platform;
+                    switch (reader["Name_Platform"].ToString())
+                    {
+                        case "PC":
+                            platform = Platform.PC;
+                            break;
+                        case "PS4":
+                            platform = Platform.Playstation4;
+                            break;
+                        case "XboxOne":
+                            platform = Platform.XboxOne;
+                            break;
+                        case "NintendoSwitch":
+                            platform = Platform.NintendoSwitch;
+                            break;
+                        case "PS5":
+                            platform = Platform.PS5;
+                            break;
+                        case "XboxSeriesX":
+                            platform = Platform.XboxSeriesX;
+                            break;
+                        default:
+                            platform = Platform.Unknown;
+                            break;
+                    }
+                    platforms.Add(platform);
+                }
+            }
 
-        //    if (platforms.Count == 0)
-        //    {
-        //        platforms.Add(Platform.Unknown);
-        //    }
+            if (platforms.Count == 0)
+            {
+                platforms.Add(Platform.Unknown);
+            }
 
-        //    return platforms;
-        //}
+            return platforms;
+        }
     }
 }

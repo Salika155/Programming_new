@@ -9,7 +9,7 @@ namespace WPF_BacklogData.Models
     public enum Platform
     {
         PC,
-        PS4,
+        Playstation4,
         XboxOne,
         NintendoSwitch,
         PS5,

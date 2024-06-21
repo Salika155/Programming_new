@@ -19,13 +19,15 @@ namespace WPF_BacklogApp
     {
         public Game NewGame { get; set; }
         private readonly DatabaseSQL _database;
-        private ObservableCollection<GamePlatform> _platforms;
+        private ObservableCollection<GamePlatform> Platforms { get; set; }
+        public GamePlatform SelectedPlatform { get;set; }
 
 
         public AddRemoveGameWindow()
         {
             InitializeComponent();
             _database = DatabaseSQL.Instance;
+            DataContext = this;
             LoadPlatforms();
             //_platforms = new ObservableCollection<Platform>(_database.LoadPlatformsFromDatabase());
             //GamePlatform.ItemsSource = _platforms;
@@ -33,16 +35,28 @@ namespace WPF_BacklogApp
 
         private void AddGame_Click(object sender, RoutedEventArgs e)
         {
-            //todo fallo aqui
-            NewGame = new Game
-            {
-                Name = GameNameTextBox.Text,
-                Img = GameImageTextBox.Text,
-                Platform_ID = ((Game)GamePlatform.SelectedItem).Platform_ID
-            };
-
             try
             {
+                if (SelectedPlatform == null)
+                {
+                    MessageBox.Show("Please select a platform.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                //var selectedPlatform = GamePlatform.SelectedItem as GamePlatform;
+                //if (selectedPlatform == null)
+                //{
+                //    MessageBox.Show("Selected item is not a valid platform");
+                //    return;
+                //}
+
+                //todo fallo aqui
+                NewGame = new Game
+                {
+                    Name = GameNameTextBox.Text,
+                    Img = GameImageTextBox.Text,
+                    Platform_ID = SelectedPlatform.Platform_ID
+                };
+
                 _database.AddGame(NewGame);
                 MessageBox.Show($"Juego '{NewGame.Name}' añadido con éxito.");
                 DialogResult = true;
@@ -89,8 +103,8 @@ namespace WPF_BacklogApp
             try
             {
                 List<GamePlatform> platforms = _database.LoadPlatformsFromDatabase();
-                _platforms = new ObservableCollection<GamePlatform>(platforms);
-                GamePlatform.ItemsSource = _platforms;
+                Platforms = new ObservableCollection<GamePlatform>(platforms);
+                GamePlatform.ItemsSource = Platforms;
                 GamePlatform.DisplayMemberPath = "Name_Platform";
                 GamePlatform.SelectedValuePath = "Platform_ID";
             }
@@ -118,7 +132,7 @@ namespace WPF_BacklogApp
                             platform = Platform.PC;
                             break;
                         case "PS4":
-                            platform = Platform.Playstation4;
+                            platform = Platform.PlayStation4;
                             break;
                         case "XboxOne":
                             platform = Platform.XboxOne;
@@ -127,7 +141,7 @@ namespace WPF_BacklogApp
                             platform = Platform.NintendoSwitch;
                             break;
                         case "PS5":
-                            platform = Platform.PS5;
+                            platform = Platform.PlayStation5;
                             break;
                         case "XboxSeriesX":
                             platform = Platform.XboxSeriesX;

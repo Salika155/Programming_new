@@ -197,7 +197,7 @@ VALUES ('Electronic Arts'), ('Ubisoft'), ('Bethesda Softworks'), ('Rockstar Game
 
 -- Insertar plataformas
 INSERT INTO PLATAFORMA (Name_Platform)
-VALUES ('PC'), ('PlayStation4'), ('Xbox One'), ('Nintendo Switch'), ('PlayStation5'), ('Xbox Series X');
+VALUES ('PC'), ('PlayStation4'), ('XboxOne'), ('NintendoSwitch'), ('PlayStation5'), ('XboxSeriesX'), ('Unknown');
 
 -- Insertar juegos
 INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, StatusGame, Platform_ID)

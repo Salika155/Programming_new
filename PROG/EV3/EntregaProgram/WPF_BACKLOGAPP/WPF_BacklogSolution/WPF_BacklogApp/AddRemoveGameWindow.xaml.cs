@@ -123,6 +123,12 @@ namespace WPF_BacklogApp
                 connection.Open();
                 SqlCommand command = new SqlCommand("SELECT Platform_ID, Name_Platform FROM PLATAFORMA", connection);
                 SqlDataReader reader = command.ExecuteReader();
+
+                if (platforms.Count == 0)
+                {
+                    platforms.Add(Platform.Unknown);
+                }
+
                 while (reader.Read())
                 {
                     Platform platform;
@@ -153,12 +159,6 @@ namespace WPF_BacklogApp
                     platforms.Add(platform);
                 }
             }
-
-            if (platforms.Count == 0)
-            {
-                platforms.Add(Platform.Unknown);
-            }
-
             return platforms;
         }
     }

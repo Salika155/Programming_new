@@ -53,10 +53,6 @@
                 <Button Content="Jugando" Width="100" Margin="5" Padding="5" Click="FiltGameByState"/>
                 <Button Content="Jugados" Width="100" Margin="5" Padding="5" Click="FiltGameByState"/>
                 <Button Content="WishList" Width="100" Margin="5" Padding="5" Click="FilterGameByState"/>
-                <!--<Button Content="Jugando" Width="100" Margin="5" Click="AddGame_Click"/>
-                <Button Content="Backlog" Width="100" Margin="5" Click="AddGame_Click"/>
-                <Button Content="Jugados" Width="100" Margin="5" Click="AddGame_Click"/>
-                <Button Content="WishList" Width="100" Margin="5" Click="AddGame_Click"/>-->
             </StackPanel>
 
             <!-- ScrollViewer para desplazarse horizontalmente -->

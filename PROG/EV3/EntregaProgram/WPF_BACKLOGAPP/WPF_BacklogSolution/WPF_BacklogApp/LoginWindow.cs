@@ -15,7 +15,6 @@ namespace WPF_BacklogApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            // Replace this with your actual login logic
             string email = EmailTextBox.Text;
             string password = PasswordBox.Password;
 

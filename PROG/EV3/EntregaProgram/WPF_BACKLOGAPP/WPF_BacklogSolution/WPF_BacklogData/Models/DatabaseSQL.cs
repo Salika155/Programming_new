@@ -225,7 +225,7 @@ namespace WPF_BacklogData.Models
                     connection.Open();
                     //string queryGame = "INSERT INTO GAME (Name, Description, ReleaseYear, Rating, img, Genre_ID, Developer_ID, User_ID, Price, PurchaseDate, CompletionDate, Platform_ID, Status) " +
                     //            "VALUES (@Name, @Description, @ReleaseYear, @Rating, @Img, @Genre_ID, @Developer_ID, @User_ID, @Price, @PurchaseDate, @CompletionDate, @Platform_ID, @Status); " +
-                    //            "SELECT SCOPE_IDENTITY();"; // Obtiene el ID del juego insertado
+                    //            "SELECT SCOPE_IDENTITY();";
                     //int gameId;
                     using (SqlCommand cmd = new SqlCommand("AddGame", connection))
                     //using (SqlCommand cmd = new SqlCommand(queryGame, connection))
@@ -270,13 +270,11 @@ namespace WPF_BacklogData.Models
             //}
             catch (SqlException ex)
             {
-                // Handle SQL exceptions (e.g., foreign key constraint violations)
-                // You might want to log the exception details or provide user-friendly error messages
                 throw new Exception("Error al añadir el juego: " + ex.Message);
             }
             catch (Exception ex)
             {
-                // Handle other exceptions
+                
                 throw new Exception("Error al añadir el juego: " + ex.Message);
             }
             

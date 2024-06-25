@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Proyecto_Detecta_Copias": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Usuario\\Desktop\\carpeta_origen\" \r\n\"C:\\Users\\Usuario\\Desktop\\carpeta_destino\""
+    }
+  }
+}

@@ -18,42 +18,77 @@ namespace Ejercicio1
 
         public static int MinValueInArray(int[] arrray)
         {
-            if (arrray == null)
+            if (arrray == null || arrray.Length == 0)
                 return -1;
-            SortArray(arrray);
-            int num = 0;
-            for (int i = 0; i < arrray.Length -1; i++) 
+            //SortArray(arrray);
+            //int num = 0;
+            //for (int i = 0; i < arrray.Length -1; i++) 
+            //{
+            //    num = arrray[i];
+            //}
+            //return num;
+            int minValue = arrray[0];
+            for (int i = 0; i < arrray.Length; i++)
             {
-                num = arrray[i];
+                if (arrray[i] == minValue)
+                    minValue = arrray[i];
             }
-            return num;
-
+            return minValue;
         }
 
         public static int MaxValueInArray(int[] array)
         {
-            if (array == null)
+            //if (array == null)
+            //    return -1;
+            //SortArray(array);
+            //int num = 0;
+            //for (int i = array.Length - 1; i > 0; i--)
+            //{
+            //    num = array[i];
+            //}
+            //return num;
+            if (array == null || array.Length == 0)
                 return -1;
-            SortArray(array);
-            int num = 0;
-            for (int i = array.Length - 1; i > 0; i--)
+
+            int maxValue = array[0];
+            for (int i = 1; i < array.Length; i++)
             {
-                num = array[i];
+                if (array[i] > maxValue)
+                    maxValue = array[i];
             }
-            return num;
+            return maxValue;
         }
 
-        public static int MidValueInArray(int[] array)
+        public static double MidValueInArray(int[] array)
         {
-            if (array == null)
+            //if (array == null)
+            //    return -1;
+            //SortArray(array);
+            //int midvalue = 0;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    midvalue = array[i];
+            //}
+            //return midvalue / (array.Length/2 + 1);
+
+            if (array == null || array.Length == 0)
                 return -1;
-            SortArray(array);
-            int midvalue = 0;
-            for (int i = 0; i < array.Length; i++)
+
+            int[] sortedArray = (int[])array.Clone();
+            Array.Sort(sortedArray);
+
+            int midIndex = sortedArray.Length / 2;
+
+            if (sortedArray.Length % 2 == 0)
             {
-                midvalue = array[i];
+                return (sortedArray[midIndex - 1] + sortedArray[midIndex]) / 2.0;
             }
-            return midvalue / (array.Length/2 + 1);
+            else
+            {
+                return sortedArray[midIndex];
+            }
+
+
         }
 
         public static int IndexOfArray(int[] array, int n)
@@ -86,13 +121,24 @@ namespace Ejercicio1
             return array;
         }
 
-        public static (int, int, int) GetMinMaxAndAvgArrayValors(int[] array)
+        public static (int, int, double) GetMinMaxAndAvgArrayValors(int[] array)
         {
-            int min = MinValueInArray(array);
-            int max = MaxValueInArray(array);
-            int avg = MidValueInArray(array);
+            //int min = MinValueInArray(array);
+            //int max = MaxValueInArray(array);
+            //int avg = MidValueInArray(array);
+            //return (min, max, avg);
 
-            return (min, max, avg);
+            if (array == null || array.Length == 0)
+                return (-1, -1, -1);
+
+            int minValue = MinValueInArray(array);
+            int maxValue = MaxValueInArray(array);
+            double medianValue = MidValueInArray(array);
+
+            int minPos = Array.IndexOf(array, minValue);
+            int maxPos = Array.IndexOf(array, maxValue);
+
+            return (minPos, maxPos, medianValue);
         }
     }
 }

@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alumno\\.nuget\\packages\\": {}
+    "C:\\Users\\carre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alumno\\Desktop\\ExamenEA\\Ejercicio3\\Ejercicio3.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\Teoria\\Examenes y ejercicios\\Examenes R\\3RA EV\\ExamenEA\\Ejercicio3\\Ejercicio3.csproj",
       "projectName": "Ejercicio3",
-      "projectPath": "C:\\Users\\alumno\\Desktop\\ExamenEA\\Ejercicio3\\Ejercicio3.csproj",
-      "packagesPath": "C:\\Users\\alumno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alumno\\Desktop\\ExamenEA\\Ejercicio3\\obj\\",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\Teoria\\Examenes y ejercicios\\Examenes R\\3RA EV\\ExamenEA\\Ejercicio3\\Ejercicio3.csproj",
+      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\Teoria\\Examenes y ejercicios\\Examenes R\\3RA EV\\ExamenEA\\Ejercicio3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

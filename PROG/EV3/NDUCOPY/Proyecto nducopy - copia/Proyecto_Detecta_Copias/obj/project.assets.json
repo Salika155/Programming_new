@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\carre\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
       "projectName": "Proyecto_Detecta_Copias",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
-      "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\Proyecto_Detecta_Copias.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\NDUCOPY\\Proyecto nducopy - copia\\Proyecto_Detecta_Copias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

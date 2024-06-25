@@ -102,3 +102,18 @@ C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\NDUCOPY\
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.pdb
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.genruntimeconfig.cache
 C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\ref\Proyecto_Detecta_Copias.dll
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.exe
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.deps.json
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.runtimeconfig.json
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.dll
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\bin\Debug\net7.0\Proyecto_Detecta_Copias.pdb
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.AssemblyInfo.cs
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.sourcelink.json
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.dll
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\refint\Proyecto_Detecta_Copias.dll
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.pdb
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\Proyecto_Detecta_Copias.genruntimeconfig.cache
+C:\Users\Usuario\Documents\GitHub\Programming_new\PROG\EV3\NDUCOPY\Proyecto nducopy - copia - copia\Proyecto_Detecta_Copias\obj\Debug\net7.0\ref\Proyecto_Detecta_Copias.dll

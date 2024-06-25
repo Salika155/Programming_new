@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj": {}
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
         "projectName": "WPF_BacklogApp",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\WPF_BacklogApp.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
-                "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj"
+              "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
+                "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj"
               }
             }
           }
@@ -67,17 +66,17 @@
         }
       }
     },
-    "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
+    "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
         "projectName": "WPF_BacklogData",
-        "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
-        "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\WPF_BacklogData.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Programming_new\\PROG\\EV3\\EntregaProgram\\WPF_BACKLOGAPP\\WPF_BacklogSolution\\WPF_BacklogData\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +84,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\Programacion 1º Repetido\\nugget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

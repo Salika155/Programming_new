@@ -53,7 +53,7 @@ namespace WPF_BacklogApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/WPF_BacklogApp;component/gamecell.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/WPF_BacklogApp;V1.0.0.0;component/gamecell.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\GameCell.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

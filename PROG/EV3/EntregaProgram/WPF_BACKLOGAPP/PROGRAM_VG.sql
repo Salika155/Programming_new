@@ -51,14 +51,12 @@ CREATE TABLE GAME (
 );
 
 
--- Si decides mantener la relación muchos a muchos entre juegos y plataformas:
 CREATE TABLE JUEGO_PLATAFORM (
     Juego_ID INT,
     Platform_ID INT,
 	
     CONSTRAINT PK_JUEGO_PLATAFORM PRIMARY KEY (Juego_ID, Platform_ID),
     CONSTRAINT FK_JUEGO_PLATAFORM_JUEGO FOREIGN KEY (Juego_ID) REFERENCES GAME(ID_Game),
-
 );
 
 -- Procedimientos almacenados

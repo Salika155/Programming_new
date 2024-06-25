@@ -38,4 +38,7 @@ namespace ExamenLogica2
             Console.Write(aux1.GetN());
         }
     }
+    //Respuesta: n1 vale 2 y n2 vale 1, al pasarselo por b y  depender de a
+    //hace la operacion de getn.
+    //Solucion -1
 }

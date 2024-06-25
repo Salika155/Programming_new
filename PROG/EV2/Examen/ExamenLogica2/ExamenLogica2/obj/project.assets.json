@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ExamenLogica2\\ExamenLogica2\\ExamenLogica2.csproj",
+      "projectUniqueName": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Examen\\ExamenLogica2\\ExamenLogica2\\ExamenLogica2.csproj",
       "projectName": "ExamenLogica2",
-      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ExamenLogica2\\ExamenLogica2\\ExamenLogica2.csproj",
+      "projectPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Examen\\ExamenLogica2\\ExamenLogica2\\ExamenLogica2.csproj",
       "packagesPath": "C:\\Users\\carre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\ExamenLogica2\\ExamenLogica2\\obj\\",
+      "outputPath": "C:\\Users\\carre\\Desktop\\GitHub DAM\\PROGRAMACION\\Programming_new\\PROG\\EV2\\Examen\\ExamenLogica2\\ExamenLogica2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carre\\AppData\\Roaming\\NuGet\\NuGet.Config",

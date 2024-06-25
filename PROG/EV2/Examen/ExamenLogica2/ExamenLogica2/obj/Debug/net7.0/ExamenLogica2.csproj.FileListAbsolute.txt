@@ -1,0 +1,15 @@
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.AssemblyInfoInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.AssemblyInfo.cs
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.csproj.CoreCompileInputs.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.sourcelink.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\bin\Debug\net7.0\ExamenLogica2.exe
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\bin\Debug\net7.0\ExamenLogica2.deps.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\bin\Debug\net7.0\ExamenLogica2.runtimeconfig.json
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\bin\Debug\net7.0\ExamenLogica2.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\bin\Debug\net7.0\ExamenLogica2.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\refint\ExamenLogica2.dll
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.pdb
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ExamenLogica2.genruntimeconfig.cache
+C:\Users\carre\Desktop\GitHub DAM\PROGRAMACION\Programming_new\PROG\EV2\Examen\ExamenLogica2\ExamenLogica2\obj\Debug\net7.0\ref\ExamenLogica2.dll

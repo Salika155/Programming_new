@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExamenLogica2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f69853e6cc4096d1c5e9678f6f6f460cc8aaac1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExamenLogica2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExamenLogica2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
